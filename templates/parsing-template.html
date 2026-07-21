@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+  ══════════════════════════════════════════════════════════════
+  원어 파싱 — 빈 템플릿
+  ──────────────────────────────────────────────────────────────
+  사용법:
+    1) 이 파일을 ot/<book>/parsing/chNN.html 로 복사한다.
+    2) [[ ]] 로 표시된 자리를 채운다.
+    3) 카드(.lex)를 절 순서대로 필요한 만큼 복제해 채운다.
+    4) 개역개정(.krv) 구절은 첨부 성경 파일과 단어 단위로 대조한다.
+    5) CONTENT-SPEC.md §6-2 규격을 지킨다. 주석 칩은 K/F/T/B/H.
+    6) 완성 후 tools/validate.py 로 검증한다.
+  주의: 원어 형태·모음은 실제 도구(Accordance/Logos/STEP Bible)로 재확인.
+  ══════════════════════════════════════════════════════════════
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[[책이름]] [[N]]장 원어 파싱 — 발음·뜻·문법·어근</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="parsing.css">
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav">
+    <a href="../index.html">← [[책이름]] 서재</a>
+    <a href="../../../index.html">서고 홈</a>
+    <!-- 심층연구·인터라이너가 있으면 역링크 추가:
+    <a href="../chNN.html">심층 연구 →</a>
+    <a href="../interlinear/chNN.html">인터라이너 →</a> -->
+  </div>
+  <div class="brand">[[책이름]] [[N]]장 원어 파싱</div>
+  <div class="brand-sub">LEXICAL &amp; GRAMMATICAL PARSING</div>
+
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <!-- 장 수만큼 <a href="chNN.html">N</a> 반복. 현재 장은 aria-current="page" -->
+    <a href="ch01.html" aria-current="page">1</a>
+  </div>
+
+  <div class="toc-h">이 장의 낱말</div>
+  <!-- 카드마다 목차 링크 한 줄. href는 카드의 id와 일치 -->
+  <a class="tl" href="#v1">[[N]]:1 [[핵심어 한글]]<span class="hb">[[히브리어]]</span></a>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">[[장 주제 히브리어 구절]]</div>
+  <h1>[[책이름]] [[N]]장 원어 파싱</h1>
+  <div class="sub">[[음역]], "[[뜻]]" — [[장을 한 줄로 요약]]</div>
+  <div class="meta">개역개정(4판) 구절 병기 · [[다루는 어휘군]]을 파싱 · 어근 계열 정리</div>
+</header>
+
+<div class="legend">
+  <p><b>이 장의 특징.</b> [[장 개관 2–3문장. CONTENT-SPEC §5 문장 규칙 준수.]] 주석 관찰은 <span style="font-family:var(--sans);font-size:.72rem">K·F·T·B·H</span> 칩으로 표시.</p>
+</div>
+
+<!-- ═══════ 카드 한 벌 (절 순서대로 복제해 채운다) ═══════ -->
+<section class="part" id="v1">
+  <div class="part-head">
+    <div class="eyebrow">[[N]]:[[M]]</div>
+    <h2>[[이 카드의 소제목]]</h2>
+  </div>
+  <div class="krv">
+    <span class="vno">[[N]]:[[M]]</span>[[개역개정 4판 본문 — 첨부 파일과 단어 단위 대조]]
+    <span class="src">개역개정 · [[책이름]] [[N]]:[[M]]</span>
+  </div>
+
+  <div class="lex">
+    <div class="top">
+      <span class="word">[[히브리어(모음 포함)]]</span>
+      <span class="translit">[[한글 음역]]</span>
+      <span class="gloss">[[뜻]]</span>
+      <span class="ref">느 [[N]]:[[M]]</span>
+    </div>
+    <dl>
+      <dt class="p">문법</dt><dd><span class="pp">[[품사·어간(빈얀)·인칭·성·수·상태]]</span> — [[설명]].</dd>
+      <dt class="root">어근</dt><dd><span class="hb">[[세 자음 어근]]</span>([[자음 로마자]]) — [[뜻]]. 파생: <span class="hb">[[파생어]]</span>([[음역, 뜻]]).</dd>
+    </dl>
+    <div class="note"><span class="c h">H</span> [[주석 근거 관찰. 어느 주석(K/F/T/B/H)인지 칩으로.]]</div>
+  </div>
+</section>
+<!-- ═══════ 카드 끝. 필요한 만큼 위 section을 복제 ═══════ -->
+
+<div class="back"><a href="#top">↑ 처음으로</a> · <a href="../index.html">[[책이름]] 서재</a></div>
+
+<footer>
+  <p><strong>[[책이름]] [[N]]장 원어 파싱</strong> — 개인 연구 목적의 자료. 원어 분석은 표준 히브리어 문법·어휘(BDB, HALOT, 게제니우스)와 주석에 근거해 재구성했으며, 정밀한 형태 분석은 비평 도구로 재확인할 것. 성경 본문은 개역개정 4판.</p>
+  <p style="margin-top:.5rem">주석 칩: <span style="color:#7a5a38;font-weight:700">K</span> Kidner · <span style="color:#37665a;font-weight:700">F</span> Fensham · <span style="color:#3c5a83;font-weight:700">T</span> Throntveit · <span style="color:#655a8c;font-weight:700">B</span> Bolin · <span style="color:#8a4658;font-weight:700">H</span> Harrington</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

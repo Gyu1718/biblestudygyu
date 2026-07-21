@@ -8,7 +8,7 @@ os.chdir(ROOT)
 errs, warns = [], []
 
 # 1) 내부 링크 무결성
-html_files = glob.glob("**/*.html", recursive=True)
+html_files = [f for f in glob.glob("**/*.html", recursive=True) if not f.startswith("templates/")]
 for fn in html_files:
     base = os.path.dirname(fn)
     html = open(fn, encoding="utf-8").read()

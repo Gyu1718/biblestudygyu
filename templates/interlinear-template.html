@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+  ══════════════════════════════════════════════════════════════
+  인터라이너 — 빈 템플릿
+  ──────────────────────────────────────────────────────────────
+  사용법:
+    1) 이 파일을 ot/<book>/interlinear/chNN.html 로 복사한다.
+    2) [[ ]] 자리를 채운다.
+    3) 절 블록(.verse)을 절 수만큼 복제한다. 절마다 3층:
+         ① verse-head(개역개정)  ② inter 띠(RTL 축자 대역)
+         ③ words 표(7열)          ④ vnote(구문 관찰)
+    4) 개역개정은 첨부 성경 파일과 단어 단위로 대조.
+    5) CONTENT-SPEC.md §6-3 규격을 지킨다.
+    6) 완성 후 tools/validate.py 로 검증.
+  주의: 모든 낱말을 다룬다(선별 아님). 명단 장의 고유명사 모음은
+        기억 재구성 오류 위험이 크므로 실제 도구로 재확인할 것.
+  ══════════════════════════════════════════════════════════════
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[[책이름]] [[N]]장 인터라이너 — 축자 대역·전 단어 문법 분석</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="interlinear.css">
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav">
+    <a href="../index.html">← [[책이름]] 서재</a>
+    <a href="../../../index.html">서고 홈</a>
+    <a href="../parsing/ch01.html">핵심어 파싱 →</a>
+    <a href="../ch01.html">심층 연구 →</a>
+  </div>
+  <div class="brand">[[책이름]] [[N]]장 인터라이너</div>
+  <div class="brand-sub">INTERLINEAR · FULL PARSING</div>
+
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html" aria-current="page">1</a>
+    <!-- 다른 장이 파싱본만 있으면 title로 안내:
+    <a href="../parsing/ch02.html" title="2장은 파싱본">2</a> -->
+  </div>
+
+  <div class="toc-h">이 장의 절</div>
+  <!-- 절마다 목차 링크. href는 절 id와 일치 -->
+  <a class="vl" href="#v1"><span class="n">[[N]]:1</span>[[절 요지]]</a>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">[[장 주제 히브리어 구절]]</div>
+  <h1>[[책이름]] [[N]]장 인터라이너</h1>
+  <div class="sub">[[음역]], "[[뜻]]" — [[N]]절 전체를 단어 단위로 대역하고 모든 낱말의 문법·표제어·어근·뜻·기능을 분석했다.</div>
+  <div class="meta">히브리어 마소라 본문(BHS/레닌그라드 계열) · 개역개정(4판) 병기 · 축자 대역 + 전 단어 파싱</div>
+</header>
+
+<div class="legend">
+  <p><b>읽는 법.</b> 각 절은 세 층이다. ① <b>인터라이너 띠</b> — 히브리어를 오른쪽에서 왼쪽으로 읽으며 낱말 아래 음역·뜻. ② <b>단어 분석 표</b> — 낱말마다 문법·표제어·어근·뜻·문장 기능. ③ <b>절 해설</b> — 구문·번역 관찰. 표는 좁은 화면에서 좌우로 밀어 볼 수 있다.</p>
+</div>
+
+<!-- ═══════ 절 한 벌 (절 수만큼 복제) ═══════ -->
+<section class="verse" id="v1">
+  <div class="verse-head">
+    <span class="vnum">[[N]]:1</span>
+    <span class="vkrv">[[개역개정 4판 본문 — 단어 단위 대조]]</span>
+  </div>
+
+  <!-- ① 축자 대역 띠 (RTL). 낱말마다 .iw 하나. 히브리어 어순대로(오른→왼) -->
+  <div class="inter">
+    <span class="iw"><span class="ih">[[히브리어]]</span><span class="it">[[음역]]</span><span class="ig">[[뜻]]</span></span>
+    <!-- 낱말 수만큼 iw 반복 -->
+  </div>
+
+  <!-- ② 단어 분석 표 (7열) -->
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="w-num">1</td>
+        <td class="w-heb">[[히브리어]]</td>
+        <td class="w-tr">[[로마자]]<span class="ko">[[한글음역]]</span></td>
+        <td class="w-parse">[[품사 · 어간 · 인칭·성·수 · 상태]]</td>
+        <td class="w-lex"><span class="lm">[[표제어]]</span> [[음역]] / 어근 <span class="rt">[[어근]]</span> <span class="rt-g">[[어근뜻]]</span></td>
+        <td class="w-gloss">[[뜻]]</td>
+        <td class="w-fn">[[문장 안에서의 기능]]</td>
+      </tr>
+      <!-- 낱말 수만큼 행(tr) 반복 -->
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ③ 구문 관찰 -->
+  <div class="vnote"><b>구문 관찰.</b> [[구문·번역상의 관찰. 주석 칩(K/F/T/B/H) 사용.]]</div>
+</section>
+<!-- ═══════ 절 끝. 필요한 만큼 위 section 복제 ═══════ -->
+
+<div class="back"><a href="#top">↑ 처음으로</a> · <a href="../index.html">[[책이름]] 서재</a></div>
+
+<footer>
+  <p><strong>[[책이름]] [[N]]장 인터라이너</strong> — 개인 연구 목적의 자료. 히브리어 본문은 마소라 본문(BHS/레닌그라드 계열)을 따랐고, 모음·형태 분석은 표준 문법·어휘(BDB, HALOT, 게제니우스)에 근거해 정리했다. 정밀 인용·논문 작업 시에는 실제 BHS 및 형태분석 도구(Accordance, Logos, STEP Bible 등)로 재확인할 것. 성경 번역 본문은 개역개정 4판.</p>
+  <p style="margin-top:.5rem">주석 칩: <span style="color:#7a5a38;font-weight:700">K</span> Kidner · <span style="color:#37665a;font-weight:700">F</span> Fensham · <span style="color:#3c5a83;font-weight:700">T</span> Throntveit · <span style="color:#655a8c;font-weight:700">B</span> Bolin · <span style="color:#8a4658;font-weight:700">H</span> Harrington</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

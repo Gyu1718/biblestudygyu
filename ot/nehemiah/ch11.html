@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 11장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch11.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 11장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 위치와 구획</a>
+    <a class="lv1" href="#s1">1. 제비뽑기 (11:1–2)</a>
+    <a class="lv2" href="#v1">11:1 십분의 일·거룩한 성</a>
+    <a class="lv2" href="#v2">11:2 자원과 축복</a>
+    <a class="lv1" href="#s2">2. 거주자 명단 (11:3–24)</a>
+    <a class="lv2" href="#v39">평신도 가문</a>
+    <a class="lv2" href="#v1014">제사장·용사</a>
+    <a class="lv2" href="#v1524">레위인·문지기</a>
+    <a class="lv1" href="#s3">3. 성 밖 거주지 (11:25–36)</a>
+    <a class="lv1" href="#s4">4. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">עִיר הַקֹּדֶשׁ</div>
+  <h1>느헤미야 11장 심층 연구</h1>
+  <div class="sub">이르 하코데쉬, "거룩한 성" — 제비뽑아 십분의 일을 예루살렘에 채우다</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">קֹדֶשׁ</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 위치와 구획</h2>
+    <div class="gloss">코데쉬, "거룩" — 십일조에서 거룩한 성으로, 거룩의 실이 이어진다</div>
+  </div>
+
+  <p>7:4("성은 넓으나 사람이 적다")가 던진 질문이 <strong>11장에서 답을 얻는다.</strong> 8–10장(말씀·참회·언약)을 거쳐, 이제 <strong>거룩한 성을 채우고 지키는 일</strong>로 돌아온다. <span class="c h">H</span>의 구획: 제비뽑아 재인구화(11:1–2) / 거주자 명단(11:3–24) / 성 밖 거주지(11:25–36).</p>
+
+  <div class="note">
+    <div class="tt">거룩의 실이 10장에서 이어진다 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: <strong>거룩의 실이 이 장으로 이어진다.</strong> 토라와 그 법에 자신을 다시 봉헌하는 엄숙한 맹세(10장)를 한 뒤, 거룩한 백성이 <strong>거룩한 성을 채우고 지키는 일</strong>에 주의를 돌린다. 그리고 <strong>"십분의 일"</strong>(11:1)의 언급이 10장 끝의 십일조·예물 강조를 잇는다 — <strong>거룩한 성에 살기로 한 정착자들이 곧 전체 유대 인구의 십일조를 이룬 셈</strong>이다. 예배의 헌물이 사람의 헌신으로 번역된다.</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">이름을 적는 이유 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: 저자가 지파별 총계만이 아니라 그토록 많은 <strong>개인의 이름</strong>을 적는 것이 의미심장하다. 이로써 독자는 <strong>신실한 계보 안의 실존 인물들</strong>을 상기한다 — 이름 없는 고리나 숫자가 아니다. <strong>공동체는 참으로 조상들의 어깨 위에 세워진다.</strong> 이 명단은 유다·베냐민·레위를 강조하되, 지도자였던 이들과 그들의 직임(예: "성읍의 부관", "기도를 인도한 자")에 초점을 맞춘다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">גּוֹרָלוֹת</div>
+    <div class="eyebrow">11:1–2</div>
+    <h2>1. 제비뽑아 성을 채우다</h2>
+    <div class="gloss">고랄로트, "제비" — 우연 같으나 야훼가 주관하신다</div>
+  </div>
+
+  <div class="vs" id="v1">
+    <span class="ref">11:1 — 십분의 일을 거룩한 성으로</span>
+    <p><span class="c h">H</span>: 공동체 지도자들이 예루살렘에 정착하고, 나머지 정착자 <strong>열 중 하나</strong>가 함께한다. "열의 아홉"(<span class="hw">תֵּשַׁע הַיָּדוֹת</span>, 테샤 하야도트 — 직역 "아홉 손", 곧 열 중 아홉 몫)은 다른 성읍에 머문다. <strong>이 시점에 예루살렘 거주는 매력적이지 않았다</strong> — 유대인이 그곳에 살도록 <strong>권유받아야</strong> 했다(b. Ketub. 110b). 이미 농장을 일구고 이웃과 관계를 맺은 자기 소유지를 선호했고(수 세대, 어쩌면 포로기 이전까지 거슬러 오르는 가문의 땅), 도시 생활비도 더 비쌌다(라쉬).</p>
+    <div class="note">
+      <div class="tt">제비 — 우연이 아니라 섭리 — <span class="c h">H</span> <span class="c t">T</span></div>
+      <p><span class="c h">H</span>: 늘 그렇듯 <strong>믿음은 먼저 지도자들이 본을 보인다.</strong> 작은 돌이나 나뭇조각으로 만든 <strong>제비(<span class="hw">גּוֹרָלוֹת</span>, 고랄로트)</strong>를 뽑아 누가 도시로 이주할지 정한다. <strong>제비뽑기는 단순한 운의 문제처럼 보이나, 야훼가 그 과정과 결과를 주관하신다고 믿었다</strong>(잠 16:33 — "제비는 사람이 뽑으나 모든 일을 작정하기는 여호와께 있느니라"). 인간의 우연에 하나님의 주권이 감춰져 있다.</p>
+      <p><span class="c t">T</span>: 이 제비뽑기가 우리 사회에는 우연처럼 보이나, <strong>구약은 이 방식을 한결같이 하나님의 뜻의 표지로 제시</strong>한다 — 가나안 땅의 지파 분배(수 14:2), 요나단의 속량(삼상 14:41–42), 폭풍의 원인 요나 지목(욘 1:7). 나아가 T는 <strong>"십일조"라는 낱말 자체가 신학적으로 투명하다</strong>고 본다 — 백성의 십분의 일을 성으로 옮기는 이 일에 <strong>제사적 어휘</strong>("자원하여 드리다", "축복하다", 2절)가 쓰여, 제단 재건→성전→성벽에서 이어진 <strong>거룩의 진행이 도시 거주에까지 이르렀음</strong>을 나타낸다.</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v2">
+    <span class="ref">11:2 — 자원한 자를 백성이 축복하다</span>
+    <p><span class="c h">H</span>: 이 대목에 <strong>강한 공동체 연대</strong>가 흐른다. 고대에 강제 이주(<strong>synoikismos</strong> — 농촌에서 도시로의 강제 이전, Yamauchi)는 드물지 않았으나, <strong>느헤미야는 아무도 도시 이주를 강요하지 않았다.</strong> 유대인이 <strong>자원하여</strong> 예루살렘에 거주했다. 무엇을 해야 할지 깨닫고 기꺼이 정착한 것이다. 나아가 이주하지 않은 자들이 <strong>이주한 자들을 축복</strong>하며, 그들이 공동체 전체의 유익을 위해 치른 희생을 인정했다.</p>
+    <div class="note">
+      <div class="tt">본문의 두 독법 — <span class="c k">K</span> <span class="c t">T</span></div>
+      <p><span class="c k">K</span>: 1절 상반절은 기존 상황이 아니라 <strong>새로운 움직임</strong>을 알린다 — NEB처럼 "백성의 지도자들이 예루살렘에 정착했다"로 옮기는 편이 낫다. 2절의 자원자들이 제비 뽑힌 이들에 <strong>더해진 이들인지</strong>, 아니면 <strong>제비 뽑힌 이들이 그 결정을 기쁘게 받아들였다는 뜻인지</strong>는 확언할 수 없다. 그러나 이는 유다와 예루살렘을 마땅한 영광으로 회복시키려는 <strong>새로운 열망의 또 다른 사례</strong>다.</p>
+      <p><span class="c t">T</span>: 이 단락에서 <strong>느헤미야는 말하지도 행하지도 않는다</strong> — 그의 일인칭 서술은 기술적으로 12:31(성벽 봉헌)에서야 재개된다. 본문을 있는 그대로 읽으면, <strong>율법 아래 새로 세워진 "백성 자신"(11:1–2)이 자발적으로</strong> 예루살렘 재정착의 책임을 진다 — "우리 하나님의 전을 버려두지 아니하리라"(10:39)는 서약의 첫 열매로서. T는 이것을 <strong>공동체가 마침내 하나님 앞의 엄중함을 깨닫고 언약 의무 안에서 살려는 표지</strong>로 읽는다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">אַנְשֵׁי־חַיִל</div>
+    <div class="eyebrow">11:3–24</div>
+    <h2>2. 거주자 명단</h2>
+    <div class="gloss">안셰-하일, "용사" — 성으로 들어간 자들의 용기</div>
+  </div>
+
+  <div class="vs" id="v39">
+    <span class="ref">11:3–9 — 평신도 가문(유다·베냐민)</span>
+    <p><span class="c h">H</span>: 예루살렘으로 이주한 이들이 <strong>여러 세대를 거슬러 족보를 추적할 수 있었다</strong>는 점이 의미심장하다. 유다 사람은 자기 계보가 지파의 조상 <strong>베레스</strong>(유다의 아들)까지 이어짐을 알았고 여러 가족 고리를 댈 수 있었다. <strong>이들은 자기 힘이 서로의 연대만이 아니라, 야훼가 불가침의 언약을 맺으신 긴 조상 계보와의 연대에서 나옴을 알았다</strong>(느 9:8).</p>
+    <div class="note">
+      <div class="tt">"용사"의 뜻 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 예루살렘으로 들어간 자들을 <strong>안셰-하일</strong>(<span class="hw">אַנְשֵׁי־חַיִל</span>, 용사)이라 부른다. 이 표현은 흔히 군사적 맥락(삿 20:44)에 쓰이나, <strong>다른 종류의 힘</strong>도 가리킬 수 있다 — 정숙한 여인 룻(<span class="hw">אֵשֶׁת חַיִל</span>, 에셰트 하일, 룻 3:11), 큰 부자 보아스(룻 2:1). <strong>예루살렘으로 이주한 이들은 단지 건장했을 뿐 아니라 용감했다</strong> — 매력 없는 도시를 자원해 채우는 데는 용기가 필요했다.</p>
+    </div>
+    <p><span class="c h">H</span>: 명단은 성전 인력 일부가 성 밖에 살고 많은 평신도 가문이 도시로 이주했음을 드러낸다 — <strong>성직자와 평신도 사이에 어느 정도의 사회적 교류, 어쩌면 도시 관련 결정에서의 민주성마저</strong> 있었다. 성전 일이 그토록 많은 제사장·레위인을 연중 부양할 수 없어, 상당수 성직자는 도시로 이주하지 않고 농촌에 남아 성전 당번이 아닐 때 농사 등에 종사했다.</p>
+  </div>
+
+  <div class="vs" id="v1014">
+    <span class="ref">11:10–14 — 제사장 가문, "큰 용사"</span>
+    <p><span class="c h">H</span>: 저자가 지파별 총계만이 아니라 그토록 많은 개인 이름을 기록한 것이 의미심장하다 — <strong>공동체는 참으로 조상들의 어깨 위에 세워진다.</strong> 이 계보는 대상 9장과 유사하되 이름 형태가 일부 다르다(여호야립=요야립, 스라야=아사랴 등).</p>
+    <div class="note">
+      <div class="tt">제사장이 "큰 용사"인 까닭 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 이 명단의 제사장을 <strong>"큰 용사"(<span class="hw">גִּבּוֹרֵי חַיִל</span>, 기보레 하일)</strong>라 부른다. 흔히 군사적 표현이며, 여기서도 관심사는 <strong>도시의 안전</strong>이다. 성직자가 강한 군인일 수 있다는 것은 놀랄 일이 아니다 — <strong>성전 인력의 주요 임무 하나가 하나님의 집을 지키는 것</strong>이기 때문이다(민 1:53). 삽디엘이 "고관의 아들"(<span class="hw">בֶּן־הַגְּדוֹלִים</span>, 벤-하게돌림)로 제사장의 감독이 된 것도 대제사장 계열이기 때문일 수 있다.</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v1524">
+    <span class="ref">11:15–24 — 레위인·문지기, 노래하는 자</span>
+    <p><span class="c h">H</span>: <strong>맛다냐</strong>(아삽의 후손)가 <strong>"기도할 때에 감사하는 말씀을 인도하는 자"</strong>(11:17)였고, <strong>박부갸</strong>가 그의 조수로 <strong>교창(交唱, antiphonal)</strong> 방식으로 성전 예배를 인도했을 것이다(느 12:9). H: <strong>성전의 음악 사역이 레위인의 주요 임무</strong>였고, 음악 재능이 흔히 유전되므로 특정 레위 가문만 이 영역에서 훈련받았다 — 이들은 다윗 아래 예배를 인도한 저 유명한 <strong>아삽</strong>까지 계보를 추적할 수 있었다.</p>
+    <p><strong>거룩한 성.</strong> <span class="c h">H</span>: "거룩한 성"(11:18)의 언급이 에스라-느헤미야 전반의 확장된 거룩 관념에 부합한다. 거주 레위인 284명은 제사장 1,192명보다 훨씬 적었다(레위인 부족 문제). 문지기(악굽·달몬 가문)도 레위인이었을 것이다(대상 9:23–26).</p>
+    <div class="caveat">
+      <div class="tt">문지기 — 시편의 성문 문답 — <span class="c k">K</span></div>
+      <p><span class="c k">K</span>: 이 문지기 가문의 임무는 대상 9:17–27에 더 자세하다 — <strong>성전 구역의 안전이 그들의 세습 직무</strong>였고, 비거주 친족이 마을에서 와 한 주씩 당번을 섰다. 성전은 보물과 거룩함 모두를 위해 강한 경비가 필요했다. K는 <strong>시편 15편·24편의 "여호와의 산에 오를 자 누구인가" 문답, 시 118:19–20의 짧은 대화가 이 성소 수문장들이 입장하려는 자에게 던지던 문답의 반향</strong>일 수 있다고 본다. 덧붙여 시 84:10의 유명한 구절 "내 하나님의 성전 문지기로 있는 것이…"는 이 존귀한 관리가 아니라, <strong>무리의 맨 바깥에서 문턱까지만 나아간 예배자</strong>를 가리키는 듯하다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">이스라엘 = 야훼의 기업 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 이스라엘은 야훼의 <strong>기업(<span class="hw">נַחֲלָה</span>, 나할라)</strong> — 그의 특별한 보배다(출 34:9; 신 4:20; 출 19:5 "보배로운 소유"). <strong>고대 근동에 이 개념의 병행이 없다.</strong> 야훼는 다시 이스라엘 각 지파에게 가나안 땅의 기업을 주셨다(나봇이 왕에게 하나님이 주신 분깃을 팔지 않은 것, 왕상 21:3). 신약에서 그리스도인도 하나님께로부터 유업을 받는다 — 은사(마 25:14–28)와 하늘의 약속(요 14:2–3; 벧전 1:4 "썩지 않고 쇠하지 아니하는 기업"). <strong>레위 총감독이 음악가(웃시, 아삽 후손)였다는 것</strong>은 찬양·예배 기능이 레위인의 으뜸 임무였음을 부각한다. 아닥사스다가 왕의 안녕을 위해 노래하는 레위 성가대에 왕실 봉급을 주고 매일의 직무를 세세히 규정했을 만큼, 음악과 예배가 매일의 제사에 수반되었다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">חֲצֵרֵיהֶם</div>
+    <div class="eyebrow">11:25–36</div>
+    <h2>3. 성 밖 거주지</h2>
+    <div class="gloss">하체레헴, "그 마을들" — 브엘세바에서 힌놈 골짜기까지</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">11:25–30 — 유다의 거주지</span>
+    <p><span class="c h">H</span>: 유다 사람이 정착한 성읍들은 원래 유다에게 할당된 지역, 곧 네게브(남방 사막)를 포함한다(수 15). <strong>브엘세바에서 힌놈 골짜기까지</strong> 이르는 이 정착지가 고고학 발견 지역과 대체로 일치한다 — <strong>속주명 "예후드"가 새겨진 동전이 이 지역 밖에서는 발견되지 않았다.</strong> 예루살렘 힌놈 골짜기에서 브엘세바까지는 40마일이다. "그 딸들"(<span class="hw">בְּנֹתֶיהָ</span>, 베노테하 = 성읍의 부속 마을)은 성읍이 여성으로 여겨져, 주변 마을을 "어미 성읍"의 딸로 본 것이다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">11:31–36 — 베냐민의 거주지</span>
+    <p><span class="c h">H</span>: 베냐민 성읍 명단은 <strong>포로기 이전에서 지파의 영역이 확장</strong>되었음을 보인다 — 원래 단·에브라임에 할당된 영토를 포함한다(단 지파는 사사 시대에 이미 분깃을 포기했고[삿 18], 북이스라엘 멸망 후 에브라임 영토 일부를 베냐민이 정착시킴). <strong>레위인 일부가 유다에서 베냐민으로 옮겨졌다</strong>(11:36).</p>
+    <div class="note">
+      <div class="tt">레위인이 48성읍에 흩어진 이유 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 민수기에 따르면 레위인은 이스라엘 전역 <strong>48성읍</strong>을 소유로 받았다(민 35:1–15). 이는 레위인을 공정하게 부양하는 길이자, 그들을 백성 사이에 분산시켜 접근 가능하게 하는 길이었다 — <strong>여섯 도피성(과실치사자의 피난처), 교사, 십일조 수집</strong> 등의 기능을 위해. 이 시기 레위인 부족이 심각한 문제였으므로, 베냐민 지역에 레위인이 충분치 않아 유다 성읍에 배정되었던 일부가 베냐민으로 재배치되었다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="tt">11장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력·경건(지도자가 먼저 본을 보임, 시편의 성문 문답과 문지기). <span class="c f">F</span> 어휘·본문비평(하일의 다의성, 대상 9장 대조). <span class="c h">H</span> 제2성전기 사회사·수용사(synoikismos 강제 이주와의 대조, 잠 16:33 제비의 섭리, 나할라 기업, 레위 48성읍, 예후드 동전 고고학). <span class="c t">T</span> 구조·신학(7:4→11:1의 답, 제비뽑기·"자원"·"축복"의 제사적 어휘로 거룩의 진행이 도시 거주에 이름, 느헤미야가 침묵하고 "백성 자신"이 서약의 첫 열매로 정착). <span class="c b">B</span> 제국 행정사(왕의 대리인 브다히야, "용사"가 함의하는 상비군·직업 군인, 명단이 후기 페르시아 시대 자료임).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">נַחֲלָה</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>4. 상호 참조와 신학 종합</h2>
+    <div class="gloss">나할라, "기업" — 이스라엘은 야훼의 특별한 보배</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:14%">느 11장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">11:1</td><td><strong>잠 16:33</strong> (제비는 여호와께) / b. Ketub. 110b (예루살렘 거주 권유) / 느 7:4 (질문의 답)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:2</td><td>synoikismos (헬라의 강제 이주) — 자원과 대조 (Yamauchi)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:4</td><td>느 9:8 (조상과의 불가침 언약) / 대상 9:3 (에브라임·므낫세 후손도 정착)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:6</td><td>룻 3:11 (에셰트 하일) / 룻 2:1 (보아스) — 하일의 다의성</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:12</td><td>민 1:53 (성전 인력의 수호 임무) / 대상 9:10–11 (제사장 계보)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:17</td><td>느 12:9 (교창 예배) / 대상 15:16; 25:1 (아삽, 다윗의 성가)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:20</td><td><strong>출 34:9; 신 4:20</strong> (나할라, 기업) / 왕상 21:3 (나봇의 분깃) / 벧전 1:4</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:30</td><td>수 15:1–63 (유다 할당) / 예후드 동전 고고학 (정착 범위)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">11:36</td><td><strong>민 35:1–15</strong> (레위 48성읍·도피성) / 삿 18 (단의 분깃 포기)</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료 · 주석별 강조점</div>
+    <p><strong>b. Ketub. 110b</strong> — 예루살렘 거주를 권유해야 했음 <span class="c h">H</span> · <strong>예후드 동전 고고학</strong> — 속주 정착 범위(브엘세바~힌놈) <span class="c h">H</span> · <strong>synoikismos</strong> — 헬라·헬레니즘 도시의 강제 이주(Yamauchi), 느헤미야의 자원과 대조 <span class="c h">H</span> · <strong>von Rad</strong> — 명단 앞부분이 수 15장에 의존, 헤브론·브엘세바가 요시야 때 왕국 범위를 상기 <span class="c t">T</span> · <strong>대상 9:17–34</strong> — 문지기·성전 봉사의 생생한 그림(시 15·24·118편의 성문 문답) <span class="c k">K</span></p>
+  </div>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 거룩한 성을 채우는 일 — 십일조가 사람이 되다</h4>
+  <p>7:4의 빈 도시 문제가 여기서 풀린다. <span class="c h">H</span>의 관찰이 이 장의 신학을 벼린다 — <strong>거룩한 성에 살기로 한 정착자들이 곧 전체 유대 인구의 "십분의 일"</strong>이다(11:1). 10장 끝의 십일조·예물 강조가 이어져, <strong>예배의 헌물이 사람의 헌신으로 번역된다.</strong> 곡식·기름의 첫 것을 드리듯, 이제 사람의 십분의 일을 거룩한 성에 드린다. 도시를 채우는 일이 예배 행위가 된다. <span class="c t">T</span>도 같은 결을 짚는다 — <strong>"자원하여 드리다", "축복하다"라는 제사적 어휘</strong>가 이 재정착에 제의적 뉘앙스를 입혀, 제단 재건→성전→성벽으로 이어진 거룩의 진행을 <strong>도시 거주에까지 확장</strong>한다. 그리고 이 절에서 느헤미야가 침묵하고 <strong>"백성 자신"이 주체</strong>가 되는 것은, 10:39 서약("우리 하나님의 전을 버려두지 아니하리라")의 첫 열매를 백성이 자발적으로 맺는 장면이다.</p>
+
+  <h4>② 우연 속의 섭리 — 제비뽑기의 신학</h4>
+  <p>제비뽑기(11:1)가 이 장의 신학적 핵심이다. <span class="c h">H</span>: 제비뽑기는 단순한 운의 문제처럼 보이나, <strong>야훼가 그 과정과 결과를 주관하신다</strong>(잠 16:33). 매력 없는 도시에 누가 이주할지를 인간의 손이 뽑되, 그 뽑힘 속에 하나님의 작정이 감춰져 있다. 이 책의 "선한 손" 섭리가, 성벽 건축(2장)과 인구 재배치(7장)를 넘어 <strong>개인의 거주지 결정이라는 가장 사사로운 자리까지</strong> 관통한다.</p>
+
+  <h4>③ 강요 없는 헌신 — 자원과 축복의 공동체</h4>
+  <p><span class="c h">H</span>: 고대에 강제 이주(synoikismos)가 흔했으나, <strong>느헤미야는 아무도 강요하지 않았고 유대인이 자원하여</strong> 예루살렘에 거주했다. 나아가 이주하지 않은 자들이 <strong>이주한 자들을 축복</strong>했다. 강제가 아니라 자원, 시기가 아니라 축복이 이 공동체의 연대를 이룬다. 거룩한 성은 사람을 몰아넣어 채우는 것이 아니라 <strong>기꺼이 희생하는 자들과 그 희생을 존중하는 자들</strong>로 채워진다.</p>
+
+  <h4>④ 조상의 어깨 위에 선 공동체 — 이름의 신학</h4>
+  <p><span class="c h">H</span>: 저자가 총계만이 아니라 <strong>수많은 개인의 이름</strong>을 적는 것은, 독자로 <strong>신실한 계보 안의 실존 인물들</strong>을 상기하게 하려 함이다. 도시로 들어간 이들의 힘은 서로의 연대만이 아니라 <strong>야훼가 불가침의 언약을 맺으신 긴 조상 계보와의 연대</strong>에서 나온다(9:8). 공동체는 익명의 무리가 아니라 <strong>이름을 지닌 세대들이 쌓아 올린 것</strong>이다. 포로기라는 얼룩은 이 긴 계보 앞에서 옅어진다.</p>
+
+  <h4>⑤ 예배가 도시를 지킨다 — 음악 사역의 자리</h4>
+  <p>레위 총감독이 <strong>음악가</strong>(웃시, 아삽 후손)였다는 <span class="c h">H</span>의 관찰이 이 장의 결을 드러낸다. 찬양·예배 기능이 레위인의 으뜸 임무이며, 페르시아 왕마저 성가대에 봉급을 주고 매일의 직무를 규정할 만큼 <strong>음악과 예배가 매일의 제사에 수반</strong>된다. 성을 지키는 "용사"인 제사장(11:12)과 성을 찬양으로 채우는 음악가가 한 도시 안에 공존한다 — <strong>거룩한 성은 무기만이 아니라 노래로도 지켜진다.</strong> 그리고 그 노래는 다윗과 아삽까지 이어지는 유업이다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 11장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

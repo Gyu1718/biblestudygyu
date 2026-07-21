@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 5장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch05.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 5장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 위치와 구획</a>
+    <a class="lv2" href="#s0-place">배치 쟁점</a>
+    <a class="lv1" href="#s1">1. 부르짖음 (5:1–5)</a>
+    <a class="lv2" href="#v12">5:1–2 큰 부르짖음</a>
+    <a class="lv2" href="#v35">5:3–5 저당과 채무노예</a>
+    <a class="lv1" href="#s2">2. 느헤미야의 처결 (5:6–11)</a>
+    <a class="lv2" href="#v67">5:6–7 숙고와 고발</a>
+    <a class="lv2" href="#v89">5:8–9 형제를 팜</a>
+    <a class="lv2" href="#v1011">5:10–11 탕감 명령</a>
+    <a class="lv1" href="#s3">3. 맹세와 상징 행위 (5:12–13)</a>
+    <a class="lv1" href="#s4">4. 총독의 자기 헌신 (5:14–19)</a>
+    <a class="lv2" href="#v1416">5:14–16 녹봉 포기</a>
+    <a class="lv2" href="#v1719">5:17–19 식탁과 기도</a>
+    <a class="lv1" href="#s5">5. 상호 참조 총람</a>
+    <a class="lv1" href="#s6">6. 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">בְּיִרְאַת אֱלֹהִים</div>
+  <h1>느헤미야 5장 심층 연구</h1>
+  <div class="sub">베이르아트 엘로힘, "하나님을 경외함으로" (느 5:9, 15) — 내부의 압제와 총독의 본</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">אָח</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 위치와 구획</h2>
+    <div class="gloss">아흐, "형제" — 이 장을 관통하며 압제를 고발하는 열쇳말</div>
+  </div>
+
+  <p>외부의 위협(4장)에서 <strong>내부의 압제</strong>로 시선이 돌아온다. <span class="c f">F</span>의 구획: 노예 문제(5:1–5) / 느헤미야의 대책(5:6–13) / 느헤미야의 행정(5:14–19). <span class="c h">H</span>는 표제를 <strong>"내부의 압제(Internal Oppression)"</strong>로 달고 넷으로 나눈다. 동족 유대인의 압제 고발(1–5) / 느헤미야의 고발과 회복 명령(6–11) / 공개 맹세 의식(12–13) / 느헤미야의 사심 없는 헌신(14–19).</p>
+
+  <div class="note">
+    <div class="tt">"형제"라는 열쇳말</div>
+    <p><span class="c h">H</span>: 느헤미야는 부유한 채권자들에게 강권을 쓰지 않고 <strong>형제애의 관점에서 호소하며 "형제"라는 말을 되풀이한다.</strong> 이 공동체는 외부 박해를 함께 견뎠고, 느헤미야는 내부의 압제를 용납하지 않는다. 5절의 언어유희(<span class="hw">אַחֵינוּ</span> 아헤누 "우리 형제" ↔ <span class="hw">אֲחֵרִים</span> 아헤림 "다른 이들")가 이 장의 논점을 벼린다 — <strong>부유층이 같은 혈육을 "남"처럼 대하고 있다.</strong></p>
+  </div>
+
+  <div class="caveat" id="s0-place">
+    <div class="tt">쟁점 — 5장은 제자리에 있는가</div>
+    <p>5장은 52일 축성(6:15)의 짧은 기간과 어울리지 않는 12년 총독기(5:14)를 언급하고, 위기의 원인이 성벽이 아니라 기근이기도 하다.</p>
+    <p><strong>전위설 <span class="c t">T</span>.</strong> <span class="c t">T</span>는 세 근거로 5장(특히 14–19절)을 2차 총독기 자료의 전위(轉位)로 본다. ① 52일 공기와 12년 시야의 불일치 ② 위기의 원인이 성벽 부역만이 아니라 기근이라는 점 ③ 이 책의 동심원 구조에서 5장에 대응하는 짝이 없다는 점. <strong>현위치 변호 <span class="c f">F</span> <span class="c h">H</span> <span class="c b">B</span>.</strong> 다수 주석은 현위치를 지지한다. 성벽 부역이 농사를 막아 기근을 심화시켰다는 인과(4:22 → 5:3)가 자연스럽고, 총독의 자기 절제(14–19절)가 채권자 고발(6–11절)의 도덕적 근거로 기능한다. <strong>어느 편을 취하든, 이 장은 축성이라는 위기의 한복판에 내부 정의의 문제가 끼어든 사건으로 읽힌다.</strong></p>
+  </div>
+
+  <div class="note">
+    <div class="tt">경제 배경 — <span class="c h">H</span></div>
+    <p>바벨론 침공 이후 유다는 회복되지 못했고, 숙련 장인을 포함한 상류층을 잃었다. 여기에 여러 흉작과 가뭄이 겹쳤다(학 1:6–11; 2:16–17). <strong>크세르크세스 이래 제국 경제가 쇠퇴하며 (페르시아인을 제외한) 세금이 증가했다.</strong> 유대인은 교역(감람·기름 판매)을 했으나 때로 과도한 이자로 빚을 지고 농지를 저당 잡히고 자녀까지 팔아야 했다(5:3–5). <strong>느 9:36–37이 이들을 통치자의 "종"으로 묘사하는 그 현실이다.</strong> 이자율은 고레스·캄비세스 때 20%에서 5세기 말 40~50%로 올랐다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">צְעָקָה גְדוֹלָה</div>
+    <div class="eyebrow">5:1–5</div>
+    <h2>1. 백성의 부르짖음</h2>
+    <div class="gloss">체아카 게돌라, "큰 부르짖음" — 출애굽의 외침을 되울린다</div>
+  </div>
+
+  <div class="vs" id="v12">
+    <span class="ref">5:1–2 — 아내도 함께한 큰 부르짖음</span>
+    <p><span class="c f">F</span>: 빈곤에는 두 원인이 있었다. 첫째, 이웃의 적대로 교역이 단절되었다. 둘째, 느헤미야의 성벽 부역이 준엄했다 — 4:22에 따라 농민이 예루살렘에 머물러 <strong>농사가 불가능</strong>했다. 고귀한 이상과 예방책이 농촌 사람들에게 가장 무거운 짐이 되었다.</p>
+    <p><strong>불평의 대상.</strong> <span class="c f">F</span>: <strong>불평은 느헤미야가 아니라 동족 유대인, 곧 자기 처지를 악용해 배를 불린 부유한 유대인을 향했다.</strong> 백성은 느헤미야의 조치를 필요한 것으로 받아들였다. "큰 부르짖음"(<span class="hw">צְעָקָה גְדוֹלָה</span>, 체아카 게돌라)은 고통 중의 외침이다(출 14:10). <strong>아내들까지 동참한 것은 이례적이다</strong> — 에스라-느헤미야에서 여성은 대개 배경에 머문다. <span class="c h">H</span>: 생존이 걸린 문제였기에 온 가족의 사안이 되었고, 일부 여성은 남편이 축성에 동원된 사이 농장에서 일했을 것이다.</p>
+  </div>
+
+  <div class="vs" id="v35">
+    <span class="ref">5:3–5 — 저당, 왕세, 채무노예</span>
+    <p><span class="c f">F</span>가 세 불평을 정리한다.</p>
+    <ul>
+      <li><strong>① 대가족의 곡식 부족.</strong> 부역 탓에 곡식을 못 길러 사서 먹어야 했으나 가난해 지불이 어려웠다.</li>
+      <li><strong>② 저당(<span class="hw">ערב</span>, 아라브).</strong> 밭·포도원·집을 저당 잡혔다. <span class="c f">F</span>: 이 어근이 "저당"의 뜻으로는 느헤미야서에서 여기에만 쓰인다(다른 곳은 "보증"). <span class="c h">H</span>: 자음 하나가 더해지면 "우리가 많다"(<span class="hw">רַבִּים</span>, 라빔)가 "우리가 저당 잡힌다"(<span class="hw">עֹרְבִים</span>, 오르빔)가 된다 — 한 재앙이 다음 재앙으로 이어짐을 음성이 그린다.</li>
+      <li><strong>③ 왕세를 위한 차용.</strong> <span class="c f">F</span>: 다리오가 수확 기준으로 부과한 토지세(바벨론의 ilku 계승)가 무거운 짐이었다. 밭·포도원만 언급된 것은 산출 있는 토지에만 과세했기 때문이다.</li>
+    </ul>
+    <p><strong>채무노예(5:5).</strong> <span class="c f">F</span>: 결과는 자녀가 채무노예(출 21:1–11)로 넘어간 것이다. 채무자의 자녀가 채권자에게 종살이하며 빚 갚을 때까지 일했다. <strong>딸의 경우는 달랐다 — 채권자 가문의 둘째 아내로 넘겨질 수 있었다</strong>(<span class="hw">נִכְבָּשׁוֹת</span>, 니크바쇼트). "우리 손에 힘이 없다"(<span class="hw">אֵין לְאֵל יָדֵנוּ</span>, 엔 레엘 야데누)는 무력감의 관용구다. <strong>신 28:32는 자녀가 이방 민족에게 넘어간다 했으나, 느헤미야에서는 이방이 아니라 자기 동족 유대인에게 넘어간다.</strong></p>
+    <div class="note">
+      <div class="tt">5절의 "보라"(힌네)와 혈육의 수사 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: "보라"(<span class="hw">הִנֵּה</span>, 힌네)는 독자를 등장인물의 시점 안으로 끌어들이는 기술적 표현이다(창 18:2에서 아브라함 시점의 "사람들"처럼 → 9:36–37 주석 참조). "이제 우리 육체가 우리 형제의 육체와 같다"는 <strong>법정 수사</strong>다. 부유한 지주와 가난한 건축자가 같은 공동체일 뿐 아니라 같은 혈육임을 강조한다. <strong>진정한 유대인 됨의 표지는 재산이나 위세가 아니라 혈통이다.</strong> "우리 형제"(아헤누)와 "다른 이들"(아헤림)의 음성 유희가 신랄한 풍자를 이룬다 — 부유층이 동족을 남처럼 취급한다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">רִיב</div>
+    <div class="eyebrow">5:6–11</div>
+    <h2>2. 느헤미야의 처결</h2>
+    <div class="gloss">리브, "고발/소송" — 총독이 채권자를 법정에 세우다</div>
+  </div>
+
+  <div class="vs" id="v67">
+    <span class="ref">5:6–7 — 숙고와 고발</span>
+    <p><span class="c f">F</span>: 느헤미야는 위기의 이중성을 즉시 간파했다. 한편으로 유다의 경제 기반이, 다른 한편으로 공동체의 평화로운 공존이 위태로웠다. 한 유대인이 다른 유대인에게 이렇게 행한다는 생각이 그를 분노케 했다.</p>
+    <p><strong>"깊이 생각하고"</strong>(<span class="hw">מלך II</span>, 말라크 II). <span class="c f">F</span> <span class="c h">H</span>: 바벨론 차용어로 "숙고하다"의 뜻일 개연성이 크다(라쉬 지지). <span class="c h">H</span>: <strong>느헤미야는 분노를 인식하고 성급히 행동하는 대신 다음 수를 숙고했다.</strong> 그의 대응은 "고발"(<span class="hw">ריב</span>, 리브)이라는 낱말이 보이듯 <strong>법정적 성격</strong>을 띤다. F: 다만 귀족·민장이 재판관인 통상 법정에 세울 수는 없었다 — 그들이 피고였다. 그래서 온 백성의 대집회를 소집했다.</p>
+    <p><span class="c h">H</span>: 토라에 따르면 가난한 자를 이용하지 않도록 이자 대출이 금지되었다(단, 이방인에게는 이자 대출 허용, 신 23:19–20). 담보물에도 엄격한 규정이 있어 맷돌이나 겉옷을 밤새 잡을 수 없었다(출 22:26–27; 신 24:6–13). <strong>7세기 히브리 오스트라콘이 채권자에게 겉옷을 빼앗긴 가난한 농부의 편지를 전한다.</strong> 느헤미야는 강권 대신 형제애로 호소하며, 성난 군중의 존재가 판결에 물리적 힘을 실었다.</p>
+  </div>
+
+  <div class="vs" id="v89">
+    <span class="ref">5:8–9 — "너희가 너희 형제를 팔고자 하느냐"</span>
+    <p><span class="c f">F</span>: "우리는 이방에 팔린 유대인 형제를 속량했는데, 너희가 도리어 형제를 파는도다." 부유한 지주가 가난한 유대인 가정의 채권자가 되어 자녀를 채무노예로 삼았고, 유대인이 공동 노력으로 그들을 속량했는데, <strong>이제 유대인이 형제에게 똑같은 짓을 한다.</strong> 피고들은 답할 말이 없어 잠잠했다 — 곧 유죄를 인정한 것이다.</p>
+    <div class="note">
+      <div class="tt">속량 vs 몸값 — <span class="c h">H</span>의 구분</div>
+      <p><span class="c h">H</span>: 팔린 자 다수를 느헤미야가 몸소 되샀다. Milgrom이 <strong>속량(redemption)</strong>과 <strong>몸값(ransom)</strong>을 구분한다. 속량은 희년까지 속량자의 소유가 되게 하나, 몸값은 완전한 자유를 준다. <strong>느헤미야의 행위는 그들을 개인 노예로 삼았다는 기록이 없으므로 몸값에 해당한다.</strong> 그는 가까운 친족도 아니어서 레 25:47–55의 속량 의무 대상이 아니었는데도 행했다. <strong>친족을 되사는 인도적 율법이 즉각 혈족을 넘어 온 이스라엘의 사회적 책임이 된 첫 사례</strong>이며, 이는 제2성전기 내내 이어져 탈무드가 "포로 속량"(<span class="hw">פִּדְיוֹן שְׁבוּיִים</span>, 피드욘 셰부임)을 큰 의무로 규정한다(b. B. Bat. 8ab).</p>
+    </div>
+    <p><strong>5:9 하나님을 경외함.</strong> <span class="c f">F</span>: "너희가 행하는 일이 옳지 못하다. 하나님을 경외하는 가운데 행하여 이방의 조롱을 막아야 하지 않겠느냐." 출 21장이 히브리 종의 채무노예를 허용하되(신 15:12) 7년 후 해방을 규정하는데, 이 규정이 지켜지지 않은 것이다(렘 34:8 이하의 시드기야 사례처럼). <strong>이 관습을 폐지할 또 하나의 이유는 그것이 이방에게 조롱거리를 준다는 것</strong>이다.</p>
+  </div>
+
+  <div class="vs" id="v1011">
+    <span class="ref">5:10–11 — "이 빚을 탕감하자"</span>
+    <p><span class="c f">F</span>: 느헤미야가 회중 앞에서 <strong>자신도 돈과 곡식을 빌려주었음을 솔직히 고백</strong>한다(단, 채무노예는 삼지 않았음). "이 빚을 탕감하자"(<span class="hw">נַעַזְבָה</span>, 나아즈바). 자기가 먼저 탕감하고 모든 이에게 같이 하기를 요구한다.</p>
+    <p><strong>5:11 돌려주라.</strong> <span class="c f">F</span>: 밭·포도원·감람원·집과 <strong>"백분의 일"</strong>(<span class="hw">מְאַת</span>, 메아트)을 돌려주라. 대다수 학자는 이를 <span class="hw">מַשָּׂאת</span>(맛사트, "빚")의 필사 오류로 본다(신 24:10). 마소라 본문을 취하면 "월 1% 이자"를 가리킬 수 있다. <strong>곡식·포도주·기름이 밭·포도원·감람원과 정확히 대응한다</strong> — 부역으로 밭을 갈지 못해 이것들을 빌려야 했음을 보인다. <span class="c h">H</span>: <strong>느헤미야의 명령은 이자 포기를 넘어선다.</strong> 밭·과수원·집과 이자까지 곧 <strong>빚 전체를 탕감</strong>하라는 것이다(그는 애초에 이자를 받지 않았으므로 이자만 포기하라는 뜻일 수 없다). 아테네의 솔론이 채권자에게 채무 상환권 포기를 강제한 것과 같은 조치다.</p>
+    <div class="note">
+      <div class="tt">율법을 넘어서는 관대함 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 이 조치는 상업 금융·저당 관행에 대한 반론이 아니라 <strong>고대 이스라엘의 혈연적 충성이라는 맥락</strong>에서 이해해야 한다. 백성이 빚을 못 갚은 것은 나태가 아니라 <strong>하나님의 일(축성)에 노동을 바쳤기 때문</strong>이다. 느헤미야는 부유층에게 같은 사업에 돈을 기부하라고 도전한다. <strong>율법은 오히려 빚을 갚으라고 요구하지만(출 22:14; 레 19:13), 느헤미야는 하나님을 경외함(5:9, 15)에서 우러난 관대함으로 율법의 요구를 넘어선다.</strong></p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">נָעַרְתִּי</div>
+    <div class="eyebrow">5:12–13</div>
+    <h2>3. 맹세와 상징 행위</h2>
+    <div class="gloss">나아르티, "내가 털어버렸다" — 저주 의례로 봉인된 약속</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">5:12 — 제사장 앞의 맹세</span>
+    <p><span class="c f">F</span>: 죄인들은 선택의 여지 없이 돌려주겠다고 서약했다. <strong>느헤미야는 제사장들을 불러 맹세시켰다.</strong> "그들에게 맹세시키다"(<span class="hw">וָאַשְׁבִּיעֵם</span>, 바아슈비엠)의 목적어가 누구인지 불분명하나, 문맥상 제사장이 맹세의 증인 또는 집행자 역할을 했다. <span class="c h">H</span>: 느헤미야는 미루거나 번복할 여지를 주지 않고, <strong>제사장이 집전하는 맹세</strong>를 시킨다 — 고대의 맹세는 신명(神名)으로 행해졌다(→ 6부 야훼 이름 참조).</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">5:13 — 옷자락을 털다</span>
+    <p><span class="c f">F</span>: 당시 사람들은 소지품을 옷자락(품, <span class="hw">חֹצֶן</span>, 호첸)에 넣어 다녔다. 느헤미야가 회중 앞에서 품을 털어 비운다. 이는 <strong>저주의 상징, 곧 저주를 예시하는 의례</strong>가 되었다. "약속을 지키지 않는 자를 하나님이 이같이 그 집과 소유에서 털어 버리사 이렇게 털려 빈털터리가 되게 하시기를." 회중이 "아멘"(<span class="hw">אָמֵן</span>) 하고 여호와를 찬송하며 약속을 지켰다.</p>
+    <div class="note">
+      <div class="tt">라쉬의 해설 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 느헤미야는 옷을 털어 <strong>맹세를 어기는 자에게 임할 심판을 극적으로 예시</strong>한다 — 하나님이 친히 그들의 재산과 소유를 털어 버리시리라. 라쉬: "거룩하신 이가 빚을 탕감하지 않는 자들을 세상과 그 재산에서 이렇게 털어 버리시리라." 백성의 반응은 즉각적·만장일치였고, 위반자들조차 "아멘"을 외쳤다.</p>
+    </div>
+    <div class="caveat">
+      <div class="tt">느헤미야 vs 에스라의 방식 — <span class="c f">F</span></div>
+      <p><span class="c f">F</span>: 두 지도자의 방식이 뚜렷이 다르다. <strong>느헤미야는 총독의 권위로 죄인을 고발·정죄하고 처벌 조치를 독자적으로 취했다.</strong> 반면 <strong>에스라는 결정을 지도자들에게 맡기고 그들이 결정한 바에 따라 행동했다</strong> — 페르시아 왕에게서 받은 위임이 더 제한적이었다(하나님의 율법 적용). 5장의 이 상징 행위(행 18:6의 바울이 옷을 떠는 것과 유사)는 느헤미야식 지도력의 표본이다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">לֶחֶם הַפֶּחָה</div>
+    <div class="eyebrow">5:14–19</div>
+    <h2>4. 총독의 자기 헌신</h2>
+    <div class="gloss">레헴 하페하, "총독의 녹" — 스스로 포기한 권리</div>
+  </div>
+
+  <div class="vs" id="v1416">
+    <span class="ref">5:14–16 — 12년 총독기, 녹봉 포기</span>
+    <p><strong>임명 연대.</strong> <span class="c f">F</span> <span class="c h">H</span>: 느헤미야가 유다 총독으로 임명된 것은 아닥사스다 20~32년, 곧 <strong>12년(주전 445–433/432년)</strong>이다. 총독(<span class="hw">פֶּחָה</span>, 페하)의 녹(食)을 받지 않았다. F: 마소라의 <span class="hw">פֶּחָם</span>(페함)은 <span class="hw">פֶּחָה</span>(페하)의 필사 오류일 개연성이 크다.</p>
+    <p><strong>이전 총독들.</strong> <span class="c f">F</span>: 스룹바벨 이후 느헤미야 이전의 총독 이름은 전하지 않는다(중요하게 여겨지지 않음). 이전 총독들은 은 40세겔에 더해 식량·포도주를 착취했고, <strong>그들의 종들도 백성을 압제했다.</strong> 느헤미야는 <strong>하나님을 경외하므로</strong> 이 관행을 삼갔다. <span class="c h">H</span>: 랍비들은 "하나님을 경외함으로"라는 표현이 <strong>법적 제재가 없어도 양심의 문제가 되는 행동</strong>에 쓰인다고 설명한다(레 19:13–14). 느헤미야의 관대함은 삯을 거부해 백성에게 짐이 되지 않은 바울을 연상시킨다(고전 9:12; 살후 3:8).</p>
+    <p><strong>고고학적 확인.</strong> <span class="c h">H</span>: 1974년 발견된 70여 개의 인장(bulla)과 두 개의 봉인에 <span class="hw">yhd</span>(유다 속주의 페르시아 명칭)와 여러 "총독" 호칭이 있어, <strong>느헤미야가 첫 총독이 아니었음</strong>을 뒷받침한다(Avigad, 6세기 말–5세기 초). <span class="c f">F</span>: 느헤미야는 땅을 사지 않았다(5:16) — 이것이 그가 채무노예를 만들지 않은 근거다. <span class="c h">H</span>: 이전 총독들이 자기 잇속으로 땅을 취한 것과 대조된다(Murashu 상업 문서가 총독들의 토지 수탈을 기록; 말 1:8의 풍자).</p>
+  </div>
+
+  <div class="vs" id="v1719">
+    <span class="ref">5:17–19 — 식탁의 접대, "나를 기억하옵소서"</span>
+    <p><span class="c f">F</span> <span class="c h">H</span>: 페르시아 관습상 총독은 자기 식탁에서 사람들을 접대해야 했다. <strong>유대인·민장 150명에 더해 이방 관리들까지</strong> 대접했다. 매일 소 한 마리, 살진 양 여섯, 닭을 준비했고, 열흘마다 각종 포도주를 넉넉히 마련했다(네벨, 포도주 가죽부대). <span class="c h">H</span>: 이 모든 것이 <strong>자기 비용</strong>이었다 — 텔 엔-나스베 유적의 수탉 인장이 당시 유대인의 닭 사육을 확인한다.</p>
+    <p><strong>"나를 기억하옵소서"(5:19).</strong> <span class="c f">F</span>: 느헤미야의 또 하나의 기도다. 그가 한 일은 자선이 아니라 <strong>하나님의 은혜를 위함</strong>이었다. 유대인은 하나님의 백성, 그의 계시의 담지자이므로 그들의 복지를 돕는 것은 하나님의 대의를 돕는 것이다. <span class="c h">H</span>: 이 기도는 고대 근동의 신에게 드리는 청원과 형식이 유사하나(느부갓네살 2세의 마르둑 기도), <strong>느헤미야는 순종을 축복하고 상 주시겠다는 야훼의 약속에 근거한다</strong>(1:5, 9). 그는 원수와 자신의 행위를 각각 심판과 상급을 위해 하나님이 "기억"하시기를 자주 구한다(6:14; 13:14, 22, 31).</p>
+    <div class="note">
+      <div class="tt">율법을 넘어선 선행 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 느헤미야의 선행이 특별한 것은 단순한 계명 준수의 결과가 아니기 때문이다. 빚 탕감을 요청하고 수많은 유대인을 자기 비용으로 먹인 것은 <strong>빚을 갚으라고 요구하는 율법(출 22:14; 레 19:13)의 요구를 훌쩍 넘어선다.</strong> 이 관대함은 율법 준수가 아니라 <strong>하나님을 경외함(5:9, 15)에서 태어났다.</strong> 레위기가 거룩한 삶을 죄와 부정의 부재(레 1–16장)만이 아니라 관계의 윤리 확립(레 18–19장)으로 그리듯, "네 이웃을 네 몸과 같이 사랑하라"(레 19:18; 막 12:31)가 해악을 삼가는 것을 넘어 선을 행하는 최고 기준으로 선다. 느헤미야의 기도에는 자기가 도운 백성의 감사 부족에 대한 암시도 스민다 — 적어도 가장 중요한 분인 야훼께서 기억해 주시기를 구한다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="tt">5장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력의 도덕적 권위(자기 절제가 고발의 근거). <span class="c f">F</span> 어휘·본문비평·행정사(아라브·메아트 난제, 페하 오사, 느헤미야 vs 에스라 방식). <span class="c h">H</span> 제2성전기 사회사·수용사(속량 vs 몸값, 포로 속량 의무, 율법을 넘어선 관대함, 인장 고고학). <span class="c t">T</span> 배치 쟁점(2차 총독기 전위설). <span class="c b">B</span> 제국 경제사(과세·이자율·기근 배경, 느 9:36–37의 "종").</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="eyebrow">CROSS-REFERENCES</div>
+    <h2>5. 상호 참조 총람</h2>
+    <div class="gloss">5장의 각 절이 다른 성경·고대 자료와 만나는 지점</div>
+  </div>
+
+  <table>
+    <tr><th style="width:14%">느 5장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">5:1</td><td>출애굽기 14:10 (체아카 게돌라 = 고통의 큰 부르짖음)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">5:3</td><td>학개 1:6–11; 2:16–17 (흉작·가뭄의 경제 배경)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:4</td><td>에스라 4:13 (왕세) — 바벨론 ilku 계승</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">5:5</td><td><strong>출애굽기 21:1–11</strong> (채무노예) / <strong>신명기 28:32</strong> (단, 이방이 아닌 동족에게)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">5:5</td><td>창 18:2 (힌네의 시점 전환) → 느 9:36–37</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:7</td><td>출 22:26–27; 신 24:6–13 (담보물 규정) / 7세기 히브리 오스트라콘 (겉옷)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:8</td><td><strong>레위기 25:47–55</strong> (친족 속량) / 창 14:16 (아브라함의 롯 구출) / b. B. Bat. 8ab (포로 속량)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:9</td><td>신명기 15:12 (7년 해방) / 렘 34:8 이하 (시드기야의 파기)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">5:11</td><td>신명기 24:10 (맛사트 = 빚) — 메아트의 오사 여부</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">5:11</td><td>솔론의 부채 탕감 (아테네 병행)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:13</td><td>행 18:6 (바울이 옷을 떪, 상징 행위 유사)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">5:15</td><td>레위기 19:13–14 (하나님 경외 = 양심의 문제) / 말 1:8 (총독의 착취)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:15</td><td>고전 9:12; 살후 3:8 (삯을 거부한 바울)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:18</td><td>텔 엔-나스베 수탉 인장 (닭 사육 확인)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">5:19</td><td>느 1:5, 9; 6:14; 13:14, 22, 31 (기억 청원 계열) / 느부갓네살 2세의 마르둑 기도</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">5:19</td><td><strong>레위기 19:18</strong> (네 이웃을 네 몸같이) → 막 12:31</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>Avigad의 인장·불라</strong>(yhd, 총독 호칭) — 느헤미야 이전 총독의 존재 <span class="c h">H</span> · <strong>Murashu 상업 문서</strong> — 총독의 토지 수탈 <span class="c h">H</span> · <strong>7세기 히브리 오스트라콘</strong> — 겉옷을 빼앗긴 농부 <span class="c h">H</span> · <strong>b. B. Bat. 8ab</strong> — 포로 속량(피드욘 셰부임) <span class="c h">H</span> · <strong>느부갓네살 2세의 마르둑 기도</strong> — 5:19 기도 형식의 근동 병행 <span class="c h">H</span> · <strong>솔론</strong> — 아테네의 부채 탕감 <span class="c h">H</span></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">זָכְרָה־לִּי</div>
+    <div class="eyebrow">SYNTHESIS</div>
+    <h2>6. 신학 종합</h2>
+    <div class="gloss">조크라-리, "나를 기억하옵소서" (느 5:19)</div>
+  </div>
+
+  <h3>① 외부의 적보다 위험한 내부의 압제</h3>
+  <p>4장의 사면 포위를 견딘 공동체가 5장에서 <strong>안에서 무너질 위기</strong>를 맞는다. <span class="c f">F</span>: 위태로운 것은 유다의 경제 기반이자 공동체의 평화로운 공존이었다. 성벽이 완성되어도 형제가 형제를 파는 공동체라면 무엇이 지켜지겠는가. <span class="c h">H</span>의 표제 "내부의 압제"가 이 장의 자리를 규정한다 — 대적의 조롱(4장)과 완공(6장) 사이에 <strong>정의의 시험</strong>이 놓인다.</p>
+
+  <h3>② "형제"의 신학 — 혈육을 남처럼 대하는 죄</h3>
+  <p>5절의 언어유희(아헤누 "형제" ↔ 아헤림 "다른 이들")가 이 장의 죄를 정확히 짚는다. <strong>부유층은 같은 혈육을 "남"처럼 취급했다.</strong> <span class="c h">H</span>: 진정한 유대인 됨의 표지는 재산이 아니라 혈통이며, 축성 현장에서 계급 없이 나란히 일한 공동체가 채무 관계에서는 착취자와 피착취자로 갈렸다. 느헤미야의 반복되는 "형제" 호칭이 이 균열을 봉합하려는 수사다.</p>
+
+  <h3>③ 하나님을 경외함 — 율법을 넘어서는 자리</h3>
+  <p>5:9와 5:15의 <span class="hw">בְּיִרְאַת אֱלֹהִים</span>(베이르아트 엘로힘, 하나님을 경외함)이 이 장의 축이다. <span class="c h">H</span>의 통찰이 결정적이다. 율법은 <strong>빚을 갚으라고</strong> 요구하지만(출 22:14; 레 19:13), 느헤미야는 빚을 <strong>탕감하라</strong> 명한다. 이 관대함은 율법 준수가 아니라 <strong>하나님을 경외함에서 태어났다.</strong> "네 이웃을 네 몸같이 사랑하라"(레 19:18; 막 12:31)가 해악을 삼가는 것을 넘어 선을 행하는 최고 기준으로 서는 지점이다. 하나님 경외는 법적 제재가 없어도 작동하는 양심의 이름이다.</p>
+
+  <h3>④ 속량의 확장 — 혈족에서 온 공동체로</h3>
+  <p><span class="c h">H</span>의 속량 신학이 이 장의 복음적 깊이다. 친족을 되사는 인도적 율법(레 25:47–55)이 <strong>즉각 혈족을 넘어 온 이스라엘의 사회적 책임</strong>이 되는 첫 사례가 여기다. 느헤미야는 가까운 친족이 아닌데도, 속량이 아니라 자유를 주는 <strong>몸값</strong>으로 형제들을 되샀다. 아브라함의 롯 구출(창 14:16)에서 탈무드의 "포로 속량"(b. B. Bat. 8ab)까지, 그리고 값을 치러 자유케 하는 구속(救贖)의 신약적 성취까지 이어지는 계보의 한 마디다.</p>
+
+  <h3>⑤ 자기를 비운 지도력 — 녹봉을 포기한 총독</h3>
+  <p>14–19절이 6–13절의 도덕적 근거를 세운다. <span class="c f">F</span>: 느헤미야가 <strong>땅을 사지 않은 것</strong>이 채무노예를 만들지 않은 근거다(5:16). 이전 총독들과 그 종들이 착취한 자리에서, 느헤미야는 12년간 녹봉을 포기하고 자기 비용으로 150명을 먹였다. <span class="c h">H</span>: 삯을 거부해 백성에게 짐이 되지 않은 바울(고전 9:12)의 선례다. <strong>고발의 권위는 자기 절제에서 나온다</strong> — 자기가 먼저 탕감한(5:10) 자만이 탕감을 명할 수 있다.</p>
+
+  <h3>⑥ "나를 기억하옵소서" — 기억 청원의 신학</h3>
+  <p>5:19의 <span class="hw">זָכְרָה־לִּי</span>(조크라-리)가 이 책의 기억 청원 계열(1:8; 6:14; 13:14, 22, 31)에 속한다. <span class="c f">F</span>: 자선이 아니라 하나님의 은혜를 위함이다. <span class="c h">H</span>: 근동의 왕들이 자기 공덕을 신에게 기억시킨 형식(느부갓네살의 마르둑 기도)과 형식은 같으나, 느헤미야는 <strong>순종에 상 주시겠다는 야훼의 약속</strong>에 근거한다. 자손 없는 이(내시설, 1장 참조)에게 이 기도가 <strong>기념비 구실</strong>을 한다는 독법과도 맞물린다 — 회고록 자체가 그의 기억이 된다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 5장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

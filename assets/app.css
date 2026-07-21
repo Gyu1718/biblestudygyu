@@ -1,0 +1,106 @@
+/* ============================================================
+   성서 연구 서고 — 기능 레이어 스타일  (app.css)
+   ------------------------------------------------------------
+   app.js가 만들어 넣는 요소(관주 패널·테마 토글)의 표현.
+   색은 theme.css 변수를 참조하므로 다크 모드가 자동 적용된다.
+   반응형: 넓은 화면에선 절 옆 사이드, 좁은 화면에선 절 아래 아코디언.
+   ============================================================ */
+
+/* ── 테마 토글 (우하단 고정) ── */
+.theme-toggle{
+  position:fixed; right:1rem; bottom:1rem; z-index:50;
+  font-family:var(--sans); font-size:.76rem; font-weight:700;
+  color:var(--ink); background:var(--card);
+  border:1px solid var(--line); border-radius:2rem;
+  padding:.5rem .9rem; cursor:pointer;
+  box-shadow:var(--shadow-md); transition:var(--theme-transition), transform .12s ease;
+}
+.theme-toggle:hover{ transform:translateY(-1px); border-color:var(--ochre); }
+.theme-toggle:focus-visible{ outline:2px solid var(--lapis); outline-offset:2px; }
+@media print{ .theme-toggle{ display:none; } }
+
+/* ── 관주 패널 ── */
+.xref-panel{
+  margin:.9rem 0 .3rem;
+  border:1px solid var(--line); border-left:3px solid var(--xref-accent);
+  border-radius:8px; background:var(--card);
+  font-family:var(--sans); overflow:hidden;
+  transition:var(--theme-transition);
+}
+.xref-head{
+  width:100%; display:flex; align-items:center; justify-content:space-between;
+  background:transparent; border:0; cursor:pointer;
+  padding:.55rem .85rem; font-family:var(--sans);
+  color:var(--ink); text-align:left;
+}
+.xref-head:hover{ background:var(--band); }
+.xref-head:focus-visible{ outline:2px solid var(--lapis); outline-offset:-2px; }
+.xref-title{ font-size:.78rem; font-weight:700; letter-spacing:.02em; }
+.xref-count{
+  display:inline-grid; place-items:center; min-width:1.4rem; height:1.4rem;
+  margin-left:.35rem; padding:0 .35rem;
+  font-size:.68rem; color:var(--xref-chip-ink); background:var(--xref-chip);
+  border-radius:1rem;
+}
+.xref-caret{ font-size:.7rem; color:var(--ink-soft); transition:transform .2s ease; }
+.xref-panel.xref-open .xref-caret{ transform:rotate(180deg); }
+
+/* 본문: 기본 접힘 → 열림 시 표시 */
+.xref-body{ display:none; padding:.2rem .85rem .8rem; }
+.xref-panel.xref-open .xref-body{ display:block; }
+
+.xref-list{ list-style:none; margin:0; padding:0;
+  display:flex; flex-wrap:wrap; gap:.35rem .4rem; }
+.xref-item{
+  display:inline-flex; align-items:baseline; gap:.25rem;
+  padding:.2rem .5rem; border-radius:5px;
+  background:var(--band); border:1px solid var(--line);
+  font-size:.8rem; color:var(--ink);
+}
+.xref-ref{ font-weight:500; }
+.xref-vote{ font-size:.64rem; color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+
+/* 상위 N개만 우선 표시, 나머지는 '더 보기'로 */
+.xref-extra{ display:none; }
+.xref-panel.xref-all .xref-extra{ display:inline-flex; }
+.xref-more{
+  margin-top:.6rem; background:transparent; border:1px dashed var(--line);
+  border-radius:5px; padding:.3rem .7rem; cursor:pointer;
+  font-family:var(--sans); font-size:.72rem; font-weight:700; color:var(--lapis);
+}
+.xref-more:hover{ border-color:var(--ochre); color:var(--ochre); }
+.xref-more:focus-visible{ outline:2px solid var(--lapis); outline-offset:2px; }
+
+/* ── 절→연구 이동 링크 ── */
+.vlinks{
+  display:flex; flex-wrap:wrap; align-items:center; gap:.3rem .4rem;
+  margin:.7rem 0 .2rem; font-family:var(--sans);
+}
+.vlinks-lead{ font-size:.68rem; font-weight:700; color:var(--ink-soft); letter-spacing:.03em; }
+.vlink{
+  font-size:.72rem; font-weight:700; text-decoration:none;
+  color:var(--lapis); padding:.16rem .5rem;
+  border:1px solid var(--line); border-radius:1rem;
+  background:var(--card); transition:var(--theme-transition), border-color .12s;
+}
+.vlink:hover{ border-color:var(--ochre); color:var(--ochre); }
+.vlink:focus-visible{ outline:2px solid var(--lapis); outline-offset:2px; }
+.vlink-interlinear{ color:var(--ochre); }
+.vlink-interlinear:hover{ color:var(--lapis); border-color:var(--lapis); }
+
+/* ── 넓은 화면: 절 옆 사이드 배치 ──
+   절 요소가 position:relative 이면 패널을 오른쪽 여백에 띄운다.
+   문서가 이를 원할 때만 body.xref-side 로 켠다(기본은 인라인 흐름). */
+@media (min-width:1100px){
+  body.xref-side [data-v]{ position:relative; }
+  body.xref-side .xref-panel{
+    position:absolute; top:0; right:-15.5rem; width:14rem; margin:0;
+  }
+}
+
+/* ── 좁은 화면 ── */
+@media (max-width:600px){
+  .theme-toggle{ right:.7rem; bottom:.7rem; padding:.45rem .8rem; font-size:.72rem; }
+  .xref-list{ gap:.3rem; }
+  .xref-item{ font-size:.78rem; }
+}

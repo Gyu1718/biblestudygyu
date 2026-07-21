@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 12장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch12.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 12장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 구획과 배경</a>
+    <a class="lv1" href="#s1">1. 성전 인력 (12:1–26)</a>
+    <a class="lv2" href="#v19">12:1–9 스룹바벨 때</a>
+    <a class="lv2" href="#v1011">12:10–11 대제사장 계보</a>
+    <a class="lv2" href="#v1226">12:12–26 요야김 때</a>
+    <a class="lv1" href="#s2">2. 봉헌 준비 (12:27–30)</a>
+    <a class="lv1" href="#s3">3. 두 찬양대의 행진 (12:31–43)</a>
+    <a class="lv1" href="#s4">4. 예배의 시스템화 (12:44–47)</a>
+    <a class="lv1" href="#s5">5. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">חֲנֻכָּה</div>
+  <h1>느헤미야 12장 심층 연구</h1>
+  <div class="sub">하눅카, "봉헌" — 성벽을 하나님께 드리다, 두 찬양대가 반대로 돌아 성전에서 만나다</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">מִשְׁמָרוֹת</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 구획과 배경</h2>
+    <div class="gloss">미쉬마로트, "당번" — 인력의 계보가 봉헌의 기쁨을 떠받친다</div>
+  </div>
+
+  <p>12장은 두 몸으로 이뤄진다. <strong>성전 인력의 계보(12:1–26)</strong>와 <strong>성벽 봉헌(12:27–47)</strong>. <span class="c h">H</span>의 구획: 스룹바벨 때 제사장·레위인(12:1–9) / 대제사장 계보(12:10–11) / 요야김 때 제사장(12:12–21) / 레위 족장(12:22–26) / 봉헌 준비(12:27–30) / 두 찬양대 행진(12:31–43) / 예배 지원(12:44–47).</p>
+
+  <div class="note">
+    <div class="tt">도시의 재인구화가 성전 예배 없이는 무의미하다 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: <strong>도시를 채우는 일(11장)은 합당한 성전 예배 없이는 의미가 적다</strong> — 예배·속죄·교제의 중심이 있어야 한다. 그래서 저자는 거룩한 성으로의 인구 유입을 서술한 뒤, <strong>공동체가 거룩한 봉사를 수행하고 지킬 자들의 이름</strong>을 세세히 적는다. Steinmann: "이름은 이 후원을 인격화한다 — 유대인의 십일조와 제물(느 10:35–39)이 익명의 기금이 아니라 <strong>이름을 지닌 봉사자들</strong>에게 돌아갔다."</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">이 장의 신학적 자리 — <span class="c t">T</span></div>
+    <p><span class="c t">T</span>: 12장의 봉헌은 <strong>4:3의 조롱("여우가 올라가도 무너지리라")에 대한 성취</strong>다. 도비야가 비웃던 그 성벽 위를 이제 두 찬양대가 행진하며 하나님께 드린다. 성벽이라는 물리적 완공이 <strong>예배라는 목적으로 봉인</strong>되고, 헤르파(조롱)의 반복이 마침내 기쁨의 함성으로 성취된다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">מִשְׁמָר לְעֻמַּת מִשְׁמָר</div>
+    <div class="eyebrow">12:1–26</div>
+    <h2>1. 성전 인력</h2>
+    <div class="gloss">미쉬마르 레우마트 미쉬마르, "당번을 마주한 당번" — 교대와 교창</div>
+  </div>
+
+  <div class="vs" id="v19">
+    <span class="ref">12:1–9 — 스룹바벨과 함께 온 제사장·레위인</span>
+    <p><span class="c h">H</span>: 계보와 전통의 연속성이 느헤미야 공동체에 결정적이다. <strong>아비·아들·형제의 관계가 제사장 자격의 표지이자 가족 연대의 표지</strong>다. 뛰어난 인물에 초점을 맞추는 여느 명단과 달리, <strong>이 계보에서는 모두가 중요하다 — 숫자가 아니라 이름이 기록된다.</strong></p>
+    <div class="caveat">
+      <div class="tt">미쉬마로트 — 당번 24반열 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 12:9에 성소 당번 레위인의 <strong>"당번"(<span class="hw">מִשְׁמָרוֹת</span>, 미쉬마로트)</strong>이 언급된다. 대상 24:3에 따르면 다윗이 제사장을 반열로 나눠 당번 일정을 주었고, 요세푸스는 각 반열이 <strong>"안식일부터 안식일까지" 여드레씩</strong> 봉사했다고 한다(고대사 7.365). 느헤미야 12장은 대상 24장과 다른 순서로 <strong>21~22반열</strong>만 열거한다. 랍비 전승은 포로에서 <strong>네 반열</strong>만 돌아왔고 예루살렘 선지자들이 <strong>24반열</strong>로 조직했다 하며, 사해문서는 <strong>26반열</strong> 배열을 따른다.</p>
+      <p><strong>미쉬마르 = 본래 "수호 임무".</strong> H: "당번·봉사 단위"라는 뜻의 미쉬마르는 오경에 없고 성경에서 여기(느 12:9, 24; 13:30)와 역대기(대상 25:8)에만 나오는 <strong>후기 성경 어휘</strong>다. 본질적으로 <strong>군사 범주</strong>다 — 토라에서는 성막에 대한 위반을 막는 "수호 임무"의 좁은 뜻으로 쓰인다. Milgrom: "침입자는 이스라엘인일지라도 온 이스라엘을 죽음에 이르게 할 수 있는 원수다"(민 1:51 "가까이 하는 외인은 죽일지니라").</p>
+    </div>
+    <div class="note">
+      <div class="tt">아비야 반열과 세례요한의 부친 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 헤롯 성전의 제사장 순번이 신약에서 확인된다. 누가복음에 따르면 <strong>세례요한의 부친 사가랴가 "아비야 반열"의 당번</strong>으로 봉사하던 중 천사의 방문을 받았다(눅 1:5, 8). 고고학자들은 고대 가이사랴 회당에서 <strong>24제사장 반열을 열거한 비문</strong>을 발굴했다. "그들을 마주하여"(<span class="hw">לְנֶגְדָּם</span>, 레네그담)라는 표현은 레위인의 노래가 <strong>두 성가대가 마주 서서 교창(交唱)</strong>으로 수행되었음을 시사한다(11:17; 12:24 "당번을 마주한 당번").</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v1011">
+    <span class="ref">12:10–11 — 대제사장 계보 6대</span>
+    <p><span class="c h">H</span>: 이 대제사장 명단이 완전한지 몇 세대가 빠졌는지 논의가 많다. <strong>예수아</strong>(538년 첫 귀환 때, 스 3:2) → <strong>요야김</strong> → <strong>엘리아십</strong>(느헤미야 당시, 도비야에게 성전 방을 내줌, 13:4–5) → <strong>요야다</strong> → <strong>요나단/요하난</strong> → <strong>얏두아</strong>(알렉산더 대왕 때, 요세푸스 고대사 11.317). H: <strong>이 여섯 사람의 생애가 200여 년(538–323 BCE)에 걸치는데, 이는 불가능하지 않다.</strong> 요하난은 <strong>엘레판틴 파피루스(약 410 BCE)</strong>에 대제사장으로 언급되며 약 370년까지 재직했을 것이다.</p>
+  </div>
+
+  <div class="vs" id="v1226">
+    <span class="ref">12:12–26 — 요야김 때 제사장, 레위 족장</span>
+    <p><span class="c h">H</span>: 12–21절의 이름 쌍은 첫 귀환자의 제사장 반열과 현재 봉사하는 이들 사이의 연속성을 보인다. 라쉬에 따르면 <strong>첫 이름은 제사장 반열(스룹바벨 때 족장), 둘째는 현재 가문 족장</strong>이다. 대상 24장은 24반열을 말하나 느 12:1–7과 12:12–21은 21반열만 언급한다(므냐민 반열의 족장이 v.17에서 탈락 — 필사 과정에서 두 반열이 누락되었을 수 있음).</p>
+    <div class="note">
+      <div class="tt">다윗 = "하나님의 사람" — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 레위 족장들이 <strong>"다윗의 명령을 따라"(12:24) 마주 서서 찬송·감사</strong>했다 — 성소 예배 조직을 다윗에게 돌리는 것은 역대기와 같다(대하 8:14). 여기서 <strong>다윗이 "하나님의 사람"(<span class="hw">אִישׁ הָאֱלֹהִים</span>, 이쉬 하엘로힘)</strong>으로 불리는데, 이는 대개 선지자(엘리야·엘리사)에게 쓰이는 칭호다. 에스라-느헤미야에서 <strong>다윗은 성소 음악·예배의 창시자</strong>이며, 성소에서 예배를 인도하는 일이 선지자의 사역처럼 중요하고 생동하는 하나님 섬김임을 강조한다 — 둘 다 효과적 봉사를 위해 성령의 역사가 필요하다. 에스라와 느헤미야의 사역이 겹친다는 명시(12:26)가 두 사람의 협력을 확증한다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">וַיִּטַּהֲרוּ</div>
+    <div class="eyebrow">12:27–30</div>
+    <h2>2. 봉헌 준비</h2>
+    <div class="gloss">바이타하루, "그들이 정결하게 하였다" — 성벽과 성문까지 정결하게</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">12:27–29 — 레위인·노래하는 자를 불러 모으다</span>
+    <p><span class="c h">H</span>: <strong>성벽 봉헌(<span class="hw">חֲנֻכָּה</span>, 하눅카)</strong>이 첫 성전 봉헌(왕상 8:63)과 마카비 때 제단 재봉헌(1 Macc 4:56)을 상기시킨다 — 이 낱말이 <strong>마카비 승리와 성전 정화를 기념하는 유대 절기 "하누카"의 이름</strong>이 된다. H: 라쉬가 처음 지적했듯 <strong>하눅(<span class="hw">חנך</span>)은 "사람이나 사물을 어떤 직무에 처음 들이는 것"</strong>을 뜻한다 — 그래서 "봉헌"보다 "취임·개시"를 선호하는 이들도 있다. "즐거운 봉헌"(<span class="hw">חֲנֻכָּה וְשִׂמְחָה</span>, 하눅카 베심하)은 두 명사 "봉헌"과 "기쁨"이 <strong>이사일의(hendiadys)</strong>로 하나의 개념을 이룬다 — 봉헌은 곧 기쁨이다.</p>
+    <div class="note">
+      <div class="tt">두 낱말의 구별 — 카다쉬 vs 하나크 — <span class="c t">T</span></div>
+      <p><span class="c t">T</span>: NRSV가 서로 다른 두 히브리어를 똑같이 "dedication"으로 옮겨 혼란을 더한다. 하나는 <strong>카다쉬(<span class="hw">קדשׁ</span>)</strong> — "거룩한 용도로 구별하다, 성별하다"로 제의·제사장·거룩에 관한 맥락에 쓰인다(느 3:1 성벽 성별; 13:22 안식일을 거룩하게; 12:47 레위·아론 몫의 구별). 다른 하나가 여기 쓰인 <strong>하나크(<span class="hw">חנך</span>)</strong>로, 제의에 국한되지 않는 넓은 뜻이다 — 신 20:5 "집을 낙성하다", 잠 22:6 "마땅히 행할 길을 아이에게 가르치라"의 <strong>"초입(initiation)"의 뉘앙스</strong>. T는 이 구별이 봉헌을 <strong>하나님 백성의 새로운 시작·취임</strong>으로 보게 한다고 짚는다 — 공동체가 마침내 "도착"했으되, 동시에 온전한 회복으로 <strong>이제 막 기능하기 시작</strong>한 것이다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">12:30 — 성벽과 성문까지 정결하게</span>
+    <p><span class="c h">H</span>: 백성의 정결례는 봉헌이 <strong>거룩한 행사</strong>로 여겨졌음을 보인다. 어떤 거룩한 행사에 참여하려면 물 정결례가 필요했다(유월절 전, 스 6:20). 몸과 옷을 씻는 것은 일상과 거룩한 행사를 구별하는 표준 방식이었다 — <strong>고전적 예가 시내산 계시 전 이스라엘의 정결례</strong>다(출 19:14–15). 쿰란 문서는 정결례가 흔히 간구·참회에 수반됨을 보이며, <strong>세례요한도 메시아를 맞을 회개의 세례</strong>를 촉구했다(요 1:31).</p>
+    <div class="caveat">
+      <div class="tt">성벽·성문의 정결 — 이례적인 일 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: <strong>무생물 구조물(성문·성벽)의 정결은 이례적이다.</strong> 본문은 방법을 침묵하나, 곰팡이 핀 집을 물과 새의 피·우슬초로 정결하게 하는 선례가 있다(레 14:48–53). 라쉬는 여기 성벽 정결이 <strong>단순한 물리적 청결</strong>을 뜻한다고 본다. 정결과 봉헌은 분명 다른 과정이며, 성벽·성문의 봉헌은 제사장처럼 <strong>기름 부음</strong>으로 이뤄졌을 것이다.</p>
+      <p><strong>왜 성벽에 정결이 필요했나.</strong> H: 이방인의 부정에 대한 관심이 이어져(스 6:21; 9:11), 다음 장(13장)에서 느헤미야가 성전 방과 제사장직을 이방인의 부정에서 정결하게 하려 애쓴다. <strong>예루살렘의 정결례는 부정이 없는 공간을 세우고, 성전 자체의 정결을 지키는 완충지대를 만드는 길</strong>이었다. 성벽·성문의 정결은 <strong>온 도시가 거룩하게 여겨졌음</strong>을 드러낸다 — 성전만큼은 아니어도, 도시가 야훼께 특별히 택함받아 그의 임재로 물든 거룩한 공간으로 표지된 것이다(Eskenazi의 거룩 확장).</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">שְׁתֵּי תוֹדֹת</div>
+    <div class="eyebrow">12:31–43</div>
+    <h2>3. 두 찬양대의 행진</h2>
+    <div class="gloss">셰테 토도트, "두 감사 찬양대" — 반대 방향으로 돌아 성전에서 만나다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">12:31–37 — 첫째 찬양대(반시계 방향)</span>
+    <p><span class="c h">H</span>: <strong>느헤미야 회고록이 "내가"라는 대명사로 재개</strong>된다. 두 행렬이 성벽 위를 걷는데, 고고학 발견에 따르면 성벽이 그들을 떠받칠 만큼 튼튼했다. <strong>서기관 에스라와 호세야가 첫 무리를 반시계 방향으로, 느헤미야가 둘째 무리를 시계 방향으로</strong> 이끈다. 두 무리 모두 <strong>밸리 게이트(골짜기 문)에서 출발</strong>해 파수문과 수문 사이에서 만나 성전으로 들어갔을 것이다(시 48:12–13).</p>
+    <div class="caveat">
+      <div class="tt">봉헌 행렬 = 2장 야간 정찰의 재연 — <span class="c t">T</span> <span class="c k">K</span></div>
+      <p><span class="c t">T</span>: 봉헌 행렬이 <strong>밸리 게이트에서 시작</strong>하는데, 이는 2:13에서 느헤미야가 폐허 된 성벽을 <strong>한밤중에 정찰하며 출발한 바로 그 지점</strong>이다. 성벽 위를 반대 방향으로 도는 두 무리가 그의 야간 조사를 <strong>재연</strong>하며 성전에서 만난다. T는 봉헌 단락의 동심원 구조를 이렇게 본다 — <strong>A 준비(27–30) / B 두 무리 임명(31a) / C 하나는 오른쪽으로(31b, 37) / C' 하나는 왼쪽으로(38–39) / B' 두 무리가 하나님의 집에서 만나 섬(40) / A' 봉헌의 수행(43).</strong> 폐허를 홀로 돌던 밤이 온 백성이 함께 도는 기쁨으로 성취된다.</p>
+      <p><span class="c k">K</span>: 이 성벽을 감싸는 행진은 구경거리 이상이었다 — <strong>확장된 감사이자 재봉헌, 이 돌들을 이스라엘과 하나님을 위해 되찾는 선언</strong>이었다. 그러나 이를 <strong>반(半)주술적 성원(聖圓) 긋기로 오해해선 안 된다</strong> — 그 주조음은 하나님이 행하신 일에 대한 고백이었다. K는 시 48:12–14의 "시온을 돌아보고 그 망대들을 세어 보라… 이 하나님은 영원히 우리 하나님이시니"가 이 성벽 순회의 성격을 밝힌다고 본다 — 강조점은 <strong>성벽이 아니라 예배자에게, 하나님의 섭리를 되새기게 하는 데</strong> 있다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">성벽을 도는 행진 — 고대 근동의 관습 — <span class="c b">B</span></div>
+      <p><span class="c b">B</span>: 각 무리는 <strong>제사장 7명과 음악가 8명</strong>을 포함한다. 성벽을 의식으로 도는 것은 <strong>성벽이 도시의 보호자 역할을 하도록 보장하는 고대 세계의 흔한 관습</strong>이었다. B는 헤로도토스가 전하는 <strong>사르디스(현 튀르키예) 왕의 이야기</strong>를 든다 — 성을 난공불락으로 만들려면 그리하라는 말을 듣고 <strong>사자 새끼를 안고 성벽을 돌았다.</strong> 공교롭게도 사르디스는 546년 페르시아의 고레스에게 포위·함락되었다. B에게 이 행렬은 고대 도시 방어 의례의 유대적 변형이되, 그 초점은 주술이 아니라 <strong>하나님의 행하심에 대한 찬양</strong>에 있다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">토도트 — 감사 찬양대인가 감사 제물인가 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: <strong>"감사 찬양대"(<span class="hw">תּוֹדֹת</span>, 토도트, 직역 "감사들")</strong>는 노래로 감사를 드리는 두 성가대를 뜻할 것이다. 랍비들은 토도트를 <strong>"감사 제물"</strong>, 특히 예배자의 감사에 수반되는 무교병(레 7:12–13)으로 이해한다 — 이 견해로는 각 행렬 인도자가 큰 감사의 빵을 들고 성벽을 돌아 성소에서 만나 동물 제사를 드렸다.</p>
+    </div>
+    <p><strong>다윗의 악기, 제사장의 나팔.</strong> <span class="c h">H</span>: 느헤미야가 행렬의 음악가 — 노래하는 자만이 아니라 <strong>악기 연주자</strong>까지 — 를 특별히 주목한다. <strong>나팔은 전통적으로 특별 예배를 위해 훈련된 소수의 제사장만 불었다</strong>(민 10:8). 나팔수가 성가대 뒤에서 행진한 것은 <strong>야외에서 소리가 빨리 흩어지므로 노래하는 자가 음정을 유지하도록</strong> 하기 위함일 것이다. 스가랴(아삽의 후손, 곧 제사장이 아니라 레위인)와 그 형제들은 <strong>"다윗의 악기"(대상 15:16)</strong>를 든 관현악단이었다 — 다윗이 정한 악기로 <strong>다윗의 성(City of David)을 돌며 연주하는 것</strong>에 각별한 의미가 있었다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">12:38–42 — 둘째 찬양대(시계 방향), 성전에서 합류</span>
+    <p><span class="c h">H</span>: 둘째 성가대는 시계 방향으로 화덕 망대·넓은 성벽·에브라임문·옛문·어문·하나넬 망대·함메아 망대를 지나 양문에서 파수문에 이르러 <strong>성전에서 멈췄다.</strong> 모든 성문과 지형지물이 예배자들에게 특별했다 — <strong>이들이 직접 재건한 것</strong>이기 때문이다. 각 가족이 특정 구역에 건축자의 주인 의식을 가졌고, 52일 만에 완공한 그 기념비적 일만큼 <strong>축하도 기념비적</strong>이었다.</p>
+    <div class="note">
+      <div class="tt">찬양대를 앞세운 여호사밧 — <span class="c h">K</span></div>
+      <p><span class="c h">H</span>: 행렬 앞에 인도자와 함께 <strong>찬양대</strong>를 세운 중요성은 여호사밧 왕 때에도 뚜렷했다 — 그가 <strong>암몬·모압·에돔과의 전투에서 군대 앞에 성가대를 세웠고</strong>, 그들이 "노래하며 찬송하기 시작할 때" 적이 혼란에 빠져 서로 치니 유다가 승리했다(대하 20:22). <span class="c k">K</span>가 지적하듯, <strong>찬양대는 문자 그대로 찬양의 악기이자 그 구현</strong>이다. 예배는 야훼의 은총과 개입을 이끄는 중요한 통로다.</p>
+    </div>
+    <div class="caveat">
+      <div class="tt">"하나님의 집에서" — 성벽 안이 곧 거룩 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 두 성가대가 성전에 멈췄으나 <strong>건물 안에는 들어가지 않았다</strong> — 그것은 제사장의 특권이었다. <strong>Eskenazi는 "하나님의 집에서"(12:40)를 문자 그대로 읽어</strong>, 이 평신도 행렬이 성전 밖일지라도 <strong>성벽 안에 있었기에 스스로를 거룩한 구역 안에 있는 것으로 여겼다</strong>고 본다. 성전의 거룩이 도시 전체로 확장되는 이 관념이 에스라-느헤미야의 특징이다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">12:43 — 여자와 아이까지 기뻐하다 (스 3:13과의 인클루지오)</span>
+    <div class="note">
+      <div class="tt">인클루지오 — 스 3:13 ↔ 느 12:43 — <span class="c h">H</span> <span class="c t">T</span></div>
+      <p><span class="c h">H</span>: Janzen이 지적한 <strong>스 3:13과 느 12:43의 인클루지오</strong>가 이 절의 신학적 무게다. <strong>스 3장에서 공동체는 성전 기초 봉헌에 엇갈린 반응(우는 자와 기뻐하는 자가 뒤섞여 분간할 수 없음)을 보였으나, 전체 프로젝트(성전+성벽)가 완공된 끝에서는 만장일치의 기쁨</strong>이 있다(느 12:43). 저자는 <strong>여자와 아이가 기뻐했다</strong>는 특별한 주기로 프로젝트의 가족적 성격을 강조한다(8:2–3 병행). 가족이 함께 성벽을 쌓았고 가족이 함께 완공을 기뻐했다 — <strong>성벽 봉헌은 물리적 구조의 완공만이 아니라 공동체 자체의 성숙</strong>, 곧 해로운 침입을 막을 경계를 갖춘 강한 가족들이 기쁨으로 하나님을 예배하는 것을 표상한다.</p>
+      <p><span class="c t">T</span>: T도 스 3:13의 반향을 짚되, 여기서는 <strong>기쁨이 통곡과 섞이지 않았음</strong>이 결정적이라고 본다. 12:43에 <strong>"기쁨"이 다섯 번 반복</strong>되어 축제의 순전한 성격을 두드러지게 한다. 그리고 8:2–3처럼 <strong>기쁨의 원천은 하나님</strong>이시다 — "하나님이 크게 즐거워하게 하셨으므로"(NEB). T는 이 행렬의 두 무리를 부르는 낱말 <strong>토도트("감사들")</strong>에 그 의미가 담겼다고 본다 — 시편이 잘 보여 주듯 히브리어는 감사와 찬양을 구별하지 않는다. <strong>하나님이 행하신 일을 모두에게 알림으로써 찬양하는 것</strong>, 그것이 이 봉헌의 목적이다. "그리 오래 율법적·음울하다 폄하되어 온 포로 후기 책이, 그 정점에 하나님의 구속 사역에 대한 기쁨의 선포를 둔다."</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">דְּבַר־יוֹם בְּיוֹמוֹ</div>
+    <div class="eyebrow">12:44–47</div>
+    <h2>4. 예배의 시스템화</h2>
+    <div class="gloss">데바르-욤 베요모, "날마다 그 날의 일" — 예배 지원을 제도로</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">12:44–47 — 곳간·성별·감사드리는 자</span>
+    <p><span class="c h">H</span>: 그날의 사건, 특히 레위 음악가의 결정적 역할이 <strong>레위인의 기능이 얼마나 중요한지 백성에게 상기</strong>시켰고, 이들을 정기적으로 부양할 조치가 취해졌다. H: <strong>첫 귀환자 때와 달라진 점 — 스룹바벨·에스라 때는 왕실 국고와 바벨론 포로들의 기부로 예물을 조달했으나, 느헤미야는 주는 과정 전체를 시스템화</strong>한다. 토라가 요구하는 첫 소산·십일조가 강제되고, 각 밭의 소출에 비례해 예물이 정해진다.</p>
+    <div class="note">
+      <div class="tt">거룩을 지키는 자 = 정결을 지키는 자 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 제사장·레위인이 하나님의 집과 그에 딸린 모든 것을 맡되, <strong>이 모든 예물과 관련해 "정결"이 특별한 관심사</strong>로 부각된다 — 예물은 정결한 상태로 보관되어야 하고, 제사장의 몫은 <strong>의식적으로 정결한 사람이 성별</strong>해야 했기 때문이다. <strong>노래하는 자·문지기가 "다윗과 그의 아들 솔로몬의 명령을 따라"</strong> 섬겼고(12:45), 옛적 다윗과 아삽 때부터 찬송·감사의 지휘자와 노래가 있었다(12:46). H: 에스라-느헤미야는 늘 <strong>현재 공동체를 과거의 위대한 지도자들과 연결</strong>한다 — 포로기의 얼룩이 이 강한 연결 앞에서 옅어진다.</p>
+    </div>
+    <p><strong>날마다의 몫.</strong> <span class="c h">H</span>: 백성이 레위인·노래하는 자·문지기의 필요를 <strong>날마다(<span class="hw">דְּבַר־יוֹם בְּיוֹמוֹ</span>, 데바르-욤 베요모)</strong> 공급했다. "주다"와 "구별하다"가 <strong>습관적 행동을 나타내는 히브리어 분사</strong>여서, 일회성이 아니라 <strong>지속적 후원 시스템</strong>임을 보인다. 노래하는 자·문지기를 따로 짚는다고 이들이 레위인이 아닌 것은 아니다 — 오히려 <strong>레위인이기에</strong> 이 성전 기능을 수행하고 십일조로 부양받을 자격이 있었다. 제사장은 기술적으로 레위인이나 더 존귀한 칭호 <strong>"아론의 자손"</strong>으로 불리며, 동료 레위인이 레위 십일조의 십분의 일을 그들에게 배정했다(민 18:26–29).</p>
+    <div class="caveat">
+      <div class="tt">예배의 힘줄 — 그리고 "너무 강조하는" 어조 — <span class="c k">K</span> <span class="c b">B</span></div>
+      <p><span class="c k">K</span>: 큰 행사에 함성을 지르는 것과 <strong>찬양의 제사를 끊임없이 드리고 교회의 필요를 현실적으로 채우는 것</strong>은 다른 일이다. "그 날에"(44절)라는 표현은 <strong>이 실무에 지체 없이 착수했음</strong>을 시사한다 — 고조된 감격과 선의의 순간에서 실질적인 것을 얻어내는 것이 느헤미야다운 일이다. K는 이 대목에 냉정한 단서를 단다 — <strong>성직자를 향한 유다의 열심(44절 하반)은 믿을 것이 못 되었으니, 13:10 이하가 그것을 드러낸다.</strong></p>
+      <p><span class="c b">B</span>: B는 12:44–47이 봉헌 이야기에 다소 느슨하게 덧붙었다고 보며, <strong>백성이 다윗·솔로몬의 규정을 "기쁘게" 따랐다는 강조(12:44)를 두고 "지나치게 항변하는(protesting too much)" 어조일 수 있다</strong>고 짚는다 — 바로 다음 13:10–14의 십일조 방치와의 긴장을 예고하는 것. 다윗·솔로몬·아삽에 대한 언급은 <strong>레위 권위에 전통의 무게와 영광된 과거와의 연결</strong>을 더한다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="tt">12장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력·경건(찬양대 = 찬양의 구현, 시 48편의 성벽 순회, "예배의 힘줄"과 곧 식을 열심의 경고). <span class="c f">F</span> 어휘·본문비평(반열 수의 차이, 이름 변이). <span class="c h">H</span> 제2성전기 수용사(미쉬마로트 24반열·아비야 반열 눅 1:5, 대제사장 계보와 엘레판틴 파피루스, 하눅카→하누카, Eskenazi의 거룩 확장, 스 3:13↔느 12:43 인클루지오). <span class="c t">T</span> 구조·신학(4:3 조롱 ↔ 봉헌 성취, 봉헌 행렬이 2:13 야간 정찰의 재연, 동심원 A-B-C-C'-B'-A', 카다쉬/하나크 구별, 다섯 번의 기쁨과 토도트=감사·찬양, "봉헌의 지연"이 성벽=수단·공동체=목적임을 드러냄). <span class="c b">B</span> 제국사·고대 근동(각 성가대 제사장 7·음악가 8명, 헤로도토스의 사르디스 왕과 성벽 순회 관습, 12:44의 "지나친 항변"이 13장을 예고).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="heb">שִׂמְחָה גְדוֹלָה</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>5. 상호 참조와 신학 종합</h2>
+    <div class="gloss">심하 게돌라, "큰 기쁨" — 예루살렘의 기쁨이 멀리까지 들리다</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:14%">느 12장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">12:1</td><td>느 10:35–39 (십일조·예물이 이름 있는 봉사자에게) / 스 2:36 (예수아)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:9</td><td><strong>대상 24:3</strong> (다윗의 반열) / 요세푸스 고대사 7.365 (여드레 교대) / 민 1:51 (수호 임무)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:9</td><td><strong>눅 1:5, 8</strong> (아비야 반열, 세례요한의 부친 사가랴) / 가이사랴 회당 비문</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:10–11</td><td>느 13:4–5, 28 (엘리아십·요나단) / 요세푸스 고대사 11.317 (얏두아) / 엘레판틴 파피루스</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:24</td><td><strong>대하 8:14</strong> (다윗의 예배 조직) — 다윗 "하나님의 사람"</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:27</td><td>왕상 8:63 (첫 성전 봉헌) / 1 Macc 4:56 (하누카) — 하눅카의 어의(라쉬)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:30</td><td><strong>출 19:14–15</strong> (시내산 정결례) / 레 14:48–53 (집의 정결) / 요 1:31 (세례요한)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:36</td><td><strong>대상 15:16</strong> (다윗의 악기) / 민 10:8 (제사장의 나팔)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:39</td><td><strong>대하 20:22</strong> (여호사밧, 군대 앞의 성가대)</td><td><span class="c k">K</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">12:40</td><td>Eskenazi "in the house of God" (성벽 안 = 거룩) / 시 48:12–13 (성을 도는 행렬)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:43</td><td><strong>스 3:13</strong> (성전 기초 혼합 반응) ↔ 느 12:43 (완공 만장일치 기쁨) — 인클루지오(Janzen)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">12:45</td><td>대상 25장 (다윗·솔로몬의 예배 조직) / 민 18:26–29 (레위 십일조의 십분의 일)</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료 · 주석별 강조점</div>
+    <p><strong>요세푸스 고대사 7.365; 11.317</strong> — 여드레 교대·얏두아 <span class="c h">H</span> · <strong>엘레판틴 파피루스(410 BCE)</strong> — 대제사장 요하난 <span class="c h">H</span> · <strong>가이사랴 회당 비문</strong> — 24제사장 반열 <span class="c h">H</span> · <strong>사해문서</strong> — 26반열 배열 <span class="c h">H</span> · <strong>라쉬</strong> — 하눅=취임·개시, 성벽 정결=물리적 청결 <span class="c h">H</span> · <strong>Eskenazi</strong> — 성벽 안이 곧 하나님의 집 <span class="c h">H</span> · <strong>Janzen</strong> — 스 3:13↔느 12:43 인클루지오 <span class="c h">H</span> · <strong>헤로도토스</strong> — 사르디스 왕의 사자 새끼 성벽 순회(546 함락) <span class="c b">B</span> · <strong>Lutheran Book of Worship</strong> — 토도트=감사·찬양이 성찬 후 송가로 이어짐 <span class="c t">T</span></p>
+  </div>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 이름을 적는 신학 — 인격화된 후원</h4>
+  <p>12:1–26의 긴 인력 명단이 지루한 나열이 아니다. <span class="c h">H</span>: 도시를 채우는 일(11장)은 <strong>합당한 성전 예배 없이는 의미가 적다</strong> — 그래서 저자는 거룩한 봉사를 수행할 이들의 이름을 세세히 적는다. Steinmann의 통찰대로 <strong>이름은 후원을 인격화한다</strong> — 백성의 십일조가 익명의 기금이 아니라 이름을 지닌 봉사자에게 돌아간다. 계보의 연속성은 <strong>공동체가 조상의 어깨 위에 서 있음</strong>을, 그리고 각 봉사자가 대체 가능한 부품이 아니라 이름으로 기억되는 실존임을 증언한다.</p>
+
+  <h4>② 봉헌은 곧 기쁨 — 하눅카의 이사일의</h4>
+  <p>12:27의 "즐거운 봉헌"(하눅카 베심하)이 <strong>이사일의(hendiadys)</strong>로 하나의 개념을 이룬다는 <span class="c h">H</span>의 관찰이 이 장의 정조를 규정한다. 봉헌은 엄숙한 의무이기 이전에 <strong>기쁨</strong>이다. 라쉬가 짚은 하눅의 어의("처음 들이는 것, 취임")대로, 성벽 봉헌은 성벽을 <strong>예배라는 직무에 처음 들이는 취임식</strong>이다. 물리적 완공이 목적을 얻는 순간, 그 목적은 다름 아닌 기쁨의 예배다. 8:10의 "여호와로 인한 기쁨"이 여기서 도시 전체의 함성으로 확장된다.</p>
+
+  <h4>③ 반대로 돌아 하나로 만나다 — 두 찬양대의 신학</h4>
+  <p>두 찬양대가 <strong>반대 방향(에스라·반시계, 느헤미야·시계)으로 돌아 성전에서 만나는</strong> 구도(12:31–40)가 이 장의 이미지다. 밸리 게이트에서 갈라진 두 무리가 성벽 전체를 감싸 안고 <strong>하나님의 집에서 하나로 합류</strong>한다. 성벽 전체가 예배의 행렬로 둘러싸이고, 갈라짐이 만남으로 귀결된다. <span class="c h">H</span>: Eskenazi의 독법대로 <strong>성벽 안에 있다는 것 자체가 "하나님의 집에 있는 것"</strong>이다 — 성전의 거룩이 도시 전체로 확장되어, 온 성이 하나의 예배 공간이 된다.</p>
+
+  <h4>④ 예배가 성벽을 지킨다 — 찬양의 구현</h4>
+  <p><span class="c k">K</span>의 통찰 — <strong>찬양대는 문자 그대로 찬양의 악기이자 그 구현</strong> — 이 여호사밧의 병행(대하 20:22)과 만난다. 군대 앞에 성가대를 세운 여호사밧처럼, 봉헌 행렬도 찬양대를 앞세운다. 다윗의 악기로 다윗의 성을 도는 이 예배가, 성벽이라는 물리적 방어를 <strong>찬양이라는 영적 방어</strong>로 완성한다. 성벽은 돌로 쌓였으나 노래로 봉헌된다 — <strong>거룩한 성을 지키는 궁극의 힘은 예배</strong>다.</p>
+
+  <h4>⑤ 조롱이 성취로 — 헤르파의 반전</h4>
+  <p><span class="c t">T</span>의 관찰이 이 장을 앞선 장들과 잇는다. <strong>4:3에서 도비야가 "여우가 올라가도 그 돌 성벽을 무너뜨리리라"</strong>며 조롱하던(헤르파) 그 성벽 위를, 이제 두 찬양대가 행진하며 하나님께 드린다. 조롱받던 돌이 <strong>봉헌의 무대</strong>가 되고, 무너지리라던 성벽이 <strong>기쁨의 함성이 울리는 자리</strong>가 된다. 대적의 비웃음이 공동체의 찬양으로 반전되는 이 성취가, 느헤미야서 전반을 관통한 헤르파 주제의 절정이다.</p>
+
+  <h4>⑥ 혼합 반응에서 만장일치 기쁨으로 — 인클루지오의 완결</h4>
+  <p>Janzen이 짚은 <strong>스 3:13 ↔ 느 12:43의 인클루지오</strong>가 이 장에 신학적 완결을 준다. <span class="c h">H</span>: <strong>성전 기초를 놓을 때(스 3장) 우는 자와 기뻐하는 자가 뒤섞여 분간할 수 없던 공동체</strong>가, 성전과 성벽을 다 이룬 끝에서는 <strong>만장일치의 기쁨</strong>에 이른다(느 12:43). 여자와 아이까지 기뻐하는 이 가족적 기쁨이, 엇갈림에서 하나됨으로 성숙한 공동체를 그린다. 봉헌은 구조물의 완공이 아니라 <strong>공동체 자체의 성숙</strong> — 해로운 침입을 막을 경계를 갖춘 강한 가족들이 기쁨으로 하나님을 예배하는 것 — 을 표상한다. 예루살렘의 기쁨이 멀리까지 들렸다.</p>
+
+  <h4>⑦ 봉헌은 왜 지연되었나 — 성벽은 목적이 아니라 수단 (<span class="c t">T</span>)</h4>
+  <p><span class="c t">T</span>의 물음이 이 장의 신학을 한 단계 더 밀고 간다 — <strong>성벽 완공(6:15)은 신속했는데, 봉헌은 왜 8–10장(율법 낭독·언약)을 거친 뒤인 12:27에야 오는가.</strong> T의 답: <strong>봉헌이 의도적으로 지연된 것</strong>이다. 언약 갱신으로 백성이 재구성되고 거룩한 성이 채워진 <strong>지금에야, 백성(과 독자)이 이 봉헌의 온전한 의미를 이해할 자리에 선다.</strong> 그래서 봉헌은 단지 성벽의 봉헌이 아니라 <strong>성전·도시·그 안에 둘러싸인 공동체의 봉헌</strong>이 된다. T는 이 지연이 <strong>거룩한 공간과 거룩한 공동체의 미묘한 차이</strong>를 묵상하게 한다고 본다 — 젊은 목사 시절 "당신 교회를 좀 봐도 될까요" 물었다가 "볼 시간이 없네, 교인이 너무 많아 다 못 만나거든"이라는 답에 무안했다는 그의 일화가 이를 압축한다. <strong>성벽은 그 자체가 목적이 아니라 목적을 위한 수단</strong>이다 — 안전을 위한 하나님의 선물인 성벽과, 신앙의 심장이자 중심인 성전·율법·신실한 공동체의 올바른 관계를, 저자는 봉헌을 이 자리에 둠으로써 지킨다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 12장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

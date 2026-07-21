@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 1장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch01.html">원어 파싱 →</a><a href="interlinear/ch01.html">인터라이너 →</a></div>
+  <div class="brand">느헤미야 1장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 단락의 짜임</a>
+    <a class="lv1" href="#s1">1. 표제와 보고 (1:1–3)</a>
+    <a class="lv2" href="#v1a">1:1a 표제</a>
+    <a class="lv2" href="#v1b">1:1b 연대 문제</a>
+    <a class="lv2" href="#v23">1:2–3 하나니의 보고</a>
+    <a class="lv1" href="#s2">2. 애도 (1:4)</a>
+    <a class="lv1" href="#s3">3. 기도 (1:5–11a)</a>
+    <a class="lv2" href="#v5">1:5 호명</a>
+    <a class="lv2" href="#v67">1:6–7 자백</a>
+    <a class="lv2" href="#v89">1:8–9 중심: 기억하소서</a>
+    <a class="lv2" href="#v10">1:10 속량하신 백성</a>
+    <a class="lv2" href="#v11a">1:11a "이 사람"</a>
+    <a class="lv1" href="#s4">4. 술 관원 (1:11b)</a>
+    <a class="lv1" href="#s5">5. 상호 참조 총람</a>
+    <a class="lv1" href="#s6">6. 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">זְכָר־נָא</div>
+  <h1>느헤미야 1장 심층 연구</h1>
+  <div class="sub">제코르-나, "청컨대 기억하소서" (느 1:8) — 소식·애도·기도의 절 단위 주해</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">חֶרְפָּה</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 단락의 짜임</h2>
+    <div class="gloss">헤르파, "수치/능욕" (1:3; 2:17) — 단락을 묶는 인클루지오</div>
+  </div>
+
+  <p><strong>동심원 <span class="c t">T</span>.</strong> 1:1–2:20 전체가 예루살렘 파괴 보고 네 번(1:3; 2:3, 13, 17)으로 마디지어진 다섯 마디 동심원이다. <strong>A</strong> 느헤미야에게 보고와 응답(1:1b–11a) — <strong>B</strong> 아닥사스다에게 보고와 응답(1:11b–2:8) — <strong>X</strong> 대적의 등장(2:9–10) — <strong>B′</strong> 느헤미야가 직접 확인(2:11–16) — <strong>A′</strong> 지도자들에게 보고와 응답(2:17–20). A와 A′는 어휘로 묶인다. "하늘의 하나님"(1:4–5 / 2:20), "주의 종들"(1:6, 10 / 2:20), "형통하게 하다"(1:11a / 2:20), 그리고 <span class="hw">חֶרְפָּה</span>(헤르파, 수치·능욕)가 1:3과 2:17에서 인클루지오를 이룬다.</p>
+  <p>여기서 1장의 주제가 나온다. <strong>예루살렘의 폐허는 이웃 앞의 창피를 넘어 하나님을 향한 능욕이며, 네 번의 보고는 이 능욕 앞에 선 네 인격(하나님, 왕, 느헤미야 자신, 공동체)의 응답을 차례로 기록한다.</strong> 헤르파 어휘는 이후 4:4과 6:13의 구조적 요지에도 재등장한다 <span class="c t">T</span>.</p>
+
+  <div class="note">
+    <div class="tt">1장 안의 진행</div>
+    <p>표제(1a) → 연대와 장소(1b) → 소식(2–3) → 애도(4) → 기도(5–11a) → 상황절 "나는 왕의 술 관원이었다"(11b). <span class="c t">T</span>는 11b를 1장과 2장을 잇는 <strong>경첩</strong>으로 규정한다. 기도의 마지막 청원("이 사람 앞에서 형통하게 하옵소서")이 왜 가능한 청원인지를 이 한 문장이 설명한다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">דִּבְרֵי נְחֶמְיָה</div>
+    <div class="eyebrow">1:1–3</div>
+    <h2>1. 표제와 보고</h2>
+    <div class="gloss">디브레 네헴야 — 회고록의 시작 표지</div>
+  </div>
+
+  <div class="vs" id="v1a">
+    <span class="ref">1:1a — 표제</span>
+    <p><span class="hw">דִּבְרֵי נְחֶמְיָה בֶּן־חֲכַלְיָה</span>(디브레 네헴야 벤-하칼야, 하칼야의 아들 느헤미야의 말들). <span class="hw">דְּבָרִים</span>(데바림)은 "말"과 "행적" 양쪽을 뜻할 수 있다 <span class="c t">T</span>. <span class="c h">H</span>는 이 표제를 에스라 자료와 구별되는 독립 저작, 곧 <strong>느헤미야 회고록의 시작 표지</strong>로 정리한다. <span class="c f">F</span>는 최종 편집자의 것인지 회고록 본래의 것인지 판정하기 어렵다고 유보한다.</p>
+    <p><strong>이름들.</strong> <span class="hw">נְחֶמְיָה</span>(네헴야)는 "야훼께서 위로하신다"는 뜻이다 <span class="c f">F</span> <span class="c h">H</span>. <span class="c h">H</span>는 백성을 위해 탄원하는 느헤미야 자신이 야훼의 위로가 작동하는 통로가 된다는 점에서 이름과 역할을 연결한다. 부친 <span class="hw">חֲכַלְיָה</span>(하칼야)에 대한 <span class="c f">F</span>의 판정: <strong>"기원과 의미는 알려져 있지 않다."</strong> 부친의 직업·지파·지위 정보는 없다.</p>
+  </div>
+
+  <div class="vs" id="v1b">
+    <span class="ref">1:1b — 연대 문제</span>
+    <p>"기슬르월 제이십년." 왕 이름 없이 연수만 있어 문제가 생긴다. 2:1이 니산월을 같은 20년으로 부르는데, 니산이 정월이므로 봄 기산 달력으로는 아홉째 달 기슬르가 앞선 해(19년)에 떨어진다.</p>
+    <div class="caveat">
+      <div class="tt">쟁점 — 다섯 해법</div>
+      <p>① BHS의 "십구년" 수정 <span class="c t">T</span> <span class="c h">H</span> 소개 ② 즉위 시점 기산법 — Bickerman은 압월(7월 말 시작)을 첫 달로 삼아 기슬르를 다섯째 달, 니산을 아홉째 달로 만든다 <span class="c t">T</span> <span class="c h">H</span> ③ 가을 기산 달력 상정 <span class="c f">F</span> 채택 ④ 왕의 치세와 무관한 느헤미야 자신의 궁정 근속 20년(Steinmann) <span class="c h">H</span> 소개 ⑤ 규정년이 역년과 달라 두 역월 주기에 걸칠 수 있음 <span class="c b">B</span>. <strong>어느 해법이든 왕은 아닥사스다 1세이고 사건 연대는 주전 446년 말–445년 초다.</strong> <span class="c k">K</span>의 환산: 기슬르월 대화가 446년 11월 중순–12월 중순, 2장의 알현이 445년 3–4월.</p>
+    </div>
+    <p><strong><span class="hw">שׁוּשַׁן הַבִּירָה</span>(슈샨 합비라, 수산 성채).</strong> <span class="hw">בִּירָה</span>(비라)는 아카드어 비르투(birtu, 요새·성채)에서 온 차용어로 후기 본문(에 1:2; 단 8:2)에 나타난다 <span class="c h">H</span>. <span class="c k">K</span>는 "수도"보다 "성채"가 나은 번역이라고 판정한다. <strong>에스더 1:2과 정확히 같은 표현이며, 두 책이 무대를 공유한다.</strong> <span class="c b">B</span>는 발굴된 수산 궁전의 규모(만 제곱피트가 넘는 알현실, 18미터 기둥 서른여섯 개)를 전한다. 페르시아 왕들의 겨울 거처였다.</p>
+  </div>
+
+  <div class="vs" id="v23">
+    <span class="ref">1:2–3 — 하나니의 보고</span>
+    <p><strong>하나니.</strong> <span class="hw">אָח</span>(아흐)가 친형제와 친족 양쪽을 가리키므로 판정이 갈린다. <span class="c k">K</span>는 열어 두고 <span class="c f">F</span>는 친형제 쪽으로 기운다. 7:2에서 예루살렘 관리직을 받는 인물이며 <span class="c k">K</span>, 엘레판티네 문서의 하나니야(주전 419년 유월절 칙령 전달자)와의 동일 인물 가능성 <span class="c h">H</span>, 407년 서신의 예루살렘 귀족 하나니와의 연결 가능성 <span class="c b">B</span>이 각각 제기된다.</p>
+    <p><strong>남은 자 어휘.</strong> 느헤미야는 <span class="hw">הַפְּלֵיטָה</span>(합펠레타, 피하여 남은 자들)와 <span class="hw">שְׁאָר</span>(셰아르 계열, 남은 자)로 묻는다. <span class="c f">F</span>는 이 용어들이 땅에 남았던 이들을 넘어 포로에서 돌아온 공동체를 가리킨다고 논증하고(스 8:35; 9:8 용례), <span class="c k">K</span>는 이 어휘 선택이 <strong>이사야의 남은 자 약속(사 10:20–22)을 의식한 암시</strong>일 수 있다고 본다. <span class="c h">H</span>도 예언서의 남은 자 사상(사 4:3; 11:11)과 연결한다. 작음이 결핍의 언어에서 약속의 언어로 번역되는 지점이다.</p>
+    <div class="caveat">
+      <div class="tt">쟁점 — 파괴 보고의 시점 (1장 해석의 갈림길)</div>
+      <p>주전 586년 파괴라면 140년 묵은 사실이라 1:4의 충격이 설명되지 않는다.</p>
+      <p><strong>최근 사건설 <span class="c k">K</span> <span class="c t">T</span>.</strong> 배경은 <strong>에스라 4:7–23</strong>, 곧 아닥사스다 치세 초 성벽 재건 시도가 "권력과 힘으로" 진압된 사건이며, 이 소식이 새로운 타격인 이유는 적대적 이웃들이 이제 왕의 재가를 등에 업었기 때문이다 <span class="c k">K</span>. <span class="c t">T</span>는 같은 재구성에서 느헤미야가 놀란 이유를 <strong>자기 주군이 이 파괴의 책임자라는 사실</strong>에서 찾는다. 바벨론이 한 일이었다면 아무 용기도 필요 없었다 — 바벨론은 이미 패망했다.</p>
+      <p><strong>절충 <span class="c h">H</span>.</strong> "140년 전 무너진 성벽 때문만이 아니라 최근의 반대가 고통을 키웠다."</p>
+      <p><strong>지속 폐허설 <span class="c f">F</span>.</strong> 에스라 4장에 성벽 파괴 기사가 없으므로, 느부갓네살 이래의 폐허 상태가 지속되었고 유일한 재건 시도가 좌절된 정황으로 읽는 편이 가정이 적다.</p>
+      <p><strong>제3의 가능성 <span class="c b">B</span>.</strong> 느헤미야 직전 세대의 반페르시아 반란 연루 추측(5세기 전반 이집트의 두 반란이 방증).</p>
+      <p><strong>확정할 자료는 없으나, 어느 재구성을 취하느냐가 2:2의 "두려움"과 2:3의 예루살렘 미언급 전략의 해석 강도를 결정한다.</strong></p>
+    </div>
+    <p><strong><span class="hw">מְדִינָה</span>(메디나, 도/속주).</strong> <span class="c f">F</span>가 세 견해를 정리한다. ① 유다가 아직 사마리아 속주의 일부였다는 설 ② 고레스나 다리오 때부터 독립 속주였다는 설(학개의 스룹바벨 총독 호칭이 근거) ③ 강 건너 대속주를 가리킨다는 설(아하로니). F 자신은 이름을 밝힐 필요가 없을 만큼 자명한 큰 단위, 곧 강 건너 설로 기운다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">צוֹם</div>
+    <div class="eyebrow">1:4</div>
+    <h2>2. 애도</h2>
+    <div class="gloss">춤, "금식하다" — 입을 닫아 스스로를 억제함</div>
+  </div>
+
+  <p>앉고, 울고, 여러 날 슬퍼하고, 금식하며 기도하는 <strong>네 동사의 연쇄</strong>다. <span class="c k">K</span>는 여기서 인물 해석의 열쇠를 얻는다. 신속하고 결단력 있는 행동가가 여러 날을 애도와 기도로 보냈다는 사실이 그의 우선순위를 드러내고, <strong>2:4의 화살 기도가 즉흥의 산물이라는 인상을 교정한다.</strong></p>
+  <p><span class="c h">H</span>는 <span class="hw">צוּם</span>(춤, 금식하다)의 기본 의미를 "스스로 억제하다"(게제니우스: 입을 닫음)로 풀고, 관련 동사 <span class="hw">עָנָה</span>(아나, 재귀형에서 "스스로 괴롭게 하다")가 에스라 8:21의 금식과 속죄일 규례(레 16:29–31)를 잇는다고 정리한다. 파괴 이후 넷째·다섯째·일곱째·열째 달의 고정 금식일이 제정되었다는 스가랴 7–8장의 증언도 배경 자료다.</p>
+  <p><strong><span class="hw">אֱלֹהֵי הַשָּׁמַיִם</span>(엘로헤 핫샤마임, 하늘의 하나님).</strong> 페르시아 시대 본문의 표지 어휘다 <span class="c b">B</span> <span class="c t">T</span>. <span class="c f">F</span>는 5절에서 고유명 야훼가 함께 쓰이므로 이 호칭을 페르시아 당국을 의식한 외교 언어로 볼 수 없고 <strong>당대 유대인의 종교 언어로 정착한 표현</strong>이라고 판정한다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">תְּפִלָּה</div>
+    <div class="eyebrow">1:5–11a</div>
+    <h2>3. 기도</h2>
+    <div class="gloss">테필라 — 느헤미야서의 첫 장면이 기도다</div>
+  </div>
+
+  <div class="note">
+    <div class="tt">양식과 구조</div>
+    <p><span class="c f">F</span>는 백성의 애가 양식으로 분류한다. <span class="c t">T</span>는 Williamson의 반론(공동체 애가의 핵심인 탄원·항변이 없음)을 소개한 뒤 자신의 교차 구조를 제시한다. <strong>A</strong> 호명(5–6a) — <strong>B</strong> 이스라엘의 죄 고백(6b–7) — <strong>X 귀환 언약 약속에의 호소(8–9)</strong> — <strong>B′</strong> 하나님의 구속 고백(10) — <strong>A′</strong> 호명과 간구(11a). 호명부의 "귀를 기울이시고 눈을 여소서"는 <strong>솔로몬의 성전 봉헌 기도(왕상 8:29, 52; 대하 6:40)</strong>를 되울린다 <span class="c t">T</span> <span class="c h">H</span>.</p>
+    <p><strong>진정성.</strong> 역대기 사가의 창작 또는 확장으로 보는 견해에 대한 <span class="c f">F</span>의 반박: 신명기적 어휘는 당대 유대인 전반의 언어였으므로 그 존재가 역대기 사가 저작의 증거가 되지 못하며, 기도 안에 진정성을 거스르는 요소가 없다.</p>
+  </div>
+
+  <div class="vs" id="v5">
+    <span class="ref">1:5 — 호명</span>
+    <p><span class="hw">אָנָּא</span>(안나, 간청의 강화 불변화사)로 열고 같은 어법이 11a에서 돌아와 인클루지오를 만든다 <span class="c t">T</span>. <span class="hw">הַגָּדוֹל וְהַנּוֹרָא</span>(학가돌 베한노라, 크고 경외로우신). <span class="c f">F</span>의 계수: <span class="hw">נוֹרָא</span>(노라)는 <strong>에스라서에 없고 느헤미야서에 열네 번</strong> 나오는 어휘다.</p>
+    <p><span class="hw">שֹׁמֵר הַבְּרִית וָחֶסֶד</span>(쇼메르 합브리트 바헤세드, 언약과 인자를 지키시는 이). <span class="c f">F</span>는 <span class="hw">חֶסֶד</span>(헤세드)를 언약 동반자 사이의 결속으로 풀어 "언약적 사랑"으로 옮기고, 사랑과 계명 준수가 언약을 받치는 두 기둥이라고 정리한다(신 5:10; 7:9).</p>
+    <p><span class="c h">H</span>는 랍비 전통의 논점을 보탠다. "그를 사랑하는 자들"과 "그 계명을 지키는 자들"이 두 부류인가 한 부류인가. <strong>라쉬는 사랑으로 지키는 이와 두려움으로 지키는 이를 구분했고,</strong> 신 6:5이 사랑 자체를 계명으로 세우므로 한 부류로 읽는 길도 열려 있다. H의 또 하나: <strong>느헤미야가 출애굽기 20:5의 삼사 대 징벌 조항을 지나치고 20:6의 천 대 인애 조항 쪽 언어를 취했다. 인용 자체가 이미 해석이고 간구다.</strong></p>
+  </div>
+
+  <div class="vs" id="v67">
+    <span class="ref">1:6–7 — 자백</span>
+    <p>낮과 밤의 기도는 지속 기도의 관용 표현이다(<span class="c f">F</span>는 과장법으로, <span class="c h">H</span>는 Steinmann을 따라 상시 기도의 표지로).</p>
+    <p><strong>"나와 내 아버지의 집이 범죄하였나이다" — 고백의 핵심은 인칭에 있다.</strong></p>
+    <ul>
+      <li><span class="c t">T</span>가 차이를 벼린다. 에스라는 자신이 짓지 않은 통혼 죄를 두고 백성과 자신을 동일시했고, <strong>느헤미야는 자기 자신을 죄인 명단 안에 넣는다.</strong></li>
+      <li><span class="c f">F</span>도 같다. "에스라는 죄인들의 원 바깥에 서서 동일시했고, 느헤미야는 자신의 연루를 고백했다."</li>
+      <li><span class="c h">H</span>는 속죄일 전례와 병행시킨다. <strong>대제사장이 평상 제사장 옷을 입고 자기 죄와 "자기 집"의 죄를 먼저 고백하는 레위기 16장의 구조(미쉬나 요마 6:2)</strong>가 이 어구 뒤에 서 있다. 평신도 느헤미야에게 제사장적 중보의 그림자가 입혀지는 지점이다.</li>
+    </ul>
+    <p>7절의 <span class="hw">חֲבֹל חָבַלְנוּ</span>(하볼 하발누, 심히 악을 행하였나이다)에 대해 <span class="c h">H</span>는 랍비 주석의 법률적 독법을 소개한다. <span class="hw">חָבַל</span>(하발)을 <strong>채무 담보물 취득 용어</strong>로 읽어, 이스라엘이 빚을 갚지 않자 야훼께서 가장 귀한 담보물(성전과 땅)을 가져가셨고 회개 시 돌려주신다는 해석(출애굽기 랍바 51:3)이다.</p>
+  </div>
+
+  <div class="vs" id="v89">
+    <span class="ref">1:8–9 — 중심: "청컨대 기억하소서"</span>
+    <p><span class="hw">זְכָר־נָא</span>(제코르-나, 청컨대 기억하소서). 기도의 축이다. 인용문은 <strong>신명기 30:1–4의 요약 융합</strong>이고 "하늘 끝까지 쫓겨났을지라도"는 축자 인용이다 <span class="c f">F</span>. F는 언약의 저주–축복 병행(고대 근동 조약 양식)을 배경으로 놓고, 느헤미야가 <strong>융합 인용에서 귀환 약속 쪽을 의도적으로 앞세웠다</strong>고 관찰한다.</p>
+    <p><span class="hw">מָעַל</span>(마알, 배반하다/신성모독하다)에 대해 <span class="c h">H</span>는 레위기 26장을 끌어온다. 언약 파기는 하나님의 이름으로 맹세한 서약을 깨는 <strong>신성모독</strong>이며, 에스라-느헤미야에서 이 단어가 주로 통혼 문제에 쓰인다.</p>
+    <div class="note">
+      <div class="tt"><span class="c t">T</span>의 신학적 논평 — 언약은 계약이 아니다</div>
+      <p>언약을 하나님의 용서를 자동 지급하게 만드는 계약으로 읽는 독법을 <strong>두 방향 모두에서</strong> 차단한다. 이스라엘이 조건을 어겼으니 계약 논리로는 청구권이 없고, 약속을 근거로 용서를 "요구"하는 독법도 본문을 놓친다. <strong>언약은 관계를 세우고, 언약 자체가 자비에서 태어났으며, 그러므로 느헤미야의 고백은 자비를 향한 호소다.</strong></p>
+    </div>
+  </div>
+
+  <div class="vs" id="v10">
+    <span class="ref">1:10 — 속량하신 백성</span>
+    <p><span class="hw">פָּדִיתָ</span>(파디타, 당신께서 속량하셨나이다). <span class="c f">F</span>는 <span class="hw">פָּדָה</span>(파다)의 의미장을 정리한다. 노예 해방 대금 지불, 초태생 대속 같은 법적·제의적 용법이 있고, 하나님이 주어일 때는 "구원하다"가 전면에 서되 <strong>출애굽 배경이 늘 밑에 깔린다.</strong> "주의 큰 권능과 강한 손"은 출애굽 어휘(출 32:11; 신 9:29)다 <span class="c f">F</span> <span class="c h">H</span>. F의 결론: 이 어휘로 <strong>포로 귀환이 새 출애굽으로 해석되고 있다.</strong></p>
+    <p><span class="c k">K</span>는 한 걸음 더 나가 10절을 <strong>모세의 시내산 중보(신 9:29) 인용</strong>으로 특정한다. 민족 절멸의 위기에서 모세가 "주의 백성, 주의 기업"을 근거로 탄원했듯, 느헤미야가 같은 무게의 위기 인식으로 같은 자리에 선다.</p>
+  </div>
+
+  <div class="vs" id="v11a">
+    <span class="ref">1:11a — "이 사람"</span>
+    <p>두 번째 호명이 변형되어 돌아온다. <span class="c f">F</span>가 차이를 센다. "눈을 여소서"가 빠지고 <strong>"주의 종들의 기도"</strong>가 더해졌다. 이 복수의 종들에 대해 F는 하나니 일행 동반 기도설을 본문 근거(4–5절은 느헤미야 혼자를 그림)로 물리치고 <strong>흩어져 있는 경건한 동포들과의 연대 의식</strong> 표현으로 읽는다.</p>
+    <p><span class="hw">הַצְלִיחָה־נָּא</span>(하츨리하-나, 형통하게 하소서)와 <span class="hw">לִפְנֵי הָאִישׁ הַזֶּה</span>(리프네 하이쉬 하제, 이 사람 앞에서). <strong>다섯 주석이 입을 모으는 지점이다.</strong> 세계 제국의 절대 군주가 기도 문법 안에서 "이 사람"으로 지시된다.</p>
+    <ul>
+      <li><span class="c f">F</span>의 정식: <strong>역사의 주는 아닥사스다를 결정하시는 분이지, 아닥사스다가 결정하는 자가 될 수 없다.</strong></li>
+      <li><span class="c h">H</span>는 본문비평 각주에서 확정한다. "긍휼"(<span class="hw">רַחֲמִים</span>, 라하밈)의 출처는 하나님이며 "이 사람"은 그 긍휼이 놓이는 자리일 뿐이다(Blenkinsopp 인용).</li>
+      <li><span class="c t">T</span>는 기도의 운동 방향을 요약한다. 하나님 묵상에서 인간 죄로, 백성의 사정에서 마지막에야 개인의 청원으로 좁혀지는 원근법.</li>
+    </ul>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">מַשְׁקֶה</div>
+    <div class="eyebrow">1:11b</div>
+    <h2>4. "나는 왕의 술 관원이었다"</h2>
+    <div class="gloss">마쉬케 — 1장과 2장을 잇는 경첩</div>
+  </div>
+
+  <p><span class="c t">T</span>는 이 상황절을 1장과 2장을 잇는 <strong>경첩</strong>으로 규정한다. 직책의 실상은 <span class="c h">H</span>가 상세하다.</p>
+  <ul>
+    <li><strong>크세노폰의 증언</strong>(키로파이디아 1.3.9): 술 관원들은 잔을 올릴 때 국자로 덜어 왼손에 부어 먼저 삼켰다. 독을 넣었다면 자기가 당하도록. <strong>검식이 직무의 핵심이었다.</strong></li>
+    <li><strong>랍사게</strong>(문자적으로 "수석 술 관원")가 군사 지휘까지 맡은 사례(왕하 18–19장). 아닥사스다의 부친 크세르크세스가 침실에서 신하에게 암살되었다는 사실이 이 직책의 무게를 설명한다.</li>
+    <li><strong>아히카르</strong>(토빗 1:22): 에살핫돈의 술 관원이자 국정 이인자. <span class="c k">K</span>도 창세기 40장의 "술 맡은 관원장"과 같은 단어임을 확인하고 헤로도토스의 페르시아 술 관원 예우 기사를 인용한다.</li>
+  </ul>
+  <p><span class="c h">H</span>의 신학적 정리: <strong>"야훼께서 분명히 느헤미야에게 이 자리를 미리 마련하셔서 예루살렘의 회복에 쓰임받을 수 있게 하셨다."</strong> 이 책의 매개된 섭리 문법이 인사(人事)에서 시작된다.</p>
+
+  <div class="caveat">
+    <div class="tt">쟁점 — 내시였는가</div>
+    <p>칠십인역 전승이 οἰνοχόος(오이노코오스, 술 관원)와 εὐνοῦχος(유누코스, 내시)로 갈린다. <span class="c f">F</span>는 왕의 하렘 구역 접근 관행을 근거로 "아마도" 내시였다고 보고, 그렇다면 레위기 21:17–24과 신명기 23:1에 따라 성전 제의에서 배제된 사람이었다는 이중 배제를 6:11 주석에서도 유지한다. <span class="c h">H</span>는 Yamauchi("Was Nehemiah the Cupbearer a Eunuch?", ZAW 92, 1980)를 근거로 지지 불가로 판정하고 2:6(왕후 앞 근무)에서 유추된 오독으로 처리한다. <span class="c t">T</span>도 필사 오류 쪽으로 기울되, 내시설의 설명력 하나는 기록해 둔다. <strong>자손 없는 이에게 "나를 기억하옵소서"(5:19; 13:14, 22, 31)가 기념비 구실을 한다는 것.</strong> 회고록 자체가 그의 기념물이 된다는 독법이다. NICOT 구판과 신판이 정면으로 갈리는 지점이다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="eyebrow">CROSS-REFERENCES</div>
+    <h2>5. 상호 참조 총람</h2>
+    <div class="gloss">1장의 각 절이 다른 성경·고대 자료와 만나는 지점</div>
+  </div>
+
+  <table>
+    <tr><th style="width:13%">느 1장</th><th style="width:30%">참조</th><th>관계</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">1:1</td><td><strong>에스더 1:2; 단 8:2</strong></td><td>수산 성채(비라) — 무대의 공유, 아카드어 차용어</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">1:2–3</td><td>스 8:35; 9:8</td><td>남은 자 어휘의 귀환 공동체 용례</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">1:2–3</td><td><strong>사 10:20–22; 4:3; 11:11</strong></td><td>이사야의 남은 자 약속에 대한 암시</td><td><span class="c k">K</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">1:3</td><td><strong>에스라 4:7–23</strong></td><td>파괴 보고의 배경 후보(최근 사건설)</td><td><span class="c k">K</span> <span class="c t">T</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">1:3</td><td>느 2:17; 4:4; 6:13</td><td>헤르파(수치)의 구조적 반복</td><td><span class="c t">T</span></td></tr>
+    <tr><td class="head">1:4</td><td>레 16:29–31; 스 8:21 / 슥 7–8장</td><td>금식(춤/아나)의 제의적 배경, 고정 금식일 제정</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">1:5</td><td>신 5:10; 7:9</td><td>"언약과 인자를 지키시는" — 신명기 신조</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">1:5</td><td><strong>출 20:5–6</strong></td><td>징벌 조항을 지나치고 인애 조항의 언어를 택함</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">1:6, 11</td><td><strong>왕상 8:29, 52; 대하 6:40</strong></td><td>"귀를 기울이시고 눈을 여소서" — 솔로몬 봉헌 기도의 어법</td><td><span class="c t">T</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">1:6</td><td><strong>레 16장; 미쉬나 요마 6:2</strong></td><td>"나와 내 아버지의 집" — 속죄일 대제사장 고백의 병행</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">1:6</td><td>스 9장; 단 9장; 시 106:6</td><td>동일시 고백의 중보자 계보</td><td><span class="c t">T</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">1:7</td><td>출애굽기 랍바 51:3</td><td>하발 — 담보물 취득 독법(성전과 땅 = 담보)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">1:8–9</td><td><strong>신명기 30:1–4</strong></td><td>융합 인용, "하늘 끝까지"는 축자 — 귀환 약속을 앞세움</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">1:8</td><td>레위기 26장</td><td>마알 — 언약 파기 = 신성모독</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">1:10</td><td><strong>신 9:29; 출 32:11</strong></td><td>모세의 시내산 중보 인용 — "주의 큰 권능과 강한 손"</td><td><span class="c k">K</span> <span class="c f">F</span></td></tr>
+    <tr><td class="head">1:11a</td><td>느 2:8, 18; 스 7:6 등</td><td>"형통" 청원 → "선한 손" 응답의 연결</td><td><span class="c t">T</span></td></tr>
+    <tr><td class="head">1:11b</td><td>창 40장 / 왕하 18–19장 / 토빗 1:22</td><td>술 관원직의 성경적 병행(요셉 서사, 랍사게, 아히카르)</td><td><span class="c k">K</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">1:11b</td><td>레 21:17–24; 신 23:1</td><td>내시설 성립 시의 제의 배제 문제</td><td><span class="c f">F</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>크세노폰 『키로파이디아』 1.3.9</strong> — 검식 절차 <span class="c h">H</span> · <strong>헤로도토스</strong> — 페르시아 술 관원의 예우 <span class="c k">K</span> · <strong>엘레판티네 파피루스</strong> — 하나니야(419년 유월절 칙령)와의 동일 인물 가능성 <span class="c h">H</span> <span class="c b">B</span> · <strong>수산 궁전 발굴</strong> — 알현실과 기둥 <span class="c b">B</span> · <strong>Yamauchi, ZAW 92 (1980)</strong> — 내시설 반박 <span class="c h">H</span></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">הָאִישׁ הַזֶּה</div>
+    <div class="eyebrow">SYNTHESIS</div>
+    <h2>6. 신학 종합</h2>
+    <div class="gloss">하이쉬 하제, "이 사람" (느 1:11) — 제국을 상대화하는 한 마디</div>
+  </div>
+
+  <h3>① 헤르파의 신학</h3>
+  <p>1:3의 <span class="hw">חֶרְפָּה</span>가 2:17까지 단락을 묶고 4:4, 6:13의 구조적 요지에 재등장한다 <span class="c t">T</span>. 무너진 성벽은 언약 백성을 땅으로 돌려보내신 하나님을 향한 능욕이고, 재건의 일차 동기는 안보 이전에 이 능욕의 종결이다. <span class="c k">K</span>: <strong>느헤미야의 눈에 걸린 것은 위험보다 수치였다.</strong></p>
+
+  <h3>② 기도의 이중 문법</h3>
+  <p>넉 달의 애도-금식-기도(1:4)와 한 호흡의 화살 기도(2:4)가 서로를 조건 짓는다. <span class="c k">K</span>의 표현으로 1장의 긴 기도가 2장의 짧은 기도의 <strong>"서두르지 않은 배경"</strong>이다. <span class="c h">H</span>는 회고록 전체의 기도 목록(1:5–11; 4:4–5, 9; 5:19; 6:9, 14; 13:14)으로 이것이 생활 양식임을 보인다.</p>
+
+  <h3>③ 중보자 계보</h3>
+  <p>모세(출 32장; 신 9:29) — 에스라(스 9장) — 다니엘(단 9장)로 이어지는 동일시 고백 전통에 서되 <span class="c t">T</span> <span class="c h">H</span>, 자기 연루 고백의 강도에서 에스라를 넘어선다 <span class="c f">F</span> <span class="c t">T</span>. <span class="c h">H</span>의 속죄일 병행은 <strong>평신도 느헤미야에게 제사장적 중보의 그림자</strong>를 입힌다. 이 계보의 신약적 종착점(자기 죄를 위해 먼저 제사할 필요가 없으신 대제사장, 히 7:26–27)까지 열려 있는 통로다.</p>
+
+  <h3>④ 인용의 선택이 곧 간구다</h3>
+  <p><span class="c h">H</span>의 관찰 둘이 이 기도의 해석학을 보여 준다. 출애굽기 20장에서 징벌 조항(5절)을 지나 인애 조항(6절)의 언어를 취한 것, 그리고 <span class="c f">F</span>의 관찰대로 신명기 30장의 저주–축복 병행에서 귀환 약속을 앞세운 것. <strong>무엇을 인용하는가가 무엇을 구하는가다.</strong></p>
+
+  <h3>⑤ 제국의 상대화 — "이 사람"</h3>
+  <p>기도의 마지막 한 마디가 이 책 전체의 섭리 신학을 압축한다. 세계 제국의 절대 군주가 "이 사람"이 되는 문법 안에서, 2:4(왕의 질문과 하나님을 향한 묵도 사이의 순서)와 2:8, 18("내 하나님의 선한 손")이 이미 예비되어 있다. <span class="c f">F</span>: <strong>역사의 주는 아닥사스다를 결정하시는 분이다.</strong></p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 1장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* ============================================================
+   성서 연구 서고 — 공통 테마 레이어  (theme.css)
+   ------------------------------------------------------------
+   색·중단점의 단일 출처. 이 파일 하나만 고치면 전체에 반영된다.
+   원본 문서들이 이미 쓰는 변수명(--lapis, --ochre, --paper …)을
+   그대로 채택했으므로, 문서에 이 파일을 연결하면 다크 모드가 적용된다.
+
+   테마 전환: <html data-theme="dark|light|auto">
+     지정 없음 또는 auto → 시스템 설정(prefers-color-scheme)을 따른다.
+     app.js의 토글이 data-theme 값만 바꾼다.
+   ============================================================ */
+
+/* ── 라이트(기본) ── */
+:root{
+  /* 바탕·잉크 */
+  --paper:#fbfaf6;      /* 페이지 배경(양피지) */
+  --band:#f3f1ea;       /* 옅은 띠·범례 배경 */
+  --card:#ffffff;       /* 카드·본문 패널 */
+  --ink:#20242b;        /* 본문 글자 */
+  --ink-soft:#59606b;   /* 보조 글자 */
+  --line:#e4e0d6;       /* 경계선 */
+
+  /* 강조(청람 + 황토) */
+  --lapis:#1f4e78;      --lapis-deep:#16354f;  --lapis-soft:#2f6f9e;
+  --ochre:#a8823c;      --ochre-soft:#c19a4e;
+  --root:#6a4a6a;       /* 어근 계열 표시 */
+  --parse:#2f6f5e;      /* 문법 파싱 표시 */
+
+  /* 주석가 칩 */
+  --k:#7a5a38; --f:#37665a; --h:#8a4658; --t:#3c5a83; --b:#655a8c;
+
+  /* 관주 패널 강조 */
+  --xref-accent:var(--ochre);
+  --xref-chip:#f3ecdd;  --xref-chip-ink:#7a5a38;
+
+  /* 그림자 */
+  --shadow-sm:0 1px 3px rgba(22,53,79,.06);
+  --shadow-md:0 10px 26px rgba(22,53,79,.12);
+
+  /* 서체 */
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+
+  /* 반응형 중단점(참고용 커스텀 속성 — JS에서 읽어 쓸 수 있음) */
+  --bp-mobile:600px;
+  --bp-tablet:900px;
+  --bp-wide:1180px;
+
+  color-scheme:light;
+}
+
+/* ── 다크 ── (명시 지정) */
+:root[data-theme="dark"]{
+  --paper:#15171c;
+  --band:#1c1f26;
+  --card:#1e222a;
+  --ink:#e7e4da;
+  --ink-soft:#a2a7b2;
+  --line:#2c313b;
+
+  /* 어두운 바탕에서 가독성을 위해 강조색을 밝게 조정 */
+  --lapis:#7fa8cf;      --lapis-deep:#a9c8e4;  --lapis-soft:#6f97c0;
+  --ochre:#d0a659;      --ochre-soft:#e0bd7a;
+  --root:#b79bc4;
+  --parse:#6fbfa5;
+
+  --k:#c39a6a; --f:#6fae9c; --h:#d087a0; --t:#84a8d4; --b:#a99bd0;
+
+  --xref-accent:var(--ochre);
+  --xref-chip:#2a2519;  --xref-chip-ink:#d0a659;
+
+  --shadow-sm:0 1px 3px rgba(0,0,0,.4);
+  --shadow-md:0 10px 26px rgba(0,0,0,.5);
+
+  color-scheme:dark;
+}
+
+/* ── 시스템 다크(사용자가 auto이거나 미지정일 때) ── */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){
+    --paper:#15171c; --band:#1c1f26; --card:#1e222a;
+    --ink:#e7e4da; --ink-soft:#a2a7b2; --line:#2c313b;
+    --lapis:#7fa8cf; --lapis-deep:#a9c8e4; --lapis-soft:#6f97c0;
+    --ochre:#d0a659; --ochre-soft:#e0bd7a; --root:#b79bc4; --parse:#6fbfa5;
+    --k:#c39a6a; --f:#6fae9c; --h:#d087a0; --t:#84a8d4; --b:#a99bd0;
+    --xref-accent:var(--ochre); --xref-chip:#2a2519; --xref-chip-ink:#d0a659;
+    --shadow-sm:0 1px 3px rgba(0,0,0,.4); --shadow-md:0 10px 26px rgba(0,0,0,.5);
+    color-scheme:dark;
+  }
+}
+
+/* ── 부드러운 색 전환 ── (모션 최소화 존중) */
+:root{ --theme-transition:background-color .3s ease, color .3s ease, border-color .3s ease; }
+@media (prefers-reduced-motion:reduce){
+  :root{ --theme-transition:none; }
+  html{ scroll-behavior:auto; }
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 6장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch06.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 6장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 구획과 삼중 공격</a>
+    <a class="lv1" href="#s1">1. 유인 (6:1–4)</a>
+    <a class="lv1" href="#s2">2. 위협과 고발 (6:5–9)</a>
+    <a class="lv2" href="#v56">6:5–6 공개 서신</a>
+    <a class="lv2" href="#v79">6:7–9 반역 프레임</a>
+    <a class="lv1" href="#s3">3. 거짓 선지자 (6:10–14)</a>
+    <a class="lv2" href="#v1011">6:10–11 스마야의 유혹</a>
+    <a class="lv2" href="#v1214">6:12–14 매수와 저주 기도</a>
+    <a class="lv1" href="#s4">4. 완공 (6:15–16)</a>
+    <a class="lv1" href="#s5">5. 도비야의 혼맥 (6:17–19)</a>
+    <a class="lv1" href="#s6">6. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">מֵאֵת אֱלֹהֵינוּ</div>
+  <h1>느헤미야 6장 심층 연구</h1>
+  <div class="sub">메에트 엘로헤누, "이 역사는 우리 하나님께로 말미암은 것" (느 6:16) — 52일 완공과 대적의 인정</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">לְהָרֵעַ</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 구획과 삼중 공격</h2>
+    <div class="gloss">레하레아, "해하려" — 세 국면의 음모</div>
+  </div>
+
+  <p>성벽이 완성 직전(문짝만 미완)에 이르자 대적의 공격이 <strong>느헤미야 개인</strong>에게 집중된다. <span class="c f">F</span>의 구획: 유인(6:1–4) / 위협과 고발(6:5–9) / 거짓 선지자를 통한 음모(6:10–14) / 성벽 완공(6:15–16) / 도비야와의 서신(6:17–19).</p>
+
+  <div class="note">
+    <div class="tt">삼중 공격 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: 이 사가의 다음 장에서 지방 지도자들은 세 방식으로 느헤미야를 공격한다. <strong>음모(intrigue, 1–4절), 중상(innuendo, 5–9절), 위협(intimidation, 10–14절).</strong> 세 낱말이 모두 i로 시작하는 두운을 이룬다. 성벽이 완성되고 균열이 메워질수록, 이 원수들은 공사를 멈출 수 있는 어떤 그럴듯한(그러나 불법적인) 전략이든 필사적으로 움켜쥔다.</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">인식 곡선의 종착 — 대적의 태도 변화</div>
+    <p>이 책은 대적의 태도를 하나의 곡선으로 추적한다. 근심(2:10 라아) → 조롱·멸시(2:19) → 격분(4:1) → 무력 공모(4:8) → 개인 암살 음모(6장) → <strong>두려움과 인정(6:16)</strong>. <span class="c t">T</span>: 헤르파(능욕)의 반복(1:3; 2:17; 4:4; 6:13)이 이 곡선의 마디를 표시하고, 4:4의 저주 기도("조롱을 그들 머리로")가 6:16에서 성취된다 — <strong>대적이 스스로 낮아지고 이 일이 하나님께로 말미암음을 인정한다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">אוֹנוֹ</div>
+    <div class="eyebrow">6:1–4</div>
+    <h2>1. 오노 평지로의 유인</h2>
+    <div class="gloss">오노 — 유대 영토 밖의 중립 지대</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">6:1–4 — 네 번의 만남 요청</span>
+    <p><span class="c f">F</span>: 성벽이 완성되고 문짝만 미완인 시점이다. <strong>3장에서 문짝이 완성되었다는 것과 모순되지 않는다</strong> — 3장은 공사를 전체로 조망하고, 완성의 순간은 6:15–16에서 서술된다. 대적은 공사를 멈출 유일한 길이 책임자를 제거하는 것임을 알고, 그를 유인해 없애려 한다.</p>
+    <p><strong>오노 평지.</strong> <span class="c f">F</span>: 예루살렘 북서쪽 약 27마일. Brockington은 유다 속주의 끝자락으로, <strong>A. Alt는 아스돗과 사마리아 사이의 중립 지대</strong>로 본다. <span class="c h">H</span>: 여기는 느헤미야 영토의 경계, 곧 적대적 이웃인 사마리아와 아스돗 곁이며 예루살렘에서 꼬박 하룻길이었다(욥바 남동 7마일, 롯 근처). <strong>대적은 느헤미야를 유대 영토 밖, 무방비 지대로 꾀어내려 했다.</strong></p>
+    <p><strong>하케피림.</strong> <span class="c f">F</span>: "사자들"을 뜻하는 미상의 지명. <span class="c h">H</span>: "마을들"(<span class="hw">כְּפָרִים</span>, 케파림)로도 읽을 수 있다. <strong>네 번 반복된 요청.</strong> <span class="c f">F</span>: 이는 대적의 <strong>절박함</strong>의 표시다. 느헤미야의 답은 외교적 언어로 된 단호한 거절이었다. "내가 큰 일을 하므로 내려갈 수 없다 — 어찌 일을 멈추고 너희에게 내려가랴?" <span class="c h">H</span>: 왜 만남이 현장 근처에서 이뤄질 수 없는가 — 장소와 긴급함이 모두 수상했다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">אִגֶּרֶת פְּתוּחָה</div>
+    <div class="eyebrow">6:5–9</div>
+    <h2>2. 위협과 반역 고발</h2>
+    <div class="gloss">이게레트 페투하, "봉하지 않은 편지" — 공개된 협박</div>
+  </div>
+
+  <div class="vs" id="v56">
+    <span class="ref">6:5–6 — 다섯째 편지, 봉하지 않은 공개 서신</span>
+    <p><span class="c f">F</span>: 산발랏이 다섯째로 종을 보내되 <strong>봉하지 않은 편지</strong>를 들려 보냈다. 이는 그의 부정직한 의도의 또 다른 증거다 — 당시 관습은 편지를 봉하는 것이었다. <strong>봉하지 않은 편지는 도중에 누구나 읽을 수 있어 소문을 더 퍼뜨리는 수단이 되었다.</strong> 그렇다면 왜 느헤미야와 사적으로 만나려 했는가? 자기 모순이 그의 속임수를 드러낸다. <span class="c h">H</span>: 산발랏은 편지 내용이 공개되기를 원했다 — 편지를 든 자가 쉽게 읽고 정보를 퍼뜨릴 수 있었다.</p>
+    <p><strong>"가스무가 확인한다."</strong> <span class="c f">F</span>: <span class="hw">גַּשְׁמוּ</span>(가스무)가 정확한 표기이고 <span class="hw">גֶּשֶׁם</span>(게셈)은 후대 히브리어 발전형이다. 문맥상 소문이 도처에 퍼졌고 가스무는 이를 <strong>확인·유포</strong>했다. "이방 중에"(<span class="hw">גּוֹיִם</span>, 고임)에 대해 F: 느헤미야가 삽입한 것으로 보는 견해가 있으나 위험한 추정이다 — <span class="hw">גּוֹי</span>(고이)는 반드시 "이방인"만이 아니라 "영토 공동체"를 뜻할 수 있다.</p>
+  </div>
+
+  <div class="vs" id="v79">
+    <span class="ref">6:7–9 — "유다의 왕"이라는 반역 프레임</span>
+    <p><span class="c f">F</span>: 산발랏은 2:19의 반역 논거를 <strong>더 정교하게</strong> 발전시킨다. 이웃 나라들 사이에 소문이 돈다 — 성벽의 진짜 목적은 반역이며 느헤미야를 왕으로 세우려 한다는 것. <strong>선지자들을 세워 "유다에 왕이 있다!"고 선포하게 했다는 메시아 운동 프레임</strong>이다. F: 유대인은 다윗 계열 왕의 회복을 기대했으나, <strong>느헤미야의 혈통 정보는 없다 — 아마 다윗 계열이 아니었을 것이다(그랬다면 어딘가 언급되었을 것).</strong> 산발랏에게 중요한 것은 그 소문이 <strong>사실일 수 있다</strong>는 점이었다. 페르시아 제국에서 왕의 측근이 이따금 반역했으므로.</p>
+    <div class="note">
+      <div class="tt">산발랏의 자기 정체성 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 이 대목에서 산발랏의 자기 정체가 드러난다. 그는 "이방"(고임)을 자신이 속하지 않은 집단으로 지칭한다. <strong>산발랏은 아들들이 야훼 이름을 지녔고 자신을 "이스라엘인"으로 여겼으나 유다인은 아니었다.</strong> 느헤미야가 왕이 되려 한다는 고발은 심각했다 — 페르시아 군주는 권위 찬탈을 절대 용납하지 않았다(베히스툰 비문). 다윗 후손 스룹바벨도 반역 혐의를 피하려 조심했을 것이고, <strong>일부 학자는 느헤미야도 다윗 계열이었다고 본다.</strong></p>
+    </div>
+    <p><strong>느헤미야의 반박.</strong> <span class="c f">F</span>: 심각한 고발을 몇 마디로 일축한다. "네가 말하는 그런 일은 없고 <strong>네 마음에서 지어낸 것</strong>이다." "지어내다"(<span class="hw">בּוֹדֶא</span>, 보데 ← <span class="hw">בדא</span>, 바다)는 구약에 두 번뿐이다. 왕상 12:33에서 여로보암이 <strong>스스로 지어낸(바다)</strong> 절기를 제정한 것, 그리고 여기. <span class="c h">H</span>: 아히카르 30의 불확실한 용례도 있다. F: 이 동사에는 불쾌한 함의가 따른다 — "네 상상의 산물이다."</p>
+    <p><strong>6:9 "내 손을 힘있게 하소서."</strong> <span class="c f">F</span> <span class="c h">H</span>: 마소라 본문은 <strong>①짧은 기도</strong>("이제 내 손을 힘있게 하소서") <strong>②부정사</strong>("내 손을 강하게 하려고") <strong>③칠십인역 1인칭</strong>("내가 내 손을 강하게 했다")로 읽을 수 있어 애매하다. <span class="c h">H</span>: RSV는 "오 하나님"을 넣어 기도로 명확히 한다. "손이 늘어지다"(<span class="hw">ירפו</span>, 이르푸)는 낙담을 뜻하며(렘 38:4의 예레미야 고발), <strong>라기스 오스트라콘 6</strong>도 "땅의 손을 약하게 하고 성을 느슨하게 한다"는 표현을 쓴다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">שְׁמַעְיָה</div>
+    <div class="eyebrow">6:10–14</div>
+    <h2>3. 거짓 선지자를 통한 음모</h2>
+    <div class="gloss">스마야 — 매수된 선지자, 성전으로의 유혹</div>
+  </div>
+
+  <div class="vs" id="v1011">
+    <span class="ref">6:10–11 — 스마야의 유혹과 느헤미야의 거절</span>
+    <p><span class="c f">F</span>: 대적이 이제 느헤미야의 <strong>동족</strong>을 이용한다. 이는 예루살렘 안에 그의 조치(특히 5장의 준엄한 처결)에 반대한 이들이 있었음을 보여 준다. <strong>스마야</strong>(들라야의 아들, 므헤타벨의 손자)가 "밀폐된 자"(<span class="hw">עָצוּר</span>, 아추르)로 묘사된다. 그가 말한다. "성전 본당에서 만나 문을 닫자 — 밤에 너를 죽이러 온다."</p>
+    <p><strong>"내가 어찌 도망하랴."</strong> <span class="c f">F</span>: 느헤미야는 즉각 음모를 간파하고 거절한다. "나 같은 자가 어찌 도망하며, 나 같은 자가 어찌 성전에 들어가 생명을 보전하랴? 나는 들어가지 않겠다."</p>
+    <div class="caveat">
+      <div class="tt">쟁점 — 느헤미야의 신분 (평신도인가 내시인가)</div>
+      <p>이 절은 느헤미야의 <strong>제의적 신분</strong>을 결정하는 본문이다.</p>
+      <p><strong>내시설 <span class="c f">F</span>.</strong> 느헤미야는 평신도로서 성전에 들어갈 수 없었고, <strong>아마 내시였으므로 성전 제의에서 이중 배제되었다</strong>(레 21:17–24; 신 23:1). 제단으로의 도피는 특정 경우에만 허용되었고(출 21:13–14; 왕상 1:50–53), 외적을 피한 도피는 해당하지 않았다.</p>
+      <p><strong>평신도설 <span class="c h">H</span>.</strong> 스마야는 성전 출입이 가능했으므로 <strong>제사장</strong>이었다(대상 24:19). 느헤미야는 <strong>비제사장</strong>이어서 율법상 성소에 들어갈 수 없었다(민 18:7; 심지어 응시조차 치명적, 민 4:20). H: 평신도 이스라엘인은 성전 <strong>뜰</strong>까지는 들어갔으나(아론과 비제사장 솔로몬도 제단 곁에서 축복, 레 9:22; 왕상 8:54) 성소 내부는 불가했다. 스가랴 성전기의 초막절 제단 순회(m. Sukkah 4:5)가 뜰 출입의 예다.</p>
+      <p><strong>공통 판정:</strong> 두 견해 모두, 대적의 목적이 <strong>느헤미야로 의례 위반을 범하게 해 명예를 훼손하는 것</strong>이었다는 데 일치한다. 그가 성소에 숨으면 율법 위반이 되어 백성이 그를 따르지 않게 된다.</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v1214">
+    <span class="ref">6:12–14 — 매수의 발각과 저주 기도</span>
+    <p><span class="c f">F</span>: 느헤미야는 스마야가 거짓 선지자이며 <strong>도비야와 산발랏에게 매수되었음</strong>을 깨달았다(12절). 목적은 그를 두렵게 해 죄를 짓게 하고, 그리하여 명예를 훼손하는 것이었다(13절). <span class="c h">H</span>: 스마야의 불법적 제안 자체가 <strong>하나님이 그를 보내지 않았다는 명백한 표지</strong>였다(갈 1:8–9와 유사). <strong>산발랏과 도비야가 느헤미야에게 씌운 바로 그 죄(거짓 선지자 매수, 6:7)를 자신들이 범한 아이러니다.</strong></p>
+    <p><strong>도비야가 먼저 명명됨.</strong> <span class="c f">F</span>: 12·14절에서 도비야가 산발랏보다 먼저 나온다 — <strong>도비야가 이 계획의 주모자</strong>임을 드러낸다("매수하다" 동사가 단수인 것도 이 때문). <span class="c h">H</span>: 동사가 단수여서 산발랏이 후대 삽입이라는 견해도 있으나, 느헤미야의 문체일 뿐이다(5:14 참조).</p>
+    <p><strong>6:14 저주 기도.</strong> <span class="c f">F</span>: 두 번째 짧은 저주 기도다. "내 하나님이여, 도비야와 산발랏과 여선지자 노아댜와 나를 두렵게 하려 한 다른 선지자들을 그 행한 대로 기억하옵소서." <strong>노아댜</strong>에 대해 알려진 바 없으나, 느헤미야의 일에 반대한 선지자 무리에 속했을 것이다 — <strong>당시 낮은 영적 수준의 환상가 집단</strong>이 있었다. <span class="c h">H</span>: "기억하옵소서"(<span class="hw">זָכְרָה</span>, 조크라)는 강조형 명령이며(5:19; 13:14, 22, 31 계열), 야훼께서 이 상황을 그의 의로 처결하시기를 구하는 청원이다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">חֲמִשִּׁים וּשְׁנַיִם יוֹם</div>
+    <div class="eyebrow">6:15–16</div>
+    <h2>4. 성벽 완공</h2>
+    <div class="gloss">하미쉼 우셰나임 욤, "오십이 일" — 엘룰월 25일</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">6:15 — 엘룰월 25일, 52일</span>
+    <p><span class="c f">F</span>: 성벽이 <strong>엘룰월 25일, 52일 만에</strong> 완성되었다 — 주전 445년 10월 초. <strong>느헤미야가 예루살렘의 곤경을 들은 지 6개월 만에</strong> 성벽 재건 임무를 마친 것이다. <span class="c h">H</span>: 작업은 아브월 4일(445년 8월 12일)에 시작해 52일 뒤 엘룰월 25일(445년 10월 2일)에 완성되었다.</p>
+    <div class="note">
+      <div class="tt">52일 — Kidner가 짚는 "유쾌한 건조함"</div>
+      <p><span class="c h">H</span>: 대적의 온갖 학대와 술책과 대조되는 이 보고의 <strong>"유쾌한 건조함"(pleasing dryness)</strong>을 <span class="c k">K</span>가 짚는다. "그리하여 성벽이 완성되니라"(6:15)는 절반 완성 뒤의 담담한 결어 "그리하여 우리가 성벽을 건축하니라"(4:6)를 되울린다. <strong>요점: 음모도 위협도 고발도 거짓 예언도 결국 성벽 공사를 무너뜨리지 못했다.</strong> 느헤미야는 자기 신원을 하나님의 손에 맡기고 일에서 눈을 떼지 않았다.</p>
+    </div>
+    <div class="caveat">
+      <div class="tt">쟁점 — 52일은 가능한가</div>
+      <p>요세푸스는 2년 4개월설을 전한다(고대사 11.5.8). <span class="c f">F</span>: 이는 필사 오류일 수 있으므로 <strong>52일을 본문대로 받아들여야 한다.</strong> 가능 근거 넷: ① <strong>복구 작업</strong> 위주였고 동벽만 기초부터 신축했다(북·서·남은 옛 성벽 잔해 활용). ② 위기 의식 속의 <strong>급조</strong>. ③ 예루살렘이 통설보다 훨씬 작았다(Kenyon: 둘레 약 2600m, 서편 포함 시 4150m). ④ 동편 발굴 결과 성벽이 <strong>거친 구조</strong>였다. Vischer는 아테네가 한 달 만에 성벽을 쌓은 예를 든다(투키디데스 1.93).</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">6:16 — "이 역사가 하나님께로 말미암음"</span>
+    <p><span class="c f">F</span>: 대적이 완공 소식을 듣고, 이웃 나라들이 그 놀라운 속도에 <strong>두려움에 사로잡혔다</strong>(<span class="hw">יָרֵא</span>, 야레). "스스로 심히 낙담하여"(직역 "그들이 자기 눈에 크게 떨어져") <strong>이 일이 하나님께로 말미암은 줄을 깨달았다.</strong> F: 4:4의 기도가 성취된다 — <strong>그들의 조롱이 그들 머리로 돌아왔다.</strong></p>
+    <p><strong>야레인가 라아인가.</strong> <span class="c f">F</span> <span class="c h">H</span>: <span class="hw">ויראו</span>를 "두려워하다"(야레, 마소라)로도, "보다"(라아)로도 읽을 수 있다. <span class="c h">H</span>: 뜻과 대구는 "보다"가 낫다(대적은 완공을 듣고, 가까운 자들은 성벽을 실제로 보았다). F: 이 장에서 "두렵게 하다"가 중요한 주제이므로(9, 13, 14절) "두려워하다"를 택한다 — <strong>느헤미야는 두렵지 않으나 이웃 나라들이 두려워한다. 정점이다.</strong></p>
+    <div class="note">
+      <div class="tt">이름을 거룩하게 함 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 유대인의 원수와 이웃이 느헤미야가 <strong>초자연적 능력의 후원</strong>을 받음을 깨닫자 자신감이 시들고 사기가 꺾였다. <strong>산발랏의 방해 시도가 도리어 이 일에 더 큰 영광을 가져왔다.</strong> 느헤미야는 다시 하나님께 영광을 돌리고, 이웃이 벗이든 적이든 야훼의 손을 인정했다고 선언한다. 랍비들은 이를 <strong>키두쉬 하-셈(<span class="hw">קִדּוּשׁ הַשֵּׁם</span>, 이름을 거룩하게 함)</strong> — 곧 이방 중에 야훼께 탁월한 명성을 돌리도록 행함이라 부른다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="heb">בַּעֲלֵי שְׁבוּעָה</div>
+    <div class="eyebrow">6:17–19</div>
+    <h2>5. 도비야의 혼맥</h2>
+    <div class="gloss">바알레 셰부아, "맹세로 결속된 자들"</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">6:17–19 — 귀족들과 도비야의 서신 왕래</span>
+    <p><span class="c f">F</span>: 예루살렘의 일부 귀족이 유다의 고립에 반대했다(아마 교역 이유로). 그들은 느헤미야의 원수 도비야와 서신을 주고받았다. <strong>도비야가 선택된 이유는 혼맥에 있다(18절).</strong></p>
+    <p><strong>이중 혼맥.</strong> <span class="c f">F</span> <span class="c h">H</span>: 도비야는 두 방식으로 공동체 지도층과 얽혔다. ① <strong>도비야 자신이 아라흐의 아들 스가냐의 사위</strong>(스 2:5; 느 7:10)이고, ② <strong>도비야의 아들 여호하난이 베레갸의 아들 므술람의 딸과 혼인</strong>했다(므술람은 성벽 보수조 중 하나의 지도자, 느 3:4, 30). <span class="c h">H</span>: 많은 사람이 도비야에게 <strong>맹세로 결속</strong>되어(<span class="hw">בַּעֲלֵי שְׁבוּעָה</span>, 바알레 셰부아 — 창 14:13 아브람의 "동맹자"와 비교) 그를 위해 선전하고 정보를 나르는 첩보망 역할을 했다.</p>
+    <div class="note">
+      <div class="tt">통혼 금지가 잊히다 — <span class="c f">F</span></div>
+      <p><span class="c f">F</span>: 에스라를 느헤미야 앞에 놓으면, <strong>이방과의 통혼에 대한 조치(스 10)가 곧 잊혔음</strong>이 분명하다. 도비야에게 결속된 귀족들이 느헤미야와 도비야 사이의 중재자로 나섰고, 처음에는 도비야의 선의를 설득하려 했다. <strong>느헤미야는 회유와 협박에 굴하지 않았다</strong> — 자기 궁극적 사명을 확신하는 사람이었고 실용적 타협을 하지 않았다.</p>
+    </div>
+    <p><span class="c h">H</span>: 다른 이웃들이 반감을 접은 것과 달리 <strong>도비야만은 계속 느헤미야를 위협했다</strong> — 혼인으로 지도층과 얽혀 두렵지 않았기 때문이다. 바울의 "믿지 않는 자와 멍에를 같이하지 말라"(고후 6:14)가 이 혼맥의 분열상을 비춘다. <span class="c h">H</span>: 도비야의 혈통은 학자마다 갈린다 — 이름은 "야훼는 선하시다"라는 야훼 이름이나 "암몬 사람"으로 불린다(2:19; 4:3). 아마 <strong>혈통이 섞였을 것</strong>이며, 그의 무리는 느헤미야의 비전에 동조하지 않은 귀족 내 반대 세력이었다(13:4–9 참조).</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">6장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력과 수사("유쾌한 건조함"의 완공 보고, "큰 곤고"의 살아 있는 비전). <span class="c f">F</span> 어휘·본문비평·역사(바다 동사 계보, 야레/라아 판정, 52일 변호, 요세푸스 오류). <span class="c h">H</span> 제2성전기 수용사(평신도 성전 출입, 키두쉬 하-셈, 갈 1:8 거짓 예언, 라기스 오스트라콘). <span class="c t">T</span> 구조(헤르파 반복, 대적 인식 곡선의 종착, 4:4 기도의 6:16 성취). <span class="c b">B</span> 제국사·메시아 프레임의 정치적 배경.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">קִדּוּשׁ הַשֵּׁם</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>6. 상호 참조와 신학 종합</h2>
+    <div class="gloss">키두쉬 하-셈, "이름을 거룩하게 함" — 대적조차 하나님의 손을 인정하다</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:14%">느 6장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">6:2</td><td>A. Alt (오노 = 중립 지대) / 2 Esd 16:2 (케피림 = 마을들)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">6:6–7</td><td>느 2:19 (반역 논거의 재사용·정교화) / 베히스툰 비문 (찬탈 불용)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">6:8</td><td><strong>왕상 12:33</strong> (여로보암이 "지어낸" 절기 — 바다) / 아히카르 30</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">6:9</td><td>렘 38:4 (손이 늘어지다 = 낙담) / 라기스 오스트라콘 6</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">6:10</td><td>대상 24:19 (스마야 = 제사장) / 갈 1:8–9 (거짓 예언의 표지)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">6:11</td><td><strong>레 21:17–24; 신 23:1</strong> (내시설 배제) / 민 18:7; 4:20 (평신도설) / 출 21:13–14 (제단 도피)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">6:11</td><td>레 9:22; 왕상 8:54; m. Sukkah 4:5 (평신도의 뜰 출입)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">6:14</td><td>느 5:19; 13:14, 22, 31 (기억 청원 계열, 부정형)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">6:15</td><td>느 4:6 ("그리하여 우리가 건축하니라"의 되울림) / 요세푸스 고대사 11.5.8 (2년 4개월설, 오류)</td><td><span class="c k">K</span> <span class="c f">F</span></td></tr>
+    <tr><td class="head">6:15</td><td>투키디데스 1.93 (아테네 한 달 축성) / Kenyon (둘레 2600m)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">6:16</td><td><strong>느 4:4</strong> (저주 기도의 성취 — 조롱이 그들 머리로) / 2:10 (인식 곡선의 종착)</td><td><span class="c f">F</span> <span class="c t">T</span></td></tr>
+    <tr><td class="head">6:18</td><td>스 2:5; 느 7:10 (스가냐) / 느 3:4, 30 (므술람) / 창 14:13 (바알레 셰부아 = 동맹자)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">6:18</td><td>에스라 10 (통혼 금지가 잊힘) / 느 13:4–9 (도비야의 성전 방)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">6:19</td><td>고후 6:14 ("믿지 않는 자와 멍에를 같이하지 말라")</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>요세푸스 『고대사』 11.5.8</strong> — 2년 4개월설(필사 오류로 판정) <span class="c f">F</span> · <strong>투키디데스 1.93</strong> — 아테네의 한 달 축성 <span class="c f">F</span> · <strong>Kenyon 발굴</strong> — 예루살렘 성벽 둘레 <span class="c f">F</span> <span class="c h">H</span> · <strong>베히스툰 비문</strong> — 찬탈에 대한 페르시아의 불용 <span class="c h">H</span> · <strong>라기스 오스트라콘 6</strong> — "손을 약하게 하다" 관용구 <span class="c h">H</span> · <strong>아히카르 30</strong> — 바다("지어내다") 아람어 용례 <span class="c f">F</span></p>
+  </div>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 완공을 위협하는 것은 언제나 지도자를 겨눈다</h4>
+  <p>성벽이 완성 직전에 이르자 대적의 전선이 <strong>공동체에서 느헤미야 개인</strong>으로 좁혀진다. 유인(1–4절)·중상(5–9절)·위협(10–14절)의 삼중 공격이 모두 한 사람을 겨눈다. <span class="c h">H</span>: 원수들은 공사를 멈출 어떤 그럴듯하되 불법적인 전략이든 필사적으로 움켜쥔다. <strong>일이 완성에 가까울수록 지도자를 무너뜨리려는 압력이 커진다.</strong></p>
+
+  <h4>② 부르심을 아는 자의 분별 — "나 같은 자가 어찌"</h4>
+  <p>6:3의 "내가 큰 일을 하므로 내려갈 수 없다"와 6:11의 "나 같은 자가 어찌 도망하랴"가 한 쌍을 이룬다. <strong>느헤미야는 자기 소명의 무게와 자기 신분의 한계를 동시에 안다.</strong> 그는 유혹(오노 회담)도, "안전"(성전 은신)도 거절한다. <span class="c h">H</span>: 스마야의 불법적 제안 자체가 그가 하나님께로부터 오지 않았다는 표지였다(갈 1:8) — <strong>참된 부르심은 율법을 거스르는 "안전"을 제안하지 않는다.</strong></p>
+
+  <h4>③ 지어낸 말과 참된 일 — 바다의 신학</h4>
+  <p><span class="c f">F</span>의 어휘 추적이 날카롭다. "지어내다"(<span class="hw">בדא</span>, 바다)는 구약에 두 번뿐인데, 하나는 여로보암이 <strong>스스로 지어낸 절기</strong>(왕상 12:33), 다른 하나는 산발랏이 <strong>마음에서 지어낸 반역 소문</strong>(6:8)이다. 인간이 지어낸 거짓 종교와 인간이 지어낸 거짓 고발이 같은 낱말로 묶인다. 그 맞은편에 <strong>하나님께로 말미암은</strong>(메에트 엘로헤누, 6:16) 참된 일이 선다. 지어낸 말은 무너지고 하나님의 일은 완성된다.</p>
+
+  <h4>④ 인식 곡선의 종착 — 대적이 하나님의 손을 인정하다</h4>
+  <p>6:16이 이 책 전반부(1–6장)의 신학적 절정이다. 근심(2:10) → 조롱(2:19) → 격분(4:1) → 공모(4:8) → 암살 음모(6:1–14)로 상승하던 대적의 곡선이, <strong>두려움과 인정</strong>으로 종착한다. <span class="c f">F</span> <span class="c t">T</span>: 4:4의 저주 기도("조롱을 그들 머리로")가 여기서 성취된다. <strong>대적조차 "이 일이 하나님께로 말미암은 줄" 깨닫는다</strong> — 이것이 이 책의 "선한 손" 섭리 신학의 공적 확증이다.</p>
+
+  <h4>⑤ 키두쉬 하-셈 — 방해가 영광이 되다</h4>
+  <p><span class="c h">H</span>의 6:16 해석이 복음적 반전을 짚는다. <strong>산발랏의 방해 시도가 도리어 이 일에 더 큰 영광을 가져왔다.</strong> 랍비들이 이를 <strong>키두쉬 하-셈</strong>(이름을 거룩하게 함) — 이방 중에 야훼께 탁월한 명성을 돌리도록 행함 — 이라 부른다. 대적의 온갖 술책 위로 "그리하여 성벽이 완성되니라"(<span class="c k">K</span>의 "유쾌한 건조함")는 담담한 한 문장이 선다. 하나님의 일은 반대를 재료로 삼아 자기 영광을 드러낸다.</p>
+
+  <h4>⑥ 완성 뒤에도 남는 위협 — 도비야의 그림자</h4>
+  <p>6장은 완공(15–16절)으로 끝나지 않고 <strong>도비야의 혼맥</strong>(17–19절)으로 닫힌다. 성벽은 완성되었으나 <strong>공동체 내부의 얽힘은 그대로다.</strong> <span class="c f">F</span>: 통혼 금지(스 10)가 곧 잊혔고, 귀족들이 원수와 맹세로 결속되어 있었다. 이 미완의 실이 13:4–9(도비야가 성전 방을 차지함)에서 다시 풀리며, <strong>이 책의 "미완성 신학"(13장의 순환)</strong>을 예고한다. 성벽의 완성이 공동체의 완성은 아니다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 6장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

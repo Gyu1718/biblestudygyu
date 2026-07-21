@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 4장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch04.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 4장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 절 번호와 구획</a>
+    <a class="lv1" href="#s1">1. 조롱 (4:1–3)</a>
+    <a class="lv2" href="#v1">4:1 산발랏의 분노</a>
+    <a class="lv2" href="#v23">4:2–3 다섯 질문·여우</a>
+    <a class="lv1" href="#s2">2. 기도와 절반 (4:4–6)</a>
+    <a class="lv1" href="#s3">3. 위협과 낙심 (4:7–12)</a>
+    <a class="lv2" href="#v78">4:7–8 사면 포위</a>
+    <a class="lv2" href="#v912">4:9–12 노동요·소문</a>
+    <a class="lv1" href="#s4">4. 무장과 파수 (4:13–23)</a>
+    <a class="lv2" href="#v1314">4:13–14 가족 소집</a>
+    <a class="lv2" href="#v1520">4:15–20 한 손에 무기</a>
+    <a class="lv2" href="#v2123">4:21–23 옷을 벗지 않다</a>
+    <a class="lv1" href="#s5">5. 상호 참조 총람</a>
+    <a class="lv1" href="#s6">6. 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">אֱלֹהֵינוּ יִלָּחֶם לָנוּ</div>
+  <h1>느헤미야 4장 심층 연구</h1>
+  <div class="sub">엘로헤누 일라헴 라누, "우리 하나님이 우리를 위하여 싸우시리라" (느 4:20) — 조롱·위협 속의 축성</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 절 번호는 영어역 기준(히브리어 3:33–4:17) · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">חֶרְפָּה</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 절 번호와 구획</h2>
+    <div class="gloss">헤르파, "능욕" — 1장에서 열린 어휘가 4:4에서 되울린다</div>
+  </div>
+
+  <div class="caveat">
+    <div class="tt">먼저 — 절 번호의 이중 체계</div>
+    <p><strong>히브리어 성경은 이 단락을 3장 끝(3:33–38)에서 시작해 4장(1–17절)으로 잇고, 영어역과 개역개정은 전체를 4장(1–23절)으로 묶는다.</strong> <span class="c h">H</span>: 원문에는 장·절 표시가 없었고, 이 구분은 6~9세기 마소라 학자들의 작업이다. 영어 구분은 반대가 즉시 일어난 것처럼 보이게 하고, <strong>히브리어 구분은 두 국면(공사 초기의 조롱 vs 공사가 성공하자 준비된 무력 공격)을 드러낸다.</strong> 이 문서는 개역개정과 같은 <strong>영어역 절 번호</strong>를 기준으로 삼고, 필요할 때 히브리어 번호를 괄호로 병기한다.</p>
+  </div>
+
+  <p><span class="c f">F</span>의 구획: 적의 반응(4:1–3=히 3:33–35) / 느헤미야의 기도와 공사 계속(4:4–6=히 3:36–38) / 적의 계획과 느헤미야의 대응(4:7–23=히 4:1–17). <span class="c h">H</span>는 마지막을 둘로 더 나눈다. 위협과 낙심(4:7–12) / 군사적 보호와 무장한 건축자들(4:13–23).</p>
+
+  <div class="note">
+    <div class="tt"><span class="c t">T</span> — 조롱과 봉헌 행렬의 수미상관</div>
+    <p><span class="c t">T</span>가 4장을 12장과 연결한다. 산발랏의 "여우가 뛰어도 무너지리라"(4:3)는 조롱이, <strong>12장의 성벽 봉헌 행렬에서 응답된다.</strong> 여우 무게도 못 지탱하리라던 성벽 위로 온 회중이 두 대열로 행진한다. 조롱의 언어(헤르파, 1:3; 2:17; 4:4; 6:13)가 이 책의 구조적 요지를 표시하며, 4:4의 기도("조롱을 그들 머리로")는 6:16에서 성취된다(대적이 스스로 낮아짐).</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">4장의 진행 — 조롱에서 무장으로</div>
+    <p>말의 조롱(1–3절) → 느헤미야의 기도와 절반 높이 완성(4–6절) → 다섯 세력의 무력 공모와 내부 낙심(7–12절) → 가족 단위 무장·한 손 작업·주야 경계(13–23절). <strong>대적의 수단이 조롱 → 공모 → 소문(심리전)으로 상승하고, 느헤미야의 대응은 기도 → 기도+파수 → 조직·무장으로 맞선다.</strong> "기도하고 파수를 세웠다"(4:9)가 이 장의 방법론을 압축한다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">וַיִּלְעֵג</div>
+    <div class="eyebrow">4:1–3</div>
+    <h2>1. 산발랏과 도비야의 조롱</h2>
+    <div class="gloss">바일아그, "비웃었다" — 분노 어휘의 점층</div>
+  </div>
+
+  <div class="vs" id="v1">
+    <span class="ref">4:1 — 산발랏의 분노</span>
+    <p><strong>산발랏이 늘 먼저 명명된다.</strong> <span class="c f">F</span>: 그가 유대인에 대한 <strong>주모자</strong>로 지목된 것이다. "우리가 건축한다"(<span class="hw">בּוֹנִים</span>, 보님)는 분사로, 재건이 진행 중임을 뜻한다.</p>
+    <p><strong>분노 어휘의 점층 — <span class="c f">F</span>의 관찰.</strong> 느헤미야서는 산발랏의 감정 변화를 흥미롭게 묘사한다. 2:10에서는 <span class="hw">רעע</span>(라아, 못마땅함), 2:19에서는 <span class="hw">לעג</span>(라아그)+<span class="hw">בזה</span>(바자, 조롱·멸시), 여기서는 <span class="hw">חרה</span>(하라)+<span class="hw">כעס</span>(카아스)로 <strong>긴장의 고조</strong>를 그린다. "심히 분노하니라"는 직역하면 "화가 나서 크게 격분했다"인데 F는 이를 헨디아디스(두 낱말로 한 뜻)로 본다. <span class="c h">H</span>: <span class="hw">חָרָה</span>(하라)는 "뜨거워지다"이며 관용구 <span class="hw">חָרָה אַפּוֹ</span>(하라 압포, "그의 코가 뜨거워졌다" = 격분했다)에서 온다.</p>
+    <p><strong>"사마리아 군대"</strong>(<span class="hw">חֵיל שֹׁמְרוֹן</span>, 헬 쇼메론). <span class="c f">F</span>: <span class="hw">חַיִל</span>(하일)이 방어용 군대일 수도, 사마리아를 지휘한 <strong>지배층(Oberschicht)</strong>일 수도 있다(양쪽을 배제하지 않음). <span class="c h">H</span>: 산발랏은 왕의 권위에 이의를 제기할 수 없자, 자기 군대를 과시하며 백성에게 직접 야유를 퍼붓는다(왕하 18:26–28의 랍사게처럼). <strong>그는 "유대인"을 경멸적 딱지로 쓴다. 산발랏과 도비야는 야훼 숭배자이자 자신을 이스라엘인으로 여겼을 수 있으나, 유다인으로 자처하지는 않는다.</strong></p>
+  </div>
+
+  <div class="vs" id="v23">
+    <span class="ref">4:2–3 — 다섯 질문과 여우</span>
+    <p><strong>다섯 질문 — 부정 답을 유도하는 선전.</strong> <span class="c f">F</span>: 산발랏이 자기 귀족과 군대에게 연설한 것은 미래 행동을 준비시키려는 <strong>선전 공작의 시작</strong>이다. 다섯 질문 중 일부는 부정 답을 요구하도록 교묘히 짜였고, 청중은 "이 유대인들은 아무짝에도 쓸모없다"는 결론에 이르게 된다.</p>
+    <ul>
+      <li><strong>"미약한 유다인"</strong>(<span class="hw">הַיְּהוּדִים הָאֲמֵלָלִים</span>, 하예후딤 하아멜랄림). <span class="c f">F</span>: 어근 <span class="hw">אמל</span>(아말)은 시드는 식물(사 16:8; 24:7), 소망 없는 자(사 19:8; 호 4:3)에 쓰인다. "시들어가는 무리"라는 조롱이다. <span class="c h">H</span>: <span class="hw">אֲמֵלָל</span>(아멜랄)은 유일 형용사로 연약함·허약함을 뜻한다("가련한").</li>
+      <li><strong>"수리하려는가"</strong>(<span class="hw">יַעַזְבוּ</span>, 야아즈부). <span class="c f">F</span> <span class="c h">H</span>: <span class="hw">עזב</span>의 제2어근("버리다"가 아니라 "회복하다")에서 왔다(3:8과 동일).</li>
+      <li><strong>"제사를 드리려는가."</strong> <span class="c h">H</span>: 이 질문은 건축자들이 성전 산에서 제사를 드리지 <strong>않고</strong> 있었음을 시사한다. <span class="c f">F</span>: 봉헌 제사(3:1) 또는 완공 감사제를 겨냥한 조롱일 수 있다.</li>
+      <li><strong>"하루에 끝내려는가."</strong> <span class="c h">H</span>: 특히 빈정대는 질문으로, 유대인이 비이성적이라는 암시다.</li>
+      <li><strong>"불탄 돌을 살리려는가."</strong> <span class="c f">F</span>: 불에 그을린 돌이 <strong>저주받아 재사용 불가</strong>라는 관념이 배후에 있다. <span class="c h">H</span>: "돌을 살린다"는 표현이며, 불탄 돌은 본래 습기가 증발해 <strong>죽은 것</strong>으로 여겨졌다.</li>
+    </ul>
+    <div class="note">
+      <div class="tt">돌 = 사람 — <span class="c h">H</span>의 신약 연결</div>
+      <p>돌은 상징적으로 사람을 표상할 수 있다. 느헤미야 성벽의 마른 돌무더기가 재활용·복구되었듯, <strong>하나님은 불운한 환경에 상하거나 버려진 사람을 다시 쓰실 수 있다.</strong> 이 "돌=사람" 유비가 신약에서 이어진다. 그리스도인은 "산 돌"로서 신령한 집(성전)으로 세워진다(벧전 2:5). 하나님의 모든 백성은 삶의 갖가지 고난에 상했더라도 그의 나라의 건축 재료다.</p>
+    </div>
+    <p><strong>도비야의 여우.</strong> <span class="c f">F</span>: 도비야는 산발랏의 측근이자 벗으로 이 중요한 회합에서 그의 곁에 있었다. 그의 조롱은 아름다운 이미지로 포장된다. "여우가 뛰어도 무너지리라"(<span class="hw">פָּרַץ</span>, 파라스). <strong>전쟁에서 성벽의 균열은 공성 무기로 오랜 노력 끝에야 낼 수 있는데, 유대인의 성벽은 여우 발에도 무너질 만큼 부실하리라는 것.</strong> 조롱과 멸시가 결합된 극치다. <span class="c h">H</span>: 건축자들이 야유가 시작되기 전까지 별로 진척시키지 못했음을 시사한다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">שְׁמַע אֱלֹהֵינוּ</div>
+    <div class="eyebrow">4:4–6</div>
+    <h2>2. 느헤미야의 기도와 절반 완성</h2>
+    <div class="gloss">셰마 엘로헤누, "우리 하나님이여 들으시옵소서"</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">4:4–5 — 신원(伸冤)의 기도</span>
+    <p><span class="c f">F</span>: 적의 조롱, 특히 건축자들에게 퍼부어진 조롱을 듣고 느헤미야가 하나님께 기도한다. <strong>신원의 기도</strong>다. 하나님의 이름으로 행해지는 일을 적이 멸시했기 때문이다. F의 핵심 판정: <strong>"하나님의 일에 대한 반대는 하나님에 대한 반대다."</strong></p>
+    <p><strong>언어유희 — 부자와 비자.</strong> <span class="c f">F</span> <span class="c h">H</span>: "조롱을 그들 머리로 돌리시고 노략물(<span class="hw">בִזָּה</span>, 비자)로 넘기소서." 우리가 <strong>멸시받는다</strong>(<span class="hw">בוּזָה</span>, 부자)는 말과, 그들이 <strong>노략물</strong>(비자)이 되리라는 말의 음성 유희다(2:19의 <span class="hw">בּוּז</span>, 부즈와 연결). <span class="c h">H</span>: 느헤미야는 조롱하는 자들을 이스라엘처럼 <strong>포로</strong>로 벌하시기를 구한다.</p>
+    <p><strong>"죄를 덮지 마소서"</strong>(<span class="hw">כסה</span>, 크사, 덮다). <span class="c f">F</span>: 죄를 덮고 지우는 것은 용서하는 것이다. 렘 18:23에 같은 사상이 있으나(예레미야의 자유 인용일 수 있음), 유사성을 과대평가할 필요는 없다 — 당대의 상용 표현이었을 수 있다. <span class="c h">H</span>: 속죄의 두 측면("덮다" 아랍어, "지우다·씻다" 아카드어)이 여기 함께 있다(Milgrom).</p>
+    <div class="note">
+      <div class="tt">이 기도는 국가주의가 아니다 — <span class="c f">F</span>의 판정</div>
+      <p>느헤미야가 적의 용서를 구하지 <strong>말아</strong> 달라고 기도한 것은 <strong>유대인이 모욕당했기 때문이 아니라 하나님의 일이 조롱당했기 때문</strong>이다. 죄는 하나님이 명하신 일을 비웃음으로 저질러졌다. <strong>따라서 이 기도는 종교적으로 동기 지어진 것이지 국가주의적으로 동기 지어진 것이 아니다.</strong> 기도 윤리의 난제(원수를 위한 저주 기도)를 F는 이 구분으로 푼다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">4:6 — 절반 높이, "백성이 마음 들여 일함"</span>
+    <p><span class="c f">F</span>: 6절에서 느헤미야는 적의 모욕에도 불구하고 일이 진행되었다고 말한다. <strong>조롱은 공사를 멈추려는 것이었으나 성공하지 못했다.</strong> "온 성벽이 절반 높이까지 연결되었다"(다만 히브리어는 이 번역만큼 분명하지 않아 길이의 절반, 너비의 절반으로도 읽을 수 있다). <strong>"백성이 마음 들여 일하였음이니라"</strong>는 직역하면 "백성의 마음(<span class="hw">לֵב הָעָם</span>, 레브 하암)이 일하는 데 있었다"이다.</p>
+    <p><span class="c h">H</span>: 느헤미야는 무슨 수를 써서라도 일꾼들이 좌절하지 않도록 결심한다. 건축자들은 지금 "일할 마음"이 있었고 완공에 헌신했다. <strong>그들은 일부 구간만 완성해 적에게 벌어진 구멍을 남기는 대신, 함께 성벽의 고리를 절반 높이까지 우선 닫았다.</strong> <span class="c t">T</span>: 4:6의 <span class="hw">קשר</span>(카샤르, 연결되다)가 4:8의 <span class="hw">קשר</span>(카샤르, 공모하다)와 언어유희를 이룬다 — <strong>백성은 성벽을 "연결"하고 적은 공격을 "공모"한다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">וַנִּתְפַּלֵּל</div>
+    <div class="eyebrow">4:7–12</div>
+    <h2>3. 위협과 낙심</h2>
+    <div class="gloss">바니트팔렐, "우리가 기도하며" — 기도와 파수의 병행</div>
+  </div>
+
+  <div class="vs" id="v78">
+    <span class="ref">4:7–8 — 다섯 세력의 사면 포위</span>
+    <p><span class="c f">F</span>: 적의 수가 빠르게 늘었다. 산발랏·도비야·아랍인·암몬인·아스돗인이 합세해 예루살렘 공격을 공모한다. <span class="c h">H</span>가 방위를 정리한다. <strong>사마리아(산발랏)는 북, 암몬(도비야)은 동, 아랍(게셈)은 남, 아스돗은 서.</strong> 유다가 사면으로 포위된다. "그들은 한 부류가 아니면서도 유대인에 대한 반대에서 협력한다."</p>
+    <p><strong>어휘.</strong> <span class="c f">F</span> <span class="c h">H</span>: "성벽이 수리되고"(<span class="hw">אֲרוּכָה</span>, 아루카)는 어근 <span class="hw">ארך</span>에서 왔고 <strong>상처 위로 새 살이 돋는 것</strong>(치유)에 쓰인다. <span class="c h">H</span>: 직역하면 "예루살렘 성벽을 위해 치유가 올라갔다"이다. 재건은 물리적 성벽을 넘어 <strong>과거의 잔해에서 죽은 공동체가 되살아남</strong>을 표상한다. "혼란"(<span class="hw">תּוֹעָה</span>, 토아, 8절)은 보통 방황·혼미를 뜻하나 여기서는 "소요를 일으키다"이며, 지난번 대적이 제국의 개입과 공사 중단 명령을 부른 사건(스 4:19–22)을 상기시킨다.</p>
+  </div>
+
+  <div class="vs" id="v912">
+    <span class="ref">4:9–12 — 기도와 파수, 노동요, 소문</span>
+    <p><strong>4:9 기도와 파수 — ora et labora.</strong> <span class="c f">F</span>: Rudolph는 이 절을 중세 수도사의 표어 <strong>"기도하고 일하라"</strong>로 요약한다. 유대인은 기도했으나 <strong>동시에</strong> 파수를 세워 불시에 당하지 않도록 했다. <span class="c h">H</span>: 느헤미야는 도움을 구하는 기도와 파수 배치에 지혜를 발휘한다. 위협을 막고자 할 수 있는 일을 하면서 동시에 신적 도움을 구한다.</p>
+    <p><strong>4:10 노동요·낙심.</strong> <span class="c f">F</span>: "흙이 많아 성벽을 쌓지 못하겠다." 적의 선전이 효과를 냈다. <strong>애가(<span class="hw">קִינָה</span>, 키나) 리듬의 노래 형태</strong>로 유대인이 불안을 표현했다 — 일꾼들의 민요였을 수 있다. 초기의 열정이 선전의 공세에 사그라들었다. <span class="c h">H</span>: 느헤미야는 백성을 시적으로 "유다"라 부르고 그들의 애가를 인용한다. <span class="hw">כָּשַׁל</span>(카샬, "쇠하다")은 직역하면 "비틀거리다"로, 짐 아래 휘청이는 일꾼을 그린다. "우리가"라는 대명사가 <span class="hw">우리는 할 수 없다</span>는 무력감을 강조한다.</p>
+    <p><strong>4:11–12 소문의 심리전.</strong> <span class="c f">F</span>: 적은 "그들이 알거나 보기 전에 들어가 죽이고 공사를 멈추리라"는 소문을 퍼뜨린다. 실제 공격 없이도 일을 멈추게 하려는 것이다. 국경 근처 유대인들이 "열 번" 곧 되풀이해 경고했다. <span class="c h">H</span>: "열 번"은 <strong>반복을 뜻하는 관용구</strong>다(창 31:7; 민 14:22; 삼상 1:8 등). 아스돗까지 유대인이 살았음을 고고학이 확인한다(아스돗 출토 "삽디야의 포도원" 도기 명문).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">זְכֹר אֶת־אֲדֹנָי</div>
+    <div class="eyebrow">4:13–23</div>
+    <h2>4. 무장과 파수</h2>
+    <div class="gloss">제코르 에트-아도나이, "주를 기억하라" (4:14) — 신뢰와 행동</div>
+  </div>
+
+  <div class="vs" id="v1314">
+    <span class="ref">4:13–14 — 가족 단위 소집, "크고 두려우신 주를 기억하라"</span>
+    <p><strong>4:13 가족 단위.</strong> <span class="c f">F</span>: 느헤미야가 백성을 <strong>가족(미슈파호트)별로</strong> 소집한다. 이스라엘 초기부터 군대는 가족·씨족 단위로 편성되었고(삼상 10:21), 한 단위는 약 1000명이었다. <span class="c h">H</span>: 노출된 낮은 지점에 병력을 세우고 나머지 백성을 가족별로 칼·창·활과 함께 배치한다.</p>
+    <p><strong>4:14 신뢰와 행동.</strong> <span class="c f">F</span>: 느헤미야는 신앙인으로서 <strong>진정한 힘, 곧 "크고 두려우신 하나님"(1:5 반향)</strong>에 주의를 돌린다. "적을 두려워 말라 — 그들이 대체 누구인가? 하나님을 신뢰하라." <strong>그러나 이것은 행동 없는 신뢰, 신비적 기다림이 아니다. 신뢰이자 행동이다.</strong> 백성은 자기 가족과 재산을 지켜야 한다. F는 이 호소를 "외교적 언어의 걸작"이라 부른다 — 청중을 감정적으로 끌어들여 자녀와 아내를 생각하게 했다.</p>
+    <div class="note">
+      <div class="tt">"주를 기억하라"의 출처 — <span class="c h">H</span></div>
+      <p>"크고 두려우신 주를 기억하라"는 모세를 통한 약속을 공동체에 상기시킨다. "그들을 두려워 말라, 너희 하나님 여호와가 너희 중에 계신 큰 하나님이시요 두려우신 하나님이심이니라"(신 7:21; 느 1:5; 9:32도 참조). <span class="c h">H</span>는 어휘 변화도 짚는다. 느헤미야가 고유명 야훼 대신 존칭 <span class="hw">אֲדֹנָי</span>(아도나이, 주)를 쓴다. 이 경향은 제2성전기에 시작되었다. 이름의 거룩과 권능 때문에 야훼의 발음을 삼가는 흐름이다(→ 6부 야훼 이름 참조).</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v1520">
+    <span class="ref">4:15–20 — 하나님이 계획을 좌절시키심, 한 손에 무기</span>
+    <p><strong>4:15 좌절시키심.</strong> <span class="c f">F</span>: 느헤미야의 신속한 대응으로 적의 계획이 무산된다. "하나님이 그들의 계획을 무너뜨리셨다"(<span class="hw">וַיָּפֶר הָאֱלֹהִים</span>, 바야페르 하엘로힘). <strong>스 4:5에서는 같은 표현이 유대인의 성전 재건 계획을 좌절시키는 데 쓰였는데, 여기서는 반대로 하나님이 대적의 계획을 좌절시키신다.</strong></p>
+    <p><strong>4:16 절반 무장 절반 작업.</strong> <span class="c f">F</span> <span class="c h">H</span>: 느헤미야의 "종들"(<span class="hw">נְעָרִים</span>, 네아림, 청년들)의 절반은 일하고 절반은 창·방패·활·갑옷을 들었다. <span class="c h">H</span>: 이 청년들은 느헤미야의 <strong>개인 수행단이자 호위대</strong>다(5:10; 13:19). Fried는 <strong>느헤미야가 데려온 페르시아인만 무장하고 일반 민중은 비무장이었다</strong>는 견해를 제시한다.</p>
+    <p><strong>4:17 한 손에 무기.</strong> <span class="c f">F</span>: 짐꾼은 한 손에 짐, 다른 손에 무기(<span class="hw">הַשֶּׁלַח</span>, 하샬라흐 — 우가릿어 Krt 20에도 나오는 낱말, "투창·투척물"로도 옮김)를 들었다. 잔해 사이에서 일하는 이들이 돌(투척물)을 집어 방어했을 법하다. 석공은 두 손이 필요해 칼을 허리에 찼다.</p>
+    <p><strong>4:18–20 나팔수.</strong> <span class="c f">F</span>: 나팔수가 느헤미야 곁을 따랐다. 일꾼들이 긴 성벽에 흩어져 있어 공격에 취약했으므로, 위급 시 나팔을 불어 한곳에 집결시키는 <strong>독창적 계획</strong>이었다. <span class="c h">H</span>: 요세푸스에 따르면 500피트 간격으로 나팔수를 세웠다(고대사 11.177). <strong>대부분의 번역이 <span class="hw">שׁוֹפָר</span>(쇼파르)를 "트럼펫"으로 옮기나 이는 부정확하다. 쇼파르는 숫양·영양의 뿔로 만든 원뿔형 악기</strong>다. Milgrom이 정리한 쇼파르의 용도: 군대 소집, 적을 겁줌, 승리 선포, 전투 종료, 적 접근 경고, 왕의 대관 등. "우리 하나님이 우리를 위하여 싸우시리라"(4:20). <span class="c f">F</span>: 이는 유대인이 싸우지 말라는 뜻이 아니라 하나님이 그들의 싸움을 도우시리라는 뜻이다.</p>
+  </div>
+
+  <div class="vs" id="v2123">
+    <span class="ref">4:21–23 — 옷을 벗지 않다</span>
+    <p><strong>4:21 새벽부터 별이 뜰 때까지.</strong> <span class="c h">H</span>: 작업은 현대의 8시간 교대보다 훨씬 길어 새벽부터 해질녘까지 이어졌다. <strong>랍비들은 이 절을 근거로 저녁 셰마를 별이 뜬 뒤에만 낭송할 수 있다고 논증했고(b. Ber. 2b), 정결례를 위해 해가 진 시점(첫 별의 출현)을 정의했다(b. Meg. 20b).</strong></p>
+    <p><strong>4:22 밤에도 예루살렘 체류.</strong> <span class="c f">F</span>: 농촌 사람들이 밤에 집으로 돌아가면 아침저녁 이동이 위험했고 적이 잠입할 틈이 생겼다. 그래서 각 사람이 종과 함께 성 안에서 밤을 지내 밤에는 파수, 낮에는 작업을 하게 했다.</p>
+    <p><strong>4:23 옷을 벗지 않음.</strong> <span class="c f">F</span>: 위급한 상황에서는 옷을 입고 무기를 손에 든 채 자야 했다. 느헤미야와 그의 사람들이 본을 보였다. <span class="c h">H</span>: 이 마지막 구절의 히브리어는 난해하다("각 사람… 무기… 물"). 여러 역본이 "물"(<span class="hw">הַמַּיִם</span>)을 "그의 오른손"(<span class="hw">הֵימִינוֹ</span>)으로 고쳐 "무기를 오른손에 들었다"로 읽으나, <span class="c h">H</span>는 <strong>본문 그대로 "물 길으러 갈 때도 무기를 풀지 않았다"</strong>로 읽는 편을 택한다(라쉬 인용). 느헤미야는 밤에도 성을 순찰하며 일과 음식과 잠을 즐거움이 아니라 필요로만 취했다(요세푸스 고대사 11.178).</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">4장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력의 결(신뢰와 실천의 결합, "여우" 조롱의 아이러니). <span class="c f">F</span> 어휘·본문비평(분노 어휘 점층, 아자브 제2어근, 하샬라흐 우가릿 병행, 키나 리듬 노동요). <span class="c h">H</span> 제2성전기 수용사(돌=산 돌 벧전 2:5, 쇼파르 용도, 랍비 셰마·정결례, 야훼 이름의 회피). <span class="c t">T</span> 구조(카샤르 언어유희, 4:3 여우 ↔ 12장 봉헌 행렬, 헤르파 반복). <span class="c b">B</span> 제국사·사회사 배경(페르시아 주둔군, Fried의 무장 논쟁).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="eyebrow">CROSS-REFERENCES</div>
+    <h2>5. 상호 참조 총람</h2>
+    <div class="gloss">4장의 각 절이 다른 성경·고대 자료와 만나는 지점</div>
+  </div>
+
+  <table>
+    <tr><th style="width:14%">느 4장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">4:1</td><td>왕하 18:26–28 (랍사게의 야유) / 느 2:10, 19 (분노 어휘의 점층)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">4:2</td><td>사 16:8; 24:7; 19:8; 호 4:3 (아멜랄 = 시드는 식물) / 느 3:8 (아자브 제2어근)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">4:2</td><td><strong>베드로전서 2:5</strong> (돌 = 산 돌, 신령한 집)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">4:3</td><td>느 12:27–43 (여우 조롱 ↔ 성벽 봉헌 행렬)</td><td><span class="c t">T</span></td></tr>
+    <tr><td class="head">4:4–5</td><td>렘 18:23 (죄를 덮지 마소서) / 2:19 (부즈 → 비자 언어유희)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">4:6</td><td>느 4:8 (카샤르: 연결 ↔ 공모의 언어유희)</td><td><span class="c t">T</span></td></tr>
+    <tr><td class="head">4:7</td><td>에스라 4:19–22 (지난 공사 중단 명령)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">4:9</td><td>ora et labora (Rudolph) — 기도와 파수의 병행</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">4:12</td><td>창 31:7; 민 14:22; 삼상 1:8 ("열 번" = 반복 관용구)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">4:13</td><td>삼상 10:21 (가족·씨족 단위 군 편성, 약 1000명)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">4:14</td><td><strong>신명기 7:21</strong> ("크고 두려우신") / 느 1:5; 9:32 (반향)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">4:15</td><td><strong>에스라 4:5</strong> (같은 표현이 반대 방향으로 — 유대인 계획 좌절 ↔ 대적 계획 좌절)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">4:17</td><td>우가릿어 Krt 20 (하샬라흐 = 무기·투척물)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">4:18–20</td><td>삿 3:27; 6:34; 7:16 등 (쇼파르의 용도, Milgrom)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">4:21</td><td>레 11–15; 민 19 (정결과 일몰) / b. Ber. 2b (저녁 셰마)</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>요세푸스 『고대사』 11.177–178</strong> — 나팔수 배치, 느헤미야의 야간 순찰 <span class="c h">H</span> · <strong>우가릿 Krt 20</strong> — 하샬라흐 병행 <span class="c f">F</span> · <strong>아스돗 도기 명문</strong>("삽디야의 포도원") — 서편 유대인 거주 <span class="c h">H</span> · <strong>라기스 오스트라콘 6</strong> — "손을 약하게 하다" 관용구(6:9 관련) · <strong>b. Ber. 2b; b. Meg. 20b</strong> — 셰마·정결례 시각 <span class="c h">H</span></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">שֵׁם יהוה</div>
+    <div class="eyebrow">SYNTHESIS</div>
+    <h2>6. 신학 종합</h2>
+    <div class="gloss">셈 야훼, "야훼의 이름" — 발췌: 이름의 신학 (4:14)</div>
+  </div>
+
+  <h3>① 기도와 행동의 결합 — ora et labora</h3>
+  <p>4장은 <strong>"우리가 기도하며 파수를 세웠다"(4:9)</strong>를 방법론으로 삼는다. 조롱에는 기도로(4:4–5), 무력 위협에는 기도와 파수로(4:9), 낙심에는 조직과 무장으로 맞선다. <span class="c f">F</span>의 4:14 요약이 이를 압축한다. <strong>"행동 없는 신뢰, 신비적 기다림이 아니다. 신뢰이자 행동이다."</strong> 신 7:21(모세)과 수 1장(여호수아)의 노선에서 <span class="c h">H</span>는 이를 <strong>"믿음과 실제 전략의 결합"</strong>으로 정식화한다.</p>
+
+  <h3>② 하나님의 일에 대한 반대 = 하나님에 대한 반대</h3>
+  <p><span class="c f">F</span>의 4:4–5 판정이 이 장의 신학적 심장이다. 느헤미야의 저주 기도는 <strong>유대인이 모욕당했기 때문이 아니라 하나님의 일이 조롱당했기 때문</strong>이며, "종교적으로 동기 지어진 것이지 국가주의적으로 동기 지어진 것이 아니다." 이 구분이 원수를 위한 저주 기도의 윤리적 난제를 푼다. "우리 하나님이 우리를 위하여 싸우시리라"(4:20)도 같은 논리 위에 선다 — 그들의 전쟁이 하나님의 전쟁이 되는 것은 그 일이 하나님의 일이기 때문이다.</p>
+
+  <h3>③ 계획을 좌절시키시는 하나님 — 뒤집힌 에스라 4:5</h3>
+  <p><span class="c f">F</span>의 어휘 관찰이 섭리 신학을 벼린다. 에스라 4:5에서 하나님이 유대인의 성전 재건 계획을 대적의 손에 좌절시키셨던 그 표현(<span class="hw">פרר</span>, 파라르)이, 4:15에서 <strong>반대 방향으로</strong> 곧 대적의 공격 계획을 좌절시키는 데 쓰인다. 판이 뒤집혔다. 이 "선한 손"의 문법이 6:16(대적이 하나님의 손을 인정함)에서 종착한다.</p>
+
+  <h3>④ 조롱과 봉헌의 수미상관</h3>
+  <p><span class="c t">T</span>의 4:3 ↔ 12장 연결이 이 책 전체의 아이러니를 그린다. "여우가 뛰어도 무너지리라"던 성벽 위로, 12장 봉헌식에서 <strong>온 회중이 두 대열로 행진한다.</strong> 헤르파(능욕, 1:3; 2:17; 4:4; 6:13)의 반복이 구조를 표시하고, 4:4의 기도("조롱을 그들 머리로")가 6:16에서 성취된다. 조롱은 조롱한 자에게로 돌아간다.</p>
+
+  <h3>⑤ 죽은 돌을 살리시는 하나님</h3>
+  <p>도비야의 "불탄 돌을 살리려는가"(4:2)라는 조롱을 <span class="c h">H</span>가 뒤집는다. 마른 돌무더기가 재활용·복구되었듯 <strong>하나님은 상하고 버려진 사람을 다시 쓰신다.</strong> 이 "돌=사람" 유비가 벧전 2:5("산 돌")로 이어진다. 7절의 "치유가 올라갔다"(성벽 재건 = 죽은 공동체의 소생)도 같은 결이다. 조롱의 언어가 부활의 언어로 번역된다.</p>
+
+  <h3>⑥ 발췌: 이름의 신학 — 왜 "아도나이"인가</h3>
+  <div class="note">
+    <div class="tt">4:14의 어휘 변화가 여는 지평 — <span class="c h">H</span> 발췌논문 14</div>
+    <p>느헤미야가 신 7:21을 인용하며 고유명 <strong>야훼</strong>를 존칭 <strong>아도나이</strong>(주)로 바꾼다. 이 대체 경향은 제2성전기에 자리 잡았다. 후기 히브리어 본문(전도서·아가·에스더)에서 사언문자(YHWH)가 아예 사라지고, 쿰란 문서는 이를 고대 히브리 문자로 구별해 적거나 네 점으로 표기했다(1QS 8:14). 필론과 요세푸스는 이름의 발설을 삼갔고, 미쉬나는 이름을 소리 내어 발음하는 자가 내세의 몫을 잃는다고 경고한다(m. Sanh. 10:1). 속죄일에 대제사장이 이 이름을 열 번 발음했다는 전승(t. Yoma 2:2)까지 이어진다. <strong>이름을 향한 경외의 근거는 이름에 깃든 권능이다</strong> — 신명(神名)을 부르는 것이 그 신의 능력에 접속하는 길이었다(왕상 18:24; 시 116:4). 신약에서 예수의 이름이 같은 성격을 띤다. 그의 이름은 그의 인격과 권능의 연장이며(행 2:21; 롬 10:13), "예수의 이름에 모든 무릎이 꿇게" 된다(빌 2:10).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 4장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것. 절 번호는 영어역·개역개정 기준(히브리어 3:33–4:17).</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

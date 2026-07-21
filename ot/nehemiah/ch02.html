@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 2장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+hr.wall{border:0;height:9px;margin:2.4rem 0;background:
+ repeating-linear-gradient(90deg,var(--line) 0 26px,transparent 26px 30px) 0 0/100% 3px no-repeat,
+ repeating-linear-gradient(90deg,transparent 0 13px,var(--line) 13px 39px,transparent 39px 43px) 0 6px/100% 3px no-repeat}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch02.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 2장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 단락의 짜임</a>
+    <a class="lv2" href="#s0-tovra">토브와 라의 어휘망</a>
+    <a class="lv1" href="#s1">1. 알현 (2:1–8)</a>
+    <a class="lv2" href="#v1">2:1 니산월과 포도주</a>
+    <a class="lv2" href="#v2">2:2 세 겹 질문과 두려움</a>
+    <a class="lv2" href="#v3">2:3 예루살렘 없는 화법</a>
+    <a class="lv2" href="#v4">2:4 화살 기도</a>
+    <a class="lv2" href="#v5">2:5 청원의 어법</a>
+    <a class="lv2" href="#v6">2:6 왕후와 기한</a>
+    <a class="lv2" href="#v78">2:7–8 두 통의 공문</a>
+    <a class="lv1" href="#s2">2. 여정과 대적 (2:9–10)</a>
+    <a class="lv1" href="#s3">3. 밤 답사 (2:11–16)</a>
+    <a class="lv1" href="#s4">4. 설득과 대응 (2:17–20)</a>
+    <a class="lv1" href="#s5">5. 상호 참조 총람</a>
+    <a class="lv1" href="#s6">6. 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">וַיִּיטַב לִפְנֵי הַמֶּלֶךְ</div>
+  <h1>느헤미야 2장 심층 연구</h1>
+  <div class="sub">바이타브 리프네 함멜레크, "왕 앞에서 좋게 여겨진지라" (느 2:6) — 알현·파견·밤 답사·설득의 절 단위 주해</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">טוֹב · רַע</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 단락의 짜임 — 세 구조 분석의 겹침</h2>
+    <div class="gloss">동심원의 위치 · 세 차례 문답 · 토브/라 어휘망</div>
+  </div>
+
+  <p><strong>동심원 안에서의 위치 <span class="c t">T</span>.</strong> 1:1–2:20 전체가 파괴 보고 네 번(1:3; 2:3, 13, 17)으로 마디지어진 다섯 마디 동심원이며, 2장은 그중 네 마디를 차지한다. <strong>B</strong> 왕과의 만남(1:11b–2:8) — <strong>X 대적의 등장(2:9–10)</strong> — <strong>B′</strong> 직접 확인(2:11–16) — <strong>A′</strong> 공동체 설득(2:17–20). <strong>동심원의 정중앙이 산발랏과 도비야의 등장이라는 배치</strong>가 T 해석의 출발점이다.</p>
+
+  <p><strong>세 차례 문답 <span class="c t">T</span>.</strong> 2:1–8은 아닥사스다의 질문 세 번(2:2a, 4a, 6a)에 느헤미야의 반응(두려움 2:2b, 기도 4b, 기간 제시 6b)과 "내가 왕에게 이르되"로 시작하는 발언(2:3, 5, 7–8a)이 잇따르는 삼중 교환이다. 이 대화가 서사 틀로 감싸여 있다. 느헤미야가 왕에게 포도주를 <em>주고</em>(2:1, <span class="hw">נָתַן</span> 나탄), 왕이 느헤미야의 청을 <em>주는</em>(2:8b, 같은 동사) 대칭이다. T가 읽는 것은 내면의 곡선이다. 겉으로는 시종 궁정 예법을 지키되, 첫 교환에서 두려움 → 둘째에서 기도 → 셋째에서 두려움도 기도도 언급되지 않는 완전한 확신으로 이동한다. <strong>넉 달의 기도에 하나님이 긍정으로 답하셨음을 확인해 가는 과정이 구조에 새겨져 있다.</strong></p>
+
+  <h3 id="s0-tovra">토브와 라 — 2장 전체를 관통하는 어휘망 <span class="c t">T</span> (McConville 인용)</h3>
+  <p>2장의 가장 중요한 문학적 발견이다. 번역에는 드러나지 않지만 히브리어에서 <span class="hw">טוֹב</span>(토브, 좋은)과 <span class="hw">רַע</span>(라, 나쁜/악한)의 대조가 장 전체에 깔려 있다.</p>
+
+  <table>
+    <tr><th style="width:16%">절</th><th style="width:28%">히브리어</th><th>통상 번역과 실제 의미</th></tr>
+    <tr><td class="head">1:3; 2:17</td><td><span class="hw">רָעָה</span> (라아)</td><td>"환난" — 문자적으로 <strong>악</strong></td></tr>
+    <tr><td class="head">2:1, 2</td><td><span class="hw">רַע</span> (라)</td><td>느헤미야의 "수심" — 문자적으로 <strong>나쁨</strong></td></tr>
+    <tr><td class="head">2:6, 7</td><td><span class="hw">טוֹב</span> (토브)</td><td>"왕이 <strong>좋게</strong> 여겨"</td></tr>
+    <tr><td class="head">2:8, 18</td><td><span class="hw">טוֹב</span> (토브)</td><td>하나님의 "<strong>선한</strong> 손"</td></tr>
+    <tr><td class="head">2:18</td><td><span class="hw">טוֹב</span> (토브)</td><td>"이 <strong>선한</strong> 일"</td></tr>
+    <tr><td class="head">2:10</td><td><span class="hw">רָעָה גְדוֹלָה</span> (라아 게돌라)</td><td>산발랏과 도비야가 <strong>"큰 악으로 악하게 여겼다"</strong></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">T의 정식</div>
+    <p>2:10에서 주제가 정점에 이른다. 산발랏과 도비야는 "어떤 사람(<span class="hw">אָדָם</span>, 아담)이 이스라엘 자손을 흥왕하게(토브) 하려 온 것"을 "큰 악(라아 게돌라)"으로 여겼다. <strong>무대가 이렇게 짜인다. 사명을 돕는 요소는 인간(왕)이든 신적(하나님의 손)이든 "선"으로, 사명을 막거나 현 상황에서 비롯된 요소(느헤미야의 슬픔, 예루살렘의 참상, 두 사람의 반응)는 "악"으로 지정된다.</strong> <span class="c h">H</span>도 독립적으로 확인한다. 왕에게 처음 "나쁘게"(2:2) 보였던 느헤미야가 "왕 앞에 좋게"(2:6) 되는 반전이 있고, 도비야의 이름이 <strong>"야훼는 선하시다"</strong>라는 뜻이라는 사실이 그의 관점(선을 악으로 여김)과 아이러니를 이룬다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">נִיסָן</div>
+    <div class="eyebrow">2:1–8</div>
+    <h2>1. 알현</h2>
+    <div class="gloss">니산월의 주연에서 왕의 허락까지</div>
+  </div>
+
+  <div class="vs" id="v1">
+    <span class="ref">2:1 — 니산월, 포도주, 그리고 한 번도 없던 일</span>
+    <p><strong><span class="hw">נִיסָן</span>(니산).</strong> 대략 4월, 페르시아와 유대 역법의 정월 <span class="c k">K</span>. K는 이 달 표기의 기능을 시간 계산으로 읽는다. <strong>소식이 도달한 지 넉 달, 그동안 금식과 기도가 지속되었다는 뜻이며, 1:11의 "오늘 형통하게 하옵소서"가 마침내 이날을 가리킨다.</strong> 연대 문제(1:1 "제이십년"과의 충돌)는 1장 연구에서 다룬 다섯 해법 그대로다.</p>
+    <p><strong>"왕 앞에 포도주가 있기로."</strong> <span class="c f">F</span>가 본문 문제를 짚는다. 직역은 "포도주가 그 앞에 있었다"이고, 고대 역본 일부 사본은 "포도주가 <em>내</em> 앞에 있었다"로 읽는다. "내가 포도주를 맡고 있었다"로 자유롭게 옮길 수도 있다. F는 마소라를 유지하되 이 장면이 <strong>연회</strong>를 전제한다고 본다. 페르시아 왕들은 주연으로 유명했고(F가 <strong>에스더 1:3 이하</strong>를 직접 인용), 이는 근동의 오랜 관습이었다. 술 관원의 일은 포도주를 들어 왕에게 드리는 것이었으므로, <strong>느헤미야는 왕이 그의 이상을 즉시 알아챌 만큼 가까이 있었다</strong> <span class="c f">F</span>.</p>
+    <p><strong>"내가 전에는 왕 앞에서 수심이 없었더니."</strong> 세 방향의 본문 해석이 있다 <span class="c f">F</span>. ① 부정어 <span class="hw">לֹא</span>(로)를 강조 불변화사 <span class="hw">לוּ</span>(루)로 읽어 "참으로 나는 그 앞에서 수심이 있었다"로 옮기는 길 — 본문 지지가 약함. ② 로를 유지하되 "그 앞에서"(레파나브)를 "이전에"(레파님)로 읽는 길. ③ 마소라를 유지하고 3인칭 접미사를 왕이 아닌 비인칭 "그것", 곧 예루살렘의 소식을 가리키는 것으로 읽는 길. F의 결론: <strong>어느 독법이든 요점은 같다. 기슬르월 이후 느헤미야가 침울한 얼굴로 왕을 섬긴 것은 이번이 처음이었다.</strong></p>
+    <p><span class="c h">H</span>가 이 사실의 무게를 밝힌다. <strong>술 관원의 표정은 결정적으로 중요했다.</strong> 그는 포도주에 관해 왕의 안전을 책임지는 사람이므로 그의 불안은 왕의 마음에 의심을 일으킬 수 있었다. 라쉬는 왕이 느헤미야가 자신을 해칠 악을 꾸민다고 여겼다는 방향으로 해석했다. H는 이 독법보다 "왕이 그토록 나빠 보이는 느헤미야를 본 적이 없어 깊은 고통을 겪는 중이라 짐작했다"는 쪽을 택한다.</p>
+  </div>
+
+  <div class="vs" id="v2">
+    <span class="ref">2:2 — 세 겹 질문과 "심히 두려워하니라"</span>
+    <p><strong><span class="hw">רַע</span>(라)의 의미장.</strong> "어찌하여 얼굴에 수심이 있느냐"의 직역은 <strong>"어찌하여 네 얼굴이 나쁘냐"</strong>다 <span class="c f">F</span>. 라는 언제나 불쾌하고 나쁘고 악한 것과 연결되며, 이 경우 느헤미야의 내면이 외모에 반영된 상태를 가리킨다. "병이 없지 아니하냐"는 왕의 염려를 보여 주고, "이는 필연 네 마음에 근심이 있음이로다"의 <span class="hw">רֹעַ לֵב</span>(로아 레브, 마음의 나쁨)는 삼상 17:28에서는 "마음의 악"으로 옮길 수 있으나 여기서는 그 뜻이 아니며, 전 7:3에서 로아가 파님(얼굴)과 함께 "얼굴의 슬픔"을 뜻하는 용례가 여기 해당한다. F의 인물 평가: <strong>왕은 세 겹으로 물었다. 외모에 반영된 내면, 몸의 질병, 마음의 슬픔. 아닥사스다가 예리한 관찰자였고 신하의 심경에 관심을 가진 인간적 성품이었음을 보여 준다.</strong></p>
+    <p><strong>"내가 크게 두려워하여" — 두려움의 원인, 주석별 재구성.</strong></p>
+    <ul>
+      <li><span class="c f">F</span> 두 이유. ① 축제 상황의 침울한 얼굴이 왕을 노하게 했을 수 있음 ② 넉 달을 벼른 결정적 순간이 왔음. 느헤미야는 아닥사스다 치세 초의 성벽 재건 실패(<strong>스 4:23</strong>)를 알았고 왕이 모든 건축을 중지시켰다. <strong>"반역의 도시" 예루살렘 이야기에 왕이 어떻게 반응할 것인가.</strong></li>
+      <li><span class="c k">K</span> 예법 위반의 자각이라는 통상적 설명도 말은 되지만 이유는 더 근본에 있다. 느헤미야는 "오늘"(1:11) 말하기로 결심했고, <strong>어쩌면 자기 감정을 드러나게 두어 왕의 질문을 유도했을 수도 있다.</strong> 지금이 그 순간이고, 그르치면 다음은 없다. 나아가 그는 <strong>정책 번복</strong>을 청하려 하는데 예루살렘에 대한 결정은 공식적이었다. 조서에 변경의 퇴로가 있었으나(스 4:21) 이토록 빠른 태도 전환은 누구에게든 큰 요구이며, <strong>"왕의 진노는 죽음의 사자"</strong>(잠 16:14)다.</li>
+      <li><span class="c t">T</span> 두려움은 때가 왔다는 불확실성, 특히 청이 <strong>제국 정책의 변경을 요구</strong>한다는 데서 나온다. 파괴가 최근 사건(스 4:7–23)이라면 느헤미야는 <strong>자기 주군이 그 파괴의 책임자임을 즉시 알아차렸을 것</strong>이다. 바벨론이 한 일이었다면 아무 용기도 필요 없었다 — 바벨론은 이미 패망했다. 13년도 안 된 시도가 재앙으로 끝났고 그 제재를 내린 이가 눈앞의 왕이다. <strong>T가 이 단락에 "느헤미야의 용기"라는 표제를 붙이는 이유다.</strong></li>
+      <li><span class="c h">H</span> 왕의 예리한 말이 마음의 문제를 털어놓게 강제했다. 넉 달을 알고 있었으나 여전히 확신이 없었다. <strong>"왕에게 나아가는 것은 어느 때나 위험할 수 있었다. 에스더 왕후가 너무나 잘 알았듯이(에 4:11)."</strong> 페르세폴리스 보고(寶庫) 부조는 왕 앞에 나아가는 이들이 자기 숨으로 왕을 더럽히지 않으려 손으로 입을 가린 모습을 새겼다. 게다가 아닥사스다 1세는 몇 해 전 예루살렘 복구를 중지시킨 바로 그 왕이므로 이전 조서의 번복을 구하는 것이었다(스 4:21). <strong>에스더가 그랬듯, 느헤미야 자신의 안전과 백성의 안전이 함께 걸려 있었다.</strong></li>
+    </ul>
+  </div>
+
+  <div class="vs" id="v3">
+    <span class="ref">2:3 — 예루살렘을 말하지 않는 화법</span>
+    <p><strong>"왕은 만세수를 하옵소서."</strong> 궁정 정형구. <span class="c k">K</span>의 표현: <strong>"기억된 장면이 이 친밀하고 빠른 서사 안에서 살아 있다. 우리는 느헤미야와 함께 숨을 죽인 채, 그가 기도를 내쉬고 대답할 채비를 하는 순간에 참여한다."</strong> 청원자는 예법이 요구하는 약간의 장황함으로, 왕은 결정하는 자 특유의 간결함으로 말한다.</p>
+    <p><strong>"내 조상들의 묘실이 있는 성읍."</strong></p>
+    <ul>
+      <li><span class="c f">F</span> 이 언급은 이중의 임무를 수행한다. 느헤미야에게 이 상태는 받아들일 수 없는 것이자 백성의 수치이고, <strong>페르시아 왕에게 방벽 없는 도시는 쓸모가 없다.</strong> 대화 어디에도 "예루살렘"이 없다는 사실을 일부는 외교의 걸작으로 본다(그 이름이 스 4:8–23의 조사를 상기시킬 수 있으므로). <strong>F의 균형 잡힌 반문: 왕이 몰랐겠는가?</strong> 알지 못하는 나라의 알지 못하는 도시로 술 관원을 보낸다는 것은 이상하다. 협상 초입에서 이름을 말하지 않는 것이 편의였을 뿐이다.</li>
+      <li><span class="c k">K</span> Myers의 지적(대화 전체에 예루살렘이 없음)에 절제를 권한다. 8절에서 명백히 함의된다. <strong>"그러나 확실히 느헤미야는, 에스더가 그랬듯, 이 문제를 정치 사안이 아니라 개인적 타격의 소식으로 먼저 제시하는 지혜를 지녔다."</strong> 도시가 예루살렘임이 드러난 시점이 언제든, 그때는 이미 왕의 동정이 확보된 뒤였다(4절).</li>
+      <li><span class="c h">H</span> <strong>왕이 체면을 지킬 수 있게 하는 화법.</strong> 그가 예루살렘의 공사를 중지시킨 것은 사실이나, 술 관원의 조상에 대한 개인적 의무는 문제를 다른 평면에 놓는다.</li>
+      <li><span class="c t">T</span> 외교로 보든 개인적 비극으로의 제시로 보든, 아닥사스다가 예루살렘이 목적지임을 알았으리라는 점은 분명하다.</li>
+    </ul>
+    <div class="note">
+      <div class="tt">조상의 묘 — 페르시아 왕에게 통했는가</div>
+      <p><span class="c f">F</span>의 배경 연구. 페르시아인들이 죽은 자를 매장하지 않고 들짐승에게 노출했다는 증거가 있고, 죽은 자의 영혼을 위한 정교한 의례와 특별한 절기까지 있었다. <strong>다만 그 방식은 균일하지 않았고, 아케메네스 왕들은 노출장이 아니라 매장되었다는 증거가 있다.</strong> 유대인은 조상의 묘를 높이 공경했다. 아케메네스 왕으로서 아닥사스다도 같은 공경을 지녔을 수 있고, <strong>그렇다면 느헤미야의 말은 중요한 지점을 파고든 것이다.</strong> <span class="c h">H</span>의 보완: 고대 세계에서 죽은 자는 종종 숭배받았고 제대로 매장하지 않는 자에게 해를 끼친다고 여겨졌다. 느헤미야는 <strong>왕이 이 사회적 규범을 인지하고 있으리라는 것에 걸었다.</strong></p>
+    </div>
+  </div>
+
+  <div class="vs" id="v4">
+    <span class="ref">2:4 — 화살 기도</span>
+    <p><strong>"내가 곧 하늘의 하나님께 묵도하고."</strong></p>
+    <ul>
+      <li><span class="c t">T</span> 둘째 교환이 전환점이다. 아닥사스다가 여전히 질문으로 상황을 통제하지만, 느헤미야의 반응이 <strong>독자에게 제3의 인물의 임재를 상기시킨다. 그분은 서사 내내 무대 뒤에 계실 것이다.</strong> T의 설교적 제안: 1:4–11a의 긴 기도와 위기의 순간의 짧은 청원을 대조하라. 둘 다 하나님께 가까움과 신적 지원에 의존함에서 나오며 둘 다 신자의 삶에서 역할을 가진다. <strong>요한복음 17장의 긴 대제사장 기도가 십자가 위의 짧은 부르짖음이나 겟세마네의 기도와 이루는 비교·대조와 같다.</strong> "삶의 모든 국면에서 힘의 근원으로 하나님께 돌이키는 것이 느헤미야의 가장 매력적인 자질 가운데 하나다."</li>
+      <li><span class="c h">H</span> 빠르고 절박한 기도 뒤에 청원으로 뛰어든다. 지난 넉 달의 기도가 용기를 주었음이 분명하다. <strong>H는 여기서 K를 직접 인용한다:</strong> 느헤미야는 "충분히 오래 기도했고… 그 작업을 세부까지, 심지어 성벽에 쓸 건축 기법까지 그려 볼 만큼 믿음이 있었다." 회고록 전체의 기도 목록(4:4, 9; 5:19; 6:9, 14; 13:14)이 이 인물의 특징을 확정한다.</li>
+      <li><span class="c f">F</span> 청을 바르게 제출해 왕에게 받아들여지도록 기도했다. 그의 헌신과 경건을 다시 보여 준다. <strong>그는 자기가 내딛는 모든 걸음에서 주님이 길을 인도하신다고 온전히 확신했다. 강대한 페르시아 왕도 하나님의 뜻에 종속되어 있었다.</strong></li>
+    </ul>
+  </div>
+
+  <div class="vs" id="v5">
+    <span class="ref">2:5 — 청원의 어법</span>
+    <p><strong>"종이 왕의 목전에서 은혜를 얻었사오면."</strong> <span class="c h">H</span>의 직역: <strong>"만일 당신의 종이 당신 앞에서 좋으면(<span class="hw">יִיטַב</span>, 이타브)."</strong> 느헤미야는 자기 제안을 자기 자신의 평판 위에 세우고, 왕에게 그 둘 모두에 대한 호의적 평가를 구한다. 이타브가 토브 어근이므로 이 절도 2장의 토브/라 망에 들어간다.</p>
+    <p><strong>"나를 유다 땅… 성읍에 보내어."</strong> <span class="c f">F</span>: 예루살렘이 다시 명시되지 않고 "유다"가 쓰인다. <strong>왕이 자기 속주를 그토록 몰라서 예루살렘이 유다의 가장 중요한 도시임을 몰랐겠는가? 그럴 법하지 않다. 이름을 피한 것은 예루살렘에 지나친 주의를 끌지 않으려는 의도였을 수 있다.</strong></p>
+  </div>
+
+  <div class="vs" id="v6">
+    <span class="ref">2:6 — 왕후, 그리고 기한</span>
+    <p><strong><span class="hw">שֵׁגַל</span>(셰갈, 왕후).</strong> <span class="c f">F</span>의 용례: 히브리어에서 여기와 <strong>시편 45:9</strong>(개역 10절)에만 왕후를 뜻하고, 성경 아람어(<strong>단 5:2–3, 23</strong>)에서는 후궁을 가리킨다. <span class="c h">H</span>의 어원: <strong>아카드어 ša ekalli("궁전의 여인")에서 왔고, 왕이 총애하는 아내를 가리킬 개연성이 크다</strong>(HALOT, Steinmann). 크테시아스 전승(FGH 3C, frags. 15, 47)이 아닥사스다 1세의 아내를 <strong>다마스피아</strong>로 밝힌다. 아케메네스 궁정은 영향력 있는 왕실 여성들로 유명했다 — 예컨대 아메스트리스, <strong>아닥사스다의 잔인한 모후</strong> <span class="c h">H</span>.</p>
+    <p><strong>왕후 언급의 이유.</strong> <span class="c f">F</span> 세 갈래: ① 증인의 임석 표시 ② 느헤미야가 왕후의 호의를 얻고 있었다는 표시 ③ 1–5절은 연회, 6절은 왕과 왕후가 함께한 사적 자리에서 최종 답이 주어졌다는 표시. <span class="c k">K</span>도 같은 방향: <strong>왕후 언급은 사적 자리였음을 가리킬 수 있다. 왕후가 공식 연회에 나오는 것은 관례가 아니었던 듯하기 때문이다.</strong> 왕의 결정이 왕후의 영향을 입었음을 시사할 수도 있다. K의 총평: <strong>"이 면담 전체는 느헤미야의 인격적 자질이 그에게 말할 권리를 얻어 주었고 모든 정치적 장애를 넘어 그의 요점을 관철시켰다는 인상을 준다."</strong></p>
+    <p><strong>"내가 기한을 정하고 아뢰매."</strong> <span class="c f">F</span>: 왕은 술 관원을 아꼈고 영원히 잃고 싶지 않아 정해진 기간만 보내려 했다. <strong>기한을 자기가 정하지 않고 느헤미야에게 맡겼다.</strong> 두 질문("몇 날에 다녀올 것이며 어느 때에 돌아오겠느냐")을 느헤미야는 긍정으로 해석했다. <strong>이 질문을 던짐으로써 왕은 암묵적으로 청을 허락한 것이다.</strong> <span class="c h">H</span>: <strong>"왕의 반응은 놀랍다. 처음에 '나쁜' 외모를 지적했던(2절) 왕이 이제 제안된 여정을 '좋게'(왕 앞에 좋았다) 여긴다. 사명에 관해 아무 질문도 없고 오직 언제 돌아올지만 알고 싶어 한다! 하나님의 은혜가 나쁜 상황을 좋은 것으로 바꾸었고, 느헤미야의 안도가 손에 잡힌다."</strong></p>
+    <div class="caveat">
+      <div class="tt">쟁점 — 기한은 얼마였는가 (총독 임명 시점 문제)</div>
+      <p><span class="c f">F</span>는 기한이 여기 제시되지 않았고 5:14에 12년이 언급된다고 정리하며, <strong>파견 당시 이미 총독으로 임명되었다</strong>고 본다("그때 그는 이미 유다 총독으로 임명되어 있었다", 2:9 주석). <span class="c h">H</span>도 같은 정리(1차 임기 12년 → 귀환 → 13:6의 2차 여정). <span class="c k">K</span>는 반대다. <strong>"정한 기간이 5:14과 13:6의 12년이었을 리는 거의 없다. 그해 안에 성벽 봉헌 뒤 복명하고, 그다음에 총독 임명이 갱신되었을 개연성이 더 크다."</strong> 총독 임명이 파견 시점인가 완공 후 갱신인가의 문제와 직결된다.</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v78">
+    <span class="ref">2:7–8 — 두 통의 공문</span>
+    <p><strong>공문 1: 강 서쪽 총독들에게.</strong> <span class="c f">F</span>: 느헤미야는 에스라와 다른, <strong>정치적 사명</strong>을 띠고 여행했다. 도중의 페르시아 관리들에게서 적대를 예상할 수 있었으므로 안전 통행 서신을 원했다. <span class="hw">פֶּחָה</span>(페하, 총독)의 복수형은 사트랍이나 작은 속주 총독 양쪽을 가리킬 수 있다. F의 결정적 관찰: <strong>"사마리아의 총독이 그가 여정에서 마주칠 이들 중 하나였음을 유념해야 한다. 페르시아 왕의 허가 없이 산발랏은 결코 그를 통과시키지 않았을 것이다."</strong></p>
+    <p><strong>공문 2: 아삽에게.</strong> <span class="hw">פַּרְדֵּס</span>(파르데스, 삼림/공원/동산)는 페르시아어 파리다이다에서 온 차용어다 <span class="c f">F</span>. <span class="c h">H</span>의 후일담: <strong>그리스어 παράδεισος(파라데이소스)로 음역되었고(눅 23:43; 고후 12:4; 계 2:7), 후에 영어 "paradise"가 된다</strong>(<span class="c b">B</span>도 동일 관찰).</p>
+    <div class="caveat">
+      <div class="tt">쟁점 — 왕의 삼림은 어디인가</div>
+      <p><span class="c f">F</span> <strong>레바논 설.</strong> 다리오 때 성전 건축을 위해 레바논에서 목재가 공급되었다(스 3:7). 아삽이 유대 이름이라는 사실이 그가 유다에 살았음을 뜻하지는 않는다. <span class="c h">H</span> 양론 병기. 레바논 백향목 왕실 영지일 수 있으나(다리오 1세가 수산 궁전에 사용, 안티고노스의 벌목 일화), <strong>대안으로 토착 참나무·포플러·테레빈일 수 있다. 백향목은 대개 성문과 성벽에 쓰이지 않기 때문이다.</strong> 이 견해에서는 예루살렘 남쪽 6마일 <strong>에담의 솔로몬 동산</strong>일 수 있고, 이것이 관리자의 히브리 이름 아삽도 설명한다.</p>
+    </div>
+    <p><strong>세 가지 용처</strong> <span class="c f">F</span>: 성전 옆 영문의 문, 성곽, 자기가 들어갈 집.</p>
+    <ul>
+      <li><strong>"성전에 속한 영문의 문."</strong> <span class="c f">F</span>: 구절이 명료하지 않다. 성전을 보호하는 특별 요새인가, 도시와 성전을 함께 보호한 요새인가. 일부는 성전 북쪽 요새로 보며 <strong>3:1의 하나넬 망대일 수 있다.</strong> 느헤미야는 즉시 복구해야 할 것의 예를 왕에게 제시한 셈이다. <span class="c h">H</span>의 계보: <strong>북쪽 접근로를 지키는 요새였을 개연성이 크고, 후대 자료들이 이를 증언한다(아리스테아스의 편지 100–104; 마카베오상 13:52; 요세푸스 『유대고대사』 15.403). 주전 1세기 헤롯이 그 자리에 안토니아 요새를 지었고, 훗날 바울이 거기서 체포되어 심문받았다(행 21:34, 37; 22:24; 23:10, 16, 32).</strong></li>
+      <li><strong>"성곽."</strong> <span class="c f">F</span>: 성벽에 목재라니 이상해 보일 수 있으나, <strong>고대 근동에서 성벽에 목재가 광범위하게 쓰였음을 건축가 Rudolf Naumann이 히타이트 건물 연구로 보였고 팔레스타인에서도 같은 현상이 나타난다.</strong></li>
+      <li><strong>"내가 들어가 거할 집."</strong> <span class="c f">F</span>: 직역 "내가 들어갈 집". <strong>이미 어떤 집을 염두에 두고 있었고 아마 하나니가 제안했을 것이다.</strong> <span class="c h">H</span>는 예후드 총독 관저로 본다. 본문 문제: 마소라 "그 집을 위하여"(라바이트)는 <strong>"하나님의 집"의 통용 축약형</strong>이고 칠십인역은 "그 문들"로 읽는다 <span class="c h">H</span>.</li>
+    </ul>
+    <div class="note">
+      <div class="tt">"내 하나님의 선한 손이 나를 도우시므로 왕이 허락하고" — 단락의 신학</div>
+      <p><span class="c t">T</span>: <strong>"이 마무리 행들은 사업을 성공적 완수로 이끌 인간적 힘과 신적 힘 사이의 균형을 시사한다는 점에서 중요하다. 아닥사스다가 모든 청을 허락했다고 분명히 진술되고, 느헤미야는 오랜 시간을 세심한 준비와 기도에 바쳤다. 그럼에도 청이 허락된 이유는 왕의 호의도 신실한 준비도 아니다."</strong> 에스라의 사명을 상기시키는 어구(스 7:6, 9, 28; 8:18, 22, 31)로 성공을 <strong>하나님의 은혜로운 능력</strong>에 돌린다. <span class="c k">K</span>: <strong>"결정적 요인은, 그가 인정했듯, 그의 믿음이 아니라 그 믿음의 대상이었다."</strong> 7–8절의 구체성에서 두 주석이 넉 달의 성격을 읽는다. K: "이 청원들의 현실성과 대담성에 우리가 감명받는다면 왕도 그랬다. 이 시점의 막연함은 이 기획을 한낱 꿈이나 충동으로 드러냈을 것이다." T: "지난 넉 달이 기도만이 아니라 세심한 계획에도 쓰였음을 시사한다."</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">רָעָה גְדוֹלָה</div>
+    <div class="eyebrow">2:9–10</div>
+    <h2>2. 여정과 대적의 등장</h2>
+    <div class="gloss">라아 게돌라, "큰 악" — 동심원의 중심</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:9 — 호송대</span>
+    <p><span class="c f">F</span>: 왕의 허락과 출발 사이에 얼마가 흘렀는지 분명하지 않다. <strong>요세푸스(『유대고대사』 xi.5)는 5년의 간격을 말하나 개연성이 낮다.</strong> 그토록 절박하게 청한 사람이 그렇게 오래 기다렸으리라고 상상하기 어렵다. 소개장이 총독들에게 전달되었고 아무 문제도 없었다.</p>
+    <p><strong>"왕이 또 군대 장관과 마병을 보내어 나와 함께 하게 하시기로."</strong></p>
+    <ul>
+      <li><span class="c f">F</span> 아닥사스다가 자기 술 관원의 안전한 여정을 염려했으리라 추정할 수 있다. <strong>그는 이미 유다 총독으로 임명된 상태였다.</strong> 페르시아 제국의 불안정한 지역에서 총독으로서 그의 정치적 역할은 중요했다.</li>
+      <li><span class="c k">K</span> <strong>"군사 호송대에서 얻을 것은 보호 이상이었다. 그것은 품격 있는 도착을 뜻했고, 이웃 총독들에게 신임장을 제시하는 일을 인상 깊게 강화했으며, 왕실 정책의 변경을 매우 분명히 했다. 이것이 느헤미야의 대적들이 무력 대신 허세에 의존한 이유를 설명하는 데 도움이 될 수 있다."</strong> 에스라의 호송 거부(스 8:21–23)와의 대조는 K가 별도로 다루며, 로마서 14:6의 논리로 둘 다 믿음의 태도였다고 판정한다.</li>
+      <li><span class="c t">T</span> Kidner의 주장이 옳을 수 있다고 <strong>명시적으로 동의하며 인용한다</strong>(p. 81). T가 덧붙이는 것은 여정 서술의 <strong>간결함</strong>이다. 관련된 것은 왕의 소개장 제시와 느헤미야가 에스라와 달리 군사 호송을 받아들였다는 언급뿐이다.</li>
+      <li><span class="c h">H</span> 그는 군사 호송을 <strong>요청하지 않았으나</strong>, 고위 페르시아 관리가 무장 호송과 함께 여행하는 것이 표준 절차였던 듯하다. <strong>이 경우 왕이 그런 호송을 보낸 것은 앞길의 반대를 억지하는 섭리였다.</strong> 여정의 세부가 없으므로 아마 무사히 도착했을 것이다.</li>
+      <li><span class="c b">B</span> 속주 총독에게 걸맞게, 느헤미야는 자기 부대와 함께 예루살렘으로 보내진다.</li>
+    </ul>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:10 — 동심원의 중심</span>
+    <h4>산발랏</h4>
+    <p><span class="c f">F</span>: 사마리아 총독이며 엘레판티네 파피루스가 그의 이름과 두 아들의 이름을 언급해 이를 뒷받침한다. <strong>이 편지가 쓰인 주전 408년에 그는 노인이었을 것이다.</strong> 와디 달리예 파피루스 발견으로 사마리아 총독 계보가 명료해졌다 — 산발랏 1세, 들라야, 산발랏 2세, 하나냐, 산발랏 3세. <strong>여기서는 산발랏 1세다.</strong> 아들들의 이름이 야후 신명 요소로 지어졌다는 사실은 <strong>그가 주를 섬겼음을 보여 주되, 순수 유대교에 받아들여질 수 없는 종류의 종교였다.</strong></p>
+    <p><strong>"호론 사람."</strong> <span class="c f">F</span>: 호론 요소가 든 성읍 중 하나에서 왔다는 뜻일 수 있으나 불확실하다. <span class="c h">H</span>가 선택지를 넓힌다. ① 예루살렘 북서쪽 벧호론 성읍들 ② 모압의 호로나임(<strong>사 15:5</strong>) ③ 갈릴리 바다 동쪽 하우란(<strong>겔 47:16, 18</strong>) ④ <strong>혼합주의를 가리킬 수도 있다(야훼와 가나안 신 호론을 함께 섬김).</strong> H의 결정적 자료: <strong>산발랏의 아카드어 이름 신-우발리트(Sin-uballit)는 "[바벨론 신] 신이 생명을 주셨다"라는 뜻이다.</strong> 아들들은 야훼계 이름, 본인은 바벨론 신명 이름이다.</p>
+
+    <h4>도비야 — "암몬 사람 종"</h4>
+    <ul>
+      <li><span class="c f">F</span> "종"은 문자적이나 문제적이며, 여기서는 페르시아 제국 내 그의 지위, 곧 <strong>관리</strong>를 가리킨다. "암몬 사람"은 암몬인들 가운데서의 역할일 수도, 혈통일 수도 있다. <strong>F는 Rudolph의 주장(도비야가 사마리아 관리였고 암몬 사람은 혈통이며, 10절의 인물들이 느헤미야가 지난 영토의 총독들이라는 설)을 받아들일 수 없다고 판정한다.</strong> 이 절은 두 사람이 총독이었다고 말하지 않고 그들이 <em>들었다</em>고만 말한다. <strong>F의 재구성: 느헤미야는 사마리아 속주를 지나며 산발랏에게 소개장을 주었고, 산발랏에게서 소식이 도비야에게 흘러 짧은 시간에 사명의 목적이 알려졌다.</strong></li>
+      <li><span class="c k">K</span> "그 종" 또는 "노예"(NEB)가 <strong>직함 "왕의 종"의 경멸적 축약</strong>이었음은 의심의 여지가 거의 없고, <strong>"암몬 사람"은 혈통이 아니라 그가 높은 관직을 얻은 선택된 활동 영역을 서술했다.</strong></li>
+      <li><span class="c h">H</span> 왕의 종(<span class="hw">עֶבֶד</span>, 에베드)이며 <strong>암몬 영토에 권위를 지닌 관리</strong>였다. 토비아드 가문은 주전 259년 프톨레마이오스 2세 때까지도 암몬에서 상당한 권력을 휘둘렀다. <strong>H의 핵심 관찰: 이런 암몬 연고에도 불구하고 도비야는 예루살렘 공동체 및 그들의 하나님 야훼와 강한 가족적 유대를 지녔다.</strong> <strong>도비야는 "야훼는 선하시다"는 뜻의 히브리 이름</strong>이고, 아들 여호하난은 "야훼는 은혜로우시다"는 뜻이다. 도비야는 스가냐의 딸과, 아들 여호하난은 므술람(베레갸의 아들)의 딸과 혼인했다(6:18).</li>
+      <li><span class="c t">T</span> 보통 암몬의 페르시아 총독으로 여겨진다. 같은 이름의 강력한 모압 가문과 연결하려는 시도가 여러 번 있었으나, <strong>이 흔한 이름(역시 야훼의 합성)이 산발랏에게 어떤 식으로든 종속된 사마리아 관리를 가리킬 개연성이 더 크다.</strong></li>
+      <li><span class="c b">B</span> 암몬 속주의 총독이다. "노예"는 모든 총독처럼 왕의 종이었음을 뜻할 수 있으나 <strong>여기서는 경멸적 의미도 가질 수 있다.</strong> 13:4에서 대제사장 엘리아십과 연결된다.</li>
+    </ul>
+
+    <h4>"심히 근심하더라"</h4>
+    <p><span class="c h">H</span>의 직역: <strong><span class="hw">וַיֵּרַע לָהֶם רָעָה גְדוֹלָה</span></strong>(바예라 라헴 라아 게돌라), <strong>"그들에게 큰 악으로 악하게 되었다."</strong> T의 토브/라 분석의 정점이며, H의 아이러니가 여기 붙는다. <strong>"도비야의 관점은 그의 이름 '야훼는 선하시다'의 뜻과 결연한 대조를 이룬다."</strong></p>
+
+    <div class="note">
+      <div class="tt">동기 분석</div>
+      <p><span class="c f">F</span>: 성전 건축 이래 균열이 넓어졌고, 아닥사스다 치세 초에 그들의 고발이 관철되었다. <strong>"이제 한 유대인이 도착했다. 유다 총독으로 임명되어, 도시의 방어시설을 재건할 명백한 허가를 들고. 그들에게 그것은 중대한 재난이었다."</strong></p>
+      <p><span class="c h">H</span>가 이 반대의 비논리를 짚는다. <strong>"이 경우 반대는 오히려 비논리적이었다. 결국 속주 전체가 왕의 자원으로 성채가 재건되면 이득을 볼 처지였다. 산발랏과 도비야는 느헤미야의 권위로 자기들의 권력이 위협받는다고 느꼈던 듯하다."</strong> H의 가설 하나: <strong>이 토비아드 가문이 계보 증명이 없어 포로 귀환 공동체에서 배제된 도비야(스 2:60)의 후손이고 여전히 앙금을 품고 있었을 수 있다.</strong> 신학적 관찰: "하나님이 은혜를 베푸실 때, 가까운 데서도 반대를 예상할 수 있다는 것 또한 사실이다."</p>
+      <p><span class="c b">B</span>가 이 갈등을 제국사의 일반 현상으로 넓힌다. <strong>"왕실 관리들 사이의 경쟁은 오래되고 무수하다."</strong> 주전 14세기 아마르나 문서고의 편지들, 곧 팔레스타인 도시 시장들이 파라오에게 보낸 공문들은 대부분 <strong>동료 시장들의 반역 행위를 고발하고 자신에게 제기된 같은 고발을 부인하는 내용</strong>이다. B의 정식: <strong>"느헤미야는 아마르나 서신의 저자들보다 한참 뒤에 왔고 이집트 대신 페르시아를 위해 일했지만, 제국 중간관리층의 끊임없는 상호 비방이라는 역학은 거의 달라지지 않았다."</strong></p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">שׂבר</div>
+    <div class="eyebrow">2:11–16</div>
+    <h2>3. 밤 답사</h2>
+    <div class="gloss">사바르, "살피다" — 구약에 두 번뿐인 칼형 동사</div>
+  </div>
+
+  <div class="note">
+    <div class="tt">구조 <span class="c t">T</span></div>
+    <p><strong>A</strong> "내가 아무에게도 말하지 아니하고" (11–12) — <strong>B</strong> "골짜기 문으로 나가서" (13a) — <strong>X 성벽을 살펴본즉</strong> (13b–15a) — <strong>B′</strong> "골짜기 문으로 들어와서" (15b) — <strong>A′</strong> "내가 아직 유다 사람들에게 알리지 아니하였으므로" (16)</p>
+    <p>바깥 요소들은 "말하지 않음"과 "행하다"를 공유하고, 안쪽 요소들은 골짜기 문을 나가고 들어오는 여정의 시작과 끝이다. <strong>중심에는 느헤미야의 주된 활동인 "성벽을 살펴봄"이 이중으로 언급되며(13b, 15a), 그 사이에 네 파괴 보고 중 셋째가 놓인다.</strong></p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:11 — 사흘</span>
+    <p><span class="c f">F</span>: <strong>휴식과 예루살렘 상황에 관한 정보 획득의 사흘</strong>이다(스 8:15, 32의 논의 참조). <span class="c b">B</span>도 같은 병행을 확인한다. 에스라의 예루살렘 여정에서처럼(스 8:32) 느헤미야도 도착 후 사흘을 쉰다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:12 — 비밀, 그리고 "내 하나님이 내 마음에 주사"</span>
+    <p>이 절이 이 책의 섭리 어휘 목록(<span class="c k">K</span>의 "조용히 시작되는 결정")에 속한다.</p>
+    <p><strong>비밀 유지의 이유 — 다섯 해석</strong></p>
+    <ul>
+      <li><span class="c f">F</span> 하나님의 인도로 계획을 이미 세웠으나, 상황을 점검해 실행 가능한지 볼 때까지 생각을 자기 안에 두고자 했다. <strong>"특히 자기 백성 중 일부가 이웃 나라들과 접촉을 갖고 있었기 때문이다. 그들이 그의 계획을 알았다면 비밀을 팔 수 있었다."</strong> F의 인물 평가: <strong>"느헤미야는 자기 백성과 자기 원수를 아는 영리하고 유능한 사람이었다."</strong></li>
+      <li><span class="c k">K</span> <strong>"느헤미야는 언제나처럼 분별과 경건과 세부에 대한 주의의 본이다. 그 모든 속도와 추진력에도 그는 행동으로 돌진하지 않고(11) 말로 돌진하지도 않는다(12)."</strong> 그는 신참이 이 과업을 알 리 없다는 뻔한 반론을 예상하고 철저히 스스로를 브리핑한 뒤 패를 보일 순간을 고른다(16). <strong>계획을 대적에게 감춘 것만이 아니라, 설득하고 일으켜야 할 지도자들에 대한 주도권도 지켰다.</strong> K의 신학적 마무리: <strong>"그의 건전한 전술 위에, 그리고 그것을 넘어, 이 기획이 근본적으로 그의 것이 아니라는 확신이 있었다. 그것은 하나님에게서 왔고 '예루살렘을 위한' 것이었지(12), 느헤미야에게서 온 것도 그의 위신을 위한 것도 아니었다."</strong></li>
+      <li><span class="c t">T</span> 두 가지. ① <strong>실무적 고려</strong> — 명민하고 실제적인 행정가로서 그는 상황의 정확한 성격을 알기 전에 지역 당국을 끌어들이는 어리석음을 알았다. 성급히 짜인 계획은 이미 연기가 오르는 이웃들의 적의를 자극하고 주민의 승인을 얻을 가망이 거의 없었다. <strong>명확하고 확정된 제안을 제시할 수 있어야 할 뿐 아니라, 상황의 복잡성을 이해했음을 그들에게 확신시켜야 했다.</strong> ② <strong>동기의 문제</strong> — "우리 모두는 들어서 아는 비극보다 직접 보거나 겪은 비극에 더 움직이는 경향을 공유한다." 느헤미야는 첫 보고를 듣고 "여러 날 슬퍼했다"(1:4). <strong>무너진 성벽을 자기 눈으로 본 충격이 어땠을지는 상상만 할 수 있다. 그런데 본문은 이 점에 완전히 침묵한다. 여기에도 회고록 나머지 어디에도 슬픔, 울음, 금식, 애가, 절망의 언급이 없다.</strong> 우리가 보는 것은 17–20절에서 시작되는 결단력 있는 행동이다.</li>
+      <li><span class="c h">H</span> 상황을 온전히 평가하고 몇몇 가까운 친구들과 계획을 확정할 때까지 비밀에 부치는 지혜를 발휘했다. <strong>지역 주민을 미리 자극할 이유가 없었다. 하나님이 귀한 착상을 주셨으나 이 초기 단계에 그는 누구를 신뢰할 수 있을지 아마 몰랐을 것이다(스 4:12 참조).</strong></li>
+      <li><span class="c b">B</span> <strong>가장 다른 각도다.</strong> "느헤미야의 비밀 유지는 기이하다. 정식으로 임명된 총독으로서 왕실 위임을 받았으므로 도착하자마자 자기 의도를 그냥 선포할 수 있었다." B의 추론: <strong>함의는 예루살렘의 종교·정치 당국이 재건 노력에 반대하리라는 것이다.</strong> 그리고 B만의 관찰: <strong>"느헤미야가 예루살렘을 걸어서 도는 일의 상징성을 간과해서는 안 된다. 그것은 총독으로서 도시를 취하는 것을 표시한다. 비슷한 사건이 창세기 13:17에 나온다. 거기서 하나님은 아브라함에게 '일어나 그 땅을 종과 횡으로 두루 다녀 보라 내가 그것을 네게 주리라'고 명하신다."</strong> 밤 답사를 <strong>취득 의례</strong>로 읽는 독법이다.</li>
+    </ul>
+    <p><strong>짐승.</strong> <span class="c f">F</span>: 그의 짐승(<span class="hw">בְּהֵמָה</span>, 베헤마)은 나귀나 말이었을 수 있으나 <strong>아마 나귀였을 것이다. 밤에 콧김을 뿜는 말은 주의를 끌 수 있었기 때문이다.</strong> 함께한 사람들은 도시를 잘 알아 길을 안내할 수 있는 예루살렘 주민이었을 수 있다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:13–15 — 지형과 어휘</span>
+    <p><strong>동선.</strong> 골짜기 문 → 용정 → 분문 → 샘문 → 왕의 못 → (짐승이 지날 곳 없음) → 시내를 따라 올라가며 성벽을 살핌 → 골짜기 문으로 귀환. <strong>반시계 방향</strong>이며 3장의 건축 명단 동선과 같다 <span class="c t">T</span> <span class="c k">K</span> <span class="c b">B</span>.</p>
+
+    <h4><span class="hw">שׂבר</span>(사바르, 살피다) — 어휘 연구</h4>
+    <ul>
+      <li><span class="c f">F</span> 칼형으로는 구약에서 <strong>13절과 15절에만</strong> 나온다. 피엘형에서는 "바라다, 기대하다"의 뜻이다. 일부 고대 역본이 칼형 사바르를 "조사하다"로 옮겼고 문맥상 잘 통한다. <strong>"그 뜻은 결코 확실하지 않다."</strong></li>
+      <li><span class="c h">H</span> HALOT("시험하다, 조사하다, 살피다")를 따른다. 본문비평 각주가 중요하다. <strong>라쉬는 덜 흔한 신(<span class="hw">שֺ</span>)이 아니라 쉰(<span class="hw">שׁ</span>)으로 모음을 찍어 "부수는"으로 읽고, 칠십인역도 συντρίβων(쉰트리본, 부수는)으로 읽는다. 이 독법에서는 느헤미야와 그의 사람들이 재건 사업에 도시 주민이 동의하게 하려고 의도적으로 성벽을 더 무너뜨린 것이 된다.</strong> 전통적 모음을 따르는 이븐 에스라는 "숙고하는"을 선호하며, 이것이 H가 택한 뜻에 가깝다.</li>
+    </ul>
+    <p><strong>본문 상태.</strong> 13절의 "무너진"에 대해 케레(<span class="hw">אֲשֶׁר־הֵם פְּרוּצִים</span>)와 케티브(<span class="hw">אֲשֶׁר־הַמְפוֹרָצִים</span>) 모두 문법적으로 어색하나 뜻은 분명하다 <span class="c h">H</span>.</p>
+
+    <h4>지명</h4>
+    <table>
+      <tr><th style="width:20%">지명</th><th>주석의 판정</th></tr>
+      <tr><td class="head"><span class="hw">עֵין הַתַּנִּין</span><br>엔 한탄닌<br>(용정/시랑의 우물)</td><td><span class="c f">F</span> "용의 우물"로도 옮길 수 있다(히브리어가 양쪽을 뜻함). <strong>위치는 논쟁 중이다. 일반적으로 엔로겔과 동일시되나 최근 Braslavi가 실로암을 설득력 있게 주장했다.</strong> <span class="c h">H</span> <strong>실로암 못으로 동일시될 수 있으며, 히스기야가 못과 기혼 샘을 연결하려 판 터널의 뱀 같은 형태에서 이름을 얻었을 수 있다(왕하 20:20).</strong></td></tr>
+      <tr><td class="head">분문<br>(Dung Gate)</td><td><span class="c h">H</span> <strong>힌놈 골짜기(히브리어 게힌놈)의 쓰레기 더미로 이어졌고, 그곳에서 포로기 이전에 아이 희생 제사가 시행되었다(왕하 23:10; 렘 7:31–32; 32:35).</strong> <span class="c k">K</span> 골짜기 문(대하 26:9에도 언급)과 분문은 3:13에 따르면 약 500야드 떨어져 있고, 분문이 도시의 남쪽 또는 남동쪽 끝에서 힌놈 골짜기(게헨나)로 이어졌음은 상당히 확실하다. <strong>예레미야 19:2의 질그릇 조각 문(곧 쓰레기 문)의 다른 이름이었을 수 있다.</strong></td></tr>
+      <tr><td class="head">샘문</td><td><span class="c k">K</span> 남동쪽 모퉁이 근처 <strong>엔로겔</strong>로 이어졌음이 분명하다. 동편 더 위쪽의 수문(3:26)이 또 다른 주요 샘 <strong>기혼</strong>으로 통했기 때문이다.</td></tr>
+      <tr><td class="head">왕의 못</td><td><span class="c k">K</span> 견해가 갈리나 3:15의 "왕의 동산 근처 셀라 못"이라는 언급이 Kenyon의 동일시(히스기야의 실로암 못, "동편 능선의 남쪽 끝에 놓인")를 뒷받침하는 듯하다. K의 어휘 관찰: <strong>이름 셀라(<span class="hw">שֶׁלַח</span>)는 실로암의 히브리어 대응 쉴로아흐(<span class="hw">שִׁילֹחַ</span>)와 밀접히 관련되며 "보내다"는 어근에서 왔다. 곧 도수관으로 물을 끌어들인다는 뜻이다.</strong></td></tr>
+    </table>
+
+    <div class="note">
+      <div class="tt">"짐승이 지나갈 곳이 없는지라" — 고고학과 만나는 절</div>
+      <p><span class="c f">F</span> 발굴은 느헤미야의 길을 막았을 수 있는 무너진 돌더미를 보여 주었다. <strong>"여기서 폐허가 더 심했던 것은 건물들이 골짜기 쪽으로 계단식으로 내려가며 지어져, 계단을 지탱하던 벽이 무너지자 모든 건물이 비탈로 굴러떨어져 총체적 황폐를 만들었기 때문이다."</strong> 고고학 증거는 나아가 <strong>느헤미야가 동쪽 비탈의 그 부분을 포기하고 언덕의 동쪽 마루 위에 성벽을 짓기로 결정했음을 드러낸다.</strong> F의 평가: <strong>"이것은 매우 시사적이며, 처음으로 느헤미야의 행동에 관해 어느 정도 확실성을 얻을 수 있다. 느헤미야 시대의 도시가 포로기 이전 도시보다 작았음을 받아들여야 한다."</strong></p>
+      <p><span class="c k">K</span> 장애물은 <strong>느부갓네살의 공격에서 나온 것이 분명한 거대한 잔해 더미</strong>였을 개연성이 크며, Kathleen Kenyon의 1961–63년 발굴에서 재발견되었다. <span class="c h">H</span> Kenyon의 설명: <strong>도시 동쪽 비탈에는 밀로라 불린 계단식 지형의 항구적 붕괴가 있었고 다윗과 솔로몬과 히스기야가 계속 보수했다(삼하 5:9; 왕상 9:15, 24; 대하 32:5).</strong> 군사적 이유와 자연적 이유 양쪽으로 잔해가 쌓여 통행이 어려웠다. <strong>느헤미야의 초기 답사 구역은 다윗성의 성벽뿐이고 위쪽 성전 구역은 아니었던 듯하다. 아마 성벽 북쪽은 완전히 파괴되었을 것이다.</strong></p>
+    </div>
+
+    <div class="caveat">
+      <div class="tt">쟁점 — 도시의 범위</div>
+      <p><span class="c h">H</span>가 학설을 정리한다. <strong>최대주의</strong>: 220에이커, 둘레 2.5마일로 남서쪽 언덕과 시온산 포함. <strong>최소주의(다수설)</strong>: 90에이커, 둘레 2마일 미만이며 시온산 미포함(페르시아 시대 정착이 발견되지 않음). <span class="c t">T</span>는 확정적 판정을 내린다. <strong>"도시가 서쪽 언덕을 포함하지 않았다는 한 가지는 이제 상당히 확실하며(Williamson, PEQ, pp. 81–88), 3장과 12장의 논의에서 전제될 것이다."</strong></p>
+      <p><strong>T의 방법론적 경고:</strong> "전형적인 강해는 13–15절의 역사적 가치를 예루살렘 지형 이해에 있다고 강조하지만, <strong>느헤미야 시대 도시로 추정된 수많은 도표와 상충하는 재현들을 비교해 보기만 해도 우리가 지금 가진 이 정보의 빈약함을 깨닫게 된다."</strong> T가 대신 제안하는 강해 방향이 위의 교차 구조다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:16 — 관리들, 귀족들, 나머지</span>
+    <p><span class="c f">F</span>의 어휘 정리:</p>
+    <ul>
+      <li><span class="hw">סְגָנִים</span>(세가님, 민장/관리): <strong>회중이 뽑은 대표들이었을 개연성이 크다.</strong> 임무에 관한 정보는 없다. <strong>느헤미야가 그들을 먼저 언급해 그 역할을 강조한 것은 그들이 매우 중요하게 여겨졌음을 보여 준다.</strong></li>
+      <li><span class="hw">חֹרִים</span>(호림, 귀족/유지): "귀족"으로도 옮길 수 있으나 엄밀한 의미의 귀족은 아니고 <strong>특정 권리를 가진 사람</strong>이다. "시민"이 더 정확할 것이다.</li>
+      <li>"그 외에 일하는 자들"(직역 "나머지에게"): 아무도 알지 못했다. 일부는 성벽을 재건할 노동자들을 가리킨다고 보나 <strong>히브리어에서 그것을 추론할 수 없다.</strong></li>
+    </ul>
+    <p><span class="c h">H</span>는 Blenkinsopp의 구분을 전한다. <strong>호림(귀족)은 세습 유대 귀족(렘 27:20; 39:6; 사 34:12)이고, 세가님(관리)은 "거의 예외 없이 속주 총독들과 연결되어 지방 행정을 시사한다(렘 51:23, 28, 57; 겔 23:6, 12, 23)."</strong> Blenkinsopp의 지적: <strong>두 계층 모두 에스라-느헤미야에서 좋지 않게 그려진다.</strong> 관리들은 이방 혼인 사태에 연루되었고(스 9:2), 그들과 귀족들은 성벽의 헌신적 노동자들을 착취하며(느 5:7) 종교 준수에 태만해 보이고(느 13:7, 11), 귀족 일부는 공동체의 원수들과 긴밀히 접촉한다(느 6:17).</p>
+    <p><span class="c h">H</span>의 리더십 분석: <strong>"느헤미야는 예루살렘에서 제국의 권위를 지휘했을 뿐 아니라 전략적 계획을 동반한 참된 비전을 보였다. 그는 왕에게 청원으로 자기 이점을 밀어붙일 때와 예후드의 지역 관리들에게 아무 말도 하지 않을 때를 알았다."</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">נָקוּם וּבָנִינוּ</div>
+    <div class="eyebrow">2:17–20</div>
+    <h2>4. 설득과 대응</h2>
+    <div class="gloss">나쿰 우바니누, "일어나 건축하자" — 세 번 반복되어 단락을 짜는 구절</div>
+  </div>
+
+  <div class="note">
+    <div class="tt">구조 <span class="c t">T</span></div>
+    <p><strong>A</strong> 느헤미야의 보고와 호소: "일어나 건축하자" (17) — <strong>B</strong> 근거: 하나님의 선한 손과 왕의 말 (18a) — <strong>X 백성의 응답: "일어나 건축하자"</strong> (18b) — <strong>B′</strong> 근거의 공격: "왕을 배반하고자 하느냐" (19) — <strong>A′</strong> 느헤미야의 응수: "하늘의 하나님이 우리를 형통하게 하시리니 그의 종들인 우리가 일어나 건축하려니와" (20)</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:17 — 수치의 언어</span>
+    <p><strong>"우리가 당한 곤경."</strong> <span class="c f">F</span>: <span class="hw">הָרָעָה</span>(하라아, 곤경/악)는 강한 단어다. 방어시설의 열악한 상태 때문에 악이 임할 수 있었다. <strong>"느헤미야는 청중에게 최대 효과를 얻으려고 단어를 신중히 골랐다."</strong></p>
+    <p><strong>1인칭 복수의 화법.</strong> <span class="c f">F</span>: <strong>"느헤미야가 자기 논지를 제시한 기술과 설득이 1인칭 복수의 사용에서 분명히 드러난다. 며칠 만에 그는 이미 예루살렘 주민의 대의와 자신을 완전히 동일시했다."</strong> <span class="c t">T</span>도 같다: <strong>"느헤미야의 민감한 1인칭 복수 사용('우리가 다시 수치를 당하지 않게 우리가 건축하자', 17절)으로 그는 그들과의 연대를 미묘하게 확인하며, 이것이 백성의 긍정적 응답을 설명한다."</strong></p>
+    <p><strong>수치인가 불안인가 — <span class="c k">K</span>와 <span class="c h">H</span>의 일치.</strong> 이 절의 신학적 핵심이다.</p>
+    <ul>
+      <li><span class="c k">K</span> <strong>"때로는 낯선 이라야 익숙함으로 무뎌진 것을 날카롭게 본다. 느헤미야의 관점은 의미심장하다. 부채 쪽에서 그를 치는 것은 그들의 처지의 불안이 아니라 수치다.</strong> 예루살렘은 '큰 왕의 성'이자 '온 세계의 기쁨'으로 보여야 하기 때문이다(시 48:2)."</li>
+      <li><span class="c h">H</span> <strong>"백성과 장소의 수치가 명백히 안보의 결여보다 느헤미야를 더 괴롭힌다. 그가 강조하는 것이 이것이기 때문이다."</strong> 장소의 수치를 지적함으로써 관리들의 자긍심에 호소하며 결집을 바란다. <strong>좋은 지도자로서 그는 이 나쁜 상황에 자신을 포함시키고 사업에 함께 헌신한다.</strong></li>
+    </ul>
+    <div class="note">
+      <div class="tt">수치의 신학 — <span class="c h">H</span>의 확장</div>
+      <p><strong>"예루살렘은 야훼의 백성에게 초점이었다. 그의 성전을 담고 있었기 때문이다. 그 폐허는 모두에게 야훼의 무력함이나 자기 백성을 지원하지 않으려는 그의 뜻을 가리켰다."</strong> 예언자들은 예루살렘의 파멸이 이스라엘이 언약을 계속 무시하고 악한 길을 끌어안은 것에 대한 야훼의 손에서 온 징벌이라고 선포했다(<strong>사 25:6–8; 렘 23:39–40; 24:8–10; 25:8–11; 겔 16:27–59; 22:1–5; 단 9:16</strong>). <strong>"현 상태의 예루살렘은 주변 민족들 앞에서 야훼에게 모욕이었고(겔 16:27–59), 그 도시는 그의 이름을 두실 곳이 되기에 확실히 합당하지 않았다(신 12:11)."</strong></p>
+      <p>H의 종말론적 관찰: <strong>"느헤미야는 예언자들에 따르면 예루살렘의 수치가 일시적이며 미래의 어느 때 제거되도록 예정되었음을 아마 알았을 것이다. 예언자들의 약속을 인식했다면 야훼가 이때에 자기 계획을 실행하기 시작하신다는 소망이 일어났을 것이다. 이미 제국 궁정에서 그의 은혜가 나타났듯이. 느헤미야의 추종자들은 이사야(사 4:1–4)나 학개(학 2:6–9)가 약속한 광채를 보지 못하겠지만, 그들은 후손들에게 복이 임하도록 보장할 인간 사슬의 고리를 대표했다. 하나님의 손(18절)이 느헤미야에게 이 선한 일을 하도록 새겨진 것은 현 공동체만이 아니라 미래 세대를 위한 것이기도 했다."</strong></p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:18 — 근거의 순서</span>
+    <p><strong>"내 하나님의 선한 손이 나를 도우신 일과 왕이 내게 이른 말씀을 그들에게 알렸더니."</strong></p>
+    <p><span class="c k">K</span>의 관찰이 이 절의 요체다. <strong>"신용 쪽에서 그는 하나님의 손이 그에게 있었음을 먼저 말하고, 그다음에야 왕의 말을 말한다. 이것이 참으로 옳은 순서였다. 원인과 결과로서. 그것은 또한 그의 진정한 확신이었고(8절 끝을 보라), 그러하기에 전염성이 있었다. 그러나 사실, 그런 집단에게서 나온 그토록 온전한 응답은 아닥사스다의 응답만큼이나 기적적이었다."</strong></p>
+    <p><span class="c t">T</span>도 같은 순서를 신학으로 읽는다. <strong>"이 초기 장들 내내 느헤미야는 자기 성공을 하나님의 직접 개입에 일관되게 돌렸다(1:11; 2:4, 8, 12, 18, 20). 예루살렘 주민에게 근거를 대며 왕의 조서를 언급하지만(그 정치적 정당화조차 하나님의 촉구에서 나왔다, 2:8), 청중이 그의 활동에 하나님이 임재하신다는 증언에 움직였으리라 가정할 수 있다. 특히 이것이 우선권을 받았기 때문이다(2:18a)."</strong></p>
+    <p><span class="c h">H</span>는 장면의 세부를 재구성한다. <strong>"그는 유대 대표단의 방문과 자신의 초기 불안을 서술하는 것으로 시작해, 그들을 도우려는 긴박감을 덧붙였을 것이다. 왕에게 휴가를 청하는 두려움을 표현했을 수 있고, 왕의 관대한 응답에 대한 기쁨을 확실히 나누었을 것이다. 그는 관리들에게 왕이 제공한 물자와 인가를 보여 주었을 것이다. 느헤미야 제안의 열쇠는 하나님의 은혜가 만들어 내고 왕이 공급한 압도적 공급이었다. 그의 개인적 증언의 힘과 하나님의 개입의 증거가 어떤 반대자도 설득하기에 충분했다."</strong></p>
+    <p><strong>"그들이 힘을 내어 이 선한 일을 하려 하매."</strong> 직역은 <strong>"그들이 선한 일을 위해 자기 손을 강하게 했다"</strong>이다. <span class="c f">F</span>: 히브리어의 뜻이 아주 분명하지는 않고 일할 준비를 시작했다는 뜻일 수도 있다. <strong>Blenkinsopp은 백성이 실제로 건축을 시작했다고 추론해 "그리하여 그들은 의욕적으로 일에 착수했다"로 옮긴다</strong>(<span class="c h">H</span>가 각주로 전달). F는 앞의 "일어나 건축하자"에 비추어 <strong>"그들이 스스로를 격려했다"</strong>로 옮긴다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:19 — 게셈의 합류와 포위의 완성</span>
+    <h4>게셈</h4>
+    <ul>
+      <li><span class="c f">F</span> 이 이름이 이제 성경 외 자료에서도 알려졌다. <strong>리히얀 명문과 아람어 명문에 "게달 왕"으로 언급된 같은 인물일 개연성이 크다.</strong> 철기 II기 말에 아랍인들이 네겝과 요단 동편으로 들어왔다. 게셈이라는 이름은 훨씬 후대의 벧-셰아림 명문에도 나온다.</li>
+      <li><span class="c k">K</span> 게셈(6:1 이하 참조)은 <strong>무시할 만한 이방인이기는커녕 동료들보다 더 강력한 인물이었다</strong>는 증거가 있다(다만 그들의 대의에는 덜 진지하게 헌신했을 것이다). 그의 이름은 <strong>주전 5세기 말, 곧 이 사건들로부터 대략 40년 안에 아라비아 여신 한-일라트에게 봉헌된 은그릇에 나타난다. 명문은 봉헌자를 "게셈(가스무)의 아들 카인(카이누), 게달 왕"으로 명명한다.</strong> 다른 자료들에서 <strong>게셈과 그의 아들이 모압과 에돔(유다의 동쪽·남쪽 이웃)과 아라비아 일부, 이집트로 가는 접근로를 페르시아 제국 아래서 장악한 아랍 부족 연맹을 다스렸음</strong>이 드러난다.</li>
+      <li><span class="c h">H</span> 게셈은 <strong>카인의 아버지</strong>이며, 카인은 북아라비아 부족들을 "사해의 동쪽·남쪽 전역에서 나일 삼각주까지 아우르는 광대한 연맹"으로 통일하게 된다. 표기 문제: <strong>6:6의 "가스무"가 아카드어 원형 구샤무(Gušamu)에 더 가까울 개연성이 크다(Williamson).</strong></li>
+    </ul>
+    <p><strong>지정학적 결론.</strong> <span class="c k">K</span>: <strong>"그리하여 이미 적대적인 사마리아와 암몬이 북쪽과 동쪽에 있는 터에, 유다는 이제 사실상 포위되었고 신경전이 시작되었다."</strong> <span class="c t">T</span>: <strong>"게셈의 추가로 남쪽이 반대에 포함되어 예루살렘 주위의 고리가 닫힌다."</strong></p>
+
+    <h4>"왕을 배반하고자 하느냐"</h4>
+    <ul>
+      <li><span class="c f">F</span> 두 조롱 섞인 질문이 던져졌고, <strong>다음 절에 답변이 있으므로 아마 서면이었을 것이다.</strong> 이 질문에는 역사가 있다. <strong>스 4:12에서 이 논거가 아닥사스다를 설득해 성벽 재건을 중지시키는 데 쓰였다.</strong> 그 단계에서는 성공했으나 이제 그들은 느헤미야에게 허가가 있음을 꽤 확실히 알았다. <strong>유대인을 낙담시키는 것이 그들의 전술의 일부였다. 그들에게는 뒷받침할 더 높은 권위가 없었고 오직 자기들의 권위뿐이었다.</strong> "조롱하다"(라아그의 히필형)는 <strong>"불경하게 비웃다"</strong>를 뜻하는 강한 단어다.</li>
+      <li><span class="c k">K</span> <strong>"'배반하다'는 단어의 조롱에는 날이 서 있었다. 왕의 마음을 바꾸고 공격이나 암살을 구실 지을 수 있는 사건은 언제든 조작될 수 있었기 때문이다."</strong></li>
+      <li><span class="c t">T</span> <strong>게셈과 "반역"(2:19; 6:6)의 구조적 연결이, 같은 페르시아 왕에게서 이 고발이 앞서 누린 성공(스 4:7–22)을 상기시킨다.</strong> 어법 분석: <strong>"너희가 하는 일이 무엇이냐"(2:19)는 고발을 제기하는 정형화된 형식이다</strong>(H. J. Boecker, pp. 25–34 인용).</li>
+      <li><span class="c b">B</span> 그들의 도전은 <strong>르훔과 심새가 에스라 4장에서 했듯 아닥사스다 앞에 느헤미야를 반역으로 고발할 의도였음</strong>을 뜻할 수 있다.</li>
+      <li><span class="c h">H</span> <strong>"이 지역 관리들이 페르시아 왕을 옹호하는 것으로 도전을 포장하지만, 그들의 진짜 관심사는 의심할 여지 없이 자기들의 권위에 대한 느헤미야의 위협이다."</strong></li>
+    </ul>
+  </div>
+
+  <div class="vs">
+    <span class="ref">2:20 — 세 단어의 판결</span>
+    <p><strong>"하늘의 하나님이 우리를 형통하게 하시리니 그의 종들인 우리가 일어나 건축하려니와 오직 너희에게는 예루살렘에서 아무 기업도 없고 권리도 없고 기억되는 바도 없다 하였느니라."</strong></p>
+    <h4>왕을 언급하지 않는다는 사실 — 다섯 주석의 일치</h4>
+    <ul>
+      <li><span class="c f">F</span> <strong>"느헤미야의 답변은 명료하다. 그는 왕이 자기에게 준 권위에 호소하지 않았다. 그들은 그것을 알고 있었다."</strong> 그는 종교적 동기를 제시하며 단어를 신중히 골랐다. <strong>"하늘의 하나님"은 페르시아 궁정에 잘 알려진 표현이었다. 페르시아 왕은 느헤미야가 이 하나님을 섬긴다는 것을 알았다.</strong></li>
+      <li><span class="c k">K</span> <strong>"자기 원수들에게조차 느헤미야는 자기의 으뜸패로 왕에게서 받은 위임장이 아니라 하나님에게서 온 권위를 내놓는다."</strong></li>
+      <li><span class="c t">T</span> <strong>"산발랏과 그 무리의 근본 오류는 하나님을 논의에서 일관되게 배제하고 기획의 정치적 측면에 집중하는 것이다. 그 근본 실수가 여기서도 이어진다. 느헤미야의 근거를 공격하면서 그들은 신적 정당화를 완전히 무시하고 왕의 조서에 관한 그의 증언을 탄핵하려 한다. 느헤미야는 흔들리지 않는다. 그는 침착하게 그 일의 신학적 보증을 재천명하며, 이번에는 왕을 언급하지 않는다."</strong> T의 결론: <strong>"인간적·정치적 권력에 맞선 하나님의 권위는 이 책들을 관통하는 주제이며, 회복기에 그랬듯 오늘도 여전히 유효하다."</strong></li>
+      <li><span class="c h">H</span> <strong>"흥미롭게도 느헤미야는 자기 일을 뒷받침하는 제국 문서로 이 관리들에게 맞서지 않는다. 그의 무리가 왕에 대한 반란을 계획한다는 암시는 완전히 무시된다. 느헤미야는 대적이 이 고발을 다시 쓰게 두지도, 왕을 대화에 끌어들이게 두지도 않을 것이다. 오히려 그는 하나님의 관점에 감화되어 종교적 차원에서 그들과 맞선다."</strong></li>
+      <li><span class="c b">B</span> <strong>"흥미롭게도 느헤미야는 자기 응수에서 이것을 언급하지 않는다. 오히려 이 일이 하나님의 보호 아래 이루어짐을 지적한다."</strong></li>
+    </ul>
+
+    <h4>세 단어 — 헬레크 · 체다카 · 지카론</h4>
+    <table>
+      <tr><th style="width:14%">히브리어</th><th style="width:12%">뜻</th><th style="width:33%"><span class="c f">F</span>의 해설</th><th style="width:29%"><span class="c h">H</span>의 해설</th><th style="width:12%"><span class="c k">K</span></th></tr>
+      <tr><td class="head"><span class="hw">חֵלֶק</span><br>헬레크</td><td>몫/기업</td><td>유대 민족 구성에서의 몫. <strong>누군가 어떤 민족에 몫이 없다고 말하면 그것은 반란 선언이었다(삼하 20:1; 왕상 12:16).</strong> 부정어와 함께 쓰인 이 용어는 그들이 유대인의 일부가 아님을 뜻한다</td><td>정당한 토지 상속</td><td><strong>과거</strong></td></tr>
+      <tr><td class="head"><span class="hw">צְדָקָה</span><br>체다카</td><td>권리</td><td>예루살렘에 대한 <strong>법적 권리</strong>가 없다는 사실. 느헤미야는 왕에게 총독으로 임명되었고 그가 하는 일은 그들의 일이 아니다</td><td>백성에 대한 <strong>하나님이 주신 권위</strong></td><td><strong>현재</strong></td></tr>
+      <tr><td class="head"><span class="hw">זִכָּרוֹן</span><br>지카론</td><td>기억</td><td><strong>어려운 용어다.</strong> 아마 예루살렘의 제의를 가리킬 것이다. 그들에게는 제의 관행에 대한 권리가 없었다(스 4:3 참조)</td><td>미래 세대에 물려줄 <strong>그들을 위한 신적 활동의 유산</strong>(출 12:14; 13:9; 수 4:7)</td><td><strong>미래</strong></td></tr>
+    </table>
+
+    <ul>
+      <li><span class="c k">K</span>의 정식: <strong>"세 단어 '몫… 권리… 기억' 안에서 그는 이 부러울 것 없는 외부인들의 과거와 현재와 미래를 일축한다."</strong> K는 여기서 시민권의 자긍심을 읽는다. <strong>"자기 시민권에 대한 아름다운 자긍심의 울림이 있다. 이 순간 예루살렘이 아무리 초라해 보였을지라도."</strong> 이 정신의 긍정적 측면이 시편 87편에 붙인 John Newton의 시행에 잘 포착된다고 덧붙인다.</li>
+      <li><span class="c h">H</span> 느헤미야는 <strong>말(<span class="hw">דָּבָר</span>, 다바르)</strong>로 답하는데 이것이 <strong>예언적인 것으로 드러난다</strong>. <strong>"다시 말해 느헤미야는 이 지역 관리들에게 예루살렘에서 정당한 과거도, 현재도, 미래도 없다고 단언한다."</strong></li>
+      <li><span class="c t">T</span> Williamson의 독법("예루살렘 공동체에서의 시민적·법적·제의적 권리")과 <strong>Kidner의 예리한 관찰</strong>("이 부러울 것 없는 외부인들의 과거와 현재와 미래") 중 무엇을 택하든, <strong>"전선은 그어졌고 개전의 일제 사격이 발사되었다."</strong></li>
+    </ul>
+
+    <div class="note">
+      <div class="tt"><span class="c b">B</span>의 배경 연구 — 성벽과 사후의 유산</div>
+      <p><strong>"이것은 특히 가혹하다. 고대 근동에서 성벽은 통치자가 자기 유산을 보장하고, 말하자면 죽음 이후 어떤 지속되는 생명을 누리는 방식이었다. 메소포타미아에서 통치자들은 흔히 성벽 축조에 쓰인 벽돌에 자기 이름을 찍거나 자신이 짓거나 복구한 성벽의 기초에 명문을 두었다. 현존하는 가장 오래된 기록 이야기 『길가메시 서사시』가 이 관행을 활용한다. 우루크의 왕 길가메시는 동료에게 자기 도시의 성벽을 자랑한다. 자기가 죽음으로 간 뒤에도 살아남을 그의 지속되는 유산을."</strong></p>
+      <p>B의 유보: <strong>"왜 다른 총독들이 예루살렘에서 유산을 갖는 데 관심이 있었을지는 불분명하다."</strong> 학자들은 산발랏의 아들 이름들(들라야, 셀레먀)과 도비야라는 이름에 야훼의 축약형이 들어 있으므로 이 총독들이 이스라엘의 하나님을 예배했고 따라서 예루살렘의 일에 관여하고 싶어 했으리라 추측해 왔다. <strong>"그러나 문맥은 이를 거스르는 듯하다."</strong></p>
+    </div>
+
+    <div class="note">
+      <div class="tt"><span class="c h">H</span>의 종합 — 왜 이토록 단호한가</div>
+      <p><strong>"이 관리들에 대한 느헤미야의 단호한 태도는 의심의 여지 없이 그들의 혼합주의에서 비롯된다. 앞서 언급했듯 산발랏과 도비야는 야훼주의자였고, 산발랏의 딸은 대제사장 가문과 혼인하기까지 했다(느 13:28). 그러나 애초에 이스라엘을 포로로 몰아넣은 것이 혼합주의와 타협이었고, 위임받은 지도자로서 느헤미야는 과거의 실수를 되풀이하지 않을 것이었다. 신명기가 경고하듯, 이스라엘이 우상숭배하는 이웃들과 분리해 있지 않으면 야훼의 진노의 대상이 될 것이었다(신 7:4)."</strong></p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="eyebrow">CROSS-REFERENCES</div>
+    <h2>5. 상호 참조 총람</h2>
+    <div class="gloss">2장의 각 절이 다른 성경·고대 자료와 만나는 지점</div>
+  </div>
+
+  <table>
+    <tr><th style="width:13%">느 2장</th><th style="width:30%">참조</th><th>관계</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">2:1</td><td><strong>에스더 1:3 이하</strong></td><td>페르시아 왕들의 주연 관습</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">2:2</td><td><strong>에스더 4:11</strong></td><td>왕에게 나아가는 것의 위험 — "에스더 왕후가 너무나 잘 알았듯이"</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:2</td><td><strong>에스라 4:21</strong></td><td>"내가 다시 조서를 내리기까지" — <strong>퇴로 조항</strong>이 정책 번복을 가능하게 함</td><td><span class="c k">K</span> <span class="c t">T</span></td></tr>
+    <tr><td class="head">2:2</td><td><strong>에스라 4:7–23</strong></td><td>파괴의 배경이 되는 최근의 진압 사건</td><td><span class="c k">K</span> <span class="c t">T</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">2:2</td><td>잠언 16:14</td><td>"왕의 진노는 죽음의 사자"</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">2:3</td><td><strong>에스더</strong></td><td>정치 사안을 개인적 타격으로 제시하는 지혜</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">2:4</td><td><strong>요한복음 17장 / 십자가·겟세마네</strong></td><td>긴 기도와 위기의 짧은 기도의 병행·대조</td><td><span class="c t">T</span></td></tr>
+    <tr><td class="head">2:4</td><td>느 4:4, 9; 5:19; 6:9, 14; 13:14</td><td>회고록 전체의 기도 목록 — "기도의 사람"</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:6</td><td>시편 45:9; 단 5:2–3, 23</td><td>셰갈의 어휘 용례(왕후 / 후궁)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">2:8</td><td><strong>눅 23:43; 고후 12:4; 계 2:7</strong></td><td>파르데스 → 파라데이소스 → "낙원"</td><td><span class="c h">H</span> <span class="c b">B</span></td></tr>
+    <tr><td class="head">2:8</td><td>에스라 3:7</td><td>다리오 때 성전 건축 목재가 레바논에서 공급됨</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">2:8</td><td>느 3:1 (하나넬 망대)<br>아리스테아스 100–104; 마카베오상 13:52<br>요세푸스 Ant. 15.403<br><strong>행 21:34, 37; 22:24; 23:10, 16, 32</strong></td><td>"성전에 속한 영문"의 계보 — 후대 안토니아 요새와 바울의 체포</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">2:8, 18</td><td><strong>스 7:6, 9, 28; 8:18, 22, 31</strong></td><td>"선한 손" — 에스라-느헤미야의 인장 어구</td><td><span class="c t">T</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">2:9</td><td><strong>에스라 8:21–23</strong> / 롬 14:6</td><td>에스라의 호송 거부와의 대조 — 둘 다 믿음의 태도</td><td><span class="c k">K</span> <span class="c t">T</span></td></tr>
+    <tr><td class="head">2:10</td><td>에스라 2:60</td><td>계보 증명 실패로 배제된 도비야 자손 가설</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:10</td><td>느 6:18; 13:4</td><td>도비야의 혼맥과 엘리아십과의 연결</td><td><span class="c h">H</span> <span class="c b">B</span></td></tr>
+    <tr><td class="head">2:10</td><td>사 15:5 / 겔 47:16, 18</td><td>"호론 사람"의 후보지 — 호로나임 / 하우란</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:12</td><td><strong>창세기 13:17</strong></td><td>"일어나 두루 다녀 보라" — 밤 답사를 <strong>취득 의례</strong>로 읽음</td><td><span class="c b">B</span></td></tr>
+    <tr><td class="head">2:12</td><td>에스라 4:12</td><td>누구를 신뢰할지 몰랐던 정황</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:13</td><td><strong>왕하 23:10; 렘 7:31–32; 32:35</strong></td><td>분문 → 힌놈 골짜기 = 게헨나, 아이 희생 제사</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:13</td><td>렘 19:2</td><td>분문이 "질그릇 조각 문"의 다른 이름일 가능성</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">2:13</td><td>왕하 20:20</td><td>용정 = 실로암, 히스기야 터널의 뱀 형태</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:14</td><td>삼하 5:9; 왕상 9:15, 24; 대하 32:5</td><td>밀로 — 동쪽 비탈 계단 지형의 항구적 붕괴</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:14</td><td>느 3:15 (셀라 못)</td><td>"왕의 못"의 동일시 문제 — 어근 <span class="hw">שׁלח</span>("보내다")</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">2:16</td><td>렘 27:20; 39:6; 사 34:12<br>렘 51:23, 28, 57; 겔 23:6, 12, 23</td><td>호림(세습 귀족)과 세가님(지방 행정)의 용례</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:16</td><td>스 9:2; 느 5:7; 6:17; 13:7, 11</td><td>두 계층이 에스라-느헤미야에서 그려지는 방식(모두 부정적)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:17</td><td><strong>시편 48:2</strong></td><td>"큰 왕의 성", "온 세계의 기쁨" — 수치의 근거</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">2:17</td><td><strong>사 25:6–8; 렘 23:39–40; 24:8–10; 25:8–11; 겔 16:27–59; 22:1–5; 단 9:16</strong></td><td>폐허 = 예언자들이 선포한 야훼의 심판</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:17</td><td>신명기 12:11</td><td>이름을 두실 곳으로 합당하지 않은 상태</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:17</td><td><strong>사 4:1–4; 학 2:6–9</strong></td><td>수치의 일시성 — 느헤미야 세대가 보지 못할 광채</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:19</td><td><strong>에스라 4:12, 7–22</strong> / 느 6:6</td><td>반역 고발이 앞서 성공한 이력</td><td><span class="c f">F</span> <span class="c t">T</span> <span class="c b">B</span></td></tr>
+    <tr><td class="head">2:20</td><td><strong>삼하 20:1; 왕상 12:16</strong></td><td>헬레크 — "몫이 없다" = 반란 선언 정형구</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">2:20</td><td>출 12:14; 13:9; 수 4:7</td><td>지카론 — 기억/기념의 용례</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:20</td><td>에스라 4:3</td><td>제의 권리의 배제 — "너희는 우리와 상관이 없느니라"</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">2:20</td><td><strong>신명기 7:4</strong></td><td>단호함의 뿌리 — 우상숭배 이웃과의 분리</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">2:20</td><td>시편 87편 (John Newton 찬송)</td><td>시민권의 자긍심</td><td><span class="c k">K</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>크세노폰 『키로파이디아』 1.3.9</strong> — 술 관원의 검식 절차 <span class="c h">H</span> · <strong>페르세폴리스 보고 부조</strong> — 왕 앞에서 입을 가리는 관습 <span class="c h">H</span> · <strong>크테시아스 FGH 3C, frags. 15, 47</strong> — 다마스피아 <span class="c f">F</span> <span class="c h">H</span> · <strong>엘레판티네 파피루스(407 BCE)</strong> — "사마리아 총독 산발랏의 아들들 들라야와 셀레먀" <span class="c f">F</span> <span class="c k">K</span> <span class="c t">T</span> <span class="c b">B</span> · <strong>와디 달리예 파피루스</strong> — 산발랏 가문 총독 계보 <span class="c f">F</span> · <strong>한-일라트 봉헌 은그릇(5세기말)</strong> — "게셈의 아들 카인, 게달 왕" <span class="c k">K</span> <span class="c h">H</span> · <strong>아마르나 서신(14세기 BCE)</strong> — 제국 중간관리층의 상호 비방 <span class="c b">B</span> · <strong>『길가메시 서사시』</strong> — 성벽 = 사후의 유산 <span class="c b">B</span> · <strong>요세푸스 Ant. xi.5</strong> — 5년 간격설(F가 기각) · <strong>Kenyon 발굴(1961–63)</strong> — 동쪽 비탈의 잔해 더미 <span class="c f">F</span> <span class="c k">K</span> <span class="c h">H</span></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">יַד־אֱלֹהַי הַטּוֹבָה</div>
+    <div class="eyebrow">SYNTHESIS</div>
+    <h2>6. 신학 종합</h2>
+    <div class="gloss">야드-엘로하이 핫토바, "내 하나님의 선한 손" (느 2:8, 18)</div>
+  </div>
+
+  <h3>① 토브와 라의 드라마</h3>
+  <p>2장의 문학적 뼈대이자 신학이다. 예루살렘의 "악"(1:3)이 느헤미야의 얼굴의 "나쁨"(2:2)으로 옮아오고, 왕 앞에서 "좋게"(2:6) 되며, 하나님의 "선한 손"(2:8, 18)으로 뒤집히고, "이 선한 일"(2:18)이 되었다가, 대적에게서 <strong>"큰 악"(2:10)</strong>으로 되받아진다. <span class="c t">T</span>의 정식: <strong>사명을 돕는 것은 선, 막는 것은 악.</strong> <span class="c h">H</span>의 아이러니: <strong>"야훼는 선하시다"(도비야)라는 이름의 사람이 야훼의 백성의 선을 악으로 여긴다.</strong></p>
+
+  <h3>② 넉 달과 한 호흡</h3>
+  <p>1:4의 애도와 2:4의 화살 기도가 서로를 조건 짓는다. <span class="c k">K</span>: <strong>"그는 충분히 오래 기도했고, 그 작업을 세부까지 그려 볼 만큼 믿음이 있었다."</strong> <span class="c t">T</span>: 이 두 기도가 요한복음 17장의 긴 기도와 십자가의 짧은 부르짖음처럼 신자의 삶에서 각각의 역할을 가진다.</p>
+
+  <h3>③ 매개된 섭리의 문법</h3>
+  <p>2장이 <span class="c k">K</span>가 정식화한 이 책 섭리 신학의 실물 전시장이다. 하나님이 느헤미야의 마음에 <em>주시고</em>(2:12), 왕에게 <em>좋게 여겨지게</em> 하시며(2:6), <em>선한 손</em>으로 왕이 허락하게 하신다(2:8). 기적도, 신탁도, 환상도 없다. 왕의 질문 한 마디, 왕후의 임석, 조서의 퇴로 조항, 호송대 하나가 그 통로다. <span class="c t">T</span>: <strong>"제3의 인물이 있음을 상기시키며, 그분은 서사 내내 무대 뒤에 계실 것이다."</strong></p>
+
+  <h3>④ 준비와 은혜의 균형</h3>
+  <p><span class="c t">T</span>가 이 장에서 가장 정교하게 다루는 신학이다. <strong>아닥사스다가 허락했고 느헤미야가 넉 달을 준비했으나, 청이 허락된 이유는 왕의 호의도 신실한 준비도 아니다.</strong> 세 요소(왕의 결정, 인간의 준비, 하나님의 손) 모두가 본문에 있되 인과의 순서가 정해져 있고, 그 순서를 느헤미야 자신이 18절에서 다시 진술한다. 하나님의 손이 먼저, 왕의 말이 그다음이다(<span class="c k">K</span>: <strong>"원인과 결과로서"</strong>).</p>
+
+  <h3>⑤ 수치의 신학</h3>
+  <p><span class="c k">K</span>와 <span class="c h">H</span>가 함께 세우는 이 장의 중심이다. 느헤미야를 움직인 것은 안보가 아니라 <span class="hw">חֶרְפָּה</span>(헤르파, 수치)이고, 그 수치는 백성의 것이면서 <strong>야훼의 이름에 걸린 것</strong>이다(<span class="c h">H</span>: "그 폐허는 야훼의 무력함이나 그의 의지 없음을 가리켰다"). 재건은 방어 공사이면서 하나님의 명예 회복이다.</p>
+
+  <h3>⑥ 권위의 소재</h3>
+  <p>2:20에서 느헤미야가 왕을 언급하지 않는다는 사실이 이 장의 마지막 신학이다. 그에게는 왕의 조서라는 으뜸패가 있었고 대적은 바로 그것을 겨냥해 공격했는데, 그는 그 패를 내지 않고 <strong>하늘의 하나님</strong>을 답으로 낸다. <span class="c t">T</span>: <strong>"인간적·정치적 권력에 맞선 하나님의 권위."</strong> <span class="c h">H</span>: <strong>"그는 하나님의 관점에 감화되어 종교적 차원에서 그들과 맞선다."</strong></p>
+
+  <h3>⑦ 세 겹 만남의 순서</h3>
+  <div class="note">
+    <div class="tt"><span class="c t">T</span>가 1–2장 전체에서 뽑아내는 리더십 신학</div>
+    <p><strong>"이 첫 두 장에서 느헤미야는 작동하는 권력 구조에 대한 합당한 인식을 보여 주었다. 그의 첫 만남은 하나님과의 만남이었고, 그다음이 왕과의 만남이었다. 상황 자체를 답사한 뒤에야 그는 문제의 외교적 해결을 위한 충분히 숙고된 계획을 들고 공동체에 다가갔다."</strong></p>
+    <p style="text-align:center;font-family:var(--sans);font-size:.85rem;margin-top:.8rem">하나님 → 왕 → 실사 → 공동체</p>
+  </div>
+  <p><span class="c h">H</span>도 Yamauchi의 여섯 자질(책임, 비전, 기도, 행동·협력, 긍휼, 승리)을 전하며 <strong>그중 넷이 2장에서 나온다</strong>고 정리한다. 비전(2:7–8, 13–16 — 큰 꿈을 꾸는 자가 아니라 확신 있고 세심한 계획자라는 의미), 기도(2:4–5 — 왕 앞에서조차), 행동·협력(2:17–18 — "해야 할 일을 깨닫고, 다른 이들에게 설명하고, 그들의 도움을 얻어냈다"), 그리고 책임(1:11의 왕실 술 관원 직).</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 2장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

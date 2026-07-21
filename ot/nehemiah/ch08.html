@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 8장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch08.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 8장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 구획과 배경</a>
+    <a class="lv1" href="#s1">1. 율법 낭독 (8:1–4)</a>
+    <a class="lv2" href="#v13">8:1–3 나팔절·수문 앞</a>
+    <a class="lv2" href="#v4">8:4 강단과 열넷</a>
+    <a class="lv1" href="#s2">2. 예배 (8:5–6)</a>
+    <a class="lv1" href="#s3">3. 레위인의 해석 (8:7–8)</a>
+    <a class="lv1" href="#s4">4. 기쁨 (8:9–12)</a>
+    <a class="lv1" href="#s5">5. 초막절 (8:13–18)</a>
+    <a class="lv1" href="#s6">6. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">חֶדְוַת יהוה</div>
+  <h1>느헤미야 8장 심층 연구</h1>
+  <div class="sub">헤드바트 야훼, "여호와로 인하여 기뻐하는 것" (느 8:10) — 말씀을 듣고 이해하고 기뻐하다</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">תּוֹרַת מֹשֶׁה</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 구획과 배경</h2>
+    <div class="gloss">토라트 모셰, "모세의 율법책" — 제2의 모세, 서기관 에스라</div>
+  </div>
+
+  <p>성벽 완공(6장)과 명단(7장) 뒤, <strong>에스라가 다시 전면에 등장한다.</strong> <span class="c h">H</span>는 7:73b–8:18을 <strong>"율법을 가르치고 지키고 기념함"</strong>으로 묶고 다섯으로 나눈다. 율법 낭독(7:73b–8:4) / 예배(8:5–6) / 레위인의 해석(8:7–8) / 백성의 기쁨(8:9–12) / 초막절(8:13–18).</p>
+
+  <div class="caveat">
+    <div class="tt">에스라의 율법책은 무엇이었나 — <span class="c h">H</span></div>
+    <p>학자들의 오랜 물음이다. 네 견해: ① 법률 자료 모음 ② 제사장 법전(P) ③ 신명기 법 ④ 오경 전체. <span class="c h">H</span>: 에스라-느헤미야의 율법 사용을 분석하면 <strong>저자가 고대 제사장 입법과 신명기의 법을 다수 알고 있었음</strong>이 분명하다(현존 오경 전체가 아직 정경화되지 않았더라도). Myers의 판단대로 에스라의 율법은 "오경의 최신 교정본"일 것이다. <strong>율법은 모세에게 돌려지고(모세의 율법책), 율법 수여자 에스라라는 일종의 제2의 모세가 읽는다.</strong></p>
+  </div>
+
+  <div class="note">
+    <div class="tt">이 자리의 신학 — <span class="c t">T</span></div>
+    <p><span class="c t">T</span>: 8장은 이 책의 <strong>"토라 공동체"의 신학</strong>이 집약되는 자리다. 성벽(물리적 재건)과 인구(사회적 재건)가 갖춰진 뒤, 공동체는 <strong>말씀 위에 다시 세워진다.</strong> 낭독 → 이해 → 예배 → 기쁨 → 순종(초막절)의 흐름이 곧 언약 공동체가 회복되는 순서다. 9–10장의 참회·언약 갱신이 여기서 시작된다 — <strong>말씀을 듣는 일이 언약을 세우는 일의 문이다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">כְּאִישׁ אֶחָד</div>
+    <div class="eyebrow">7:73b–8:4</div>
+    <h2>1. 에스라의 율법 낭독</h2>
+    <div class="gloss">케이쉬 에하드, "한 사람같이" — 온 백성이 자원하여 모이다</div>
+  </div>
+
+  <div class="vs" id="v13">
+    <span class="ref">8:1–3 — 나팔절, 수문 앞 광장</span>
+    <p><strong>나팔절.</strong> <span class="c h">H</span>: <strong>일곱째 달 초하루</strong>는 유대 종교력의 나팔절(<span class="hw">תְּרוּעָה</span>, 테루아)이다. 공동체는 아마 <strong>쇼파르(숫양 뿔)의 나팔 소리로 소집</strong>되었다. "즐거운 소리를 아는 백성은 복이 있나니"(시 89:15). H: 랍비들은 이 의식의 의도가 사람을 모으는 것만이 아니라 <strong>야훼의 은총을 구하는 것</strong>이라 이해했다. 쇼파르 소리는 이스라엘의 필요를 하나님께 알리는 기도의 악기다(레위기 랍바 29:4; Milgrom). "하나님이 이스라엘의 음악에 좌우되는 것이 아니라, 그 백성의 진실한 기도와 찬양에 감동하신다."</p>
+    <div class="note">
+      <div class="tt">고대의 회당 예배 원형이 여기 있다 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 이 장에 오늘날 회당 예배의 여러 요소가 <strong>처음으로 함께</strong> 나타난다. ①백성의 모임 ②율법 낭독 요청 ③백성이 선 채로 두루마리를 폄 ④축복 ⑤"아멘" 응답 ⑥설교식 교훈 ⑦율법 낭독 ⑧구두 해설과 권면 ⑨친교의 식사. <strong>백성이 에스라에게 율법을 "가져오라" 요청한다 — 그가 강요한 것이 아니다.</strong> H: 에스라가 백성에게 휘둘리는 약한 지도자처럼 보이나, 이혼 절차(스 10:1–5)에서처럼 <strong>규정을 성급히 부과하지 않고 백성의 요청을 기다린다.</strong> 온 공동체가 하나님의 말씀을 읽고 가르쳐 달라 요청한 것보다 에스라의 영향력을 더 잘 증명하는 것이 있겠는가.</p>
+    </div>
+    <p><strong>수문 앞 광장.</strong> <span class="c h">H</span>: 장소가 온전히 적절하다 — <strong>성전 뜰이 아니라 동쪽 성벽의 수문 앞</strong>이다. 성전에는 제사장만 접근하는 구역이 있어 평신도가 성물에 다가갈 수 없으나, 여기서는 <strong>온 회중이 가족 단위로 함께 모일 수 있었다.</strong> 율법은 전통적으로 성전에 보관되었으나, 이 자리에서는 하나님의 거룩한 말씀이 <strong>백성의 자리로 나온다</strong>(신 6:7–9). 이는 모세의 고별 연설(신 29:10–11), 여호수아(수 24), 요시야(왕하 23:1–3)의 공개 낭독 전통을 잇는다. H: 신 31:12은 칠 년마다 초막절에 "남자와 여자와 아이와… 이방인"이 듣게 하라 명하나, <strong>느 8장이 이방인을 생략한 것은 외부인에 대한 에스라-느헤미야의 태도에 비추면 놀랍지 않다.</strong></p>
+    <p><strong>무엇을 읽었나.</strong> <span class="c h">H</span>: 여섯 시간에 오경 전체를 낭독할 수는 없다. 짧은 판본을 가졌다는 뜻은 아니다 — 본문은 그가 <strong>"그 중에서"(발췌) 읽었다</strong>고 명시한다.</p>
+  </div>
+
+  <div class="vs" id="v4">
+    <span class="ref">8:4 — 나무 강단과 열넷의 인물</span>
+    <p><span class="c h">H</span>: 강단은 에스라와 열세 명의 고관을 아래 회중이 다 볼 수 있게 세울 만큼 컸다. <strong>이스라엘 전통과 특히 에스라-느헤미야에서 열둘의 의미</strong>에 비추면, 에스라 양편에 여섯씩(아마 제사장) 서야 할 것이다. 랍비들은 접속사 없는 "스가랴 므술람"을 한 사람으로 본다(b. Meg. 23a)—그러면 열두 명. 그러나 다른 본문(스 8:16; 느 12:16)은 스가랴와 므술람을 두 제사장으로 구별한다 — 그러면 열셋, 에스라까지 열넷.</p>
+    <div class="note">
+      <div class="tt">함께 읽는 공동체 — 쿰란과 회당</div>
+      <p><span class="c h">H</span>: 강단의 인물들은 도덕적 지지만이 아니라 <strong>여섯 시간 낭독의 과업을 분담</strong>했을 것이다. 무리 지어 율법을 읽고 연구하는 관습이 제2성전기에 이어졌다. 쿰란 공동체는 밤새 교대로 토라를 끊임없이 연구하게 했다("열 명이 있는 곳에는 밤낮으로 율법을 연구하는 자가 끊이지 않게 하라", 1QS 6:6–7). 지도자와 고관을 강단에 세워 회중에게 낭독하는 관습은 오늘날 유대 회당까지 이어진다. 이 장면은 에발산·그리심산에서 여섯 지파씩 나눠 레위인이 율법을 낭독하고 온 백성이 "아멘"으로 화답한 모세의 명령(신 27:11–26)과 여호수아의 성취(수 8:33–35)를 되울린다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">אָמֵן אָמֵן</div>
+    <div class="eyebrow">8:5–6</div>
+    <h2>2. 백성의 예배</h2>
+    <div class="gloss">아멘 아멘 — 손을 들고, 무릎 꿇고, 코를 땅에 대다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">8:5–6 — 두루마리를 펴자 백성이 일어서다</span>
+    <p><span class="c h">H</span>: <strong>율법책은 두루마리(scroll)였지 코덱스가 아니었다.</strong> 현대 회당에서도 토라 두루마리를 펴는 것은 경외의 순간을 만들며 회중을 일어서게 한다. 이 행위는 말씀에 대한 경외와 그 권위에 대한 복종으로 대개 침묵 중에 이뤄진다(느 9:3). 랍비들은 <strong>서서 토라를 공부하는 관습이 모세로부터 가말리엘 때까지 있었다</strong>고 한다(b. Meg. 21a).</p>
+    <p><strong>손을 들고, 몸을 굽혀.</strong> <span class="c h">H</span>: 기도할 때 손을 드는 것은 예배와 필요를 표현하는 고대 유대 관습이다(시 28:2; 134:2; 딤전 2:8). "무릎 꿇고 코(<span class="hw">אַפַּיִם</span>, 아파임 — "콧구멍", 대개 "얼굴"로 번역)를 땅에 대고" 경배했다. <strong>이 모든 몸짓 — 침묵의 기립, 소리 내는 화답, 손 듦, 부복 — 은 예배자의 하나님을 향한 필요와 복종의 육체적 표현</strong>이다.</p>
+    <div class="note">
+      <div class="tt">에스라가 신명(神名)을 소리 내어 부르다 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 에스라가 하나님을 송축할 때 <strong>신명을 소리 내어 발음한다.</strong> 그러나 제2성전기 어느 시점에 경건한 이들이 이름을 피하기 시작했고, 성전에서도 발음이 폐지되었다(4:14 주해 참조). 후에 랍비들은 백성이 하나님의 이름을 소리 내는 것을 금했다(b. Yoma 69b). <strong>"아멘"</strong>(그리 될지어다, 그리 참되도다)은 들은 말이 신뢰할 만함을 확언하는 고대의 회중 응답이다. 모세가 초기 정착자들에게 레위인의 계명 낭독에 "아멘"으로 응답하게 한 것(신 27:14–26)처럼, <strong>이스라엘은 제2의 모세 에스라에게 율법에 복종하겠다는 확신으로 화답한다.</strong> 이 관습은 고대 회당(b. Ber. 8:8)과 초대 교회(고전 14:16)로 이어진다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">מְפֹרָשׁ</div>
+    <div class="eyebrow">8:7–8</div>
+    <h2>3. 레위인의 해석</h2>
+    <div class="gloss">메포라쉬, "번역·해설하여" — 뜻을 깨닫게 하다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">8:7–8 — "낭독하고 그 뜻을 해석하여 깨닫게 하니"</span>
+    <p><span class="c h">H</span>: 7절에 열거된 이들은 레위인(과 일부 제사장)이다 — <strong>율법을 가르치는 것은 성경 시대 제사장·레위인의 주요 기능</strong>이었다(신 33:10; 왕하 12:2; 대하 15:3; 말 2:7). 레위인은 이스라엘 전역 48성읍에 분산되어 어디 살든 백성이 그들에게 접근할 수 있었다(민 35:6).</p>
+    <div class="caveat">
+      <div class="tt">메포라쉬 — 번역인가 해설인가</div>
+      <p><span class="c h">H</span>: 레위인이 "책을 낭독하되"(8절) <strong>히브리어를 당대 공용어 아람어로 번역</strong>해야 했다. 랍비들은 에스라가 기록된 아람어 타르굼을 읽었다고 하나(b. Meg. 3a), 그렇게 이른 타르굼 연대는 입증되지 않는다. 같은 낱말 <span class="hw">מְפֹרָשׁ</span>(메포라쉬, "번역·해설")이 스 4:18(페르시아 왕 앞에서 편지를 읽고 번역함)에도 쓰인다. H: <strong>이 낱말은 번역에 국한되지 않고 해설(clarification)을 포함한다.</strong> 어근 <span class="hw">פרש</span>(파라쉬)이 "나누다"를 뜻하므로 Williamson은 "단락별로"라 옮긴다 — 본문을 작은 단위로 나눠 읽고 번역하는 것. 이 낱말은 후대 랍비의 <strong>파라샤(Parashah, 오경의 공식 소단락)</strong>의 이른 선구다. 전통적 번역 "분명하게"도 이 과정으로 이해하면 타당하다(딤후 2:15 "진리의 말씀을 옳게 분별하며"[orthotomeō]와 비교).</p>
+    </div>
+    <p><strong>말씀에서 교사로.</strong> <span class="c h">H</span>: 기록된 말씀, 특히 하나님의 기록된 율법에 대한 강조가 <strong>말씀의 교사에 대한 강조</strong>를 낳는다. 해석과 설명 없이는 기록된 말씀과 현재의 적실성 사이의 문화적 간극을 백성이 건널 수 없다. <strong>선지자가 아니라 서기관·교사인 에스라가 말씀을 가르치는 모든 이의 모범</strong>이다. 랍비들은 성경 선지자 시대의 종언을 말한다("학개·스가랴·말라기가 죽자 성령이 이스라엘을 떠났다", b. Soṭah 48b). 대신 백성을 <strong>교사들의 가르침</strong>으로 인도한다. 신약에서 바울은 교사를 사도·선지자 다음 셋째로 둔다(고전 12:28–29).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">חֶדְוָה</div>
+    <div class="eyebrow">8:9–12</div>
+    <h2>4. 백성의 기쁨</h2>
+    <div class="gloss">헤드바, "기쁨" — 거룩이 기쁨을 낳는다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">8:9–12 — "여호와로 인하여 기뻐하는 것이 너희의 힘"</span>
+    <p><span class="c h">H</span>: 이 장에서 <strong>느헤미야와 에스라가 한 팀으로 일한다.</strong> 1에스드라(9:49)에 느헤미야가 빠진 것은 그 문서 전반이 그를 무시하기에 무의미하다 — 에스라-느헤미야는 느 12:26, 36에서 에스라를 다시 언급해 두 사람의 협력을 확증한다.</p>
+    <p><strong>왜 이 날이 거룩한가.</strong> <span class="c h">H</span>: 나팔절이라는 거룩한 절기이자, 백성이 <strong>율법을 새로 깨달았기 때문</strong>(8절)에 이 날이 거룩과 연결된다. <strong>이해하며 듣고 토라에 복종하는 행위 자체가 거룩하다.</strong> 백성의 화답(아멘 아멘, 6절)과 예배는 <strong>신적 거룩이 매우 개인적인 방식으로 공동체와 교차했음</strong>을 보인다. 말씀을 읽고 깨닫는 것은 단순한 교육 활동을 넘어선다 — 야훼께서 그 백성과 소통하셨다. H: 이 말씀과의 만남이 거룩의 행위인 것은, <strong>야훼가 거룩 자체이시고 그가 수용적인 백성에게 자신을 내미실 때 그들도 거룩으로 물들기 때문</strong>이다(요 17:17; 롬 10:17).</p>
+    <div class="note">
+      <div class="tt">거룩이 기쁨을 낳는다 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 많은 이가 거룩을 경외·엄숙과 연결하나(속죄일 같은 금식일), <strong>거룩은 기쁨을 일으킨다.</strong> 나팔절도 다른 거룩한 절기처럼 기쁨의 날이어야 했다(레 23:23–25). 그런데 백성이 기뻐하는 대신 <strong>울었다</strong> — 레위인이 진정시켜야 할 만큼 큰 통곡이었다. 아마 <strong>자기 삶이 야훼의 기준에 못 미침을 깨달은 회개의 통곡</strong>이었을 것이다(요세푸스 고대사 11.155). 느헤미야의 권면에 백성은 태도를 바꿔, 말씀을 깨달은 것이 기쁨의 이유임을 인정했다. 그들이 들은 토라는 계명 불이행의 형벌만이 아니라 <strong>회개하는 자를 위한 속죄(레 1–7; 16)와 신실한 자를 위한 축복(신 28:1–14)</strong>도 상기시켰다.</p>
+    </div>
+    <p><strong>"살진 것을 먹고 단 것을 마시라."</strong> <span class="c h">H</span>: 느헤미야의 기이한 명령("기름진 것을 먹고 단 것을 마시라!") — 절기의 맛있는 음식을 가리킨다. 곧 "먹고 마시고 즐거워하라!" 겸손과 복종을 몸으로 표현했듯, 이제 <strong>새로 깨달은 하나님의 말씀을 몸으로 축하하라</strong>는 것. H: 히브리 문화에서 기쁨은 <strong>몸·마음·영이 나뉘지 않는 전인(全人)으로 경험</strong>된다. 하나님께로부터 오는 기쁨은 그가 백성을 강하게 하시는 선물이다("여호와로 인하여 기뻐하는 것이 너희의 힘의 근원", JPS). 그리고 이 <strong>기쁨이 관대함을 낳았다</strong> — "예비하지 못한 자에게 몫을 보내라"(고후 9:8–11의 반향).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="heb">סֻכּוֹת</div>
+    <div class="eyebrow">8:13–18</div>
+    <h2>5. 초막절</h2>
+    <div class="gloss">수코트, "초막" — 여호수아 이래 없던 큰 기쁨</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">8:13–15 — 둘째 날, 족장들이 더 배우러 모이다</span>
+    <p><span class="c h">H</span>: 대다수 백성은 추수철 농사 탓에 둘째 날 귀가했으나, <strong>지도자들은 더 집중적인 토라 연구를 위해 남았다.</strong> 반나절 청강이 말씀에 대한 갈망을 일으켰다 — 이들은 개인적 교화만이 아니라 <strong>공동체를 가르칠 지도자의 책임</strong>을 자각했다. 이 연구 중 <strong>초막절 규례</strong>를 발견해 즉시 백성에게 공포한다(15절 — "advertise"는 고레스 칙령[스 1:1] 및 소집 포고[스 10:7]와 같은 관용구).</p>
+    <p><strong>초막절 = "그 절기".</strong> <span class="c h">H</span>: 일곱째 달 절기의 정점, 유대력 세 절기 중 가장 큰 절기다. 광야 여정에서 이스라엘을 향한 하나님의 공급·보호를 기념한다(레 23:34–43; 신 16:13–15). "너희는 이레 동안 초막에 거주하라… 이는 내가 이스라엘 자손을 애굽 땅에서 인도하여 낼 때에 초막에 거주하게 한 줄을 너희 대대로 알게 하려 함이니라"(레 23:42). <strong>바벨론에서 광야를 건너 귀환한 이들에게 이 광야 회고는 각별한 의미를 지녔다.</strong> 농업적으로도 초막절은 여름내 익은 모든 작물의 추수를 기념하는 가장 풍성한 절기다.</p>
+    <div class="caveat">
+      <div class="tt">에스라의 혁신 — Milgrom의 독법</div>
+      <p><span class="c h">H</span>: 여호수아 이래 초막절을 <strong>아예</strong> 지키지 않은 것인지, 아니면 <strong>초막 짓기</strong>만 하지 않은 것인지 불분명하다(17절). <strong>Milgrom은 포로기 이전 초막 짓기가 성전 경내에 국한되었다고 본다.</strong> 포로기에 성전 접근이 불가하자 백성은 집에서 초막을 지어야 했다. Milgrom은 에스라의 혁신을 이렇게 본다 — <strong>"에스라는 포로기의 관습을 예루살렘으로 옮겼다. 처음으로 모든 이스라엘인이 성전 경내만이 아니라 자기 집 지붕 위에 초막을 세워야 했다."</strong> 레 23:40의 나뭇가지가 성전 제단 순회용으로 이해되던 것을, 에스라는 최근 관습에 따라 <strong>초막의 건축 재료</strong>로 해석했다(레 23:42). 후대 유대인은 초막 짓기와 성전 순회(룰라브 흔들기)를 모두 요구하며 에스라의 해석을 거부했으나, 카라이파는 에스라-느헤미야와 일치한다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">8:16–18 — 여호수아 이래의 큰 기쁨, 여덟째 날 성회</span>
+    <p><span class="c h">H</span>: 가족마다 지붕·뜰에 초막을 짓되, <strong>성전 뜰과 공공 광장(수문·에브라임문)에도 공동 초막</strong>이 있었다(성전 두루마리 11Q19에도 증언). "이스라엘 자손이 <strong>눈의 아들 예수아 때로부터</strong> 그 날까지 그렇게 행함이 없었으므로 매우 크게 즐거워하매"(17절). 이 "예수아"는 여호수아이며, <strong>"야훼가 구원하신다"는 뜻으로 후에 헬라어 이에수스, 영어 지저스가 되었다.</strong></p>
+    <div class="note">
+      <div class="tt">초막절의 기쁨과 물 붓는 예식 — 신약으로 이어지는 결</div>
+      <p><span class="c h">H</span>: "여호수아 이래 없던"의 의미는 모호하다 — 초막을 짓지 않았거나(레 23), 산에서 그만한 목재를 얻은 적이 없거나(수 17:15–18; 학 1:8; 느 8:15만이 산에서 목재 채취를 명함), 단지 <strong>이만한 기쁨으로 지킨 적이 없었다</strong>는 뜻일 수 있다. 제2성전기 초막절의 핵심 관습 하나가 <strong>물 붓는 예식</strong>이다(오경엔 없으나 후대 자료가 증언). 미쉬나는 실로암 못에서 물을 길어 쇼파르 소리와 함께 수문으로 가져와 비를 구하며 부었다고 한다(m. Sukkah 4:9). 요한복음에서 예수는 초막절 마지막 날 "누구든지 목마르거든 내게로 와서 마시라… 그 배에서 생수의 강이 흘러나오리라"(요 7:37–38) 선포하시는데, 이는 마지막 날 예루살렘에서 생수가 흐르리라는 스가랴 예언(슥 14:8)과의 메시아적 동일시다. 낭독은 <strong>이레 동안 매일</strong> 이어졌고 여덟째 날에 성회로 마쳤다(레 23:36; 민 29:35).</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="tt">8장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력·경건(속죄일 생략의 이유 — 금식이 순례절이 아니라서). <span class="c f">F</span> 양식·어휘. <span class="c h">H</span> 제2성전기 수용사(회당 예배 원형, 메포라쉬=파라샤 선구, Milgrom의 초막 혁신, 물 붓는 예식과 요 7:37). <span class="c t">T</span> 구조(토라 공동체 신학, 낭독→이해→기쁨→순종). <span class="c b">B</span> 자료비평(에스라 자료의 편집적 배치).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">מִקְרָא־קֹדֶשׁ</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>6. 상호 참조와 신학 종합</h2>
+    <div class="gloss">미크라-코데쉬, "성회" — 불러내어 읽는 거룩한 모임</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:14%">느 8장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">8:1</td><td>스 3:1 ("한 사람같이") / 신 31:12 (칠 년마다 초막절 낭독)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:2</td><td>레 23:24–25; 민 29:1 (나팔절) / 시 89:15 (테루아를 아는 백성)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:3</td><td>신 29:10–11 (모세의 회집) / 수 24; 왕하 23:1–3 (공개 낭독 전통)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:4</td><td>신 27:11–26 (에발·그리심, 레위인 낭독+아멘) / 수 8:33–35 / 1QS 6:6–7 (쿰란)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:6</td><td>신 27:14–26 (아멘 응답) / 시 28:2; 134:2; 딤전 2:8 (손을 듦) / 고전 14:16</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:8</td><td>신 33:10; 말 2:7 (제사장·레위인의 가르침) / 스 4:18 (메포라쉬) / 딤후 2:15</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:10</td><td>레 23:23–25 (나팔절의 기쁨) / <strong>요 17:17; 롬 10:17</strong> (말씀의 성화력)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:12</td><td>고후 9:6–11 (기쁨이 낳는 관대함) / 갈 5:22 (성령의 열매 기쁨)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:14</td><td><strong>레 23:34–43; 신 16:13–15</strong> (초막절) / 출 12:37 (숙곳 = 초막)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:17</td><td>수 17:15–18; 학 1:8 (산에서 목재 채취, 세 용례뿐) / 2 Macc 10:6–7</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:17</td><td>"예수아" = 여호수아 = "야훼가 구원하신다" → 이에수스/지저스</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">8:18</td><td><strong>요 7:37–38</strong> (초막절 물 붓는 예식과 생수) / 슥 14:8, 16–17 / m. Sukkah 4:9</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>레위기 랍바 29:4</strong> — 쇼파르를 기도의 악기로 봄(Milgrom) <span class="c h">H</span> · <strong>1QS 6:6–7</strong> — 쿰란의 밤낮 토라 연구 <span class="c h">H</span> · <strong>b. Meg. 3a, 21a, 23a</strong> — 타르굼·기립 공부·열둘의 인물 <span class="c h">H</span> · <strong>요세푸스 고대사 11.155</strong> — 백성의 회개의 통곡 <span class="c h">H</span> · <strong>m. Sukkah 4:9</strong> — 실로암 물 붓는 예식 <span class="c h">H</span> · <strong>성전 두루마리(11Q19)·4Q365</strong> — 공동 초막·나뭇가지 규정 <span class="c h">H</span></p>
+  </div>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 성벽에서 말씀으로 — 토라 공동체의 탄생</h4>
+  <p>물리적 재건(성벽, 6장)과 사회적 재건(인구, 7장) 뒤에 <strong>영적 재건</strong>이 온다. <span class="c t">T</span>: 8장은 이 책 <strong>"토라 공동체" 신학</strong>의 집약점이다. 낭독(1–4절) → 예배(5–6절) → 해석(7–8절) → 기쁨(9–12절) → 순종(13–18절)의 흐름이 곧 언약 공동체가 회복되는 순서다. <strong>백성이 에스라에게 율법을 "가져오라" 요청한 것</strong>(1절)이 이 재건의 성격을 규정한다 — 강요된 것이 아니라 갈망된 것이다.</p>
+
+  <h4>② 말씀이 백성의 자리로 나오다</h4>
+  <p>낭독 장소가 <strong>성전 뜰이 아니라 수문 앞 광장</strong>이라는 <span class="c h">H</span>의 관찰이 이 장의 신학적 핵심이다. 성전에는 제사장만의 구역이 있으나, 여기서는 온 회중이 <strong>가족 단위로 함께</strong> 모인다. 전통적으로 성전에 보관되던 율법이 <strong>백성의 자리로 나온다</strong>(신 6:7–9). 거룩한 말씀이 성소에 갇히지 않고 삶의 광장으로 내려오는 이 이동이, 회당 예배 원형의 탄생이자 말씀 중심 신앙의 시작이다.</p>
+
+  <h4>③ 이해 없는 낭독은 없다 — 교사의 자리</h4>
+  <p>메포라쉬(번역·해설, 8절)가 이 장의 방법론이다. <span class="c h">H</span>: 해석과 설명 없이는 <strong>기록된 말씀과 현재의 적실성 사이의 간극</strong>을 백성이 건널 수 없다. 레위인이 히브리어를 아람어로 번역하고 단락별로 나눠 "뜻을 해석하여 깨닫게" 한다. <strong>선지자가 아니라 서기관·교사 에스라</strong>가 말씀을 가르치는 모든 이의 모범이다 — 성령이 이스라엘을 떠났다는 랍비의 인식 이후, 공동체는 교사의 가르침으로 인도된다. 딤후 2:15("옳게 분별하며")이 이 해석의 사역을 잇는다.</p>
+
+  <h4>④ 거룩이 기쁨을 낳는다 — 통곡에서 잔치로</h4>
+  <p>8:10의 <span class="hw">חֶדְוַת יהוה</span>(헤드바트 야훼, 여호와로 인한 기쁨)가 이 장의 정점이다. <span class="c h">H</span>: 말씀을 깨달은 백성이 회개의 통곡에 잠기자, 느헤미야가 <strong>"이 날은 거룩하니 근심하지 말라"</strong>며 잔치로 돌린다. 그들이 들은 토라는 형벌만이 아니라 <strong>회개하는 자를 위한 속죄와 신실한 자를 위한 축복</strong>도 담았다. 거룩은 경외·엄숙만이 아니라 <strong>기쁨</strong>을 낳는다. 히브리 문화의 기쁨은 몸·마음·영의 전인적 경험이므로, "살진 것을 먹고 단 것을 마시라"는 명령이 곧 거룩의 실천이 된다.</p>
+
+  <h4>⑤ 기쁨이 관대함으로 — 몫을 나누다</h4>
+  <p>말씀을 깨달은 기쁨이 <strong>"예비하지 못한 자에게 몫을 보내는"</strong> 관대함으로 흘러넘친다(8:10, 12). <span class="c h">H</span>: 야훼와 "연결"되었음을 깨달은 기쁨이 자기 필요를 넘어 <strong>이웃과 나누는 능력</strong>을 낳았다. 고후 9:6–11("넉넉히 심는 자는 넉넉히 거두리라")이 이 결을 잇는다. <strong>말씀의 수용 → 거룩 → 기쁨 → 관대함</strong>이라는 연쇄가, 5장의 착취와 정반대되는 공동체의 회복상을 그린다.</p>
+
+  <h4>⑥ 광야를 기억하는 초막 — 귀환자의 신학</h4>
+  <p>초막절(13–18절)이 이 장을 닫는다. <span class="c h">H</span>: 광야에서 이스라엘을 지키신 하나님의 공급·보호를 기념하는 이 절기가, <strong>바벨론에서 광야를 건너 돌아온 귀환자들</strong>에게 각별한 의미를 지닌다 — 첫 세대가 여호수아 아래 약속의 땅에 들어갔듯, 이들도 포로에서 안전히 나와 정착했다. "여호수아 이래의 큰 기쁨"이라는 표현이 <strong>새 출애굽·새 정착의 신학</strong>을 압축한다. 그리고 이 절기의 물 붓는 예식이 요 7:37("생수의 강")에서 그리스도께로 이어지며, 초막의 임시 거처가 궁극적 안식을 향한 순례의 표지가 된다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 8장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

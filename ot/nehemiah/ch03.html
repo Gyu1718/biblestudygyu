@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 3장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch03.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 3장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 명단의 성격과 구조</a>
+    <a class="lv2" href="#s0-arch">고고학과의 상응</a>
+    <a class="lv2" href="#s0-source">자료비평</a>
+    <a class="lv1" href="#s1">1. 대제사장의 봉헌 (3:1)</a>
+    <a class="lv1" href="#s2">2. 북·서편 (3:2–15)</a>
+    <a class="lv2" href="#v45">3:4–5 므레못과 드고아</a>
+    <a class="lv2" href="#v79">3:7–9 총독 관저·펠레크</a>
+    <a class="lv2" href="#v1112">3:11–12 화덕 망대·딸들</a>
+    <a class="lv2" href="#v1315">3:13–15 성문들과 실로암</a>
+    <a class="lv1" href="#s3">3. 동편 (3:16–27)</a>
+    <a class="lv1" href="#s4">4. 동편 추가 (3:28–32)</a>
+    <a class="lv1" href="#s5">5. 발췌: 성벽의 봉헌</a>
+    <a class="lv1" href="#s6">6. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">וַיָּקָם … וַיִּבְנוּ</div>
+  <h1>느헤미야 3장 심층 연구</h1>
+  <div class="sub">바야콤 … 바이브누, "일어나 … 건축하니라" (느 3:1) — 건축자 명단의 절 단위 주해</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">הֶחֱזִיק</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 명단의 성격과 구조</h2>
+    <div class="gloss">헤헤지크, "중수하니라/견고하게 하니라" — 명단을 관통하는 동사</div>
+  </div>
+
+  <p>약 마흔에서 마흔한 개의 불균등한 구간이 인물·집단에 배정된다 <span class="c f">F</span> <span class="c h">H</span>. 구간 길이의 편차는 필요한 보수량 또는 배정된 인원·역량의 차이에서 온다 <span class="c h">H</span>. <span class="c h">H</span>는 명단을 네 구간으로 나눈다. <strong>북단 봉헌(3:1) / 북·서편(3:2–15) / 동편(3:16–27) / 동편 추가(3:28–32).</strong> 조직 원리도 다양하다. 지역(성읍·구역), 가문, 직업(길드)별 편성이 섞여 있다 <span class="c h">H</span>.</p>
+
+  <div class="note">
+    <div class="tt"><span class="c t">T</span> — 문학적 기능</div>
+    <p><span class="c t">T</span>가 이 명단을 가장 적극적으로 읽는다. 2:18의 결단("일어나 건축하자")이 3:1의 실행("엘리아십이 <em>일어나 건축하니라</em>")으로 즉시 이어지는 <strong>어휘 연결</strong>, "그 다음은"의 연쇄와 "중수하니라"의 반복이 만드는 연대의 리듬, 대제사장부터 향품 장사(3:8), 구역 책임자들, 딸들과 함께 일한 살룸(3:12)까지 아우르는 구성의 폭. <span class="c t">T</span>는 또 3:1–15와 3:16–32의 <strong>전환어 차이</strong>가 옛 성벽 노선과 새 노선(다윗성 동편)의 구분에 대응한다는 Williamson의 제안을 전달한다.</p>
+  </div>
+
+  <div class="note">
+    <div class="tt"><span class="c t">T</span> — 신학적 관찰: 느헤미야가 사라지는 장</div>
+    <p>이 장은 <strong>1인칭이 물러나고 공동체의 이름들이 지면을 채우는 장</strong>이다. 이 배치가 에스라-느헤미야의 주인공이 공동체라는 논제(Eskenazi 계열, <span class="c t">T</span>가 공유)의 실물 증거다. 향품 장사와 딸들과 구역 책임자들이 대제사장과 나란히 등재된다.</p>
+  </div>
+
+  <div class="note" id="s0-arch">
+    <div class="tt">고고학과의 상응 — <span class="c f">F</span></div>
+    <p>Kenyon 발굴 이전의 성벽 동일시는 낡은 것으로 보아야 한다. 느헤미야의 도시는 이전에 받아들여지던 것보다 훨씬 작았고 동쪽 언덕(능선)의 정상부에 국한되었다 <span class="c f">F</span>. 3장의 서술은 동쪽 성벽에 관한 한 고고학과 상응한다. <strong>골짜기 문·분문·샘문의 보수는 고고학 증거와 맞아떨어진다.</strong> 동쪽에서 본문은 "예를 들어 엘리아십의 집 맞은편에 성벽을 세웠다"고 분명히 말하며 옛 성벽이나 성문을 언급하지 않는다. 고고학은 <strong>포로기 이전의 동쪽 비탈 도시가 버려졌고 느헤미야가 동쪽 능선을 따라 새 성벽을 세웠음</strong>을 보인다. 이 성벽은 약 8피트 두께로 견고하되 급조한 흔적이 있다. <span class="c f">F</span>의 평가: <strong>"고고학 결과와 성경 서술이 상응하는 탁월한 예다."</strong></p>
+  </div>
+
+  <div class="caveat" id="s0-source">
+    <div class="tt">자료비평 — 명단은 어디서 왔는가</div>
+    <p><span class="c f">F</span>는 이 서술이 저자가 가진 <strong>문서고 자료</strong>에서 왔을 개연성을 본다. 명단은 불완전하다. 11절의 말기야가 "둘째 부분"을 맡았다고 하는데 그 첫 부분이 어디에도 없다. 저자의 의도는 완전한 명단 제공이 아니라 성벽 복구의 전체 그림을 주는 것이었다 <span class="c f">F</span>. <span class="c b">B</span>도 같은 자료비평적 단서를 단다. 이런 명단은 문서고 자료의 편입이며 현재 문맥과 항상 맞물리지는 않는다(주민이 있는 듯한 이 명단과 7:4의 소수·11장의 이주 사이의 불일치).</p>
+    <p><span class="c t">T</span>는 명단의 독립 기원을 넷으로 논증한다. ① 문빗장 진술이 6:1과 모순 ② 3인칭 서술(회고록은 1인칭) ③ 귀족 어휘가 회고록과 상이 ④ "그들의 주"라는 이례적 표현. 그 위에서 Kellermann의 <strong>회고록 채용설</strong>(느헤미야가 이 명단을 자기 회고록에 편입)을 채택하되, Mowinckel의 후대 삽입설은 물리친다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">קִדְּשׁוּהוּ</div>
+    <div class="eyebrow">3:1</div>
+    <h2>1. 대제사장의 봉헌</h2>
+    <div class="gloss">킷데슈후, "봉헌하니라" — 양문에서 시작하는 반시계 여정</div>
+  </div>
+
+  <p><strong>엘리아십이 먼저 명명된다.</strong> <span class="c f">F</span>: <strong>가장 중요한 인물이 먼저다.</strong> 느헤미야는 대제사장의 협력, 따라서 다른 제사장들의 협력도 확보했음을 보이려 했다. 엘리아십은 스룹바벨 시대 대제사장 예수아의 손자다. 제사장의 작업이 성벽 북동쪽에 집중된 것은 성전에 가까웠기 때문이다.</p>
+  <p><span class="c h">H</span>: 성전 봉사의 수장으로서 엘리아십이 명단을 연다. 그렇게 함으로써 그는 <strong>본을 보이는 제사장 지도력의 긴 계보</strong>를 잇는다. 첫 대제사장 아론이 속죄일에 자기 죄를 위한 제사를 먼저 드려 공동체를 대표했고(레 16:11–14), 제사장들이 요단 강물에 먼저 발을 들여 신적 개입으로 물이 갈라졌다(수 3:14–17). 제사장은 하나님의 말씀을 가르칠(신 33:10) 뿐 아니라 <strong>백성 앞에서 그것을 살아내어</strong> 이스라엘을 이끌어야 했다.</p>
+  <p><strong>총독의 양보.</strong> <span class="c h">H</span>: 이 자리에서 총독 느헤미야가 대제사장 엘리아십에게 양보한다. 성소와 그 제의의 수장으로서 그가 북쪽 구간을 봉헌함으로 건축 과정을 시작한다. 신실한 제사장은 평신도에게서 존경과 명예를 받아 마땅하며, 그들은 백성과 하나님 사이의 틈에 선다.</p>
+
+  <div class="note">
+    <div class="tt">봉헌 = 사업 전체의 성격 표시</div>
+    <p><span class="c k">K</span>: 봉헌은 사업 전체의 성격을 표시하며 12:27에서 예고된다. <span class="c f">F</span>: 이 단어(<span class="hw">קִדְּשׁוּהוּ</span>, 킷데슈후)는 대제사장과 그 동료들의 작업에만 쓰이며, 건물이 완성된 뒤 주께 봉헌되었음을 보인다. 성문과 성벽의 봉헌이 갖는 신학은 5부(발췌논문) 참조.</p>
+  </div>
+
+  <div class="caveat">
+    <div class="tt">쟁점 — 본문 수정 (킷데슈후 → 게루후)</div>
+    <p>일부 학자는 <span class="hw">קִדְּשׁוּהוּ</span>(킷데슈후, 봉헌하다)를 <span class="hw">קֵרוּהוּ</span>(게루후, "들보를 얹다", cf. 3:3, 6)로 수정하려 한다. <span class="c f">F</span>는 이 수정을 <strong>기각</strong>한다. 그 경우 같은 절 뒤의 킷데슈후도 필사 오류로 보아야 하는데, <strong>같은 문장에서 같은 단어의 필사 오류가 두 번 일어났다고 보기는 어렵다.</strong></p>
+  </div>
+
+  <p><strong>성문 명명의 의미 <span class="c h">H</span>.</strong> 성문과 망대가 정의되는 것은 구간 표지로 편리하기 때문이자 <strong>적의 공격 지점을 나타내기 때문</strong>이다. 대부분은 확실히 동일시하기 어렵다. <strong>양문</strong>은 가장 흔한 제물인 어린양을 사들이는 양 시장의 존재를 가리키며, 그런 시장이 예수 시대 성전 구역에 있었다(마 21:12–13). <strong>어문</strong>(魚門)은 두로 사람들이 장악한 어시장에서 이름을 얻었고(느 13:16), 북서쪽 모퉁이의 모퉁이문(왕하 14:13; 렘 31:38)과 같을 수 있다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">פֶּלֶךְ</div>
+    <div class="eyebrow">3:2–15</div>
+    <h2>2. 북·서편 구간</h2>
+    <div class="gloss">펠레크, "구역" — 유다 속주의 행정 소구획</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">3:2–3 — 여리고·스나아, 어문</span>
+    <p><strong>이름 없는 무리.</strong> "여리고 사람들"처럼 이름이 주어지지 않은 경우, <span class="c f">F</span>는 계보 미상 때문이라는 견해를 소개하되 <strong>완전한 서술이 아니어서 생략된 것</strong>으로 본다. 5절·27절의 드고아 사람들, 그리고 기브온·미스바(7절)·사노아(13절)·벧학게렘(14절)·벧술(16절)·그일라(17절) 등 성읍명이 이어진다. <strong>스나아</strong>는 스 2:34–35에 근거해 인물이 아니라 지명일 수 있다 <span class="c h">H</span>.</p>
+    <p><strong>3:3 어문 — <span class="hw">קֵרוּהוּ</span>(게루후).</strong> <span class="c f">F</span>: 어근 <span class="hw">קרה</span>(카라)의 피엘형으로 지붕을 얹거나 집을 마감하는 것을 가리킨다(시 104:3). "들보를 얹었다"는 마감 작업을 뜻하며, 이어지는 "문짝과 자물쇠와 빗장을 달았다"가 이를 뒷받침한다.</p>
+  </div>
+
+  <div class="vs" id="v45">
+    <span class="ref">3:4–5 — 므레못, 그리고 드고아 귀족의 거부</span>
+    <p><strong>중수하다 — <span class="hw">הֶחֱזִיק</span>(헤헤지크).</strong> <span class="c f">F</span>: "수리하다/재건하다/건축하다"로도 옮긴다. 어근 <span class="hw">חזק</span>(하자크)는 본래 "강하게 하다"이며 어떤 건축 활동이든 가리킬 수 있다. <span class="c h">H</span>: 이 동사는 <strong>"복구하다"가 아니라 "견고하게 하다"</strong>이며, 무너진 곳의 재건과 새 구간 신축을 모두 포함한다. <strong>O. Lipschits는 이 단어가 행정·재정 지원까지 포함한다고 설득력 있게 논증했다</strong> <span class="c h">H</span>.</p>
+    <div class="note">
+      <div class="tt">므레못 — 에스라와 느헤미야를 잇는 인물</div>
+      <p><span class="c f">F</span>: 우리아의 아들 므레못(3:4, 21)은 <strong>에스라와 느헤미야 양쪽에 알려진 것으로 우리가 동일시할 수 있는 한 사람</strong>이다(스 8:33 참조). <span class="c h">H</span>: 그가 에스라의 제사장이자 재무관(스 8:33–34)과 같은 사람이라면, <strong>학고스 가문(스 2:61–63)의 자격 문제가 회복되었음</strong>을 함의한다. 이 가문은 계보 증명이 없어 제사장직에서 배제되었었다.</p>
+    </div>
+    <p><strong>3:5 드고아 귀족.</strong> "그 귀족들은 그들의 주인들의 일에 목을 내밀지 아니하였느니라"(직역). <span class="c f">F</span>: 수수께끼 같은 표현이다. 귀족은 회중이 뽑은 대표였을 수 있다. <strong>이 절은 모든 유대인이 예루살렘 방어시설 재건에 열심이었던 것은 아님을 보여 준다.</strong> 드고아는 게셈의 아랍인에게 쉽게 공격받을 수 있는 개방 지대였는데, 이것이 비협조의 이유였을까? <span class="c h">H</span>는 <strong>멍에 은유</strong>를 읽는다. "목을 내밀지 않았다"는 밭을 갈 멍에를 거부하는 소의 그림이다. 이 귀족들은 감독자의 다스림에 자신을 낮추려 하지 않았다. <strong>느헤미야의 공동체에도 고집 센 "노새"가 있었다.</strong></p>
+    <div class="note">
+      <div class="tt">멍에 은유의 수용사 — <span class="c h">H</span></div>
+      <p>후대 유대교는 멍에를 <strong>개종자가 계명 준수를 서약하는 것</strong>("계명의 멍에를 받아들임", 미쉬나 베라코트 2:2)에 쓴다. 이 개념은 제2성전기로 거슬러 가며, 신약 기자들도 유대교의 "멍에"를 지는 어려움을 말한다(행 15:10; 갈 5:1). 같은 은유로 <strong>예수는 자기 "멍에"를 지라고 권하며 그 요구가 무겁지 않으리라 약속한다(마 11:29–30).</strong></p>
+    </div>
+  </div>
+
+  <div class="vs" id="v79">
+    <span class="ref">3:6–9 — 예샤나, 총독 관저, 아자브, 펠레크</span>
+    <p><strong>3:6 예샤나 성문.</strong> <span class="c f">F</span>: "새 구역의 문"으로도 옮기나, <strong>예샤나는 지명</strong>이었고 성문이 그 방향을 가리켰을 수 있다(현재의 야파 문이 야파를 향하듯). <span class="c h">H</span>: 역본들이 "옛 문"과 인명("예샤나 문")으로 갈린다.</p>
+    <p><strong>3:7 강 서쪽 총독의 처소.</strong> <span class="c f">F</span>: 히브리어가 불명료하다. 문제는 <span class="hw">כִּסֵּא</span>(킷세, 자리)다. 비유적으로 "관할"로 읽으면 "총독의 관할 아래 있던 자들"이 되고, 문자적으로 읽으면 <strong>총독이 예루살렘 방문 시 머문 관저</strong>가 된다. F는 후자를 택한다. 관할설이라면 왜 기브온·미스바 사람들만 총독 관할로 특정하겠는가 — 이 장의 모든 사람이 그 관할 아래 있었다. <span class="c h">H</span>: 기브온·미스바·벧엘은 <strong>느부갓네살이 파괴하지 않은 성읍</strong>이다. 주민이 그와 평화조약을 맺어 포로기에도 포도원이 번성했다.</p>
+    <p><strong>3:8 아자브·넓은 성벽.</strong> <span class="c f">F</span>: "수리하다"(<span class="hw">וַיַּעַזְבוּ</span>, 바야아즈부)는 <span class="hw">עזב</span>의 <strong>제2어근</strong>에서 왔다(출 23:5 참조). 우가릿어 <span class="hw">ʿdb</span>가 "준비하다/만들다"를 뜻하며, 북서셈어 용법에 따라 여기서 "수리하다"를 뜻한다. <strong>넓은 성벽</strong>은 그 지점의 방어 강화용 특별 성벽일 수 있다(느 8:16의 에브라임 문 광장 참조). 금장색·향품장사 길드는 3장이 보여 주는 <strong>중산층 직업 조합</strong>이다(0부 참조). <span class="c h">H</span>: 향유(발삼) 제조는 사해의 엔게디에서 이미 주전 6세기에 확인된다.</p>
+    <div class="caveat">
+      <div class="tt">어휘 — <span class="hw">פֶּלֶךְ</span>(펠레크)의 뜻</div>
+      <p><span class="c f">F</span>: 3:9, 12, 14, 15, 16, 17, 18에 쓰이며 예루살렘·벧학게렘·미스바·벧술·그일라를 가리킨다. 보통 "구역"으로 옮겨 유다 속주의 여러 행정구를 뜻하는 것으로 본다. <strong>아카드어 <span class="hw">pilku</span>에서 온 동족어 또는 차용어</strong>로, 경계 지어진 영역, 곧 성읍에 딸린 주변 지역을 뜻한다. 느헤미야 시대에 이 지역들에는 이미 통치자·행정관이 있었고, 큰 영역(예루살렘·그일라)은 두 통치자를 두었다. <span class="c h">H</span>는 대안을 덧붙인다. 소수 학자는 이 단어를 <strong>세금 징수 또는 부역(corvée)</strong>을 뜻하는 다른 아카드어와 연결한다. <span class="c k">K</span>는 "물레가락"(주변을 도는 원구역)으로 풀기도 한다.</p>
+    </div>
+    <p><strong>3:9 르바야.</strong> <span class="c h">H</span>: 예루살렘 반쪽 구역의 책임자로서 그 지역 <strong>부역을 관할하던 관리가 몸소 다른 건축자들과 나란히 노동했다.</strong> 3:12·14·15의 다른 구역 책임자들도 마찬가지다. <strong>모든 귀족이 드고아 귀족처럼 고집스럽지는 않았고, 여러 사회 계층의 건축자들이 공동체를 위해 함께 일했음</strong>을 보인다.</p>
+  </div>
+
+  <div class="vs" id="v1112">
+    <span class="ref">3:11–12 — 화덕 망대, 살룸의 딸들</span>
+    <p><strong>3:11 화덕 망대·둘째 구간.</strong> <span class="c h">H</span>: 화덕 망대는 여덟째 세기 웃시야 왕이 골짜기 문 근처에 세운 망대일 수 있다(대하 26:9). 성경 시대의 화덕은 지름 약 2.5피트였다. <span class="hw">מִדָּה שֵׁנִית</span>(밋다 셰니트, 둘째 구간)에 대해 <span class="c f">F</span>: 첫 구간이 이미 복구되었고 둘째를 작업 중임을 뜻한다. 다만 <strong>말기야의 첫 구간은 어디에도 언급되지 않는다</strong> — 이 장의 명단이 완전하지 않다는 증거다(0부 참조).</p>
+    <div class="note">
+      <div class="tt">3:12 살룸의 딸들 — 축자 독법의 채택</div>
+      <p>히브리어 <span class="hw">וּבְנוֹתָיו</span>(우베노타브)는 "그리고 그의 딸들"이다. <span class="c f">F</span>: 대다수 학자는 문자 그대로 받아 <strong>살룸의 딸들이 그를 도왔다는 이례적 사실</strong>이 진술된 것으로 본다. "작은 성읍들"(딸=마을)로 읽으려는 수정도 있으나, <strong><span class="hw">בָּנוֹת</span>의 3인칭 접미사가 여성이 아니라 남성이므로 마을설은 곤란하다.</strong> 여성이었다면 예루살렘을 가리켜 "작은 성읍들"일 수 있었다. F의 결론: 문맥상 살룸이 예루살렘 반쪽 구역의 통치자로 논의의 중심에 있으므로 본문을 고치지 않고 <strong>친딸</strong>로 읽을 수 있다. <span class="c h">H</span>: 여자들도 남자들과 함께 성벽에서 일했다. 딸들이 특기된 것은 <strong>아들이 없었기 때문일 것</strong>이다. 전 주민의 축성 참여는 아테네에서도 병행된다. 투키디데스에 따르면 페르시아의 파괴 후 성벽 재건 시 "남자, 여자, 아이 등 도시의 전 주민이 축성에 참여하라"고 명령되었다(펠로폰네소스 전쟁사 1.90.3).</p>
+    </div>
+  </div>
+
+  <div class="vs" id="v1315">
+    <span class="ref">3:13–15 — 골짜기 문, 분문, 샘문과 실로암</span>
+    <p><strong>3:13 사노아·천 규빗.</strong> <span class="c f">F</span>: 사노아는 예루살렘 남서쪽. 천 규빗은 약 1500피트로 긴 구간이다. 보수가 쉬웠거나 사노아 주민이 대규모였을 수 있다. 분문의 히브리어에 명백한 필사 오류(<span class="hw">הַשֲׁפוֹת</span> 대신 14절의 <span class="hw">הָאַשְׁפֹּת</span>)가 있다.</p>
+    <p><strong>3:15 틸렐·실로암 못.</strong> <span class="c f">F</span>: "덮었다"(<span class="hw">וַיְטַלְלֶנּוּ</span>, 바이탈렐렌누)는 어근 <span class="hw">טלל</span>에서 온 <strong>구약 유일어(하팍스)</strong>다. 팔미라 아람어에서 "덮다"를 뜻하며, 여기서는 샘문에 지붕을 얹었다는 뜻일 수 있다(3:3의 카라 피엘과 병행). 셀라 못(<span class="hw">שֶׁלַח</span>)을 실로암과 동일시하려는 견해가 있다.</p>
+    <div class="note">
+      <div class="tt">실로암 못 — 4Q느헤미야와 정결례 <span class="c h">H</span></div>
+      <p><strong>본문비평:</strong> 최근 발견된 4Q느헤미야 단편은 프로토-마소라 유형이되 칠십인역과 함께 <strong>"그의 아들들"</strong>(3:15의 문맥)이라는 독법을 보존한다. 필사자가 "그가 세웠다"(<span class="hw">ybnnw</span>)로 고쳐 프로토-마소라 전통에 맞춘 흔적이 있다("그의 아들들" <span class="hw">wbnyw</span>과 글자가 거의 같다).</p>
+      <p><strong>신학:</strong> 이 못은 <strong>실로암 못</strong>(문자적으로 "보냄", <span class="hw">שֶׁלַח</span>)으로 동일시될 수 있다. 제사장들이 정결례(레 14:8)나 절기 준수 전(스 6:20)에 사람들을 이 못으로 "보냈을"(<span class="hw">שָׁלַח</span>) 수 있다. 기혼 샘이 공급하는 유일한 상시 수원이므로 후대 랍비 기준으로도 정결 목욕에 적합하다. 훗날 예수가 맹인을 실로암 못으로 보내 씻게 하고, 복음서 기자가 그 이름이 "보냄"을 뜻한다고 밝힌다(요 9:2–7).</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">מִקְצוֹעַ</div>
+    <div class="eyebrow">3:16–27</div>
+    <h2>3. 동편 구간</h2>
+    <div class="gloss">믹초아, "성벽 모퉁이/직선벽" — 옛 노선에서 새 노선으로</div>
+  </div>
+
+  <div class="note">
+    <div class="tt">전환어의 변화 — 새 노선의 표지</div>
+    <p><span class="c f">F</span>: 3:2–12는 <span class="hw">עַל־יָדוֹ</span>(알-야도, "그 다음은/그 곁에")를, 3:16부터는(19절 제외) <span class="hw">אַחֲרָיו</span>(아하라브, "그 후는")를 쓴다. <span class="c k">K</span>는 Kenyon의 관찰을 전한다. <strong>16절부터 지표가 성문·"수리" 기록에서 사가(私家)와 집 기준으로 바뀐다.</strong> 이는 동쪽 마루를 따라 단축된 새 성벽 노선을 반영한다(3:20 이하). "수리"라는 기록은 1–15절에만 나온다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">3:16 — 다윗의 묘실, 인공 못, 용사의 집</span>
+    <p><span class="c f">F</span>: 여기 느헤미야는 <strong>또 다른 느헤미야</strong>(아스북의 아들, 벧술 반쪽 구역 통치자)를 가리킨다. 다윗의 묘실은 아직 발견되지 않았으나 왕의 동산 근처였을 수 있다. <strong>인공 못</strong>(<span class="hw">הַבְּרֵכָה הָעֲשׂוּיָה</span>, 하브레카 하아수야, "사람이 만든 못"). <strong>용사의 집</strong>(<span class="hw">בֵּית הַגִּבֹּרִים</span>, 벧 학기보림)은 다윗의 용사들(삼하 23:8 이하)을 가리킬 수 있다.</p>
+    <div class="note">
+      <div class="tt"><span class="c h">H</span> — 다윗의 묘와 정결례의 구분</div>
+      <p>다윗과 그 후손의 묘(왕상 2:10; 대하 21:20; 32:33)는 신약 기자들에게도 알려졌으나(행 2:29) 오늘날 확실히 동일시할 수 없다. <strong>시온산의 다윗 무덤 건물은 14세기 이후의 것이고 9세기 이전 어느 문헌에도 언급되지 않는다.</strong> 이 못은 <strong>인공</strong>이라는 점에서 기혼 샘이 자연 공급하는 실로암 못과 대조된다. 후대 유대 전통에 따르면 <strong>자연 수원이 공급하지 않는 못은 충분한 빗물이 없으면 정결 목욕에 부적합</strong>하므로, 이 구분은 중요하다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">3:17–20 — 레위인, 믹초아, 바룩의 열심</span>
+    <p><strong>3:17 레위인·하사뱌.</strong> <span class="c f">F</span>: 하사뱌는 레위인으로서가 아니라 <strong>자기 영토의 통치자로서</strong> 그일라 반쪽 구역을 위해 보수했다. <strong>레위인이 영토 통치자로 승진한 것</strong>이 흥미롭다(스 8:19의 레위인과 동일 인물인가?). <span class="c h">H</span>: 레위인들은 신분(제사장 보조 또는 정치 행정관) 때문에 면제받지 않았고, 여럿이 두 구간 이상을 보수했다.</p>
+    <p><strong>믹초아 — "성벽 모퉁이"인가 "직선벽"인가.</strong> <span class="c h">H</span>: 학자들은 흔히 "모퉁이(Angle)"로 옮겨 성벽이 꺾이는 지점으로 본다. 최근 발굴은 더 나은 후보를 찾았다. <strong>다윗성 정상 능선을 따라 성전산 쪽 북동으로 이어지는 "직선벽"(Straight Wall)</strong>이며 제1성전기의 것으로 보인다. 웃시야가 믹초아에 망대를 세웠고(대하 26:9), E. Mazar는 이 망대를 직선벽 북서쪽 끝의 구조물과 동일시한다.</p>
+    <p><strong>3:18 바왜.</strong> <span class="c f">F</span> <span class="c h">H</span>: 히브리어 <span class="hw">בַּוַּי</span>(바왜)는 히브리어에 없는 이름으로, <span class="hw">בִּנּוּי</span>(빈누이)의 <strong>필사 오류</strong>일 개연성이 크다(24절에서 헤나닷의 아들 빈누이로 명명됨). <strong>3:20 헤헤라</strong>(<span class="hw">הֶחֱרָה</span>, "열심히"). <span class="c f">F</span>: "달아올랐다"는 뜻이며, 뒤의 헤헤지크나 앞의 아하라브의 중복오사(dittography)일 수 있다. <span class="c h">H</span>: 문자적으로 "타오르다"로 보통 분노를 가리키나 여기서는 열심을 뜻한다(다만 HALOT은 아하라브의 중복오사로 본다).</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">3:25–27 — 왕궁 망대, 오벨, 수문</span>
+    <p><strong>3:25 윗 왕궁·시위대 뜰.</strong> <span class="c f">F</span>: "왕의 윗 궁"은 포로기 이전 왕의 별궁이었을 수 있다. 시위대 뜰은 렘 32:2에 언급된다. <span class="c h">H</span>: E. Mazar는 <strong>다윗 궁전 하부와 그 위 느헤미야 성벽의 일부를 발굴했다고 주장한다.</strong> "윗 궁"은 하부 궁전의 존재를 전제할 때 잘 이해된다. Mazar는 윗 궁을 페니키아인이 솔로몬을 위해, 하부 궁을 다윗을 위해 지었다고 본다. <strong>이 성벽은 주전 5세기의 것이며 급조 흔적을 보여, 52일 만에 지속적 반대 속에 지어졌다는 성경 기록(6:15)과 부합한다.</strong></p>
+    <p><strong>3:26 오벨·수문.</strong> <span class="c f">F</span>: "오벨에 거하는 느디님(성전 봉사자)"을 11:21에서 흘러든 방주(gloss)로 보는 학자도 있으나 삭제할 본문 증거는 없다. 수문은 기혼 샘에 가까웠고 성벽의 일부였다(Rudolph의 성벽 외부설 반박). <span class="c h">H</span>: <strong>오벨</strong>(<span class="hw">עֹפֶל</span>, "부풀음/성전산의 시작")에는 성전 봉사자들이 거했다. E. Mazar에 따르면 이 시대 세 수도(예루살렘·사마리아·디본)에서 "오벨"이 발견되며, 왕궁과 엘리트 건물이 위치한 구역을 가리킨다. <strong>수문은 도시가 아니라 궁전-성전 단지로 들어가는 문</strong>이며(8:1, 3, 16; 12:37), 에스라가 훗날 율법을 낭독하는 장소다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">שַׁעַר הַסּוּסִים</div>
+    <div class="eyebrow">3:28–32</div>
+    <h2>4. 동편 추가 구간</h2>
+    <div class="gloss">샤아르 핫수심, "마문" — 성문들과 계층의 협력</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">3:28–30 — 마문, 동문, 므술람</span>
+    <p><strong>3:28 마문.</strong> <span class="c f">F</span>: 왕하 11:16과 대하 23:15에서는 궁전과 성전 사이 구역과 연결되나, 렘 31:40은 <strong>성문</strong>으로 언급한다(여기 28절과 같다). F는 이를 <strong>성벽의 성문</strong>으로 판정한다(내부 성문 복구는 이상하므로). <span class="c h">H</span>: 마문은 성전에서 궁전으로 이어졌을 것이다(왕하 11:16; 대하 23:15).</p>
+    <p><strong>3:29 동문.</strong> <span class="c f">F</span>: 동문은 성전 문의 하나였다(겔 40:6, 10). 작업은 이 문 자체가 아니라 문지기가 성벽 한 구간을 보수했다는 뜻이다. <span class="c h">H</span>가 이 문의 신학적 무게를 더한다. <strong>동문은 현 황금문의 전신일 수 있다.</strong> 폭풍이 균열을 낸 뒤 황금문 아래에서 옛 문의 아치가 드러났다. 이 문은 <strong>에스겔의 신적 병거 환상에서 하나님의 임재가 성을 떠나는 출구(겔 10:19; 11:23)</strong>이자, 예언자들이 그 귀환을 내다본 통로(겔 40:6–16; 슥 14:4)로 두드러진다.</p>
+    <div class="note">
+      <div class="tt">3:30 므술람 — 도비야 사돈으로 이어지는 실</div>
+      <p><span class="c h">H</span>: 여기 베레갸의 아들 므술람은 서편에서 지은 사람(3:4)과 <strong>다른 인물</strong>이다(두 구간 기록이 없으므로). 그는 대부분의 제사장이 일한 동편에서 보수했고 그의 방은 성전 단지에 연결되었을 수 있다. <strong>이 므술람은 암몬 관리 도비야의 아들과 딸이 혼인한 바로 그 사람일 개연성이 크다(2:19; 6:18 참조).</strong> 도비야는 제사장 엘리아십과 연결되었고, 이 혼맥들을 통해 도비야도 성전 단지 안에 방을 얻을 수 있었다(13:4–5).</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">3:31–32 — 소집문, 계층의 협력</span>
+    <p><strong>3:31 함미프카드(소집문).</strong> <span class="c f">F</span>: <span class="hw">שַׁעַר הַמִּפְקָד</span>(샤아르 함미프카드)를 "감시문"으로도, 칠십인역을 따라 인명("미프캇 문")으로도 옮긴다. 어근 <span class="hw">פקד</span>는 의미장이 넓어 렘 52:11의 <span class="hw">בֵּית הַפְּקֻדּוֹת</span>는 "감옥"을 뜻한다. 따라서 여기서도 <strong>"감옥 망대"</strong>일 가능성이 있으나, <strong>사람이 징집을 위해 소집되던 곳</strong>일 개연성이 더 크다. <span class="c h">H</span>: "감시문"으로도 옮긴다(느 12:39 참조).</p>
+    <div class="note">
+      <div class="tt">3:31–32 — 계층의 협력이라는 총평 <span class="c h">H</span></div>
+      <p><strong>"이 사업에서 그토록 다양한 계층과 신분의 사람들이 협력한 것은 주목할 만하다. 구역 행정관과 제사장이 장인들과 나란히 일했다. 느헤미야의 탁월한 지도력은 사람들이 자기에게 가장 잘 맞는 영역에서, 곧 자기 거처 근처나 자기 길드(제사장·금장색 등)와 함께 일하게 했다."</strong> <span class="c k">K</span>: 이 종결(대제사장과 장인·상인이 나란히)은 <strong>사업 전체의 상징</strong>이다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="heb">קִדּוּשׁ</div>
+    <div class="eyebrow">EXCURSUS 13</div>
+    <h2>5. 발췌: 성벽의 봉헌</h2>
+    <div class="gloss">킷두쉬 — 거룩이 성전에서 도시로 확장되는 지점</div>
+  </div>
+
+  <p><span class="c h">H</span>의 발췌논문 13을 정리한다. 3:1의 봉헌(<span class="hw">קִדֵּשׁ</span>, 킷데쉬)이 12장의 성벽 봉헌식으로 이어지며, 이 책의 큰 신학(거룩의 공간 확장)의 씨앗이 여기 있다.</p>
+
+  <h4>봉헌의 방식</h4>
+  <p><span class="c h">H</span>: 느헤미야 성벽과 성문의 봉헌은 <strong>기름 부음</strong>으로 이루어졌을 개연성이 크다. 고대 근동 전역에서 봉헌이 이 방식으로 행해졌다. 토라에 따르면 성막의 제단과 기물은 먼저 제물의 피로 정결케 한 뒤 기름을 부어 성별되었다(출 29:35–37). <strong>다만 느헤미야의 성벽은 성전 성물 수준의 성소가 아니어서 속죄 기능이 없었으므로, 피 제사는 필요하지 않았을 것이다.</strong> 관유는 감람유에 몰약·계피 등을 섞은 특별 조제였고(출 30:22–33), 제2성전기에도 사용되었다(마카베오 시대 성전 정화 때 발견된 한 병, 구리 두루마리의 성유 목록).</p>
+
+  <h4>봉헌의 의미</h4>
+  <p><span class="c h">H</span>: 제사장 법에 따르면 기름 부음은 <strong>어떤 물건이 속된 영역에서 이탈해 거룩한 영역의 능력을 부여받았음</strong>을 표시한다. 봉헌된 물건은 신적 능력이 스며들어 특정한 방식으로 이스라엘에 복을 끼친다고 여겨졌다. 랍비들은 <strong>북쪽의 공격 취약성</strong> 때문에 이 구간(양문)의 봉헌이 필요했다고 짚는다. 봉헌은 <strong>신적 감독과 보호를 표시</strong>했다.</p>
+
+  <div class="note">
+    <div class="tt">거룩의 확장 — 이 책의 큰 논제</div>
+    <p><span class="c h">H</span>: 성벽과 성문을 정결케 하고(12:30) 찬양·제사와 함께 도시를 도는 거룩한 행렬을 조직한 것(12:27–43)은 <strong>성전의 거룩을 도시 전체로 확장하려는 노력</strong>으로 이해된다. 미쉬나가 느헤미야 12장을 두고 도시 확장의 절차를 규정한다(셰부옷 2:2, 두 감사제와 함께). 이는 솔로몬 성전 봉헌 때 제단이 모든 제물을 감당하지 못해 뜰 가운데를 특별히 성별한 일(왕상 8:64; 대하 7:7)을 연상시킨다. <strong>느헤미야는 레위인을 성전 문이 아니라 거룩한 성의 문을 지키게 세웠고(7:1; 13:22), 성벽은 도시를 보호할 뿐 아니라 야훼 거주의 연장으로서 공동체가 존중할 거룩한 영역을 구획한다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">שְׁמוֹת</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>6. 상호 참조와 신학 종합</h2>
+    <div class="gloss">셰모트, "이름들" — 기억되는 공동체의 명부</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:15%">느 3장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">3:1</td><td>레 16:11–14 (아론의 속죄일) / 수 3:14–17 (요단의 제사장) / 신 33:10 (가르침) — 본을 보이는 제사장 지도력</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:1</td><td><strong>마태 21:12–13</strong> (양 시장) / 느 13:16 (어시장) / 왕하 14:13; 렘 31:38 (모퉁이문)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:1</td><td>느 12:27 (봉헌 예고)</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">3:4</td><td><strong>스 8:33–34</strong> (재무관 므레못) / 스 2:61–63 (학고스 가문의 자격 문제)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">3:5</td><td><strong>미쉬나 베라코트 2:2</strong> (계명의 멍에) → 행 15:10; 갈 5:1; <strong>마 11:29–30</strong> (예수의 멍에)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:7</td><td>기브온·미스바·벧엘 — 느부갓네살의 비파괴(평화조약)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:8</td><td>출 23:5 (아자브 제2어근) / 느 8:16 (에브라임 문 광장)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">3:11</td><td>대하 26:9 (웃시야의 골짜기 문 망대 = 화덕 망대?)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:12</td><td><strong>투키디데스 『펠로폰네소스 전쟁사』 1.90.3</strong> (아테네 전 주민의 축성)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:15</td><td>레 14:8; 스 6:20 (정결례) / <strong>요한복음 9:2–7</strong> (실로암 = "보냄")</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:15</td><td>4Q느헤미야 (본문비평, "그의 아들들")</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:16</td><td>왕상 2:10; 대하 21:20; 32:33 (다윗의 묘) / <strong>행 2:29</strong></td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:16</td><td>삼하 23:8 이하 (용사의 집 = 다윗의 용사들)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">3:17</td><td>스 8:19 (레위인 하사뱌와 동일 인물?)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">3:19</td><td>대하 26:9 (웃시야의 믹초아 망대)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:25</td><td>렘 32:2 (시위대 뜰)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">3:26</td><td>느 8:1, 3, 16; 12:37 (수문 = 낭독 장소)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:28</td><td>왕하 11:16; 대하 23:15; 렘 31:40 (마문)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">3:29–30</td><td>겔 40:6, 10 (동문 = 성전 문) / <strong>겔 10:19; 11:23</strong> (셰키나 퇴장) / 겔 40:6–16; 슥 14:4 (귀환 통로)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">3:30</td><td>느 2:19; 6:18; 13:4–5 (므술람 → 도비야 사돈)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">3:31</td><td>렘 52:11 (감옥 = 함미프카드?) / 느 12:39 (감시문)</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+  </table>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 공동체가 주인공 — 1인칭의 소멸</h4>
+  <p>1·2장을 지배하던 느헤미야의 "나"가 3장에서 사라지고 마흔 개 구간의 이름들이 지면을 채운다. <span class="c t">T</span>가 이 배치에서 읽는 것은 <strong>에스라-느헤미야의 주인공이 개인이 아니라 공동체</strong>라는 논제다. 지도자의 비전(1–2장)이 공동체의 손(3장)으로 옮겨 가는 장이다.</p>
+
+  <h4>② 연합 속의 다양성</h4>
+  <p>대제사장(1절)부터 향품 장사·금장색(8, 31–32절), 구역 행정관(9, 12, 14–19절), 레위인(17절), 성읍 주민(2, 5, 7, 13절), 문지기(29절), 그리고 딸들(12절)까지. <span class="c h">H</span>의 총평대로 <strong>"다양한 계층과 신분이 자기에게 가장 잘 맞는 자리에서 함께 일했다."</strong> 성벽은 한 사람의 업적이 아니라 계층을 가로지른 협업의 산물이다.</p>
+
+  <h4>③ 참여의 신학 — 딸들과 길드</h4>
+  <p>살룸의 딸들(12절)이 축자 그대로 성벽에서 일했다는 <span class="c f">F</span>의 독법과, 아테네 전 주민 축성과의 <span class="c h">H</span>의 병행은 <strong>거룩한 성의 재건에 참여의 문이 넓게 열려 있었음</strong>을 보인다. 향품·금장색 길드의 참여는 이 공동체가 성직 계급만의 것이 아니었음을 증언한다.</p>
+
+  <h4>④ 부분적 거부의 정직한 기록</h4>
+  <p>드고아 귀족의 비협조(5절)가 명단에 <strong>그대로 남았다.</strong> <span class="c h">H</span>: "느헤미야의 공동체에도 고집 센 노새가 있었다." 이상화하지 않는 이 기록이 명단의 신뢰성을 높이고, 참여가 강제가 아니라 자발이었음을 드러낸다. 드고아는 27절에서 <strong>둘째 구간</strong>을 맡아 귀족의 거부를 평민이 만회한다(<span class="c k">K</span>).</p>
+
+  <h4>⑤ 거룩의 확장 — 봉헌으로 열리는 지평</h4>
+  <p>3:1의 봉헌(<span class="c f">F</span>: "이 단어는 대제사장의 작업에만 쓰인다")이 12장 봉헌식의 씨앗이며, <span class="c h">H</span>의 발췌논문이 보이듯 <strong>성전의 거룩이 성벽과 도시로 확장되는 신학</strong>의 출발점이다. 성벽은 방어 시설이면서 야훼 거주의 연장 경계다.</p>
+
+  <h4>⑥ 이름이 기억되는 공동체</h4>
+  <p>이 장은 무명의 노동자 목록이 아니라 <strong>이름의 명부</strong>다. 회고록을 닫는 "나를 기억하옵소서"(13:31)의 신학이 여기서 공동체 차원으로 나타난다. 각 지체의 몫이 기록되는 공동체(고전 12장), 생명책의 이름들(빌 4:3; 계 21:27)로 이어지는 결이다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 3장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

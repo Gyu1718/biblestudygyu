@@ -1,0 +1,9 @@
+Cross-reference data in this directory is derived from
+OpenBible.info Cross References (https://www.openbible.info/labs/cross-references/),
+licensed under Creative Commons Attribution (CC-BY).
+
+The reference identifiers have been converted to Korean abbreviations
+(개역개정 book names) and grouped by book/chapter/verse. Vote counts
+(reference strength from community voting) are preserved as the "v" field.
+
+When redistributing, keep this attribution. See https://creativecommons.org/licenses/by/4.0/

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 10장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch10.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 10장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 구획과 배치</a>
+    <a class="lv1" href="#s1">1. 서언·인장 (9:38–10:1)</a>
+    <a class="lv1" href="#s2">2. 서명자 (10:1–27)</a>
+    <a class="lv1" href="#s3">3. 총칙 (10:28–29)</a>
+    <a class="lv1" href="#s4">4. 느헤미야 법전 (10:30–39)</a>
+    <a class="lv2" href="#v3031">10:30–31 통혼·안식일</a>
+    <a class="lv2" href="#v3234">10:32–34 성전세·나무</a>
+    <a class="lv2" href="#v3539">10:35–39 첫 것·십일조</a>
+    <a class="lv1" href="#s5">5. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">אֲמָנָה</div>
+  <h1>느헤미야 10장 심층 연구</h1>
+  <div class="sub">아마나, "굳은 언약" — 참회에서 서약으로, 말씀을 삶의 규례로</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 절 번호는 영어역·개역개정 기준(히브리어 10:1–40) · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">אָמֵן</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 구획과 배치</h2>
+    <div class="gloss">아멘 — 아마나(언약)와 같은 어근에서, 신실함의 서약</div>
+  </div>
+
+  <div class="caveat">
+    <div class="tt">먼저 — 절 번호</div>
+    <p>마소라 본문은 <strong>9:38을 10:1로</strong> 삼아, 10장의 모든 절이 히브리어에서 영어역보다 하나 크다. 이 문서는 개역개정과 같은 <strong>영어역 절 번호</strong>를 따른다(히브리어 10:1–40).</p>
+  </div>
+
+  <p><span class="c h">H</span>의 명료한 구조: <strong>표제(9:38) / 서명자 명단(10:1–27) / 율법을 지키겠다는 총칙(10:28–29) / 구체적 규례의 서약(10:30–39).</strong> <span class="c t">T</span>: 9장의 참회 기도가 10장의 서약으로 이어진다 — <strong>고백은 서약을 낳는다.</strong></p>
+
+  <div class="caveat">
+    <div class="tt">쟁점 — 10장은 제자리에 있는가</div>
+    <p><span class="c h">H</span>: 학자들이 배치를 두고 논하나, <strong>현재로선 옮길 결정적 이유가 없다.</strong> Myers는 10장이 13장의 공동체 묘사와 부합한다며 느헤미야서에 남겨야 한다고 본다. <strong>10장은 뒤따르는 것과 연결된다</strong> — 여기 열거된 의무 여럿(도비야의 성전 모독, 십일조 소홀, 통혼, 안식일 매매)이 13장에서 <strong>느헤미야가 바로잡아야 할 위반 기록으로 재등장</strong>한다. 곧 10장의 서약이 13장에서 깨어지는 것을 봄으로써, 이 책의 "미완성 신학"이 드러난다.</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">아마나 — "아멘"과 같은 뿌리 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: 서명자들이 문자 그대로 언약을 <strong>"자른다"</strong>(<span class="hw">כֹּרְתִים</span>, 코르팀 — "언약을 자르다"의 전형적 표현). 여기 쓰인 <strong>"굳은 언약"(<span class="hw">אֲמָנָה</span>, 아마나)</strong>은 어근 <span class="hw">אמן</span>(아멘, "참되다·신실하다")에서 왔다 — 8:6의 "아멘"과 같은 뿌리다. 또한 9:8에서 <strong>아브라함의 마음이 "신실하여"(<span class="hw">נֶאֱמָן</span>, 네에만)</strong> 하나님이 언약을 맺으셨다는 그 낱말과도 이어진다. <strong>공동체는 율법의 참됨과 그에 대한 굳은 헌신을, 민족의 조상 아브라함의 신실함을 본받아 거룩한 맹세로 확언한다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">חוֹתָם</div>
+    <div class="eyebrow">9:38–10:1</div>
+    <h2>1. 서언과 인장</h2>
+    <div class="gloss">호탐, "인장" — 밀랍에 눌러 봉인한 약속</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">9:38 — "우리가 견고한 언약을 세워 기록하고"</span>
+    <p><span class="c h">H</span>: 첫 구절이 <strong>서약을 앞선 금식·기도와 연결</strong>한다. 공동체의 이름으로 말하는 목소리가 9장의 공개적 죄 고백에서 이어진다. 기도를 인도한 레위인들이 여기서도 공동체를 위해 확언한다. 쿰란 공동체의 언약 갱신 예식에서도 제사장·레위인이 하나님의 구원 행적을 되뇌고 죄를 고백하며 언약 위반에 대한 심판을 받아들이도록 백성을 인도한다(1QS 1:18–26).</p>
+    <p><strong>인장을 치다.</strong> <span class="c h">H</span>: 공동체가 지도자들의 <strong>인장(<span class="hw">חוֹתָם</span>, 호탐)</strong>을 문서에 눌러 서약을 확증한다. Steinmann의 설명: 각 관리는 자기 이름에 전치사 <span class="hw">ל</span>("~에게 속한")을 붙여 거울상으로 새긴 도장 인장을 반지나 목걸이에 지녔고, 따뜻한 밀랍이나 무른 점토에 누르면 "(이름)에게 속함"이 바른 방향으로 찍혔다. <strong>인장은 말린 문서의 가장자리에 찍혀, 문서를 열려면 인장을 깨야 했다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">הַתִּרְשָׁתָא</div>
+    <div class="eyebrow">10:1–27</div>
+    <h2>2. 서명자 명단</h2>
+    <div class="gloss">하티르샤타, "총독" — 느헤미야가 먼저 인친다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">10:1–27 — 총독·제사장·레위인·족장</span>
+    <p><span class="c h">H</span>: <strong>총독 느헤미야가 맨 먼저</strong> 열거되어, 이 규례를 <strong>"느헤미야 법전"</strong>이라 부를 수 있다(<span class="hw">תִּרְשָׁתָא</span>, 티르샤타 — 에스라-느헤미야에만 나오는 페르시아 차용어 관직명). 바로 다음의 <strong>시드기야</strong>는 문서 작성을 맡은 서기관일 수 있으며(느 13:13의 "서기관 사독"과 동일인일 가능성, Steinmann), 그다음 21명의 제사장, 레위인, 족장이 인친다.</p>
+    <div class="note">
+      <div class="tt">대부분 개인이 아니라 가문 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: <strong>명단의 이름 대부분은 개인이 아니라 조상 가문 전체다.</strong> 씨족으로 대표되는 공동체가 언약을 지키기로 합의한 것이다. 이는 이 책 전반의 확대 가족 강조와 부합한다. <strong>에스라도 대제사장 엘리아십도 명단에 없는 것</strong>은, 느헤미야·시드기야 다음에 명단을 이끄는 <strong>스라야의 조상 가문에 포함되기 때문</strong>일 것이다. H: 세대를 잇는 신앙의 힘은 과소평가될 수 없다(딤후 1:5 — 로이스·유니게·디모데). <strong>제사장은 21명 중 14명이 느 12장 명단과 겹치고, 레위인은 (제사장과 달리) 가문이 아니라 개인으로 열거</strong>된다 — 이들 다수가 8:7의 교사, 9:4–5의 기도 인도자와 동일 인물이다. 레위인이 각별히 귀했던 것은 에스라가 처음부터 레위인을 충분히 귀환시키느라 겪은 어려움(스 8:15–20)에서 비롯한다.</p>
+    </div>
+    <p><span class="c h">H</span>: 서명자들은 정치 지도자·제사장·레위인·평신도 등 <strong>공동체의 모든 계층</strong>을 대표한다. 느헤미야의 지도력답게 그는 건축 사업 때처럼 모든 부류를 소집·결속시킨다. <strong>평신도 명단이 에스라 2장·느헤미야 7장보다 많은 것</strong>은 공동체의 성장을 증언한다 — 포로로 끌려가지 않았던 지역 주민 가문이나 메소포타미아에서 온 최근 귀환자가 더해졌을 수 있다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">אָלָה וּשְׁבוּעָה</div>
+    <div class="eyebrow">10:28–29</div>
+    <h2>3. 총칙 — 율법을 지키겠다는 서약</h2>
+    <div class="gloss">알라 우셰부아, "저주와 맹세" — 형벌을 각오한 언약</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">10:28–29 — "다 스스로 맹세하며 저주로 맹세하기를"</span>
+    <p><strong>10:28 "나머지 백성".</strong> <span class="c h">H</span>: 얼핏 평신도로 시작해 제사장·레위인이 잇따르는 듯하나, <strong>"나머지 백성"은 인장에 이름이 없는 이들을 아우르는 포괄적 표현</strong>일 것이다. "율법을 따르려고 <strong>스스로 구별한(<span class="hw">בדל</span>, 바달)</strong> 모든 자"가 함께한다.</p>
+    <div class="caveat">
+      <div class="tt">"스스로 구별한 자"는 개종자인가</div>
+      <p><span class="c h">H</span>: 일부 학자는 이 구절을 근거로 주변 인구에서 받아들인 <strong>개종자</strong>가 포함된다고 본다(토라 충성만이 통일 요소라면 누구든 받아들여진다는 논리). 스룹바벨 때 일부 지역 주민이 유월절에 합류한 전례도 있다(스 6:19–21). <strong>그러나 에스라-느헤미야의 통혼 반대 기조는 포용이 아니라 배제</strong>다. 만약 개종자를 뜻한다면, 다른 곳(스 9–10; 느 9:2; 13:3)에서 외부인을 배척·이혼·추방하는 것과 왜 다른지 설명이 있어야 한다. H의 판정: <strong>이 구절은 지역 주민에게서 자신을 구별해 토라를 지킨 기존 공동체를 가리킨다.</strong> Thiessen은 접속사 "and"를 <strong>설명적(explicative)</strong>으로 읽어, "구별한 자"가 별개 부류가 아니라 앞의 부류들을 서술한다고 본다.</p>
+    </div>
+    <p><strong>10:29 저주와 맹세.</strong> <span class="c h">H</span>: <strong>귀족들은 무엇보다 "형제"이며 그다음에 지도자다.</strong> 백성이 "저주로 맹세하기를" — 직역하면 "저주(<span class="hw">אָלָה</span>, 알라)와 맹세(<span class="hw">שְׁבוּעָה</span>, 셰부아)에 들어간다." Yamauchi: "저주(알라)는 맹세를 지키지 못할 경우 중한 형벌을 스스로에게 비는 서원이다." <strong>공동체는 형벌을 각오하고 모세를 통해 주신 율법을 지키기로 맹세한다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">בֵּית אֱלֹהֵינוּ</div>
+    <div class="eyebrow">10:30–39</div>
+    <h2>4. 느헤미야 법전 — 구체적 규례</h2>
+    <div class="gloss">베트 엘로헤누, "우리 하나님의 전" — "우리가 그것을 버려두지 아니하리라"</div>
+  </div>
+
+  <div class="vs" id="v3031">
+    <span class="ref">10:30–31 — 통혼 금지, 안식일·안식년</span>
+    <p><strong>10:30 통혼.</strong> <span class="c h">H</span>: 여기서 "느헤미야 법전"(30–39절)이 시작된다. 통혼법은 출 34:15–16, 신 7:3–4에서 유래하나(이방 배우자가 우상숭배로 이끌 우려), <strong>오경은 특정 민족만 배제하는 반면 여기서는 "이방인과의 혼인 일체 금지"라는 포괄적 형태</strong>다. 이 엄격한 해석이 여러 제2성전기 문헌에 이어진다. Clines는 이 활동을 <strong>후대 미쉬나 랍비의 주해(exegesis)의 첫 징표</strong>로 본다 — 토라의 특정 법을 골라 현재 상황에 적용한다.</p>
+    <p><strong>10:31 안식일·안식년.</strong> <span class="c h">H</span>: "잘못된 배우자를 <strong>취함</strong>(<span class="hw">לקח</span>, 라카흐)"에서 "잘못된 날에 물건을 <strong>취함</strong>(라카흐)"으로 옮겨간다. 안식일에 모든 매매를 금하는 이해는 포로기 이전부터다(렘 17:21–27; 암 8:5). <strong>공동체는 내부 거래에서는 안식일을 지켰으나, 규례 없는 이웃과의 교역이 문제</strong>였다(느 13:16). H: <strong>안식일은 독특한 유대적 혁신</strong>이다 — 다른 문화의 장날·명절은 달·계절에 매이나, 안식일은 계급을 막론하고 온 이스라엘이(이방 종·가축까지) 일을 그치는 평등한 거룩한 날이다. D. N. Freedman: 안식일에 야훼가 문자 그대로 "숨을 돌리셨다"(<span class="hw">וַיִּנָּפַשׁ</span>, 바이나파쉬, 출 31:17). 안식년에는 농사를 쉬고 <strong>모든 빚을 탕감</strong>한다 — 성벽 공사 중 채권자들이 빚을 탕감한 최근 은혜(느 5:9–13)가 이 서약자들의 기억에 생생했을 것이다.</p>
+  </div>
+
+  <div class="vs" id="v3234">
+    <span class="ref">10:32–34 — 성전세, 진설병·상번제, 나무 예물</span>
+    <p><strong>10:32 성전세.</strong> <span class="c h">H</span>: 백성이 매년 <strong>삼분의 일 세겔</strong>을 성전 봉사에 바치기로 한다. 신약 시대에는 반 세겔로 늘어난다(마 17:24). 출 30:13–14은 20세 이상 남자에게 반 세겔을 요구하나 이는 <strong>일회성 등록세</strong>였던 반면, 여기서는 필요가 커서 <strong>연례 삼분의 일 세겔 세금</strong>을 부과한다.</p>
+    <p><strong>10:33 진설병과 상번제.</strong> <span class="c h">H</span>: <strong>진설병</strong>(<span class="hw">לֶחֶם הַמַּעֲרֶכֶת</span>, 레헴 하마아레케트 — "쌓은 빵")은 그 주 당번 제사장의 양식으로 금 상에 놓인다(레 24:5–9). "진설병"(<span class="hw">לֶחֶם פָּנִים</span>, 레헴 파님 — 하나님 앞에 놓인 "얼굴의 빵")으로도 불린다. <strong>열두 덩이는 열두 지파를 상징</strong>하며, 비제사장인 그들이 성소에 들어갈 수 없기에 그들을 하나님께 대표한다. 상번제 둘(아침·저녁, 레 6:9–13)은 <strong>제단 불을 끊임없이 타게</strong> 한다 — 이 불은 야훼께로부터 온 거룩한 불(레 9:24)이라 속죄의 효력을 지닌다. "속죄하다"(<span class="hw">כִּפֵּר</span>, 키페르)는 에스라-느헤미야에서 <strong>여기에만</strong> 나오며, 정결제만이 아니라 <strong>전체 제의 체계의 목적</strong>을 가리킨다.</p>
+    <p><strong>10:34 나무 예물.</strong> <span class="c h">H</span>: 아무도 <strong>제단용 나무 값</strong>을 생각지 못했다. <span class="c k">K</span>: <strong>"모두의 일은 아무의 일도 아니다."</strong> 느헤미야는 나무 공급의 의무를 제비뽑아 모두의 책임으로 만든다 — <strong>유대 문헌 최초의 연례 나무 수집</strong> 제정이다. H: 오경에는 이런 나무 예물 규정이 없어 "율법에 기록된 대로"가 처음엔 오류로 보이나, 이는 수집 과정이 아니라 <strong>목적</strong>("제단에 사르기 위하여", 레 6:9–13)을 가리킬 수 있다. 요세푸스는 아브월 15일 "나무 예물 절기"를 언급하고(전쟁기 2.425), 미쉬나도 아홉 차례의 나무 수집을 열거한다(m. Taʿan. 4:5). 사해문서 4Q365(23)는 레 23–24 사이에 삽입된 <strong>정기 나무 절기</strong>의 가장 이른 자료일 수 있다 — 새 기름 절기 50일 후, 여섯 날간 두 지파씩 나무를 가져온다. <strong>느헤미야와 쿰란은 어느 지파에도 특권을 주지 않는데, 후대 미쉬나는 첫 귀환자(레위·유다·베냐민)에게만 수집을 배정</strong>한다.</p>
+  </div>
+
+  <div class="vs" id="v3539">
+    <span class="ref">10:35–39 — 첫 소산, 첫 태생, 십일조</span>
+    <p><strong>10:35–36 첫 소산·첫 태생.</strong> <span class="c h">H</span>: 첫 익은 열매(<span class="hw">בִּכּוּרִים</span>, 비쿠림)를 제사장에게 가져온다(출 23:19; 신 26:10). <strong>이로써 이스라엘은 야훼가 거룩한 땅의 참 주인이며 자신들은 소작인·청지기임을 인정</strong>한다(슥 2:12). 아들의 첫 태생은 야훼께 속하되 하나님이 인신제사를 원치 않으시므로 <strong>다섯 세겔로 대속</strong>한다(민 18:16 — <span class="hw">פִּדְיוֹן בֵּן</span>, 피드욘 벤, "아들의 대속", 오늘날도 이어짐). 짐승의 첫 태생도 제사장에게, 나귀(부정한 짐승)는 어린 양으로 대속한다(출 13:13).</p>
+    <p><strong>10:37–38 십일조.</strong> <span class="c h">H</span>: 첫 익은 열매(비쿠림)와 첫 가공물(<span class="hw">רֵאשִׁית</span>, 레쉬트 — 반죽·곡식가루·포도주·기름)의 구별이 반복을 설명한다. <strong>십일조는 레위인·제사장의 정규 급여</strong>다 — 소산의 십분의 일을 레위인에게, 레위인은 다시 그 십분의 일을 제사장에게(민 18:21–32). 제2성전 초기의 곤경: <strong>레위인 부족과 그로 인한 제사장 급여 감소, 게다가 레위인이 온전한 몫을 못 받는 문제</strong>(느 13:10; 말 3:10). 이를 바로잡고자 <strong>레위인이 각 지역에서 직접 십일조를 걷되 제사장이 감독</strong>하게 한다. 요세푸스는 일부 대제사장이 사람을 보내 강제로 십일조를 걷었다고 전한다(고대사 20.181).</p>
+    <p><strong>10:39 "우리가 그것을 버려두지 아니하리라."</strong> <span class="c h">H</span>: 곡식·포도주·기름을 <strong>성소 그릇이 있는 곳간</strong>으로 가져온다. 그릇(<span class="hw">כֵּלִים</span>, 켈림)은 정결을 유지해야 하므로 성전 인력의 상주가 중요했다. <strong>이 장의 결론 문장이 핵심을 찌른다</strong> — 공동체는 쉬운 길을 택해 성소와 그 인력의 유지를 무시하지 않겠다고 서약한다. 죄를 고백한 뒤, 토라의 규정대로 <strong>제의를 되살리기로 결단</strong>한다. 신약도 이 원리를 확증한다 — 그리스도인은 교회와 사역자의 필요를 공급하라(고전 9:1–14; 갈 6:6–7; 딤전 5:17–18).</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">10장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력·경건("모두의 일은 아무의 일도 아니다"의 나무 예물). <span class="c f">F</span> 양식·어휘. <span class="c h">H</span> 제2성전기 수용사·제의법(아마나=아멘 어근, 저주+맹세, 나무 절기 4Q365, 십일조 강제 수집, 첫 것·대속 규례). <span class="c t">T</span> 구조(참회→서약, 10장↔13장의 위반 대응). <span class="c b">B</span> 자료비평(서명자 명단의 편집적 성격, 느헤미야 법전의 형성사).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="heb">לֹא נַעֲזֹב</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>5. 상호 참조와 신학 종합</h2>
+    <div class="gloss">로 나아조브, "우리가 버려두지 아니하리라" (느 10:39)</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:14%">느 10장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">9:38</td><td>1QS 1:18–26 (쿰란의 언약 갱신 예식) / 신 27:14 (레위인 인도)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:1</td><td>느 13:13 (서기관 사독 = 시드기야?) / 스 2:63; 느 8:9 (티르샤타 칭호)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:1</td><td>딤후 1:5 (로이스·유니게·디모데, 세대를 잇는 신앙)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:8</td><td>느 12:1–7, 12–22 (21명 중 14명이 겹침)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:28</td><td>스 6:19–21 (유월절에 합류한 지역 주민) / 스 9–10; 느 13:3 (배제 기조)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:29</td><td>9:8 (아브라함의 신실함 네에만) / 8:6 (아멘) — 아마나와 같은 어근</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:30</td><td><strong>출 34:15–16; 신 7:3–4</strong> (통혼 금지) — 포괄적 재해석</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:31</td><td>렘 17:21–27; 암 8:5 (안식일 매매 금지) / 출 31:17 (바이나파쉬) / 느 5:9–13 (빚 탕감)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:32</td><td>출 30:13–14 (반 세겔 등록세) / 마 17:24 (신약의 반 세겔)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:33</td><td>레 24:5–9 (진설병) / 레 6:9–13; 9:24 (상번제·거룩한 불)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:34</td><td>4Q365 (23); 11Q19 (정기 나무 절기) / 요세푸스 전쟁기 2.425 / m. Taʿan. 4:5</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:36</td><td>민 18:16 (아들의 대속, 피드욘 벤) / 출 13:13 (나귀는 양으로 대속)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:37–38</td><td>민 18:21–32 (십일조) / 느 13:10; 말 3:10 (레위인 몫 부족)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">10:39</td><td><strong>느 13:6–31</strong> (서약 위반의 기록) / 고전 9:1–14; 딤전 5:17–18 (사역자 공급)</td><td><span class="c h">H</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>1QS 1:18–26</strong> — 쿰란 언약 갱신 예식 <span class="c h">H</span> · <strong>4Q365(23)·11Q19(성전 두루마리)</strong> — 정기 나무 절기의 이른 자료 <span class="c h">H</span> · <strong>요세푸스 전쟁기 2.425; 고대사 20.181</strong> — 나무 예물 절기·강제 십일조 <span class="c h">H</span> · <strong>m. Taʿan. 4:5</strong> — 아홉 차례 나무 수집 <span class="c h">H</span> · <strong>Clines</strong> — 미쉬나식 주해의 첫 징표 <span class="c h">H</span> · <strong>Avigad 인장</strong> — 인장 봉인 방식 <span class="c h">H</span></p>
+  </div>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 고백은 서약을 낳는다</h4>
+  <p><span class="c t">T</span>: 9장의 참회 기도가 10장의 서약으로 이어진다. 죄의 고백(9장)이 감정의 배설로 끝나지 않고 <strong>구체적 규례에 대한 헌신</strong>으로 열매 맺는다. 9:38이 서약을 "앞선 금식·기도와 연결"한다는 <span class="c h">H</span>의 관찰이 이 흐름을 짚는다 — <strong>회개는 결단이 될 때 참된 회개다.</strong> 말씀을 듣고(8장) 죄를 고백하고(9장) 삶의 규례로 언약을 세우는(10장) 세 걸음이 토라 공동체 재건의 완결이다.</p>
+
+  <h4>② 아마나 — 아브라함의 신실함을 잇는 언약</h4>
+  <p>10장의 열쇳말 <span class="hw">אֲמָנָה</span>(아마나, 굳은 언약)가 <strong>"아멘"(8:6)과 아브라함의 "신실함"(9:8)과 같은 어근</strong>이라는 <span class="c h">H</span>의 통찰이 이 장의 신학을 벼린다. 공동체는 율법을 "자르며"(언약을 맺으며), 그 신실함을 <strong>민족의 조상 아브라함</strong>에게까지 소급시킨다. 인장을 눌러 봉인한 이 서약은, 하나님의 신실하심(네에만)에 백성의 신실함(아마나)으로 화답하는 언약의 상호성이다.</p>
+
+  <h4>③ 모든 계층, 모든 가문 — 공동체 전체의 서약</h4>
+  <p><span class="c h">H</span>: 서명자가 정치 지도자·제사장·레위인·평신도 <strong>모든 계층</strong>을 대표하고, 이름 대부분이 개인이 아니라 <strong>가문</strong>이다. 느헤미야는 건축 사업 때처럼 모든 부류를 소집·결속시킨다. <strong>언약은 개인의 결심이 아니라 세대를 잇는 가문의 헌신</strong>이다(딤후 1:5). 각 세대가 다음 세대에게 언약을 가르쳐야 공동체가 스스로를 번식시킨다 — 가족이 거룩한 공동체가 자신을 이어가는 통로다.</p>
+
+  <h4>④ 하나님의 땅, 하나님의 백성 — 첫 것을 드리는 신학</h4>
+  <p>첫 소산·첫 태생·십일조의 규례(35–38절)가 하나의 신학으로 수렴한다. <span class="c h">H</span>: 첫 것을 드림으로써 이스라엘은 <strong>야훼가 거룩한 땅의 참 주인이며 자신들은 소작인·청지기임</strong>을 인정한다(슥 2:12). 소작농이 주인보다 먼저 자기 몫을 취하는 것은 오만이다. 첫 태생의 대속(피드욘 벤)은 <strong>하나님이 백성을 소유하시되 인신제사가 아니라 대속으로 그들을 되찾으심</strong>을 보인다. 드림은 소유의 포기가 아니라 참 주인을 인정하는 예배다.</p>
+
+  <h4>⑤ 제단의 불을 꺼뜨리지 않으려는 서약</h4>
+  <p>성전세·나무 예물·상번제 규례가 <strong>제단 불의 영속</strong>이라는 한 초점으로 모인다. <span class="c h">H</span>: 이 불은 야훼께로부터 온 거룩한 불(레 9:24)이라 <strong>속죄의 효력</strong>을 지닌다. <span class="c k">K</span>의 "모두의 일은 아무의 일도 아니다"라는 통찰이 나무 예물의 제비뽑기를 설명한다 — 느헤미야는 아무도 생각지 못한 비용을 <strong>모두의 책임</strong>으로 제도화한다. 39절의 결론 <strong>"우리가 우리 하나님의 전을 버려두지 아니하리라"</strong>가 이 장 전체를 봉인한다. 예배는 감정이 아니라 <strong>지속적 공급의 책임</strong>으로 유지된다.</p>
+
+  <h4>⑥ 미완성의 예고 — 10장에서 13장으로</h4>
+  <p><span class="c h">H</span>의 결정적 관찰: 10장의 의무 여럿(통혼·안식일 매매·십일조 소홀·도비야의 성전 모독)이 <strong>13장에서 그대로 위반의 기록으로 재등장</strong>한다. 굳은 언약(아마나)이 불과 몇 장 뒤에 깨어진다. 이것이 이 책의 <strong>"미완성 신학"</strong>이다 — 가장 엄숙한 서약조차 인간의 손에서 무너지고, 느헤미야가 다시 바로잡아야 한다. 10장의 완결된 언약은 종착이 아니라, 순종이 끊임없이 갱신되어야 하는 순환의 한 마디다. 언약의 견고함은 서약의 순간이 아니라 <strong>날마다의 지킴</strong>에서 판가름 난다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 10장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것. 절 번호는 영어역·개역개정 기준(히브리어 10:1–40).</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

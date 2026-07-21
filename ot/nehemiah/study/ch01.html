@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 1장 — 절별 관주·연구 허브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- 공통 레이어: 색·반응형(theme) → 기능 스타일(app.css) → 문서 고유 스타일 -->
+<link rel="stylesheet" href="../../../assets/theme.css">
+<link rel="stylesheet" href="../../../assets/app.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);color:var(--ink);background:var(--paper);
+    line-height:1.8;word-break:keep-all;transition:var(--theme-transition)}
+  .wrap{max-width:52rem;margin:0 auto;padding:2.6rem 1.4rem 5rem}
+
+  /* 상단 이동 바 */
+  .topbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;
+    font-family:var(--sans);font-size:.74rem;margin-bottom:1.8rem}
+  .topbar a{color:var(--lapis);text-decoration:none;font-weight:700}
+  .topbar a:hover{color:var(--ochre)}
+  .topbar .sep{color:var(--line)}
+
+  /* 히어로 */
+  .hero{border-bottom:2px solid var(--line);padding-bottom:1.6rem;margin-bottom:1.4rem}
+  .hero .heb{font-family:var(--heb);direction:rtl;font-size:2.4rem;color:var(--lapis);line-height:1.35}
+  .hero h1{font-size:1.5rem;font-weight:900;margin-top:.5rem}
+  .hero .sub{color:var(--ink-soft);font-size:.96rem;margin-top:.5rem}
+
+  /* 이 장을 여는 세 갈래 */
+  .studies{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.4rem 0 2.4rem}
+  .study-card{display:block;text-decoration:none;color:inherit;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:1rem .95rem;
+    transition:var(--theme-transition),transform .12s,border-color .12s,box-shadow .12s}
+  .study-card:hover{transform:translateY(-2px);border-color:var(--ochre);box-shadow:var(--shadow-md)}
+  .study-card .sc-heb{font-family:var(--heb);direction:rtl;font-size:1.3rem;color:var(--ochre);line-height:1.4}
+  .study-card .sc-name{font-weight:900;font-size:.98rem;margin-top:.3rem}
+  .study-card .sc-desc{font-size:.76rem;color:var(--ink-soft);margin-top:.25rem;line-height:1.55}
+  .study-card .sc-soon{display:inline-block;font-family:var(--sans);font-size:.62rem;font-weight:700;
+    color:var(--ink-soft);background:var(--band);border-radius:3px;padding:.05rem .35rem;margin-top:.4rem}
+
+  .lead{background:var(--band);border:1px solid var(--line);border-radius:9px;
+    padding:.9rem 1.1rem;font-size:.85rem;color:var(--ink-soft);margin-bottom:2rem}
+  .lead b{color:var(--ink)}
+
+  /* 절 카드 */
+  .verse{border:1px solid var(--line);border-radius:11px;background:var(--card);
+    padding:1.1rem 1.2rem;margin-bottom:1.1rem;transition:var(--theme-transition)}
+  .verse .vh{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.5rem}
+  .verse .vn{font-family:var(--sans);font-weight:900;font-size:.8rem;color:#fff;
+    background:var(--lapis);border-radius:5px;padding:.12rem .5rem;flex:none}
+  .verse .vt{font-size:1rem;color:var(--ink);line-height:1.75}
+  /* .vlinks, .xref-panel 은 app.js가 주입, app.css가 스타일 */
+
+  .foot{margin-top:2.5rem;padding-top:1.3rem;border-top:1px solid var(--line);
+    font-size:.75rem;color:var(--ink-soft);line-height:1.7}
+  .foot a{color:var(--lapis)}
+
+  @media (max-width:600px){
+    .wrap{padding:1.8rem 1rem 4rem}
+    .studies{grid-template-columns:1fr;gap:.6rem}
+    .hero .heb{font-size:2rem}
+  }
+</style>
+</head>
+<!-- 데이터 속성만으로 기능이 켜진다: 책·장·현재 연구 종류·데이터 폴더 위치 -->
+<body data-book="neh" data-chapter="1" data-kind="hub" data-root="../../../">
+
+<div class="wrap">
+
+  <div class="topbar">
+    <a href="../../../index.html">서고 홈</a><span class="sep">·</span>
+    <a href="../index.html">느헤미야 서재</a><span class="sep">·</span>
+    <span>1장 허브</span>
+    <span class="sep">|</span>
+    <span style="color:var(--ink-soft);opacity:.6">다음 장(준비 중)</span>
+  </div>
+
+  <header class="hero">
+    <div class="heb">זְכָר־נָא</div>
+    <h1>느헤미야 1장 · 절별 관주와 연구 허브</h1>
+    <div class="sub">한 절에서 세 갈래 연구(심층·파싱·인터라이너)와 관주를 한자리에 모았다. 각 절의 링크로 필요한 연구에 바로 건너간다.</div>
+  </header>
+
+  <div class="studies">
+    <a class="study-card" href="../ch01.html">
+      <div class="sc-heb">חֵקֶר</div>
+      <div class="sc-name">심층 연구</div>
+      <div class="sc-desc">다섯 주석을 절 단위로 종합한 본격 주해와 신학 정리.</div>
+    </a>
+    <a class="study-card" href="../parsing/ch01.html">
+      <div class="sc-heb">שֹׁרֶשׁ</div>
+      <div class="sc-name">원어 파싱</div>
+      <div class="sc-desc">핵심어를 골라 발음·뜻·문법·어근까지 짚는 카드.</div>
+    </a>
+    <a class="study-card" href="../interlinear/ch01.html">
+      <div class="sc-heb">בֵּין־הַשִּׁיטִין</div>
+      <div class="sc-name">인터라이너</div>
+      <div class="sc-desc">모든 낱말을 축자 대역하고 전수 문법 분석한 표.</div>
+    </a>
+  </div>
+
+  <div class="lead">
+    <b>이 페이지는 데이터로 움직인다.</b> 아래 각 절의 개역개정 본문 밑에, 그 절로 이어지는 연구 링크와 <b>관주</b>(다른 성경 구절과의 연결, OpenBible.info)가 자동으로 나타난다. 관주는 눌러서 펴고, 처음엔 많이 참조된 순서로 상위 몇 개만 보인다. 오른쪽 아래 단추로 <b>화면 모드</b>(시스템·라이트·다크)를 바꿀 수 있다.
+  </div>
+
+  <!-- 절 카드: 본문은 서버 없이도 보이도록 직접 기입. 링크·관주는 app.js가 주입 -->
+  <section class="verse" id="v1" data-v="1">
+    <div class="vh"><span class="vn">1:1</span></div>
+    <div class="vt">하가랴의 아들 느헤미야의 말이라 아닥사스다 왕 제이십년 기슬르월에 내가 수산 궁에 있는데</div>
+  </section>
+
+  <section class="verse" id="v2" data-v="2">
+    <div class="vh"><span class="vn">1:2</span></div>
+    <div class="vt">내 형제들 가운데 하나인 하나니가 두어 사람과 함께 유다에서 내게 이르렀기로 내가 그 사로잡힘을 면하고 남아 있는 유다와 예루살렘 사람들의 형편을 물은즉</div>
+  </section>
+
+  <section class="verse" id="v3" data-v="3">
+    <div class="vh"><span class="vn">1:3</span></div>
+    <div class="vt">그들이 내게 이르되 사로잡힘을 면하고 남아 있는 자들이 그 지방 거기에서 큰 환난을 당하고 능욕을 받으며 예루살렘 성은 허물어지고 성문들은 불탔다 하는지라</div>
+  </section>
+
+  <section class="verse" id="v4" data-v="4">
+    <div class="vh"><span class="vn">1:4</span></div>
+    <div class="vt">내가 이 말을 듣고 앉아서 울고 수일 동안 슬퍼하며 하늘의 하나님 앞에 금식하며 기도하여</div>
+  </section>
+
+  <section class="verse" id="v5" data-v="5">
+    <div class="vh"><span class="vn">1:5</span></div>
+    <div class="vt">이르되 하늘의 하나님 여호와 크고 두려우신 하나님이여 주를 사랑하고 주의 계명을 지키는 자에게 언약을 지키시며 긍휼을 베푸시는 주여 간구하나이다</div>
+  </section>
+
+  <section class="verse" id="v6" data-v="6">
+    <div class="vh"><span class="vn">1:6</span></div>
+    <div class="vt">이제 종이 주의 종들인 이스라엘 자손을 위하여 주야로 기도하오며 우리 이스라엘 자손이 주께 범죄한 죄들을 자복하오니 주는 귀를 기울이시며 눈을 여시사 종의 기도를 들으시옵소서 나와 내 아버지의 집이 범죄하여</div>
+  </section>
+
+  <section class="verse" id="v7" data-v="7">
+    <div class="vh"><span class="vn">1:7</span></div>
+    <div class="vt">주를 향하여 크게 악을 행하여 주께서 주의 종 모세에게 명령하신 계명과 율례와 규례를 지키지 아니하였나이다</div>
+  </section>
+
+  <section class="verse" id="v8" data-v="8">
+    <div class="vh"><span class="vn">1:8</span></div>
+    <div class="vt">옛적에 주께서 주의 종 모세에게 명령하여 이르시되 만일 너희가 범죄하면 내가 너희를 여러 나라 가운데에 흩을 것이요</div>
+  </section>
+
+  <section class="verse" id="v9" data-v="9">
+    <div class="vh"><span class="vn">1:9</span></div>
+    <div class="vt">만일 내게로 돌아와 내 계명을 지켜 행하면 너희 쫓긴 자가 하늘 끝에 있을지라도 내가 거기서부터 그들을 모아 내 이름을 두려고 택한 곳에 돌아오게 하리라 하신 말씀을 이제 청하건대 기억하옵소서</div>
+  </section>
+
+  <section class="verse" id="v10" data-v="10">
+    <div class="vh"><span class="vn">1:10</span></div>
+    <div class="vt">이들은 주께서 일찍이 큰 권능과 강한 손으로 구속하신 주의 종들이요 주의 백성이니이다</div>
+  </section>
+
+  <section class="verse" id="v11" data-v="11">
+    <div class="vh"><span class="vn">1:11</span></div>
+    <div class="vt">주여 구하오니 귀를 기울이사 종의 기도와 주의 이름을 경외하기를 기뻐하는 종들의 기도를 들으시고 오늘 종이 형통하여 이 사람들 앞에서 은혜를 입게 하옵소서 하였나니 그 때에 내가 왕의 술 관원이 되었느니라</div>
+  </section>
+
+  <div class="foot">
+    <p>본문은 개역개정 4판. 관주 데이터는 <a href="https://www.openbible.info/labs/cross-references/">OpenBible.info Cross References</a>(CC-BY)를 한국어 약칭으로 변환해 실었으며, 다수 사용자의 투표 수(참조 강도)에 따라 정렬했다. 관주는 참고용 연결이며, 신학적 해석은 각 절의 심층 연구를 따른다.</p>
+    <p style="margin-top:.5rem">이 허브는 원본 세 연구를 <b>수정하지 않고</b> 절 앵커로 이어 준다. 색·반응형은 <code>assets/theme.css</code>, 기능은 <code>assets/app.js</code>, 관주·이동 데이터는 <code>data/</code>에서 관리한다.</p>
+  </div>
+
+</div>
+
+<!-- 기능 레이어: 이 한 줄이 테마 토글·관주·연구 이동을 켠다. 빼면 원상복구 -->
+<script src="../../../assets/app.js"></script>
+</body>
+</html>

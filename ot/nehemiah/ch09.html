@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 9장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch09.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 9장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 개관과 구획</a>
+    <a class="lv2" href="#s0-place">배치 논쟁</a>
+    <a class="lv1" href="#s1">1. 금식·분리 (9:1–3)</a>
+    <a class="lv1" href="#s2">2. 레위인과 송영 (9:4–5)</a>
+    <a class="lv2" href="#v6-speaker">화자 쟁점</a>
+    <a class="lv1" href="#s3">3. 역사 회고 (9:6–31)</a>
+    <a class="lv2" href="#v6">9:6 창조</a>
+    <a class="lv2" href="#v78">9:7–8 아브라함</a>
+    <a class="lv2" href="#v915">9:9–15 출애굽·시내산</a>
+    <a class="lv2" href="#v1621">9:16–21 광야</a>
+    <a class="lv2" href="#v2225">9:22–25 정복</a>
+    <a class="lv2" href="#v2631">9:26–31 순환</a>
+    <a class="lv1" href="#s4">4. 청원과 애가 (9:32–37)</a>
+    <a class="lv2" href="#v32">9:32 유일한 청원</a>
+    <a class="lv2" href="#v3335">9:33–35 심판의 송영</a>
+    <a class="lv2" href="#v3637">9:36–37 종이 되었나이다</a>
+    <a class="lv1" href="#s5">5. 상호 참조 총람</a>
+    <a class="lv1" href="#s6">6. 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">אַתָּה־הוּא יְהוָה</div>
+  <h1>느헤미야 9장 심층 연구</h1>
+  <div class="sub">앗타-후 아도나이, "주는 홀로 여호와시라" (느 9:6) — 구약 최장의 역사 회고 기도</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">אַתָּה</div>
+    <div class="eyebrow">OVERVIEW</div>
+    <h2>0. 개관과 구획</h2>
+    <div class="gloss">앗타, "당신" — 기도의 처음(6절)과 끝(31절)을 여닫는 단어</div>
+  </div>
+
+  <p>일곱째 달 24일, 초막절이 끝난 지 이틀 뒤. 금식·굵은 베·티끌(1절), 이방인과의 분리와 자기 죄·조상 죄의 자백(2절), 낮의 사분의 일씩 율법 낭독과 자백·경배(3절), 레위인 두 조가 단에 서고(4–5절), 5b절의 송영을 문으로 삼아 기도(6–37절)가 이어진다. 히브리 본문은 9:38을 10장 첫 절로 삼아 <strong>기도가 곧장 언약 서약으로 흐른다.</strong></p>
+
+  <table>
+    <tr><th style="width:14%">주석</th><th>구획</th></tr>
+    <tr><td class="head"><span class="c f">F</span></td><td>9:1–5(금식일) / 9:6–37(참회 기도) 이분</td></tr>
+    <tr><td class="head"><span class="c k">K</span></td><td>같은 이분(장 표제 "대성회")</td></tr>
+    <tr><td class="head"><span class="c h">H</span></td><td>9–10장을 "언약 갱신" 한 단위로 묶어 삼분: 9:1–3 자백 / 9:4–37 레위인들의 대리 참회 기도 / 9:38–10:39 엄숙한 서약</td></tr>
+    <tr><td class="head"><span class="c b">B</span></td><td>"공적 죄 자백"(9:1–37) 한 단락</td></tr>
+    <tr><td class="head"><span class="c t">T</span></td><td>7:73b–10:39의 셋째 장면. 앞 두 장면(낭독→기쁨, 초막절)에서 짧았던 마지막 두 단(적용·응답)이 여기서 대폭 확장된다. 9:4–37이 "적용", 10장이 "응답"</td></tr>
+  </table>
+
+  <div class="caveat" id="s0-place">
+    <div class="tt">쟁점 — 9장은 제자리에 있는가</div>
+    <p>기쁨의 명령(8:9–12) 직후에 금식이 오고, 앞 장들에 없던 "이방인과의 분리"(9:2)가 갑자기 등장한다.</p>
+    <p><strong>재배열론 <span class="c b">B</span>.</strong> 성회의 목적을 통혼 회개로 읽으면 9:1–5은 <strong>에스라서의 "사라진 결말"</strong>이고 에스라 10:44 직후가 본래 자리다. 1절의 "이 달 24일"이 에스라 10:17의 "첫째 달"을 받는 표기일 수 있고, 6절 기도는 에스라 9:15 뒤에 놓였던 에스라의 기도일 수 있다(칠십인역의 "에스라가 이르되"가 그 흔적).</p>
+    <p><strong>현위치 변호 <span class="c f">F</span> <span class="c h">H</span>.</strong> <span class="c f">F</span>는 전위 가설로 문제를 푸는 것은 위험하다고 결론하고 심리적 개연성을 든다. 백성은 이미 초하루에 율법을 듣고 울었고, 절기가 끝나자 아직 처리되지 않은 죄로 되돌아오는 것이 자연스럽다. 모든 집회를 오경의 규정 절기에 대응시키려는 학계의 습관 자체를 F는 비판하고, 이 성회를 특별한 상황이 낳은 일회적 사건으로 판정한다. <span class="c h">H</span>는 Steinmann의 두 논거를 보탠다. 9장은 8:9에서 미완으로 남은 회개의 실을 다시 잡는 것이고, 이날의 서약(9:38; 10:28–29)이 13장 개혁이 딛고 설 <strong>법적 토대</strong>를 마련한다. 서약 조항(10:30–39)의 범위가 통혼보다 넓다는 지적도 H의 것.</p>
+    <p><strong>순서를 신학으로 <span class="c k">K</span> <span class="c t">T</span>.</strong> <span class="c k">K</span>는 24일이라는 날짜에서 읽는다. 잔치(22일 종료)와 금식 사이에 하루의 간격이 있으므로 남은 이들은 <strong>자발적 선택</strong>으로 남았고, 잔치가 금식보다 앞선 순서는 8:9–12의 목회적 판단의 연장이다. <span class="c t">T</span>는 한 걸음 더 간다. 기쁨 뒤의 참회라는 순서는 <strong>첫 출애굽 세대의 궤적(시내산에서 율법 청취 → 광야에서 초막 거주 → 그 끝에 언약 체결)을 회복 공동체가 재연하는 편집 의도</strong>이며, 재배열 시도들은 이 의도를 놓친다. T는 레위기 23장의 일곱째 달 리듬(신년의 기쁨 → 욤 키푸르의 엄숙 → 초막절의 축제)과 기독교 전례력(대림-성탄의 기쁨과 사순의 애통)의 교차를 유비로 제시해, 기쁨과 애통이 신앙의 복합 구조에 함께 속한다는 신학으로 마무리한다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">נִבְדָּל</div>
+    <div class="eyebrow">9:1–3</div>
+    <h2>1. 금식·분리·사분의 일</h2>
+    <div class="gloss">니브달, "구별되다" — 이방 무리에게서 분리된 이스라엘의 씨</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">9:1 — 금식의 삼중 표지</span>
+    <p><span class="hw">צוֹם</span>(촘, 금식) · <span class="hw">שַׂק</span>(사크, 굵은 베) · <span class="hw">אֲדָמָה</span>(아다마, 흙/티끌)의 삼중 표지. <span class="c f">F</span>는 애도와 인간의 연약함을 드러내는 일반 관습으로, <span class="c h">H</span>는 염소 털로 짜 맨살에 걸치는 굵은 베의 실물 묘사와 함께 제2성전기 금식 경건의 맥락으로 푼다.</p>
+    <p><strong>속죄일이 아니다.</strong> <span class="c h">H</span>는 이 문제를 정면으로 다룬다. 속죄일은 일곱째 달 10일(레 16:29)이므로 24일의 이 금식은 <strong>상황이 부른 즉흥 금식</strong>이다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">9:2 — 분리와 조상의 죄</span>
+    <p><span class="hw">זֶרַע יִשְׂרָאֵל</span>(제라 이스라엘, 이스라엘의 씨)이 이방인 무리에게서 분리된다. <span class="c k">K</span>는 이 분리를 <strong>레위기 20:26의 열매</strong>로 읽고, 이방 이웃과의 교제가 사회적으로 이득이었던 정황(6:17–18)을 감안하면 이 수용은 오만이 아닌 <strong>헌신의 표지</strong>였다고 변호한다.</p>
+    <p><strong>조상 죄 고백 — 시각이 갈린다.</strong></p>
+    <ul>
+      <li><span class="c k">K</span> 구약의 죄의 연대 의식(느 1:6; 시 106:6)에 놓되, 이 연대가 하나님의 공의를 의심하거나 개인 책임의 신경을 끊는 데 쓰일 때만 비판받는다(겔 18장)는 균형을 단다.</li>
+      <li><span class="c f">F</span> 6–37절 기도 전체의 주제 예고로 읽는다.</li>
+      <li><span class="c h">H</span> 가장 독특하다. <strong>조상의 오류를 자백함으로써 현 세대가 자기 계보를 "교정"한다</strong>는 개념, 곧 야훼와의 관계라는 궤도 위로 가문의 선을 되돌린다는 해석.</li>
+    </ul>
+  </div>
+
+  <div class="vs">
+    <span class="ref">9:3 — 낮의 사분의 일</span>
+    <p><span class="hw">רֶבַע</span>(레바, 사분의 일)씩, 곧 세 시간 낭독과 세 시간 자백·경배 <span class="c h">H</span>. <span class="c k">K</span>는 8장에 비추어 해설과 적용이 끼어드는 낭독이었으리라 추정한다.</p>
+    <p><span class="c h">H</span>는 둘을 더 본다.</p>
+    <ul>
+      <li>① 8장에서 에스라가 읽어 주던 말씀을 이제 <strong>백성이 스스로 읽는다.</strong> 말씀의 소유권이 서기관에게서 공동체로 넘어가는 발전 단계이며, Jacob Wright의 궤적(페르시아 궁정 문서 → 서기관 에스라 → 공동체의 공적 낭독)이 여기서 표시된다.</li>
+      <li>② 토라 연구가 제2성전기 유대교의 중심 실천이 되는 흐름의 이른 사례로, 쿰란 공동체 규율(1QS 6:6–7)의 야간 삼분의 일 토라 연구까지 비교선이 이어진다.</li>
+    </ul>
+    <p>H의 어휘 교정: <span class="hw">מִשְׁתַּחֲוִים</span>(미슈타하빔)을 "경배"로 옮기는 번역들이 있으나 이 문맥의 뜻은 찬양이 아닌 <strong>참회의 부복</strong>이다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">מַעֲלֵה הַלְוִיִּם</div>
+    <div class="eyebrow">9:4–5</div>
+    <h2>2. 두 레위인 조와 송영</h2>
+    <div class="gloss">마알레 할레비임, "레위인들의 단"</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">9:4–5a — 두 조</span>
+    <p>두 명단(4절, 5절)은 여덟 명씩인데 다섯 이름만 겹친다. <span class="c k">K</span>와 <span class="c f">F</span>가 같은 해법에 이른다. <strong>기능이 다른 두 조</strong>다. <span class="c k">K</span>는 4절의 "부르짖다"가 고통의 호소라는 결을 가짐을 관찰해 첫째 조를 탄원조, 둘째 조를 찬양 인도조로 나누고 <span class="c f">F</span>도 동일하게 판정한다.</p>
+    <p><span class="hw">מַעֲלֵה הַלְוִיִּם</span>(마알레 할레비임, 레위인들의 오름/계단)에 대해 <span class="c f">F</span>는 8:5의 에스라 강단과 구별되는 높은 단으로, <span class="c k">K</span>는 성전 뜰 사이 계단 또는 8:4 강단으로, <span class="c h">H</span>는 헤롯 성전에서 레위인 악사들이 서던 열다섯 계단(미쉬나 미돗 2:5)의 전신으로 잇는다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">9:5b — 송영</span>
+    <p><strong>① 본문 상태.</strong> <span class="c t">T</span>는 Williamson을 따라 한 행("송축받으소서, 우리 하나님 여호와여")의 탈락 가능성을, <span class="c f">F</span>는 페쉬타를 따라 "찬송받으시옵소서"로 읽는 수정을 채택한다.</p>
+    <p><strong>② 표현의 유일성.</strong> <span class="c h">H</span>는 "모든 송축과 찬양 위에 뛰어난 이름"이라는 주장이 히브리 성경 어디에도 없는 <strong>이곳만의 표현</strong>임을 확인하고, 회당 예배의 기립 축복 관습과 성전 전례의 응답 방식(단순한 "아멘"이 아닌 찬양 응답, b. Ber. 63a)까지 수용사를 편다. <span class="hw">כָּבוֹד</span>(카보드, 영광)를 Terrien의 정식 "가시화된 거룩"으로 풀어 광야의 불구름과 성전 충만 기사에 연결한다.</p>
+    <div class="note">
+      <div class="tt"><span class="c k">K</span>의 목회적 관찰</div>
+      <p>이 송영이 James Montgomery의 찬송으로 오늘까지 불린다. <strong>겨우 거주 가능한 도시와 포위한 이방과 가난이라는 사실들이 무시되지 않은 채 영원과 하나님의 크심의 문맥 안에 놓인다.</strong> (이 문장은 9장 약함의 신학의 핵심 진술이다 — 6부 참조.)</p>
+    </div>
+  </div>
+
+  <div class="caveat" id="v6-speaker">
+    <div class="tt">쟁점 — 6a절의 화자는 누구인가</div>
+    <p>마소라 본문에 "에스라가 이르되"가 없다. 칠십인역이 이 어구를 넣어 기도를 에스라에게 돌린다.</p>
+    <p><strong>레위인들 <span class="c t">T</span> <span class="c k">K</span> <span class="c h">H</span>.</strong> <span class="c t">T</span>는 <strong>"불필요한 첨가"</strong>로 잘라 기도를 레위인들의 것으로 확정한다(NRSV가 헬라어를 따른 것을 오류로 명시). <span class="c k">K</span>는 차용일 뿐 원문으로 받아들일 강제성이 없다고 보고, <span class="c h">H</span>는 칠십인역의 명료화 시도로 처리한다.</p>
+    <p><strong>에스라 <span class="c b">B</span>.</strong> 이 기도가 본래 에스라에게 귀속되었을 개연성이 크고(스 9:6–15의 긴 기도와 짝), 칠십인역 독법이 더 긴 원 기도의 흔적일 수 있다.</p>
+    <p><strong>화자를 누구로 보느냐가 기도의 성격 규정(레위인들의 회중 대리 기도인가, 에스라 자료의 이식인가)과 직결되므로, 이 작은 본문비평이 9장 해석 전체의 갈림길이다.</strong></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">זָכַר</div>
+    <div class="eyebrow">9:6–31</div>
+    <h2>3. 역사 회고</h2>
+    <div class="gloss">자카르, "기억하다" — 창조에서 현재까지, 인용으로 짠 직물</div>
+  </div>
+
+  <div class="note">
+    <div class="tt">전체 구조</div>
+    <p><span class="c f">F</span>는 <strong>여덟 단락</strong>으로 나눈다. 창조(6) / 아브라함 언약(7–8) / 애굽의 큰 일(9–11) / 광야 인도(12) / 시내산과 광야(13–21) / 정복(22–25) / 땅에서의 불신실과 하나님의 인내(26–31) / 죄 고백(32–37). 역사시편(시 78, 105, 106, 135, 136)과의 병행 위에서 이 기도를 <strong>감사형이 아닌 참회형 역사시</strong>로 분류한다.</p>
+    <p><span class="c t">T</span>는 그 위에 <strong>교차 구조</strong>를 세운다. <strong>A</strong> 찬양(5b) — <strong>B</strong> 역사 회고 형식의 죄 고백(6–31) — <strong>X</strong> 청원(32) — <strong>B′</strong> 현재 죄 고백(33–35) — <strong>A′</strong> 애가(36–37). 두 핵심 관찰: ① 고백부의 첫 히브리어 단어와 마지막 단어가 모두 <span class="hw">אַתָּה</span>(앗타, 당신)다(6절, 31절). <strong>하나님의 인격적 임재가 역사 전체를 감싼다.</strong> ② 이 기도는 <strong>찬양에서 애가로</strong> 움직인다. 탄원시의 표준 운동(애가→찬양)의 정반대이며, Westermann이 구약신학의 심장으로 꼽은 그 전환의 역방향이다.</p>
+    <p><span class="c t">T</span>의 해석: 이 "기도"의 일차 청중은 하나님 못지않게 <strong>백성</strong>이다. <strong>설교-기도(sermon-prayer)</strong>라는 장르 규정이 여기서 나오고, 10장의 서약이 그 설교가 겨냥한 응답이 된다. <span class="c h">H</span>는 이 회고를 성경의 역사 회고들 가운데 가장 완전한 것으로, <span class="c b">B</span>는 창세기–열왕기하의 요약이자 신명기 언어의 직물이며 솔로몬의 성전 봉헌 기도(왕상 8장)를 연상시킨다고 정리한다.</p>
+  </div>
+
+  <div class="vs" id="v6">
+    <span class="ref">9:6 — 창조</span>
+    <p><span class="c f">F</span>는 <span class="hw">שְׁמֵי הַשָּׁמַיִם</span>(쉐메 핫샤마임, 하늘들의 하늘)을 히브리어 최상급으로, <span class="hw">צָבָא</span>(차바, 만상)를 별들로 판정한다. <span class="c k">K</span>는 이 어구가 <strong>창세기 2:1의 히브리어를 그대로 울린다</strong>는 점에서 <strong>최근 몇 주간의 성경 낭독이 기도의 언어를 빚었다는 흔적</strong>을 본다. <span class="c h">H</span>는 하늘-땅-바다의 삼분 우주가 아누·엔릴·엔키로 관할을 나눈 메소포타미아 신학과 형식을 공유하되 <strong>야훼 한 분이 전체를 다스린다는 선언으로 그 틀을 전복</strong>한다고 읽는다.</p>
+  </div>
+
+  <div class="vs" id="v78">
+    <span class="ref">9:7–8 — 아브라함</span>
+    <p><span class="c k">K</span>가 희귀성을 짚는다. 아브람의 개명과 그의 믿음을 창세기 이후 구약이 다시 언급하는 곳은 <strong>여기뿐</strong>이다. <span class="c f">F</span>는 8절의 어휘 균형을 본다. 아브라함의 <span class="hw">נֶאֱמָן</span>(네에만, 신실한) 마음과 하나님의 <span class="hw">צַדִּיק</span>(차디크, 의로우신) 성품이 한 절의 앞뒤에 놓여 <strong>사람의 신실과 하나님의 의가 언약 성취의 두 축</strong>임을 보인다. <span class="c h">H</span>는 창세기 15:6과의 연결을 <strong>로마서 4장</strong>까지 잇고, <span class="hw">בָּנִים</span>(바님, 자녀들) 대신 <span class="hw">זֶרַע</span>(제라, 씨)를 고른 어휘 선택에서 이스라엘 유산의 계보적 성격에 대한 강조를 읽는다.</p>
+  </div>
+
+  <div class="vs" id="v915">
+    <span class="ref">9:9–15 — 출애굽과 시내산</span>
+    <p><span class="c k">K</span>는 "돌처럼 큰 물에"(11절)가 <strong>홍해의 노래(출 15:5, 10)의 명백한 반향</strong>임을, 그리고 <strong>6–15절의 모든 문장에서 주어가 하나님</strong>이라는 사실을 확인한다. <span class="c f">F</span>는 10절 끝의 "오늘까지 이르는 이름"에서 곤경 중의 백성이 옛 구원의 능력을 기억하는 일의 중요성을 끌어낸다.</p>
+    <div class="note">
+      <div class="tt"><span class="c f">F</span>의 유명한 관찰 — 언약 어휘의 분포 (13–14절)</div>
+      <p>이 기도에서 <span class="hw">בְּרִית</span>(베리트, 언약)라는 단어는 <strong>아브라함에게만</strong> 붙고, 시내산 대목은 언약이라는 말 없이 규례들만 나열되며, <strong>다윗 언약은 아예 없다.</strong> 약속의 성격을 가진 족장 언약이 전면에 서고, 역대기 사가가 중시한 다윗 언약이 침묵한다는 사실을 F는 <strong>"이상하다"</strong>고 기록해 둔다(저작 문제와 얽힌 관찰).</p>
+    </div>
+    <p>법률 용어 사중주 <span class="hw">מִשְׁפָּטִים</span>(미쉬파팀, 판결) · <span class="hw">תּוֹרֹת</span>(토롯, 법) · <span class="hw">חֻקִּים</span>(후킴, 율례) · <span class="hw">מִצְוֹת</span>(미츠봇, 계명)의 신명기적 성격도 <span class="c f">F</span>가 용례로 입증한다. <span class="c t">T</span>는 배열의 신학을 본다. <strong>시내산 율법 수여가 연대순을 벗어나 만나·물 공급과 나란히, 곧 하나님의 은혜로운 "공급 목록"의 한 항목으로 서술된다.</strong> 의무 조항이 아니라 선물로서의 토라. <span class="c h">H</span>는 14절의 "거룩한 안식일"이 성경 전체에 두 번(여기와 출 16:23, 만나 기사)뿐임을 세고, 안식일 준수가 일하지 않아도 공급하시는 하나님을 향한 신뢰 고백이라는 논리(14절의 안식일 → 15절의 하늘 양식)를 푼다.</p>
+  </div>
+
+  <div class="vs" id="v1621">
+    <span class="ref">9:16–21 — 광야</span>
+    <p><span class="c f">F</span>가 동사 하나의 대칭을 짚는다. <span class="hw">הֵזִידוּ</span>(헤지두, 오만하게 행하다)가 10절에서는 애굽인들의 죄목이었는데 16절에서 <strong>이스라엘의 죄목</strong>이 된다. 압제자의 동사가 백성에게 돌아온다(<span class="c h">H</span>도 동일 표시).</p>
+    <p>17절의 <strong>출애굽기 34:6 인용</strong>에 대해 <span class="c t">T</span>는 기도 전체에 퍼진 방사망을 그린다. "은혜로우시며"(31절), "긍휼히 여기시며"(19, 27, 28, 31절), "오래 참으시며"(30절), "인자가 풍부하시며"(32절), "버리지 아니하셨나이다"(19, 31절). <strong>중심 고백의 속성들이 기도 곳곳으로 뻗어 나가 응집력을 만든다.</strong></p>
+    <p><span class="c h">H</span>는 어휘 둘을 판다. <span class="hw">אֱלוֹהַּ סְלִיחוֹת</span>(엘로아흐 셀리호트, 용서들의 하나님)의 복수형은 추상명사가 아니라 <strong>역사 내내 반복된 용서 행위들</strong>을 가리키고(Steinmann, 단 9:9 병행), <span class="hw">רַחֲמִים</span>(라하밈, 긍휼)은 <span class="hw">רֶחֶם</span>(레헴, 모태)과 같은 어근이어서 <strong>갓난아이를 향한 어머니의 애끓음</strong>이 하나님 사랑의 그림 언어가 된다. 17절 본문비평: 마소라의 <span class="hw">בְּמִרְיָם</span>(베미르얌, 그들의 반역 중에)은 <span class="hw">מִצְרַיִם</span>(미츠라임, 애굽)에서 <span class="hw">צ</span>가 탈락한 형태로 보는 것이 통설이며 <span class="c f">F</span> <span class="c h">H</span>, H는 민수기 14:4를 배경으로 확정한다.</p>
+    <p>20절의 "주의 선한 영"에서 <span class="c f">F</span>는 페르시아 이원론 영향설을 반박한다(삼상 16:14 이하의 악한 영 대비가 페르시아 접촉 훨씬 전부터 있었다). <span class="c h">H</span>는 <span class="hw">לְהַשְׂכִּיל</span>(레하스킬, 깨닫게 하다) 어근이 에스라-느헤미야에서 토라 연구(느 8:13)와 인물 평가(스 8:18)에 쓰이는 것을 추적해 <strong>영을 계시와 통찰의 대리자로 보는 제2성전기 성령 이해</strong>의 이른 층위를 확인한다.</p>
+  </div>
+
+  <div class="vs" id="v2225">
+    <span class="ref">9:22–25 — 정복</span>
+    <p><span class="c f">F</span>의 신학 요약이 간명하다. <strong>여호수아의 용맹과 지략에 관한 말이 한마디도 없고 땅을 "주신" 이는 하나님이다.</strong> 사람은 하나님이 쓰신 한에서만 중요하다는 구약 서술 원리이고, <strong>그분이 여전히 역사의 하나님이시라는 것이 이 기도가 존재하는 이유</strong>다.</p>
+    <p>어휘 난제: <span class="hw">פֵּאָה</span>(페아, 모퉁이/경계, 22절)의 뜻이 불명확하고(<span class="c h">H</span>는 라쉬의 축자 독법까지 소개), 25절의 <span class="hw">וַיִּתְעַדְּנוּ</span>(바이트앗데누, 즐거워하다/호사하다)는 <strong>구약 유일어(하팍스)</strong>다 <span class="c f">F</span>. <span class="c h">H</span>는 이 동사가 <span class="hw">עֵדֶן</span>(에덴)과 같은 어근임을 짚어 "기쁨의 동산" 언어가 땅의 풍요 묘사에 스며 있음을 보이고, <strong>신명기 6:10–11</strong>을 저본으로 확인하며, "먹어서 배부르고 살졌다"가 포만을 넘어 <strong>하나님을 향한 무감각</strong>을 함의한다고 푼다.</p>
+  </div>
+
+  <div class="vs" id="v2631">
+    <span class="ref">9:26–31 — 순환</span>
+    <p><span class="c k">K</span>는 <strong>사사기의 리듬</strong>(죄–쇠퇴–부르짖음–구원)의 재생으로 읽고, 26절의 "그러할지라도 그들은"과 31절의 "그러할지라도 주는"이 사람과 하나님을 맞세우는 표지임을 본다.</p>
+    <p><span class="c t">T</span>는 절 단위 해부(불순종 26a, 28a, 29b, 30b / 넘기심 27a, 28b, 30c / 부르짖음 27b, 28c / 구원 27c, 28d)를 제공하고, 이 반복이 믿음을 일으키려던 구속 패턴의 <strong>"패러디"</strong>처럼 읽히는 지점, 곧 독자가 "하나님은 언제까지 돌아오시는가, 백성은 언제 배우는가"를 묻게 되는 지점을 33절 반전을 위한 포석으로 삼는다.</p>
+    <p><span class="c f">F</span>는 "주의 율법을 등 뒤에 던지다"(26절)를 경멸의 관용구로 풀고, <span class="c h">H</span>는 <strong>열왕기상 14:9과 에스겔 23:35에서 던져지는 대상이 야훼 자신</strong>이라는 병행을 세워 토라를 던짐과 하나님을 던짐이 한 동작임을 보인다. 29절의 <strong>레위기 18:5 인용</strong>("사람이 준행하면 그 안에서 살리라")에 대해 <span class="c f">F</span>는 성전 입장 자격 문답과의 연결 가능성을, <span class="c h">H</span>는 토라=생명 공리의 수용사를 편다(겔 20:11, 미쉬나 아봇 2:7, 물에 빠진 자와 밧줄의 랍비 비유[민수기 랍바 17:6], 신 8:3을 인용하는 예수[마 4:4]와 요한복음의 생명 어록).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">וְעַתָּה</div>
+    <div class="eyebrow">9:32–37</div>
+    <h2>4. 청원과 애가</h2>
+    <div class="gloss">베앗타, "이제" — 유일한 청원이 여닫는 기도의 심장</div>
+  </div>
+
+  <div class="vs" id="v32">
+    <span class="ref">9:32 — 유일한 청원 (구조의 심장)</span>
+    <p><span class="hw">וְעַתָּה</span>(베앗타, 이제)로 열리는 청원("우리가 당한 모든 고난을 작게 여기지 마옵소서")이 두 고백(6–31절과 33–35절)에 감싸여 정중앙에 놓인다 <span class="c t">T</span>. <span class="c t">T</span>가 읽어내는 함의가 무겁다. <strong>포로기 이후 하나님이 결정적으로 행동하신 적이 없다는 인식이 기도 밑에 깔려 있고,</strong> 은혜의 역사를 그토록 길게 노래한 뒤이므로 백성은 임박한 개입을 기대하도록 이끌린다.</p>
+    <p><span class="c h">H</span>는 어법을 본다. "작게 여기지 마옵소서"는 고난의 무게를 하나님 앞에 들이미는 담대함이고, "우리 하나님"과 "언약과 인자를 지키시는"이 1:5의 기도를 되울린다. <strong>차이 하나: 1:5에는 "그를 사랑하고 그 계명을 지키는 자에게"라는 조건절이 있는데 9:32에는 없다. 백성 전체가 그 범주에 미달함을 스스로 아는 기도다</strong> <span class="c h">H</span>.</p>
+    <p>"앗수르 왕들의 때로부터"에 대해 <span class="c f">F</span>는 실제 앗수르 왕들 독법과 페르시아 왕들의 완곡한 대명 독법을 병기하고, <span class="c h">H</span>는 사르곤 연대기의 사마리아 함락 기사로 역사적 기점을 세운다. <span class="c k">K</span>는 수사 기능을 본다. 신적 별칭들이 고난을 원근법 안에 넣고, 인간 직분자들의 나열(왕·방백·제사장·예언자·조상·온 백성)이 잃어버린 인간적 구조물의 무게를 드러낸다. <span class="hw">נוֹרָא</span>(노라)는 "무자비한"이 아니라 <strong>"경외를 일으키는"</strong>이며 "여호와 경외"라는 자녀 관계 언어에 속한다는 어휘 교정도 <span class="c k">K</span>의 것.</p>
+  </div>
+
+  <div class="vs" id="v3335">
+    <span class="ref">9:33–35 — 심판의 송영</span>
+    <p>"주는 의로우시다"는 33절 고백을 <span class="c t">T</span>는 <strong>심판의 송영(doxology of judgment)</strong>이라 명명한다. 하나님이 내리시고 고백자가 겪는 위기 한복판에서 하나님의 공의를 공적으로 시인하는 형식이며, 26–31절의 순환이 던진 질문("그들은 언제 배우는가")에 대한 답(<strong>"배웠다!"</strong>)이 여기서 주어진다. <span class="c t">T</span>는 33–35절이 6–31절의 축약 요약임을 어휘 병행(의로우심·신실·행하다·토라·계명·경고·돌이킴·왕국들)으로 입증한다.</p>
+    <p><span class="c k">K</span>의 언어로 이 단락은 <strong>자기연민과 자기인식의 갈림길</strong>이고, "주는 의로우시다"는 회개한 강도의 고백처럼 자비의 문을 여는 열쇠다. <span class="c h">H</span>는 어근의 원환을 완성한다. 33절의 <span class="hw">אֱמֶת</span>(에메트, 진실)가 8절 아브라함의 <span class="hw">נֶאֱמָן</span>(네에만)과 같은 어근이므로, <strong>이스라엘이 자기 조상의 이름값에 미달했다는 판결이 어휘 차원에서 선고된다.</strong></p>
+  </div>
+
+  <div class="vs" id="v3637">
+    <span class="ref">9:36–37 — "보소서, 우리가 오늘 종이 되었나이다"</span>
+    <p><span class="hw">הִנֵּה אֲנַחְנוּ הַיּוֹם עֲבָדִים</span>(힌네 아나흐누 하욤 아바딤). <span class="c h">H</span>는 <span class="hw">הִנֵּה</span>(힌네, 보라)의 화용론을 짚는다. 청자(하나님)를 화자의 시점 안으로 끌어들이는 불변화사, 곧 <strong>"우리 눈으로 보아 주소서"</strong>라는 호소다.</p>
+    <p><span class="c k">K</span>는 저작 논쟁부터 처리한다. 아닥사스다의 피후견인이 페르시아 권력을 이렇게 말했겠느냐는 의심에 대해, 이 기도는 반역을 내뿜지도 않고 불의를 불평하지도 않으며("우리 죄로 말미암아", 37절), 그러면서도 이방 정권을 섬기고 살찌우는 것이 아브라함과 그 씨에게 약속된 것인 양 꾸미기를 거부한다고 답한다. <span class="c k">K</span>의 마지막 문장이 백미다. <strong>기도를 닫는 "큰 곤고"는 생명의 표지이자 길들여지지 않은 비전의 표지다.</strong> <span class="c f">F</span>는 같은 논쟁을 1:11로 방어한다. 느헤미야가 기도 안에서 황제를 "이 사람"이라 부를 수 있었다면, 에스라가 36–37절의 언어를 쓰지 못할 이유가 없다.</p>
+    <div class="note">
+      <div class="tt"><span class="c h">H</span>의 촘촘한 관찰 — 몸의 신학과 뒤집힌 대칭</div>
+      <p>① "종"이 애굽의 종살이를, "고난"(32절 <span class="hw">תְּלָאָה</span>, 텔라아)이 광야 여정의 수고(출 18:8)를 소환하여 현 공동체를 <strong>제2의 출애굽 공동체</strong>로 언어화한다. ② <strong>24절과 37절의 쓰라린 대칭</strong> — 하나님이 가나안 족속들을 이스라엘의 손에 붙여 "임의로" 행하게 하셨는데, 이제 이방 왕들이 유대인의 몸과 가축을 "임의로" 다스린다. 판이 뒤집혔다. ③ <strong>몸의 신학</strong> — 유대인의 몸에 일어나는 일이 중요하다는 것, 이스라엘의 자기 정체성이 이념이면서 동시에 신체라는 것이 이 책의 결이고, 몸이 이방인에게 예속된 현실은 애굽 종살이의 끔찍한 재현이다. ④ <strong>외교적 이중 수신</strong> — "주께서 우리 위에 세우신 왕들"은 하나님의 공의에 대한 승복이면서, 이 문서를 읽을지 모를 페르시아 당국을 향한 신중한 표현이기도 하다. 그러면서도 국가적 독립의 비전은 살아 있었다. 왕국들을 세우고 낮추시는 분이 야훼이므로.</p>
+    </div>
+    <p><span class="c b">B</span>도 같은 방향이다. 페르시아 왕에게 예속된 상태에서는 땅의 약속이 성취될 수 없으므로, 이 기도는 <strong>백성의 자격이 아니라 하나님 자신의 약속에 대한 신실하심을 근거로</strong> 개입을 구하는 수사다. <span class="c b">B</span>는 37절의 착취 고발이 페르시아 제국 정책의 알려진 자료와 부합한다는 확인, 그리고 에스라 1장의 고레스상(하나님의 목자)과 이 기도의 페르시아상(임의로 다스리는 왕들)이 한 책 안에서 이루는 대조까지 기록한다. <span class="c t">T</span>에게 이 두 절은 구조상 A′, 곧 기도를 닫는 애가이고 10장의 응답을 압박하는 자리다.</p>
+  </div>
+
+  <div class="note">
+    <div class="tt">9장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 경건과 수사의 결(자발적 잔류, 기쁨과 금식의 순서, "큰 곤고"는 살아 있음의 표지). <span class="c f">F</span> 양식비평·어휘·본문비평의 기초 공사(참회형 역사시 분류, 언약 어휘의 분포, 하팍스와 본문 수정, 진정성 방어). <span class="c h">H</span> 제2성전기 유대교와 수용사의 창(랍비 문헌, 쿰란, 회당 전례, 신약 연결, 몸의 신학). <span class="c t">T</span> 구조가 곧 신학(교차 구조, 찬양→애가의 역운동, 설교-기도 장르, 심판의 송영, 32절의 중심성). <span class="c b">B</span> 자료비평 논쟁과 제국사 배경, 재배열 가설의 대변자.</p>
+    <p><strong>설교·강의 조합 제안:</strong> <span class="c t">T</span>의 구조(A–B–X–B′–A′)를 뼈대로, <span class="c h">H</span>의 어휘 신학(셀리호트, 라하밈, 힌네)을 살로, <span class="c k">K</span>의 결말 해석("큰 곤고"의 신학)을 마무리로. 배치 논쟁은 <span class="c f">F</span>와 <span class="c b">B</span>를 맞세워 한 단락 처리.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="eyebrow">CROSS-REFERENCES</div>
+    <h2>5. 상호 참조 총람</h2>
+    <div class="gloss">9장은 앞선 성경을 촘촘히 인용하는 직물이다</div>
+  </div>
+
+  <table>
+    <tr><th style="width:15%">느 9장</th><th>출처</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">9:2</td><td>레위기 20:26 (구별하다) / 느 1:6; 시 106:6; 겔 18장 (연대와 개인 책임)</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">9:6</td><td><strong>창세기 2:1</strong> (하늘과 만상) — 최근 낭독이 기도 언어를 빚음</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">9:7–8</td><td><strong>창세기 15:6</strong> (믿음이 의로) → <strong>로마서 4장</strong></td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:10</td><td>출애굽기 7:3 (표적과 기사)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">9:11</td><td><strong>출애굽기 15:5, 10</strong> (홍해의 노래 반향)</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">9:12</td><td>출애굽기 13:21 (구름 기둥)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">9:14</td><td><strong>출애굽기 16:23</strong> (거룩한 안식일 — 성경 전체에 두 번뿐); 출 31:13–17</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:15</td><td>출애굽기 16:4 (하늘 양식)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">9:17</td><td><strong>출애굽기 34:6</strong> (은혜 신조 — 속성들이 기도 전체로 방사); 민수기 14:4</td><td><span class="c t">T</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">9:18</td><td>출애굽기 32장 (금송아지)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">9:21</td><td>신명기 8:4; 29:5 (옷이 해어지지 않음)</td><td><span class="c f">F</span></td></tr>
+    <tr><td class="head">9:25</td><td><strong>신명기 6:10–11</strong> (짓지 않은 성읍, 파지 않은 우물)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:26</td><td><strong>열왕기상 14:9; 에스겔 23:35</strong> (던져지는 대상이 야훼 자신)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:27–28</td><td>열왕기상 8:30–49 ("하늘에서 들으셨다" — 성전 봉헌 약속의 회수)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:29</td><td><strong>레위기 18:5</strong> (준행하면 살리라) → 겔 20:11; 아봇 2:7; 마 4:4; 요한복음</td><td><span class="c f">F</span> <span class="c h">H</span></td></tr>
+    <tr><td class="head">9:32</td><td>느헤미야 1:5 (언약과 인자 — 단 조건절이 없음)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:33</td><td>느헤미야 9:8 (에메트 ↔ 네에만 어근의 원환)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">9:36–37</td><td>출애굽기 18:8 (텔라아 = 광야의 수고); 느 9:24 ("임의로"의 뒤집힌 대칭)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">장르</td><td><strong>역사시편</strong> (시 78, 105, 106, 135, 136) — 감사형이 아닌 <strong>참회형</strong> 역사시</td><td><span class="c f">F</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료</div>
+    <p><strong>b. Ber. 63a</strong> — 성전 전례의 찬양 응답(5b절) <span class="c h">H</span> · <strong>미쉬나 미돗 2:5</strong> — 레위인의 열다섯 계단(마알레) <span class="c h">H</span> · <strong>1QS 6:6–7</strong> — 쿰란의 야간 삼분의 일 토라 연구(3절) <span class="c h">H</span> · <strong>미쉬나 아봇 2:7</strong> · <strong>민수기 랍바 17:6</strong> — 밧줄 비유(29절) <span class="c h">H</span> · <strong>사르곤 연대기</strong> — 사마리아 함락(32절 "앗수르 왕들") <span class="c h">H</span> · <strong>단 9:9</strong> — 셀리호트 복수형 병행(17절) <span class="c h">H</span></p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">צַדִּיק אַתָּה</div>
+    <div class="eyebrow">SYNTHESIS</div>
+    <h2>6. 신학 종합</h2>
+    <div class="gloss">차디크 앗타, "주는 의로우시니이다" (느 9:33) — 심판의 송영</div>
+  </div>
+
+  <h3>① 앗타의 인클루지오 — 역사를 감싸는 인격</h3>
+  <p>고백부의 첫 단어와 마지막 단어가 모두 <span class="hw">אַתָּה</span>(앗타, 당신)다(6, 31절) <span class="c t">T</span>. 창조에서 포로까지의 전 역사가 하나님의 인격적 임재에 감싸여 서술된다. <strong>6–15절의 모든 문장에서 주어가 하나님이라는 <span class="c k">K</span>의 관찰</strong>이 이 구조를 문장 차원에서 뒷받침한다. 사람은 하나님이 쓰신 한에서만 등장하고, 여호수아의 용맹조차 언급되지 않는다(<span class="c f">F</span>).</p>
+
+  <h3>② 찬양에서 애가로 — 역방향의 기도</h3>
+  <p>탄원시의 표준 운동은 애가에서 찬양으로 간다(Westermann이 구약신학의 심장으로 꼽은 전환). <strong>9장은 그 반대다.</strong> 찬양(5b)으로 열어 애가(36–37)로 닫는다 <span class="c t">T</span>. 이 역운동이 기도의 일차 청중을 하나님 못지않게 <strong>백성</strong>으로 만들고, 장르를 <strong>설교-기도</strong>로 규정한다. 10장의 서약이 이 설교가 겨냥한 응답이다.</p>
+
+  <h3>③ 은혜 신조의 방사 — 출애굽기 34:6이 기도 전체를 적신다</h3>
+  <p>17절에 인용된 "은혜롭고 긍휼히 여기시며 오래 참으시고 인자가 풍부하신" 하나님의 자기 계시가, 기도 곳곳(19, 27, 28, 30, 31, 32절)으로 뻗어 응집력을 만든다 <span class="c t">T</span>. <span class="c h">H</span>의 어휘 신학이 이를 심화한다. <strong>셀리호트</strong>(복수 = 반복된 용서 행위들), <strong>라하밈</strong>(모태에서 온 어머니의 애끓음). 하나님 서술에는 자비가 반복되고 이스라엘 서술에는 반역이 반복되는 <strong>비대칭</strong>이 기도의 결론(9:33)을 지탱한다.</p>
+
+  <h3>④ 심판의 송영 — 이신칭의의 문법</h3>
+  <p>9:33 "주는 의로우시다"를 <span class="c t">T</span>는 <strong>심판의 송영</strong>으로 명명하고, <span class="c k">K</span>는 <strong>회개한 강도의 고백처럼 자비의 문을 여는 열쇠</strong>로 읽는다. 자기 자격을 청원 근거로 삼기를 포기하고(<span class="c b">B</span>) 오직 하나님의 약속과 신실하심에 근거를 두는 이 구조는, 로마서 3:4·3:26의 문법과 같은 자리에 선다. <strong>하나님의 의를 시인하는 자리가 곧 은혜를 받는 자리다.</strong> <span class="c h">H</span>의 어근 원환(8절 네에만 → 33절 에메트)이 이 판결을 어휘로 선고한다.</p>
+
+  <h3>⑤ 신실의 세 층위 — 아브라함, 하나님, 공동체</h3>
+  <p>같은 어근 <span class="hw">אמן</span>이 세 지점을 관통한다. 아브라함의 신실한 마음(9:8 <span class="hw">נֶאֱמָן</span>) → 하나님의 신실하심(9:33 <span class="hw">אֱמֶת</span>) → 공동체의 서약(10:1 <span class="hw">אֲמָנָה</span>, 아마나). <strong>9장의 "신실한 약정"은 아브라함의 신실로의 복귀 선언이며,</strong> 이 어휘 사슬이 9장과 10장을 한 호흡으로 묶는다(<span class="c t">T</span> <span class="c h">H</span>).</p>
+
+  <h3>⑥ 약함의 신학 — 통계에 맞서 기도되는 약속</h3>
+  <div class="note">
+    <div class="tt">약함을 부정하지 않는 초월 — <span class="c k">K</span>, 9:5b</div>
+    <p>"겨우 거주 가능한 도시, 에워싼 이방인들, 유대인들의 가난과 하찮아 보임은 모두 하나님의 영광스러운 실재에 의해 초월된다. <strong>사실들이 무시되는 것은 아니다.</strong> 이어지는 기도가 보여 주듯이. 다만 그 사실들은 영원의 문맥과 하나님의 상상할 수 없는 크심의 문맥 안에서 보이게 된다."</p>
+  </div>
+  <p><span class="c h">H</span>의 9:23 주석이 이를 실물로 보여 준다. 레위인들은 "자손을 하늘의 별같이 많게 하셨다"는 성취를 찬양하는데, 느헤미야의 공동체는 고고학 보고에 따르면 <strong>감소하는 인구</strong>였다. 공동체는 자기 통계를 알면서 약속을 소리 내어 기도한다. <span class="c b">B</span>: 이 기도는 백성의 자격이 아니라 하나님의 약속에 근거를 두므로, 약함은 청원을 막지 못한다.</p>
+
+  <h3>⑦ 제2의 출애굽과 몸의 신학</h3>
+  <p><span class="c h">H</span>의 36–37절 분석이 이 장의 마지막 신학이다. "종"과 "고난" 어휘가 애굽 종살이와 광야 여정을 소환해 현 공동체를 <strong>제2의 출애굽 공동체</strong>로 언어화하고, 24절과 37절의 "임의로"가 이루는 뒤집힌 대칭이 판이 뒤집힌 현실을 그린다. <strong>유대인의 몸에 일어나는 일이 곧 신학의 자리다.</strong> 그러면서도 왕국을 세우고 낮추시는 분이 야훼이므로 독립의 비전은 살아 있다. <span class="c k">K</span>: <strong>기도를 닫는 "큰 곤고"는 죽음의 표지가 아니라 생명의 표지이자 길들여지지 않은 비전의 표지다.</strong></p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 9장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

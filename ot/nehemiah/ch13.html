@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 13장 심층 연구 — 다섯 주석 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.05em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+
+/* site breadcrumb */
+.site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+.site-nav a{border-left:none!important;padding:.1rem 0!important;color:#9db6cc!important}
+.site-nav a:hover{color:#fff!important;background:none!important}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch13.html">원어 파싱 →</a></div>
+  <div class="brand">느헤미야 13장 심층 연구</div>
+  <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="cols">
+    <a class="lv1" href="#s0">0. 구획과 권력 투쟁</a>
+    <a class="lv1" href="#s1">1. 외인 배제 (13:1–3)</a>
+    <a class="lv1" href="#s2">2. 도비야 축출 (13:4–9)</a>
+    <a class="lv1" href="#s3">3. 십일조 회복 (13:10–14)</a>
+    <a class="lv1" href="#s4">4. 안식일 성별 (13:15–22)</a>
+    <a class="lv1" href="#s5">5. 통혼 척결 (13:23–29)</a>
+    <a class="lv1" href="#s6">6. 요약과 기도 (13:30–31)</a>
+    <a class="lv1" href="#s7">7. 상호 참조 · 신학 종합</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">זָכְרָה־לִּי</div>
+  <h1>느헤미야 13장 심층 연구</h1>
+  <div class="sub">조크라-리, "나를 기억하옵소서" — 굳은 언약이 깨어지고, 다시 바로잡는 순환</div>
+  <div class="meta">다섯 주석 종합 · 히브리어는 (발음, 의미) 병기 · 문장 단위 출처는 주석가 칩으로 표시</div>
+  <div class="legend">
+    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
+    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
+    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
+    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
+    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
+  </div>
+</header>
+
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+  <div class="part-head">
+    <div class="heb">רֵיב</div>
+    <div class="eyebrow">STRUCTURE</div>
+    <h2>0. 구획과 권력 투쟁</h2>
+    <div class="gloss">리브, "다투다" — 느헤미야와 제사장직의 힘겨루기</div>
+  </div>
+
+  <p><span class="c h">H</span>의 구획: 외인 배제(13:1–3) / 도비야 축출(13:4–9) / 십일조 회복(13:10–14) / 안식일 성별(13:15–22) / 통혼 척결(13:23–29) / 요약과 기도(13:30–31).</p>
+
+  <div class="caveat">
+    <div class="tt">느헤미야 vs 제사장직 — 권력 투쟁 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: <strong>13장은 느헤미야와 당시 제사장직 사이의 권력 투쟁을 드러낸다.</strong> 대제사장 엘리아십이 느헤미야 부재중 도비야의 성전 방 거주를 승인했다(13:6). 느헤미야는 엘리아십보다 <strong>제의적 정결에 더 보수적</strong>이어서 성소 뜰에 이방인의 거주를 거부한다(13:8). 정결을 맡은 이가 제사장이 아니라 느헤미야라는 점(13:9)도 특기할 만하다 — <strong>그는 제사장 관리들을 신뢰하지 않아</strong>, 레위인의 십일조 몫을 주지 않았다고 그들을 책망하고 곳간을 맡을 새 위원회를 임명한다(13:10–13). 안식일 성문 개폐도, 제사장직의 외인 정결도, 성전 헌물 수집도 <strong>제사장이 아니라 느헤미야가</strong> 결정한다.</p>
+  </div>
+
+  <div class="caveat">
+    <div class="tt">10–13장의 인클루지오 — 언약의 실행과 파기 — <span class="c h">H</span></div>
+    <p><span class="c h">H</span>: 이 장의 관심사는 대체로 제의적이다 — 느헤미야는 <strong>공동체가 10장 언약에 서명하며 지키기로 한 제의 사항</strong>을 되살린다. Steinmann은 <strong>10–13장을 인클루지오</strong>로 본다: 그 사이 모든 자료가 언약 실행의 일부다 — 예루살렘의 새 거주자(11장)가 제사장·레위인의 봉사를 부양하고(12:1–26), 이들이 성벽 봉헌 예배를 인도하고(12:27–43), 곳간 청지기로 임명되었다(12:44–47). <strong>그러나 13장에서 그 언약의 조항들이 하나씩 깨어진다.</strong></p>
+  </div>
+
+  <div class="note">
+    <div class="tt">미완성 신학의 절정 — <span class="c t">T</span></div>
+    <p><span class="c t">T</span>: 10장에서 굳게 맺은 언약(아마나)의 조항들 — <strong>도비야(성전 모독)·십일조·안식일·통혼</strong> — 이 13장에서 모두 위반으로 재등장한다. 가장 엄숙한 서약조차 인간의 손에서 무너지고, 느헤미야가 다시 바로잡아야 한다. <strong>이것이 느헤미야서의 "미완성 신학"</strong>이다 — 완결된 언약은 종착이 아니라, 순종이 끊임없이 갱신되어야 하는 <strong>순환</strong>의 한 마디다.</p>
+  </div>
+
+  <div class="caveat">
+    <div class="tt">코다 — 이 책은 봉헌의 기쁨으로 끝나지 않는다 — <span class="c t">T</span></div>
+    <p><span class="c t">T</span>: 에스라-느헤미야의 서사적·신학적 절정은 12:27–43의 봉헌이다. 실마리들이 거둬지고 두 개혁자의 사역이 이어지며 기쁨이 넘쳐, 독자는 <strong>소설의 결말 같은 완결감</strong>을 느낀다. 그런데 서사가 <strong>자기 결말을 아랑곳하지 않고 35절을 더 행진한다.</strong> T는 이 마지막 부분(12:44–13:31)을 <strong>코다(coda)</strong>로 읽는다 — 에스라-느헤미야가 늘 그렇듯 <strong>연대기를 신학에 종속</strong>시키기 때문. T의 핵심 독법: 13:4의 <strong>"이 일 전에"(<span class="hw">וְלִפְנֵי מִזֶּה</span>, 벨리프네 미제)를 시간적이 아니라 정황적("이런데도, 이에 맞서")으로</strong> 읽어야 한다 — 개혁자들의 수고와 백성의 엄숙한 서약이 봉헌으로 절정에 이르렀음<strong>에도</strong>, 엘리아십이 느헤미야의 12년 부재를 틈타 감히 도비야를 성전 경내에 들였다는 것이다. 편집자는 10장의 서약을 <strong>역사적 순서를 뒤집어</strong> 13장 뒤가 아니라 앞에 둠으로써, <strong>개혁과 뒤이은 재발 사이의 긴장을 해소하기를 거부</strong>하고 독자로 신앙 생활의 현실을 묵상하게 한다.</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+  <div class="part-head">
+    <div class="heb">עֵרֶב</div>
+    <div class="eyebrow">13:1–3</div>
+    <h2>1. 외인 배제</h2>
+    <div class="gloss">에레브, "섞인 무리" — 저주를 축복으로 바꾸신 하나님</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:1–2 — 암몬·모압, 발람의 저주 반전</span>
+    <p><span class="c h">H</span>: <strong>"모세의 책"</strong> 낭독에서 <strong>암몬·모압 사람은 영원히 하나님의 총회에 들어오지 못한다</strong>는 규정이 발견된다(신 23:1–8). 제2성전기 대부분의 해석자는 이 구절을 <strong>통혼 금지</strong>로 이해했다. H: 앞서(스 9–10) 모든 통혼이 금지되었으나, 여기서는 저자가 신명기 규정을 인용해 <strong>도비야("암몬 사람", 느 4:3)의 위반</strong>에 특별한 주의를 돌린다 — 공동체와 통혼했을 뿐 아니라 성전 뜰에 사는 원수. 이 본문은 느헤미야의 대적 <strong>산발랏</strong>(모압 사람일 가능성)을 겨냥한 것일 수도 있다.</p>
+    <p><strong>발람의 저주가 축복으로.</strong> <span class="c h">H</span>: 모압·암몬(롯의 후손, 이스라엘의 친족)이 이스라엘이 그 영토에 들어올 때 음식·물로 맞지 않고, 오히려 <strong>발람을 고용해 저주하려 했으나 하나님이 그 말을 축복으로 "뒤엎으셨다"</strong>(민 22–24; 신 23:5). 고대에 저주는 강력하여 되돌릴 수 없었으나 <strong>축복으로 상쇄될 수 있었다.</strong></p>
+    <div class="note">
+      <div class="tt">룻 — 규칙이 아니라 예외 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 토라는 가나안 일곱 족속과의 통혼을 금하고(출 34:11–16), 모압·암몬과의 자손은 열째 대까지 총회에 들지 못하게 한다(신 23:3). <strong>룻과 보아스의 혼인은 규칙이 아니라 예외</strong>다. 룻이 나오미의 하나님·고향·백성을 받아들인 서원(룻 1:16)은 <strong>문화적 정체성의 전환</strong>에 해당한다. 그럼에도 룻은 이야기 내내 "모압 여인 룻"으로 불린다. 이스라엘과 연합하려는 거류 외인(<span class="hw">גֵּר</span>, 게르)은 받아들여지되 별도 범주에 남았다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:3 — "섞인 무리를 이스라엘에서 분리하다"</span>
+    <p><span class="c h">H</span>: 하나님의 말씀은 삶을 바꾼다 — 백성이 말씀에서 배우면 새 통찰에 따라 행동하기 시작한다(스 10:3; 느 8:9–11; 13:3). <strong>"섞인 것"(<span class="hw">עֵרֶב</span>, 에레브)</strong>은 통혼이 낳은 민족적·종교적 혼합을 가리킨다. 같은 문제가 <strong>첫 출애굽 때에도 있었다 — "섞인 무리"(<span class="hw">עֵרֶב רַב</span>, 에레브 라브)</strong>가 이스라엘 중에 있었다(출 12:38). H: 4QMMT는 유대인·이방인의 통혼을 <strong>부적절한 천 섞기, 소와 나귀의 교미(레 19:19)에 견주며</strong>, 신명기의 모압·암몬 금지를 인용하고, <strong>성소와 "거룩한 씨"를 오염시키는 부정한 성적 혼합</strong>을 경고한다(레위의 유언 9:9도 "성소를 더럽힘"을 경고).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+  <div class="part-head">
+    <div class="heb">וָאֶקְצֹף</div>
+    <div class="eyebrow">13:4–9</div>
+    <h2>2. 도비야 축출</h2>
+    <div class="gloss">바에크초프, "내가 심히 근심하여" — 성전 방에서 이방인을 몰아내다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:4–6 — 엘리아십이 도비야에게 성전 방을 내주다</span>
+    <p><span class="c h">H</span>: <strong>엘리아십과 도비야는 혈족이 아니라 혼인으로 얽혔다</strong> — 도비야는 유대인(스가냐의 딸)과 혼인했고, 그 아들은 제사장 계열 므술람의 딸과 혼인했다(느 3:30). H: 이스라엘에서 <strong>제사장의 통혼은 특히 가증한 것</strong>이었다(겔 44:22). 저자는 도비야를 <strong>암몬 사람</strong>으로 여겨 성전 뜰 거주가 부당하다고 본다 — 야훼 신명을 지녔음에도, 도비야는 산발랏과 함께 유대인의 유익을 도모하는 것에 분개한 자다. 그는 <strong>이스라엘 족보를 증명 못해 공동체에서 배제된 도비야의 후손</strong>일 수 있다(스 2:59–60).</p>
+    <p><strong>32년의 재방문.</strong> <span class="c h">H</span>: <strong>아닥사스다 32년은 433/432 BCE</strong> — 따라서 느헤미야의 1차 총독기는 12년이었다. 2차 재방문 기간은 알 수 없으나 407년 이전에 끝났을 것이다(엘레판틴 파피루스에 그때 바고히가 총독).</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:7–9 — 심히 근심하여 세간을 던지고 방을 정결하게</span>
+    <p><span class="c h">H</span>: 도비야의 성전 뜰 거주 허가는 느헤미야에게 <strong>견딜 수 없는 일</strong>이었다 — 그는 암몬 관리일 뿐 아니라 공동체의 원수(2:10, 19; 4:3)다. 느헤미야는 <strong>도비야의 세간을 방 밖으로 다 내던지고</strong>, 방을 정결하게 한 뒤에야 성소의 그릇·소제물·유향을 다시 들였다.</p>
+    <div class="caveat">
+      <div class="tt">이방인 부정의 전염성 — 유대교 최초 등장 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: <strong>전염성 있는 이방인의 부정이라는 개념이 여기 느 13:9에서 유대교 사상 처음 등장</strong>한다. 도비야의 부정은 그가 수행하는 어떤 봉사 방법에 연결된 것이 아니라 <strong>그 사람 자체에 거한다.</strong> 두로 상인이 예루살렘에 살 수 있었으나, 여기서는 암몬 사람이 성전 복합 안에 거주했다. 이 태도가 하스몬 시대 헬레니즘에 맞선 무기로 발전한다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">에스라와 느헤미야의 대조 — 그리스도의 성전 정화 — <span class="c h">H</span> <span class="c k">K</span></div>
+      <p><span class="c h">H</span>: 두 지도자의 성품·양식 차이가 여기서 뚜렷하다. <strong>느헤미야는 즉각 행동으로 대응해 위반자와 그 소유를 강제로 몰아낸다</strong> — 이는 후에 <strong>그리스도가 성전 뜰에서 환전상을 몰아내신 일(막 11:15–17)</strong>을 상기시킨다. 반면 에스라는 통혼 위기 때 앉아 근심하며 공동체가 방안을 내놓기를 기도하며 기다렸다(스 10:1–3). <strong>에스라는 자기 머리털을 뽑았으나(스 9:3), 느헤미야는 위반자들의 머리털을 뽑는다(느 13:25).</strong></p>
+      <p><span class="c k">K</span>: K의 필치는 더 신랄하다 — <strong>도비야는 담대함이 부족한 적이 없었다.</strong> 성전에 발끝 하나 들이는 것도 정복일 텐데, 그는 <strong>작은 창고만 한 방을 얻어 종교 당국이 손수 치워 주게</strong> 했다. 하나님을 위한 유향과 사역자를 위한 십일조보다 자기 세간을 우선케 한 것도 흡족했겠으나, 무엇보다 그는 <strong>예루살렘의 신경중추, 영향력과 음모에 이상적인 자리</strong>를 차지했다. K: 만사의 여러 면(지지할 편까지)을 다 보던 당대 성직자들과 달리, 느헤미야는 <strong>훗날 그의 주님이 그러하실 것처럼 맹렬히 쳐들어간다</strong> — 이 장 내내 그는 <strong>거룩이 흥정 대상이 아니며 관습만으로 무엇을 거룩하게 할 수 없다</strong>는 거부로 동시대인 가운데 우뚝 선다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+  <div class="part-head">
+    <div class="heb">מַדּוּעַ נֶעֱזַב</div>
+    <div class="eyebrow">13:10–14</div>
+    <h2>3. 십일조 회복</h2>
+    <div class="gloss">마두아 네에자브, "어찌하여 버린 바 되었느냐" — 도망친 레위인을 불러 모으다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:10–12 — 레위인이 밭으로 도망가다</span>
+    <p><span class="c h">H</span>: 레위인이 마땅한 <strong>농산물 몫을 받지 못해</strong>, 성전 직임을 떠나 <strong>각자 자기 밭으로 도망가</strong> 농사로 생계를 유지해야 했다. 성벽 봉헌일에 기쁘게 예물을 드렸던 백성(12:44–47)이 <strong>다시 이 책임을 소홀히</strong> 한 것이다. H: 느헤미야가 관리들과 다투며 <strong>"어찌하여 하나님의 전이 버린 바 되었느냐"</strong>(13:11) 묻고, 그들을 모아 제자리에 세운다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:13 — 신뢰할 만한 위원회 임명</span>
+    <p><span class="c h">H</span>: 느헤미야가 <strong>여러 사회 계층에서 신뢰할 만한 이들의 위원회</strong>를 조직해 성전 헌물의 수집·보관·분배를 맡긴다 — <strong>제사장 셀레먀, 서기관 사독, 레위인 브다야, 평신도 맛다냐의 아들 하난.</strong> 이들의 협력이 <strong>엘리아십 같은 개인의 편향에 좌우되지 않도록</strong> 보장한다. 서기관이 분배의 회계 역할을 했을 것이다.</p>
+    <div class="note">
+      <div class="tt">말만으로는 아무도 먹이지 못한다 — <span class="c k">K</span></div>
+      <p><span class="c k">K</span>: 인색한 태도가 그 시대의 표지였다 — 포로기 이전엔 미신이 사람을 종교적 예물에 후하게 만들었으나(암 4:4–5), 이제는 <strong>가능한 한 적게 주려는</strong> 유혹, 곧 말라기의 표현대로 하나님을 "도둑질하는" 유혹이 자리했다. K는 <strong>느헤미야가 책임 소재를 정확히 짚었다</strong>고 본다 — 10절의 도망간 자들이 아니라 <strong>11절의 관리들</strong>에게. 10장의 "굳은 언약"이 "우리 하나님의 전을 버려두지 아니하리라"(10:39)고 다짐했으나, 이제 <strong>그 고운 말이 아무도 먹이지 못하고 있었다.</strong> 느헤미야의 항변도, 11절 하반의 좋은 행정과 13절의 신중한 임명이 뒤따르지 않았다면 그만큼 <strong>아무것도 이루지 못했을</strong> 것이다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:14 — "나를 기억하옵소서" (첫 번째 기억 기도)</span>
+    <div class="note">
+      <div class="tt">조크라-리 — 하나님이 기억하실 때 개입하신다 — <span class="c h">H</span> <span class="c k">K</span></div>
+      <p><span class="c h">H</span>: <strong>"나를 기억하옵소서"(<span class="hw">זָכְרָה־לִּי</span>, 조크라-리)</strong> — 느헤미야가 명령형의 강조 형태를 쓴다. 성경에서 <strong>야훼가 "기억하실" 때 그는 그 백성의 삶에 개입</strong>하신다 — 고전적 예가 홍수 중 노아를 "기억하시니" 물이 곧 물러간 것(창 8:1). 하나님은 회개한 자의 악행은 지워 잊으시나(사 43:25), <strong>그를 경외하고 묵상하는 자는 기록에 남기신다</strong>(말 3:16; "어린양의 생명책", 계 21:27). H: 느헤미야의 기억 기도는 이 책에 여러 번 나온다(5:19; 13:14, 22, 31; 대적을 향해서는 6:14; 13:29).</p>
+      <p><span class="c k">K</span>: K는 이 짧은 삽입 기도를 <strong>"엿듣는 이가 된 듯한" 순간</strong>이라 부른다 — 회고록이 사적 토로가 되고 우리는 침입자가 된다. 그러나 느헤미야의 사적 자아는 공적 자아와 완전히 한 결이다 — <strong>일편단심, 철저히 솔직하며, 속속들이 경건하다.</strong> K는 이 간구를 변호한다 — 그것은 <strong>자기애가 아니라 사랑에서, 자기 과시가 아니라 겸손에서</strong> 나온다(도움을 구하는 호소이므로). 하나님의 "잘하였도다"를 듣는 것은 가장 순전하고 정화하는 야망이다. K는 "나의 선행"을 <strong>"나의 헤세드의 행위"</strong>로 옮길 수 있다고 보며, Brockington의 정의를 인용한다 — 헤세드란 <strong>"무슨 일이 있어도 의무를 받아들이고 지켜 내는 자질"</strong>이다(22절에서는 하나님이 이 자질을 보이신다).</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+  <div class="part-head">
+    <div class="heb">קַדֵּשׁ אֶת־יוֹם הַשַּׁבָּת</div>
+    <div class="eyebrow">13:15–22</div>
+    <h2>4. 안식일 성별</h2>
+    <div class="gloss">카데쉬 에트-욤 하샤바트, "안식일을 거룩하게 하라" — 성문을 닫고 레위인이 지키다</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:15–16 — 안식일에 짐을 나르고, 두로 사람이 생선을 팔다</span>
+    <p><span class="c h">H</span>: 느헤미야가 안식일 준수를 바로잡는다. <strong>15절의 상인은 안식일에 물건을 파는 유대인</strong>일 것이고, <strong>16절은 다른 경우 — 자기 물건은 안 팔아도 이방인에게서 사는 유대인</strong>이다. 이방인(두로 사람)은 이날 거래에 거리낌이 없어 닫힌 유대 시장을 이용했다. H: Blenkinsopp은 안식일의 <strong>"존재론적 성격"</strong>을 짚는다 — 창조 때 하나님이 친히 제정하셨기에(창 2:3), "안식일 준수는 사실상 언약에 대한 신실함과 동의어"다. 안식일·안식년 위반이 예루살렘 상실과 포로에 기여했다(13:18; 렘 17:19–27).</p>
+    <div class="note">
+      <div class="tt">두로 사람과 생선 무역 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: <strong>두로 사람이 생선 무역을 담당</strong>했는데, 이는 제2성전기 후기까지 이스라엘 땅에 거의 알려지지 않은 업종이다. 동지중해는 나일강 토사 패턴 탓에 고대에 어획이 빈약했고, 갈릴리 바다는 예후드 속주보다 훨씬 북쪽이었다. <strong>두로 상인은 대규모 어선단으로 에게해까지 조업해 예루살렘 등 도시로 생선을 날랐다.</strong> "거룩한 성"(11:1)이 이제 유대 지도자 느헤미야를 통해 이스라엘의 통제 아래 있으므로, 성벽이 이방인과의 교류를 통제하는 수단이 된다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">안식일 침식의 역사 — 아모스에서 예레미야까지 — <span class="c k">K</span></div>
+      <p><span class="c k">K</span>: 포로기 이전에 이미 <strong>안식일 법에 대한 조바심이 자라고 있었다.</strong> 주전 8세기 아모스는 <strong>상인들이 주간 휴업에 안달하는 것</strong>을 보았고(암 8:5), 예레미야 때에 이르러 그들이 뜻을 이뤄 <strong>짐이 안식일에 성을 들고 나기를 거듭했다.</strong> K는 <strong>예레미야의 경고(렘 17:19–27)가 느헤미야의 마음에 또렷이 있었다</strong>고 본다 — 금지된 짐이 오가는 것을 보며(15절; 렘 17:21) 역사가 되풀이됨을 말한 것(18절)이 그 증거다. 15–16절의 분주한 장면은, <strong>느헤미야 부재중 시작된 실개천이 (그런 실개천이 늘 그렇듯) 얼마나 빨리 홍수가 되었는지</strong>를 보여 준다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">두로 사람을 정죄하지 않는 이유 — <span class="c b">B</span></div>
+      <p><span class="c b">B</span>: 두로는 솔로몬 때 이스라엘과 좋은 관계였으나(왕상 5) 포로기에는 이스라엘의 원수가 되었다(겔 26–28의 두로 심판 신탁). B의 예리한 관찰 — <strong>외부인과의 분리를 거듭 강조하는 이 책이, 정작 안식일에 물건을 파는 두로 사람은 정죄하지 않는다.</strong> 이유는 분명하다. <strong>안식일 법은 하나님이 이스라엘에게 주신 것이므로, 그 준수의 책임은 오직 이스라엘에게 있다.</strong> 하나님의 백성에게 책임 전가란 있을 수 없다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:17–18 — "이 악을 행하여 안식일을 더럽히느냐"</span>
+    <p><span class="c h">H</span>: <strong>"더럽히다"(<span class="hw">חַלֵּל</span>, 할렐, "속되게 하다")</strong>는 거룩한 것을 일상 용도로 돌리는 제의 언어다(레 21:4; 말 2:10–11). 이 경우 유대인이 하나님이 "거룩하다" 하신 <strong>안식일을 평범한 노동일로 바꾼</strong> 것이다. 느헤미야는 조상들이 바로 이 일을 행해 하나님이 이 성에 재앙을 내리셨음을 상기시킨다.</p>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:19–22 — 성문을 닫고, 레위인이 성별하여 지키다</span>
+    <p><span class="c h">H</span>: 느헤미야가 <strong>안식일 전 성문을 닫고 파수꾼을 세워 짐이 들어오지 못하게</strong> 한다. 총독으로서 그는 지역의 주요 권한과 명령 집행력을 지녔다. 한두 상인이 두세 주간 성벽 밖에서 밤을 지새우자, 느헤미야가 <strong>"다시 이리하면 내가 너희를 잡으리라"(직역 "손을 뻗으리라")</strong> 경고한다.</p>
+    <div class="caveat">
+      <div class="tt">레위인이 성문을 지키다 — 성별된 자의 거룩한 임무 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 지금까지 느헤미야는 자기 부하로 성문을 지켰으나, <strong>안식일 성문 수호는 본래 레위 문지기의 임무</strong>다. 속된 거래를 성에서 막는 일은 <strong>거룩한 임무</strong>다. 느헤미야는 온 성의 거룩이 더럽혀지지 않도록, 더 합당한 보호 체계를 위해 <strong>레위인에게 성별하여 거룩한 성을 지키게</strong> 한다 — 레위인은 안식일에도 거룩한 일을 위해 성별되었기에 파수꾼으로 일할 수 있다(제사장이 안식일에도 성소·제단에서 섬기듯). H: 오늘날 교회의 안내위원이 예배자를 초대할 뿐 아니라 예배의 거룩을 보호하는 것과 같다.</p>
+      <p><strong>"안식일을 거룩하게 하라"의 의미.</strong> H: 엄밀히 이스라엘이 안식일에 거룩을 부여할 수 없다 — 하나님이 이미 그렇게 지정하셨기 때문. "거룩하게 하다"는 <strong>"거룩하게 대하다"</strong>를 뜻한다(출 20:8). 고대에 안식일은 <strong>뿔나팔을 불어</strong> 일을 그칠 때를 알림으로 거룩하게 되었다 — 성전산 성벽 남서쪽 모퉁이의 <strong>"나팔 부는 집"</strong> 비문이 이를 확증한다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">고대의 성문 — 단순한 출입구가 아닌 복합 시설 — <span class="c b">B</span></div>
+      <p><span class="c b">B</span>: 7:3에서 느헤미야는 <strong>보안을 위해</strong> 성문을 닫게 했고, 여기 13:19에서는 <strong>안식일 내내</strong> 닫게 한다. 고대의 성문은 성벽에 난 구멍 이상이었다 — <strong>상업·사법·종교 기능을 수행하는 건물 복합체</strong>를 품을 수 있었다. 룻기 4장에서 성문은 성읍 장로들이 모여 법률 사무를 처리하는 곳이고, 갈릴리 하솔 발굴에서는 <strong>왕정 시대 성문 안에 자리한 신당(shrine)</strong>이 드러났다. 성문은 <strong>안식일 전야에 그림자가 길어질 때</strong> 닫힌다 — 고대에도 오늘날 유대교에서도 새 날은 해질녘에 시작한다(창 1의 후렴 "저녁이 되고 아침이 되니"). 상인들은 이 조치가 오래가지 않으리라 여겨 <strong>"한두 번" 성 밖에서 밤을 지새웠다</strong>(13:20) — 느헤미야의 경고가 그들을 쫓을 때까지.</p>
+    </div>
+    <div class="note">
+      <div class="tt">거룩한 시간의 개혁 — 그리고 항변을 떠받치는 조치 — <span class="c t">T</span> <span class="c k">K</span></div>
+      <p><span class="c t">T</span>: T의 삼분 구도에서 이 단락은 <strong>"거룩한 시간의 개혁"</strong>이다 — 느헤미야의 개혁이 <strong>거룩한 공간(12:44–13:14) → 거룩한 시간(13:15–22) → 거룩한 회중(13:23–29)</strong>으로 이어진다. 13:22의 "안식일을 거룩하게 지키다"에는 하나크가 아니라 <strong>카다쉬(<span class="hw">קדשׁ</span>, 성별하다)</strong>가 쓰여, 레위인의 성문 수호가 <strong>제의적 성별의 행위</strong>임을 보인다.</p>
+      <p><span class="c k">K</span>: 여기서도 <strong>항변은 빈틈없는 조치로, 조치는 경계와 투지로 뒷받침된다.</strong> 이토록 헌신된 이에게서는 장사치들도 선수를 칠 수 없다. K가 특히 주목하는 것 — 느헤미야는 이 책무를 <strong>마땅히 맡을 자들(레위인)에게 넘기는 지혜</strong>를 보였고, 그들이 이 일을 <strong>거룩한 임무로 받아들이도록</strong>("몸을 정결하게 하고 와서 성문을 지키라", 22절) 확실히 했다.</p>
+    </div>
+    <p><span class="c h">H</span>: 느헤미야가 다시 하나님께 <strong>자신을 기억해 달라 간구</strong>한다(13:22; 5:19; 13:14, 31).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+  <div class="part-head">
+    <div class="heb">וָאֶמְרְטֵם</div>
+    <div class="eyebrow">13:23–29</div>
+    <h2>5. 통혼 척결</h2>
+    <div class="gloss">바에므레템, "그들의 머리털을 뽑고" — 아스돗 방언을 쓰는 자녀들</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:23–24 — 아스돗·암몬·모압 여인, 아스돗 방언을 쓰는 자녀</span>
+    <p><span class="c h">H</span>: 느헤미야가 <strong>아스돗·암몬·모압 여인과 사는 유대인</strong>을 본다. 이례적 낱말 <strong>레호쉬브(<span class="hw">לְהוֹשִׁיב</span>, "함께 살게 하다")</strong>는 통상 "혼인"에 쓰이는 나사(취하다)·라카흐가 아니다 — <strong>저자가 이 결합을 합법적 혼인으로 여기지 않아 일부러 다른 낱말을 썼을 가능성</strong>이 크다. H: <strong>자녀 절반이 아스돗 방언 등을 말하고 유다 방언을 할 줄 몰랐다</strong> — 어머니가 자기 모국어와 문화를 가르쳤기에, 히브리어 교육 없이는 자녀가 <strong>고대 문화에 쉽게 동일시되지 못했다.</strong></p>
+    <div class="caveat">
+      <div class="tt">한 세대의 타협이 수 세기의 일을 허문다 — <span class="c k">K</span></div>
+      <p><span class="c k">K</span>: 호세아가 말했다 — "에브라임이 여러 민족 가운데에 혼합되니… 이방인들이 그의 힘을 삼켰으나 그가 알지 못하는도다"(호 7:8–9). 구약은 통혼의 즉각적 불충을 많이 다루나, K가 보기에 느헤미야는 <strong>율법과 선지자가 거의 다루지 않은 다른 국면</strong>(말 2:15 "경건한 자손"이 유일한 예외)에 충격받았다 — 곧 <strong>다음 세대의 부패</strong>다. 자녀들의 뒤섞인 언어(24절)는 증상을 넘어 위협이었다. <strong>사고와 표현의 차원에서 이스라엘 정체성이 꾸준히 침식되고, 하나님의 말씀에 접근할 길이 끊기는 것</strong> — 그것이 사실상 그들을 이교화한다. <strong>한 세대의 타협이 수 세기의 일을 허물 수 있다.</strong></p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:25 — 머리털을 뽑고 맹세하게 하다 (이혼은 요구하지 않음)</span>
+    <div class="caveat">
+      <div class="tt">에스라와의 대조 — 이혼을 요구하지 않다 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 강렬한 지도력 대조 — <strong>느헤미야는 위반자의 머리털을 뽑으나, 30년 전 같은 상황의 에스라는 자기 머리털을 뽑았다</strong>(스 9:3). 그럼에도 <strong>느헤미야는 추가 통혼을 금할 뿐, 에스라처럼 이혼을 요구하지는 않는다</strong> — 아마 그 극단적 조치의 결과가 되풀이하기엔 너무 가혹했기 때문일 것이다.</p>
+      <p><strong>수염 뽑기 — 아케메네스의 형벌.</strong> H: 남의 수염 털을 뽑는 것은 분노·경멸을 표하는 고통스럽고 모욕적인 행위였다(삼하 10:4; 사 50:6; 함무라비 법전 127). L. Fried: <strong>"머리와 수염 털을 뽑는 것은 아케메네스 제국의 공식 형벌</strong>이었다." 그는 무라슈 문서고의 쐐기문자 계약을 인용한다 — 기한 내 완수하지 못하면 "니트푸로 백 대 맞고, 수염과 머리털이 뽑히며" 노역장에 갇힌다.</p>
+    </div>
+    <p><strong>솔로몬의 전례.</strong> <span class="c h">H</span>: 느헤미야가 <strong>솔로몬</strong>을 든다 — "이스라엘 왕 솔로몬이 이 일로 범죄하지 아니하였느냐… 이방 여인이 그로 범죄하게 하였나니"(13:26). 하나님께 사랑받아 온 이스라엘의 왕이 된 그마저 이방 여인 탓에 죄를 지었다.</p>
+    <div class="note">
+      <div class="tt">분노한 자의 맹목적 반응이 아니다 — <span class="c k">K</span></div>
+      <p><span class="c k">K</span>: 25절의 조치들은 겉보기와 달리 치밀하다. <strong>"내가 그들을 책망하고"는 11절·17절의 "꾸짖다"와 같은 동사(리브)</strong> — 상대에 맞서 자기 주장을 논증하는 법정 어휘다(역사의 논거와 더 강한 사례의 논거가 26절에 동원된다). 그 뒤의 공세는 <strong>신적 제재의 지렛대(저주, 맹세 아래의 서약), 신체적 고통, 수치(삼하 10:5; 사 50:6의 털 뽑기), 충성에의 호소(27절)</strong>를 차례로 쓴다. K의 평가 — "무시무시한 공격이었으나, 사활이 걸린 문제였다."</p>
+      <p><strong>폭발과 내파.</strong> K: <strong>느헤미야의 폭발(explosion)은 에스라의 내파(implosion)만큼이나 그다운 것</strong>이었다. 둘 다 강력히 효과적이었고, 둘 다 주님의 악과의 대면에서 병행을 얻는다 — <strong>느헤미야의 충격 요법은 환전상 습격과 같은 방식으로 압도적이었고, 에스라의 애통의 표출은 그 나름으로 예루살렘을 향한 탄식만큼 사람을 움직였다.</strong> 느헤미야가 에스라의 이혼 절차를 쓰지 않은 것에 대해, K는 <strong>즉각적·개인적 행동을 선호하는 그의 기질</strong>에 더해 <strong>이전 체제의 가정 해체가 낳은 결과(스 10:18–44)를 지켜본 관찰</strong>이 작용했으리라 본다.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:28–29 — 산발랏의 사위가 된 대제사장의 손자를 쫓아내다</span>
+    <p><span class="c h">H</span>: <strong>대제사장 엘리아십의 손자, 요야다의 아들 하나가 호론 사람 산발랏의 사위</strong>가 되었다. 느헤미야는 이 통혼, 특히 <strong>대제사장 족보에 가져온 오염에 격분</strong>한다(겔 44:22). 이 젊은이는 이론상 미래의 대제사장이 될 사람이었다 — 레위기는 대제사장이 자기 백성 밖의 여인과 혼인함을 명시적으로 금한다(레 21:14). 설상가상 그가 <strong>공동체의 원수 산발랏의 딸</strong>과 혼인했기에, 느헤미야가 그를 쫓아낸다.</p>
+    <div class="caveat">
+      <div class="tt">심장을 겨눈 일격 — "쫓아내다"라는 통쾌한 낱말 — <span class="c k">K</span> <span class="c b">B</span></div>
+      <p><span class="c k">K</span>: 이 장 앞부분(4절 이하)에서 엘리아십과 도비야의 혼맥·친분이 드러났는데, <strong>산발랏은 느헤미야의 적대자 서열에서 도비야보다 높았고, 이제 대제사장 가문에 딸을 들여 동맹자보다 더 깊이 침투했다.</strong> K의 표현으로 이것은 <strong>"심장을 거의 찌른 일격"</strong> — 대제사장 본인과의 혼인이 아니고서는 이보다 더한 오염이 없었다. 산발랏의 딸이 레 21:7로 법적 결격이든 아니든, 그 아버지가 이 혼인으로 얻은 발판은 <strong>요야다의 승인을 변호 불가능하게</strong> 만든다. 느헤미야는 그 남편을 <strong>"쫓아냄"(K — "통쾌한 낱말!")</strong>으로써 산발랏과 그 딸까지 효과적으로 몰아냈고, <strong>자신의 강단 있는 개입 연쇄를 어울리는 절정으로</strong> 끌어올렸다.</p>
+      <p><span class="c b">B</span>: 이 사건은 <strong>또 다른 원수 도비야가 성전에 발을 들인 사건(13:4–9)과 병행</strong>을 이룬다 — 느헤미야의 두 숙적이 각각 성전 공간과 제사장 혈통으로 침투한 셈. B는 신약의 병행도 짚는다 — 소수자 공동체가 정체성을 지키려는 같은 논리가 바울에게 있다. <strong>부적절한 혼인의 당사자를 공동체에서 배제하라는 고전 5장의 준엄한 판단은 에스라-느헤미야와 놀랍도록 닮은 병행</strong>이며, 신자의 송사를 불신자의 법정에 가져가지 말라는 고전 6장도 같은 결이다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">기억 기도의 이면 — 대적을 기억하소서 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 이 장에 여러 기억 기도가 있다(13:14, 22, 29, 31; 5:19; 6:14). 느헤미야는 야훼께 <strong>자신을 은혜로 기억하시고, 또 남들이 어떻게 불신실했는지 기억해 벌하시기를</strong> 함께 구한다. 계산적으로 들릴 수 있으나, 느헤미야도 미심쩍은 성격의 행동(13:25 폭력)을 했기에, <strong>자신이 명예로운 일도 많이 했으니 저울이 자기 쪽으로 기울기를</strong> 하나님께 아뢰는 것이다. 여기 "오염"으로 특정된 것은 이방인의 부정(13:9)과 통혼의 죄(13:26–27)이며, <strong>레위인도 거명되어 이 오염이 제사장만의 문제가 아님</strong>을 보인다.</p>
+    </div>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+  <div class="part-head">
+    <div class="heb">זָכְרָה־לִּי אֱלֹהַי לְטוֹבָה</div>
+    <div class="eyebrow">13:30–31</div>
+    <h2>6. 요약과 기도</h2>
+    <div class="gloss">조크라-리 엘로하이 레토바, "내 하나님이여 나를 기억하사 복을 주옵소서"</div>
+  </div>
+
+  <div class="vs">
+    <span class="ref">13:30–31 — 모든 외인을 정결하게, 당번을 세우다, 마지막 기억 기도</span>
+    <p><span class="c h">H</span>: 느헤미야가 <strong>모든 외인의 것을 정결하게 하고, 제사장·레위인의 당번(미쉬마로트)을 세워 각자 자기 임무에</strong> 두고, <strong>나무 예물과 첫 소산</strong>을 정한 때에 드리게 한다(13:30–31).</p>
+    <div class="note">
+      <div class="tt">비느하스의 영원한 제사장 언약 — <span class="c h">H</span></div>
+      <p><span class="c h">H</span>: 느헤미야가 하나님께 기억해 달라 구하는 행동들은 특정 계명의 준수가 아니라 <strong>직무를 넘어선 행동</strong>이다 — 의(성벽 공사자의 빚 탕감, 5:11)와 거룩(성전 방에 살던 외인 축출, 13:9)을 향한 열심에서 나온 것. 어떤 면에서 느헤미야의 열심은 <strong>비느하스</strong>를 상기시킨다 — 제사장과 이방 여인을 창으로 찔러 <strong>"영원한 제사장 직분의 언약"(민 25:13)</strong>을 약속받은 그처럼, 느헤미야도 <strong>"제사장과 레위인의 언약"을 위해</strong> 대제사장의 손자와 이방 여인의 결합을 갈라놓는다. H: 하나님이 느헤미야를 선히 기억하셨다는 최선의 증거는, <strong>그의 신실함과 하나님을 향한 열심을 흠모해 온 수많은 세대의 신자들이 그를 계속 기억하는 것</strong>이다.</p>
+    </div>
+    <div class="note">
+      <div class="tt">"왔노라 보았노라 이겼노라"보다 초라한 비문 — <span class="c k">K</span></div>
+      <p><span class="c k">K</span>: 우리는 느헤미야를 성벽으로 기억하나, <strong>그 자신은 회고록을 훨씬 덜 화려한 세 업적으로 끝맺는다</strong> — 제국 궁정 출신의 이 사람은 세속의 가치를 하나도 들여오지 않았다. <strong>"내가 정결하게 하고… 세우고… 드리게 하였사오니"(13:30–31)는 시저의 자랑 "왔노라, 보았노라, 이겼노라"보다 한참 덜 눈부신 비문이다.</strong> K: 그러나 느헤미야의 일은 <strong>그 백성을 만드는 일</strong>이었다. 에스라의 철저한 교육과 짝을 이룬 그의 개혁 열심이, 포로 후기 이스라엘에 <strong>결코 완전히 잃지 않은 신앙의 강인함과 명료함</strong>을 주었다. 이것이야말로 그가 가장 바랐을 기념비이며, 이제 그의 책이 교회에 남긴 유익까지 더해져, 거듭된 그 기도 — "내 하나님이여 나를 기억하사 복을 주옵소서" — 에 대한 <strong>하늘의 응답의 큰 부분</strong>을 이룬다.</p>
+    </div>
+    <div class="caveat">
+      <div class="tt">코다의 건축술 — 동심원과 일곱 요소 — <span class="c t">T</span></div>
+      <p><span class="c t">T</span>: Williamson을 따라 T는 <strong>12:44–13:14가 하나의 주제(성전 방들의 사용과 남용)로 묶인 단위</strong>이며 13:3 뒤에서 나뉘어선 안 된다고 본다. 그 대칭 구조 — <strong>A 곳간 청지기 임명(12:44–47) / B 모세 율법 낭독: 암몬 사람 금지(13:1–3) / B' 암몬 사람 도비야를 율법대로 축출(13:4–9) / A' 곳간 청지기 임명(13:10–13).</strong> 그리고 중앙의 두 사건(안식일 13:15–22, 통혼 13:23–29)은 <strong>일곱 요소의 동일 구조</strong>를 공유한다 — ① 시간 지시("그 때에") ② 문제 서술("내가 보니") ③ 책망(리브 — 수사 의문과 역사 회고) ④ 구체적 조치 ⑤ 위협 ⑥ 해결 진술 ⑦ 기억 정형구("나를 기억하옵소서"). 세 개혁 일화 모두 <strong>이방의 영향</strong>이 얽혀 있고, <strong>리브(책망)가 세 번(13:11, 17, 25), 기억 정형구가 세 번(13:14, 22, 31)</strong> 반복된다. T는 나아가 <strong>5장(고리대 개혁)이 본래 이 둘째 회고록의 넷째 일화</strong>였다고 본다 — 같은 구조(개혁·이방 영향·리브 5:7·기억 정형구 5:19)에 더해, "아닥사스다 32년"(5:14↔13:6)과 "곡식·포도주·기름"(5:11↔13:5, 12)의 반향이 그 증거다.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="tt">13장에서 드러나는 다섯 주석의 해석 축</div>
+    <p><span class="c k">K</span> 지도력·경건·수사(도비야의 "창고만 한 방"과 거룩의 비흥정성, 아모스→예레미야의 안식일 침식사, 다음 세대의 언어 상실 = 이교화, 폭발/내파 대조, 시저 비문과의 대비, 헤세드의 정의). <span class="c f">F</span> 어휘·본문비평(레호쉬브, 조크라-리의 강조형). <span class="c h">H</span> 제2성전기 수용사(이방인 부정의 전염성 첫 등장, 4QMMT의 에레브, 아케메네스 수염 뽑기 형벌 무라슈, 나팔 부는 집 비문, 비느하스 언약). <span class="c t">T</span> 구조=신학(코다 독법, "이 일 전에"의 정황적 해석, 12:44–13:14 동심원 A-B-B'-A', 두 중앙 일화의 일곱 요소 구조, 거룩한 공간→시간→회중의 삼분 개혁, 리브 3회·기억 정형구 3회, 5장=둘째 회고록의 넷째 일화). <span class="c b">B</span> 제국사·사회학(아닥사스다 32년 연대, 엘레판틴 바고히, 성문의 복합 기능과 하솔 신당, 명예-수치와 도비야의 치욕, 안식일 책임의 소재, 바울 고전 5·6 병행).</p>
+  </div>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<!-- ═══════ 7 ═══════ -->
+<section class="part" id="s7">
+  <div class="part-head">
+    <div class="heb">זִכְרָה</div>
+    <div class="eyebrow">CROSS-REF · SYNTHESIS</div>
+    <h2>7. 상호 참조와 신학 종합</h2>
+    <div class="gloss">지크라, "기억하소서" — 다섯 번 반복되는 느헤미야의 기도</div>
+  </div>
+
+  <h3>상호 참조 총람</h3>
+  <table>
+    <tr><th style="width:14%">느 13장</th><th>참조</th><th style="width:9%">주석</th></tr>
+    <tr><td class="head">13:1</td><td><strong>신 23:1–8</strong> (암몬·모압 배제) / 느 4:3 (도비야 "암몬 사람")</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:2</td><td>민 22–24 (발람) / 신 23:5 (저주를 축복으로) / 룻 1:16 (룻, 예외)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:3</td><td><strong>출 12:38</strong> (에레브 라브, 섞인 무리) / 레 19:19; 4QMMT (부적절한 섞기)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:4</td><td>느 3:30 (도비야의 혼맥) / 겔 44:22 (제사장 통혼 금지) / 스 2:59–60</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:6</td><td>아닥사스다 32년 = 433/432 BCE / 엘레판틴 파피루스 (바고히 407년 총독)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:9</td><td><strong>막 11:15–17</strong> (그리스도의 성전 정화) / 스 10:1–3 (에스라의 대조)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:14</td><td><strong>창 8:1</strong> (하나님이 노아를 기억) / 말 3:16 (기록에 남김) / 계 21:27</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:16</td><td>두로 상인의 생선 무역 / 마 4:18, 21 (갈릴리 어업)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:18</td><td><strong>렘 17:19–27</strong> (안식일 위반과 예루살렘 상실) / 창 2:3 (안식일 제정) / 암 8:5 (상인들의 조바심)</td><td><span class="c h">H</span> <span class="c k">K</span></td></tr>
+    <tr><td class="head">13:19</td><td>룻 4 (성문의 법정 기능) / 하솔 성문 신당 발굴 / 창 1 (해질녘의 새 날)</td><td><span class="c b">B</span></td></tr>
+    <tr><td class="head">13:22</td><td>나팔 부는 집 비문 (성전산 남서 모퉁이) / 출 20:8 ("거룩하게 대하라") / 카다쉬 성별 어휘</td><td><span class="c h">H</span> <span class="c t">T</span></td></tr>
+    <tr><td class="head">13:24</td><td><strong>호 7:8–9</strong> (에브라임의 혼합) / 말 2:15 ("경건한 자손")</td><td><span class="c k">K</span></td></tr>
+    <tr><td class="head">13:25</td><td>스 9:3 (에스라 자기 수염) / 삼하 10:4–5; 사 50:6 (수염 뽑기와 수치) / 무라슈 문서 (아케메네스 형벌)</td><td><span class="c h">H</span> <span class="c k">K</span></td></tr>
+    <tr><td class="head">13:26</td><td>왕상 11 (솔로몬의 이방 여인) / 출 34:11–16 (통혼 금지)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:28</td><td>레 21:14 (대제사장의 혼인 제한) / 겔 44:22–23 / <strong>고전 5–6</strong> (바울의 배제·송사 병행) / 느 13:4–9 (도비야 병행)</td><td><span class="c h">H</span> <span class="c k">K</span> <span class="c b">B</span></td></tr>
+    <tr><td class="head">13:29</td><td><strong>민 25:13</strong> (비느하스의 영원한 제사장 언약)</td><td><span class="c h">H</span></td></tr>
+    <tr><td class="head">13:31</td><td>느 10:34–37 (나무 예물·첫 소산) / 느 5:19; 6:14; 13:14, 22, 29 (기억 기도)</td><td><span class="c h">H</span> <span class="c k">K</span> <span class="c t">T</span></td></tr>
+    <tr><td class="head">코다 전체</td><td><strong>출 32</strong> (금송아지 — 모세 부재중) / 막 14:66–72 (베드로의 부인) / 막 10:35–45 (야고보·요한) / 느 5장 (둘째 회고록의 넷째 일화)</td><td><span class="c t">T</span></td></tr>
+  </table>
+
+  <div class="note">
+    <div class="tt">성경 외 자료 · 주석별 강조점</div>
+    <p><strong>4QMMT</strong> — 통혼을 부적절한 섞기에 견줌, 에레브 <span class="c h">H</span> · <strong>레위의 유언 9:9</strong> — 성소를 더럽히는 음란 <span class="c h">H</span> · <strong>엘레판틴 파피루스</strong> — 바고히(바고이) 407년 총독 <span class="c h">H</span> · <strong>무라슈 문서</strong> — 아케메네스의 수염 뽑기 형벌(L. Fried) <span class="c h">H</span> · <strong>나팔 부는 집 비문</strong> — 안식일 나팔 <span class="c h">H</span> · <strong>Blenkinsopp</strong> — 안식일의 존재론적 성격 <span class="c h">H</span> · <strong>하솔 발굴</strong> — 왕정 시대 성문 안의 신당, 성문의 복합 기능 <span class="c b">B</span> · <strong>Williamson</strong> — 12:44–13:14의 주제적 통일성(성전 방의 사용과 남용) <span class="c t">T</span> · <strong>Brockington</strong> — 헤세드 = "무슨 일이 있어도 의무를 받아들이고 지켜 내는 자질" <span class="c k">K</span></p>
+  </div>
+
+  <h3>신학 종합</h3>
+
+  <h4>① 굳은 언약이 깨어지다 — 미완성 신학의 절정</h4>
+  <p><span class="c t">T</span>: 10장에서 인장으로 봉인한 언약(아마나)의 조항들이 13장에서 하나씩 깨어진다 — <strong>도비야의 성전 모독(10:39↔13:4–9), 십일조 소홀(10:37↔13:10), 안식일 매매(10:31↔13:15), 통혼(10:30↔13:23).</strong> 가장 엄숙한 서약조차 인간의 손에서 무너진다. <span class="c h">H</span>: Steinmann이 짚은 10–13장의 인클루지오가, 언약의 실행(11–12장)과 그 파기(13장)를 한 틀에 담는다. <strong>완결된 언약은 종착이 아니라, 순종이 끊임없이 갱신되어야 하는 순환의 한 마디</strong>다. 느헤미야서는 승리의 대단원이 아니라 <strong>다시 시작되는 다툼</strong>으로 끝난다.</p>
+  <p><span class="c t">T</span>는 이 재발(relapse)의 기록 앞에서 독자가 던질 물음 — "어떻게 이럴 수 있는가, 그들은 배우지 못하는가" — 에 성경 전체로 답한다. <strong>놀랄 이유가 별로 없다. 성경은 이 근본적 인간 연약함을 증언하는 이야기로 흠뻑 젖어 있다.</strong> 시내산 언약 직후 <strong>모세의 부재중에 벌어진 금송아지 숭배(출 32)</strong>가 구약의 가장 극단적 예다. 신약도 마찬가지다 — 열두 제자 중 하나는 공금을 훔치고 예수를 넘겼으며, <strong>모든 것을 버리고 따랐다던 베드로는 세 번 부인했고(막 10:28; 14장), 야고보와 요한은 섬김의 요구를 듣고도 나라의 높은 자리를 다퉜다(막 10).</strong> 느헤미야 부재중의 배교는 예외 사례를 넘어, <strong>율법에 근거한 하나님과의 교제 회복 시도가 늘 부딪히는 인간의 실상</strong>이다.</p>
+
+  <h4>② 말씀이 삶을 바꾼다 — 그러나 지킴은 계속되어야 한다</h4>
+  <p>13:3의 "백성이 율법을 듣고 곧 섞인 무리를 이스라엘에서 분리하다"가 이 장의 원리다. <span class="c h">H</span>: <strong>하나님의 말씀은 삶을 바꾼다</strong> — 백성이 배우면 새 통찰에 따라 행동한다(스 10:3; 느 8:9–11; 13:3). 그러나 13장 전체가 보여 주듯, <strong>한 번의 깨달음이 영속적 순종을 보장하지 않는다.</strong> 말씀을 듣고 언약을 세운 공동체(8–10장)가 곧 그 언약을 어긴다. 말씀의 능력은 실재하되, 그 능력이 삶에 뿌리내리려면 <strong>날마다의 지킴과 되풀이되는 갱신</strong>이 필요하다.</p>
+
+  <h4>③ 거룩한 공간을 지키는 경계 — 성벽의 목적</h4>
+  <p>13장의 개혁들 — 성전 방의 외인 축출, 안식일 성문 폐쇄 — 이 <strong>거룩한 공간의 경계를 지키는 일</strong>로 수렴한다. <span class="c h">H</span>: 성벽은 이제 이방인과의 교류를 <strong>통제하는 수단</strong>이 된다 — "거룩한 성"이 유대 지도자의 통제 아래 놓여, 속된 거래를 막고 성전의 정결을 지키는 완충지대가 된다. 12장에서 봉헌된 성벽이 13장에서 <strong>실제로 그 목적(거룩의 수호)을 수행</strong>한다. 경계 없는 거룩은 지켜지지 않는다 — 성벽은 배제의 도구가 아니라 <strong>거룩을 담는 그릇</strong>이다.</p>
+  <p><span class="c t">T</span>는 이 장의 개혁을 삼분 구도로 읽어 이 통찰을 확장한다 — <strong>거룩한 공간의 개혁(12:44–13:14, 성전 방) → 거룩한 시간의 개혁(13:15–22, 안식일) → 거룩한 회중의 개혁(13:23–29, 통혼).</strong> 느헤미야가 지키려는 거룩은 건물의 거룩만이 아니다. <strong>공간·시간·사람</strong>이라는 세 차원에서 거룩이 침식되고, 세 차원 모두에서 회복된다 — 그리고 세 일화 모두를 이방의 영향이 관통하고, 세 일화 모두가 같은 기도("나를 기억하옵소서")로 닫힌다. 거룩의 수호란 공간의 문제이자 <strong>달력의 문제이며 혈통과 언어의 문제</strong>다.</p>
+
+  <h4>④ 예배는 제도로 유지된다 — 도망친 레위인의 교훈</h4>
+  <p>13:10의 "레위인이 밭으로 도망갔다"가 이 장의 뼈아픈 장면이다. <span class="c h">H</span>: 봉헌일에 기쁘게 예물을 드렸던 백성이 <strong>다시 소홀히 하자</strong>, 예배를 담당할 레위인이 생계를 위해 성전을 떠난다. 느헤미야는 <strong>신뢰할 위원회를 세워 십일조를 제도화</strong>한다(13:13) — 개인의 편향에 좌우되지 않도록. <strong>예배는 감정의 고조가 아니라 지속적 제도로 유지</strong>된다는 10장의 원리(성전세·나무 예물)가 여기서 다시 확인된다. <span class="c k">K</span>의 문장이 이 항목을 요약한다 — 10장의 굳은 언약이 "우리 하나님의 전을 버려두지 아니하리라"(10:39) 다짐했으나, <strong>"이제 그 고운 말이 아무도 먹이지 못하고 있었다."</strong> 느헤미야의 항변조차 <strong>좋은 행정(11절 하반)과 신중한 임명(13절)이 뒤따르지 않았다면 그만큼 무력했을</strong> 것이다. 기쁨의 봉헌(12장)이 아름다우나, 그 기쁨을 <strong>날마다의 시스템</strong>으로 붙잡지 않으면 예배는 무너진다.</p>
+
+  <h4>⑤ 나를 기억하옵소서 — 심판이 아니라 은혜에 자신을 맡기다</h4>
+  <p>이 장을 다섯 번 관통하는 <strong>"나를 기억하옵소서"(조크라-리)</strong> 기도가 느헤미야서 전체의 마지막 말이다(13:31). <span class="c h">H</span>: 하나님이 "기억하실" 때 그는 개입하신다(창 8:1의 노아). 느헤미야는 자기 행동이 완전하지 않음을 알기에(13:25의 폭력), <strong>공로를 주장하지 않고 하나님의 기억과 은혜에 자신을 맡긴다.</strong> <span class="c k">K</span>는 이 기도를 변호한다 — 그것은 <strong>자기애가 아니라 사랑에서, 자기 과시가 아니라 겸손에서</strong> 나온다. 하나님의 "잘하였도다"를 듣는 것은 가장 순전하고 정화하는 야망이며, "나의 선행"은 <strong>"나의 헤세드의 행위"</strong> — Brockington의 정의로 "무슨 일이 있어도 의무를 받아들이고 지켜 내는 자질" — 로 옮길 수 있다. <span class="c t">T</span>는 더 어두운 결을 짚는다 — 이 마지막 단락에는 <strong>앞선 모든 단락과 달리 하나님의 은혜로운 개입에 대한 진술이 없다.</strong> 그래서 느헤미야의 거듭된 기억 기도는, <strong>하나님의 부재가 감지되는 상황에서 터져 나온 그 자신의 신적 확증을 향한 부르짖음</strong>이었을 수 있다 — 그렇다면 우리는 그 믿음과 헌신의 깊이에 경탄할 따름이다.</p>
+  <p>그리고 이 미완의 끝이 가리키는 곳. <span class="c t">T</span>: 공동체의 실패는 결국 <strong>인류에 편만한 죄의 한 예이며, 율법에 근거한 하나님과의 교제 회복 시도가 좌초할 수밖에 없는 이유</strong>다. 성벽과 성전을 갖춘 예루살렘의 회복은 예언자적 소망의 최종 성취가 못 되었다 — <strong>성벽은 훗날의 공격을 견디지 못했고 성전 자체가 무너졌다.</strong> 그런데 바로 그 죄 많은 공동체의 허리에서 새것이 나왔다 — 옛것의 복원을 넘어선 전혀 새로운 길, 곧 <strong>하나님 자신이 예수 그리스도의 삶·죽음·부활로, 이스라엘이 이루지 못한 율법의 요구를 이루시는</strong> 길이다. T: 에스라-느헤미야가 궁극적으로 가리키는 것은 <strong>예언자적 소망의 이 최종 성취</strong>다. <span class="c h">H</span>의 마무리가 이와 나란하다 — 하나님이 느헤미야를 선히 기억하셨다는 최선의 증거는, 수많은 세대의 신자들이 그를 계속 기억하는 것이다. 이 책은 완성된 승리가 아니라 <strong>미완의 순종을 하나님의 자비 앞에 내려놓는 기도</strong>로 끝난다 — 그리고 그 기도는 응답되었다.</p>
+
+  <div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+
+<footer>
+  <p><strong>느헤미야 13장 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성한 것이며, 인용·출판 시에는 각 주석의 해당 면수를 직접 확인해 출처를 명기할 것.</p>
+  <p style="margin-top:.5rem">주석가 칩: <span class="c k">K</span> Kidner, TOTC (1979) · <span class="c f">F</span> Fensham, NICOT (1982) · <span class="c t">T</span> Throntveit, Interpretation (1992) · <span class="c b">B</span> Bolin, NCBC (2012) · <span class="c h">H</span> Harrington, NICOT (2022)</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느헤미야 5장 인터라이너 — 축자 대역·전 단어 문법 분석</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="interlinear.css">
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav">
+    <a href="../index.html">← 느헤미야 서재</a>
+    <a href="../../../index.html">서고 홈</a>
+    <a href="../parsing/ch05.html">핵심어 파싱 →</a>
+    <a href="../ch05.html">심층 연구 →</a>
+  </div>
+  <div class="brand">느헤미야 5장 인터라이너</div>
+  <div class="brand-sub">INTERLINEAR · FULL PARSING</div>
+
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a>
+    <a href="ch02.html">2</a>
+    <a href="../parsing/ch03.html" title="3장은 파싱본">3</a>
+    <a href="ch04.html">4</a>
+    <a href="ch05.html" aria-current="page">5</a>
+    <a href="ch06.html">6</a>
+    <a href="../parsing/ch07.html" title="7장은 파싱본">7</a>
+    <a href="../parsing/ch08.html" title="8장은 파싱본">8</a>
+    <a href="../parsing/ch09.html" title="9장은 파싱본">9</a>
+    <a href="../parsing/ch10.html" title="10장은 파싱본">10</a>
+    <a href="../parsing/ch11.html" title="11장은 파싱본">11</a>
+    <a href="../parsing/ch12.html" title="12장은 파싱본">12</a>
+    <a href="../parsing/ch13.html" title="13장은 파싱본">13</a>
+  </div>
+
+  <div class="toc-h">이 장의 절</div>
+  <a class="vl" href="#v1"><span class="n">5:1</span>백성의 부르짖음</a>
+  <a class="vl" href="#v2"><span class="n">5:2</span>양식을 얻자</a>
+  <a class="vl" href="#v3"><span class="n">5:3</span>밭을 저당 잡히고</a>
+  <a class="vl" href="#v4"><span class="n">5:4</span>왕의 세금</a>
+  <a class="vl" href="#v5"><span class="n">5:5</span>자녀를 종으로</a>
+  <a class="vl" href="#v6"><span class="n">5:6</span>크게 노함</a>
+  <a class="vl" href="#v7"><span class="n">5:7</span>대회를 열고</a>
+  <a class="vl" href="#v8"><span class="n">5:8</span>형제를 되사다</a>
+  <a class="vl" href="#v9"><span class="n">5:9</span>좋지 못하도다</a>
+  <a class="vl" href="#v10"><span class="n">5:10</span>이자를 그치자</a>
+  <a class="vl" href="#v11"><span class="n">5:11</span>백분의 일을 돌려주라</a>
+  <a class="vl" href="#v12"><span class="n">5:12</span>맹세하게 하다</a>
+  <a class="vl" href="#v13"><span class="n">5:13</span>옷자락을 털며</a>
+  <a class="vl" href="#v14"><span class="n">5:14</span>총독의 녹</a>
+  <a class="vl" href="#v15"><span class="n">5:15</span>먼저 있던 총독들</a>
+  <a class="vl" href="#v16"><span class="n">5:16</span>성벽 공사에 힘써</a>
+  <a class="vl" href="#v17"><span class="n">5:17</span>상에 백오십 명</a>
+  <a class="vl" href="#v18"><span class="n">5:18</span>하루의 준비</a>
+  <a class="vl" href="#v19"><span class="n">5:19</span>나를 기억하소서</a>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="heb-title">זָכְרָה־לִּי אֱלֹהַי לְטוֹבָה</div>
+  <h1>느헤미야 5장 인터라이너</h1>
+  <div class="sub">조크라-리 엘로하이 레토바, "내 하나님이여 나를 위하여 선하게 기억하소서" — 성벽을 쌓는 그 시간에 안에서 터진 것은 대적이 아니라 형제의 부르짖음이었다. 느헤미야는 이자와 종살이를 멈춰 세우고, 자기 몫의 녹까지 내려놓는다. 열아홉 절 전체를 단어 단위로 대역하고 모든 낱말의 문법·표제어·어근·뜻·기능을 분석했다.</div>
+  <div class="meta">히브리어 마소라 본문(BHS/레닌그라드 계열) · 개역개정(4판) 병기 · 축자 대역 + 전 단어 파싱</div>
+</header>
+
+<div class="legend">
+  <p><b>읽는 법.</b> 각 절은 세 층이다. ① <b>인터라이너 띠</b> — 히브리어를 오른쪽에서 왼쪽으로 읽으며 낱말 아래 음역·뜻. ② <b>단어 분석 표</b> — 낱말마다 문법·표제어·어근·뜻·문장 기능. ③ <b>절 해설</b> — 구문·번역 관찰. <b>본문 안내</b>: 5장은 개역개정과 히브리어 성경(BHS)의 절 번호가 일치한다. 7절과 9절에는 케티브(기록형)와 케레(낭독형)가 갈리는 지점이 있어 해당 절에 표시했다. 이 장의 절 해설은 본문 자체에서 확인되는 구문·어휘 관찰로 채웠고, 다섯 주석의 칩(K·F·H·T·B)은 주석 대조 단계에서 보강할 자리로 비워 두었다.</p>
+</div>
+
+<!-- ═══════════════ 5:1 ═══════════════ -->
+<section class="verse" id="v1">
+  <div class="verse-head">
+    <span class="vnum">5:1</span>
+    <span class="vkrv">그 때에 백성들이 그들의 아내와 함께 크게 부르짖어 그들의 형제인 유다 사람들을 원망하는데</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וַתְּהִי</span><span class="it">wattəhî</span><span class="ig">일어나니</span></span>
+    <span class="iw"><span class="ih">צַעֲקַת הָעָם וּנְשֵׁיהֶם</span><span class="it">ṣaʿăqaṯ hāʿām ûnəšêhem</span><span class="ig">백성과 그 아내들의 부르짖음이</span></span>
+    <span class="iw"><span class="ih">גְּדוֹלָה</span><span class="it">gəḏôlā</span><span class="ig">컸으니</span></span>
+    <span class="iw"><span class="ih">אֶל־אֲחֵיהֶם הַיְּהוּדִים</span><span class="it">ʾel-ʾăḥêhem hayyəhûḏîm</span><span class="ig">그 형제 유다인들을 향하여</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וַתְּהִי</td><td class="w-tr">wattəhî<span class="ko">바트히</span></td><td class="w-parse">동사 · 칼 · 바브연속 미완료 · 3인칭 여성 단수</td><td class="w-lex"><span class="lm">הָיָה</span> 하야 / 어근 <span class="rt">היה</span> <span class="rt-g">있다·되다</span></td><td class="w-gloss">그리고 ~이 있었다(일어났다)</td><td class="w-fn">서사를 여는 동사(주어 צַעֲקָה와 여성 일치)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">צַעֲקַת הָעָם וּנְשֵׁיהֶם</td><td class="w-tr">ṣaʿăqaṯ hāʿām ûnəšêhem<span class="ko">차아카트 하암 우네셰헴</span></td><td class="w-parse">명사(여성 연계) + 관사 명사 + 접속사 명사(복수+3인칭 남성 복수 접미)</td><td class="w-lex"><span class="lm">צְעָקָה</span> 체아카 / 어근 <span class="rt">צעק</span> <span class="rt-g">부르짖다</span> · <span class="lm">אִשָּׁה</span> 잇샤</td><td class="w-gloss">백성과 그들의 아내들의 부르짖음</td><td class="w-fn">주어. 압제받는 자의 외침(출 3:7 어휘)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">גְּדוֹלָה</td><td class="w-tr">gəḏôlā<span class="ko">게돌라</span></td><td class="w-parse">형용사 · 여성 단수</td><td class="w-lex"><span class="lm">גָּדוֹל</span> 가돌 / 어근 <span class="rt">גדל</span> <span class="rt-g">크다</span></td><td class="w-gloss">큰</td><td class="w-fn">술어. 부르짖음의 크기(여성 일치)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">אֶל־אֲחֵיהֶם הַיְּהוּדִים</td><td class="w-tr">ʾel-ʾăḥêhem hayyəhûḏîm<span class="ko">엘-아헤헴 하예후딤</span></td><td class="w-parse">전치사 + 명사(복수 연계+3인칭 남성 복수 접미) + 관사 명사(복수)</td><td class="w-lex"><span class="lm">אָח</span> 아흐 / 어근 <span class="rt">אחה</span> <span class="rt-g">형제</span> · <span class="lm">יְהוּדִי</span> 예후디</td><td class="w-gloss">그들의 형제인 유다 사람들을 향하여</td><td class="w-fn">부르짖음의 대상(대적이 아니라 동족)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 성벽 서사(3~4장) 한복판에서 장면이 <b>바깥의 대적에서 안의 형제로</b> 돌아선다. 부르짖음을 가리키는 <span class="hb">צְעָקָה</span>는 이스라엘이 애굽의 압제 아래 부르짖던 바로 그 낱말인데(출 3:7), 여기서 그 외침의 <b>대상이 동족 유다인(</b><span class="hb">אֲחֵיהֶם הַיְּהוּדִים</span><b>)</b>이다 — 압제자가 형제라는 뒤집힘이 한 절 안에 압축된다. 주어에 <b>아내들(</b><span class="hb">וּנְשֵׁיהֶם</span><b>)</b>이 명시된 점도 눈에 띈다. 가정을 지키는 자리에서 터진 부르짖음이라, 뒤이어 나오는 자녀를 종으로 파는 문제(5절)와 곧장 이어진다.</div>
+</section>
+
+<!-- ═══════════════ 5:2 ═══════════════ -->
+<section class="verse" id="v2">
+  <div class="verse-head">
+    <span class="vnum">5:2</span>
+    <span class="vkrv">어떤 사람은 말하기를 우리와 우리 자녀가 많으니 양식을 얻어 먹고 살아야 하겠다 하고</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְיֵשׁ אֲשֶׁר אֹמְרִים</span><span class="it">wəyēš ʾăšer ʾōmərîm</span><span class="ig">말하는 자들이 있으니</span></span>
+    <span class="iw"><span class="ih">בָּנֵינוּ וּבְנֹתֵינוּ</span><span class="it">bānênû ûḇnōṯênû</span><span class="ig">우리 아들딸이</span></span>
+    <span class="iw"><span class="ih">אֲנַחְנוּ רַבִּים</span><span class="it">ʾănaḥnû rabbîm</span><span class="ig">우리가 많으니</span></span>
+    <span class="iw"><span class="ih">וְנִקְחָה דָגָן</span><span class="it">wəniqḥā ḏāḡān</span><span class="ig">곡식을 얻자</span></span>
+    <span class="iw"><span class="ih">וְנֹאכְלָה וְנִחְיֶה</span><span class="it">wənōʾḵəlā wəniḥyê</span><span class="ig">먹고 살자</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְיֵשׁ אֲשֶׁר אֹמְרִים</td><td class="w-tr">wəyēš ʾăšer ʾōmərîm<span class="ko">베예쉬 아셰르 오메림</span></td><td class="w-parse">접속사 존재사 + 관계사 + 동사(칼 분사 남성 복수)</td><td class="w-lex"><span class="lm">יֵשׁ</span> 예쉬(존재) · <span class="lm">אָמַר</span> 아마르 / 어근 <span class="rt">אמר</span> <span class="rt-g">말하다</span></td><td class="w-gloss">말하는 자들이 있으니</td><td class="w-fn">세 무리의 하소연을 여는 정형구(2·3·4절 반복)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">בָּנֵינוּ וּבְנֹתֵינוּ</td><td class="w-tr">bānênû ûḇnōṯênû<span class="ko">바네누 우베노테누</span></td><td class="w-parse">명사(복수+1인칭 복수 접미) + 접속사 명사(복수+1인칭 복수 접미)</td><td class="w-lex"><span class="lm">בֵּן</span> 벤 · <span class="lm">בַּת</span> 바트</td><td class="w-gloss">우리 아들들과 우리 딸들</td><td class="w-fn">부양 부담의 근거(딸은 5절에서 다시 문제됨)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">אֲנַחְנוּ רַבִּים</td><td class="w-tr">ʾănaḥnû rabbîm<span class="ko">아나흐누 랍빔</span></td><td class="w-parse">대명사(1인칭 복수) + 형용사(남성 복수)</td><td class="w-lex"><span class="lm">רַב</span> 랍 / 어근 <span class="rt">רבב</span> <span class="rt-g">많다</span></td><td class="w-gloss">우리는 (수가) 많다</td><td class="w-fn">명사문(계사 없음). 식솔이 많음</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וְנִקְחָה דָגָן</td><td class="w-tr">wəniqḥā ḏāḡān<span class="ko">베니크하 다간</span></td><td class="w-parse">접속사 동사(칼 미완료 청유형 1인칭 복수) + 명사</td><td class="w-lex"><span class="lm">לָקַח</span> 라카흐 / 어근 <span class="rt">לקח</span> <span class="rt-g">취하다</span> · <span class="lm">דָּגָן</span> 다간(곡식)</td><td class="w-gloss">곡식을 얻자</td><td class="w-fn">청유형(생존을 위한 요청)</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">וְנֹאכְלָה וְנִחְיֶה</td><td class="w-tr">wənōʾḵəlā wəniḥyê<span class="ko">베노크라 베니흐예</span></td><td class="w-parse">접속사 동사(칼 청유형 1인칭 복수) + 접속사 동사(칼 미완료 1인칭 복수)</td><td class="w-lex"><span class="lm">אָכַל</span> 아칼 <span class="rt">אכל</span> · <span class="lm">חָיָה</span> 하야 <span class="rt">חיה</span> <span class="rt-g">살다</span></td><td class="w-gloss">먹고 살자</td><td class="w-fn">목적의 연쇄(얻자→먹자→살자)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 2·3·4절이 <b>같은 틀(</b><span class="hb">וְיֵשׁ אֲשֶׁר אֹמְרִים</span><b>, "말하는 자들이 있으니")로 세 번</b> 열리며 세 무리의 사정을 나란히 세운다. 첫 무리의 문제는 <b>식솔은 많고 양식은 없음</b>이다. 청유형 동사가 <b>얻자(</b><span class="hb">וְנִקְחָה</span><b>)→먹자(</b><span class="hb">וְנֹאכְלָה</span><b>)→살자(</b><span class="hb">וְנִחְיֶה</span><b>)</b>로 이어져, 요구가 이윤이 아니라 <b>생존 자체</b>임을 문법이 드러낸다. 곡식을 가리키는 <span class="hb">דָּגָן</span>은 11절에서 느헤미야가 돌려주라 명하는 품목으로 다시 나온다.</div>
+</section>
+
+<!-- ═══════════════ 5:3 ═══════════════ -->
+<section class="verse" id="v3">
+  <div class="verse-head">
+    <span class="vnum">5:3</span>
+    <span class="vkrv">어떤 사람은 말하기를 우리가 밭과 포도원과 집이라도 저당 잡히고 이 흉년에 곡식을 얻자 하고</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְיֵשׁ אֲשֶׁר אֹמְרִים</span><span class="it">wəyēš ʾăšer ʾōmərîm</span><span class="ig">말하는 자들이 있으니</span></span>
+    <span class="iw"><span class="ih">שְׂדֹתֵינוּ וּכְרָמֵינוּ וּבָתֵּינוּ</span><span class="it">śəḏōṯênû ûḵərāmênû ûḇāttênû</span><span class="ig">우리 밭·포도원·집을</span></span>
+    <span class="iw"><span class="ih">אֲנַחְנוּ עֹרְבִים</span><span class="it">ʾănaḥnû ʿōrḇîm</span><span class="ig">우리가 저당 잡히고</span></span>
+    <span class="iw"><span class="ih">וְנִקְחָה דָגָן בָּרָעָב</span><span class="it">wəniqḥā ḏāḡān bārāʿāḇ</span><span class="ig">이 흉년에 곡식을 얻자</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְיֵשׁ אֲשֶׁר אֹמְרִים</td><td class="w-tr">wəyēš ʾăšer ʾōmərîm<span class="ko">베예쉬 아셰르 오메림</span></td><td class="w-parse">접속사 존재사 + 관계사 + 동사(칼 분사 남성 복수)</td><td class="w-lex"><span class="lm">אָמַר</span> 아마르 / 어근 <span class="rt">אמר</span></td><td class="w-gloss">말하는 자들이 있으니</td><td class="w-fn">둘째 무리를 여는 반복 정형구</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">שְׂדֹתֵינוּ וּכְרָמֵינוּ וּבָתֵּינוּ</td><td class="w-tr">śəḏōṯênû ûḵərāmênû ûḇāttênû<span class="ko">세도테누 우케라메누 우바테누</span></td><td class="w-parse">명사(복수+1인칭 복수 접미) ×3</td><td class="w-lex"><span class="lm">שָׂדֶה</span> 사데(밭) · <span class="lm">כֶּרֶם</span> 케렘(포도원) · <span class="lm">בַּיִת</span> 바이트(집)</td><td class="w-gloss">우리 밭들과 포도원들과 집들을</td><td class="w-fn">저당 목적어(11절에서 돌려줄 품목과 대응)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">אֲנַחְנוּ עֹרְבִים</td><td class="w-tr">ʾănaḥnû ʿōrḇîm<span class="ko">아나흐누 오르빔</span></td><td class="w-parse">대명사(1인칭 복수) + 동사(칼 분사 남성 복수)</td><td class="w-lex"><span class="lm">עָרַב</span> 아랍 / 어근 <span class="rt">ערב</span> <span class="rt-g">담보로 주다</span></td><td class="w-gloss">우리가 저당 잡히고 있다</td><td class="w-fn">진행 분사(지금 벌어지는 일)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וְנִקְחָה דָגָן בָּרָעָב</td><td class="w-tr">wəniqḥā ḏāḡān bārāʿāḇ<span class="ko">베니크하 다간 바라압</span></td><td class="w-parse">접속사 동사(칼 청유형 1인칭 복수) + 명사 + 전치사 관사 명사</td><td class="w-lex"><span class="lm">לָקַח</span> 라카흐 · <span class="lm">רָעָב</span> 라압(기근)</td><td class="w-gloss">그 기근 중에 곡식을 얻자</td><td class="w-fn">저당의 목적. 흉년이 배경</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 둘째 무리는 <b>가진 것을 잡혀야 하는</b> 처지다 — 밭·포도원·집(<span class="hb">שָׂדֶה·כֶּרֶם·בַּיִת</span>)을 저당 잡힌다(<span class="hb">עֹרְבִים</span>). 이 세 품목은 11절에서 느헤미야가 <b>"오늘이라도 돌려주라"</b> 명하는 목록과 정확히 겹친다 — 문제 진술의 어휘가 곧 해법의 어휘가 된다. 마지막에 놓인 <span class="hb">בָּרָעָב</span>("그 기근에")가 관사와 함께 쓰여, 막연한 궁핍이 아니라 <b>당면한 흉년</b>이라는 구체적 정황을 못박는다.</div>
+</section>
+
+<!-- ═══════════════ 5:4 ═══════════════ -->
+<section class="verse" id="v4">
+  <div class="verse-head">
+    <span class="vnum">5:4</span>
+    <span class="vkrv">어떤 사람은 말하기를 우리는 밭과 포도원으로 돈을 빚내서 왕에게 세금을 바쳤도다</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְיֵשׁ אֲשֶׁר אֹמְרִים</span><span class="it">wəyēš ʾăšer ʾōmərîm</span><span class="ig">말하는 자들이 있으니</span></span>
+    <span class="iw"><span class="ih">לָוִינוּ כֶסֶף</span><span class="it">lāwînû ḵeseф</span><span class="ig">우리가 돈을 빚내어</span></span>
+    <span class="iw"><span class="ih">לְמִדַּת הַמֶּלֶךְ</span><span class="it">ləmiddaṯ hammeleḵ</span><span class="ig">왕의 세금을 위해</span></span>
+    <span class="iw"><span class="ih">שְׂדֹתֵינוּ וּכְרָמֵינוּ</span><span class="it">śəḏōṯênû ûḵərāmênû</span><span class="ig">우리 밭과 포도원으로</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְיֵשׁ אֲשֶׁר אֹמְרִים</td><td class="w-tr">wəyēš ʾăšer ʾōmərîm<span class="ko">베예쉬 아셰르 오메림</span></td><td class="w-parse">접속사 존재사 + 관계사 + 동사(칼 분사 남성 복수)</td><td class="w-lex"><span class="lm">אָמַר</span> 아마르 / 어근 <span class="rt">אמר</span></td><td class="w-gloss">말하는 자들이 있으니</td><td class="w-fn">셋째 무리를 여는 반복 정형구</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">לָוִינוּ כֶסֶף</td><td class="w-tr">lāwînû ḵeseф<span class="ko">라비누 케세프</span></td><td class="w-parse">동사(칼 완료 1인칭 복수) + 명사</td><td class="w-lex"><span class="lm">לָוָה</span> 라바 / 어근 <span class="rt">לוה</span> <span class="rt-g">빌리다</span> · <span class="lm">כֶּסֶף</span> 케세프(은·돈)</td><td class="w-gloss">우리가 돈을 빌렸다</td><td class="w-fn">완료형(이미 진 빚)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">לְמִדַּת הַמֶּלֶךְ</td><td class="w-tr">ləmiddaṯ hammeleḵ<span class="ko">레밋다트 함멜레크</span></td><td class="w-parse">전치사 명사(연계) + 관사 명사</td><td class="w-lex"><span class="lm">מִדָּה</span> 밋다(조공·세금) · <span class="lm">מֶלֶךְ</span> 멜레크(왕)</td><td class="w-gloss">왕의 세금을 위하여</td><td class="w-fn">빚을 진 이유(제국의 조세)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">שְׂדֹתֵינוּ וּכְרָמֵינוּ</td><td class="w-tr">śəḏōṯênû ûḵərāmênû<span class="ko">세도테누 우케라메누</span></td><td class="w-parse">명사(복수+1인칭 복수 접미) + 접속사 명사(복수+1인칭 복수 접미)</td><td class="w-lex"><span class="lm">שָׂדֶה</span> 사데 · <span class="lm">כֶּרֶם</span> 케렘</td><td class="w-gloss">우리 밭들과 포도원들(을 담보로)</td><td class="w-fn">담보물(문두 도치로 강조)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 셋째 무리의 곤경은 <b>제국의 세금(</b><span class="hb">מִדַּת הַמֶּלֶךְ</span><b>)</b>이다. 앞의 흉년(3절)이 자연의 압박이라면, 여기서는 <b>페르시아의 조세</b>라는 정치적 압박이 더해진다 — 백성은 하늘과 제국 사이에 끼여 있다. 담보물 <span class="hb">שְׂדֹתֵינוּ וּכְרָמֵינוּ</span>("우리 밭과 포도원")가 <b>문장 끝에 도치</b>되어, 세금을 내려고 삶의 터전을 저당 잡히는 구조를 어순으로 드러낸다. 은·돈을 뜻하는 <span class="hb">כֶּסֶף</span>은 10~11절에서 느헤미야가 그치자고 하는 대여 품목으로 되돌아온다.</div>
+</section>
+
+<!-- ═══════════════ 5:5 ═══════════════ -->
+<section class="verse" id="v5">
+  <div class="verse-head">
+    <span class="vnum">5:5</span>
+    <span class="vkrv">우리 육체도 우리 형제의 육체와 같고 우리 자녀도 그들의 자녀와 같거늘 이제 우리 자녀를 종으로 파는도다 우리 딸 중에 벌써 종된 자가 있고 우리의 밭과 포도원이 이미 남의 것이 되었으나 우리에게는 아무런 힘이 없도다 하더라</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְעַתָּה</span><span class="it">wəʿattā</span><span class="ig">이제</span></span>
+    <span class="iw"><span class="ih">כִּבְשַׂר אַחֵינוּ בְּשָׂרֵנוּ</span><span class="it">kiḇśar ʾaḥênû bəśārēnû</span><span class="ig">우리 살도 형제의 살과 같고</span></span>
+    <span class="iw"><span class="ih">כִּבְנֵיהֶם בָּנֵינוּ</span><span class="it">kiḇnêhem bānênû</span><span class="ig">우리 자녀도 그들 자녀와 같거늘</span></span>
+    <span class="iw"><span class="ih">וְהִנֵּה אֲנַחְנוּ כֹבְשִׁים</span><span class="it">wəhinnēh ʾănaḥnû ḵōḇəšîm</span><span class="ig">보라 우리가 굴복시키고 있으니</span></span>
+    <span class="iw"><span class="ih">אֶת־בָּנֵינוּ וְאֶת־בְּנֹתֵינוּ לַעֲבָדִים</span><span class="it">ʾeṯ-bānênû wəʾeṯ-bənōṯênû laʿăḇāḏîm</span><span class="ig">아들딸을 종으로</span></span>
+    <span class="iw"><span class="ih">וְיֵשׁ מִבְּנֹתֵינוּ נִכְבָּשׁוֹת</span><span class="it">wəyēš mibbənōṯênû niḵbāšôṯ</span><span class="ig">딸 중 이미 굴복된 자도 있고</span></span>
+    <span class="iw"><span class="ih">וְאֵין לְאֵל יָדֵנוּ</span><span class="it">wəʾên ləʾēl yāḏēnû</span><span class="ig">우리 손에 힘이 없으며</span></span>
+    <span class="iw"><span class="ih">וּשְׂדֹתֵינוּ וּכְרָמֵינוּ לַאֲחֵרִים</span><span class="it">ûśəḏōṯênû ûḵərāmênû laʾăḥērîm</span><span class="ig">밭과 포도원은 남의 것이 되었다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְעַתָּה</td><td class="w-tr">wəʿattā<span class="ko">베아타</span></td><td class="w-parse">접속사 + 부사</td><td class="w-lex"><span class="lm">עַתָּה</span> 아타 <span class="rt-g">이제·지금</span></td><td class="w-gloss">그리고 이제</td><td class="w-fn">하소연의 절정을 여는 전환</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">כִּבְשַׂר אַחֵינוּ בְּשָׂרֵנוּ</td><td class="w-tr">kiḇśar ʾaḥênû bəśārēnû<span class="ko">키브사르 아헤누 베사레누</span></td><td class="w-parse">전치사 명사(연계) + 명사(복수+1복 접미) + 명사(+1복 접미)</td><td class="w-lex"><span class="lm">בָּשָׂר</span> 바사르(살·육체) · <span class="lm">אָח</span> 아흐</td><td class="w-gloss">우리 형제의 살과 같이 우리 살도</td><td class="w-fn">동등성 선언(같은 혈육)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">כִּבְנֵיהֶם בָּנֵינוּ</td><td class="w-tr">kiḇnêhem bānênû<span class="ko">키브네헴 바네누</span></td><td class="w-parse">전치사 명사(복수+3남복 접미) + 명사(복수+1복 접미)</td><td class="w-lex"><span class="lm">בֵּן</span> 벤</td><td class="w-gloss">그들의 자녀와 같이 우리 자녀도</td><td class="w-fn">동등성 확장(자녀도 같은 자녀)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וְהִנֵּה אֲנַחְנוּ כֹבְשִׁים</td><td class="w-tr">wəhinnēh ʾănaḥnû ḵōḇəšîm<span class="ko">베힌네 아나흐누 코브쉼</span></td><td class="w-parse">접속사 지시사 + 대명사 + 동사(칼 분사 남성 복수)</td><td class="w-lex"><span class="lm">כָּבַשׁ</span> 카바쉬 / 어근 <span class="rt">כבשׁ</span> <span class="rt-g">굴복시키다·복속시키다</span></td><td class="w-gloss">보라 우리가 (강제로) 굴복시키고 있다</td><td class="w-fn">능동. 부모가 제 자녀를 종으로 내몰다</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">אֶת־בָּנֵינוּ וְאֶת־בְּנֹתֵינוּ לַעֲבָדִים</td><td class="w-tr">ʾeṯ-bānênû wəʾeṯ-bənōṯênû laʿăḇāḏîm<span class="ko">에트-바네누 베에트-베노테누 라아바딤</span></td><td class="w-parse">목적격 명사 + 접속사 목적격 명사 + 전치사 명사(복수)</td><td class="w-lex"><span class="lm">בֵּן</span> 벤 · <span class="lm">בַּת</span> 바트 · <span class="lm">עֶבֶד</span> 에베드(종)</td><td class="w-gloss">우리 아들딸을 종으로</td><td class="w-fn">굴복의 목적어(자녀→종)</td></tr>
+      <tr><td class="w-num">6</td><td class="w-heb">וְיֵשׁ מִבְּנֹתֵינוּ נִכְבָּשׁוֹת</td><td class="w-tr">wəyēš mibbənōṯênû niḵbāšôṯ<span class="ko">베예쉬 밉베노테누 니크바쇼트</span></td><td class="w-parse">접속사 존재사 + 전치사 명사(복수+1복 접미) + 동사(니팔 분사 여성 복수)</td><td class="w-lex"><span class="lm">כָּבַשׁ</span> 카바쉬 / 어근 <span class="rt">כבשׁ</span></td><td class="w-gloss">우리 딸 중 이미 굴복된 자가 있다</td><td class="w-fn">수동(니팔). 능동 כֹבְשִׁים과 짝을 이룸</td></tr>
+      <tr><td class="w-num">7</td><td class="w-heb">וְאֵין לְאֵל יָדֵנוּ</td><td class="w-tr">wəʾên ləʾēl yāḏēnû<span class="ko">베엔 레엘 야데누</span></td><td class="w-parse">접속사 부정 존재사 + 전치사 명사 + 명사(+1복 접미)</td><td class="w-lex"><span class="lm">אֵל</span> 엘(힘·능력) · <span class="lm">יָד</span> 야드(손)</td><td class="w-gloss">우리 손에 힘이 없다</td><td class="w-fn">관용구 "손의 힘"(창 31:29; 신 28:32)</td></tr>
+      <tr><td class="w-num">8</td><td class="w-heb">וּשְׂדֹתֵינוּ וּכְרָמֵינוּ לַאֲחֵרִים</td><td class="w-tr">ûśəḏōṯênû ûḵərāmênû laʾăḥērîm<span class="ko">우세도테누 우케라메누 라아헤림</span></td><td class="w-parse">접속사 명사(복수+1복 접미) ×2 + 전치사 형용사(복수)</td><td class="w-lex"><span class="lm">שָׂדֶה</span> 사데 · <span class="lm">כֶּרֶם</span> 케렘 · <span class="lm">אַחֵר</span> 아헤르(다른 이)</td><td class="w-gloss">우리 밭과 포도원은 남의 것이 (되었다)</td><td class="w-fn">명사문. 터전 상실의 결과</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 하소연이 <b>절정에 이른다(</b><span class="hb">וְעַתָּה</span><b>, "이제")</b>. 먼저 <b>같음</b>을 두 번 못박는다 — 우리 살도 형제의 살과 같고(<span class="hb">כִּבְשַׂר אַחֵינוּ בְּשָׂרֵנוּ</span>), 우리 자녀도 그들 자녀와 같다. 같은 혈육인데 한쪽은 채권자, 한쪽은 종이 된다. 이 절의 핵심은 어근 <span class="hb">כבשׁ</span>(굴복시키다)의 <b>능동-수동 짝</b>이다 — 부모가 제 자녀를 <b>굴복시키고(</b><span class="hb">כֹבְשִׁים</span>, 능동<b>)</b>, 딸들은 <b>이미 굴복되어 있다(</b><span class="hb">נִכְבָּשׁוֹת</span>, 니팔 수동<b>)</b>. 창조 명령의 "다스리라(<span class="hb">כבשׁ</span>, 창 1:28)"가 여기서 <b>동족을 짓밟는 힘</b>으로 뒤틀린 셈이다. 마지막 <span class="hb">וְאֵין לְאֵל יָדֵנוּ</span>("우리 손에 힘이 없다")는 무력함을 나타내는 관용구로(창 31:29; 신 28:32), 부르짖음(1절)이 왜 하늘로 향할 수밖에 없는지를 밝힌다.</div>
+</section>
+
+<!-- ═══════════════ 5:6 ═══════════════ -->
+<section class="verse" id="v6">
+  <div class="verse-head">
+    <span class="vnum">5:6</span>
+    <span class="vkrv">내가 백성의 부르짖음과 이런 말을 듣고 크게 노하였으나</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וַיִּחַר לִי מְאֹד</span><span class="it">wayyiḥar lî məʾōḏ</span><span class="ig">내게 심히 분노가 타올랐으니</span></span>
+    <span class="iw"><span class="ih">כַּאֲשֶׁר שָׁמַעְתִּי</span><span class="it">kaʾăšer šāmaʿtî</span><span class="ig">내가 들었을 때</span></span>
+    <span class="iw"><span class="ih">אֶת־זַעֲקָתָם</span><span class="it">ʾeṯ-zaʿăqāṯām</span><span class="ig">그들의 부르짖음과</span></span>
+    <span class="iw"><span class="ih">וְאֵת הַדְּבָרִים הָאֵלֶּה</span><span class="it">wəʾēṯ haddəḇārîm hāʾēllê</span><span class="ig">이 말들을</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וַיִּחַר לִי מְאֹד</td><td class="w-tr">wayyiḥar lî məʾōḏ<span class="ko">바이하르 리 메오드</span></td><td class="w-parse">동사(칼 바브연속 미완료 3남단) + 전치사(+1단 접미) + 부사</td><td class="w-lex"><span class="lm">חָרָה</span> 하라 / 어근 <span class="rt">חרה</span> <span class="rt-g">불타다·분노하다</span></td><td class="w-gloss">내게 심히 (분노가) 타올랐다</td><td class="w-fn">4:1 대적의 분노와 같은 동사(주체가 바뀜)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">כַּאֲשֶׁר שָׁמַעְתִּי</td><td class="w-tr">kaʾăšer šāmaʿtî<span class="ko">카아셰르 샤마으티</span></td><td class="w-parse">접속사 + 동사(칼 완료 1인칭 단수)</td><td class="w-lex"><span class="lm">שָׁמַע</span> 샤마 / 어근 <span class="rt">שׁמע</span> <span class="rt-g">듣다</span></td><td class="w-gloss">내가 들었을 때</td><td class="w-fn">시간절. 분노의 계기</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">אֶת־זַעֲקָתָם</td><td class="w-tr">ʾeṯ-zaʿăqāṯām<span class="ko">에트-자아카탐</span></td><td class="w-parse">목적격 표지 + 명사(+3남복 접미)</td><td class="w-lex"><span class="lm">זְעָקָה</span> 제아카 / 어근 <span class="rt">זעק</span> <span class="rt-g">부르짖다</span></td><td class="w-gloss">그들의 부르짖음을</td><td class="w-fn">들은 것 ①(1절 צְעָקָה의 이형)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וְאֵת הַדְּבָרִים הָאֵלֶּה</td><td class="w-tr">wəʾēṯ haddəḇārîm hāʾēllê<span class="ko">베에트 핫데바림 하엘레</span></td><td class="w-parse">접속사 목적격 표지 + 관사 명사(복수) + 관사 지시사(복수)</td><td class="w-lex"><span class="lm">דָּבָר</span> 다바르(말·일)</td><td class="w-gloss">이 말들을</td><td class="w-fn">들은 것 ②(2~5절의 하소연)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 느헤미야의 반응이 <b>4:1 대적의 반응과 같은 동사(</b><span class="hb">וַיִּחַר</span><b>, "분노가 타올랐다")</b>로 서술된다. 같은 낱말이지만 방향이 다르다 — 4장에서 산발랏의 분노는 성벽이 올라가는 데 대한 <b>적의</b>였고, 여기서 느헤미야의 분노는 형제가 형제를 짓밟는 데 대한 <b>의분</b>이다. 그가 들은 것은 두 가지, <b>부르짖음(</b><span class="hb">זַעֲקָתָם</span><b>)</b>과 <b>말(</b><span class="hb">הַדְּבָרִים</span><b>)</b>이다. 부르짖음을 가리키는 <span class="hb">זְעָקָה</span>는 1절의 <span class="hb">צְעָקָה</span>와 자음 하나(צ/ז)만 다른 이형으로, 같은 외침이 지도자의 귀에 그대로 꽂혔음을 보인다.</div>
+</section>
+
+<!-- ═══════════════ 5:7 ═══════════════ -->
+<section class="verse" id="v7">
+  <div class="verse-head">
+    <span class="vnum">5:7 <span style="font-size:.7em;opacity:.6;font-weight:400">케티브/케레</span></span>
+    <span class="vkrv">깊이 생각하고 귀족들과 민장들을 꾸짖어 그들에게 이르기를 너희가 각기 형제에게 높은 이자를 취하는도다 하고 대회를 열고 그들을 쳐서</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וַיִּמָּלֵךְ לִבִּי עָלַי</span><span class="it">wayyimmālēḵ libbî ʿālay</span><span class="ig">내 마음이 스스로 헤아리고</span></span>
+    <span class="iw"><span class="ih">וָאָרִיבָה אֶת־הַחֹרִים וְאֶת־הַסְּגָנִים</span><span class="it">wāʾārîḇā ʾeṯ-haḥōrîm wəʾeṯ-hassəḡānîm</span><span class="ig">귀족과 민장을 꾸짖어</span></span>
+    <span class="iw"><span class="ih">וָאֹמְרָה לָהֶם</span><span class="it">wāʾōmərā lāhem</span><span class="ig">그들에게 이르되</span></span>
+    <span class="iw"><span class="ih">מַשָּׁא אִישׁ־בְּאָחִיו אַתֶּם נֹשִׁים</span><span class="it">maššāʾ ʾîš-bəʾāḥîw ʾattem nōšîm</span><span class="ig">각기 형제에게 빚을 지우는도다</span></span>
+    <span class="iw"><span class="ih">וָאֶתֵּן עֲלֵיהֶם קְהִלָּה גְדוֹלָה</span><span class="it">wāʾettēn ʿălêhem qəhillā ḡəḏôlā</span><span class="ig">그들에게 큰 대회를 열었다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וַיִּמָּלֵךְ לִבִּי עָלַי</td><td class="w-tr">wayyimmālēḵ libbî ʿālay<span class="ko">바임말레크 립비 알라이</span></td><td class="w-parse">동사(니팔 바브연속 미완료 3남단) + 명사(+1단 접미) + 전치사(+1단 접미)</td><td class="w-lex"><span class="lm">מָלַךְ</span> 말라크 / 어근 <span class="rt">מלך</span> <span class="rt-g">(니팔) 스스로 상의하다</span> · <span class="lm">לֵב</span> 레브(마음)</td><td class="w-gloss">내 마음이 내 안에서 궁리하였다</td><td class="w-fn">숙고 후의 행동(즉흥 아님). 개역 "깊이 생각하고"</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">וָאָרִיבָה אֶת־הַחֹרִים וְאֶת־הַסְּגָנִים</td><td class="w-tr">wāʾārîḇā ʾeṯ-haḥōrîm wəʾeṯ-hassəḡānîm<span class="ko">바아리바 에트-하호림 베에트-핫세가님</span></td><td class="w-parse">동사(칼 바브연속 미완료 1단, 강세형) + 목적격 관사 명사(복수) ×2</td><td class="w-lex"><span class="lm">רִיב</span> 리브 / 어근 <span class="rt">ריב</span> <span class="rt-g">다투다·송사하다</span> · <span class="lm">חֹר</span> 호르(귀인) · <span class="lm">סֶגֶן</span> 세겐(관리)</td><td class="w-gloss">내가 귀족들과 민장들을 꾸짖었다</td><td class="w-fn">책임자를 정면으로 지목</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">וָאֹמְרָה לָהֶם</td><td class="w-tr">wāʾōmərā lāhem<span class="ko">바오메라 라헴</span></td><td class="w-parse">동사(칼 바브연속 미완료 1단) + 전치사(+3남복 접미)</td><td class="w-lex"><span class="lm">אָמַר</span> 아마르 / 어근 <span class="rt">אמר</span></td><td class="w-gloss">내가 그들에게 말하였다</td><td class="w-fn">고발의 도입</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">מַשָּׁא אִישׁ־בְּאָחִיו אַתֶּם נֹשִׁים</td><td class="w-tr">maššāʾ ʾîš-bəʾāḥîw ʾattem nōšîm<span class="ko">맛샤 이쉬-베아히브 아템 노쉼</span></td><td class="w-parse">명사 + 명사 전치사(+3단 접미) + 대명사 + 동사(칼 분사 남복) <b>[케티브 נשאים · 케레 נֹשִׁים]</b></td><td class="w-lex"><span class="lm">מַשָּׁא</span> 맛샤(빚·이자) · <span class="lm">נָשָׁה</span> 나샤 / 어근 <span class="rt">נשׁה</span> <span class="rt-g">이자를 놓다</span></td><td class="w-gloss">너희가 각기 그 형제에게 빚을 지우고 있다</td><td class="w-fn">고발의 핵심. 개역 "높은 이자를 취하는도다"</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">וָאֶתֵּן עֲלֵיהֶם קְהִלָּה גְדוֹלָה</td><td class="w-tr">wāʾettēn ʿălêhem qəhillā ḡəḏôlā<span class="ko">바엣텐 알레헴 케힐라 게돌라</span></td><td class="w-parse">동사(칼 바브연속 미완료 1단) + 전치사(+3남복 접미) + 명사 + 형용사</td><td class="w-lex"><span class="lm">נָתַן</span> 나탄 / 어근 <span class="rt">נתן</span> <span class="rt-g">주다·세우다</span> · <span class="lm">קְהִלָּה</span> 케힐라(회중·집회)</td><td class="w-gloss">내가 그들에게 큰 대회를 열었다</td><td class="w-fn">사적 훈계를 공적 재판으로 전환</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 느헤미야의 분노는 <b>충동이 아니라 숙고를 거친다</b> — <span class="hb">וַיִּמָּלֵךְ לִבִּי עָלַי</span>는 마음이 "스스로 상의했다"는 니팔 표현으로, 개역개정이 "깊이 생각하고"로 옮긴 대목이다. 그다음 그는 <span class="hb">ריב</span>(송사·다툼) 동사로 <b>귀족과 민장을 정면으로 지목</b>한다. <b>케티브/케레</b>: 넷째 낱말은 기록형이 <span class="hb">נשאים</span>(어근 נשׂא, "들다·꾸어 주다")이고 낭독형이 <span class="hb">נֹשִׁים</span>(어근 נשׁה, "이자를 놓다")이다. 두 어근이 뜻은 겹치되, 케레는 문제를 <b>고리대(이자 놓기)</b>로 못박는다. 마지막에 그는 사적 훈계를 <b>큰 대회(</b><span class="hb">קְהִלָּה גְדוֹלָה</span><b>)</b>로 끌어올려, 밀실의 채무 관계를 공동체 전체가 지켜보는 자리로 세운다.</div>
+</section>
+
+<!-- ═══════════════ 5:8 ═══════════════ -->
+<section class="verse" id="v8">
+  <div class="verse-head">
+    <span class="vnum">5:8</span>
+    <span class="vkrv">그들에게 이르기를 우리는 이방인의 손에 팔린 우리 형제 유다 사람들을 우리의 힘을 다하여 도로 찾았거늘 너희는 너희 형제를 팔고자 하느냐 더구나 우리의 손에 팔리게 하겠느냐 하매 그들이 잠잠하여 말이 없기로</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וָאֹמְרָה לָהֶם</span><span class="it">wāʾōmərā lāhem</span><span class="ig">그들에게 이르되</span></span>
+    <span class="iw"><span class="ih">אֲנַחְנוּ קָנִינוּ אֶת־אַחֵינוּ הַיְּהוּדִים</span><span class="it">ʾănaḥnû qānînû ʾeṯ-ʾaḥênû hayyəhûḏîm</span><span class="ig">우리는 유다 형제를 도로 샀거늘</span></span>
+    <span class="iw"><span class="ih">הַנִּמְכָּרִים לַגּוֹיִם כְּדֵי בָנוּ</span><span class="it">hannimkārîm laggôyim kəḏê ḇānû</span><span class="ig">이방에 팔린 자를 힘껏</span></span>
+    <span class="iw"><span class="ih">וְגַם־אַתֶּם תִּמְכְּרוּ אֶת־אֲחֵיכֶם</span><span class="it">wəḡam-ʾattem timkərû ʾeṯ-ʾăḥêḵem</span><span class="ig">너희는 형제를 팔려느냐</span></span>
+    <span class="iw"><span class="ih">וְנִמְכְּרוּ־לָנוּ</span><span class="it">wənimkərû-lānû</span><span class="ig">우리에게 팔리게 하려느냐</span></span>
+    <span class="iw"><span class="ih">וַיַּחֲרִישׁוּ וְלֹא מָצְאוּ דָּבָר</span><span class="it">wayyaḥărîšû wəlōʾ māṣəʾû ḏāḇār</span><span class="ig">그들이 잠잠하여 말이 없더라</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וָאֹמְרָה לָהֶם</td><td class="w-tr">wāʾōmərā lāhem<span class="ko">바오메라 라헴</span></td><td class="w-parse">동사(칼 바브연속 미완료 1단) + 전치사(+3남복 접미)</td><td class="w-lex"><span class="lm">אָמַר</span> 아마르 / 어근 <span class="rt">אמר</span></td><td class="w-gloss">내가 그들에게 말하였다</td><td class="w-fn">2차 발언의 도입(고발 심화)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">אֲנַחְנוּ קָנִינוּ אֶת־אַחֵינוּ הַיְּהוּדִים</td><td class="w-tr">ʾănaḥnû qānînû ʾeṯ-ʾaḥênû hayyəhûḏîm<span class="ko">아나흐누 카니누 에트-아헤누 하예후딤</span></td><td class="w-parse">대명사 + 동사(칼 완료 1복) + 목적격 명사(복수+1복 접미) + 관사 명사</td><td class="w-lex"><span class="lm">קָנָה</span> 카나 / 어근 <span class="rt">קנה</span> <span class="rt-g">사다·되사다</span> · <span class="lm">אָח</span> 아흐</td><td class="w-gloss">우리는 우리 형제 유다인들을 (도로) 샀다</td><td class="w-fn">대명사 강조(우리는 되샀는데 너희는)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">הַנִּמְכָּרִים לַגּוֹיִם כְּדֵי בָנוּ</td><td class="w-tr">hannimkārîm laggôyim kəḏê ḇānû<span class="ko">한니므카림 락고임 케데 바누</span></td><td class="w-parse">관사 동사(니팔 분사 남복) + 전치사 관사 명사 + 전치사구</td><td class="w-lex"><span class="lm">מָכַר</span> 마카르 / 어근 <span class="rt">מכר</span> <span class="rt-g">팔다</span> · <span class="lm">דַּי</span> 다이(충분함)</td><td class="w-gloss">이방인에게 팔린 자들을 우리 힘껏</td><td class="w-fn">되산 대상. כְּדֵי בָנוּ는 "우리 힘이 닿는 대로"(본문 난해)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וְגַם־אַתֶּם תִּמְכְּרוּ אֶת־אֲחֵיכֶם</td><td class="w-tr">wəḡam-ʾattem timkərû ʾeṯ-ʾăḥêḵem<span class="ko">베감-아템 티므케루 에트-아헤켐</span></td><td class="w-parse">접속사 부사 대명사 + 동사(칼 미완료 2남복) + 목적격 명사(복수+2복 접미)</td><td class="w-lex"><span class="lm">מָכַר</span> 마카르 <span class="rt">מכר</span></td><td class="w-gloss">그런데 너희는 너희 형제를 팔려느냐</td><td class="w-fn">수사 의문(되사기 vs 팔기의 대조)</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">וְנִמְכְּרוּ־לָנוּ</td><td class="w-tr">wənimkərû-lānû<span class="ko">베니므케루-라누</span></td><td class="w-parse">접속사 동사(니팔 완료 연속 3복) + 전치사(+1복 접미)</td><td class="w-lex"><span class="lm">מָכַר</span> 마카르 <span class="rt">מכר</span></td><td class="w-gloss">그리하여 그들이 우리에게 팔리게 (하려느냐)</td><td class="w-fn">부조리의 절정(되산 우리가 다시 사야 함)</td></tr>
+      <tr><td class="w-num">6</td><td class="w-heb">וַיַּחֲרִישׁוּ וְלֹא מָצְאוּ דָּבָר</td><td class="w-tr">wayyaḥărîšû wəlōʾ māṣəʾû ḏāḇār<span class="ko">바야하리슈 벨로 마체우 다바르</span></td><td class="w-parse">동사(히필 바브연속 미완료 3남복) + 접속사 부정 동사(칼 완료 3복) + 명사</td><td class="w-lex"><span class="lm">חָרַשׁ</span> 하라쉬 / 어근 <span class="rt">חרשׁ</span> <span class="rt-g">잠잠하다</span> · <span class="lm">מָצָא</span> 마차 <span class="rt">מצא</span></td><td class="w-gloss">그들이 잠잠하여 말을 찾지 못하였다</td><td class="w-fn">반박 불가(고발이 정곡을 찌름)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 이 절은 <b>사다(</b><span class="hb">קנה</span><b>)와 팔다(</b><span class="hb">מכר</span><b>)</b>의 대조로 짜여 있다. 느헤미야 편은 이방에 <b>팔린(</b><span class="hb">נִמְכָּרִים</span><b>)</b> 형제를 <b>되샀는데(</b><span class="hb">קָנִינוּ</span><b>)</b>, 귀족들은 그 형제를 다시 <b>팔려(</b><span class="hb">תִּמְכְּרוּ</span><b>)</b> 한다. 되사기(구속)와 되팔기가 한 문장에서 부딪친다. 문두의 대명사 <span class="hb">אֲנַחְנוּ</span>("우리는")와 <span class="hb">אַתֶּם</span>("너희는")가 <b>두 진영을 정면으로 세워</b> 대조를 날카롭게 한다. <span class="hb">כְּדֵי בָנוּ</span>("우리 힘껏")는 본문이 난해한 표현이나, 개역개정은 "우리의 힘을 다하여"로 옮겨 구속의 값짐을 살린다. 고발이 정곡을 찌르자 상대는 <b>잠잠해져 말을 찾지 못한다(</b><span class="hb">וַיַּחֲרִישׁוּ וְלֹא מָצְאוּ דָּבָר</span><b>)</b>.</div>
+</section>
+
+<!-- ═══════════════ 5:9 ═══════════════ -->
+<section class="verse" id="v9">
+  <div class="verse-head">
+    <span class="vnum">5:9 <span style="font-size:.7em;opacity:.6;font-weight:400">케티브/케레</span></span>
+    <span class="vkrv">내가 또 이르기를 너희의 소행이 좋지 못하도다 우리의 대적 이방 사람의 비방을 생각하고 우리 하나님을 경외하는 가운데 행할 것이 아니냐</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וָאֹמַר</span><span class="it">wāʾōmar</span><span class="ig">내가 또 이르되</span></span>
+    <span class="iw"><span class="ih">לֹא־טוֹב הַדָּבָר אֲשֶׁר־אַתֶּם עֹשִׂים</span><span class="it">lōʾ-ṭôḇ haddāḇār ʾăšer-ʾattem ʿōśîm</span><span class="ig">너희 소행이 좋지 못하도다</span></span>
+    <span class="iw"><span class="ih">הֲלוֹא בְּיִרְאַת אֱלֹהֵינוּ תֵּלֵכוּ</span><span class="it">hălôʾ bəyirʾaṯ ʾĕlōhênû tēlēḵû</span><span class="ig">하나님을 경외함으로 행할 것이 아니냐</span></span>
+    <span class="iw"><span class="ih">מֵחֶרְפַּת הַגּוֹיִם אוֹיְבֵינוּ</span><span class="it">mēḥerpaṯ haggôyim ʾôyəḇênû</span><span class="ig">대적 이방인의 비방을 (피하여)</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וָאֹמַר</td><td class="w-tr">wāʾōmar<span class="ko">바오마르</span></td><td class="w-parse">동사(칼 바브연속 미완료 1인칭 단수) <b>[케티브 ויאמר(3남단) · 케레 וָאֹמַר(1단)]</b></td><td class="w-lex"><span class="lm">אָמַר</span> 아마르 / 어근 <span class="rt">אמר</span></td><td class="w-gloss">내가 (또) 말하였다</td><td class="w-fn">케레는 1인칭(느헤미야의 발언 이어감)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">לֹא־טוֹב הַדָּבָר אֲשֶׁר־אַתֶּם עֹשִׂים</td><td class="w-tr">lōʾ-ṭôḇ haddāḇār ʾăšer-ʾattem ʿōśîm<span class="ko">로-토브 핫다바르 아셰르-아템 오심</span></td><td class="w-parse">부정 + 형용사 + 관사 명사 + 관계사 대명사 + 동사(칼 분사 남복)</td><td class="w-lex"><span class="lm">טוֹב</span> 토브(좋다) · <span class="lm">עָשָׂה</span> 아사 / 어근 <span class="rt">עשׂה</span></td><td class="w-gloss">너희가 행하는 그 일이 좋지 못하다</td><td class="w-fn">가치 판단. 어근 טוב(2장 주제어)의 부정</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">הֲלוֹא בְּיִרְאַת אֱלֹהֵינוּ תֵּלֵכוּ</td><td class="w-tr">hălôʾ bəyirʾaṯ ʾĕlōhênû tēlēḵû<span class="ko">할로 베이르아트 엘로헤누 텔레쿠</span></td><td class="w-parse">의문사 부정 + 전치사 명사(연계) + 명사(+1복 접미) + 동사(칼 미완료 2남복)</td><td class="w-lex"><span class="lm">יִרְאָה</span> 이르아(경외) <span class="rt">ירא</span> · <span class="lm">הָלַךְ</span> 할라크 <span class="rt">הלך</span> <span class="rt-g">걷다·행하다</span></td><td class="w-gloss">우리 하나님을 경외함으로 행할 것이 아니냐</td><td class="w-fn">수사 의문. 삶의 기준을 경외로 제시</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">מֵחֶרְפַּת הַגּוֹיִם אוֹיְבֵינוּ</td><td class="w-tr">mēḥerpaṯ haggôyim ʾôyəḇênû<span class="ko">메헤르파트 학고임 오예베누</span></td><td class="w-parse">전치사 명사(연계) + 관사 명사 + 명사(복수+1복 접미)</td><td class="w-lex"><span class="lm">חֶרְפָּה</span> 헤르파(비방·수치) · <span class="lm">אֹיֵב</span> 오예브(원수)</td><td class="w-gloss">우리 대적 이방인의 비방 때문에</td><td class="w-fn">경외의 동기(밖의 조롱 앞에서의 증언)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 고발이 <b>가치 판단(</b><span class="hb">לֹא־טוֹב</span><b>, "좋지 못하다")</b>으로 압축된다. 어근 <span class="hb">טוב</span>은 2장에서 왕이 "좋게 여긴" 그 낱말인데(느 2:5~8), 여기서는 형제를 짓밟는 일이 <b>"좋지 못하다"</b>고 판정하는 데 쓰여, 겉의 형통과 속의 정의가 갈라짐을 드러낸다. 판단의 근거는 <b>하나님 경외(</b><span class="hb">יִרְאַת אֱלֹהֵינוּ</span><b>)</b>이며, 이 어구는 15절에서 느헤미야 자신이 압제하지 않은 이유로 다시 나온다 — 남을 향한 요구가 곧 자기 삶의 기준이다. <b>케티브/케레</b>: 첫 낱말의 기록형 <span class="hb">ויאמר</span>은 3인칭이나 낭독형 <span class="hb">וָאֹמַר</span>은 1인칭으로, 개역개정 "내가 또 이르기를"은 케레를 따른다. 경외의 동기로 <b>이방인의 비방(</b><span class="hb">חֶרְפַּת הַגּוֹיִם</span><b>)</b>이 제시되는데, 대적이 지켜보는 앞에서 공동체가 스스로 무너지면 그 조롱이 옳아지고 만다.</div>
+</section>
+
+<!-- ═══════════════ 5:10 ═══════════════ -->
+<section class="verse" id="v10">
+  <div class="verse-head">
+    <span class="vnum">5:10</span>
+    <span class="vkrv">나와 내 형제와 종자들도 역시 돈과 양식을 백성에게 꾸어 주었거니와 우리가 그 이자 받기를 그치자</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְגַם־אֲנִי אַחַי וּנְעָרַי</span><span class="it">wəḡam-ʾănî ʾaḥay ûnəʿāray</span><span class="ig">나와 형제와 종들도</span></span>
+    <span class="iw"><span class="ih">נֹשִׁים בָּהֶם כֶּסֶף וְדָגָן</span><span class="it">nōšîm bāhem keseф wəḏāḡān</span><span class="ig">돈과 곡식을 꾸어 주었거니와</span></span>
+    <span class="iw"><span class="ih">נַעַזְבָה־נָּא אֶת־הַמַּשָּׁא הַזֶּה</span><span class="it">naʿazḇā-nnā ʾeṯ-hammaššāʾ hazzê</span><span class="ig">이 이자를 그치자</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְגַם־אֲנִי אַחַי וּנְעָרַי</td><td class="w-tr">wəḡam-ʾănî ʾaḥay ûnəʿāray<span class="ko">베감-아니 아하이 우네아라이</span></td><td class="w-parse">접속사 부사 대명사 + 명사(복수+1단 접미) + 접속사 명사(복수+1단 접미)</td><td class="w-lex"><span class="lm">אָח</span> 아흐 · <span class="lm">נַעַר</span> 나아르(종·청년)</td><td class="w-gloss">나와 내 형제들과 내 종들도</td><td class="w-fn">자기 포함(솔선). 개혁을 자기부터 적용</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">נֹשִׁים בָּהֶם כֶּסֶף וְדָגָן</td><td class="w-tr">nōšîm bāhem keseф wəḏāḡān<span class="ko">노쉼 바헴 케세프 베다간</span></td><td class="w-parse">동사(칼 분사 남복) + 전치사(+3남복 접미) + 명사 + 접속사 명사</td><td class="w-lex"><span class="lm">נָשָׁה</span> 나샤 / 어근 <span class="rt">נשׁה</span> <span class="rt-g">꾸어 주다·이자를 놓다</span></td><td class="w-gloss">그들에게 돈과 곡식을 꾸어 주고 있다</td><td class="w-fn">동사 נשׁה(7절)의 재등장(자기도 당사자)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">נַעַזְבָה־נָּא אֶת־הַמַּשָּׁא הַזֶּה</td><td class="w-tr">naʿazḇā-nnā ʾeṯ-hammaššāʾ hazzê<span class="ko">나아즈바-나 에트-함맛샤 핫제</span></td><td class="w-parse">동사(칼 청유형 1복) + 청유 소사 + 목적격 관사 명사 + 관사 지시사</td><td class="w-lex"><span class="lm">עָזַב</span> 아자브 / 어근 <span class="rt">עזב</span> <span class="rt-g">버리다·그치다</span> · <span class="lm">מַשָּׁא</span> 맛샤(이자)</td><td class="w-gloss">이 이자(빚 지우기)를 그치자</td><td class="w-fn">청유형(명령이 아닌 함께 하자는 권면)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 느헤미야가 개혁을 <b>자기 자신부터(</b><span class="hb">וְגַם־אֲנִי</span><b>, "나도 역시")</b> 적용한다. 그와 그의 형제·종들 역시 백성에게 돈과 곡식을 <b>꾸어 주는(</b><span class="hb">נֹשִׁים</span><b>)</b> 당사자였음을 인정한다 — 7절에서 귀족을 겨눈 바로 그 동사(<span class="hb">נשׁה</span>)를 자기에게도 돌린다. 그래서 마지막 권면이 명령형이 아니라 <b>청유형(</b><span class="hb">נַעַזְבָה־נָּא</span><b>, "우리 함께 그치자")</b>이다. "너희가 그쳐라"가 아니라 "우리가 그치자" — 개혁을 지시가 아니라 <b>동참</b>으로 세운다. 그치자는 대상 <span class="hb">הַמַּשָּׁא</span>("이 이자")는 7절 고발의 낱말을 그대로 받아, 진단과 처방의 어휘를 하나로 묶는다.</div>
+</section>
+
+<!-- ═══════════════ 5:11 ═══════════════ -->
+<section class="verse" id="v11">
+  <div class="verse-head">
+    <span class="vnum">5:11</span>
+    <span class="vkrv">그런즉 너희는 그들에게 오늘이라도 그들의 밭과 포도원과 감람원과 집이며 너희가 꾸어 준 돈이나 양식이나 새 포도주나 기름의 백분의 일을 돌려보내라 하였더니</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">הָשִׁיבוּ נָא לָהֶם כְּהַיּוֹם</span><span class="it">hāšîḇû nā lāhem kəhayyôm</span><span class="ig">오늘이라도 돌려주라</span></span>
+    <span class="iw"><span class="ih">שְׂדֹתֵיהֶם כַּרְמֵיהֶם זֵיתֵיהֶם וּבָתֵּיהֶם</span><span class="it">śəḏōṯêhem karmêhem zêṯêhem ûḇāttêhem</span><span class="ig">밭·포도원·감람원·집을</span></span>
+    <span class="iw"><span class="ih">וּמְאַת הַכֶּסֶף וְהַדָּגָן הַתִּירוֹשׁ וְהַיִּצְהָר</span><span class="it">ûməʾaṯ hakkeseф wəhaddāḡān hattîrôš wəhayyiṣhār</span><span class="ig">돈·곡식·새 포도주·기름의 백분의 일을</span></span>
+    <span class="iw"><span class="ih">אֲשֶׁר אַתֶּם נֹשִׁים בָּהֶם</span><span class="it">ʾăšer ʾattem nōšîm bāhem</span><span class="ig">너희가 꾸어 준</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">הָשִׁיבוּ נָא לָהֶם כְּהַיּוֹם</td><td class="w-tr">hāšîḇû nā lāhem kəhayyôm<span class="ko">하쉬부 나 라헴 케하욤</span></td><td class="w-parse">동사(히필 명령 남복) + 소사 + 전치사(+3남복 접미) + 전치사 관사 명사</td><td class="w-lex"><span class="lm">שׁוּב</span> 슈브 / 어근 <span class="rt">שׁוב</span> <span class="rt-g">돌아가다·(히필) 돌려주다</span></td><td class="w-gloss">오늘이라도 그들에게 돌려주라</td><td class="w-fn">명령형. 즉각성(כְּהַיּוֹם "바로 오늘")</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">שְׂדֹתֵיהֶם כַּרְמֵיהֶם זֵיתֵיהֶם וּבָתֵּיהֶם</td><td class="w-tr">śəḏōṯêhem karmêhem zêṯêhem ûḇāttêhem<span class="ko">세도테헴 카르메헴 제테헴 우바테헴</span></td><td class="w-parse">명사(복수+3남복 접미) ×4</td><td class="w-lex"><span class="lm">שָׂדֶה</span> 사데 · <span class="lm">כֶּרֶם</span> 케렘 · <span class="lm">זַיִת</span> 자이트(감람) · <span class="lm">בַּיִת</span> 바이트</td><td class="w-gloss">그들의 밭·포도원·감람원·집을</td><td class="w-fn">되돌릴 부동산(3절 목록에 감람원 추가)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">וּמְאַת הַכֶּסֶף וְהַדָּגָן הַתִּירוֹשׁ וְהַיִּצְהָר</td><td class="w-tr">ûməʾaṯ hakkeseф wəhaddāḡān hattîrôš wəhayyiṣhār<span class="ko">우메아트 학케세프 베핫다간 핫티로쉬 베하이츠하르</span></td><td class="w-parse">접속사 명사(연계, 백) + 관사 명사 + 관사 명사 ×3</td><td class="w-lex"><span class="lm">מֵאָה</span> 메아(백) · <span class="lm">כֶּסֶף</span> · <span class="lm">דָּגָן</span> · <span class="lm">תִּירוֹשׁ</span> 티로쉬(새 포도주) · <span class="lm">יִצְהָר</span> 이츠하르(기름)</td><td class="w-gloss">돈·곡식·새 포도주·기름의 백분의 일을</td><td class="w-fn">되돌릴 이자(מְאַת = 100분의 1, 월 1%)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">אֲשֶׁר אַתֶּם נֹשִׁים בָּהֶם</td><td class="w-tr">ʾăšer ʾattem nōšîm bāhem<span class="ko">아셰르 아템 노쉼 바헴</span></td><td class="w-parse">관계사 + 대명사 + 동사(칼 분사 남복) + 전치사(+3남복 접미)</td><td class="w-lex"><span class="lm">נָשָׁה</span> 나샤 / 어근 <span class="rt">נשׁה</span></td><td class="w-gloss">너희가 그들에게 꾸어 준</td><td class="w-fn">관계절. 대상을 못박음</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 명령이 <b>즉각성</b>을 띤다 — <span class="hb">הָשִׁיבוּ נָא לָהֶם כְּהַיּוֹם</span>은 "오늘이라도(바로 오늘) 돌려주라"로, 히필 동사 <span class="hb">שׁוב</span>("돌려주다")에 "이 날처럼"이라는 시간구가 붙어 유예 없는 반환을 요구한다. 되돌릴 목록은 3~4절 하소연의 품목을 <b>그대로 되받되</b>, 밭·포도원·집에 <b>감람원(</b><span class="hb">זֵיתֵיהֶם</span><b>)</b>을 더하고, 곡식·돈에 새 포도주·기름을 더해 삶의 기반 전체를 아우른다. <span class="hb">מְאַת הַכֶּסֶף</span>("은의 백분의 일")는 매달 물리던 <b>1%의 이자</b>를 가리키는 것으로 읽히며, 개역개정은 "백분의 일"로 옮긴다.</div>
+</section>
+
+<!-- ═══════════════ 5:12 ═══════════════ -->
+<section class="verse" id="v12">
+  <div class="verse-head">
+    <span class="vnum">5:12</span>
+    <span class="vkrv">그들이 말하기를 우리가 당신의 말씀대로 행하여 돌려보내고 그들에게서 아무것도 요구하지 아니하리이다 하기로 내가 제사장들을 불러 그들에게 그 말대로 행하겠다고 맹세하게 하고</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וַיֹּאמְרוּ נָשִׁיב</span><span class="it">wayyōʾmərû nāšîḇ</span><span class="ig">그들이 이르되 돌려주고</span></span>
+    <span class="iw"><span class="ih">וּמֵהֶם לֹא נְבַקֵּשׁ</span><span class="it">ûmēhem lōʾ nəḇaqqēš</span><span class="ig">아무것도 요구하지 않으리이다</span></span>
+    <span class="iw"><span class="ih">כֵּן נַעֲשֶׂה כַּאֲשֶׁר אַתָּה אוֹמֵר</span><span class="it">kēn naʿăśê kaʾăšer ʾattā ʾômēr</span><span class="ig">당신 말대로 행하리이다</span></span>
+    <span class="iw"><span class="ih">וָאֶקְרָא אֶת־הַכֹּהֲנִים</span><span class="it">wāʾeqrāʾ ʾeṯ-hakkōhănîm</span><span class="ig">내가 제사장을 불러</span></span>
+    <span class="iw"><span class="ih">וָאַשְׁבִּיעֵם לַעֲשׂוֹת כַּדָּבָר הַזֶּה</span><span class="it">wāʾašbîʿēm laʿăśôṯ kaddāḇār hazzê</span><span class="ig">이대로 행하도록 맹세시켰다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וַיֹּאמְרוּ נָשִׁיב</td><td class="w-tr">wayyōʾmərû nāšîḇ<span class="ko">바요메루 나쉬브</span></td><td class="w-parse">동사(칼 바브연속 미완료 3남복) + 동사(히필 미완료 1복)</td><td class="w-lex"><span class="lm">אָמַר</span> 아마르 · <span class="lm">שׁוּב</span> 슈브 <span class="rt">שׁוב</span></td><td class="w-gloss">그들이 이르되 우리가 돌려주리이다</td><td class="w-fn">응답. 명령 הָשִׁיבוּ(11절)를 그대로 받음</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">וּמֵהֶם לֹא נְבַקֵּשׁ</td><td class="w-tr">ûmēhem lōʾ nəḇaqqēš<span class="ko">우메헴 로 네바케쉬</span></td><td class="w-parse">접속사 전치사(+3남복 접미) + 부정 + 동사(피엘 미완료 1복)</td><td class="w-lex"><span class="lm">בָּקַשׁ</span> 바카쉬 / 어근 <span class="rt">בקשׁ</span> <span class="rt-g">구하다·요구하다</span></td><td class="w-gloss">그들에게서 (아무것도) 요구하지 않으리이다</td><td class="w-fn">반환에 더한 자발적 포기</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">כֵּן נַעֲשֶׂה כַּאֲשֶׁר אַתָּה אוֹמֵר</td><td class="w-tr">kēn naʿăśê kaʾăšer ʾattā ʾômēr<span class="ko">켄 나아세 카아셰르 아타 오메르</span></td><td class="w-parse">부사 + 동사(칼 미완료 1복) + 접속사 대명사 + 동사(칼 분사 남단)</td><td class="w-lex"><span class="lm">עָשָׂה</span> 아사 <span class="rt">עשׂה</span> · <span class="lm">אָמַר</span> 아마르</td><td class="w-gloss">당신이 말한 대로 그렇게 하리이다</td><td class="w-fn">동의 확정</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וָאֶקְרָא אֶת־הַכֹּהֲנִים</td><td class="w-tr">wāʾeqrāʾ ʾeṯ-hakkōhănîm<span class="ko">바에크라 에트-학코하님</span></td><td class="w-parse">동사(칼 바브연속 미완료 1단) + 목적격 관사 명사(복수)</td><td class="w-lex"><span class="lm">קָרָא</span> 카라 <span class="rt">קרא</span> · <span class="lm">כֹּהֵן</span> 코헨(제사장)</td><td class="w-gloss">내가 제사장들을 불렀다</td><td class="w-fn">서약의 증인을 세움(구속력 부여)</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">וָאַשְׁבִּיעֵם לַעֲשׂוֹת כַּדָּבָר הַזֶּה</td><td class="w-tr">wāʾašbîʿēm laʿăśôṯ kaddāḇār hazzê<span class="ko">바아쉬비엠 라아소트 캇다바르 핫제</span></td><td class="w-parse">동사(히필 바브연속 미완료 1단+3남복 접미) + 전치사 부정사연계 + 전치사 관사 명사 + 지시사</td><td class="w-lex"><span class="lm">שָׁבַע</span> 샤바 / 어근 <span class="rt">שׁבע</span> <span class="rt-g">맹세하다</span></td><td class="w-gloss">이 말대로 행하도록 내가 그들에게 맹세하게 하였다</td><td class="w-fn">서약 확정(말을 언약으로)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 귀족들의 응답이 명령을 <b>글자 그대로 되받는다</b> — 느헤미야가 <span class="hb">הָשִׁיבוּ</span>("돌려주라") 하자 그들은 <span class="hb">נָשִׁיב</span>("돌려주리이다")로 답한다. 같은 어근 <span class="hb">שׁוב</span>의 명령과 응답이 맞물려, 요구가 즉시 수용됨을 어형이 보인다. 그들은 반환에 더해 <b>"아무것도 요구하지 않겠다(</b><span class="hb">וּמֵהֶם לֹא נְבַקֵּשׁ</span><b>)"</b>고 자발적으로 덧붙인다. 느헤미야는 말을 말로 끝내지 않고 <b>제사장을 불러 맹세하게(</b><span class="hb">וָאַשְׁבִּיעֵם</span><b>)</b> 함으로써, 구두 약속을 <b>거룩한 서약</b>으로 묶는다 — 다음 절의 상징 행위가 그 서약에 무게를 더한다.</div>
+</section>
+
+<!-- ═══════════════ 5:13 ═══════════════ -->
+<section class="verse" id="v13">
+  <div class="verse-head">
+    <span class="vnum">5:13</span>
+    <span class="vkrv">내가 옷자락을 털며 이르기를 이 말대로 행하지 아니하는 자는 모두 하나님이 또한 이와 같이 그 집과 산업에서 털어 버리실지니 그는 곧 이렇게 털려서 빈손이 될지로다 하매 회중이 다 아멘 하고 여호와를 찬송하고 백성들이 그 말한 대로 행하였느니라</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">גַּם־חָצְנִי נָעַרְתִּי</span><span class="it">gam-ḥāṣnî nāʿartî</span><span class="ig">내가 옷자락을 털며</span></span>
+    <span class="iw"><span class="ih">וָאֹמְרָה כָּכָה יְנַעֵר הָאֱלֹהִים</span><span class="it">wāʾōmərā kāḵā yənaʿēr hāʾĕlōhîm</span><span class="ig">이르되 하나님이 이같이 터시기를</span></span>
+    <span class="iw"><span class="ih">אֶת־כָּל־הָאִישׁ אֲשֶׁר לֹא־יָקִים אֶת־הַדָּבָר הַזֶּה</span><span class="it">ʾeṯ-kol-hāʾîš ʾăšer lōʾ-yāqîm ʾeṯ-haddāḇār hazzê</span><span class="ig">이 말을 이행치 않는 자를</span></span>
+    <span class="iw"><span class="ih">מִבֵּיתוֹ וּמִיגִיעוֹ</span><span class="it">mibbêṯô ûmîḡîʿô</span><span class="ig">그 집과 산업에서</span></span>
+    <span class="iw"><span class="ih">וְכָכָה יִהְיֶה נָעוּר וָרֵק</span><span class="it">wəḵāḵā yihyê nāʿûr wārēq</span><span class="ig">이렇게 털려 빈손 되게 하소서</span></span>
+    <span class="iw"><span class="ih">וַיֹּאמְרוּ כָל־הַקָּהָל אָמֵן</span><span class="it">wayyōʾmərû ḵol-haqqāhāl ʾāmēn</span><span class="ig">온 회중이 아멘 하고</span></span>
+    <span class="iw"><span class="ih">וַיְהַלְלוּ אֶת־יְהוָה</span><span class="it">wayəhaləlû ʾeṯ-YHWH</span><span class="ig">여호와를 찬송하며</span></span>
+    <span class="iw"><span class="ih">וַיַּעַשׂ הָעָם כַּדָּבָר הַזֶּה</span><span class="it">wayyaʿaś hāʿām kaddāḇār hazzê</span><span class="ig">백성이 이대로 행하였다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">גַּם־חָצְנִי נָעַרְתִּי</td><td class="w-tr">gam-ḥāṣnî nāʿartî<span class="ko">감-호츠니 나아르티</span></td><td class="w-parse">부사 + 명사(+1단 접미) + 동사(칼 완료 1인칭 단수)</td><td class="w-lex"><span class="lm">חֹצֶן</span> 호첸(옷자락·품) · <span class="lm">נָעַר</span> 나아르 / 어근 <span class="rt">נער</span> <span class="rt-g">떨다·털어 내다</span></td><td class="w-gloss">내가 또한 내 옷자락을 털었다</td><td class="w-fn">상징 행위(말을 몸짓으로 봉인)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">וָאֹמְרָה כָּכָה יְנַעֵר הָאֱלֹהִים</td><td class="w-tr">wāʾōmərā kāḵā yənaʿēr hāʾĕlōhîm<span class="ko">바오메라 카카 예나에르 하엘로힘</span></td><td class="w-parse">동사(칼 바브연속 미완료 1단) + 부사 + 동사(피엘 미완료 3남단) + 관사 명사</td><td class="w-lex"><span class="lm">נָעַר</span> 나아르 <span class="rt">נער</span> · <span class="lm">אֱלֹהִים</span> 엘로힘</td><td class="w-gloss">이르되 하나님이 이와 같이 털어 버리시기를</td><td class="w-fn">저주 기원(같은 어근 נער의 반복)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">אֶת־כָּל־הָאִישׁ אֲשֶׁר לֹא־יָקִים אֶת־הַדָּבָר הַזֶּה</td><td class="w-tr">ʾeṯ-kol-hāʾîš ʾăšer lōʾ-yāqîm ʾeṯ-haddāḇār hazzê<span class="ko">에트-콜-하이쉬 아셰르 로-야킴 에트-핫다바르 핫제</span></td><td class="w-parse">목적격 명사 + 관계사 + 부정 동사(히필 미완료 3남단) + 목적격 명사 지시사</td><td class="w-lex"><span class="lm">קוּם</span> 쿰 / 어근 <span class="rt">קום</span> <span class="rt-g">(히필) 세우다·이행하다</span> · <span class="lm">דָּבָר</span> 다바르</td><td class="w-gloss">이 말을 이행하지 않는 모든 사람을</td><td class="w-fn">저주의 대상(서약 파기자)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">מִבֵּיתוֹ וּמִיגִיעוֹ</td><td class="w-tr">mibbêṯô ûmîḡîʿô<span class="ko">밉베토 우미기오</span></td><td class="w-parse">전치사 명사(+3단 접미) + 접속사 전치사 명사(+3단 접미)</td><td class="w-lex"><span class="lm">בַּיִת</span> 바이트(집) · <span class="lm">יְגִיעַ</span> 예기아(수고·소득)</td><td class="w-gloss">그의 집과 그의 산업(수고의 소득)에서</td><td class="w-fn">털려 나갈 자리(집과 재산)</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">וְכָכָה יִהְיֶה נָעוּר וָרֵק</td><td class="w-tr">wəḵāḵā yihyê nāʿûr wārēq<span class="ko">베카카 이흐예 나우르 바렉</span></td><td class="w-parse">접속사 부사 + 동사(칼 미완료 3남단) + 동사(칼 수동분사 남단) + 접속사 형용사</td><td class="w-lex"><span class="lm">נָעַר</span> 나아르 <span class="rt">נער</span> · <span class="lm">רֵיק</span> 레크(빈)</td><td class="w-gloss">이와 같이 그가 털려 빈손이 되기를</td><td class="w-fn">저주의 결말(세 번째 נער). 빈손</td></tr>
+      <tr><td class="w-num">6</td><td class="w-heb">וַיֹּאמְרוּ כָל־הַקָּהָל אָמֵן</td><td class="w-tr">wayyōʾmərû ḵol-haqqāhāl ʾāmēn<span class="ko">바요메루 콜-하카할 아멘</span></td><td class="w-parse">동사(칼 바브연속 미완료 3남복) + 명사 관사 명사 + 감탄사</td><td class="w-lex"><span class="lm">קָהָל</span> 카할(회중) · <span class="lm">אָמֵן</span> 아멘 <span class="rt">אמן</span> <span class="rt-g">확실하다</span></td><td class="w-gloss">온 회중이 아멘 하였다</td><td class="w-fn">공동체의 동의(서약을 자기 것으로)</td></tr>
+      <tr><td class="w-num">7</td><td class="w-heb">וַיְהַלְלוּ אֶת־יְהוָה</td><td class="w-tr">wayəhaləlû ʾeṯ-YHWH<span class="ko">바예할렐루 에트-아도나이</span></td><td class="w-parse">동사(피엘 바브연속 미완료 3남복) + 목적격 고유명사</td><td class="w-lex"><span class="lm">הָלַל</span> 할랄 / 어근 <span class="rt">הלל</span> <span class="rt-g">찬양하다</span></td><td class="w-gloss">그들이 여호와를 찬송하였다</td><td class="w-fn">정의 회복이 예배로 이어짐</td></tr>
+      <tr><td class="w-num">8</td><td class="w-heb">וַיַּעַשׂ הָעָם כַּדָּבָר הַזֶּה</td><td class="w-tr">wayyaʿaś hāʿām kaddāḇār hazzê<span class="ko">바야아스 하암 캇다바르 핫제</span></td><td class="w-parse">동사(칼 바브연속 미완료 3남단) + 관사 명사 + 전치사 관사 명사 지시사</td><td class="w-lex"><span class="lm">עָשָׂה</span> 아사 <span class="rt">עשׂה</span></td><td class="w-gloss">백성이 이 말대로 행하였다</td><td class="w-fn">말→서약→실행의 완결</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 서약이 <b>상징 행위</b>로 봉인된다. 느헤미야가 옷자락(<span class="hb">חֹצֶן</span>)을 <b>터는(</b><span class="hb">נָעַרְתִּי</span><b>)</b> 그 어근 <span class="hb">נער</span>이 한 절 안에서 <b>세 번</b> 울린다 — 내가 옷을 털고(<span class="hb">נָעַרְתִּי</span>), 하나님도 이같이 터시며(<span class="hb">יְנַעֵר</span>), 그리하여 그가 털려(<span class="hb">נָעוּר</span>) 빈손(<span class="hb">רֵיק</span>)이 되기를. 행동과 저주와 결말이 한 낱말로 꿰어진다. 저주의 조건은 <span class="hb">קום</span>(히필, "이 말을 세우다·이행하다")의 부정으로, 문제는 서약 자체가 아니라 그것을 <b>이행하지 않음</b>이다. 장면이 <b>아멘(</b><span class="hb">אָמֵן</span><b>)</b>과 <b>여호와 찬송(</b><span class="hb">וַיְהַלְלוּ</span><b>)</b>으로 닫히며, 경제 정의의 회복이 곧장 예배로 이어진다 — 그리고 마지막 동사 <span class="hb">וַיַּעַשׂ</span>("행하였다")가 말이 실제 삶으로 옮겨졌음을 확증한다.</div>
+</section>
+
+<!-- ═══════════════ 5:14 ═══════════════ -->
+<section class="verse" id="v14">
+  <div class="verse-head">
+    <span class="vnum">5:14</span>
+    <span class="vkrv">또한 유다 땅 총독으로 세움을 받은 때 곧 아닥사스다 왕 제이십년부터 제삼십이년까지 십이 년 동안은 나와 내 형제들이 총독의 녹을 먹지 아니하였느니라</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">גַּם מִיּוֹם אֲשֶׁר־צִוָּה אוֹתִי</span><span class="it">gam miyyôm ʾăšer-ṣiwwā ʾôṯî</span><span class="ig">나를 명하신 날부터</span></span>
+    <span class="iw"><span class="ih">לִהְיוֹת פֶּחָם בְּאֶרֶץ יְהוּדָה</span><span class="it">lihyôṯ peḥām bəʾereṣ yəhûḏā</span><span class="ig">유다 땅 총독 되게 하신</span></span>
+    <span class="iw"><span class="ih">מִשְּׁנַת עֶשְׂרִים וְעַד שְׁנַת שְׁלֹשִׁים וּשְׁתַּיִם</span><span class="it">miššənaṯ ʿeśrîm wəʿaḏ šənaṯ šəlōšîm ûštayim</span><span class="ig">제이십년부터 제삼십이년까지</span></span>
+    <span class="iw"><span class="ih">שָׁנִים שְׁתֵּים עֶשְׂרֵה</span><span class="it">šānîm štêm ʿeśrê</span><span class="ig">십이 년 동안</span></span>
+    <span class="iw"><span class="ih">אֲנִי וְאַחַי לֶחֶם הַפֶּחָה לֹא אָכַלְתִּי</span><span class="it">ʾănî wəʾaḥay leḥem happeḥā lōʾ ʾāḵaltî</span><span class="ig">나와 형제가 총독의 녹을 먹지 않았다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">גַּם מִיּוֹם אֲשֶׁר־צִוָּה אוֹתִי</td><td class="w-tr">gam miyyôm ʾăšer-ṣiwwā ʾôṯî<span class="ko">감 미욤 아셰르-치바 오티</span></td><td class="w-parse">부사 + 전치사 명사 + 관계사 + 동사(피엘 완료 3남단) + 목적격(+1단 접미)</td><td class="w-lex"><span class="lm">יוֹם</span> 욤 · <span class="lm">צָוָה</span> 차바 / 어근 <span class="rt">צוה</span> <span class="rt-g">명하다·임명하다</span></td><td class="w-gloss">또한 (왕이) 나를 임명하신 날부터</td><td class="w-fn">새 단락 개시(개인 회고). גַּם로 이어감</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">לִהְיוֹת פֶּחָם בְּאֶרֶץ יְהוּדָה</td><td class="w-tr">lihyôṯ peḥām bəʾereṣ yəhûḏā<span class="ko">리흐요트 페함 베에레츠 예후다</span></td><td class="w-parse">전치사 부정사연계 + 명사(+3남복 접미) + 전치사 명사(연계) 고유명사</td><td class="w-lex"><span class="lm">הָיָה</span> 하야 · <span class="lm">פֶּחָה</span> 페하(총독) · <span class="lm">אֶרֶץ</span> 에레츠(땅)</td><td class="w-gloss">유다 땅에서 그들의 총독이 되게 (하신)</td><td class="w-fn">임명의 내용(직무 명시)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">מִשְּׁנַת עֶשְׂרִים וְעַד שְׁנַת שְׁלֹשִׁים וּשְׁתַּיִם</td><td class="w-tr">miššənaṯ ʿeśrîm wəʿaḏ šənaṯ šəlōšîm ûštayim<span class="ko">밋셰나트 에스림 베아드 셰나트 셸로쉼 우쉬타임</span></td><td class="w-parse">전치사 명사(연계) 수사 + 접속사 전치사 명사(연계) 수사</td><td class="w-lex"><span class="lm">שָׁנָה</span> 샤나(해) · 수사 20·32</td><td class="w-gloss">제이십년부터 제삼십이년까지</td><td class="w-fn">재임 기간(아닥사스다 연호)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">שָׁנִים שְׁתֵּים עֶשְׂרֵה</td><td class="w-tr">šānîm štêm ʿeśrê<span class="ko">샤님 쉬템 에스레</span></td><td class="w-parse">명사(복수) + 수사(여성 12)</td><td class="w-lex"><span class="lm">שָׁנָה</span> 샤나 · 수사 12</td><td class="w-gloss">열두 해 동안</td><td class="w-fn">기간의 합산(강조)</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">אֲנִי וְאַחַי לֶחֶם הַפֶּחָה לֹא אָכַלְתִּי</td><td class="w-tr">ʾănî wəʾaḥay leḥem happeḥā lōʾ ʾāḵaltî<span class="ko">아니 베아하이 레헴 합페하 로 아칼티</span></td><td class="w-parse">대명사 + 접속사 명사(복수+1단 접미) + 명사(연계) 관사 명사 + 부정 동사(칼 완료 1단)</td><td class="w-lex"><span class="lm">לֶחֶם</span> 레헴(빵·양식) · <span class="lm">פֶּחָה</span> 페하 · <span class="lm">אָכַל</span> 아칼 <span class="rt">אכל</span></td><td class="w-gloss">나와 내 형제들이 총독의 녹을 먹지 아니하였다</td><td class="w-fn">자기 절제 선언(주장의 핵심)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 14절부터 시선이 <b>공동체의 개혁에서 지도자 자신의 처신</b>으로 옮겨간다. 접속사 <span class="hb">גַּם</span>("또한")이 앞 단락과 이어 붙여, 남에게 요구한 절제(10~11절)를 <b>자기 재임 전체(십이 년)</b>로 확장한다. 핵심 선언은 <span class="hb">לֶחֶם הַפֶּחָה לֹא אָכַלְתִּי</span>("총독의 녹을 먹지 아니하였다")로, <span class="hb">לֶחֶם</span>("빵")이 총독에게 마땅히 돌아갈 몫을 뜻한다. 그는 권리로 주어진 것을 <b>스스로 내려놓았다</b> — 정의를 명령하는 자가 먼저 자기 이익을 포기한 셈이다.</div>
+</section>
+
+<!-- ═══════════════ 5:15 ═══════════════ -->
+<section class="verse" id="v15">
+  <div class="verse-head">
+    <span class="vnum">5:15</span>
+    <span class="vkrv">나보다 먼저 있었던 총독들은 백성에게서, 양식과 포도주와 또 은 사십 세겔을 그들에게서 빼앗았고 또한 그들의 종자들도 백성을 압제하였으나 나는 하나님을 경외하므로 이같이 행하지 아니하고</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְהַפַּחוֹת הָרִאשֹׁנִים אֲשֶׁר־לְפָנַי</span><span class="it">wəhappaḥôṯ hāriʾšōnîm ʾăšer-ləfānay</span><span class="ig">나보다 먼저 있던 총독들은</span></span>
+    <span class="iw"><span class="ih">הִכְבִּידוּ עַל־הָעָם</span><span class="it">hiḵbîḏû ʿal-hāʿām</span><span class="ig">백성에게 짐을 무겁게 지워</span></span>
+    <span class="iw"><span class="ih">וַיִּקְחוּ מֵהֶם בְּלֶחֶם וָיַיִן אַחַר כֶּסֶף־שְׁקָלִים אַרְבָּעִים</span><span class="it">wayyiqḥû mēhem bəleḥem wāyayin ʾaḥar keseф-šəqālîm ʾarbāʿîm</span><span class="ig">양식·포도주 외에 은 사십 세겔을 취했고</span></span>
+    <span class="iw"><span class="ih">גַּם נַעֲרֵיהֶם שָׁלְטוּ עַל־הָעָם</span><span class="it">gam naʿărêhem šāləṭû ʿal-hāʿām</span><span class="ig">종자들도 백성을 압제하였으나</span></span>
+    <span class="iw"><span class="ih">וַאֲנִי לֹא־עָשִׂיתִי כֵן מִפְּנֵי יִרְאַת אֱלֹהִים</span><span class="it">waʾănî lōʾ-ʿāśîṯî ḵēn mippənê yirʾaṯ ʾĕlōhîm</span><span class="ig">나는 하나님 경외로 그리 아니했다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְהַפַּחוֹת הָרִאשֹׁנִים אֲשֶׁר־לְפָנַי</td><td class="w-tr">wəhappaḥôṯ hāriʾšōnîm ʾăšer-ləfānay<span class="ko">베합파호트 하리쇼님 아셰르-레파나이</span></td><td class="w-parse">접속사 관사 명사(복수) + 관사 형용사(복수) + 관계사 전치사(+1단 접미)</td><td class="w-lex"><span class="lm">פֶּחָה</span> 페하 · <span class="lm">רִאשׁוֹן</span> 리숀(이전의) <span class="rt">ראשׁ</span></td><td class="w-gloss">나보다 먼저 있던 총독들은</td><td class="w-fn">비교 대상(전임자들)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">הִכְבִּידוּ עַל־הָעָם</td><td class="w-tr">hiḵbîḏû ʿal-hāʿām<span class="ko">히크비두 알-하암</span></td><td class="w-parse">동사(히필 완료 3복) + 전치사 관사 명사</td><td class="w-lex"><span class="lm">כָּבֵד</span> 카베드 / 어근 <span class="rt">כבד</span> <span class="rt-g">무겁다·(히필) 무겁게 하다</span></td><td class="w-gloss">백성에게 (짐을) 무겁게 지웠다</td><td class="w-fn">전임자의 압제. 18절 כָּבְדָה와 대응</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">וַיִּקְחוּ מֵהֶם בְּלֶחֶם וָיַיִן אַחַר כֶּסֶף־שְׁקָלִים אַרְבָּעִים</td><td class="w-tr">wayyiqḥû mēhem bəleḥem wāyayin ʾaḥar keseф-šəqālîm ʾarbāʿîm<span class="ko">바이크후 메헴 벨레헴 바야인 아하르 케세프-셰칼림 아르바임</span></td><td class="w-parse">동사(칼 바브연속 미완료 3복) + 전치사(+3접미) + 전치사 명사 접속사 명사 + 부사 + 명사 명사(복수) 수사</td><td class="w-lex"><span class="lm">לָקַח</span> 라카흐 · <span class="lm">לֶחֶם</span> · <span class="lm">יַיִן</span> 야인 · <span class="lm">שֶׁקֶל</span> 셰켈</td><td class="w-gloss">양식과 포도주 외에 은 사십 세겔을 취했다</td><td class="w-fn">수탈의 규모(현물+현금)</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">גַּם נַעֲרֵיהֶם שָׁלְטוּ עַל־הָעָם</td><td class="w-tr">gam naʿărêhem šāləṭû ʿal-hāʿām<span class="ko">감 나아레헴 샬레투 알-하암</span></td><td class="w-parse">부사 명사(복수+3남복 접미) + 동사(칼 완료 3복) + 전치사 관사 명사</td><td class="w-lex"><span class="lm">נַעַר</span> 나아르 · <span class="lm">שָׁלַט</span> 샬라트 / 어근 <span class="rt">שׁלט</span> <span class="rt-g">주관하다·압제하다</span></td><td class="w-gloss">그들의 종자들도 백성을 압제하였다</td><td class="w-fn">압제의 확산(아랫사람까지)</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">וַאֲנִי לֹא־עָשִׂיתִי כֵן מִפְּנֵי יִרְאַת אֱלֹהִים</td><td class="w-tr">waʾănî lōʾ-ʿāśîṯî ḵēn mippənê yirʾaṯ ʾĕlōhîm<span class="ko">바아니 로-아시티 켄 밉페네 이르아트 엘로힘</span></td><td class="w-parse">접속사 대명사 + 부정 동사(칼 완료 1단) + 부사 + 전치사 명사(연계) 명사(연계) 명사</td><td class="w-lex"><span class="lm">עָשָׂה</span> 아사 · <span class="lm">יִרְאָה</span> 이르아 <span class="rt">ירא</span></td><td class="w-gloss">그러나 나는 하나님을 경외하므로 그리하지 않았다</td><td class="w-fn">대조(וַאֲנִי). 9절 경외 동기 재확인</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 느헤미야가 자신을 <b>전임 총독들과 대비</b>한다. 그들은 백성에게 짐을 <b>무겁게 지우고(</b><span class="hb">הִכְבִּידוּ</span>, 어근 <span class="hb">כבד</span><b>)</b> 현물과 은 사십 세겔을 수탈했으며, 그 <b>종자들까지 압제했다(</b><span class="hb">שָׁלְטוּ</span><b>)</b>. 문두의 <span class="hb">וַאֲנִי</span>("그러나 나는")가 대명사를 세워 앞의 전임자들과 <b>정면으로 갈라선다</b>. 그가 다르게 행한 이유는 9절에서 백성에게 요구했던 바로 그것, <b>하나님 경외(</b><span class="hb">יִרְאַת אֱלֹהִים</span><b>)</b>다 — 남에게 준 기준을 자기에게 먼저 적용한다. 여기 무겁게 지운다는 <span class="hb">כבד</span>은 18절에서 부역이 백성에게 "무거웠다(<span class="hb">כָבְדָה</span>)"로 되울려, 느헤미야가 그 무게에 더 얹지 않으려 한 까닭을 이어 준다.</div>
+</section>
+
+<!-- ═══════════════ 5:16 ═══════════════ -->
+<section class="verse" id="v16">
+  <div class="verse-head">
+    <span class="vnum">5:16</span>
+    <span class="vkrv">도리어 이 성벽 공사에 힘을 다하며 땅을 사지 아니하였고 내 모든 종자들도 모여서 일을 하였으며</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְגַם בִּמְלֶאכֶת הַחוֹמָה הַזֹּאת הֶחֱזַקְתִּי</span><span class="it">wəḡam bimleʾḵeṯ haḥômā hazzōʾṯ heḥĕzaqtî</span><span class="ig">이 성벽 공사에 힘을 다하며</span></span>
+    <span class="iw"><span class="ih">וְשָׂדֶה לֹא קָנִינוּ</span><span class="it">wəśāḏê lōʾ qānînû</span><span class="ig">밭을 사지 아니했고</span></span>
+    <span class="iw"><span class="ih">וְכָל־נְעָרַי קְבוּצִים שָׁם עַל־הַמְּלָאכָה</span><span class="it">wəḵol-nəʿāray qəḇûṣîm šām ʿal-hamməlāʾḵā</span><span class="ig">내 종들도 거기 모여 일하였다</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְגַם בִּמְלֶאכֶת הַחוֹמָה הַזֹּאת הֶחֱזַקְתִּי</td><td class="w-tr">wəḡam bimleʾḵeṯ haḥômā hazzōʾṯ heḥĕzaqtî<span class="ko">베감 비믈레케트 하호마 핫조트 헤헤자크티</span></td><td class="w-parse">접속사 부사 + 전치사 명사(연계) + 관사 명사 + 관사 지시사 + 동사(히필 완료 1단)</td><td class="w-lex"><span class="lm">מְלָאכָה</span> 멜라카(일) · <span class="lm">חוֹמָה</span> 호마(성벽) · <span class="lm">חָזַק</span> 하자크 / 어근 <span class="rt">חזק</span> <span class="rt-g">굳세다·붙들다</span></td><td class="w-gloss">또한 이 성벽 공사에 (손을 대어) 힘을 다하였다</td><td class="w-fn">지도자의 노동 참여(솔선의 재확인)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">וְשָׂדֶה לֹא קָנִינוּ</td><td class="w-tr">wəśāḏê lōʾ qānînû<span class="ko">베사데 로 카니누</span></td><td class="w-parse">접속사 명사 + 부정 + 동사(칼 완료 1복)</td><td class="w-lex"><span class="lm">שָׂדֶה</span> 사데(밭) · <span class="lm">קָנָה</span> 카나 <span class="rt">קנה</span></td><td class="w-gloss">밭을 사지 아니하였다</td><td class="w-fn">사욕 절제(지위로 재산 불리지 않음)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">וְכָל־נְעָרַי קְבוּצִים שָׁם עַל־הַמְּלָאכָה</td><td class="w-tr">wəḵol-nəʿāray qəḇûṣîm šām ʿal-hamməlāʾḵā<span class="ko">베콜-네아라이 케부침 샴 알-함믈라카</span></td><td class="w-parse">접속사 명사 명사(복수+1단 접미) + 동사(칼 수동분사 남복) + 부사 + 전치사 관사 명사</td><td class="w-lex"><span class="lm">נַעַר</span> 나아르 · <span class="lm">קָבַץ</span> 카바츠 / 어근 <span class="rt">קבץ</span> <span class="rt-g">모으다</span></td><td class="w-gloss">내 모든 종들도 거기 모여 그 일에 (붙어 있었다)</td><td class="w-fn">전임자 종자(15절)와의 대조</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 느헤미야는 권리를 내려놓는 데서 그치지 않고 <b>몸으로 공사에 붙는다</b> — <span class="hb">בִּמְלֶאכֶת הַחוֹמָה … הֶחֱזַקְתִּי</span>("이 성벽 일에 손을 대어 힘을 다했다"), 어근 <span class="hb">חזק</span>은 성벽 건축 서사(3장) 전체를 이끄는 낱말이다. <b>"밭을 사지 아니하였다(</b><span class="hb">וְשָׂדֶה לֹא קָנִינוּ</span><b>)"</b>는 지위를 이용해 재산을 불리지 않았다는 뜻으로, 백성이 밭을 잃던(3~5절) 상황과 대비된다. 그의 종자들(<span class="hb">נְעָרַי</span>)이 공사에 <b>모여(</b><span class="hb">קְבוּצִים</span><b>)</b> 일한 모습은, 백성을 <b>압제하던</b> 전임자의 종자들(15절)과 정확히 갈린다 — 지도자가 달라지니 그 아래 사람의 자리도 달라진다. 일을 뜻하는 <span class="hb">מְלָאכָה</span>이 절 처음과 끝을 감싸(수미상관) 노동에의 헌신을 봉인한다.</div>
+</section>
+
+<!-- ═══════════════ 5:17 ═══════════════ -->
+<section class="verse" id="v17">
+  <div class="verse-head">
+    <span class="vnum">5:17</span>
+    <span class="vkrv">또 내 상에는 유다 사람들과 민장들 백오십 명이 있고 그 외에도 우리 주위에 있는 이방 족속들 중에서 우리에게 나아온 자들이 있었는데</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וְהַיְּהוּדִים וְהַסְּגָנִים מֵאָה וַחֲמִשִּׁים אִישׁ</span><span class="it">wəhayyəhûḏîm wəhassəḡānîm mēʾā waḥămiššîm ʾîš</span><span class="ig">유다 사람과 민장 백오십 명과</span></span>
+    <span class="iw"><span class="ih">וְהַבָּאִים אֵלֵינוּ מִן־הַגּוֹיִם אֲשֶׁר־סְבִיבֹתֵינוּ</span><span class="it">wəhabbāʾîm ʾēlênû min-haggôyim ʾăšer-səḇîḇōṯênû</span><span class="ig">주위 이방에서 온 자들이</span></span>
+    <span class="iw"><span class="ih">עַל־שֻׁלְחָנִי</span><span class="it">ʿal-šulḥānî</span><span class="ig">내 상에 (있었다)</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וְהַיְּהוּדִים וְהַסְּגָנִים מֵאָה וַחֲמִשִּׁים אִישׁ</td><td class="w-tr">wəhayyəhûḏîm wəhassəḡānîm mēʾā waḥămiššîm ʾîš<span class="ko">베하예후딤 베핫세가님 메아 바하밋쉼 이쉬</span></td><td class="w-parse">접속사 관사 명사 ×2 + 수사 접속사 수사 + 명사</td><td class="w-lex"><span class="lm">יְהוּדִי</span> 예후디 · <span class="lm">סֶגֶן</span> 세겐 · <span class="lm">אִישׁ</span> 이쉬</td><td class="w-gloss">유다 사람들과 민장들 백오십 명</td><td class="w-fn">상시 접대 인원(공적 부담)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">וְהַבָּאִים אֵלֵינוּ מִן־הַגּוֹיִם אֲשֶׁר־סְבִיבֹתֵינוּ</td><td class="w-tr">wəhabbāʾîm ʾēlênû min-haggôyim ʾăšer-səḇîḇōṯênû<span class="ko">베합바임 엘레누 민-학고임 아셰르-세비보테누</span></td><td class="w-parse">접속사 관사 동사(칼 분사 남복) + 전치사(+1복 접미) + 전치사 관사 명사 + 관계사 명사(복수+1복 접미)</td><td class="w-lex"><span class="lm">בּוֹא</span> 보 <span class="rt">בוא</span> · <span class="lm">גּוֹי</span> 고이 · <span class="lm">סָבִיב</span> 사비브(주위)</td><td class="w-gloss">주위 이방에서 우리에게 나아온 자들</td><td class="w-fn">접대 대상 확장(외부인 포함)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">עַל־שֻׁלְחָנִי</td><td class="w-tr">ʿal-šulḥānî<span class="ko">알-슐하니</span></td><td class="w-parse">전치사 + 명사(+1단 접미)</td><td class="w-lex"><span class="lm">שֻׁלְחָן</span> 슐한(상·식탁)</td><td class="w-gloss">내 상에 (있었다)</td><td class="w-fn">자비로 감당한 접대의 자리</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 총독의 녹을 마다한 것이 <b>인색함이 아니었음</b>을 이 절이 밝힌다. 그의 상(<span class="hb">שֻׁלְחָן</span>)에는 유다 사람과 민장 <b>백오십 명</b>에 더해 주위 이방에서 온 이들까지 있었다 — 매일의 공적 접대를 <b>자기 부담</b>으로 감당했다. 권리(녹)는 내려놓되 책임(접대)은 짊어진 셈이다. 이 상의 규모가 다음 절(18절)에서 하루치 식량으로 구체화된다.</div>
+</section>
+
+<!-- ═══════════════ 5:18 ═══════════════ -->
+<section class="verse" id="v18">
+  <div class="verse-head">
+    <span class="vnum">5:18</span>
+    <span class="vkrv">매일 나를 위하여 소 한 마리와 살진 양 여섯 마리를 준비하며 닭도 많이 준비하고 열흘에 한 번씩은 각종 포도주를 갖추었나니 비록 이같이 하였을지라도 내가 총독의 녹을 요구하지 아니하였음은 이 백성의 부역이 중함이었더라</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">וַאֲשֶׁר הָיָה נַעֲשֶׂה לְיוֹם אֶחָד</span><span class="it">waʾăšer hāyā naʿăśê ləyôm ʾeḥāḏ</span><span class="ig">하루에 준비된 것은</span></span>
+    <span class="iw"><span class="ih">שׁוֹר אֶחָד צֹאן שֵׁשׁ־בְּרֻרוֹת וְצִפֳּרִים נַעֲשׂוּ־לִי</span><span class="it">šôr ʾeḥāḏ ṣōʾn šēš-bərurôṯ wəṣippŏrîm naʿăśû-lî</span><span class="ig">소 하나·살진 양 여섯·새들이었고</span></span>
+    <span class="iw"><span class="ih">וּבֵין עֲשֶׂרֶת יָמִים בְּכָל־יַיִן לְהַרְבֵּה</span><span class="it">ûḇên ʿăśereṯ yāmîm bəḵol-yayin ləharbê</span><span class="ig">열흘마다 각종 포도주를 많이</span></span>
+    <span class="iw"><span class="ih">וְעִם־זֶה לֶחֶם הַפֶּחָה לֹא בִקַּשְׁתִּי</span><span class="it">wəʿim-zê leḥem happeḥā lōʾ ḇiqqaštî</span><span class="ig">그럼에도 총독의 녹을 구하지 않았으니</span></span>
+    <span class="iw"><span class="ih">כִּי־כָבְדָה הָעֲבֹדָה עַל־הָעָם הַזֶּה</span><span class="it">kî-ḵāḇəḏā hāʿăḇōḏā ʿal-hāʿām hazzê</span><span class="ig">이 백성의 부역이 무거웠기 때문이라</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">וַאֲשֶׁר הָיָה נַעֲשֶׂה לְיוֹם אֶחָד</td><td class="w-tr">waʾăšer hāyā naʿăśê ləyôm ʾeḥāḏ<span class="ko">바아셰르 하야 나아세 레욤 에하드</span></td><td class="w-parse">접속사 관계사 + 동사(칼 완료 3남단) + 동사(니팔 분사 남단) + 전치사 명사 수사</td><td class="w-lex"><span class="lm">הָיָה</span> 하야 · <span class="lm">עָשָׂה</span> 아사(니팔 "준비되다")</td><td class="w-gloss">하루에 준비되던 것은</td><td class="w-fn">지속상(매일 반복). 개역 "매일"</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">שׁוֹר אֶחָד צֹאן שֵׁשׁ־בְּרֻרוֹת וְצִפֳּרִים נַעֲשׂוּ־לִי</td><td class="w-tr">šôr ʾeḥāḏ ṣōʾn šēš-bərurôṯ wəṣippŏrîm naʿăśû-lî<span class="ko">쇼르 에하드 촌 셰쉬-베루로트 베치포림 나아수-리</span></td><td class="w-parse">명사 수사 + 명사 수사 형용사(수동분사 여복) + 접속사 명사(복수) 동사(니팔 완료 3복) 전치사(+1단 접미)</td><td class="w-lex"><span class="lm">שׁוֹר</span> 쇼르(소) · <span class="lm">צֹאן</span> 촌(양떼) · <span class="lm">בָּרַר</span> 바라르(고르다·살지다) · <span class="lm">צִפּוֹר</span> 치포르(새)</td><td class="w-gloss">소 한 마리, 살진 양 여섯, 새들이 나를 위해 준비되었다</td><td class="w-fn">하루치 규모(접대의 실상)</td></tr>
+      <tr><td class="w-num">3</td><td class="w-heb">וּבֵין עֲשֶׂרֶת יָמִים בְּכָל־יַיִן לְהַרְבֵּה</td><td class="w-tr">ûḇên ʿăśereṯ yāmîm bəḵol-yayin ləharbê<span class="ko">우벤 아세레트 야밈 베콜-야인 레하르베</span></td><td class="w-parse">접속사 전치사 수사(연계) 명사(복수) + 전치사 명사 명사 + 전치사 부정사(히필)</td><td class="w-lex"><span class="lm">יוֹם</span> 욤 · <span class="lm">יַיִן</span> 야인 · <span class="lm">רָבָה</span> 라바(많다) <span class="rt">רבה</span></td><td class="w-gloss">열흘마다 각종 포도주를 넉넉히</td><td class="w-fn">주기적 추가 부담</td></tr>
+      <tr><td class="w-num">4</td><td class="w-heb">וְעִם־זֶה לֶחֶם הַפֶּחָה לֹא בִקַּשְׁתִּי</td><td class="w-tr">wəʿim-zê leḥem happeḥā lōʾ ḇiqqaštî<span class="ko">베임-제 레헴 합페하 로 비카쉬티</span></td><td class="w-parse">접속사 전치사 지시사 + 명사(연계) 관사 명사 + 부정 동사(피엘 완료 1단)</td><td class="w-lex"><span class="lm">לֶחֶם</span> 레헴 · <span class="lm">פֶּחָה</span> 페하 · <span class="lm">בָּקַשׁ</span> 바카쉬 <span class="rt">בקשׁ</span></td><td class="w-gloss">그럼에도 총독의 녹을 요구하지 아니하였다</td><td class="w-fn">절제의 재확인. 동사 בקשׁ(12절)와 연결</td></tr>
+      <tr><td class="w-num">5</td><td class="w-heb">כִּי־כָבְדָה הָעֲבֹדָה עַל־הָעָם הַזֶּה</td><td class="w-tr">kî-ḵāḇəḏā hāʿăḇōḏā ʿal-hāʿām hazzê<span class="ko">키-카베다 하아보다 알-하암 핫제</span></td><td class="w-parse">접속사 + 동사(칼 완료 3여단) + 관사 명사 + 전치사 관사 명사 지시사</td><td class="w-lex"><span class="lm">כָּבֵד</span> 카베드 <span class="rt">כבד</span> · <span class="lm">עֲבֹדָה</span> 아보다(부역·노역)</td><td class="w-gloss">이 백성에게 부역이 무거웠기 때문이다</td><td class="w-fn">절제의 이유(백성의 짐을 헤아림)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 하루치 상차림이 <b>구체적 수치</b>로 제시된다 — 소 한 마리, 살진 양 여섯, 새들, 열흘마다 각종 포도주. 이 규모를 자기 부담으로 감당하고도 <span class="hb">לֶחֶם הַפֶּחָה לֹא בִקַּשְׁתִּי</span>("총독의 녹을 요구하지 않았다")며 14절의 선언을 되풀이한다. 그 이유가 이 절의 매듭이다 — <b>"부역이 무거웠기(</b><span class="hb">כָבְדָה הָעֲבֹדָה</span><b>)"</b> 때문. 무겁다는 어근 <span class="hb">כבד</span>은 전임 총독들이 백성에게 짐을 "무겁게 지운(<span class="hb">הִכְבִּידוּ</span>, 15절)" 그 낱말이다. 같은 무게를 두고, 전임자는 <b>더 얹었고</b> 느헤미야는 <b>덜어 주려 했다</b> — 어근 하나가 두 지도자의 방향을 가른다.</div>
+</section>
+
+<!-- ═══════════════ 5:19 ═══════════════ -->
+<section class="verse" id="v19">
+  <div class="verse-head">
+    <span class="vnum">5:19</span>
+    <span class="vkrv">내 하나님이여 내가 이 백성을 위하여 행한 모든 일을 기억하사 내게 은혜를 베푸시옵소서</span>
+  </div>
+
+  <div class="inter">
+    <span class="iw"><span class="ih">זָכְרָה־לִּי אֱלֹהַי לְטוֹבָה</span><span class="it">zoḵrā-llî ʾĕlōhay ləṭôḇā</span><span class="ig">내 하나님이여 선하게 기억하소서</span></span>
+    <span class="iw"><span class="ih">כֹּל אֲשֶׁר־עָשִׂיתִי עַל־הָעָם הַזֶּה</span><span class="it">kōl ʾăšer-ʿāśîṯî ʿal-hāʿām hazzê</span><span class="ig">이 백성을 위해 행한 모든 일을</span></span>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="words">
+    <thead><tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법 분석</th><th class="lft">표제어 · 어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr></thead>
+    <tbody>
+      <tr><td class="w-num">1</td><td class="w-heb">זָכְרָה־לִּי אֱלֹהַי לְטוֹבָה</td><td class="w-tr">zoḵrā-llî ʾĕlōhay ləṭôḇā<span class="ko">조크라-리 엘로하이 레토바</span></td><td class="w-parse">동사(칼 명령 남단, 청유 강세형) + 전치사(+1단 접미) + 명사(+1단 접미) + 전치사 명사</td><td class="w-lex"><span class="lm">זָכַר</span> 자카르 / 어근 <span class="rt">זכר</span> <span class="rt-g">기억하다</span> · <span class="lm">טוֹבָה</span> 토바(선·복)</td><td class="w-gloss">내 하나님이여 나를 위하여 선하게 기억하소서</td><td class="w-fn">"기억하소서" 기도(13:14·22·31에 재등장)</td></tr>
+      <tr><td class="w-num">2</td><td class="w-heb">כֹּל אֲשֶׁר־עָשִׂיתִי עַל־הָעָם הַזֶּה</td><td class="w-tr">kōl ʾăšer-ʿāśîṯî ʿal-hāʿām hazzê<span class="ko">콜 아셰르-아시티 알-하암 핫제</span></td><td class="w-parse">명사 + 관계사 동사(칼 완료 1단) + 전치사 관사 명사 지시사</td><td class="w-lex"><span class="lm">עָשָׂה</span> 아사 <span class="rt">עשׂה</span> · <span class="lm">עַם</span> 암</td><td class="w-gloss">이 백성을 위하여 내가 행한 모든 일을</td><td class="w-fn">기억을 구하는 근거(백성을 위한 행위)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="vnote"><b>구문 관찰.</b> 장이 <b>기도로 닫힌다</b>. 명령형 <span class="hb">זָכְרָה</span>("기억하소서")에 청유의 강세가 붙어, 하나님을 향한 간절한 호소가 된다. 이 <b>"기억하소서" 기도</b>는 느헤미야서에서 되풀이되는 기도의 틀로(13:14·22·31), 자기 행위를 사람의 인정이 아니라 <b>하나님의 기억에 맡기는</b> 자리다. 그 행위의 성격을 규정하는 것이 <span class="hb">לְטוֹבָה</span>("선하게")인데, 어근 <span class="hb">טוב</span>은 9절에서 귀족들의 소행을 "좋지 못하다(<span class="hb">לֹא־טוֹב</span>)"고 판정하던 그 낱말이다. 남의 <b>좋지 못함</b>을 꾸짖은 지도자가, 자기 일은 <b>선함</b>으로 기억되기를 구한다 — 판단의 기준과 기도의 기준이 같은 어근으로 묶이며, 그 판단이 자기에게도 정직하게 적용됨을 보인다.</div>
+</section>
+
+<div class="back"><a href="#top">↑ 처음으로</a> · <a href="ch04.html">← 4장 인터라이너</a> · <a href="../index.html">느헤미야 서재</a></div>
+
+<footer>
+  <p><strong>느헤미야 5장 인터라이너</strong> — 개인 연구 목적의 자료. 히브리어 본문은 마소라 본문(BHS/레닌그라드 계열)을 따랐고, 모음·형태 분석은 표준 문법·어휘(BDB, HALOT, 게제니우스)에 근거해 정리했다. 5장은 개역개정과 히브리어 성경의 절 번호가 일치한다. 7절(케티브 נשאים / 케레 נֹשִׁים)과 9절(케티브 ויאמר / 케레 וָאֹמַר)에 케티브·케레가 갈리며, 개역개정은 두 곳 모두 케레를 따른다. 8절 כְּדֵי בָנוּ 등 몇 지점은 마소라 본문이 난해해 번역이 갈린다. 정밀 인용·논문 작업 시에는 실제 BHS 및 형태분석 도구(Accordance, Logos, STEP Bible 등)로 재확인할 것. 성경 번역 본문은 개역개정 4판.</p>
+  <p style="margin-top:.5rem">이 장의 절 해설(vnote)은 본문 내부의 구문·어휘 관찰로 작성했다. 다섯 주석의 칩(<span style="color:#7a5a38;font-weight:700">K</span> Kidner · <span style="color:#37665a;font-weight:700">F</span> Fensham · <span style="color:#3c5a83;font-weight:700">T</span> Throntveit · <span style="color:#655a8c;font-weight:700">B</span> Bolin · <span style="color:#8a4658;font-weight:700">H</span> Harrington)은 주석 대조 단계에서 보강할 자리로 남겨 두었다.</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

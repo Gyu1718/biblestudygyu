@@ -1,0 +1,110 @@
+[
+  {
+    "topic": "계시론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 2 장",
+      "제 3 장",
+      "제 4 장",
+      "제 5 장",
+      "제 6 장"
+    ],
+    "note": "하나님 인식, 일반 계시, 특별 계시의 필요성과 내용 연결"
+  },
+  {
+    "topic": "성경론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 7 장",
+      "제 8 장"
+    ],
+    "note": "계시와 성경의 관계, 성경과 신앙고백의 관계"
+  },
+  {
+    "topic": "신론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 9 장",
+      "제 10 장"
+    ],
+    "note": "하나님의 존재와 삼위일체"
+  },
+  {
+    "topic": "창조와 섭리",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 11 장",
+      "제 12 장"
+    ],
+    "note": "하나님의 창조와 통치, 인간의 창조 목적"
+  },
+  {
+    "topic": "죄론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 13 장"
+    ],
+    "note": "타락, 죄책, 부패, 사망"
+  },
+  {
+    "topic": "언약신학",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 14 장",
+      "제 15 장"
+    ],
+    "note": "은혜 언약과 중보자 그리스도"
+  },
+  {
+    "topic": "기독론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 15 장",
+      "제 16 장",
+      "제 17 장",
+      "제 18 장"
+    ],
+    "note": "중보자, 두 본성, 낮아지심과 높아지심"
+  },
+  {
+    "topic": "성령론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 19 장",
+      "제 20 장"
+    ],
+    "note": "성령의 선물, 말씀과 성령의 결합"
+  },
+  {
+    "topic": "칭의",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 21 장"
+    ],
+    "note": "죄책에서의 구원과 의롭다 하심"
+  },
+  {
+    "topic": "성화",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 22 장"
+    ],
+    "note": "죄의 오염에서의 구원과 거룩한 삶"
+  },
+  {
+    "topic": "교회론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 23 장"
+    ],
+    "note": "구원의 공동체적 형식과 성도의 교제"
+  },
+  {
+    "topic": "종말론",
+    "book": "bavinck-reformed-dogmatics",
+    "sections": [
+      "제 24 장"
+    ],
+    "note": "영생, 심판, 부활, 최종 완성"
+  }
+]

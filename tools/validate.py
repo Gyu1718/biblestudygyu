@@ -8,7 +8,10 @@ os.chdir(ROOT)
 errs, warns = [], []
 
 # 1) 내부 링크 무결성
-html_files = [f for f in glob.glob("**/*.html", recursive=True) if not f.startswith("templates/")]
+# theology/reformed/ 는 자체 무결성을 갖춘 완결형 서브앱(데이터 기반 SPA)이라 링크 검사에서 제외한다.
+html_files = [f for f in glob.glob("**/*.html", recursive=True)
+              if not f.startswith("templates/")
+              and "theology/reformed/" not in f.replace("\\", "/")]
 for fn in html_files:
     base = os.path.dirname(fn)
     html = open(fn, encoding="utf-8").read()

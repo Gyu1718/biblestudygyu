@@ -1,0 +1,118 @@
+name: Import reformed theology package
+
+on:
+  push:
+    branches:
+      - agent/add-reformed-theology-package
+
+permissions:
+  contents: write
+
+jobs:
+  import-package:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out integration branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/add-reformed-theology-package
+          fetch-depth: 0
+
+      - name: Import pinned archive and validate
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SOURCE_REPO="https://github.com/Gyu1718/Reformed_Theology_Research_Archive.git"
+          SOURCE_COMMIT="49c8ee33e51df2df6d1b812ee27e4dfbfd5dff59"
+          SOURCE_DIR="${RUNNER_TEMP}/reformed-source"
+
+          git clone --filter=blob:none --no-checkout "$SOURCE_REPO" "$SOURCE_DIR"
+          git -C "$SOURCE_DIR" checkout --detach "$SOURCE_COMMIT"
+          rm -rf "$SOURCE_DIR/.git"
+
+          test "$(find "$SOURCE_DIR" -type f | wc -l | tr -d ' ')" = "179"
+
+          (
+            cd "$SOURCE_DIR"
+            printf '%s  %s\n' 'e92dc8755797ec49d54ddebcad65e9fd4478dc3783b66fcd128ee653e49e7e9e' 'index.html' | sha256sum -c -
+            printf '%s  %s\n' '0cc456e699f598d8aa727623786c0176c8196b6d3f9734628ce1b13e7a535eb0' 'js/app.js' | sha256sum -c -
+            printf '%s  %s\n' 'e44162021a385a507f1c28202be792472b580c7de1d1c7ebb91f35a82566fcdc' 'data/books.json' | sha256sum -c -
+            printf '%s  %s\n' 'db7318bfc3138b23068aeb9c7e09daa9e1c78fbe816e2b04b7bba2b659c4a15c' 'data/barth-book-deep-context-v5.json' | sha256sum -c -
+            printf '%s  %s\n' 'a0a3f1c680ad97ea89edad53bb4a84416e7c19961ee8e155c2aea569f1fa47ce' 'README.md' | sha256sum -c -
+            printf '%s  %s\n' 'a0ccc91e5a71e8f80c58262bbcfe4d38cbd3effcf5b03db647e7549545f98762' 'calvin-institutes.json' | sha256sum -c -
+          )
+
+          rm -rf theology/reformed
+          mkdir -p theology/reformed
+          cp -a "$SOURCE_DIR/." theology/reformed/
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('theology/reformed/calvin-institutes.json')
+          text = path.read_text(encoding='utf-8')
+          broken = '  ]\n}\n  },\n\n  "newConceptsForTaxonomy": ['
+          fixed = '  ]\n    }\n  ]\n  },\n\n  "newConceptsForTaxonomy": ['
+          if broken not in text:
+              raise SystemExit('Expected Calvin JSON defect was not found')
+          path.write_text(text.replace(broken, fixed, 1), encoding='utf-8')
+          PY
+
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+          from urllib.parse import urlsplit
+
+          root = Path('theology/reformed')
+          json_files = sorted(root.rglob('*.json'))
+          for path in json_files:
+              with path.open(encoding='utf-8') as handle:
+                  json.load(handle)
+
+          missing = []
+          ref_pattern = re.compile(r'''(?:src|href)=["']([^"']+)["']''', re.I)
+          for html in root.rglob('*.html'):
+              text = html.read_text(encoding='utf-8')
+              for ref in ref_pattern.findall(text):
+                  if ref.startswith(('#', '/', 'http://', 'https://', 'mailto:', 'tel:', 'javascript:', 'data:')):
+                      continue
+                  clean = urlsplit(ref).path
+                  if not clean:
+                      continue
+                  target = (html.parent / clean).resolve()
+                  try:
+                      target.relative_to(root.resolve())
+                  except ValueError:
+                      continue
+                  if not target.exists():
+                      missing.append(f'{html}: {ref}')
+
+          if missing:
+              raise SystemExit('Missing local HTML references:\n' + '\n'.join(missing))
+
+          file_count = sum(1 for path in root.rglob('*') if path.is_file())
+          if file_count != 179:
+              raise SystemExit(f'Unexpected imported file count: {file_count}')
+
+          print(f'Validated {len(json_files)} JSON files, {file_count} total files, and all local HTML references.')
+          PY
+
+          find theology/reformed/js -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+          grep -Fq 'theology/reformed/index.html' catalog.js
+
+      - name: Commit imported package
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/import-reformed-package.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add reformed theology research package'
+          git push origin HEAD:agent/add-reformed-theology-package

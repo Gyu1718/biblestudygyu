@@ -27,6 +27,11 @@ nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;
 nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
 nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
 nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(7,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-left:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover,nav.toc .chapter-jump a:focus-visible{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
 main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
 @media(max-width:960px){
   .frame{display:block}
@@ -92,6 +97,22 @@ footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;fo
   <div class="site-nav"><a href="./index.html">← 느헤미야 서재</a><a href="../../index.html">서고 홈</a><a href="parsing/ch04.html">원어 파싱 →</a></div>
   <div class="brand">느헤미야 4장 심층 연구</div>
   <div class="brand-sub">CHAPTER STUDY · FIVE COMMENTARIES</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a>
+    <a href="ch02.html">2</a>
+    <a href="ch03.html">3</a>
+    <a href="ch04.html" aria-current="page">4</a>
+    <a href="ch05.html">5</a>
+    <a href="ch06.html">6</a>
+    <a href="ch07.html">7</a>
+    <a href="ch08.html">8</a>
+    <a href="ch09.html">9</a>
+    <a href="ch10.html">10</a>
+    <a href="ch11.html">11</a>
+    <a href="ch12.html">12</a>
+    <a href="ch13.html">13</a>
+  </div>
   <div class="cols">
     <a class="lv1" href="#s0">0. 절 번호와 구획</a>
     <a class="lv1" href="#s1">1. 조롱 (4:1–3)</a>

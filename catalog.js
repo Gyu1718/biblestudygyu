@@ -45,8 +45,8 @@ window.SITE_CATALOG = {
           meta: "일곱 주석 종합 — 종합 노트 1편(단일 문서) · 배경 연구 · 14장 절 단위 주해 · 신학 · 상호 참조 · 복음적 해석 · 쟁점 대조 · Kidner·Goldingay·Hubbard·Dearman·Keil-Delitzsch·Stuart·Moon",
           desc: "고멜과의 혼인 서사에서 심판과 소생까지, 호세아서 열네 장을 일곱 주석으로 종합했다. 히브리어 병기와 주석가 칩으로 문장 단위 출처를 표시하고, 언약·혼인·지식의 축을 따라 배경·주해·신학·복음적 해석을 한 문서에 담았다.",
           volumes: 7
-        }
-                 {
+        },
+      {
           id: "haggai",
           path: "ot/haggai/index.html",
           title: "학개 심층 연구",

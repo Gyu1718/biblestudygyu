@@ -1,4 +1,4 @@
-name: Build and apply Bible reader
+name: Validate and apply Bible reader
 
 on:
   push:
@@ -7,11 +7,14 @@ on:
       - "ot/**/*.html"
       - "nt/**/*.html"
       - "theology/**/*.html"
+      - "bible/**"
       - "assets/js/bible-reader.js"
+      - "assets/js/original-reader.js"
       - "assets/css/bible-reader.css"
+      - "assets/css/original-reader.css"
       - "assets/data/bible/kor/**"
-      - "tools/build_bible_data.py"
       - "tools/apply_bible_reader.py"
+      - "tools/import_korean_bible_web.py"
       - ".github/workflows/bible-reader.yml"
   workflow_dispatch:
 
@@ -19,7 +22,7 @@ permissions:
   contents: write
 
 jobs:
-  build-and-apply:
+  validate-and-apply:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -28,33 +31,61 @@ jobs:
         with:
           ref: main
 
-      - name: Build Bible data
-        run: python3 tools/build_bible_data.py
-
       - name: Apply shared reader to study pages
         run: python3 tools/apply_bible_reader.py --write
 
-      - name: Validate generated files
+      - name: Validate Korean Bible corpus
         run: |
-          python3 -m json.tool assets/data/bible/kor/NEH.json >/dev/null
-          python3 -m json.tool assets/data/bible/kor/manifest.json >/dev/null
-          python3 tools/apply_bible_reader.py --check
+          python3 - <<'PY'
+          import gzip
+          import json
+          from pathlib import Path
 
-      - name: Commit generated changes
+          root = Path("assets/data/bible/kor")
+          manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          if "chunks" not in manifest or len(manifest.get("books", {})) < 66:
+              print("전체 성경 가져오기 전이므로 본문 검증을 건너뜁니다.")
+              raise SystemExit(0)
+          assert len(manifest["books"]) == 66, "성경 66권 목록이 아닙니다"
+
+          loaded = {}
+          for name, info in manifest["chunks"].items():
+              path = root / info["path"]
+              with gzip.open(path, "rt", encoding="utf-8") as handle:
+                  chunk = json.load(handle)
+              loaded.update(chunk.get("books", chunk))
+
+          assert set(loaded) == set(manifest["books"]), "본문과 목록의 책 구성이 다릅니다"
+          total = sum(
+              len(verses)
+              for book in loaded.values()
+              for verses in book["chapters"].values()
+          )
+          assert total == 31102, f"총 절 수가 올바르지 않습니다: {total}"
+          print(f"개역개정 66권 {total:,}절 검증 완료")
+          PY
+
+      - name: Validate shared reader links
+        run: python3 tools/apply_bible_reader.py --check
+
+      - name: Commit generated HTML changes
         shell: bash
         run: |
-          if git diff --quiet; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "No generated changes"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/bible/kor/NEH.json assets/data/bible/kor/manifest.json
           for directory in ot nt theology; do
             if [ -d "$directory" ]; then
               git add "$directory"
             fi
           done
-          git commit -m "Build Bible data and apply shared reader"
+          if git diff --cached --quiet; then
+            echo "No generated HTML changes"
+            exit 0
+          fi
+          git commit -m "Apply shared Bible reader to study pages"
           git push origin main

@@ -1,0 +1,10 @@
+c8048fa5da72cf5b9843fe9b6a997404a96984729672fb57bc1f7a6b42ea3a3e  UPLOAD_README.txt
+ec9f81d36e99857af69d1d5f91f9dd13637cb23899fa2aa1ad51ee74f8cd0c2b  assets/data/bible/kor/chunks/nt-general.json.gz
+de51faa7e389a29526ae249b5dd41dd746246b65a9d03a2e8b51927841ec9d93  assets/data/bible/kor/chunks/nt-gospels-acts.json.gz
+ea9a15f6958ba55b0dc88f5f091e8479cd0ad3670e8189a373a7ac8d41ec3a4c  assets/data/bible/kor/chunks/nt-paul.json.gz
+156895aed0679d6eed319360097a0187f6274ce71a6b22a588a34504d75a1229  assets/data/bible/kor/chunks/nt-revelation.json.gz
+f80b943052c29d5d1f9bdb7637aa2c21191ef4cdf418ba96c48d6a5949a2605b  assets/data/bible/kor/chunks/ot-history.json.gz
+f0390a9bf756f542938110148a54c7e580a19921ade083c86be92c2ce763212d  assets/data/bible/kor/chunks/ot-pentateuch.json.gz
+778ef7e9f609e8e4ecc5c7be19a0569e522003853ae0eddbe7562780ab037982  assets/data/bible/kor/chunks/ot-prophets.json.gz
+df0da65b8eb302f300085a436d4a59f99ac18e3e4e677041e5f4059d7057a21c  assets/data/bible/kor/chunks/ot-wisdom.json.gz
+89ebb498814142c97db052028a7d0121cd5e5b4e4d73eb59c89b38a64de51461  assets/data/bible/kor/manifest.json

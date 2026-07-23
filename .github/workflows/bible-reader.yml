@@ -14,7 +14,6 @@ on:
       - "assets/css/original-reader.css"
       - "assets/data/bible/kor/**"
       - "tools/apply_bible_reader.py"
-      - "tools/import_korean_bible_web.py"
       - ".github/workflows/bible-reader.yml"
   workflow_dispatch:
 
@@ -44,12 +43,12 @@ jobs:
           root = Path("assets/data/bible/kor")
           manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
           if "chunks" not in manifest or len(manifest.get("books", {})) < 66:
-              print("전체 성경 가져오기 전이므로 본문 검증을 건너뜁니다.")
+              print("전체 성경 패키지 업로드 전이므로 본문 검증을 건너뜁니다.")
               raise SystemExit(0)
           assert len(manifest["books"]) == 66, "성경 66권 목록이 아닙니다"
 
           loaded = {}
-          for name, info in manifest["chunks"].items():
+          for info in manifest["chunks"].values():
               path = root / info["path"]
               with gzip.open(path, "rt", encoding="utf-8") as handle:
                   chunk = json.load(handle)

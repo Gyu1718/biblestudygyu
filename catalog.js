@@ -70,7 +70,18 @@ window.SITE_CATALOG = {
       label: "신학 연구",
       original: "Θεολογία",
       script: "grk",
-      studies: []
+      studies: [
+         {
+          id: "reformed",
+          path: "theology/reformed/index.html",
+          title: "개혁신학 연구 아카이브",
+          original: "Reformata Semper Reformanda",
+          script: "lat",
+          meta: "개혁파 정통 ⇄ 바르트 신정통 대조 — 4대 조직신학(칼빈 기독교강요·벌코프 조직신학·바빙크 개혁교의학 개요·바르트 교회교의학) · 신조 모음 · 인물 · 신학사 · 주제 대조",
+          desc: "개혁파 정통과 칼 바르트의 신정통주의를 나란히 읽는 교육 아카이브. 네 권의 조직신학을 장·절 단위로 펼치고, 신앙고백서와 신학사, 인물·주제 대조를 데이터로 엮었다.",
+          volumes: 4
+        }
+]
     }
   ]
 };

@@ -1,0 +1,27 @@
+.scripture-ref{color:inherit;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-color:#a8823c;text-decoration-thickness:1px;text-underline-offset:.18em;cursor:pointer;border-radius:3px}
+.scripture-ref:hover,.scripture-ref:focus-visible{color:#16354f;background:rgba(168,130,60,.12);text-decoration-style:solid;outline:2px solid transparent}
+.bible-reader-tab{position:fixed;right:0;top:50%;z-index:9995;transform:translateY(-50%);border:0;border-radius:8px 0 0 8px;padding:1rem .55rem;background:#16354f;color:#fff;font:700 .78rem/1.1 "Noto Sans KR",sans-serif;letter-spacing:.12em;writing-mode:vertical-rl;box-shadow:0 6px 18px rgba(22,53,79,.24);cursor:pointer}
+.bible-reader-tab:hover,.bible-reader-tab:focus-visible{background:#1f4e78;outline:2px solid #c9b27a;outline-offset:2px}
+.bible-reader-backdrop{position:fixed;inset:0;z-index:9996;background:rgba(19,26,34,.24);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease}
+.bible-reader-backdrop.is-open{opacity:1;visibility:visible}
+.bible-reader-panel{position:fixed;z-index:9997;top:0;right:0;width:min(430px,94vw);height:100dvh;background:#f7f6f1;color:#202a35;box-shadow:-18px 0 45px rgba(22,53,79,.22);transform:translateX(105%);transition:transform .24s ease;display:grid;grid-template-rows:auto auto auto 1fr auto;font-family:"Noto Serif KR","Apple SD Gothic Neo",serif}
+.bible-reader-panel.is-open{transform:translateX(0)}
+.br-head{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.25rem;border-bottom:3px double #d9d5c9;background:#fff}
+.br-head h2{margin:0;font-size:1.2rem}.br-eyebrow{font:700 .62rem/1.2 "Noto Sans KR",sans-serif;letter-spacing:.2em;color:#1f4e78;margin-bottom:.25rem}
+.br-close{border:0;background:transparent;color:#4a5563;font-size:2rem;line-height:1;cursor:pointer;padding:.15rem .35rem}
+.br-search{display:grid;grid-template-columns:1fr auto;gap:.45rem;padding:.9rem 1rem;background:#fff;border-bottom:1px solid #d9d5c9}
+.br-search input{min-width:0;border:1px solid #cfcabe;border-radius:6px;padding:.68rem .75rem;font:400 .88rem "Noto Sans KR",sans-serif;background:#fff;color:#202a35}
+.br-search button{border:0;border-radius:6px;padding:.65rem .9rem;background:#1f4e78;color:#fff;font:700 .82rem "Noto Sans KR",sans-serif;cursor:pointer}
+.br-status{min-height:0;padding:0 1rem;background:#fff;color:#8a4658;font:500 .76rem "Noto Sans KR",sans-serif}
+.br-status:not(:empty){padding-bottom:.7rem}
+.br-content{overflow:auto;padding:1.1rem 1.25rem 2rem}
+.br-empty,.br-error{background:#fff;border:1px solid #d9d5c9;border-radius:8px;padding:1rem 1.1rem;color:#4a5563;font-size:.9rem}
+.br-error b{display:block;color:#16354f;margin-bottom:.35rem}.br-error p{margin:.25rem 0}.br-error small{display:block;margin-top:.7rem;color:#6b7280}
+.br-ref-title{border-bottom:2px solid #1f4e78;padding-bottom:.7rem;margin-bottom:.8rem}.br-ref-title span{font:700 .68rem "Noto Sans KR",sans-serif;color:#a8823c;letter-spacing:.12em}.br-ref-title h3{margin:.18rem 0 0;font-size:1.25rem;color:#16354f}
+.br-verse{display:grid;grid-template-columns:1.7rem 1fr;gap:.25rem;margin:.55rem 0;line-height:1.72;font-size:.94rem}.br-verse b{font:700 .7rem/1.8 "Noto Sans KR",sans-serif;color:#a8823c;text-align:right;padding-right:.35rem}.br-verse span{min-width:0}
+.br-foot{border-top:1px solid #d9d5c9;padding:.8rem 1rem;background:#fff;color:#6b7280;font:400 .66rem "Noto Sans KR",sans-serif;text-align:center}
+.bible-reader-tooltip{position:fixed;z-index:9999;width:min(360px,calc(100vw - 24px));max-height:min(360px,60vh);overflow:auto;background:#fff;color:#202a35;border:1px solid #cfcabe;border-top:4px solid #a8823c;border-radius:8px;padding:.85rem 1rem;box-shadow:0 14px 34px rgba(22,53,79,.22);font-family:"Noto Serif KR","Apple SD Gothic Neo",serif}
+.bible-reader-tooltip>b{display:block;color:#16354f;margin-bottom:.35rem}.bible-reader-tooltip .br-verse{font-size:.84rem;line-height:1.58;margin:.32rem 0}.bible-reader-tooltip small{display:block;margin-top:.55rem;color:#6b7280;font:400 .67rem "Noto Sans KR",sans-serif}
+@media (prefers-reduced-motion:reduce){.bible-reader-panel,.bible-reader-backdrop{transition:none}}
+@media (max-width:720px){.bible-reader-tab{top:auto;bottom:1.2rem;right:.75rem;transform:none;writing-mode:horizontal-tb;border-radius:999px;padding:.75rem 1rem;letter-spacing:.04em}.bible-reader-panel{top:auto;bottom:0;width:100%;height:min(78dvh,720px);border-radius:16px 16px 0 0;transform:translateY(105%)}.bible-reader-panel.is-open{transform:translateY(0)}.br-content{padding-bottom:calc(2rem + env(safe-area-inset-bottom))}.bible-reader-tooltip{display:none!important}}
+@media print{.bible-reader-ui{display:none!important}.scripture-ref{text-decoration:none;color:inherit}}

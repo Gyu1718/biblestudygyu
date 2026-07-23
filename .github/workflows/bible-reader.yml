@@ -13,7 +13,9 @@ on:
       - "assets/css/bible-reader.css"
       - "assets/css/original-reader.css"
       - "assets/data/bible/kor/**"
+      - "assets/data/bible/original/na28/**"
       - "tools/apply_bible_reader.py"
+      - "tools/extract_na28_epub.py"
       - ".github/workflows/bible-reader.yml"
   workflow_dispatch:
 
@@ -62,6 +64,46 @@ jobs:
           )
           assert total == 31102, f"총 절 수가 올바르지 않습니다: {total}"
           print(f"개역개정 66권 {total:,}절 검증 완료")
+          PY
+
+      - name: Validate NA28 corpus when uploaded
+        run: |
+          python3 - <<'PY'
+          import gzip
+          import json
+          from pathlib import Path
+
+          root = Path("assets/data/bible/original/na28")
+          manifest_path = root / "manifest.json"
+          if not manifest_path.exists():
+              print("NA28 manifest가 없어 검증을 건너뜁니다.")
+              raise SystemExit(0)
+
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          paths = [root / info["path"] for info in manifest.get("chunks", {}).values()]
+          missing = [str(path) for path in paths if not path.exists()]
+          if missing:
+              print("NA28 압축 묶음 업로드 전이므로 본문 검증을 건너뜁니다.")
+              for path in missing:
+                  print(f"- missing: {path}")
+              raise SystemExit(0)
+
+          loaded = {}
+          for path in paths:
+              with gzip.open(path, "rt", encoding="utf-8") as handle:
+                  chunk = json.load(handle)
+              loaded.update(chunk.get("books", chunk))
+
+          assert len(loaded) == 27, f"NA28 책 수 오류: {len(loaded)}"
+          chapters = sum(len(book["chapters"]) for book in loaded.values())
+          verses = sum(
+              len(chapter)
+              for book in loaded.values()
+              for chapter in book["chapters"].values()
+          )
+          assert chapters == 260, f"NA28 장 수 오류: {chapters}"
+          assert verses == 7941, f"NA28 장절 표지 수 오류: {verses}"
+          print(f"NA28 27권 {chapters}장 {verses:,}개 장절 표지 검증 완료")
           PY
 
       - name: Validate shared reader links

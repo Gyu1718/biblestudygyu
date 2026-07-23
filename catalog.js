@@ -21,6 +21,24 @@ window.SITE_CATALOG = {
   },
   sections: [
     {
+      id: "bible",
+      label: "성경읽기",
+      original: "Biblia · Γραφή",
+      script: "lat",
+      studies: [
+        {
+          id: "reader",
+          path: "bible/original.html",
+          title: "성경읽기",
+          original: "원어 · 개역개정",
+          script: "lat",
+          meta: "성경 66권 — 장·절 선택 · 구약 히브리어 · 신약 헬라어 · 개역개정 병렬 대조",
+          desc: "성경책과 장절을 선택해 원문과 개역개정을 절 단위로 나란히 읽는다. 연구 페이지에서 선택한 장절도 같은 화면으로 이어서 확인할 수 있다.",
+          volumes: 2
+        }
+      ]
+    },
+    {
       id: "ot",
       label: "구약 연구",
       original: "תַּנַ\"ךְ",

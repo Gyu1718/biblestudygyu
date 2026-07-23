@@ -1,0 +1,152 @@
+    var match;
+    while ((match = explicitRe.exec(text))) {
+      var book = aliasToBook[match[1]];
+      if (!book) continue;
+      candidates.push({
+        start: match.index,
+        end: explicitRe.lastIndex,
+        raw: match[0],
+        ref: { code: book.code, chapter: Number(match[2]), verse: match[3] ? Number(match[3]) : null, endVerse: match[4] ? Number(match[4]) : (match[3] ? Number(match[3]) : null) }
+      });
+    }
+    while ((match = bareRe.exec(text))) {
+      var offset = match[1] ? match[1].length : 0;
+      var start = match.index + offset;
+      var end = bareRe.lastIndex;
+      if (candidates.some(function (c) { return start < c.end && end > c.start; })) continue;
+      var inherited = null;
+      for (var i = candidates.length - 1; i >= 0; i--) {
+        var prev = candidates[i];
+        if (prev.end <= start && /^\s*[;,·]\s*$/.test(text.slice(prev.end, start))) { inherited = prev.ref.code; break; }
+      }
+      var code = inherited || pageContext.code;
+      if (!code) continue;
+      candidates.push({
+        start: start,
+        end: end,
+        raw: text.slice(start, end),
+        ref: { code: code, chapter: Number(match[2]), verse: Number(match[3]), endVerse: match[4] ? Number(match[4]) : Number(match[3]) }
+      });
+    }
+    return candidates.sort(function (a, b) { return a.start - b.start; }).filter(validBasicRef);
+  }
+
+  function validBasicRef(candidate, index, all) {
+    var r = candidate.ref;
+    if (!r.code || r.chapter < 1 || r.chapter > 150) return false;
+    if (r.verse !== null && (r.verse < 1 || r.verse > 176)) return false;
+    if (r.endVerse !== null && r.endVerse < r.verse) return false;
+    if (index && candidate.start < all[index - 1].end) return false;
+    return true;
+  }
+
+  function shouldSkip(node) {
+    var parent = node.parentElement;
+    if (!parent || !node.nodeValue || !node.nodeValue.trim()) return true;
+    return Boolean(parent.closest("a,button,script,style,pre,code,textarea,input,select,option,nav,.bible-reader-ui,.hw,[data-no-scripture-link]"));
+  }
+
+  function linkReferences() {
+    var root = document.querySelector("main, article") || document.body;
+    var pageContext = contextFromPage();
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) if (!shouldSkip(walker.currentNode)) nodes.push(walker.currentNode);
+    nodes.forEach(function (node) {
+      var text = node.nodeValue;
+      var matches = parseReferenceText(text, pageContext);
+      if (!matches.length) return;
+      var frag = document.createDocumentFragment();
+      var pos = 0;
+      matches.forEach(function (item) {
+        if (item.start > pos) frag.appendChild(document.createTextNode(text.slice(pos, item.start)));
+        var a = document.createElement("a");
+        a.className = "scripture-ref";
+        a.href = "#bible=" + encodeURIComponent(refKey(item.ref));
+        a.dataset.bibleRef = refKey(item.ref);
+        a.setAttribute("aria-label", labelFor(item.ref) + " 성경 본문 열기");
+        a.textContent = item.raw;
+        frag.appendChild(a);
+        pos = item.end;
+      });
+      if (pos < text.length) frag.appendChild(document.createTextNode(text.slice(pos)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  function loadManifest() {
+    if (!manifestPromise) {
+      manifestPromise = fetch(MANIFEST_URL, { credentials: "same-origin" }).then(function (response) {
+        if (!response.ok) throw new Error("성경 목록을 불러오지 못했습니다");
+        return response.json();
+      });
+    }
+    return manifestPromise;
+  }
+
+  function decompressJson(response) {
+    if (!response.ok) throw new Error("성경 데이터를 불러오지 못했습니다");
+    if (typeof DecompressionStream !== "function") throw new Error("이 브라우저는 압축 성경 데이터 읽기를 지원하지 않습니다. 최신 Chrome·Edge·Safari를 사용해 주세요.");
+    var stream = response.body.pipeThrough(new DecompressionStream("gzip"));
+    return new Response(stream).json();
+  }
+
+  function loadChunk(chunkName, manifest) {
+    if (chunkCache.has(chunkName)) return chunkCache.get(chunkName);
+    var info = manifest.chunks[chunkName];
+    if (!info) return Promise.reject(new Error("성경 데이터 묶음을 찾지 못했습니다"));
+    var promise = fetch(new URL(info.path, DATA_ROOT).href, { credentials: "same-origin" }).then(decompressJson);
+    chunkCache.set(chunkName, promise);
+    return promise;
+  }
+
+  function loadBook(code) {
+    if (bookCache.has(code)) return bookCache.get(code);
+    var promise = loadManifest().then(function (manifest) {
+      var info = manifest.books[code];
+      if (!info) throw new Error("성경책 정보를 찾지 못했습니다");
+      return loadChunk(info.chunk, manifest).then(function (chunk) {
+        var data = chunk.books ? chunk.books[code] : chunk[code];
+        if (!data) throw new Error("해당 성경 본문을 찾지 못했습니다");
+        return data;
+      });
+    });
+    bookCache.set(code, promise);
+    return promise;
+  }
+
+  function getVerses(data, ref, limit) {
+    var chapter = data.chapters[String(ref.chapter)];
+    if (!chapter) return [];
+    var start = ref.verse || 1;
+    var verseNumbers = Object.keys(chapter).map(Number);
+    var end = ref.verse ? (ref.endVerse || ref.verse) : Math.max.apply(null, verseNumbers);
+    var rows = [];
+    for (var v = start; v <= end; v++) if (chapter[String(v)]) rows.push({ verse: v, text: chapter[String(v)] });
+    return limit ? rows.slice(0, limit) : rows;
+  }
+
+  function renderVerses(rows) {
+    return rows.map(function (row) {
+      return '<p class="br-verse"><b>' + row.verse + '</b><span>' + escapeHtml(row.text) + '</span></p>';
+    }).join("");
+  }
+
+  function ensureUI() {
+    if (ui) return ui;
+    var tab = document.createElement("button");
+    tab.type = "button";
+    tab.className = "bible-reader-tab bible-reader-ui";
+    tab.textContent = "성경";
+    tab.setAttribute("aria-expanded", "false");
+    tab.setAttribute("aria-controls", "bible-reader-panel");
+
+    var backdrop = document.createElement("div");
+    backdrop.className = "bible-reader-backdrop bible-reader-ui";
+
+    var panel = document.createElement("aside");
+    panel.id = "bible-reader-panel";
+    panel.className = "bible-reader-panel bible-reader-ui";
+    panel.setAttribute("aria-hidden", "true");
+    panel.innerHTML = [
+      '<header class="br-head">',

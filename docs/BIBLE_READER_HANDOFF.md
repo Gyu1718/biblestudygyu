@@ -3,33 +3,82 @@
 > Repository: `Gyu1718/biblestudygyu`  
 > Primary branch: `main`  
 > Last updated: 2026-07-23  
-> Scope: Korean Bible explorer, automatic Scripture-reference previews, and original-language parallel reader
+> Scope: Korean Bible explorer, Scripture-reference previews, homepage Bible reader, and original-language parallel reading
 
-## 1. Project goal
+## 1. Fixed source decision
 
-This project adds shared Bible-reading tools to every biblical research page in the static GitHub Pages site.
+The original-language reader must use the following sources:
 
-The intended user experience is:
+- Old Testament: `WLC / OSHB`, loaded from the existing MorphHB structured XML source
+- New Testament: `NA28`, converted from the user-provided structured EPUB
+- Korean parallel text: the user-provided and academically licensed Korean Revised Version EPUB
 
-1. Scripture references such as `학개 1:5–6`, `느 2:1–8`, and `롬 8:28` are detected automatically.
-2. Hovering over a detected reference displays a short Korean Bible preview.
-3. Clicking the reference opens the right-side Bible explorer without leaving the study page.
-4. The explorer supports direct reference lookup and full-text search across all 66 books.
-5. Every study page receives a left-sidebar `원어성경 보기 ↗` button.
-6. The original-language page opens in a new tab and displays the original text on the left and the Korean Revised Version on the right, aligned verse by verse.
-7. Newly added study HTML pages should inherit the shared reader automatically.
+Do not replace these sources without the user's explicit approval.
 
-## 2. Critical source-status clarification
+Do not label WLC/OSHB as BHS. The supplied BHS PDF and DJVU files are reference and verification materials only. The PDF uses a legacy Hebrew font encoding and contains no usable critical apparatus layer for the web reader. The DJVU is image-based and has no embedded OCR text.
 
-### Korean Bible
+Do not use SBLGNT in the production reader. The earlier SBLGNT connection has been removed.
 
-The Korean Bible corpus is derived from the user-provided and academically licensed EPUB:
+## 2. User-provided source files
 
-- `성경전서 개역개정판 - 2018.10.10.epub`
+The runtime data was or will be derived from these user-provided files:
 
-The repository must not crawl, scrape, or automatically collect Korean Bible text from the Korean Bible Society website.
+```text
+성경전서 개역개정판 - 2018.10.10.epub
+Novum Testamentum Graece (Nestle-Aland) NA28 ... .epub
+```
 
-The runtime corpus is stored as a manifest and eight gzip-compressed lazy-loading chunks:
+The NA28 EPUB is a structured electronic edition. Running text, critical apparatus, and outer-margin references are stored separately. The current runtime package includes only the running Greek text.
+
+The repository must not publish the source EPUB files or bundled font files.
+
+The repository must not crawl or scrape the Korean Bible Society website.
+
+## 3. Current user experience
+
+1. Korean Scripture references such as `학개 1:5–6`, `느 2:1–8`, and `롬 8:28` are detected automatically on study pages.
+2. Hovering over a detected reference shows a short Korean Bible preview.
+3. Clicking the reference opens the right-side Korean Bible explorer.
+4. The explorer supports reference lookup and full-text search across all 66 books.
+5. Study pages receive a left-sidebar `원어성경 보기 ↗` link.
+6. The site homepage contains a `성경읽기` card.
+7. The Bible-reading page displays original text on the left and Korean text on the right.
+8. Old Testament pages display WLC/OSHB; New Testament pages display NA28.
+
+Main reader URL:
+
+```text
+/biblestudygyu/bible/original.html
+```
+
+Parameterized example:
+
+```text
+/biblestudygyu/bible/original.html?book=ROM&chapter=8&verse=28&end=30
+```
+
+## 4. Repository architecture
+
+### Korean Bible explorer
+
+```text
+assets/js/bible-reader.js
+assets/css/bible-reader.css
+```
+
+Responsibilities:
+
+- recognize Korean Bible book names and abbreviations
+- infer book and chapter from the page path or title
+- convert detected references into interactive links
+- show hover previews
+- open the right-side explorer
+- load only required compressed data chunks
+- cache manifests, chunks, and books
+- load all Korean chunks only when full-text search is requested
+- inject the original-language reader link into compatible left sidebars
+
+### Korean Bible corpus
 
 ```text
 assets/data/bible/kor/
@@ -45,102 +94,11 @@ assets/data/bible/kor/
     └── nt-revelation.json.gz
 ```
 
-Expected validation totals:
+Expected totals:
 
 - 66 books
 - 1,189 chapters
 - 31,102 verses
-
-The data is used only within the user's academic and scholarly permission scope.
-
-### Original-language Bible: current implementation is temporary
-
-The current original-language reader does **not** yet use the user-provided BHS and NA28 EPUB files.
-
-Current temporary sources in `assets/js/original-reader.js` are:
-
-- Old Testament: WLC/OSHB data loaded from `morphhb` through jsDelivr
-- New Testament: SBLGNT data loaded from the Faithlife GitHub repository through jsDelivr
-
-The interface labels these sources as `WLC / OSHB` and `SBLGNT`.
-
-The intended final sources are the user-provided and academically licensed files:
-
-- `Biblia Hebraica Stuttgartensia BHS (1).epub`
-- `NA28.epub`
-
-A future developer must not claim that BHS or NA28 is currently displayed until those EPUB files have been converted, validated, packaged, and connected to the reader.
-
-## 3. Important limitation of the supplied BHS and NA28 EPUBs
-
-The supplied BHS and NA28 EPUBs were inspected during development.
-
-They are page-oriented Internet Archive OCR EPUBs rather than clean verse-structured Bible databases. Their pages do not reliably separate:
-
-- biblical text
-- book, chapter, and verse identifiers
-- critical apparatus
-- page furniture and OCR artifacts
-
-The BHS OCR, in particular, showed substantial Hebrew recognition corruption in sampled pages. NA28 pages also combine biblical text and critical apparatus without a dependable semantic structure.
-
-Therefore, converting these EPUBs must be treated as a text-critical data conversion project, not as simple HTML extraction.
-
-Required safeguards:
-
-1. Preserve the original EPUB files as immutable source artifacts.
-2. Build a conversion script that outputs a normalized verse-keyed format.
-3. Validate book, chapter, and verse coverage against a canonical versification table.
-4. Perform manual sample checks across every biblical section.
-5. Do not silently substitute WLC/OSHB or SBLGNT while labeling the result BHS or NA28.
-6. Keep critical apparatus separate from the running biblical text.
-7. Record any unresolved OCR readings and versification differences.
-
-If a cleaner licensed BHS/NA28 source becomes available, such as XML, OSIS, USFM, Accordance export, Logos export, or another structured format, prefer it over OCR extraction.
-
-## 4. Current repository architecture
-
-### Shared Korean Bible explorer
-
-```text
-assets/js/bible-reader.js
-assets/css/bible-reader.css
-```
-
-Responsibilities:
-
-- recognize Korean Bible book names and abbreviations
-- infer the current book and chapter from the page path or title
-- convert detected references into interactive links
-- open the right-side explorer
-- show hover previews
-- load only the required corpus chunk
-- cache loaded chunks in browser memory
-- search the entire Korean Bible only when full-text search is requested
-- inject the original-language reader button into the left sidebar
-
-### Korean Bible data
-
-```text
-assets/data/bible/kor/manifest.json
-assets/data/bible/kor/chunks/*.json.gz
-```
-
-The manifest maps each book code to one of eight chunks. The explorer should never preload all 66 books on initial page load.
-
-Expected lazy-loading behavior:
-
-```text
-Open a study page
-└── Load shared CSS and JavaScript only
-
-Hover over 학개 1:5
-└── Load ot-prophets.json.gz once
-    └── Reuse it for all prophetic-book references during the session
-
-Run full-text search
-└── Load and scan the eight chunks sequentially
-```
 
 ### Original-language parallel reader
 
@@ -150,30 +108,146 @@ assets/js/original-reader.js
 assets/css/original-reader.css
 ```
 
-Current behavior:
-
-- receives `book`, `chapter`, `verse`, and `end` through URL query parameters
-- loads the matching Korean Bible book from the compressed corpus
-- loads temporary original-language data from external WLC/OSHB or SBLGNT sources
-- renders one row per verse
-- displays original text in the left column and Korean text in the right column
-- uses RTL direction for Hebrew
-- highlights a selected verse or verse range
-
-Example URL:
+Current source behavior:
 
 ```text
-/biblestudygyu/bible/original.html?book=HAG&chapter=1&verse=5&end=6
+Old Testament request
+└── load WLC/OSHB XML from MorphHB through jsDelivr
+
+New Testament request
+└── load local NA28 manifest
+    └── load one required gzip chunk
+        └── render NA28 running text beside Korean text
 ```
 
-### Automatic application to study pages
+### NA28 runtime corpus
+
+```text
+assets/data/bible/original/na28/
+├── manifest.json
+└── chunks/
+    ├── nt-gospels.json.gz
+    ├── nt-acts-paul.json.gz
+    ├── nt-general.json.gz
+    └── nt-revelation.json.gz
+```
+
+Expected totals:
+
+- 27 books
+- 260 chapters
+- 7,941 NA28 verse markers
+
+The manifest is stored in the repository. The four gzip chunk files may need to be uploaded manually because binary uploads are not handled through the text-only GitHub connector.
+
+## 5. NA28 extraction
+
+Reproducible converter:
+
+```text
+tools/extract_na28_epub.py
+```
+
+Usage:
+
+```bash
+python3 tools/extract_na28_epub.py "/path/to/NA28.epub" \
+  --output assets/data/bible/original/na28
+```
+
+The script uses only the Python standard library and extracts:
+
+- elements with class `greek-text`
+- elements with class `greek-italics`
+- verse identifiers shaped like `v40001001`
+
+It excludes:
+
+- critical apparatus files
+- outer-margin references
+- Eusebian material
+- EPUB fonts
+- introductory and appendix material
+
+The converter fails if validation does not produce exactly 27 books, 260 chapters, and 7,941 verse markers.
+
+## 6. NA28 versification differences
+
+The Korean Bible and NA28 do not always contain the same independent verse numbers. The parallel reader must preserve the NA28 numbering and clearly report a missing NA28 verse rather than fabricating text.
+
+Known Korean verse numbers without an independent NA28 verse marker include:
+
+```text
+Matthew 17:21
+Matthew 18:11
+Matthew 23:14
+Mark 7:16
+Mark 9:44
+Mark 9:46
+Mark 11:26
+Mark 15:28
+Luke 17:36
+Luke 23:17
+John 5:4
+Acts 8:37
+Acts 15:34
+Acts 19:41
+Acts 24:7
+Acts 28:29
+Romans 16:24
+```
+
+The reader currently displays:
+
+```text
+NA28에는 해당 절 번호가 없습니다.
+```
+
+Revelation also requires attention:
+
+```text
+NA28 Revelation 12:18
+Korean versification places related wording at the transition into Revelation 13:1
+```
+
+Do not silently merge or renumber this material. A future explicit versification map may add cross-reference notices while preserving both source systems.
+
+## 7. Performance rules
+
+The hover-preview feature is approved and should remain.
+
+- do not embed Bible text into every study HTML file
+- do not load all 66 Korean books on initial page load
+- do not load all 27 NA28 books on initial page load
+- load one relevant compressed chunk when a passage is requested
+- cache loaded chunks in browser memory
+- delay hover preview briefly
+- show at most three verses in a tooltip
+- load all Korean chunks only for full-text search
+- cap visible search results, currently 100
+- disable hover tooltips on touch-oriented mobile layouts
+
+## 8. Source and rights policy
+
+1. Use only user-provided files or sources explicitly approved by the user.
+2. The user approved WLC/OSHB as the Old Testament runtime source.
+3. The user approved the provided NA28 EPUB as the New Testament runtime source.
+4. Do not scrape the Korean Bible Society website.
+5. Do not publish source EPUB, PDF, DJVU, or font files.
+6. Publish only transformed runtime data required by the reader.
+7. Do not label WLC/OSHB as BHS.
+8. Do not label SBLGNT as NA28.
+9. Keep the NA28 critical apparatus separate from the running text if it is added later.
+10. Do not include font files in deliverables.
+
+## 9. Automatic application to study pages
 
 ```text
 tools/apply_bible_reader.py
 .github/workflows/bible-reader.yml
 ```
 
-The tool scans:
+The application tool scans:
 
 ```text
 ot/**/*.html
@@ -181,261 +255,98 @@ nt/**/*.html
 theology/**/*.html
 ```
 
-It inserts the shared reader CSS and JavaScript tags when missing.
+It inserts the shared Korean Bible reader CSS and JavaScript when missing.
 
-The workflow also validates the uploaded Korean Bible corpus when all 66 books and chunks are present.
+Commands:
 
-## 5. Scripture-reference recognition rules
-
-Supported examples should include:
-
-```text
-학개 1:5
-학 1:5–6
-느헤미야 2장
-느 2:1–8
-렘 25:11–12; 29:10
-창 26:3; 사 41:10; 43:5
-마 1:12
-롬 8:28–30
+```bash
+python3 tools/apply_bible_reader.py --write
+python3 tools/apply_bible_reader.py --check
 ```
 
-Bare references such as `1:5–6` may be inferred only when the page context identifies the biblical book.
+The GitHub Actions workflow validates:
 
-The parser must skip references inside:
+- Korean corpus totals when all Korean chunks are present
+- NA28 totals when all four NA28 chunks are present
+- shared reader asset links on research HTML pages
 
-```text
-a
-button
-script
-style
-pre
-code
-textarea
-input
-select
-option
-nav
-.bible-reader-ui
-.hw
-[data-no-scripture-link]
-```
+If the NA28 manifest exists but binary chunks have not yet been uploaded, the workflow reports the missing paths and skips NA28 corpus validation without failing unrelated work.
 
-Do not convert unrelated number patterns such as years, bibliography dates, ratios, or table coordinates into Scripture links.
-
-## 6. Performance requirements
-
-The hover-preview feature is approved and should be retained.
-
-It does not require hand-authoring each reference. References are detected by the shared parser, and text is loaded from the corpus only when requested.
-
-Performance rules:
-
-- do not embed Bible text inside every research HTML file
-- do not load all 66 books at initial page load
-- use the eight compressed chunks
-- cache manifest, chunks, and books
-- delay hover preview briefly to avoid accidental requests
-- show at most three verses in the tooltip
-- load all chunks only for full-text search
-- cap visible search results, currently 100
-- preserve mobile behavior by disabling hover tooltips and using the bottom-sheet explorer
-
-## 7. Source and rights policy
-
-The user stated that the supplied Korean Revised Version, BHS, and NA28 files may be used for the user's academic and scholarly work.
-
-Development rules:
-
-1. Use only files supplied by the user or sources explicitly approved by the user.
-2. Do not scrape the Korean Bible Society website.
-3. Do not download or replace the supplied licensed corpus through an unrelated public source.
-4. Do not expose source EPUB files through the public site.
-5. Publish only the transformed runtime data required by the reader.
-6. Do not include font files in deliverables.
-7. Preserve a note in generated data indicating academic and scholarly use.
-8. Do not label WLC/OSHB as BHS or SBLGNT as NA28.
-
-## 8. Priority work remaining
-
-### Priority 1 — verify Korean Bible deployment
-
-Confirm that these files exist on `main`:
-
-```text
-assets/data/bible/kor/manifest.json
-assets/data/bible/kor/chunks/ot-pentateuch.json.gz
-assets/data/bible/kor/chunks/ot-history.json.gz
-assets/data/bible/kor/chunks/ot-wisdom.json.gz
-assets/data/bible/kor/chunks/ot-prophets.json.gz
-assets/data/bible/kor/chunks/nt-gospels-acts.json.gz
-assets/data/bible/kor/chunks/nt-paul.json.gz
-assets/data/bible/kor/chunks/nt-general.json.gz
-assets/data/bible/kor/chunks/nt-revelation.json.gz
-```
-
-Validate totals and test references from every chunk.
-
-### Priority 2 — replace temporary original-language sources
-
-Create an internal original-language corpus path, for example:
-
-```text
-assets/data/bible/original/
-├── manifest.json
-├── bhs/
-│   └── chunks/*.json.gz
-└── na28/
-    └── chunks/*.json.gz
-```
-
-Recommended normalized verse object:
-
-```json
-{
-  "book": "HAG",
-  "chapter": 1,
-  "verse": 1,
-  "text": "…",
-  "apparatus": [],
-  "source": "BHS",
-  "reviewStatus": "verified"
-}
-```
-
-Then update `assets/js/original-reader.js` so it loads these internal datasets rather than external CDNs.
-
-### Priority 3 — original-language validation
-
-Test at least:
-
-- Genesis 1
-- Psalm 1 and Psalm 119
-- Isaiah 6
-- Haggai 1
-- Matthew 1
-- Mark 16
-- Romans 8
-- Revelation 22
-
-Also test passages where Hebrew/Greek versification differs from Korean Bible numbering.
-
-### Priority 4 — user-interface refinement
-
-- add a visible source badge: `BHS` or `NA28`
-- allow whole chapter and selected-range modes
-- keep original and Korean verses vertically synchronized
-- support previous and next chapter navigation
-- preserve the selected verse in the URL
-- add mobile tabs or stacked verse pairs
-- later add morphology and parsing as a separate layer
-
-## 9. Testing checklist
+## 10. Testing checklist
 
 ### Korean explorer
 
 - `학개 1:5–6` hover preview
 - `느헤미야 2:1–8` click-to-open
-- `롬 8:28` New Testament lookup
-- direct search using full book name and abbreviation
-- full-text search for a Korean phrase
-- no duplicate links after reload or repeated initialization
-- no false links in bibliography years and numeric ratios
+- `롬 8:28` direct reference lookup
+- full book name and abbreviation search
+- full-text Korean search
+- no duplicate links after repeated initialization
+- no false links in bibliography years and ratios
 
-### Original-language page
+### Original-language reader: Old Testament
 
-- left column is original language
-- right column is Korean Revised Version
-- Hebrew is RTL
-- Greek is LTR
-- selected verse is highlighted
-- direct URL opens the requested book and chapter
-- previous and next chapter buttons respect book boundaries
-- missing or unverified text is reported explicitly
+- Genesis 1 displays Hebrew RTL
+- Psalm 1 displays Hebrew RTL
+- Psalm 119 loads correctly
+- Isaiah 6 loads correctly
+- Haggai 1 loads correctly
+- source badge reads `WLC / OSHB`
+
+### Original-language reader: New Testament
+
+- Matthew 1:1 matches the provided NA28 EPUB
+- Mark 16 loads correctly
+- Romans 8 loads correctly
+- Acts 8:37 displays the missing-NA28-verse notice
+- Revelation 12:18 is preserved
+- Revelation 22 loads correctly
+- source badge reads `NA28`
 
 ### Mobile
 
-- explorer opens as a bottom sheet
-- hover tooltip is not shown
-- original and Korean texts remain readable
-- controls do not overflow the viewport
+- controls fit the viewport
+- original and Korean verse pairs remain readable
+- Hebrew direction remains RTL
+- Greek direction remains LTR
+- selected verse remains visible after direct-link navigation
 
-## 10. Commands
+## 11. Immediate deployment requirement
 
-Apply shared reader assets to new pages:
-
-```bash
-python3 tools/apply_bible_reader.py --write
-```
-
-Check for missing shared reader assets:
-
-```bash
-python3 tools/apply_bible_reader.py --check
-```
-
-Validate the Korean corpus locally:
-
-```bash
-python3 - <<'PY'
-import gzip
-import json
-from pathlib import Path
-
-root = Path('assets/data/bible/kor')
-manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
-assert len(manifest['books']) == 66
-
-loaded = {}
-for info in manifest['chunks'].values():
-    with gzip.open(root / info['path'], 'rt', encoding='utf-8') as handle:
-        chunk = json.load(handle)
-    loaded.update(chunk.get('books', chunk))
-
-assert set(loaded) == set(manifest['books'])
-total = sum(
-    len(verses)
-    for book in loaded.values()
-    for verses in book['chapters'].values()
-)
-assert total == 31102, total
-print(f'Validated: {len(loaded)} books, {total:,} verses')
-PY
-```
-
-## 11. Instructions for the next Claude or GPT session
-
-Use the following as the starting instruction:
+For New Testament reading to work, these four files must exist on `main`:
 
 ```text
-Work from the current main branch of Gyu1718/biblestudygyu.
-Read docs/BIBLE_READER_HANDOFF.md before changing anything.
-
-Do not scrape the Korean Bible Society website.
-Use the Korean Bible corpus already stored under assets/data/bible/kor/.
-The current original-language reader still uses temporary WLC/OSHB and SBLGNT CDN sources.
-Do not describe those sources as BHS or NA28.
-
-The next main task is to convert and validate the user's licensed
-Biblia Hebraica Stuttgartensia BHS EPUB and NA28 EPUB into an internal,
-verse-keyed corpus, then replace the temporary external sources in
-assets/js/original-reader.js.
-
-Preserve the existing Korean hover preview, right-side explorer,
-full-text search, lazy loading, mobile behavior, and automatic application
-to newly added research pages.
+assets/data/bible/original/na28/chunks/nt-gospels.json.gz
+assets/data/bible/original/na28/chunks/nt-acts-paul.json.gz
+assets/data/bible/original/na28/chunks/nt-general.json.gz
+assets/data/bible/original/na28/chunks/nt-revelation.json.gz
 ```
 
-## 12. Definition of completion
+If they are missing, the reader intentionally reports that the NA28 package has not been uploaded.
 
-The Bible-reader project is complete when:
+## 12. Next development priorities
 
-1. all 66 Korean Bible books are searchable and previewable
-2. research-page references are linked automatically
-3. hover previews and the right-side explorer work without heavy initial loading
-4. the left sidebar opens the original-language page in a new tab
-5. the original-language page uses the user's licensed BHS and NA28 data internally
-6. the left original text and right Korean text are aligned by verse
-7. source labels are accurate
-8. new research pages inherit the features automatically
-9. all validation and mobile tests pass
+1. Upload and validate the four NA28 gzip chunks.
+2. Test homepage `성경읽기` entry and direct study-page links.
+3. Add a visible note for known versification differences.
+4. Consider a separate optional NA28 critical-apparatus layer.
+5. Keep morphology and parsing as a separate data layer.
+6. Consider self-hosting WLC/OSHB only if the user later wants the Old Testament to work without an external CDN.
+
+## 13. Starter prompt for another AI
+
+```text
+Work from the main branch of Gyu1718/biblestudygyu.
+Read docs/BIBLE_READER_HANDOFF.md before editing anything.
+
+Fixed source policy:
+- Old Testament original text: WLC/OSHB
+- New Testament original text: local NA28 data converted from the user-provided EPUB
+- Korean text: local user-provided Korean Revised Version corpus
+
+Do not scrape the Korean Bible Society website.
+Do not replace NA28 with SBLGNT.
+Do not label WLC/OSHB as BHS.
+Do not publish source EPUBs or font files.
+Preserve lazy loading, hover previews, and source-specific versification differences.
+```

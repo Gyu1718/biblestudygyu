@@ -1,0 +1,23 @@
+{
+  "id": "topic-id-in-english",
+  "name": "주제명",
+  "category": "대분류명",
+  "summary": "이 주제가 무엇을 다루는지 2-3문장으로 요약합니다.",
+  "relatedTopics": ["관련 주제 1", "관련 주제 2"],
+  "keyQuestions": [
+    "이 주제가 답하려는 핵심 질문 1",
+    "이 주제가 답하려는 핵심 질문 2"
+  ],
+  "relatedAuthors": ["John Calvin", "Herman Bavinck", "Louis Berkhof"],
+  "relatedPassages": ["로마서 9장", "에베소서 1:4-5"],
+  "references": [
+    {
+      "bookId": "book-id",
+      "location": "권/장/절 또는 페이지",
+      "note": "이 책이 해당 주제를 어떻게 다루는지 직접 요약합니다."
+    }
+  ],
+  "researchNotes": [
+    "논문, 설교, 글쓰기와 연결되는 메모를 적습니다."
+  ]
+}

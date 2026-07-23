@@ -1,0 +1,1 @@
+(function(){function fix(){var tabs=document.querySelector('.tabs');if(!tabs)return;var books=document.querySelector('[data-view="books"]');var conf=document.querySelector('[data-view="confessions"]');if(books&&conf&&books.nextElementSibling!==conf)tabs.insertBefore(conf,books.nextSibling);}fix();setTimeout(fix,0);})();

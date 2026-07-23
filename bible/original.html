@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>원어성경 보기 — 성서 연구 서고</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Serif+Hebrew:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/original-reader.css">
+</head>
+<body>
+<header class="or-header">
+  <a class="or-home" href="../index.html">← 성서 연구 서고</a>
+  <div>
+    <p class="or-eyebrow">ORIGINAL BIBLE READER</p>
+    <h1>원어성경 보기</h1>
+    <p>원문과 개역개정을 절 단위로 나란히 대조합니다.</p>
+  </div>
+</header>
+
+<main class="or-shell">
+  <section class="or-controls" aria-label="본문 선택">
+    <label>성경책<select id="or-book"></select></label>
+    <label>장<select id="or-chapter"></select></label>
+    <label>절<input id="or-verse" type="number" min="1" inputmode="numeric" placeholder="전체"></label>
+    <button id="or-open" type="button">본문 열기</button>
+    <div class="or-nav-buttons">
+      <button id="or-prev" type="button">← 이전 장</button>
+      <button id="or-next" type="button">다음 장 →</button>
+    </div>
+  </section>
+
+  <section class="or-status" id="or-status" aria-live="polite">본문을 불러오는 중입니다.</section>
+
+  <section class="or-reader" aria-label="원어와 한국어 병렬 본문">
+    <div class="or-column-head or-original-head">
+      <span id="or-original-label">원어</span>
+      <small id="or-original-source"></small>
+    </div>
+    <div class="or-column-head or-korean-head">
+      <span>개역개정</span>
+      <small>학업·학술용 허가 범위 내 사용</small>
+    </div>
+    <div id="or-verses" class="or-verses"></div>
+  </section>
+</main>
+
+<footer class="or-footer">
+  구약 원문은 WLC/OSHB, 신약 원문은 SBLGNT의 구조화 본문을 사용합니다. 히브리어 성경과 한국어 성경의 장절 구분이 다른 일부 본문은 별도 검토가 필요할 수 있습니다.
+</footer>
+<script src="../assets/js/original-reader.js" defer></script>
+</body>
+</html>

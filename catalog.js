@@ -6,11 +6,11 @@
          ③ python3 tools/validate.py 실행
    필드:
      id       폴더명과 동일 (영소문자)
-     path     서고 홈 기준 상대 경로 (끝에 index.html까지)
+     path     서고 홈 기준 상대 경로 또는 외부 전체 URL
      title    한국어 제목
      original 원어 표제 (히브리어/그리스어/라틴어)
      script   "heb" | "grk" | "lat"  (원어 표기 방향·폰트 결정)
-     meta     구성 요약 한 줄 (권수·문서 수·방법)
+     meta     구성 요약 한 줄
      desc     소개 한 줄
      volumes  권수 (미니 책등 개수에 반영, 최대 6개 표시)
    ============================================================ */
@@ -91,7 +91,7 @@ window.SITE_CATALOG = {
       studies: [
          {
           id: "reformed",
-          path: "theology/reformed/index.html",
+          path: "https://gyu1718.github.io/Reformed_Theology_Research_Archive/",
           title: "개혁신학 연구 아카이브",
           original: "Reformata Semper Reformanda",
           script: "lat",
@@ -99,7 +99,7 @@ window.SITE_CATALOG = {
           desc: "개혁파 정통과 칼 바르트의 신정통주의를 나란히 읽는 교육 아카이브. 네 권의 조직신학을 장·절 단위로 펼치고, 신앙고백서와 신학사, 인물·주제 대조를 데이터로 엮었다.",
           volumes: 4
         }
-]
+      ]
     }
   ]
 };

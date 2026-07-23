@@ -2,8 +2,8 @@
    성서 연구 서고 — 카탈로그
    새 연구 세트를 추가할 때 이 파일만 수정한다.
    절차: ① 해당 분과 폴더에 연구 폴더 생성(허브 index.html 포함)
-        ② 아래 studies 배열에 항목 추가
-        ③ python3 tools/validate.py 실행
+         ② 아래 studies 배열에 항목 추가
+         ③ python3 tools/validate.py 실행
    필드:
      id       폴더명과 동일 (영소문자)
      path     서고 홈 기준 상대 경로 (끝에 index.html까지)
@@ -17,7 +17,7 @@
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-22"
+    updated: "2026-07-23"
   },
   sections: [
     {
@@ -46,7 +46,7 @@ window.SITE_CATALOG = {
           desc: "고멜과의 혼인 서사에서 심판과 소생까지, 호세아서 열네 장을 일곱 주석으로 종합했다. 히브리어 병기와 주석가 칩으로 문장 단위 출처를 표시하고, 언약·혼인·지식의 축을 따라 배경·주해·신학·복음적 해석을 한 문서에 담았다.",
           volumes: 7
         },
-      {
+        {
           id: "haggai",
           path: "ot/haggai/index.html",
           title: "학개 심층 연구",
@@ -56,7 +56,6 @@ window.SITE_CATALOG = {
           desc: "넉 달의 예언으로 멈춘 성전 공사를 다시 세운 책. 책의 신학과 전체 개관을 갖추고, 원어는 파싱과 인터라이너를 한 문서로 융합한다.",
           volumes: 4
         }
-
       ]
     },
     {

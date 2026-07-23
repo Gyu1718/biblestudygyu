@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학개 심층 연구 — 성서 연구 서고</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%97%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--ochre-soft:#c9b27a;
+  --line:#d9d5c9;--board:#2b2119;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.8;font-size:16.5px;word-break:keep-all}
+a{color:var(--lapis)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.4rem}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;font-family:var(--sans);font-size:.8rem}
+.topbar .mark{font-family:var(--serif);font-weight:900;color:var(--lapis-deep);text-decoration:none;letter-spacing:.02em}
+.topbar .mark .hb{font-family:var(--heb);color:var(--ochre);margin-right:.4rem}
+.topbar nav a{color:var(--ink-soft);text-decoration:none;margin-left:1.2rem}
+.topbar nav a:hover{color:var(--lapis)}
+header.hero{display:grid;grid-template-columns:1fr auto;gap:1rem 2.5rem;align-items:end;border-bottom:3px double var(--line);padding:2.6rem 0 2.2rem}
+.hero .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.26em;color:var(--lapis);font-weight:700}
+.hero h1{font-size:2.15rem;font-weight:900;line-height:1.3;margin:.35rem 0 .5rem}
+.hero .sub{color:var(--ink-soft);font-size:.96rem;max-width:34rem}
+.hero .big-heb{font-family:var(--heb);font-size:4rem;line-height:1;color:var(--ochre);direction:rtl;text-align:right}
+.hero .big-heb small{display:block;font-family:var(--sans);font-size:.66rem;color:var(--ink-soft);letter-spacing:.06em;direction:ltr;text-align:right;margin-top:.55rem}
+section{margin-top:3.4rem}
+.sec-head{margin-bottom:1.4rem}
+.sec-head .eyebrow{font-family:var(--sans);font-size:.68rem;letter-spacing:.24em;color:var(--lapis);font-weight:700}
+.sec-head h2{font-size:1.45rem;font-weight:900;margin-top:.2rem}
+.sec-head .hint{font-size:.88rem;color:var(--ink-soft);margin-top:.25rem}
+.overview-card{display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--ochre);border-radius:8px;padding:1.5rem 1.7rem;text-decoration:none;color:inherit;transition:box-shadow .18s ease, transform .18s ease;margin-bottom:1rem}
+.overview-card:hover{box-shadow:0 10px 26px rgba(22,53,79,.14);transform:translateY(-2px)}
+.overview-card .hb{font-family:var(--heb);font-size:1.9rem;color:var(--ochre);direction:rtl;white-space:nowrap}
+.overview-card h3{font-size:1.15rem;font-weight:900}
+.overview-card p{font-size:.9rem;color:var(--ink-soft);margin-top:.25rem}
+.overview-card .go{font-family:var(--sans);font-size:.8rem;font-weight:700;color:var(--lapis);white-space:nowrap}
+.overview-card.soon{border-left-color:var(--line);opacity:.72;cursor:default}
+.overview-card.soon:hover{box-shadow:none;transform:none}
+.overview-card.soon .go{color:var(--ink-soft)}
+.badge{display:inline-block;font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.08em;padding:.15em .5em;border-radius:3px;vertical-align:.15em;margin-left:.5rem}
+.badge.done{background:#e5efec;color:#37665a}
+.badge.spec{background:#fbebd2;color:#b06a17}
+.badge.soon{background:#eceae2;color:#7a746a}
+.shelf-zone{background:linear-gradient(#f3f1ea,#eeeade);border:1px solid var(--line);border-radius:10px;padding:2.4rem 1.6rem 0}
+.shelf{display:flex;justify-content:center;align-items:flex-end;gap:9px;flex-wrap:nowrap;padding:0 .6rem;position:relative}
+.shelf::after{content:"";position:absolute;left:-1.6rem;right:-1.6rem;bottom:-16px;height:16px;background:linear-gradient(#3a2d21,var(--board));border-radius:0 0 10px 10px;box-shadow:0 10px 18px rgba(43,33,25,.35)}
+.spine{position:relative;display:flex;flex-direction:column;align-items:center;width:56px;height:230px;padding:10px 0 12px;text-decoration:none;border-radius:3px 3px 0 0;background:linear-gradient(100deg,#1d4368 0%,var(--lapis-deep) 55%,#122a40 100%);box-shadow:inset -7px 0 11px rgba(0,0,0,.3),inset 2px 0 4px rgba(255,255,255,.07),0 2px 5px rgba(0,0,0,.18);border-top:3px double var(--ochre);transition:transform .18s ease, box-shadow .18s ease}
+.spine:hover,.spine:focus-visible{transform:translateY(-12px);box-shadow:inset -7px 0 11px rgba(0,0,0,.3),0 14px 22px rgba(22,53,79,.35);outline:none}
+.spine .num{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.06em;color:var(--ochre-soft)}
+.spine .ko{writing-mode:vertical-rl;flex:1;display:flex;align-items:center;justify-content:center;font-size:.84rem;font-weight:600;letter-spacing:.3em;color:#e8eef4;margin:9px 0 7px}
+.spine .band{width:26px;border-top:3px double var(--ochre);opacity:.85}
+.spine.wide{width:88px;background:linear-gradient(100deg,#b8944e 0%,var(--ochre) 55%,#8d6c30 100%);border-top-color:var(--lapis-deep)}
+.spine.wide .num{color:#16354f}.spine.wide .ko{color:#1c1508;font-weight:700}.spine.wide .band{border-top-color:var(--lapis-deep)}
+.spine.soon{filter:grayscale(.55) brightness(.9);opacity:.7}
+.shelf-note{font-family:var(--sans);font-size:.72rem;color:var(--ink-soft);text-align:center;padding:2rem 0 1.1rem}
+.chapter-list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:3.2rem minmax(9rem,auto) 1fr auto;gap:1.2rem;align-items:baseline;padding:1rem .4rem;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s ease}
+.row:hover{background:#fbfaf4}
+.row.soon{opacity:.62}
+.row.soon:hover{background:transparent}
+.row .no{font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--ochre)}
+.row .hb{font-family:var(--heb);font-size:1.12rem;color:var(--lapis-deep);direction:rtl;text-align:left;white-space:nowrap}
+.row .body h3{display:inline;font-size:.98rem;font-weight:700;color:var(--lapis-deep)}
+.row .body p{font-size:.86rem;color:var(--ink-soft);margin-top:.15rem}
+.row .st{font-family:var(--sans);font-size:.64rem;font-weight:700;color:var(--ink-soft);white-space:nowrap}
+.row:hover .body h3{text-decoration:underline;text-underline-offset:3px}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.15rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin-top:2rem}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:#7a5a38}.c.f{background:#37665a}.c.h{background:#8a4658}.c.t{background:#3c5a83}.c.b{background:#655a8c}
+footer{margin-top:4rem;border-top:3px double var(--line);padding:1.4rem 0 2.6rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media (max-width:780px){
+  header.hero{grid-template-columns:1fr}
+  .hero .big-heb{text-align:left;font-size:2.8rem;order:-1}
+  .hero .big-heb small{text-align:left}
+  .overview-card{grid-template-columns:1fr;gap:.7rem}
+  .shelf-zone{padding:1.4rem 1rem 0}
+  .shelf{flex-wrap:wrap;justify-content:flex-start;gap:8px}
+  .shelf::after{display:none}
+  .spine{width:calc(50% - 4px);height:auto;flex-direction:row;padding:.75rem .9rem;border-radius:6px;border-top:none;border-left:3px double var(--ochre)}
+  .spine .ko{writing-mode:horizontal-tb;letter-spacing:.06em;margin:0 0 0 .7rem;flex:1;justify-content:flex-start;font-size:.88rem}
+  .spine .band{display:none}
+  .spine.wide{width:100%}
+  .shelf-note{padding:1.2rem 0 .9rem}
+  .row{grid-template-columns:2.4rem 1fr auto}
+  .row .hb{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="mark" href="../../index.html"><span class="hb">דָּרַשׁ</span>성서 연구 서고</a>
+  <nav><a href="../../index.html">서고 홈</a></nav>
+</div>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">STUDY SET · HAGGAI</div>
+    <h1>학개 심층 연구</h1>
+    <div class="sub">넉 달의 예언으로 멈춘 성전 공사를 다시 세운 책. 새 3-문서 구조(개관 · 장별 심층연구 · 원어 융합)로 엮는다.</div>
+  </div>
+  <div class="big-heb">חַגַּי<small>하가이 — 학개 (학 1:1)</small></div>
+</header>
+
+<!-- 세 문서 유형 -->
+<section>
+  <div class="sec-head">
+    <div class="eyebrow">THREE DOCUMENTS</div>
+    <h2>세 문서</h2>
+    <div class="hint">책 전체를 세 층위로 나눠 담는다. 지금은 개관과 원어 표본이 준비되어 있다.</div>
+  </div>
+
+  <a class="overview-card" href="overview.html">
+    <span class="hb">שִׂימוּ לְבַבְכֶם</span>
+    <span>
+      <h3>① 개관 — 책의 신학과 전체 조망<span class="badge done">완성</span></h3>
+      <p>저자·연대·페르시아기 배경, 구조 대조(3대 단락 vs 4메시지), 관통 주제 근거, 상호텍스트, 주석 스파인.</p>
+    </span>
+    <span class="go">열기 →</span>
+  </a>
+
+  <a class="overview-card" href="ch01.html" style="border-left-color:var(--lapis)">
+    <span class="hb">בְּנוּ הַבַּיִת</span>
+    <span>
+      <h3>② 장별 심층연구<span class="badge done">1·2장 완료</span></h3>
+      <p>절 단위 주해 — 단락 짜임, 절범위 주해, 쟁점 박스, 상호 참조, 장 신학 종합. 1·2장 완료.</p>
+    </span>
+    <span class="go">열기 →</span>
+  </a>
+
+  <a class="overview-card" href="parsing/ch01.html" style="border-left-color:var(--lapis)">
+    <span class="hb">בְּיַד־חַגַּי</span>
+    <span>
+      <h3>③ 원어 연구 — 파싱·인터라이너 융합<span class="badge spec">표본 1:1–4</span></h3>
+      <p>절마다 개역개정 → 축자 대역 띠 → 7열 전수 분석표 → 핵심어 심화 카드 → 구문 관찰. 형식 검증용 표본.</p>
+    </span>
+    <span class="go">열기 →</span>
+  </a>
+</section>
+
+<!-- 서가 -->
+<section>
+  <div class="sec-head">
+    <div class="eyebrow">SHELF</div>
+    <h2>서가</h2>
+  </div>
+  <div class="shelf-zone">
+    <div class="shelf">
+      <a class="spine wide" href="overview.html"><span class="num">개관</span><span class="ko">학개 · 개관</span><span class="band"></span></a>
+      <a class="spine" href="ch01.html"><span class="num">01</span><span class="ko">이 성전을 건축하라</span><span class="band"></span></a>
+      <a class="spine" href="ch02.html"><span class="num">02</span><span class="ko">나중 영광</span><span class="band"></span></a>
+    </div>
+    <div class="shelf-note">개관 1편 · 심층연구 2편(1·2장) · 원어 표본 1편(1:1–4)</div>
+  </div>
+</section>
+
+<!-- 장별 목록 -->
+<section id="ch">
+  <div class="sec-head">
+    <div class="eyebrow">CHAPTERS</div>
+    <h2>장별</h2>
+    <div class="hint">전 2장. 심층연구 문서는 개관 확정 뒤 채운다.</div>
+  </div>
+  <div class="chapter-list">
+    <a class="row" href="ch01.html">
+      <span class="no">01</span>
+      <span class="hb">וּבְנוּ הַבַּיִת</span>
+      <span class="body"><h3>우베누 하바이트, "이 성전을 건축하라"</h3><p>성전 재건 촉구와 착수 — "너희 길을 살펴보라"의 논쟁과 응답(1:1–15).</p></span>
+      <span class="st">심층연구 · 원어표본</span>
+    </a>
+    <a class="row" href="ch02.html">
+      <span class="no">02</span>
+      <span class="hb">כְּבוֹד הַבַּיִת</span>
+      <span class="body"><h3>케보드 하바이트, "이 성전의 영광"</h3><p>장래 영광·정결·인장 반지 — 둘째~넷째 신탁(2:1–23).</p></span>
+      <span class="st">심층연구</span>
+    </a>
+  </div>
+
+  <div class="legend">
+    <span><b>주석 스파인</b></span>
+    <span><span class="c f">J</span> Jacobs NICOT</span>
+    <span><span class="c t">H</span> Hill TOTC</span>
+    <span><span class="c k">B</span> Baldwin TOTC <span style="color:#a99">(OCR 보류)</span></span>
+    <span><span class="c b">M</span> Meyers AB <span style="color:#a99">(미확보)</span></span>
+    <span><span class="c h">K</span> Kessler VTSup <span style="color:#a99">(미확보)</span></span>
+  </div>
+</section>
+
+<footer>
+  성서 연구 서고 · 학개 심층 연구 — 3-문서 구조.<br>
+  개역개정 4판 정본 대조 및 히브리어(BHS·STEP Bible) 재확인 전제. 관찰 출처는 Jacobs(NICOT 2017)·Hill(TOTC 2012) 직접 확인분에 한한다.
+</footer>
+
+</div>
+</body>
+</html>

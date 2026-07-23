@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학개서 종합 연구 — 책의 신학과 전체 조망</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%97%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --k:#7a5a38; --f:#37665a; --h:#8a4658; --t:#3c5a83; --b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.2rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.05rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.4rem}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.42rem .5rem .42rem .55rem;border-left:2px solid transparent;margin-top:.5rem}
+nav.toc a.lv2{display:block;color:#b7c8d8;text-decoration:none;padding:.2rem .5rem .2rem 1.15rem;border-left:2px solid transparent;font-size:.76rem;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2.2rem;margin-bottom:1.6rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.18;direction:rtl}
+.hero h1{font-size:2.05rem;font-weight:900;line-height:1.35;margin:.4rem 0 .6rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.8}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1.1rem;letter-spacing:.02em}
+section.part{margin-top:4rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.55rem;font-weight:900;line-height:1.4;margin:.25rem 0 .2rem}
+.part-head .gloss{font-size:.86rem;color:var(--ink-soft)}
+h3{font-size:1.16rem;font-weight:700;margin:2.2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:1rem;font-weight:700;margin:1.5rem 0 .5rem;color:var(--lapis)}
+p{margin:.9rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.lead{font-size:1.02rem;color:var(--ink)}
+hr.wall{border:0;height:9px;margin:2.6rem 0;background:
+ repeating-linear-gradient(90deg,var(--line) 0 26px,transparent 26px 30px) 0 0/100% 3px no-repeat,
+ repeating-linear-gradient(90deg,transparent 0 13px,var(--line) 13px 39px,transparent 39px 43px) 0 6px/100% 3px no-repeat}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.2rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.caveat ul{margin:.3rem 0 0 0}
+.oracle{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:1.3rem 1.4rem;margin:1.3rem 0}
+.oracle .tag{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--lapis);border-radius:4px;padding:.15rem .55rem;display:inline-block;margin-bottom:.5rem}
+.oracle h3{margin-top:.2rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.74rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.back{font-family:var(--sans);font-size:.75rem;margin-top:1.6rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:5rem;border-top:3px double var(--line);padding-top:1.4rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,table,.oracle{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 학개 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">학개서 종합 연구</div>
+  <div class="brand-sub">책의 신학과 전체 조망</div>
+  <a class="lv1" href="#overview">개요와 주석 스파인</a>
+  <a class="lv1" href="#p1">Ⅰ. 배경 — 저자·역사·제국</a>
+  <a class="lv2" href="#p1-author">저자 학개와 사회적 위치</a>
+  <a class="lv2" href="#p1-history">재건이 멈춘 스무 해</a>
+  <a class="lv2" href="#p1-persia">페르시아 행정과 총독직</a>
+  <a class="lv1" href="#p2">Ⅱ. 책의 짜임</a>
+  <a class="lv2" href="#p2-genre">장르와 통일성</a>
+  <a class="lv2" href="#p2-structure">구조 대조 — 세 단락과 네 메시지</a>
+  <a class="lv2" href="#p2-formula">날짜·전달 형식</a>
+  <a class="lv1" href="#p3">Ⅲ. 신탁별 신학</a>
+  <a class="lv2" href="#p3-1">① 1:1–15 우선순위 재정립</a>
+  <a class="lv2" href="#p3-2">② 2:1–9 옛 영광과 장래 영광</a>
+  <a class="lv2" href="#p3-3">③ 2:10–19 정결과 오염</a>
+  <a class="lv2" href="#p3-4">④ 2:20–23 스룹바벨과 인장 반지</a>
+  <a class="lv1" href="#p4">Ⅳ. 관통 주제</a>
+  <a class="lv1" href="#p5">Ⅴ. 상호텍스트</a>
+  <a class="lv1" href="#p6">Ⅵ. 정경적·복음적 읽기</a>
+  <a class="lv1" href="#p7">Ⅶ. 쟁점 대조표</a>
+  <a class="lv1" href="#p8">Ⅷ. 서지와 자료 상태</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="heb-title" dir="rtl">שִׂימוּ לְבַבְכֶם עַל־דַּרְכֵיכֶם</div>
+    <h1>학개서 종합 연구</h1>
+    <p class="sub">"너희 길을 살펴보라"(1:5·7; 2:15·18). 다리오 제이년 넉 달 동안, 폐허가 된 성전과 지붕을 얹은 집 사이에서 한 예언자가 공동체의 우선순위를 되돌린다. 두 장 서른여덟 절이 순종과 임재라는 두 축을 함께 돌린다.</p>
+    <p class="meta">저자 학개 · 주전 520년 · 네 신탁(또는 세 단락) · Jacobs(NICOT)·Hill(TOTC) 종합 · 개역개정 4판 대조 전</p>
+  </header>
+
+  <div class="caveat">
+    <div class="tt">확인 전제</div>
+    <ul>
+      <li>인용 구절은 <b>개역개정 4판 정본 대조 전</b>이다(<code>data/krv_hag.json</code> 확보 시 단어 단위로 교정). 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제.</li>
+      <li>관찰의 출처는 업로드된 <b>Jacobs</b>(NICOT 2017, <span class="c f">J</span>)와 <b>Hill</b>(TOTC 2012, <span class="c t">H</span>)에서 직접 확인한 것에 한한다. <b>Meyers &amp; Meyers</b>(<span class="c b">M</span>)·<b>Kessler</b>(<span class="c h">K</span>)·Wolff·Petersen·Berquist는 두 주석의 재인용을 통해서만 반영했고 그 사실을 표기했다. <b>Baldwin</b>(<span class="c k">B</span>)은 djvu에 텍스트 레이어가 없어 OCR 전까지 인용을 보류한다.</li>
+    </ul>
+  </div>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="part" id="overview">
+    <div class="part-head">
+      <div class="eyebrow">OVERVIEW</div>
+      <h2>개요와 주석 스파인</h2>
+      <div class="gloss">한 예언자가 넉 달 만에 멈춘 공사를 다시 세운 기록.</div>
+    </div>
+
+    <p class="lead">학개서는 페르시아 다리오 1세 제이년, 곧 주전 520년의 넉 달 남짓한 예언 활동을 담는다. <span class="c f">J</span> 여섯째 달 초하루(1:1)에서 아홉째 달 스물넷째 날(2:10·20)까지, 날짜가 박힌 신탁이 성전 재건이라는 한 사안으로 수렴한다. <span class="c f">J</span> 이 책은 페르시아기를 이해하는 열쇠이며, 강요된 환경 속에서 정체성과 전통을 다시 해석해야 했던 포로기 이후 공동체를 향해 희망의 메시지를 낸다.</p>
+
+    <p>책은 두 축을 함께 돌린다. 성전을 다시 세우라는 <em>순종의 요구</em>와, 그 순종에 응답해 임재와 영광을 약속하는 <em>하나님의 개입</em>이다. <span class="c f">J</span> 메시지는 신학적인 동시에 정치적이며, 책망이면서 격려다. <span class="c f">J</span> 스룹바벨은 페르시아 정치 체계의 일부이면서 야훼가 택한 다윗계 지도자이고, 예루살렘을 회복하고 성전을 짓는 일은 제국을 향한 충성으로 보일지라도 야훼를 향한 순종의 행위다.</p>
+
+    <h3>주석 스파인 — 색 슬롯 고정, 표시 글자 교체</h3>
+    <p>느헤미야의 다섯 축(목회·경건 / 본문·비평 / 문학·구조 / 자료·사회 / 수용·역사)을 유지하되, 색 슬롯 다섯은 고정하고 책마다 표시 글자만 바꾼다. 학개의 스파인과 각 주석의 관점은 아래와 같다.</p>
+
+    <table>
+      <thead><tr><th>슬롯·글자</th><th>주석</th><th>관점과 방법</th><th>자료 상태</th></tr></thead>
+      <tbody>
+        <tr><td class="head"><span class="c f">J</span></td><td>Jacobs, <i>Haggai &amp; Malachi</i> (NICOT, 2017)</td><td>본문을 예언 문학으로, 또한 정경 안의 상호텍스트 목소리로 읽는다. <span class="c f">J</span> 경쟁하는 해석을 나란히 두고 독자의 참여를 청하는 방식이며, 목회 현장의 질문을 의식한다.</td><td>사용 가능</td></tr>
+        <tr><td class="head"><span class="c t">H</span></td><td>Hill, <i>Haggai, Zechariah, Malachi</i> (TOTC 개정판, 2012)</td><td>성경을 신학·역사·문학의 세 렌즈로 읽고, 세 예언자의 상호텍스트 관계와 열두 예언서의 틀을 강조한다. <span class="c t">H</span> 장르 분석에 무게를 둔다.</td><td>사용 가능</td></tr>
+        <tr><td class="head"><span class="c k">B</span></td><td>Baldwin, <i>Haggai, Zechariah, Malachi</i> (TOTC, 1972)</td><td>구조와 경건. Hill 개정판의 저본.</td><td>djvu · OCR 보류</td></tr>
+        <tr><td class="head"><span class="c b">M</span></td><td>Meyers &amp; Meyers, <i>Haggai, Zechariah 1–8</i> (AB 25B, 1987)</td><td>고고학·역사·사회. 학개 비평의 표준.</td><td>미확보 · Jacobs 재인용으로만</td></tr>
+        <tr><td class="head"><span class="c h">K</span></td><td>Kessler, <i>The Book of Haggai</i> (VTSup 91, 2002)</td><td>페르시아기 예후드의 사회사.</td><td>미확보 · 재인용으로만</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ Ⅰ. 배경 ============ -->
+  <section class="part" id="p1">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅰ</div>
+      <h2>배경 — 저자·역사·제국</h2>
+    </div>
+
+    <h3 id="p1-author">저자 학개와 사회적 위치</h3>
+    <p>이름 <span class="hw">חַגַּי</span>(하가이)는 어근 <span class="hw">חגג</span>(축제·순례)와 이어져 "축일의"라는 뜻으로 읽힌다. 책이 전하는 것 외에 예언자 개인에 관해 알려진 정보는 적다. <span class="c f">J</span> Jacobs는 Carroll의 분석을 빌려 학개의 사회적 위치를 세 갈래로 정리한다. 597년 바벨론으로 끌려간 "좋은 무화과" 계열의 귀환자였을 가능성(렘 24; 29), 587년에 이산되어 애굽 등지로 흩어진 "나쁜 무화과" 계열이었을 가능성, 땅에 남아 있던 이들 가운데 하나였을 가능성이다. <span class="c f">J</span> 597년 귀환자였다면 칠십 년 회복 전통과 예루살렘·제의 재건의 열망을 지고 돌아온 인물로, 그의 역할은 신학과 정치 양쪽에서 동기를 얻는다. <span class="c f">J</span> 587년 이산 계열이었다면 바벨론 귀환자들에게 외부인으로 여겨졌을 것이며, 그 경험은 다른 결을 남긴다. 본문만으로는 어느 하나를 확정하기 어렵다.</p>
+
+    <h3 id="p1-history">재건이 멈춘 스무 해</h3>
+    <p><span class="c t">H</span> 첫 귀환 물결은 고레스 칙령 직후 세스바살의 인솔로 예루살렘에 이르렀고, 그 수는 42,360명에 종 7,337명이었다(스 2:64–65). <span class="c t">H</span> 성전 기초는 세스바살 행정 초기인 주전 538~537년경에 놓였다(스 5:16). <span class="c t">H</span> 공사는 곧 중단되어 스무 해 가까이 방치되었는데, 폐허가 된 성읍의 생존 문제, 적대적인 이웃, 가뭄과 흉작이 겹친 탓이었다. <span class="c t">H</span> 스룹바벨과 여호수아는 다리오 즉위(522년)를 계기로 또 한 무리를 이끌고 돌아온 듯하며, 이 비교적 최근 귀환자들이 앞선 스무 해의 실패에 지치지 않은 채 재건에 열의를 보였을 수 있다.</p>
+    <p><span class="c t">H</span> 재건이 재개된 계기는 주전 520년 8월 학개의 설교였고, 성전은 넉 해 반 뒤인 515년 3월 다리오 치하에서 완공되었다(스 6:15). <span class="c f">J</span> 학개서가 경제적 곤궁을 앞세운 것은 진척 없는 현실을 향한 하나님의 언짢음을 드러내고 공동체를 재건으로 설득하기 위해서다. <span class="c f">J</span> 하나님은 가뭄을 불러 땅과 사람의 모든 수고에 미치게 하며(1:10–11), 자연을 순종을 확보하는 도구로 쓴다(신 28). <span class="c f">J</span> 정치적으로는 예후드가 페르시아 제국 안에서 아무리 작아도 하나님의 계획에서 중심이라는 예후드 의의의 확증이 된다.</p>
+
+    <h3 id="p1-persia">페르시아 행정과 총독직</h3>
+    <p><span class="c t">H</span> 다리오는 제국을 사트라피와 그 하위 속주로 나누고 지방 지도자들의 충성으로 통치를 유지했다. <span class="c f">J</span> 예후드가 정식 속주였는지, 느헤미야 이전 지도자에게 <span class="hw">פֶּחָה</span>(파하, 총독) 칭호를 붙일 수 있는지에는 논쟁이 있다. <span class="c f">J</span> 한 갈래는 스룹바벨과 탓드내의 관계다. 스룹바벨은 예후드 속주의 총독, 탓드내는 여러 속주를 아우르는 "강 서편"(에베르-나하라) 사트라피의 총독으로, 둘 다 총독일 수 있다(스 5:3·6; 6:6·13).</p>
+    <p><span class="c t">H</span> 스룹바벨은 스알디엘의 아들이자 여호야긴의 손자로 다윗계 후손이며(마 1:12), 대상 3:17–19은 그를 브다야의 아들로 적어 계대혼 또는 입양의 문제를 남긴다. <span class="c t">H</span> 대제사장 여호수아는 587년 예루살렘 함락 때 끌려간 여호사닥의 아들로 레위 계열이다(대상 6:15). <span class="c t">H</span> 두 지도자는 각기 혈통을 먼저, 직함을 뒤에 두는 형식으로 소개되며, 이 소개는 포로와 하나님의 신실하심을 함께 상기시킨다.</p>
+  </section>
+
+  <!-- ============ Ⅱ. 짜임 ============ -->
+  <section class="part" id="p2">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅱ</div>
+      <h2>책의 짜임</h2>
+    </div>
+
+    <h3 id="p2-genre">장르와 통일성</h3>
+    <p><span class="c t">H</span> 학개서는 역사기술(날짜 형식·보고)과 신탁 발화(권면·경고·예고)를 결합한 혼합 장르로, 폐허가 된 성전에서 재건된 성전으로 나아가는 줄거리를 갖춘 예언 서사다. 주제(유다의 회복), 인물의 발전(지도자와 백성의 응답), 극적 전개(우주적 함의를 지닌 종말론)가 갖춰져 있으며, Kessler의 표현대로 "이 책은 다소 이야기처럼 읽힌다"<span class="c h">K</span>(Hill 재인용).</p>
+    <p><span class="c t">H</span> Wolff는 학개의 다섯 원신탁을 감싸는 여러 편집층을 상정하고, 역사적 도입부의 추가와 여러 삽입을 최종 단계로 본다. "책이 너무 짧아 통일성을 의심하는 것이 거의 우스울 정도"라는 관찰이 여전히 유효하다. <span class="c t">H</span> 표제(1:1)와 역사적 도입부(1:15; 2:1·10·20)는 설교들이 연대순으로 조직되었음을 보여 주며, 전달 형식의 미세한 변주는 이 책이 여러 판을 거쳤거나 최종 편집자가 여러 자료를 끌어썼을 가능성을 시사한다.</p>
+
+    <h3 id="p2-structure">구조 대조 — 세 단락과 네 메시지</h3>
+    <p>날짜 표지가 단락을 가른다는 데는 대체로 합의가 있으나, 그 단락의 <em>범위</em>에는 견해가 갈린다. <span class="c f">J</span> Jacobs는 성전 회복의 국면을 따라 세 대(大)단락으로 본다. <span class="c t">H</span> Hill과 전통적 구분은 네 편의 메시지로 나눈다. 차이는 2:10–23을 한 단락으로 묶느냐, 둘로 나누느냐에 있다.</p>
+
+    <table>
+      <caption>표 1. 두 구조 견해와 각 소단락의 수신자</caption>
+      <thead><tr><th>본문</th><th>Jacobs — 세 대단락 <span class="c f">J</span></th><th>Hill·전통 — 네 메시지 <span class="c t">H</span></th><th>수신자</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:1–15</td><td>Ⅰ. 재건 논쟁과 그 결과<br>(1:2–11 논쟁 / 1:12–15 응답)</td><td>① 공동체 우선순위 재정립</td><td>스룹바벨(총독)·여호수아(대제사장), 남은 자</td></tr>
+        <tr><td class="head">2:1–9</td><td>Ⅱ. 격려 — 문답과 권면<br>(2:1–3 문답 / 2:4–9 권면)</td><td>② 장래 성전의 영광</td><td>스룹바벨·여호수아, 남은 자</td></tr>
+        <tr><td class="head">2:10–19</td><td rowspan="2">Ⅲ. 현재와 새 시대의 연결<br>(2:10–19 정결·복 / 2:20–23 장래 통치)</td><td>③ 정결·오염과 복의 약속</td><td>제사장</td></tr>
+        <tr><td class="head">2:20–23</td><td>④ 스룹바벨, 다윗계 종·인장 반지</td><td>스룹바벨</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c f">J</span> 스룹바벨은 2:10–19를 뺀 모든 소단락에 등장하며, 마지막 소단락에서만 단독 수신자로 지목되어 책의 중심에 놓인다. <span class="c t">H</span> 첫 신탁과 마지막 신탁이 모두 개인을 향한다는 점도 두 끝을 묶는다.</p>
+
+    <h3 id="p2-formula">날짜·전달 형식</h3>
+    <p><span class="c f">J</span> 날짜 형식은 포로기 이전형(연+월+일)과 이후형이 섞여 있다. 2:1은 앞의 연도를 전제하고 생략한 약식 형식이라, 이를 독립 단락으로 볼지에 이견이 생긴다(참고: 렘 52:4→52:6·12). <span class="c f">J</span> 2:18의 월+일 형식은 2:1에서, "여호와의 말씀이 다시 임하니라"(2:20)는 2:10의 연도 표지에서 각각 앞 요소를 이어받는다.</p>
+    <p><span class="c f">J</span> 전달 형식의 구별도 구조를 읽는 단서다. 1:1과 2:1은 "학개의 <b>손으로 말미암아</b>"(<span class="hw">בְּיַד־חַגַּי</span>)로 예언자를 전달의 도구로 세우고, 2:10과 2:20은 "학개<b>에게</b>"(<span class="hw">אֶל־חַגַּי</span>)로 예언자를 말씀의 수령자로 세운다. <span class="c t">H</span> Petersen은 이 전치사 변화를 소통 과정의 미세한 이동으로 읽으며, 마지막 두 설교의 청중이 앞 두 설교보다 더 특정된다는 점(제사장, 이어 스룹바벨)과 맞물린다고 본다(Hill 재인용).</p>
+  </section>
+
+  <!-- ============ Ⅲ. 신탁별 신학 ============ -->
+  <section class="part" id="p3">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅲ</div>
+      <h2>신탁별 신학</h2>
+      <div class="gloss">네 신탁(또는 세 단락)이 각기 다른 신학적 관심을 든다.</div>
+    </div>
+
+    <div class="oracle" id="p3-1">
+      <span class="tag">첫째 신탁 · 1:1–15</span>
+      <h3>우선순위 재정립 — <span class="heb">שִׂימוּ לְבַבְכֶם</span></h3>
+      <p><span class="c t">H</span> 첫 신탁은 예루살렘 공동체를 향해 공동체 삶의 우선순위를 다시 세우라는 부름이다. 지도자에게 자기 판벽집의 안락 대신 하나님을 향한 바른 예배의 회복에 집중하라고 지시하며, 그 회복은 성전 재건과 레위 제사장직의 재가동, 절기와 제사 전례의 복원으로 이뤄진다.</p>
+      <p><span class="c f">J</span> 첫 대단락 1:2–15는 두 소단락으로 나뉜다. 성전 건축을 둘러싼 논쟁(1:2–11)과 그 논쟁의 결과(1:12–15)다. 논쟁은 사자 형식 "만군의 여호와가 이같이 말씀하시되"(<span class="hw">כֹּה אָמַר יְהוָה צְבָאוֹת</span>)로 열려, 백성(<span class="hw">הָעָם הַזֶּה</span>, "이 백성")의 관점과 이를 반박하는 야훼의 관점이 맞선다. <span class="c f">J</span> 백성의 "때가 이르지 아니하였다"는 말에는 실용적 핵심이 있으며, 칠십 년 회복의 "정한 때"가 아직 이르지 않았다는 신학적 함의도 읽어 낼 수 있다(렘 25:11–12; 29:10; 시 102:13). <span class="c f">J</span> 가뭄과 헛수고가 종말의 도래를 부정하는 표징이라면, 백성의 "지금은 때가 아니다"는 나름의 근거를 갖는다.</p>
+      <p><span class="c f">J</span> 예언자는 "너희 길을 살펴보라"(1:5·7)는 두 권면으로 그 논리를 되받는다. 많이 뿌려도 적게 거두고, 먹어도 배부르지 않으며, 삯을 구멍 난 주머니에 넣는 헛수고의 경험을 그 증거로 든다(1:5–6). <span class="c f">J</span> 하나님이 하늘의 이슬과 땅의 소출을 거둔 것은 그의 집이 황폐한 채 각자 자기 집으로 달려간 탓이다(1:9–11). <span class="c f">J</span> 이 보응의 논리는 순종한 자에게 복을, 불순종한 자에게 좌절을 주며(신 28:1–3 대 28:15–30), 공동체를 하나로 보아 일부의 행위가 전체의 운명을 가른다.</p>
+      <p><span class="c f">J</span> 논쟁의 결과(1:12–15)에서 스룹바벨과 여호수아, "백성의 온 남은 자"(<span class="hw">כֹּל שְׁאֵרִית הָעָם</span>)가 응답하고, "내가 너희와 함께하노라"(1:13)는 확언이 임한다. <span class="c f">J</span> 하나님이 지도자와 남은 자의 영을 격동시키니(1:14) 그들이 성전 공사를 시작한다.</p>
+    </div>
+
+    <div class="oracle" id="p3-2">
+      <span class="tag">둘째 신탁 · 2:1–9</span>
+      <h3>옛 영광과 장래 영광 — <span class="heb">חִזְקוּ</span></h3>
+      <p><span class="c f">J</span> 둘째 신탁은 문답(2:1–3)과 권면(2:4–9)으로 이뤄진다. 이 성전을 옛 영광 가운데 본 자가 남았느냐는 물음이 지금의 초라함을 드러내고, 그 대비가 청중에게 충격을 준다. <span class="c t">H</span> 예언자는 이 대비를 두고도 "강하라"(<span class="hw">חִזְקוּ</span>)를 세 번 반복해 책망에서 격려로 넘어간다. <span class="c t">H</span> 이 명령은 모세가 이스라엘과 여호수아에게, 하나님이 여호수아에게, 다윗이 솔로몬에게 성전 건축 앞에서 준 격려를 되울린다(신 31:6–7; 수 1:6·9; 대상 28:20).</p>
+      <p><span class="c t">H</span> 둘째 신탁에는 언약의 어휘가 울린다. 땅과 성전, 평강의 약속이 예레미야·에스겔의 새 언약 약속과 이어지고(렘 30:10; 32:37; 겔 34:25; 37:26), "강하라"·"두려워 말라"는 확언 형식은 언약 문맥에서 흔하다(창 15:1; 26:24; 사 57:15). <span class="c t">H</span> 가장 두드러진 것은 야훼의 임재(2:4)와 언약 약속의 말씀(2:5)을 잇는 대목으로, 하나님의 영이 출애굽 이후 모세와 칠십 장로에게 임했던 것처럼(민 11:16–17) 공동체 가운데 머문다는 확언이다.</p>
+      <p><span class="c t">H</span> 하나님이 하늘과 땅, 열방을 흔들어(<span class="hw">רָעַשׁ</span>) 그 보화가 성전으로 흘러들게 하고 이 성전을 영광으로 채운다(2:6–9). <span class="c t">H</span> 참 영광은 금은의 세입이 아니라 성전과 백성 가운데 임하는 하나님의 임재다(2:4–5·8). <span class="c t">H</span> "이 성전의 나중 영광이 이전 영광보다 크리라"(2:9)의 히브리어는 다소 모호하나, 2:3의 "이전 영광"과의 짝을 보면 "이 성전의 나중 영광"으로 읽는 편이 낫다.</p>
+    </div>
+
+    <div class="oracle" id="p3-3">
+      <span class="tag">셋째 신탁 · 2:10–19</span>
+      <h3>정결과 오염 — 제사장을 향한 문답</h3>
+      <p><span class="c f">J</span> 셋째 신탁은 거룩과 속됨, 정과 부정을 가르는 제사장의 판단을 끌어온다(레 6–7; 10:10–11; 11장). <span class="c f">J</span> 성전이 없어도 제단은 작동하는 공동체의 일부였고(스 3), 제사장은 제사와 토라 교육, 거룩과 속됨의 구별을 맡았다. <span class="c f">J</span> Jacobs는 이 대목을 Douglas의 『순수와 위험』, Klawans의 부정 연구와 함께 읽는다. 거룩은 접촉으로 옮겨 가지 않으나 부정은 옮는다는 제의 논리가, 공사를 미룬 공동체의 상태를 진단하는 틀이 된다.</p>
+      <p><span class="c t">H</span> 예언자는 앞서 현재의 곤경을 살피라 하고(1:5·7), 출애굽을 기억하라 한 뒤(2:5), 이제 재건 착수 직전 스무 해를 돌아보라 한다(2:15). <span class="c t">H</span> 장래 영광의 약속과 눈앞의 현실 사이의 대비가 청중에게 충격이었으나, "이 날부터 내가 너희에게 복을 주리라"(2:19)는 소망이 주어진다. <span class="c t">H</span> 이 복의 표현은 아브라함 언약의 "내가 네게 복을 주리라"(창 12:2)를 되울린다.</p>
+    </div>
+
+    <div class="oracle" id="p3-4">
+      <span class="tag">넷째 신탁 · 2:20–23</span>
+      <h3>스룹바벨과 인장 반지 — <span class="heb">כְּחוֹתָם</span></h3>
+      <p><span class="c t">H</span> 넷째 신탁은 넷 중 가장 짧으며, 구원 신탁의 형식으로 하나님이 스룹바벨을 자신의 인장 반지로 삼겠다고 약속한다(2:23). <span class="c t">H</span> 이는 다윗이 성전을 지으려 하나 야훼가 도리어 다윗의 집을 세우겠다고 답한 다윗 언약의 순서를 되짚는다(삼하 7:1–6·11).</p>
+      <p><span class="c t">H</span> 2:21–22는 2:6의 우주적 심판을 다시 든다. 두 신현(2:6–7과 2:21–22)은 어휘와 구조를 공유하며 우주에서 열방으로 흐르지만, 결과가 갈린다. 앞의 진동은 열방의 보화를 성전으로 흘려보내고, 뒤의 진동은 열방을 야훼의 통치 아래 굴복시킨다(Boda, Hill 재인용). <span class="c t">H</span> 동사 "흔들다"(<span class="hw">רָעַשׁ</span>)는 출애굽과 다윗의 등극이라는 두 격동을 되울리며(시 68:8; 77:18; 18:7), 병거(2:22)는 바다에서 무너진 바로의 병거를(출 15), 인장 반지는 다윗 왕권을 각각 표상한다.</p>
+      <p><span class="c t">H</span> "그 날"은 종말론적 미래를 가리키는 예언의 정형 어구다(호 2:18; 암 9:11; 슥 12:3). <span class="c t">H</span> "종"이라는 칭호는 모세·다윗처럼 특정한 역할로 택함받았음을 가리킨다. <span class="c t">H</span> 인장 반지(<span class="hw">חוֹתָם</span>)는 왕권과 권위의 상징으로 공문서를 인준하던 도구이며, 학개는 이 이미지로 스룹바벨에게 맡겨진 하나님의 권위와 유다 회복에 대한 하나님의 지속적 관여를 확언한다. <span class="c t">H</span> 스룹바벨을 통한 자치의 전망이 온전히 실현되지 않은 채 스룹바벨은 슥 4장 이후 기록에서 사라지고, 그 미완성이 후대 메시아적 성취의 물음을 열어 둔다(Petersen, Hill 재인용).</p>
+    </div>
+  </section>
+
+  <!-- ============ Ⅳ. 관통 주제 ============ -->
+  <section class="part" id="p4">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅳ</div>
+      <h2>관통 주제</h2>
+    </div>
+
+    <h3>임재의 신학 — 함께 계심과 물러나심</h3>
+    <p><span class="c f">J</span> 학개서는 하나님이 백성과 함께 계심을 확언하면서 성전이 재건될 때 임재가 돌아온다는 국소적 임재의 관념을 함께 담는다. <span class="c f">J</span> 성전 전통에는 두 얼굴이 있다. 하나는 시내산처럼 국소화된 임재로, 물러나거나 거둬질 수 있다. 출애굽기 32–33장에서 하나님은 백성을 삼키지 않으려 진 밖 회막에 머문다. <span class="c f">J</span> 다른 하나는 특정 구조물에 매이지 않는 임재로, 솔로몬의 봉헌 기도는 하늘도 하나님을 담지 못한다고 고백한다(왕상 8:10–27). <span class="c f">J</span> 포로기에도 예언자들은 하나님이 함께하심을 확언했으며(사 41:10; 43:5; 렘 30:11; 42:11), 학개는 그 동행의 확언(1:13; 2:4–5)과 재건 후 임재의 회복을 함께 붙든다.</p>
+
+    <h3>순종과 보응 — <span class="heb">שִׂימוּ לְבַבְכֶם</span></h3>
+    <p><span class="c f">J</span> "너희 길을 살펴보라"는 관용구가 1:5·7과 2:15·18에서 되풀이되며 책의 반복 장치가 된다. <span class="c f">J</span> 하나님의 임재는 곤경 속에서도 드러나며, 헛수고의 경험(1:5–6)은 순종한 자에게 복을, 불순종한 자에게 좌절을 주는 보응의 신학과 이어진다(1:7–11; 2:14–19). <span class="c f">J</span> 하나님은 아파시가 아니라 참여자로 공동체의 삶에 개입하며, 과거·현재·미래에 걸쳐 그 안녕을 지킬 권위를 가진다.</p>
+
+    <h3>하나님의 영과 격동</h3>
+    <p><span class="c t">H</span> 학개는 하나님의 영이 출애굽 이후 모세와 칠십 장로에게 임했던 것처럼 공동체 가운데 머문다고 확언한다(2:5; 민 11:16–17). <span class="c t">H</span> 스가랴가 "힘으로도 능력으로도 아니요 내 영으로"(슥 4:6) 하나님이 목적을 이룬다고 상기시킨 것과 함께, 포로기 이후 예언에서 흔히 간과되는 성령의 역할을 든다.</p>
+
+    <h3>영광·흔들림 — <span class="heb">כָּבוֹד</span> · <span class="heb">רָעַשׁ</span></h3>
+    <p><span class="c t">H</span> 하나님이 하늘과 땅을 흔든다는 <span class="hw">רָעַשׁ</span>는 출애굽에서 하나님의 구원 행위를 묘사하던 말과 이어지고(삿 5:4; 시 68:8; 77:18), 사 13:13·욜 3:16과 병행한다. <span class="c t">H</span> Berquist는 이 흔들림이 주전 518년경 다리오의 애굽 원정에서 유다를 지나던 군대의 이동으로 부분 실현되었을 가능성을 제시하며, 그렇다면 스룹바벨 성전의 초기 영광은 페르시아 제국의 후원으로 이뤄졌을 수 있다(Hill 재인용). <span class="c t">H</span> 온전한 영광의 약속은 실현되지 않은 채 장래의 약속으로 남았다(스 6:14).</p>
+
+    <h3>정결과 거룩</h3>
+    <p><span class="c f">J</span> 정결과 오염의 문답(2:10–19)은 제사장 토라의 구별을 재건 공동체의 진단으로 옮긴다. <span class="c f">J</span> 성전 없이도 제단이 작동하던 공동체에서 제사장의 판단은 공동체의 상태를 읽는 척도가 된다.</p>
+
+    <h3>다윗 소망과 여호와의 날</h3>
+    <p><span class="c t">H</span> 다윗 왕조는 포로 이후 회복의 열쇠로 지목되었고(렘 23:5; 31:15; 겔 37:24), 여호야긴에게 내린 인장 반지 심판(렘 22:24–30)이 스룹바벨을 인장 반지로 삼는 약속(2:23)으로 뒤집힌다. <span class="c t">H</span> 이 신탁은 다윗 언약을 하나님이 복과 회복의 약속을 이루는 통로로 재확인한다. <span class="c t">H</span> 여호와의 날은 하나님이 자기 성전에 홀연히 임하여 심판과 신원을 이루는 날로, 임박한 미래의 어법으로 표현되어 기다림의 신학을 낳는다.</p>
+  </section>
+
+  <!-- ============ Ⅴ. 상호텍스트 ============ -->
+  <section class="part" id="p5">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅴ</div>
+      <h2>상호텍스트</h2>
+    </div>
+
+    <h3>학개가 되울리는 본문</h3>
+    <table>
+      <caption>표 2. 주요 상호텍스트</caption>
+      <thead><tr><th>학개</th><th>본문</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:4 <span class="hw">חָרֵב</span></td><td>렘 33:10–12</td><td>예루살렘 "황폐한 곳" 회복 약속과 같은 낱말</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:4 <span class="hw">סָפַן</span></td><td>왕상 6:9·15; 7:3</td><td>솔로몬 성전의 판벽·천장 어휘(희귀 어근)</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:6·11</td><td>신 28:1–30</td><td>순종의 복과 불순종의 저주(헛수고·가뭄)</td><td><span class="c f">J</span></td></tr>
+        <tr><td class="head">2:4–5</td><td>신 31:6–7; 수 1:6·9; 대상 28:20</td><td>성전·정복 앞의 "강하라" 격려</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">2:5</td><td>민 11:16–17</td><td>모세·칠십 장로에게 임한 영</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">2:6·21 <span class="hw">רָעַשׁ</span></td><td>삿 5:4; 시 68:8; 사 13:13; 욜 3:16</td><td>출애굽·신현의 "흔드심"</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">2:19</td><td>창 12:2</td><td>"내가 네게 복을 주리라" — 아브라함 언약</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">2:22</td><td>출 15:1·4·19</td><td>바다에서 무너진 바로의 병거</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">2:23</td><td>삼하 7:1–6·11; 렘 22:24</td><td>다윗 언약 · 인장 반지 심판의 반전</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">전체</td><td>렘·겔·미·사의 회복 예언</td><td>예루살렘 회복 예언의 성취라는 자기 이해</td><td><span class="c f">J</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>학개와 스가랴</h3>
+    <p><span class="c t">H</span> 두 예언자는 동시대다(스 5:1). 날짜 형식으로 보면 스가랴는 학개의 넉 달 사역 뒤 약 두 달 지나 시작한다(슥 1:1). 학개는 성전 재건을 촉구하고 스가랴는 회개와 영적 갱신으로 부르며, 두 부름이 서로를 채운다. <span class="c f">J</span> 학개와 슥 1–8을 하나의 연속체로 볼지에는 논쟁이 있다(Floyd, Meyers &amp; Meyers, Mason — Jacobs 재인용).</p>
+  </section>
+
+  <!-- ============ Ⅵ. 정경적·복음적 읽기 ============ -->
+  <section class="part" id="p6">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅵ</div>
+      <h2>정경적·복음적 읽기</h2>
+    </div>
+
+    <h3>열두 예언서 안에서</h3>
+    <p><span class="c t">H</span> 학개는 소예언서 중 열째 책으로, 유대 전통은 학개·스가랴·말라기를 제2성전기의 예언자로 보아 열둘의 끝에 두었다. <span class="c t">H</span> 열두 예언서의 줄거리는 부정적으로는 언약 실패(이스라엘과 유다의 정복·유배)이고, 긍정적으로는 예배 갱신과 남은 자의 귀환이다. <span class="c t">H</span> 학개·스가랴·말라기 묶음은 이 후자의 이해에 기초를 놓는다.</p>
+    <p><span class="c t">H</span> 열두 예언서는 회개의 부름으로 감싸인다. 첫 두 책 호세아·요엘과 마지막 두 책 스가랴·말라기가 하나님께 돌아오라 권하며(호 6:1; 14:1–2; 욜 2:12–14; 슥 1:3–4; 말 3:7), 그 배경은 여호와의 날이다. <span class="c t">H</span> 학개·스가랴·말라기 묶음은 열둘의 회개와 여호와의 날 주제에 크게 기여한다.</p>
+
+    <h3>기다림의 신학과 성전에 임하신 주</h3>
+    <p><span class="c t">H</span> 여호와의 날은 하나님이 자기 성전에 홀연히 임하는 날로, "보라 내가 …하려 하노라"와 같은 임박한 미래의 어법으로 표현되어 기다림의 신학을 낳는다(슥 12:2; 말 3:1–2). <span class="c t">H</span> 그 임재는 넉 세기 뒤 메시아 예수께서 예루살렘 성전에 임하신 사건으로 이어진다(눅 2:22–38). <span class="c t">H</span> 이 기다림은 교회가 메시아의 재림과 만물의 새롭게 됨을 기다리는 오늘로 이어진다(마 24:29–31; 행 1:6–11; 계 21:5).</p>
+
+    <h3>둘째 성전의 영광과 다윗의 인장</h3>
+    <p><span class="c t">H</span> "나중 영광"(2:9)의 더 가까운 성취가 열방을 흔들어 성전에 영광을 회복시키는 예고라면, 이는 이 본문의 메시아적 해석을 예표한다. <span class="c t">H</span> 일부 해석자는 이 나중 영광의 더 먼 성취를 초림의 메시아 예수의 임재(마 12:6; 눅 2:28–32; 요 2:19–22)와 재림의 완성(계 21:22)에서 본다. <span class="c t">H</span> 신약이 이 본문을 예수의 생애에 인용하거나 암시하지는 않는다는 점은 함께 짚어 둔다.</p>
+    <div class="note"><span class="tt">정직성</span>이 절의 메시아적·정경적 연결은 Hill의 서술을 따른 것이다. 신약의 직접 인용이 없다는 Hill 자신의 단서를 지운 채 성취를 단정하지 않도록, 예표와 성취를 구분해 서술했다. 인장 반지 심판(렘 22:24)과 약속(학 2:23)의 반전 연결은 Hill이 다윗 언약(삼하 7) 계열로 다룬다.</div>
+  </section>
+
+  <!-- ============ Ⅶ. 쟁점 대조표 ============ -->
+  <section class="part" id="p7">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅶ</div>
+      <h2>쟁점 대조표</h2>
+      <div class="gloss">주석 사이에서 갈리거나 미결로 남은 지점.</div>
+    </div>
+    <table>
+      <caption>표 3. 학개 해석의 주요 쟁점</caption>
+      <thead><tr><th>쟁점</th><th>견해와 근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">연대 — 다리오 제이년</td><td>다수는 주전 520년. <span class="c f">J</span> 즉위년 비계산(antedating)을 상정해 521년으로 놓는 견해도 있으며, 이는 학개를 스룹바벨의 반페르시아 봉기와 잇는 해석과 맞물린다.</td></tr>
+        <tr><td class="head">전체 구조</td><td><span class="c f">J</span> 세 대단락(1:1–15 / 2:1–9 / 2:10–23). <span class="c t">H</span>·전통 네 메시지(2:10–23을 둘로). 차이는 2:10–23의 결합 여부.</td></tr>
+        <tr><td class="head">2:1의 지위</td><td><span class="c f">J</span> 약식 날짜 형식(연도 생략)이라 독립 단락으로 볼지 이견. 렘 52:4→52:6·12의 형식이 참고된다.</td></tr>
+        <tr><td class="head">2:15–19의 위치</td><td><span class="c t">H</span> Wolff는 2:15–19를 별도 설교로 보아 앞으로 옮긴다. 2:3–9와의 상대 위치는 여전히 논쟁 중.</td></tr>
+        <tr><td class="head">2:9 "나중 영광"</td><td><span class="c t">H</span> MT 직역 "이 집의 영광, 나중의"가 모호. "이 나중 집의 영광"(KJV·NJPS)과 "이 집의 나중 영광"(NAB·NRSV)이 갈리며, 2:3의 "이전 영광"과의 짝을 보면 후자가 낫다.</td></tr>
+        <tr><td class="head">1:10 가뭄의 범위</td><td><span class="c b">M</span> Meyers는 <span class="hw">מִן</span>을 부분 소유격으로 읽어 "부분 가뭄"으로 본다. Verhoef는 설명적 <span class="hw">מִן</span>으로 본다(둘 다 Jacobs 재인용).</td></tr>
+        <tr><td class="head">2:6·21 흔들림</td><td><span class="c t">H</span> Berquist는 518년 다리오 애굽 원정의 부분 실현을, 다수는 종말론적 성취를 본다(Hill 재인용).</td></tr>
+        <tr><td class="head">2:23 인장 반지</td><td><span class="c t">H</span> 스룹바벨을 통한 자치가 미실현으로 끝나 메시아적 성취의 물음을 남긴다(Petersen, Hill 재인용).</td></tr>
+        <tr><td class="head">학개 ↔ 슥 1–8</td><td><span class="c f">J</span> 연속체로 보는 견해(Floyd·Meyers)와 문헌적 독립·개념적 연결로 보는 견해가 맞선다(Jacobs 재인용).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ Ⅷ. 서지 ============ -->
+  <section class="part" id="p8">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅷ</div>
+      <h2>서지와 자료 상태</h2>
+    </div>
+
+    <h3>스파인 서지</h3>
+    <ul>
+      <li>Baldwin, Joyce G. <i>Haggai, Zechariah, Malachi: An Introduction and Commentary</i>. TOTC. IVP/Tyndale, 1972.</li>
+      <li>Hill, Andrew E. <i>Haggai, Zechariah and Malachi</i>. TOTC(개정판). IVP, 2012.</li>
+      <li>Jacobs, Mignon R. <i>The Books of Haggai and Malachi</i>. NICOT. Eerdmans, 2017.</li>
+      <li>Meyers, Carol L. &amp; Eric M. Meyers. <i>Haggai, Zechariah 1–8</i>. AB 25B. Doubleday, 1987. <i>(추가 권장)</i></li>
+      <li>Kessler, John. <i>The Book of Haggai: Prophecy and Society in Early Persian Yehud</i>. VTSup 91. Brill, 2002. <i>(추가 권장)</i></li>
+      <li>Verhoef, Pieter A. <i>The Books of Haggai and Malachi</i>. NICOT(구판). Eerdmans, 1987. <i>(보조)</i></li>
+      <li>Petersen, David L. <i>Haggai and Zechariah 1–8</i>. OTL. SCM, 1984. <i>(보조, 재인용)</i></li>
+      <li>Wolff, Hans Walter. <i>Haggai</i>. Continental Commentary. Augsburg, 1988. <i>(보조, 재인용)</i></li>
+    </ul>
+
+    <h3>업로드 자료 현황</h3>
+    <table>
+      <thead><tr><th>파일</th><th>정체</th><th>범위</th><th>상태</th></tr></thead>
+      <tbody>
+        <tr><td>Jacobs (NICOT 2017)</td><td>Verhoef NICOT의 후속판. 정경·문학·독자반응 방법 포함</td><td>학개·말라기</td><td>epub · 사용 가능</td></tr>
+        <tr><td>Hill (TOTC 2012)</td><td>Baldwin(1972)을 개정한 후속판. 신학·역사·문학 세 렌즈</td><td>학·슥·말</td><td>epub · 사용 가능</td></tr>
+        <tr><td>Baldwin (TOTC 1972)</td><td>초판 TOTC. 구조·경건</td><td>학·슥·말</td><td>djvu · <b>텍스트 레이어 없음, OCR 필요</b></td></tr>
+        <tr><td>Hill &amp; Patterson (Cornerstone 10, 2008)</td><td>NLT 기준 중급 주해. Patterson이 호세아 담당</td><td>호–말</td><td>epub · <b>호세아 작업용으로 보관</b></td></tr>
+      </tbody>
+    </table>
+    <p class="caveat"><span class="tt">다음 자료</span>학개 스파인을 완성하려면 <b>Meyers &amp; Meyers(AB)</b>와 <b>Kessler(VTSup)</b>를 확보해 보라·자주 슬롯을 재인용에서 직접 인용으로 올리고, <b>Baldwin djvu OCR</b>로 갈색 슬롯을 여는 것이 좋다. 개역개정 4판 <code>krv_hag.json</code>이 확보되면 이 개관의 인용을 단어 단위로 대조한다.</p>
+
+    <div class="back"><a href="./index.html">← 학개 서재로</a> · <a href="./parsing/ch01.html">원어 연구 표본(1:1–4) →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 학개서 종합 연구(책 신학·전체 조망) — 3-문서 구조의 첫 문서.<br>
+    관찰 출처: Jacobs(NICOT 2017)·Hill(TOTC 2012) 직접 확인분. Meyers·Kessler·Petersen·Wolff·Berquist는 두 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 4판 정본 및 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+</body>
+</html>

@@ -17,7 +17,7 @@
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-22"
+    updated: "2026-07-20"
   },
   sections: [
     {
@@ -37,14 +37,14 @@ window.SITE_CATALOG = {
           volumes: 14
         },
         {
-          id: "hosea",
-          path: "ot/hosea/index.html",
-          title: "호세아서 연구 노트",
-          original: "הוֹשֵׁעַ",
+          id: "haggai",
+          path: "ot/haggai/index.html",
+          title: "학개 심층 연구",
+          original: "חַגַּי",
           script: "heb",
-          meta: "일곱 주석 종합 — 종합 노트 1편(단일 문서) · 배경 연구 · 14장 절 단위 주해 · 신학 · 상호 참조 · 호세아서와 토라 · 복음적 해석 · 쟁점 대조 · Kidner·Goldingay·Hubbard·Dearman·Keil-Delitzsch·Stuart·Moon",
-          desc: "고멜과의 혼인 서사에서 심판과 소생까지, 호세아서 열네 장을 일곱 주석으로 종합했다. 히브리어 병기와 주석가 칩으로 문장 단위 출처를 표시하고, 언약·혼인·지식의 축을 따라 배경·주해·신학·토라 연관·복음적 해석을 한 문서에 담았다.",
-          volumes: 7
+          meta: "3-문서 구조 — 개관 1편 · 장별 심층연구 2편(1·2장) · 원어 융합 표본(1:1–4) · Jacobs·Hill 대조",
+          desc: "넉 달의 예언으로 멈춘 성전 공사를 다시 세운 책. 책의 신학과 전체 개관을 갖추고, 원어는 파싱과 인터라이너를 한 문서로 융합한다.",
+          volumes: 4
         }
       ]
     },
@@ -60,18 +60,7 @@ window.SITE_CATALOG = {
       label: "신학 연구",
       original: "Θεολογία",
       script: "grk",
-      studies: [
-        {
-          id: "reformed",
-          path: "theology/reformed/index.html",
-          title: "개혁신학 연구 아카이브",
-          original: "Reformata Semper Reformanda",
-          script: "lat",
-          meta: "개혁파 정통 ⇄ 바르트 신정통 대조 — 4대 조직신학(칼빈 기독교강요·벌코프 조직신학·바빙크 개혁교의학 개요·바르트 교회교의학) · 신조 모음 · 인물 · 신학사 · 주제 대조",
-          desc: "개혁파 정통과 칼 바르트의 신정통주의를 나란히 읽는 교육 아카이브. 네 권의 조직신학을 장·절 단위로 펼치고, 신앙고백서와 신학사, 인물·주제 대조를 데이터로 엮었다.",
-          volumes: 4
-        }
-      ]
+      studies: []
     }
   ]
 };

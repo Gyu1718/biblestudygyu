@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학개 1장 심층 연구 — 성전을 건축하라</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%97%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 학개 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">학개 1장 심층 연구</div>
+  <div class="brand-sub">성전을 건축하라</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html" aria-current="page">1</a>
+    <a href="#" title="준비 중">2</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 표제와 수신자 (1:1)</a>
+  <a class="lv1" href="#s2">2. "이 백성"의 말 (1:2)</a>
+  <a class="lv1" href="#s3">3. 폐허와 판벽 (1:3–4)</a>
+  <a class="lv1" href="#s4">4. 너희 길을 살펴보라 (1:5–6)</a>
+  <a class="lv1" href="#s5">5. 올라가 건축하라 (1:7–11)</a>
+  <a class="lv1" href="#s6">6. 응답 (1:12–15)</a>
+  <a class="lv1" href="#s7">7. 상호 참조 총람</a>
+  <a class="lv1" href="#s8">8. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">עֲלוּ הָהָר … וּבְנוּ הַבָּיִת</div>
+    <h1>학개 1장 · 성전을 건축하라</h1>
+    <p class="sub">다리오 제이년 여섯째 달. 한 논쟁이 열리고, 스물세 날 만에 멈춘 공사가 다시 선다.</p>
+    <p class="meta">1:1 표제 · 1:2–11 논쟁 · 1:12–15 응답 · Jacobs(NICOT)·Hill(TOTC) 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">J</span> Jacobs NICOT 2017</span>
+    <span><span class="c t">H</span> Hill TOTC 2012</span>
+    <span><span class="c k">B</span> Baldwin(Hill 재인용)</span>
+    <span><span class="c b">M</span> Meyers(Jacobs 재인용)</span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). 개역개정은 4판 정본 대조 전이며, 본문은 히브리어 표제어와 개역개정 표현을 함께 제시하되 인용은 <code>krv_hag.json</code> 확보 시 단어 단위로 교정한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">표제 하나와 논쟁 하나, 그리고 그 논쟁의 결과.</div>
+    </div>
+    <p><span class="c f">J</span> 첫 대단락 1:1–15는 표제(1:1)에 이어 두 소단락으로 나뉜다. 성전 건축을 둘러싼 <strong>논쟁</strong>(1:2–11)과 그 <strong>논쟁의 결과</strong>(1:12–15)다. 논쟁은 사자 형식 "만군의 여호와가 이같이 말씀하시되"(1:2)로 열려, 백성이 인용된 관점을 내고 야훼의 반박이 1:3–11에서 이어지며, 가뭄 보고로 맺힌다.</p>
+    <p><span class="c f">J</span> 반박부의 뼈대는 두 권면이다. 둘 다 "너희 길을 살펴보라"(<span class="hw">שִׂימוּ לְבַבְכֶם</span>, 1:5·7)로 시작하며, 앞은 수확의 헛수고를(1:5–6), 뒤는 건축 명령과 그 이유를(1:7–11) 든다. 결과부(1:12–15)에서 지도자와 남은 자가 순종하고, 야훼가 그들의 영을 격동시켜 스물넷째 날 공사가 시작된다.</p>
+    <table>
+      <caption>표 1. 1장의 흐름과 수신자</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th><th>수신자</th></tr></thead>
+      <tbody>
+        <tr><td class="head">표제</td><td>1:1</td><td>날짜·전달·수신자</td><td>스룹바벨·여호수아</td></tr>
+        <tr><td class="head">논쟁 ①</td><td>1:2</td><td>"때가 이르지 아니하였다"</td><td>이 백성(인용)</td></tr>
+        <tr><td class="head">논쟁 ②</td><td>1:3–11</td><td>반박 — 두 권면과 가뭄</td><td>이 백성</td></tr>
+        <tr><td class="head">결과</td><td>1:12–15</td><td>순종·경외·격동·착수</td><td>지도자·남은 자</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">בְּיַד־חַגַּי</div>
+      <div class="eyebrow">1:1</div>
+      <h2>1. 표제와 수신자</h2>
+      <div class="gloss">베야드-하까이 — 학개의 손으로 말미암아</div>
+    </div>
+
+    <div class="vs" id="v1a">
+      <span class="ref">1:1a — 삼중 날짜</span>
+      <p><span class="hw">בִּשְׁנַת שְׁתַּיִם לְדָרְיָוֶשׁ … בַּחֹדֶשׁ הַשִּׁשִּׁי בְּיוֹם אֶחָד</span>. 연(年)+월(月)+일(日)의 <strong>삼중 날짜 형식</strong>이다. <span class="c f">J</span> 학개의 날짜 형식은 포로기 이전형과 이후형이 섞여 있고, 1:1은 옛 "연+월+일" 형에 예언자-말씀 형식이 확장으로 붙었다. <span class="c t">H</span> "그 달 초하루"는 초승달, 곧 월삭 축일이며(민 10:10), 여섯째 달은 가을 추수기(양력 8~9월경)로 다리오 제이년, 주전 520년에 해당한다.</p>
+    </div>
+
+    <div class="vs" id="v1b">
+      <span class="ref">1:1b — 전달과 수신자</span>
+      <p><strong>전달 형식.</strong> <span class="hw">הָיָה דְבַר־יְהוָה בְּיַד־חַגַּי הַנָּבִיא</span>(여호와의 말씀이 학개의 손으로 말미암아 임하니라). <span class="c f">J</span> "손으로 말미암아"(<span class="hw">בְּיַד</span>)는 예언자를 전달의 <em>도구</em>로 세운다. 같은 형식이 2:1에 다시 오고, 2:10·2:20은 "학개<b>에게</b>"(<span class="hw">אֶל</span>)로 바뀌어 예언자를 <em>수령자</em>로 세운다.</p>
+      <p><strong>수신자.</strong> 스룹바벨(총독)과 여호수아(대제사장) 이인이다. <span class="c f">J</span> 두 사람은 혈통(아들)을 먼저, 직함을 뒤에 두는 같은 형식으로 소개되며, 이 소개는 포로와 하나님의 신실하심을 함께 상기시킨다. <span class="c f">J</span> 수신자에 <strong>백성이 빠져</strong> 있어(1:12·14와 대비) 첫머리부터 지도자에게 향한다.</p>
+      <p><strong>이름들.</strong> <span class="hw">זְרֻבָּבֶל</span>(스룹바벨)은 아카드어 <i>zēr-bābili</i>("바벨의 씨")와 이어진다. <span class="c t">H</span> 스알디엘의 아들이자 여호야긴의 손자로 다윗계이며(마 1:12), 대상 3:17–19은 그를 브다야의 아들로 적어 계대혼·입양의 문제를 남긴다. <span class="c t">H</span> 여호수아는 587년에 끌려간 여호사닥의 아들로 레위 계열이다(대상 6:15).</p>
+    </div>
+
+    <div class="vs" id="v1c">
+      <span class="ref">1:1 — 총독(파하)</span>
+      <p><span class="hw">פַּחַת יְהוּדָה</span>(파하트 예후다, 유다 총독). <span class="c t">H</span> 페하(<span class="hw">פֶּחָה</span>)는 앗수르 차용어로, 포로기 전후 모두 쓰인 느슨한 관직명이다. "유다 총독"이라는 표현은 <strong>학개만</strong> 스룹바벨에게 쓴다(1:1·14; 2:2·21). <span class="c f">J</span> 예후드가 정식 속주였는지, 느헤미야 이전 지도자에게 이 칭호를 붙일 수 있는지에는 논쟁이 있으며, 스룹바벨(예후드 총독)과 탓드내(강 서편 사트라피 총독)가 함께 총독일 수 있다(스 5:3·6).</p>
+    </div>
+
+    <div class="note"><span class="tt">저자 정체성</span><span class="c f">J</span> 학개가 제의 예언자였는지, 제사장 계열이었는지, 정치적 이념가였는지에는 논쟁이 있다. 성전 재건을 향한 열의는 제의 예언자설의 근거가 되었으나, 그를 늘 "선지자"로 부르는 표지와 사자 형식(1:2·5·7; 2:6·11)이 이를 견제한다. <span class="c f">J</span> 확실한 것은 그가 성전 문제를 다루려는 예언자이며, 성전을 둘러싸고 관점이 갈리는 청중을 향해 말한다는 점이다.</p></div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">הָעָם הַזֶּה</div>
+      <div class="eyebrow">1:2</div>
+      <h2>2. "이 백성"의 말</h2>
+      <div class="gloss">하암 하제 — 논쟁의 개시</div>
+    </div>
+
+    <div class="vs" id="v2a">
+      <span class="ref">1:2a — 사자 형식과 논쟁</span>
+      <p><span class="hw">כֹּה אָמַר יְהוָה צְבָאוֹת</span>(만군의 여호와가 이같이 말씀하시되). <span class="c f">J</span> 이 사자 형식이 1:2–11의 <strong>논쟁(disputation)</strong>을 연다. 논쟁은 경쟁하는 관점의 교차를 담으며, 여기서는 백성의 관점(2절)과 이를 반박하는 야훼의 관점(3–11절)이 맞선다.</p>
+    </div>
+
+    <div class="vs" id="v2b">
+      <span class="ref">1:2b — "이 백성"과 "때"</span>
+      <p><span class="hw">הָעָם הַזֶּה</span>(이 백성). <span class="c f">J</span> "이 백성"은 공동체 전체를 가리키며, 하나님과의 관계에서 쓰일 때 <strong>긴장·불만의 어감</strong>을 띤다. 학개는 이 무리를 뒤에서 "남은 자"(<span class="hw">שְׁאֵרִית הָעָם</span>, 1:12·14), "이 땅 백성"(2:4)으로도 부른다. 집합명사 <span class="hw">הָעָם</span>(단수)에 술어 <span class="hw">אָמְרוּ</span>가 <strong>복수</strong>로 호응한다.</p>
+      <p><span class="hw">לֹא עֶת־בֹּא … עֵת</span>("때가 이르지 아니하였다"). <span class="c f">J</span> 백성의 "때가 아니다"에는 실용적 핵심이 있다. 가뭄과 헛수고로 여력이 없다는 판단이다. 여기에 신학적 함의도 겹친다. 렘 25:11–12; 29:10의 칠십 년 회복, 곧 <strong>"정한 때"</strong>가 아직 이르지 않았다는 인식이다(시 102:13의 "정한 때"). <span class="c f">J</span> 성전 파괴를 587/6년으로 잡으면 칠십 년의 끝은 약 517년이 되어, 520년의 학개 시점에서는 "아직"이라는 셈이 성립한다. 예언자는 이 논리를 1:5–11로 되받는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">חָרֵב</div>
+      <div class="eyebrow">1:3–4</div>
+      <h2>3. 폐허와 판벽</h2>
+      <div class="gloss">하레브 — 황폐한 채 놓인 집</div>
+    </div>
+
+    <div class="vs" id="v3">
+      <span class="ref">1:3 — 말씀이 다시</span>
+      <p><span class="hw">וַיְהִי דְּבַר־יְהוָה בְּיַד־חַגַּי הַנָּבִיא לֵאמֹר</span>. <span class="c f">J</span> 1:3은 전달의 통로("학개의 손으로 말미암아")를 다시 밝히되 <strong>수신자를 명시하지 않는다</strong>(1:1과 대비). 서사 연결어 <span class="hw">וַיְהִי</span>가 1절의 <span class="hw">הָיָה</span>를 이어받아 다음 야훼 발언을 도입한다.</p>
+    </div>
+
+    <div class="vs" id="v4">
+      <span class="ref">1:4 — 수사 의문</span>
+      <p><span class="hw">הַעֵת לָכֶם אַתֶּם לָשֶׁבֶת בְּבָתֵּיכֶם סְפוּנִים וְהַבַּיִת הַזֶּה חָרֵב</span>. 의문 관사가 붙은 <span class="hw">הַעֵת</span>("때냐?")는 답을 "아니오"로 유도하는 <strong>수사 의문</strong>으로, 2절 백성의 "때가 아니다"를 되받는다. 강조 대명사 <span class="hw">אַתֶּם</span>(너희가)이 판벽한 집의 "너희"와 폐허가 된 "이 집"을 맞세운다.</p>
+      <p><strong>판벽(<span class="hw">סָפַן</span>).</strong> <span class="c t">H</span> 칼 수동분사 <span class="hw">סְפוּנִים</span>은 희귀 어근으로, 성경에 왕상 6:9·15; 7:3과 학 1:4뿐이다. 솔로몬 성전의 판벽·천장 문맥과 겹친다. "판벽한"은 화려한 장식이 아니라 <strong>지붕을 덮어 완성된</strong> 집에 가깝고, 대비는 지붕까지 갖춘 백성의 집과 지붕도 없는 여호와의 집이다.</p>
+      <p><strong>폐허(<span class="hw">חָרֵב</span>).</strong> <span class="c t">H</span> 이 낱말은 예레미야 33:10–12의 예루살렘 "황폐한 곳" 약속과 같은 말을 되울린다. 학개는 1:9에서 이 어근을 다시 쓴다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">שִׂימוּ לְבַבְכֶם</div>
+      <div class="eyebrow">1:5–6</div>
+      <h2>4. 너희 길을 살펴보라</h2>
+      <div class="gloss">시무 레바브켐 — 첫 권면과 헛수고</div>
+    </div>
+
+    <div class="vs" id="v5">
+      <span class="ref">1:5 — 전환과 명령</span>
+      <p><span class="hw">וְעַתָּה כֹּה אָמַר יְהוָה צְבָאוֹת שִׂימוּ לְבַבְכֶם עַל־דַּרְכֵיכֶם</span>. <span class="c f">J</span> "그리고 이제"(<span class="hw">וְעַתָּה</span>)가 논쟁을 참여자의 관점에서 논증으로 넘긴다. 이 불변화사는 반성을 미루지 말고 지금 하라는 즉시성을 띠기도 한다. <span class="hw">שִׂימוּ לְבַבְכֶם</span>("너희 마음을 너희 길에 두라")는 1:7과 2:15·18에서 되풀이되는 이 책의 반복 장치다.</p>
+    </div>
+
+    <div class="vs" id="v6">
+      <span class="ref">1:6 — 다섯 겹의 헛수고</span>
+      <p><span class="c f">J</span> 예언자는 헛수고의 경험을 증거로 든다. 많이 뿌려도 적게 거두고, 먹어도 배부르지 않고, 마셔도 흡족하지 않으며, 입어도 따뜻하지 않고, 삯을 <strong>구멍 난 주머니</strong>에 넣는다(1:6). <span class="c f">J</span> 이 헛수고의 illustration이 뒤의 논증을 떠받친다. 순종한 자에게 복을, 불순종한 자에게 좌절을 주는 보응의 결이 신 28:1–3과 28:15–30의 대비를 배경으로 깔린다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">וּבְנוּ הַבַּיִת</div>
+      <div class="eyebrow">1:7–11</div>
+      <h2>5. 올라가 건축하라</h2>
+      <div class="gloss">우베누 하바이트 — 세 명령과 그 이유</div>
+    </div>
+
+    <div class="vs" id="v78">
+      <span class="ref">1:7–8 — 세 명령과 두 약속</span>
+      <p><span class="c f">J</span> 1:7이 권면(<span class="hw">שִׂימוּ לְבַבְכֶם</span>)을 되풀이하고, 1:8이 세 명령을 선형으로 잇는다. <strong>올라가라</strong>(<span class="hw">עֲלוּ</span>), <strong>나무를 가져오라</strong>(<span class="hw">הֲבֵאתֶם עֵץ</span>), <strong>성전을 건축하라</strong>(<span class="hw">וּבְנוּ הַבָּיִת</span>). 미뤄 온 정지 상태에서 활동으로의 전환을 요구한다.</p>
+      <p><strong>기쁨(<span class="hw">רָצָה</span>).</strong> <span class="c f">J</span> 건축의 목적절 "내가 그것으로 기뻐하리라"의 동사 <span class="hw">רָצָה</span>는 제의 문맥에서 하나님이 제물을 <em>열납</em>하는 것을 뜻한다(레 1:3–4; 7:18; 22:23·27). 제물이 자동으로 기쁨을 끌어내지 않으며, 열납될 만한 제물에 그 기쁨이 주어진다. 성전 재건도 그 열납의 자리에 놓인다.</p>
+      <p><strong>영광(<span class="hw">וְאֶכָּבֵד</span>).</strong> <span class="c f">J</span> "내가 영광을 받으리라"는 니팔 미완료로, 수동 "영광을 받다"로 읽는다. 폐허가 된 성전은 하나님께 수치이며 지나는 이의 조롱거리가 된다(왕상 9:8; 말 1:6). 하나님의 영광은 성전의 명성이 아니라 그 존재에 달렸다. <span class="c t">H</span> 하나님은 그를 경외하는 이를 기뻐하시며(시 147:11), 그 경외는 성전을 재건하라는 부름에 대한 자원하는 순종으로 드러난다. 순종 속에서 하나님이 영광을 받는 까닭은 그것이 열방 가운데 그 이름이 높여지는 길이기 때문이다(삼상 15:22; 말 1:11).</p>
+    </div>
+
+    <div class="vs" id="v9">
+      <span class="ref">1:9 — "내가 불어 버렸다"</span>
+      <p><span class="hw">וְנָפַחְתִּי בוֹ</span>("내가 그것을 불어 버렸다"). <span class="c f">J</span> 많이 바랐으나 적었고, 집에 들여도 하나님이 불어 버렸다. 동사 <span class="hw">נָפַח</span>("불다")의 뜻이 갈려 두 해석이 선다. 하나는 하나님이 바람으로 소출을 날려 흩는 심판의 이미지이고, 다른 하나는 들여온 것이 시들고 말라 더 줄어드는 이미지다. <span class="c f">J</span> 두 읽기가 모두 본문의 지지를 받는다. 그 이유는 명시된다. 각자 자기 집으로 달려가는 동안 <strong>하나님의 집이 황폐한 채</strong> 놓였기 때문이다.</p>
+    </div>
+
+    <div class="vs" id="v1011">
+      <span class="ref">1:10–11 — 하늘과 땅이 거두다</span>
+      <p><span class="c f">J</span> 하늘이 이슬을, 땅이 소출을 거두고, 하나님이 땅과 산, 곡식과 새 포도주와 기름, 사람과 짐승과 모든 수고에 <strong>가뭄</strong>을 불렀다(1:10–11). 하나님이 자연을 순종을 확보하는 도구로 쓰며(신 28), 이 보응은 공동체를 하나로 보아 일부의 행위가 전체의 운명을 가른다.</p>
+      <p><strong>이슬(<span class="hw">טַל</span>).</strong> <span class="c t">H</span> 개역개정처럼 MT의 "이슬"을 지키는 편이 낫다(BHS는 "비"를 제안). 이슬은 복의 상징이면서(잠 19:12; 호 14:5), 늦여름·초가을 곡식이 마르지 않게 하는 실질적 요소였다. <span class="c k">B</span> Baldwin의 관찰이 이 대목을 요약한다. "천지는 창조주의 말씀에 순종했으나 그의 백성은 그러지 않았다"(Hill 재인용). <span class="c t">H</span> 백성은 변명할 수 없었다. 신 28:24의 언약 저주와 아모스 4:6–10의 재난 경고가 이미 알려져 있었기 때문이다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 가뭄의 범위</span><span class="c b">M</span> Meyers는 1:10의 전치사 <span class="hw">מִן</span>을 부분 소유격으로 읽어 하늘이 이슬을 "일부" 거둔 <strong>부분 가뭄</strong>으로 본다. Verhoef는 설명적 <span class="hw">מִן</span>("곧")으로 본다. 두 견해 모두 Jacobs가 재인용한다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="heb">אֲנִי אִתְּכֶם</div>
+      <div class="eyebrow">1:12–15</div>
+      <h2>6. 응답</h2>
+      <div class="gloss">아니 이트켐 — "내가 너희와 함께하노라"</div>
+    </div>
+
+    <div class="vs" id="v12">
+      <span class="ref">1:12 — 순종과 경외</span>
+      <p><span class="c t">H</span> 스룹바벨과 여호수아, 백성의 남은 자가 <strong>순종했다</strong>. 그들은 학개의 메시지를 "여호와의 음성"으로 들었다. <span class="c t">H</span> 이 순종의 동사는 학개에서 <strong>단 한 번</strong> 쓰이며, 예언자의 성공을 재는 척도가 된다. 구약 예언자의 말은 흔히 귀에 닿지 못했다. 이어 그들이 여호와를 <strong>경외했다</strong>.</p>
+    </div>
+
+    <div class="vs" id="v13">
+      <span class="ref">1:13 — "내가 너희와 함께"</span>
+      <p><span class="hw">אֲנִי אִתְּכֶם נְאֻם־יְהוָה</span>("내가 너희와 함께하노라"). <span class="c t">H</span> 이 언약 관계의 형식은 성전 재건을 향한 하나님의 인격적 임재와 지지를 확언한다(창 26:3; 사 41:10; 43:5; 렘 30:11). <span class="c t">H</span> 학개는 이사야의 격려(사 43:5)를 염두에 두고, 재건을 완성으로 이끄시려는 하나님의 관심을 알렸을 수 있다.</p>
+    </div>
+
+    <div class="vs" id="v14">
+      <span class="ref">1:14 — 영을 격동하심</span>
+      <p><span class="hw">וַיָּעַר יְהוָה אֶת־רוּחַ</span>("여호와께서 …의 영을 격동시키니"). <span class="c t">H</span> "격동하다"의 어근은 "깨우다, 일으키다, 움직이게 하다"로, 하나님이 사람을 일으켜 자기 목적을 이루게 하는 주권적 활동에 자주 붙는다(스 1:1; 사 41:25; 렘 51:1·11). <span class="c t">H</span> 스가랴처럼 학개도 하나님의 영과 사람의 영 사이의 역동을 인식한다(2:5; 슥 4:6). 그들이 와서 만군의 여호와, 그들의 하나님의 집에서 일했다.</p>
+      <div class="note"><span class="tt">응답의 순서</span><span class="c t">H</span> 첫 설교의 응답은 순종(1:12) → 경외(1:12) → 일(1:14)의 순서를 밟는다. 예배가 봉사로 이어지는 성경의 형태다. 시내산의 이스라엘도 모세의 지시에 순종해 하나님의 임재를 준비했고(출 19:14), 형식을 갖춘 예배(출 24:1)가 성막 건축을 위한 봉헌으로 이어졌다(출 25:2–3).</div>
+    </div>
+
+    <div class="vs" id="v15">
+      <span class="ref">1:15 — 스물넷째 날</span>
+      <p><span class="c f">J</span> 1:15의 날짜(여섯째 달 스물넷째 날, 다리오 제이년)는 응답자들이 격동되어 성전 일을 시작한 시점을 표시하며, 첫 단락을 닫는다. <span class="c f">J</span> 메시지를 받은 지 약 <strong>스물세 날</strong> 만에 공동체가 방치에서 착수로 옮겨 간, 빠른 이동을 보여 준다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>7. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 1장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:1</td><td>민 10:10</td><td>월삭(초하루)의 축일</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:2</td><td>렘 25:11–12; 29:10; 시 102:13</td><td>칠십 년 회복 · "정한 때"</td><td><span class="c f">J</span></td></tr>
+        <tr><td class="head">1:4</td><td>왕상 6:9·15; 7:3</td><td>판벽(<span class="hw">סָפַן</span>) — 솔로몬 성전</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:4·9</td><td>렘 33:10–12</td><td>폐허(<span class="hw">חָרֵב</span>) — 황폐한 곳 회복</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:6·11</td><td>신 28:1–3·15–30</td><td>순종의 복 · 불순종의 저주(헛수고·가뭄)</td><td><span class="c f">J</span></td></tr>
+        <tr><td class="head">1:8</td><td>레 1:3–4; 왕상 9:8; 말 1:6; 삼상 15:22</td><td>열납(<span class="hw">רָצָה</span>) · 성전과 하나님의 영광</td><td><span class="c f">J</span> <span class="c t">H</span></td></tr>
+        <tr><td class="head">1:10</td><td>신 28:24; 암 4:6–10; 잠 19:12; 호 14:5</td><td>이슬·가뭄 — 언약 저주와 복의 상징</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:13</td><td>창 26:3; 사 41:10; 43:5; 렘 30:11</td><td>"내가 너희와 함께" — 임재 형식</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:14</td><td>스 1:1; 사 41:25; 슥 4:6</td><td>영을 격동하심 — 하나님의 주권</td><td><span class="c t">H</span></td></tr>
+        <tr><td class="head">1:12–14</td><td>출 19:14; 24:1; 25:2–3</td><td>순종→예배→봉사의 형태(시내 병행)</td><td><span class="c t">H</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 8 ═══════ -->
+  <section class="part" id="s8">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>8. 신학 종합</h2>
+    </div>
+
+    <h3>① 논쟁이라는 형식</h3>
+    <p><span class="c f">J</span> 1장은 신학을 명제로 던지는 대신 <strong>대화</strong>로 진행한다. 사자 형식이 논쟁을 열고, 백성의 인용된 관점과 야훼의 반박이 맞선다. 백성의 "때가 아니다"가 먼저 제 목소리를 얻고, 예언자의 응답이 그 위에 선다. 신학이 청중의 실제 반론을 통과하며 세워진다.</p>
+
+    <h3>② "때"의 신학</h3>
+    <p>백성의 "때가 이르지 아니하였다"는 게으름의 변명으로만 읽히지 않는다. <span class="c f">J</span> 칠십 년 회복의 "정한 때"가 아직 이르지 않았다는 종말론적 계산이 그 배후에 있다(렘 25; 29; 시 102:13). 가뭄과 헛수고는 그들에게 종말의 도래를 부정하는 표징으로 보였다. 예언자는 같은 <span class="hw">עֵת</span>("때")를 되받아, 판벽집에 사는 "이 때"(1:4)를 문제 삼으며 계산의 방향을 돌린다.</p>
+
+    <h3>③ 헛수고의 문법</h3>
+    <p><span class="c f">J</span> 다섯 겹의 헛수고(1:6)와 가뭄(1:10–11)은 신명기 28장의 저주가 공동체의 경제 안에서 작동하는 모습이다. <span class="c t">H</span> 천지는 창조주의 말씀에 순종했으나 백성은 그러지 않았다는 Baldwin의 요약(Hill 재인용)이 이 대비를 압축한다. 임재는 복으로도, 곤경으로도 드러난다.</p>
+
+    <h3>④ 영광과 기쁨 — 성전의 존재</h3>
+    <p><span class="c f">J</span> 성전 재건은 하나님의 <em>기쁨</em>(<span class="hw">רָצָה</span>)과 <em>영광</em>(<span class="hw">כָּבֵד</span>)에 잇닿는다. 폐허가 된 성전은 하나님께 수치이고(왕상 9:8; 말 1:6), 그 존재가 하나님의 명예를 떠받친다. <span class="c t">H</span> 순종 속에서 하나님이 영광을 받는 까닭은 그 순종이 열방 가운데 그 이름을 높이는 길이기 때문이다.</p>
+
+    <h3>⑤ "내가 너희와 함께"</h3>
+    <p><span class="c t">H</span> 재건의 부름 한가운데 언약의 확언이 놓인다(1:13). 하나님의 인격적 임재가 공사를 떠받치며, 이는 족장 전승과 포로기 예언의 "내가 너희와 함께"(창 26:3; 사 41:10; 43:5; 렘 30:11)를 이어받는다.</p>
+
+    <h3>⑥ 영을 격동하심 — 예배에서 봉사로</h3>
+    <p><span class="c t">H</span> 착수는 인간의 결심 이전에 하나님이 지도자와 남은 자의 영을 <strong>격동시킨</strong> 데서 온다(1:14; 스 1:1; 슥 4:6). 응답의 순서 순종→경외→일이 예배가 봉사로 흐르는 형태를 이루며, 시내산의 이스라엘을 되울린다(출 19:14; 24:1; 25:2–3).</p>
+
+    <div class="back"><a href="./overview.html">← 종합 연구(개관)</a> · <a href="./parsing/ch01.html">원어 연구(1:1–4) →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 학개 1장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Jacobs(NICOT 2017)·Hill(TOTC 2012) 직접 확인분. Baldwin·Meyers·Verhoef는 두 주석의 재인용으로 표기. 개역개정 4판 정본 및 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+</body>
+</html>

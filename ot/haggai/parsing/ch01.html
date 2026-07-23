@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학개 1장 원어 연구 — 파싱·인터라이너 융합 (형식 검증용 표본 1:1–4)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   원어 연구 — 파싱 + 인터라이너 융합 (표본)
+   기존 templates/parsing.css + templates/interlinear.css 를 한 문서로 합침.
+   층위:  ① 절 개역개정 head  ② 축자 대역 띠(RTL)  ③ 7열 전수 분석표
+          ④ 핵심어 심화 카드(.lex)  ⑤ 구문·번역 관찰(.vnote)
+   색·서체는 site theme 변수와 동일. (표본은 오프라인 확인용으로 인라인)
+   ============================================================ */
+:root{
+  --ink:#20242b; --ink-soft:#59606b; --paper:#fbfaf6; --panel:#ffffff; --card:#ffffff; --band:#f3f1ea;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --lapis-soft:#2f6f9e;
+  --ochre:#a8823c; --ochre-soft:#c19a4e; --line:#e0dcd0;
+  --root:#6a4a6a; --parse:#2f6f5e;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all}
+.frame{display:grid;grid-template-columns:240px 1fr;max-width:1180px;margin:0 auto;min-height:100vh}
+
+/* ── 좌측 목차 ── */
+nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;
+  background:linear-gradient(var(--lapis-deep),var(--lapis));color:#eaf1f7;padding:1.6rem 1.15rem 3rem;font-family:var(--sans)}
+.site-nav{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.1rem;font-size:.72rem}
+.site-nav a{color:#a9c4da;text-decoration:none}
+.site-nav a:hover{color:#fff}
+.brand{font-family:var(--serif);font-weight:900;font-size:1rem;line-height:1.4;color:#fff}
+.brand-sub{font-size:.62rem;letter-spacing:.16em;color:#89a9c4;margin-top:.15rem}
+.toc-h{font-size:.62rem;letter-spacing:.16em;color:#89a9c4;margin:1.4rem 0 .5rem;text-transform:uppercase}
+.vl{display:block;color:#bcd3e6;text-decoration:none;font-size:.82rem;padding:.22rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.vl:hover{color:#fff}
+.vl .n{display:inline-block;min-width:2.4rem;color:var(--ochre-soft);font-weight:700;font-size:.72rem}
+
+/* ── 본문 ── */
+main{padding:2.4rem 2.6rem 4rem;max-width:60rem;width:100%}
+.hero{border-bottom:3px double var(--line);padding-bottom:1.4rem;margin-bottom:1.6rem}
+.hero .heb-title{font-family:var(--heb);font-size:2.5rem;color:var(--lapis);direction:rtl;line-height:1.45}
+.hero h1{font-size:1.5rem;font-weight:900;margin-top:.5rem}
+.hero .sub{color:var(--ink-soft);font-size:.95rem;margin-top:.5rem}
+.hero .meta{font-family:var(--sans);font-size:.76rem;color:var(--ochre);margin-top:.7rem;letter-spacing:.01em}
+
+/* ── 표본 배너 · 정직성 고지 ── */
+.specimen{background:#eef3f7;border:1px solid #c9dcea;border-left:4px solid var(--lapis);border-radius:8px;
+  padding:.85rem 1.1rem;margin-bottom:1.2rem;font-family:var(--sans);font-size:.82rem;color:var(--lapis-deep)}
+.specimen b{font-weight:700}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:8px;
+  padding:.9rem 1.1rem;margin-bottom:1.8rem;font-family:var(--sans);font-size:.8rem;line-height:1.75;color:#6b552a}
+.caveat .tt{font-weight:700;letter-spacing:.12em;font-size:.7rem;color:var(--ochre);display:block;margin-bottom:.35rem}
+.caveat ul{margin:.3rem 0 0 1.1rem}
+.caveat li{margin:.2rem 0}
+
+/* ── 범례 ── */
+.legend{background:var(--band);border:1px solid var(--line);border-radius:9px;padding:1rem 1.2rem;margin-bottom:2rem;font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);line-height:1.8}
+.legend b{color:var(--ink)}
+.legend .row{margin:.15rem 0}
+.legend .c{display:inline-grid;place-items:center;width:1.2rem;height:1.2rem;border-radius:50%;font-size:.66rem;font-weight:700;color:#fff;vertical-align:middle;margin-right:.25rem}
+.legend .tag{display:inline-block;font-weight:700;font-size:.66rem;padding:.06rem .4rem;border-radius:3px;color:#fff;margin-right:.15rem}
+.legend .tag.p{background:var(--parse)}.legend .tag.r{background:var(--root)}
+.legend .star{color:var(--ochre);font-weight:700}
+.c.k{background:#7a5a38}.c.f{background:#37665a}.c.h{background:#8a4658}.c.t{background:#3c5a83}.c.b{background:#655a8c}
+
+/* ── 절 블록 (인터라이너 뼈대) ── */
+.verse{margin:0 0 2.4rem;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--card)}
+.verse-head{display:flex;align-items:center;gap:.7rem;background:linear-gradient(#f6f4ee,#efece3);padding:.6rem 1.1rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.verse-head .vnum{font-family:var(--sans);font-weight:900;font-size:.82rem;color:#fff;background:var(--lapis);border-radius:5px;padding:.12rem .5rem}
+.verse-head .vkrv{font-size:.94rem;color:var(--ink);font-weight:500}
+.verse-head .krv-flag{font-family:var(--sans);font-size:.62rem;font-weight:700;color:#b06a17;background:#fbebd2;border:1px solid #e9c993;border-radius:4px;padding:.05rem .4rem;margin-left:auto}
+
+/* ② 축자 대역 띠 (RTL) */
+.inter{direction:rtl;display:flex;flex-wrap:wrap;gap:.15rem .5rem;padding:1.1rem 1.1rem .9rem;background:#fdfcf9;border-bottom:1px dashed var(--line)}
+.iw{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:2.4rem;padding:.35rem .3rem;border-radius:6px;transition:.12s}
+.iw:hover{background:#eef4f8}
+.iw.key{background:#fbf3e2}
+.iw .ih{font-family:var(--heb);font-size:1.5rem;color:var(--lapis-deep);line-height:1.5;direction:rtl}
+.iw .it{font-family:var(--sans);font-size:.66rem;color:var(--ochre);margin-top:.12rem;direction:ltr}
+.iw .ig{font-size:.75rem;color:var(--ink);margin-top:.05rem;direction:rtl;font-weight:500}
+
+/* ③ 단어별 전수 분석 표 (7열) */
+.tbl-wrap{overflow-x:auto;padding:1rem 1.1rem 1.2rem}
+table.words{width:100%;border-collapse:collapse;font-size:.82rem;min-width:660px}
+table.words th{font-family:var(--sans);font-size:.6rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);text-align:right;padding:.4rem .55rem;border-bottom:2px solid var(--line);white-space:nowrap}
+table.words th.lft,table.words td.lft{text-align:left}
+table.words th.ctr,table.words td.ctr{text-align:center}
+table.words td{padding:.5rem .55rem;border-bottom:1px solid var(--line);vertical-align:top}
+table.words tr:last-child td{border-bottom:none}
+table.words tr:hover td{background:#faf8f3}
+table.words tr.key td{background:#fdf6e9}
+table.words tr.key:hover td{background:#fbf1de}
+.w-num{font-family:var(--sans);font-size:.7rem;color:#a8a090;font-weight:700}
+.w-num .st{color:var(--ochre);font-size:.8rem}
+.w-heb{font-family:var(--heb);font-size:1.35rem;color:var(--lapis-deep);direction:rtl;white-space:nowrap;line-height:1.5}
+.w-tr{font-family:var(--sans);font-size:.72rem;color:var(--ochre);direction:ltr;white-space:nowrap}
+.w-tr .ko{display:block;color:var(--ink);font-size:.76rem;font-family:var(--serif)}
+.w-parse{font-family:var(--sans);font-size:.72rem;color:var(--parse);line-height:1.55}
+.w-lex{font-size:.78rem;line-height:1.55}
+.w-lex .lm{font-family:var(--heb);font-size:1.05rem;color:var(--ink);direction:rtl}
+.w-lex .rt{font-family:var(--heb);font-size:1.02rem;color:var(--root);direction:rtl}
+.w-lex .rt-g{font-family:var(--sans);font-size:.64rem;color:var(--root)}
+.w-gloss{font-size:.82rem;color:var(--ink);line-height:1.55}
+.w-fn{font-size:.78rem;color:var(--ink-soft);line-height:1.55}
+
+/* ④ 핵심어 심화 카드 (파싱 층) */
+.cards{padding:0 1.1rem 1.1rem}
+.cards-h{font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;color:var(--ochre);font-weight:700;margin:.2rem 0 .7rem;text-transform:uppercase}
+.lex{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1rem 1.15rem;margin:.8rem 0;box-shadow:0 1px 2px rgba(22,53,79,.04)}
+.lex .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:.5rem .8rem;border-bottom:1px dashed var(--line);padding-bottom:.55rem;margin-bottom:.65rem}
+.lex .word{font-family:var(--heb);font-size:1.7rem;color:var(--lapis-deep);direction:rtl;line-height:1.2}
+.lex .translit{font-family:var(--sans);font-weight:700;font-size:.92rem;color:var(--ochre)}
+.lex .gloss{font-size:.92rem;color:var(--ink);font-weight:500}
+.lex .ref{font-family:var(--sans);font-size:.66rem;color:var(--ink-soft);margin-left:auto;white-space:nowrap;padding-top:.3rem}
+.lex dl{display:grid;grid-template-columns:5rem 1fr;gap:.35rem .8rem;font-size:.88rem}
+.lex dt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--parse);padding-top:.15rem}
+.lex dt.root{color:var(--root)}
+.lex dd{line-height:1.65}
+.lex dd .hb{font-family:var(--heb);font-size:1.05em;color:var(--root);direction:rtl;unicode-bidi:isolate;font-weight:700}
+.lex dd .pp{font-family:var(--sans);font-size:.82rem;color:var(--parse);font-weight:700}
+.lex .note{font-size:.84rem;color:var(--ink-soft);margin-top:.55rem;padding-top:.5rem;border-top:1px dotted var(--line)}
+.lex .note .c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.6rem;padding:.2em .42em;border-radius:3px;color:#fff;margin-right:.2em;vertical-align:.1em}
+
+/* ⑤ 구문·번역 관찰 */
+.vnote{background:#f5f7f9;border-top:1px solid var(--line);padding:.85rem 1.1rem;font-size:.85rem;color:var(--ink-soft);line-height:1.7}
+.vnote b{color:var(--lapis-deep)}
+.vnote .c{display:inline-grid;place-items:center;width:1.15rem;height:1.15rem;border-radius:50%;font-family:var(--sans);font-size:.64rem;font-weight:700;color:#fff;vertical-align:middle;margin-right:.1rem}
+.hb{font-family:var(--heb);direction:rtl;unicode-bidi:isolate}
+
+.back{margin-top:1.4rem;font-family:var(--sans);font-size:.82rem}
+.back a{color:var(--lapis);text-decoration:none;font-weight:700}
+.back a:hover{text-decoration:underline}
+footer{margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.75}
+
+@media (max-width:900px){
+  .frame{grid-template-columns:1fr}
+  nav.toc{position:static;height:auto;overflow:visible;padding:1.3rem 1.1rem}
+  main{padding:1.8rem 1.15rem 3rem}
+  .hero .heb-title{font-size:2rem}
+  .lex dl{grid-template-columns:1fr;gap:.15rem}
+  .lex dt{padding-top:.5rem}
+}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff}
+  main{max-width:100%;padding:0}
+  .verse,.lex{break-inside:avoid;border-color:#ccc}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc">
+  <div class="site-nav">
+    <a href="../../../index.html">← 성서 연구 서고</a>
+    <a href="../index.html">← 학개 서재</a>
+  </div>
+  <div class="brand">학개 원어 연구</div>
+  <div class="brand-sub">파싱 · 인터라이너 융합</div>
+  <div class="toc-h">1장 · 절 이동</div>
+  <a class="vl" href="#v1"><span class="n">1:1</span>표제·수신자</a>
+  <a class="vl" href="#v2"><span class="n">1:2</span>이 백성의 말</a>
+  <a class="vl" href="#v3"><span class="n">1:3</span>말씀이 다시</a>
+  <a class="vl" href="#v4"><span class="n">1:4</span>판벽한 집 vs 폐허</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="heb-title" dir="rtl">וְהַבַּיִת הַזֶּה חָרֵב</div>
+    <h1>학개 1장 · 원어 연구</h1>
+    <p class="sub">파싱(핵심어 심화)과 인터라이너(전수 분석)를 한 문서로 융합한 새 형식.</p>
+    <p class="meta">표제어 발음(로마자·한글) · 문법 · 어근 · 뜻 · 문장 기능 · 주석 칩</p>
+  </header>
+
+  <div class="specimen">
+    <b>형식 검증용 표본 — 학개 1:1–4.</b> 새 3-문서 구조의 세 번째 문서(원어)를 어떻게 짤지 확정하기 위한 표본입니다.
+    이 배치(개역개정 head → 대역 띠 → 7열 전수표 → 핵심어 카드 → 구문 관찰)를 확인하신 뒤 1:5–15와 나머지 책으로 확장합니다.
+  </div>
+
+  <div class="caveat">
+    <span class="tt">정직성 고지 — 확인 전제</span>
+    <ul>
+      <li><b>히브리어</b>: 마소라 본문 지식으로 작성. 모음·강세(테아밈)·형태는 실제 도구(STEP&nbsp;Bible·Accordance·Logos)로 <b>재확인 전제</b>. 표본은 가독성을 위해 강세 기호를 생략했습니다.</li>
+      <li><b>개역개정</b>: 4판 정본 파일이 아직 없어 <b>최선 표기</b>로 채웠습니다. <code>data/krv_hag.json</code>(느헤미야 <code>krv_neh.json</code> 형식)이 올라오면 단어 단위로 대조·교정합니다. 절마다 <span style="color:#b06a17;font-weight:700">4판 대조 필요</span> 표시.</li>
+      <li><b>주석 근거</b>: 관찰은 업로드된 Jacobs(NICOT)·Hill(TOTC)에서 직접 확인한 것만 칩으로 달았습니다. <b>Baldwin(TOTC)은 djvu에 텍스트 레이어가 없어 OCR 전까지 인용 보류</b>. 학개의 자료비평·고고학 축(Meyers &amp; Meyers AB, Kessler VTSup)은 업로드에 없어 해당 칩은 비워 둡니다.</li>
+      <li>창작(논지·문장)은 규수 님 영역입니다. 이 문서는 원어·주석의 정리·조판까지만 담습니다.</li>
+    </ul>
+  </div>
+
+  <div class="legend">
+    <div class="row"><b>주석 칩</b> — 업로드 자료에서 확인한 관찰의 출처</div>
+    <div class="row"><span class="c f">J</span> Jacobs, <i>Haggai &amp; Malachi</i> (NICOT, 2017) · 본문·비평·신학
+      &nbsp;&nbsp;<span class="c t">H</span> Hill, <i>Haggai, Zechariah, Malachi</i> (TOTC 개정판, 2012) · 문학·상호텍스트</div>
+    <div class="row"><span class="c k">B</span> Baldwin (TOTC, 1972) · 구조·경건 <i>(OCR 전까지 보류)</i>
+      &nbsp;&nbsp;<span class="c b">·</span> 자료·고고학 축 <i>(Meyers·Kessler 미확보)</i></div>
+    <div class="row" style="margin-top:.5rem"><b>표 표기</b> — <span class="tag p">문법</span> 품사·어간·인칭·성·수·상태 &nbsp; <span class="tag r">어근</span> 세 자음 어근·파생 &nbsp; <span class="star">★</span> 핵심어(아래 카드로 심화)</div>
+  </div>
+
+  <!-- ============ 1:1 ============ -->
+  <section class="verse" id="v1">
+    <div class="verse-head">
+      <span class="vnum">1:1</span>
+      <span class="vkrv">다리오 왕 제이년 여섯째 달 곧 그 달 초하루에 여호와의 말씀이 선지자 학개로 말미암아 스알디엘의 아들 총독 스룹바벨과 여호사닥의 아들 대제사장 여호수아에게 임하니라 이르시되</span>
+      <span class="krv-flag">4판 대조 필요</span>
+    </div>
+
+    <div class="inter">
+      <span class="iw"><span class="ih">בִּשְׁנַת</span><span class="it">bišnaṯ</span><span class="ig">~해에</span></span>
+      <span class="iw"><span class="ih">שְׁתַּיִם</span><span class="it">šətayim</span><span class="ig">둘(제이)</span></span>
+      <span class="iw"><span class="ih">לְדָרְיָוֶשׁ</span><span class="it">lədārəyāweš</span><span class="ig">다리오의</span></span>
+      <span class="iw"><span class="ih">הַמֶּלֶךְ</span><span class="it">hammelek</span><span class="ig">그 왕</span></span>
+      <span class="iw"><span class="ih">בַּחֹדֶשׁ</span><span class="it">baḥōḏeš</span><span class="ig">그 달에</span></span>
+      <span class="iw"><span class="ih">הַשִּׁשִּׁי</span><span class="it">haššiššî</span><span class="ig">여섯째</span></span>
+      <span class="iw"><span class="ih">בְּיוֹם</span><span class="it">bəyôm</span><span class="ig">날에</span></span>
+      <span class="iw"><span class="ih">אֶחָד</span><span class="it">ʾeḥāḏ</span><span class="ig">초하루</span></span>
+      <span class="iw"><span class="ih">לַחֹדֶשׁ</span><span class="it">laḥōḏeš</span><span class="ig">그 달의</span></span>
+      <span class="iw"><span class="ih">הָיָה</span><span class="it">hāyā</span><span class="ig">임하였다</span></span>
+      <span class="iw"><span class="ih">דְבַר־יְהוָה</span><span class="it">dəḇar-YHWH</span><span class="ig">여호와의 말씀</span></span>
+      <span class="iw"><span class="ih">בְּיַד־חַגַּי</span><span class="it">bəyaḏ-ḥaggay</span><span class="ig">학개의 손으로</span></span>
+      <span class="iw"><span class="ih">הַנָּבִיא</span><span class="it">hannāḇîʾ</span><span class="ig">그 선지자</span></span>
+      <span class="iw"><span class="ih">אֶל־זְרֻבָּבֶל</span><span class="it">ʾel-zərubbāḇel</span><span class="ig">스룹바벨에게</span></span>
+      <span class="iw"><span class="ih">בֶּן־שְׁאַלְתִּיאֵל</span><span class="it">ben-šəʾaltîʾēl</span><span class="ig">스알디엘의 아들</span></span>
+      <span class="iw key"><span class="ih">פַּחַת יְהוּדָה</span><span class="it">paḥaṯ yəhûḏā</span><span class="ig">유다 총독</span></span>
+      <span class="iw"><span class="ih">וְאֶל־יְהוֹשֻׁעַ</span><span class="it">wəʾel-yəhôšuaʿ</span><span class="ig">여호수아에게</span></span>
+      <span class="iw"><span class="ih">בֶּן־יְהוֹצָדָק</span><span class="it">ben-yəhôṣāḏāq</span><span class="ig">여호사닥의 아들</span></span>
+      <span class="iw"><span class="ih">הַכֹּהֵן הַגָּדוֹל</span><span class="it">hakkōhēn haggāḏôl</span><span class="ig">대제사장</span></span>
+      <span class="iw"><span class="ih">לֵאמֹר</span><span class="it">lēʾmōr</span><span class="ig">이르시되</span></span>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="words">
+        <thead>
+          <tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법</th><th class="lft">표제어·어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="w-num">1</td><td class="w-heb">בִּשְׁנַת</td><td class="w-tr lft">bišnaṯ<span class="ko">비쉬나트</span></td><td class="w-parse lft">전치사 בְּ + 명사·여성 단수·연계형</td><td class="w-lex lft"><span class="lm">שָׁנָה</span> 샤나 / <span class="rt">שׁנה</span> <span class="rt-g">반복하다·해(年)</span></td><td class="w-gloss lft">~해에</td><td class="w-fn lft">시간 부사구의 머리(연계)</td></tr>
+          <tr><td class="w-num">2</td><td class="w-heb">שְׁתַּיִם</td><td class="w-tr lft">šətayim<span class="ko">셰타임</span></td><td class="w-parse lft">기수 · 여성</td><td class="w-lex lft"><span class="lm">שְׁנַיִם</span> / <span class="rt-g">둘</span></td><td class="w-gloss lft">둘, 제이(년)</td><td class="w-fn lft">בִּשְׁנַת을 한정 "제이년"</td></tr>
+          <tr><td class="w-num">3</td><td class="w-heb">לְדָרְיָוֶשׁ</td><td class="w-tr lft">lədārəyāweš<span class="ko">레다르야베쉬</span></td><td class="w-parse lft">전치사 לְ + 고유명사</td><td class="w-lex lft"><span class="lm">דָּרְיָוֶשׁ</span> (페르시아어 <i>Dārayavauš</i>)</td><td class="w-gloss lft">다리오에게 속한 = 다리오의</td><td class="w-fn lft">"제이년"의 소속(다리오 치세)</td></tr>
+          <tr><td class="w-num">4</td><td class="w-heb">הַמֶּלֶךְ</td><td class="w-tr lft">hammelek<span class="ko">함멜렉</span></td><td class="w-parse lft">관사 הַ + 명사·남성 단수</td><td class="w-lex lft"><span class="lm">מֶלֶךְ</span> 멜렉 / <span class="rt">מלך</span> <span class="rt-g">다스리다</span></td><td class="w-gloss lft">그 왕</td><td class="w-fn lft">다리오의 동격</td></tr>
+          <tr><td class="w-num">5</td><td class="w-heb">בַּחֹדֶשׁ</td><td class="w-tr lft">baḥōḏeš<span class="ko">바호데쉬</span></td><td class="w-parse lft">전치사 בְּ + 관사 + 명사·남성 단수</td><td class="w-lex lft"><span class="lm">חֹדֶשׁ</span> 호데쉬 / <span class="rt">חדשׁ</span> <span class="rt-g">새롭다(초승달)</span></td><td class="w-gloss lft">그 달에</td><td class="w-fn lft">시간 부사구</td></tr>
+          <tr><td class="w-num">6</td><td class="w-heb">הַשִּׁשִּׁי</td><td class="w-tr lft">haššiššî<span class="ko">하쉬쉬</span></td><td class="w-parse lft">관사 + 서수·남성 단수</td><td class="w-lex lft"><span class="lm">שִׁשִּׁי</span> / <span class="rt">שׁשׁ</span> <span class="rt-g">여섯</span></td><td class="w-gloss lft">여섯째</td><td class="w-fn lft">호데쉬를 한정</td></tr>
+          <tr><td class="w-num">7</td><td class="w-heb">בְּיוֹם</td><td class="w-tr lft">bəyôm<span class="ko">베욤</span></td><td class="w-parse lft">전치사 בְּ + 명사·남성 단수·연계형</td><td class="w-lex lft"><span class="lm">יוֹם</span> 욤 / <span class="rt">יום</span> <span class="rt-g">날</span></td><td class="w-gloss lft">~날에</td><td class="w-fn lft">시간 부사구(연계)</td></tr>
+          <tr><td class="w-num">8</td><td class="w-heb">אֶחָד</td><td class="w-tr lft">ʾeḥāḏ<span class="ko">에하드</span></td><td class="w-parse lft">기수 · 남성 단수</td><td class="w-lex lft"><span class="lm">אֶחָד</span> / <span class="rt">אחד</span> <span class="rt-g">하나</span></td><td class="w-gloss lft">하나 = 초하루(제일일)</td><td class="w-fn lft">בְּיוֹם을 한정</td></tr>
+          <tr><td class="w-num">9</td><td class="w-heb">לַחֹדֶשׁ</td><td class="w-tr lft">laḥōḏeš<span class="ko">라호데쉬</span></td><td class="w-parse lft">전치사 לְ + 관사 + 명사</td><td class="w-lex lft"><span class="lm">חֹדֶשׁ</span> 호데쉬 / <span class="rt">חדשׁ</span></td><td class="w-gloss lft">그 달의</td><td class="w-fn lft">"초하루"의 소속</td></tr>
+          <tr><td class="w-num">10</td><td class="w-heb">הָיָה</td><td class="w-tr lft">hāyā<span class="ko">하야</span></td><td class="w-parse lft">동사 · 칼 · 완료 · 3인칭 남성 단수</td><td class="w-lex lft"><span class="lm">הָיָה</span> / <span class="rt">היה</span> <span class="rt-g">있다·되다</span></td><td class="w-gloss lft">임하였다, 있었다</td><td class="w-fn lft">주절의 술어 "말씀이 임하였다"</td></tr>
+          <tr><td class="w-num">11</td><td class="w-heb">דְבַר־יְהוָה</td><td class="w-tr lft">dəḇar-YHWH<span class="ko">데바르-여호와</span></td><td class="w-parse lft">명사·연계형 + 고유명사(신명)</td><td class="w-lex lft"><span class="lm">דָּבָר</span> 다바르 / <span class="rt">דבר</span> <span class="rt-g">말하다</span></td><td class="w-gloss lft">여호와의 말씀</td><td class="w-fn lft">הָיָה의 주어</td></tr>
+          <tr><td class="w-num">12</td><td class="w-heb">בְּיַד־חַגַּי</td><td class="w-tr lft">bəyaḏ-ḥaggay<span class="ko">베야드-하까이</span></td><td class="w-parse lft">전치사 בְּ + 명사·연계형 יָד + 고유명사</td><td class="w-lex lft"><span class="lm">יָד</span> 야드 / <span class="rt">יד</span> <span class="rt-g">손</span></td><td class="w-gloss lft">학개의 손으로(말미암아)</td><td class="w-fn lft">전달 수단(중개) 부사구</td></tr>
+          <tr><td class="w-num">13</td><td class="w-heb">הַנָּבִיא</td><td class="w-tr lft">hannāḇîʾ<span class="ko">한나비</span></td><td class="w-parse lft">관사 + 명사·남성 단수</td><td class="w-lex lft"><span class="lm">נָבִיא</span> 나비 / <span class="rt">נבא</span> <span class="rt-g">예언하다</span></td><td class="w-gloss lft">그 선지자</td><td class="w-fn lft">학개의 동격</td></tr>
+          <tr><td class="w-num">14</td><td class="w-heb">אֶל־זְרֻבָּבֶל</td><td class="w-tr lft">ʾel-zərubbāḇel<span class="ko">엘-즈룹바벨</span></td><td class="w-parse lft">전치사 אֶל + 고유명사</td><td class="w-lex lft"><span class="lm">זְרֻבָּבֶל</span> (아카드어 <i>zēr-bābili</i> "바벨의 씨")</td><td class="w-gloss lft">스룹바벨에게</td><td class="w-fn lft">말씀의 수신자 ①</td></tr>
+          <tr><td class="w-num">15</td><td class="w-heb">בֶּן־שְׁאַלְתִּיאֵל</td><td class="w-tr lft">ben-šəʾaltîʾēl<span class="ko">벤-셰알티엘</span></td><td class="w-parse lft">명사·연계형 בֵּן + 고유명사</td><td class="w-lex lft"><span class="lm">בֵּן</span> 벤 / <span class="rt">בנה</span> <span class="rt-g">짓다·아들</span></td><td class="w-gloss lft">스알디엘의 아들</td><td class="w-fn lft">스룹바벨의 부계(동격)</td></tr>
+          <tr class="key"><td class="w-num"><span class="st">★</span>16</td><td class="w-heb">פַּחַת יְהוּדָה</td><td class="w-tr lft">paḥaṯ yəhûḏā<span class="ko">파하트 예후다</span></td><td class="w-parse lft">명사·연계형 + 고유명사</td><td class="w-lex lft"><span class="lm">פֶּחָה</span> 페하 (앗수르 차용어) / <span class="rt-g">총독</span></td><td class="w-gloss lft">유다의 총독</td><td class="w-fn lft">스룹바벨의 직함(동격) — 카드↓</td></tr>
+          <tr><td class="w-num">17</td><td class="w-heb">וְאֶל־יְהוֹשֻׁעַ</td><td class="w-tr lft">wəʾel-yəhôšuaʿ<span class="ko">베엘-예호슈아</span></td><td class="w-parse lft">접속사 וְ + 전치사 אֶל + 고유명사</td><td class="w-lex lft"><span class="lm">יְהוֹשֻׁעַ</span> / <span class="rt-g">"야훼가 구원하신다"</span></td><td class="w-gloss lft">그리고 여호수아에게</td><td class="w-fn lft">말씀의 수신자 ②</td></tr>
+          <tr><td class="w-num">18</td><td class="w-heb">בֶּן־יְהוֹצָדָק</td><td class="w-tr lft">ben-yəhôṣāḏāq<span class="ko">벤-예호차닥</span></td><td class="w-parse lft">명사·연계형 + 고유명사</td><td class="w-lex lft"><span class="lm">יְהוֹצָדָק</span> / <span class="rt-g">"야훼가 의롭게 하신다"</span></td><td class="w-gloss lft">여호사닥의 아들</td><td class="w-fn lft">여호수아의 부계(동격)</td></tr>
+          <tr><td class="w-num">19</td><td class="w-heb">הַכֹּהֵן הַגָּדוֹל</td><td class="w-tr lft">hakkōhēn haggāḏôl<span class="ko">하코헨 하가돌</span></td><td class="w-parse lft">관사+명사 + 관사+형용사</td><td class="w-lex lft"><span class="lm">כֹּהֵן</span> 코헨 / <span class="rt">כהן</span> · <span class="rt">גדל</span> <span class="rt-g">크다</span></td><td class="w-gloss lft">그 대제사장</td><td class="w-fn lft">여호수아의 직함(동격)</td></tr>
+          <tr><td class="w-num">20</td><td class="w-heb">לֵאמֹר</td><td class="w-tr lft">lēʾmōr<span class="ko">레모르</span></td><td class="w-parse lft">전치사 לְ + 부정사 연계형</td><td class="w-lex lft"><span class="lm">אָמַר</span> 아마르 / <span class="rt">אמר</span> <span class="rt-g">말하다</span></td><td class="w-gloss lft">이르시되(말하기를)</td><td class="w-fn lft">직접 인용을 여는 상투구</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cards">
+      <div class="cards-h">핵심어 심화</div>
+      <div class="lex">
+        <div class="top">
+          <span class="word">פַּחַת יְהוּדָה</span>
+          <span class="translit">paḥaṯ yəhûḏā</span>
+          <span class="gloss">유다의 총독</span>
+          <span class="ref">학 1:1</span>
+        </div>
+        <dl>
+          <dt>문법</dt><dd><span class="pp">명사 연계형 + 고유명사</span> — <span class="hb">פֶּחָה</span>(페하)의 연계형 <span class="hb">פַּחַת</span>. 페르시아 속주의 행정 수장.</dd>
+          <dt class="root">어근</dt><dd>앗수르 차용어(아카드어 <i>pāḫatu</i>) — 히브리어 고유 어근이 아니라 제국 행정 용어.</dd>
+        </dl>
+        <div class="note"><span class="c t">H</span> 페하는 앗수르 차용어로, 포로기 전후 모두 쓰인 <b>느슨한 관직명</b>이다(왕하 18:24; 렘 51:23; 겔 23:6 등). "유다 총독"이라는 표현은 <b>학개만</b> 스룹바벨에게 쓴다(1:1, 14; 2:2, 21). &nbsp; <span class="c f">J</span> 스룹바벨과 여호수아는 <b>혈통(아들)을 먼저, 직함을 뒤에</b> 두는 같은 형식으로 소개된다. 수신자에 <b>백성이 빠져</b> 있어(1:12·14와 대비) 첫머리부터 지도자 이인에게 향한다.</div>
+      </div>
+    </div>
+
+    <div class="vnote">
+      <b>구문·번역 관찰.</b> <span class="hb">בִּשְׁנַת … בַּחֹדֶשׁ … בְּיוֹם</span> 은 연(年)+월(月)+일(日) <b>삼중 날짜 형식</b>이다. <span class="c f">J</span> 학개의 날짜 형식은 포로기 이전형과 이후형이 섞여 있고, 1:1은 옛 "연+월+일" 형에 예언자-말씀 형식이 확장으로 붙었다. <span class="c t">H</span> "그 달 초하루"는 초승달, 곧 <b>월삭 축일</b>이며(민 10:10), 여섯째 달은 가을 추수기(양력 8~9월경)로, 히브리서에서 다리오 제이년(주전 520년)에 해당한다. &nbsp; <span class="hb">הָיָה דְבַר־יְהוָה</span>(말씀이 임하였다)가 주절이고, 그 앞의 긴 날짜구가 시점을 못 박는다.
+    </div>
+  </section>
+
+  <!-- ============ 1:2 ============ -->
+  <section class="verse" id="v2">
+    <div class="verse-head">
+      <span class="vnum">1:2</span>
+      <span class="vkrv">만군의 여호와가 이같이 말하여 이르노라 이 백성이 말하기를 여호와의 전을 건축할 시기가 이르지 아니하였다 하느니라</span>
+      <span class="krv-flag">4판 대조 필요</span>
+    </div>
+
+    <div class="inter">
+      <span class="iw"><span class="ih">כֹּה</span><span class="it">kō</span><span class="ig">이같이</span></span>
+      <span class="iw"><span class="ih">אָמַר</span><span class="it">ʾāmar</span><span class="ig">말하였다</span></span>
+      <span class="iw"><span class="ih">יְהוָה צְבָאוֹת</span><span class="it">YHWH ṣəḇāʾôṯ</span><span class="ig">만군의 여호와</span></span>
+      <span class="iw"><span class="ih">לֵאמֹר</span><span class="it">lēʾmōr</span><span class="ig">이르되</span></span>
+      <span class="iw key"><span class="ih">הָעָם הַזֶּה</span><span class="it">hāʿām hazzê</span><span class="ig">이 백성</span></span>
+      <span class="iw"><span class="ih">אָמְרוּ</span><span class="it">ʾāmərû</span><span class="ig">그들이 말하기를</span></span>
+      <span class="iw"><span class="ih">לֹא</span><span class="it">lōʾ</span><span class="ig">아니</span></span>
+      <span class="iw key"><span class="ih">עֶת־בֹּא</span><span class="it">ʿeṯ-bōʾ</span><span class="ig">올 때</span></span>
+      <span class="iw"><span class="ih">עֵת</span><span class="it">ʿēṯ</span><span class="ig">때</span></span>
+      <span class="iw"><span class="ih">בֵּית־יְהוָה</span><span class="it">bêṯ-YHWH</span><span class="ig">여호와의 전</span></span>
+      <span class="iw"><span class="ih">לְהִבָּנוֹת</span><span class="it">ləhibbānôṯ</span><span class="ig">건축되기</span></span>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="words">
+        <thead>
+          <tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법</th><th class="lft">표제어·어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="w-num">1</td><td class="w-heb">כֹּה</td><td class="w-tr lft">kō<span class="ko">코</span></td><td class="w-parse lft">지시 부사</td><td class="w-lex lft"><span class="lm">כֹּה</span> <span class="rt-g">이같이·이렇게</span></td><td class="w-gloss lft">이같이</td><td class="w-fn lft">전달 상투구 "이같이 말씀하시되"</td></tr>
+          <tr><td class="w-num">2</td><td class="w-heb">אָמַר</td><td class="w-tr lft">ʾāmar<span class="ko">아마르</span></td><td class="w-parse lft">동사·칼·완료·3인칭 남성 단수</td><td class="w-lex lft"><span class="lm">אָמַר</span> / <span class="rt">אמר</span> <span class="rt-g">말하다</span></td><td class="w-gloss lft">말하였다</td><td class="w-fn lft">사자(使者) 형식의 술어</td></tr>
+          <tr><td class="w-num">3</td><td class="w-heb">יְהוָה צְבָאוֹת</td><td class="w-tr lft">YHWH ṣəḇāʾôṯ<span class="ko">여호와 체바오트</span></td><td class="w-parse lft">고유명사 + 명사·남성 복수</td><td class="w-lex lft"><span class="lm">צָבָא</span> 차바 / <span class="rt">צבא</span> <span class="rt-g">군대·무리</span></td><td class="w-gloss lft">만군의 여호와</td><td class="w-fn lft">אָמַר의 주어</td></tr>
+          <tr><td class="w-num">4</td><td class="w-heb">לֵאמֹר</td><td class="w-tr lft">lēʾmōr<span class="ko">레모르</span></td><td class="w-parse lft">전치사 לְ + 부정사 연계형</td><td class="w-lex lft"><span class="lm">אָמַר</span> / <span class="rt">אמר</span></td><td class="w-gloss lft">이르되</td><td class="w-fn lft">인용을 여는 상투구</td></tr>
+          <tr class="key"><td class="w-num"><span class="st">★</span>5</td><td class="w-heb">הָעָם הַזֶּה</td><td class="w-tr lft">hāʿām hazzê<span class="ko">하암 하제</span></td><td class="w-parse lft">관사+명사 + 지시대명사</td><td class="w-lex lft"><span class="lm">עַם</span> 암 / <span class="rt">עמם</span> <span class="rt-g">백성·겨레</span></td><td class="w-gloss lft">이 백성</td><td class="w-fn lft">뒤 인용문의 주어 — 카드↓</td></tr>
+          <tr><td class="w-num">6</td><td class="w-heb">אָמְרוּ</td><td class="w-tr lft">ʾāmərû<span class="ko">아메루</span></td><td class="w-parse lft">동사·칼·완료·3인칭 공성 <b>복수</b></td><td class="w-lex lft"><span class="lm">אָמַר</span> / <span class="rt">אמר</span></td><td class="w-gloss lft">그들이 말하였다</td><td class="w-fn lft">집합명사 "백성"에 복수 술어 호응</td></tr>
+          <tr><td class="w-num">7</td><td class="w-heb">לֹא</td><td class="w-tr lft">lōʾ<span class="ko">로</span></td><td class="w-parse lft">부정 불변화사</td><td class="w-lex lft"><span class="lm">לֹא</span> <span class="rt-g">아니</span></td><td class="w-gloss lft">~아니(하다)</td><td class="w-fn lft">인용문 부정</td></tr>
+          <tr class="key"><td class="w-num"><span class="st">★</span>8</td><td class="w-heb">עֶת־בֹּא</td><td class="w-tr lft">ʿeṯ-bōʾ<span class="ko">에트-보</span></td><td class="w-parse lft">명사·연계형 עֵת + 부정사 연계형 בּוֹא</td><td class="w-lex lft"><span class="lm">עֵת</span> 에트 · <span class="lm">בּוֹא</span> / <span class="rt">בוא</span> <span class="rt-g">오다</span></td><td class="w-gloss lft">올 때(가)</td><td class="w-fn lft">본문·번역 논쟁 지점 — 카드↓</td></tr>
+          <tr><td class="w-num">9</td><td class="w-heb">עֵת</td><td class="w-tr lft">ʿēṯ<span class="ko">에트</span></td><td class="w-parse lft">명사·여성 단수·연계형</td><td class="w-lex lft"><span class="lm">עֵת</span> / <span class="rt-g">때·시기</span></td><td class="w-gloss lft">~할 때</td><td class="w-fn lft">"때"의 반복(수사적)</td></tr>
+          <tr><td class="w-num">10</td><td class="w-heb">בֵּית־יְהוָה</td><td class="w-tr lft">bêṯ-YHWH<span class="ko">베트-여호와</span></td><td class="w-parse lft">명사·연계형 + 고유명사</td><td class="w-lex lft"><span class="lm">בַּיִת</span> 바이트 / <span class="rt">בית</span> <span class="rt-g">집</span></td><td class="w-gloss lft">여호와의 집(전)</td><td class="w-fn lft">건축될 대상</td></tr>
+          <tr><td class="w-num">11</td><td class="w-heb">לְהִבָּנוֹת</td><td class="w-tr lft">ləhibbānôṯ<span class="ko">레힙바노트</span></td><td class="w-parse lft">전치사 לְ + 니팔 부정사 연계형</td><td class="w-lex lft"><span class="lm">בָּנָה</span> 바나 / <span class="rt">בנה</span> <span class="rt-g">짓다</span></td><td class="w-gloss lft">건축되기(에)</td><td class="w-fn lft">니팔 수동 "지어지다"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cards">
+      <div class="cards-h">핵심어 심화</div>
+      <div class="lex">
+        <div class="top">
+          <span class="word">הָעָם הַזֶּה</span>
+          <span class="translit">hāʿām hazzê</span>
+          <span class="gloss">이 백성</span>
+          <span class="ref">학 1:2</span>
+        </div>
+        <dl>
+          <dt>문법</dt><dd><span class="pp">관사+명사 + 지시대명사</span> — "그 백성, 이 백성". 소유격 "내(하나님의) 백성"이 아니다.</dd>
+          <dt class="root">어근</dt><dd><span class="hb">עמם</span> — 명사 <span class="hb">עַם</span>(암, 백성). 학개는 이 무리를 뒤에서 <span class="hb">שְׁאֵרִית הָעָם</span>(남은 자, 1:12·14)로도 부른다.</dd>
+        </dl>
+        <div class="note"><span class="c f">J</span> "이 백성"은 공동체 전체를 가리키며, 하나님과의 관계에서 쓰일 때 <b>긴장·불만의 어감</b>을 띤다(사 6:9–10; 8:6·11–12과 같은 용례). 학대받는 백성을 부를 때 쓰는 "내 백성"과 대비된다(May, VT 1968). &nbsp; <span class="c t">H</span> 소유대명사 "내"를 붙이지 않은 것 자체가 일종의 <b>책망</b>일 수 있다.</div>
+      </div>
+      <div class="lex">
+        <div class="top">
+          <span class="word">עֶת־בֹּא … עֵת</span>
+          <span class="translit">ʿeṯ-bōʾ … ʿēṯ</span>
+          <span class="gloss">올 때 … 때</span>
+          <span class="ref">학 1:2</span>
+        </div>
+        <dl>
+          <dt>문법</dt><dd><span class="pp">명사 עֵת + 부정사 בּוֹא</span>, 그리고 <span class="hb">עֵת</span>의 <b>반복</b>. 직역하면 "때가 오지 않았다, 여호와의 전이 건축될 때가".</dd>
+          <dt class="root">어근</dt><dd><span class="hb">בוא</span>(오다) · <span class="hb">בנה</span>(짓다). 반복되는 <span class="hb">עֵת</span>이 4절의 "이 때에"(<span class="hb">הַעֵת</span>)와 이어진다.</dd>
+        </dl>
+        <div class="note"><span class="c t">H</span> 개역개정처럼 NIV도 두 번째 <span class="hb">עֵת</span>을 부사 "아직(yet)"으로 읽어 <b>"때가 아직 이르지 않았다"</b>로 옮긴다(LXX 계열). 반복은 어색하지만 <b>수사적</b>으로, 백성의 반론 어투를 옮기거나 긴박감을 넣는 기능일 수 있다. 이 <span class="hb">עֵת</span>이 4절 <span class="hb">הַעֵת</span>과 짝을 이뤄, 백성의 "때가 아니다"를 예언자가 되받아친다.</div>
+      </div>
+    </div>
+
+    <div class="vnote">
+      <b>구문·번역 관찰.</b> <span class="hb">כֹּה אָמַר יְהוָה צְבָאוֹת</span>(만군의 여호와가 이같이 말씀하시되)는 야훼 말씀을 여는 <b>사자 형식</b>으로, <span class="c f">J</span> 여기서 1:2–11의 <b>논쟁(disputation)</b>이 시작된다 — 백성의 관점(2절)과 이를 반박하는 야훼의 관점(3–11절)이 맞선다. &nbsp; 집합명사 <span class="hb">הָעָם</span>(단수)에 술어 <span class="hb">אָמְרוּ</span>가 <b>복수</b>로 호응한 점도 짚어 둔다.
+    </div>
+  </section>
+
+  <!-- ============ 1:3 ============ -->
+  <section class="verse" id="v3">
+    <div class="verse-head">
+      <span class="vnum">1:3</span>
+      <span class="vkrv">여호와의 말씀이 선지자 학개에게 임하여 이르시되</span>
+      <span class="krv-flag">4판 대조 필요</span>
+    </div>
+
+    <div class="inter">
+      <span class="iw"><span class="ih">וַיְהִי</span><span class="it">wayhî</span><span class="ig">그리고 임하였다</span></span>
+      <span class="iw"><span class="ih">דְּבַר־יְהוָה</span><span class="it">dəḇar-YHWH</span><span class="ig">여호와의 말씀</span></span>
+      <span class="iw"><span class="ih">בְּיַד־חַגַּי</span><span class="it">bəyaḏ-ḥaggay</span><span class="ig">학개의 손으로</span></span>
+      <span class="iw"><span class="ih">הַנָּבִיא</span><span class="it">hannāḇîʾ</span><span class="ig">그 선지자</span></span>
+      <span class="iw"><span class="ih">לֵאמֹר</span><span class="it">lēʾmōr</span><span class="ig">이르시되</span></span>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="words">
+        <thead>
+          <tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법</th><th class="lft">표제어·어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="w-num">1</td><td class="w-heb">וַיְהִי</td><td class="w-tr lft">wayhî<span class="ko">바예히</span></td><td class="w-parse lft">동사·칼·바브연속 미완료·3인칭 남성 단수</td><td class="w-lex lft"><span class="lm">הָיָה</span> / <span class="rt">היה</span> <span class="rt-g">있다·되다</span></td><td class="w-gloss lft">그리고 임하였다</td><td class="w-fn lft">서사 연결 "그리고 ~이 임하였다"</td></tr>
+          <tr><td class="w-num">2</td><td class="w-heb">דְּבַר־יְהוָה</td><td class="w-tr lft">dəḇar-YHWH<span class="ko">데바르-여호와</span></td><td class="w-parse lft">명사·연계형 + 고유명사</td><td class="w-lex lft"><span class="lm">דָּבָר</span> / <span class="rt">דבר</span> <span class="rt-g">말하다</span></td><td class="w-gloss lft">여호와의 말씀</td><td class="w-fn lft">וַיְהִי의 주어</td></tr>
+          <tr><td class="w-num">3</td><td class="w-heb">בְּיַד־חַגַּי</td><td class="w-tr lft">bəyaḏ-ḥaggay<span class="ko">베야드-하까이</span></td><td class="w-parse lft">전치사 בְּ + 명사·연계형 + 고유명사</td><td class="w-lex lft"><span class="lm">יָד</span> / <span class="rt">יד</span> <span class="rt-g">손</span></td><td class="w-gloss lft">학개의 손으로(말미암아)</td><td class="w-fn lft">전달 수단(중개)</td></tr>
+          <tr><td class="w-num">4</td><td class="w-heb">הַנָּבִיא</td><td class="w-tr lft">hannāḇîʾ<span class="ko">한나비</span></td><td class="w-parse lft">관사 + 명사·남성 단수</td><td class="w-lex lft"><span class="lm">נָבִיא</span> / <span class="rt">נבא</span> <span class="rt-g">예언하다</span></td><td class="w-gloss lft">그 선지자</td><td class="w-fn lft">학개의 동격</td></tr>
+          <tr><td class="w-num">5</td><td class="w-heb">לֵאמֹר</td><td class="w-tr lft">lēʾmōr<span class="ko">레모르</span></td><td class="w-parse lft">전치사 לְ + 부정사 연계형</td><td class="w-lex lft"><span class="lm">אָמַר</span> / <span class="rt">אמר</span></td><td class="w-gloss lft">이르시되</td><td class="w-fn lft">인용을 여는 상투구</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="vnote">
+      <b>구문·번역 관찰.</b> <span class="c f">J</span> 1:3은 전달의 통로("학개의 손으로 말미암아", <span class="hb">בְּיַד־חַגַּי הַנָּבִיא</span>)를 <b>다시 밝히되 수신자는 명시하지 않는다</b>(1:1과 대비). 2절의 "이 백성"이 논쟁의 대상이라면, 이 말씀이 향하는 청중은 1:1의 총독·대제사장으로 이어진다. 서사 연결어 <span class="hb">וַיְהִי</span>가 1절의 <span class="hb">הָיָה</span>를 이어받아 다음 야훼 발언을 도입한다.
+    </div>
+  </section>
+
+  <!-- ============ 1:4 ============ -->
+  <section class="verse" id="v4">
+    <div class="verse-head">
+      <span class="vnum">1:4</span>
+      <span class="vkrv">이 성전이 황폐하였거늘 너희가 이 때에 판벽한 집에 거주하는 것이 옳으냐</span>
+      <span class="krv-flag">4판 대조 필요</span>
+    </div>
+
+    <div class="inter">
+      <span class="iw key"><span class="ih">הַעֵת</span><span class="it">haʿēṯ</span><span class="ig">때(가)~냐</span></span>
+      <span class="iw"><span class="ih">לָכֶם</span><span class="it">lāḵem</span><span class="ig">너희에게</span></span>
+      <span class="iw"><span class="ih">אַתֶּם</span><span class="it">ʾattem</span><span class="ig">너희가</span></span>
+      <span class="iw"><span class="ih">לָשֶׁבֶת</span><span class="it">lāšeḇeṯ</span><span class="ig">거주하기(에)</span></span>
+      <span class="iw"><span class="ih">בְּבָתֵּיכֶם</span><span class="it">bəḇāttêḵem</span><span class="ig">너희의 집들에</span></span>
+      <span class="iw key"><span class="ih">סְפוּנִים</span><span class="it">səpûnîm</span><span class="ig">판벽한(지붕 덮은)</span></span>
+      <span class="iw"><span class="ih">וְהַבַּיִת הַזֶּה</span><span class="it">wəhabbayiṯ hazzê</span><span class="ig">그리고 이 집은</span></span>
+      <span class="iw key"><span class="ih">חָרֵב</span><span class="it">ḥārēḇ</span><span class="ig">황폐한(폐허)</span></span>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="words">
+        <thead>
+          <tr><th class="ctr">#</th><th>히브리어</th><th class="lft">음역</th><th class="lft">문법</th><th class="lft">표제어·어근</th><th class="lft">뜻</th><th class="lft">문장 기능</th></tr>
+        </thead>
+        <tbody>
+          <tr class="key"><td class="w-num"><span class="st">★</span>1</td><td class="w-heb">הַעֵת</td><td class="w-tr lft">haʿēṯ<span class="ko">하에트</span></td><td class="w-parse lft">의문 관사 הֲ + 명사·여성 단수 עֵת</td><td class="w-lex lft"><span class="lm">עֵת</span> / <span class="rt-g">때·시기</span></td><td class="w-gloss lft">(지금이) 때냐?</td><td class="w-fn lft">수사 의문의 머리 — 카드↓</td></tr>
+          <tr><td class="w-num">2</td><td class="w-heb">לָכֶם</td><td class="w-tr lft">lāḵem<span class="ko">라켐</span></td><td class="w-parse lft">전치사 לְ + 2인칭 남성 복수 접미</td><td class="w-lex lft"><span class="lm">לְ</span> + <span class="rt-g">너희</span></td><td class="w-gloss lft">너희에게(는)</td><td class="w-fn lft">이해 여격 "너희로서는"</td></tr>
+          <tr><td class="w-num">3</td><td class="w-heb">אַתֶּם</td><td class="w-tr lft">ʾattem<span class="ko">아템</span></td><td class="w-parse lft">독립 인칭대명사 2인칭 남성 복수</td><td class="w-lex lft"><span class="lm">אַתֶּם</span> <span class="rt-g">너희</span></td><td class="w-gloss lft">너희가</td><td class="w-fn lft">강조된 주어(대조)</td></tr>
+          <tr><td class="w-num">4</td><td class="w-heb">לָשֶׁבֶת</td><td class="w-tr lft">lāšeḇeṯ<span class="ko">라셰베트</span></td><td class="w-parse lft">전치사 לְ + 칼 부정사 연계형</td><td class="w-lex lft"><span class="lm">יָשַׁב</span> 야샤브 / <span class="rt">ישׁב</span> <span class="rt-g">앉다·거주하다</span></td><td class="w-gloss lft">거주하기(에)</td><td class="w-fn lft">"때"의 내용(부정사구)</td></tr>
+          <tr><td class="w-num">5</td><td class="w-heb">בְּבָתֵּיכֶם</td><td class="w-tr lft">bəḇāttêḵem<span class="ko">베바테켐</span></td><td class="w-parse lft">전치사 בְּ + 명사·남성 복수 + 2인칭 남성 복수 접미</td><td class="w-lex lft"><span class="lm">בַּיִת</span> / <span class="rt">בית</span> <span class="rt-g">집</span></td><td class="w-gloss lft">너희의 집들에</td><td class="w-fn lft">거주 장소</td></tr>
+          <tr class="key"><td class="w-num"><span class="st">★</span>6</td><td class="w-heb">סְפוּנִים</td><td class="w-tr lft">səpûnîm<span class="ko">세푸님</span></td><td class="w-parse lft">동사·칼 수동분사·남성 복수</td><td class="w-lex lft"><span class="lm">סָפַן</span> 사판 / <span class="rt">ספן</span> <span class="rt-g">덮다·판을 대다</span></td><td class="w-gloss lft">판벽한 = 지붕(판)을 덮은</td><td class="w-fn lft">בָּתֵּיכֶם 수식 — 카드↓</td></tr>
+          <tr><td class="w-num">7</td><td class="w-heb">וְהַבַּיִת הַזֶּה</td><td class="w-tr lft">wəhabbayiṯ hazzê<span class="ko">베합바이트 하제</span></td><td class="w-parse lft">접속사 וְ + 관사+명사 + 지시대명사</td><td class="w-lex lft"><span class="lm">בַּיִת</span> / <span class="rt">בית</span></td><td class="w-gloss lft">그리고 이 집(성전)은</td><td class="w-fn lft">대조절의 주어(상황절)</td></tr>
+          <tr class="key"><td class="w-num"><span class="st">★</span>8</td><td class="w-heb">חָרֵב</td><td class="w-tr lft">ḥārēḇ<span class="ko">하레브</span></td><td class="w-parse lft">형용사(또는 상태 완료)·남성 단수</td><td class="w-lex lft"><span class="lm">חָרֵב</span> / <span class="rt">חרב</span> <span class="rt-g">마르다·황폐하다</span></td><td class="w-gloss lft">황폐한, 폐허가 된</td><td class="w-fn lft">상황절 술어 — 카드↓</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cards">
+      <div class="cards-h">핵심어 심화</div>
+      <div class="lex">
+        <div class="top">
+          <span class="word">הַעֵת</span>
+          <span class="translit">haʿēṯ</span>
+          <span class="gloss">(지금이) 때냐?</span>
+          <span class="ref">학 1:4</span>
+        </div>
+        <dl>
+          <dt>문법</dt><dd><span class="pp">의문 관사 הֲ + 명사 עֵת</span> — "너희가 …할 때란 말이냐?" 답을 "아니오"로 유도하는 <b>수사 의문</b>.</dd>
+          <dt class="root">어근</dt><dd>2절의 <span class="hb">עֵת</span>(때)을 그대로 받아, 백성의 "건축할 <b>때</b>가 아니다"를 예언자가 "너희가 판벽집에 살 <b>때</b>냐"로 되돌린다.</dd>
+        </dl>
+        <div class="note"><span class="c t">H</span> 강조 대명사 <span class="hb">אַתֶּם</span>(너희가)이 붙어, 판벽한 집의 "너희"와 폐허가 된 "이 집"을 <b>맞세운다</b>.</div>
+      </div>
+      <div class="lex">
+        <div class="top">
+          <span class="word">סְפוּנִים</span>
+          <span class="translit">səpûnîm</span>
+          <span class="gloss">판벽한 · 지붕 덮은</span>
+          <span class="ref">학 1:4</span>
+        </div>
+        <dl>
+          <dt>문법</dt><dd><span class="pp">칼 수동분사·남성 복수</span> — <span class="hb">סָפַן</span>(사판)의 수동. "판을 댄 / 덮은".</dd>
+          <dt class="root">어근</dt><dd><span class="hb">ספן</span> — <b>희귀 어근</b>. 성경에 왕상 6:9·15; 7:3과 학 1:4뿐. 솔로몬 성전 건축(판벽·천장) 문맥과 겹친다.</dd>
+        </dl>
+        <div class="note"><span class="c t">H</span> "판벽한"은 화려한 장식이 아니라 <b>지붕을 덮어 완성된</b> 집이라는 뜻에 가깝다. 대비는 꾸밈의 유무가 아니라, 지붕까지 갖춘 백성의 집과 <b>지붕도 없는</b> 여호와의 집이다.</div>
+      </div>
+      <div class="lex">
+        <div class="top">
+          <span class="word">חָרֵב</span>
+          <span class="translit">ḥārēḇ</span>
+          <span class="gloss">황폐한 · 폐허</span>
+          <span class="ref">학 1:4</span>
+        </div>
+        <dl>
+          <dt>문법</dt><dd><span class="pp">형용사/상태 술어·남성 단수</span> — "이 집은 폐허(인 채)이다". 앞 절과 <b>상황 대조절</b>을 이룬다.</dd>
+          <dt class="root">어근</dt><dd><span class="hb">חרב</span> — 마르다·폐허가 되다. 학 1:9에서 다시 나온다(<span class="hb">חָרֵב</span>).</dd>
+        </dl>
+        <div class="note"><span class="c t">H</span> 이 "폐허"(<span class="hb">חרב</span>)는 예레미야 33:10–12의 예루살렘 <b>"황폐한 곳"</b> 약속과 같은 낱말을 의도적으로 되울린다.</div>
+      </div>
+    </div>
+
+    <div class="vnote">
+      <b>구문·번역 관찰.</b> <span class="hb">הַעֵת לָכֶם אַתֶּם</span>(너희가 …할 때냐)는 <b>수사 의문</b>으로, 2절 백성의 "때가 아니다"를 되받아친다. 판벽한 집(<span class="hb">סְפוּנִים</span>)과 폐허가 된 집(<span class="hb">חָרֵב</span>)의 대비가 첫 메시지의 문제를 한 절에 압축한다. <span class="c t">H</span> 개역개정 "판벽한 집"의 <span class="hb">סָפַן</span>은 "지붕까지 덮은 집"에 가깝고, "황폐"(<span class="hb">חרב</span>)는 렘 33장의 폐허 약속과 이어진다.
+    </div>
+  </section>
+
+  <div class="back"><a href="../index.html">← 학개 서재로</a></div>
+
+  <footer>
+    성서 연구 서고 · 학개 원어 연구(파싱·인터라이너 융합) — <b>형식 검증용 표본 1:1–4</b><br>
+    개역개정 4판 정본 대조 및 히브리어(BHS·STEP&nbsp;Bible 등) 형태·모음·강세 재확인을 전제로 한다. 주석 관찰은 Jacobs(NICOT 2017)·Hill(TOTC 2012)에서 직접 확인한 것에 한하며, Baldwin(TOTC 1972, djvu)은 OCR 후 반영한다.
+  </footer>
+</main>
+</div>
+</body>
+</html>

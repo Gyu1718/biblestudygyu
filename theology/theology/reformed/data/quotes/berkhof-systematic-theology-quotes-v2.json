@@ -1,0 +1,20 @@
+{
+  "id": "berkhof-systematic-theology-quotes-v2",
+  "title": "루이스 벌코프 『조직신학』 한국어 인용 v2 — 인간론·죄론",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『벌코프 조직신학』 한국어 EPUB에서 인간론·죄론 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "부.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"berkhof-systematic-theology","section":"III.1","chapter":"인간의 기원과 하나님의 형상","subtopic":"인간론의 위치","textKo":"인간론은 신론 바로 뒤에 와야 한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.1 — 인간의 기원과 하나님의 형상 / 인간론의 위치","topic":"인간론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.1","chapter":"인간의 기원과 하나님의 형상","subtopic":"창조의 면류관","textKo":"인간은 피조물의 면류관일 뿐만 아니라 하나님의 각별한 보호의 대상이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.1 — 인간의 기원과 하나님의 형상 / 창조의 면류관","topic":"하나님의 형상","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.2","chapter":"인간의 구성과 상태","subtopic":"몸과 영혼","textKo":"신자들은 인간이 두 부분 곧 몸과 영혼으로 구성되어 있다고 생각하는 경향이 있다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.2 — 인간의 구성과 상태 / 몸과 영혼","topic":"인간의 구성","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.3","chapter":"행위언약","subtopic":"명칭의 적절성","textKo":"그러므로 ‘행위의 언약’이라는 명칭이 가장 적절하다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.3 — 행위언약 / 명칭의 적절성","topic":"행위언약","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.4","chapter":"죄의 기원과 본질","subtopic":"죄의 보편성","textKo":"죄는 인간의 삶 중 가장 슬프고 보편적인 현상들 중 하나다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.4 — 죄의 기원과 본질 / 죄의 보편성","topic":"죄론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.4","chapter":"죄의 기원과 본질","subtopic":"인류의 경험","textKo":"죄는 인류의 공통된 경험의 일부이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.4 — 죄의 기원과 본질 / 인류의 경험","topic":"죄의 본질","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.5","chapter":"원죄와 전가","subtopic":"죄의 전이","textKo":"성경과 경험은 죄가 보편적인 현상임을 증거한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.5 — 원죄와 전가 / 죄의 전이","topic":"원죄","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.5","chapter":"원죄와 전가","subtopic":"원죄의 상태","textKo":"인간은 죄악된 상태와 조건 안에서 태어난다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.5 — 원죄와 전가 / 원죄의 상태","topic":"원죄와 전가","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.6","chapter":"죄의 결과","subtopic":"죽음과 관계 파괴","textKo":"죄는 본질적 죽음으로 묘사될 수 있다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.6 — 죄의 결과 / 죽음과 관계 파괴","topic":"죄의 결과","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"III.6","chapter":"죄의 결과","subtopic":"생명의 관계","textKo":"죄의 결과로 모든 생명의 관계가 어지럽혀졌다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"III.6 — 죄의 결과 / 생명의 관계","topic":"죄와 죽음","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":10,"coverage":["III.1","III.2","III.3","III.4","III.5","III.6"]}
+}

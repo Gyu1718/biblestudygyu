@@ -1,0 +1,16 @@
+{
+  "id": "bavinck-reformed-dogmatics-quotes-v2",
+  "title": "헤르만 바빙크 『개혁교의학 개요』 한국어 인용 v2 — 하나님과 창조",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『개혁교의학 개요』 한국어 EPUB에서 하나님·삼위일체·창조·인간론 핵심 장의 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "권.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"bavinck-reformed-dogmatics","section":"II.1","chapter":"하나님을 아는 지식","subtopic":"계시의 내용","textKo":"우리는 하나님의 지으신 것들과 별개로 독자적으로가 아니라, 자연과 은혜 속에 있는 그의 일들 속에서, 또한 그것을 통해서, 하나님을 알고 그를 영화롭게 하기를 배우는 것이다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"II.1 — 하나님을 아는 지식 / 계시의 내용","topic":"하나님 지식","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"II.5","chapter":"거룩한 삼위일체","subtopic":"삼위일체 안의 하나님의 생명","textKo":"영원하신 하나님은 그의 삼위일체의 존재에서, 그의 속성들에서보다도 오히려 더 풍성하고도 생명력 있게 자기 자신을 계시하신다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"II.5 — 거룩한 삼위일체 / 삼위일체 안의 하나님의 생명","topic":"삼위일체","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"II.7","chapter":"창조 일반","subtopic":"창조와 찬양","textKo":"성경은 그 일들에 대한 묘사인 동시에 그것들에 대한 찬양의 노래다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"II.7 — 창조 일반 / 창조와 찬양","topic":"창조론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"II.9","chapter":"물질 세계와 인간 창조","subtopic":"창조의 면류관인 인간","textKo":"사람이 창조 사역 전체의 목적이요, 목표요, 머리요 면류관이라는 사실의 증거가 된다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"II.9 — 물질 세계와 인간 창조 / 창조의 면류관인 인간","topic":"인간론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"II.10","chapter":"하나님의 형상","subtopic":"하나님과 특별한 관계","textKo":"사람이 하나님의 형상과 모양대로 창조되며 따라서 다른 모든 피조물들과는 전적으로 달리 사람이 하나님과 특별한 관계 속에 있다는 사실이 드러난다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"II.10 — 하나님의 형상 / 하나님과 특별한 관계","topic":"하나님의 형상","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"II.11","chapter":"섭리와 통치","subtopic":"살아 계신 창조주","textKo":"그리스도인의 삶을 위한 삼위일체 교리의 실질적인 의의는, 성경이 우리에게 추상적인 신 개념을 제시하기를 원치 않는다는 데 있다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"II.11 — 섭리와 통치 / 살아 계신 창조주","topic":"섭리","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":6,"coverage":["II.1","II.5","II.7","II.9","II.10","II.11"]}
+}

@@ -1,0 +1,22 @@
+{
+  "id": "calvin-institutes-quotes-v1",
+  "title": "칼빈 『기독교 강요』 한국어 인용 v1 — 제1권 핵심 장",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『기독교 강요』 한국어 변환본에서 제1권 핵심 장의 완결문을 선별",
+  "policy": {
+    "fullText": false,
+    "pageNotation": "omitted",
+    "referenceFormat": "권.장 — 장 제목 / 소주제",
+    "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다.",
+    "copyrightUse": "원문 전문을 대체하지 않도록 제1권 핵심 장의 짧은 문장만 선별합니다."
+  },
+  "quotes": [
+    {"book":"calvin-institutes","section":"I.1","chapter":"하나님 지식과 자기 지식의 관계","subtopic":"참되고 건전한 지혜","textKo":"우리가 지니고 있는 지혜, 즉 참되고 건전한 지혜는 거의 모두가 두 가지 부분으로 되어 있으니, 곧 하나님을 아는 지식과 우리 자신을 아는 지식이 그것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"I.1 — 하나님 지식과 자기 지식의 관계","topic":"신지식과 자기지식","placement":"quote-block","priority":"high","translationScope":"one complete Korean sentence","pageOmitted":true},
+    {"book":"calvin-institutes","section":"I.3","chapter":"인간 마음에 심긴 하나님 지식","subtopic":"신성의 감각","textKo":"인간의 마음속에 본능적으로 신에 대한 지각이 존재한다는 것을 우리는 논란의 여지가 없는 사실로 받아들인다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"I.3 — 인간 마음에 심긴 하나님 지식","topic":"신성의 감각","placement":"quote-block","priority":"high","translationScope":"one complete Korean sentence","pageOmitted":true},
+    {"book":"calvin-institutes","section":"I.6","chapter":"성경이라는 안내자와 교사","subtopic":"성경의 필요성","textKo":"하나님에 관한 갖가지 혼란스런 지식을 우리 마음에 제대로 모아주며, 우리의 우둔함을 몰아내고, 참되신 하나님을 분명하게 보여 주는 것이 바로 성경인 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"I.6 — 성경이라는 안내자와 교사","topic":"성경론","placement":"quote-block","priority":"high","translationScope":"one complete Korean sentence","pageOmitted":true},
+    {"book":"calvin-institutes","section":"I.7","chapter":"성령의 증거와 성경 권위","subtopic":"교회와 성경 권위","textKo":"교회는 다만 성경이 하나님의 진리임을 인정하며 또한 주저 없이 성경을 높임으로써 그 경건한 의무를 다한 것뿐인 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"I.7 — 성령의 증거와 성경 권위","topic":"성령의 내적 증거","placement":"quote-block","priority":"high","translationScope":"one complete Korean sentence","pageOmitted":true},
+    {"book":"calvin-institutes","section":"I.13","chapter":"삼위일체","subtopic":"한 본질 안의 삼위","textKo":"그는 자신을 유일하신 하나님으로 선언하시는 한편, 동시에 분명히 삼위로 바라보도록 그렇게 자신을 제시하시는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"I.13 — 삼위일체","topic":"삼위일체","placement":"quote-block","priority":"high","translationScope":"one complete Korean sentence","pageOmitted":true},
+    {"book":"calvin-institutes","section":"I.16","chapter":"섭리","subtopic":"창조와 섭리의 결합","textKo":"하나님의 섭리에게로 이어지지 않으면, 우리가 아무리 마음으로 파악하고 입으로 고백한다 할지라도 우리는 아직 ‘하나님이 창조주시다’라는 말의 의미를 제대로 깨닫는 것이 아닐 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"I.16 — 섭리","topic":"섭리","placement":"quote-block","priority":"high","translationScope":"one complete Korean sentence","pageOmitted":true}
+  ],
+  "stats": {"total":6,"coverage":["I.1","I.3","I.6","I.7","I.13","I.16"]}
+}

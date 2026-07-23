@@ -1,0 +1,171 @@
+[
+  {
+    "authorId": "martin-luther",
+    "authorName": "마르틴 루터",
+    "historyIds": ["reformation-to-reformed"],
+    "note": "루터는 종교개혁 전체 배경과 개혁파 전통의 구분을 설명할 때 필요한 비교 인물이다."
+  },
+  {
+    "authorId": "huldrych-zwingli",
+    "authorName": "울리히 츠빙글리",
+    "historyIds": ["reformation-to-reformed"],
+    "note": "츠빙글리는 취리히 종교개혁과 초기 개혁파 전통의 형성을 설명하는 핵심 인물이다."
+  },
+  {
+    "authorId": "heinrich-bullinger",
+    "authorName": "하인리히 불링거",
+    "historyIds": ["reformation-to-reformed"],
+    "note": "불링거는 스위스 개혁파 신앙고백 전통과 종교개혁 이후 개혁파 형성을 연결한다."
+  },
+  {
+    "authorId": "john-calvin",
+    "authorName": "존 칼빈",
+    "historyIds": [
+      "reformation-to-reformed",
+      "reformed-and-presbyterian",
+      "synod-of-dort",
+      "reformed-orthodoxy",
+      "barth-election-doctrine",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "칼빈은 개혁파 전통의 고전적 기준이며, 바르트 예정론과 비교할 때도 핵심 기준점이 된다."
+  },
+  {
+    "authorId": "john-knox",
+    "authorName": "존 녹스",
+    "historyIds": ["reformed-and-presbyterian", "westminster-assembly"],
+    "note": "녹스는 스코틀랜드 장로교 형성과 장로교 신앙고백 전통을 설명할 때 중요하다."
+  },
+  {
+    "authorId": "theodore-beza",
+    "authorName": "테오도르 베자",
+    "historyIds": ["reformed-orthodoxy", "barth-election-doctrine"],
+    "note": "베자는 칼빈 이후 개혁파 예정론과 정통주의 형성의 연결점으로 다룬다."
+  },
+  {
+    "authorId": "zacharias-ursinus",
+    "authorName": "자카리아스 우르시누스",
+    "historyIds": ["reformed-orthodoxy", "reformed-and-presbyterian"],
+    "note": "우르시누스는 하이델베르크 요리문답과 개혁파 교리교육 전통을 연결한다."
+  },
+  {
+    "authorId": "francis-turretin",
+    "authorName": "프란시스 투레틴",
+    "historyIds": ["reformed-orthodoxy", "barth-election-doctrine", "reformed-orthodoxy-and-neo-orthodoxy"],
+    "note": "투레틴은 개혁파 정통주의의 체계적·논쟁적 방법을 대표하며, 바르트와 비교할 때 정통주의 기준점이 된다."
+  },
+  {
+    "authorId": "gisbertus-voetius",
+    "authorName": "기스베르투스 보에티우스",
+    "historyIds": ["reformed-orthodoxy"],
+    "note": "보에티우스는 정통주의와 경건을 분리하지 않는 네덜란드 개혁파 흐름을 보여 준다."
+  },
+  {
+    "authorId": "jacobus-arminius",
+    "authorName": "야코부스 아르미니우스",
+    "historyIds": ["synod-of-dort"],
+    "note": "아르미니우스는 도르트 총회의 구원론 논쟁 배경을 이해할 때 필요한 인물이다."
+  },
+  {
+    "authorId": "johannes-bogerman",
+    "authorName": "요하네스 보게르만",
+    "historyIds": ["synod-of-dort"],
+    "note": "보게르만은 도르트 총회의 회의 진행과 개혁파 구원론 정리에 연결된다."
+  },
+  {
+    "authorId": "westminster-divines",
+    "authorName": "웨스트민스터 총회 신학자들",
+    "historyIds": ["westminster-assembly", "reformed-and-presbyterian"],
+    "note": "웨스트민스터 총회 신학자들은 장로교 신앙고백과 교회정치 문서 형성의 중심이다."
+  },
+  {
+    "authorId": "samuel-rutherford",
+    "authorName": "새뮤얼 러더퍼드",
+    "historyIds": ["westminster-assembly", "reformed-and-presbyterian"],
+    "note": "러더퍼드는 장로교 교회정치와 웨스트민스터 전통의 정치신학적 배경을 설명한다."
+  },
+  {
+    "authorId": "thomas-watson",
+    "authorName": "토머스 왓슨",
+    "historyIds": ["westminster-assembly", "reformed-orthodoxy"],
+    "note": "왓슨은 웨스트민스터 소요리문답과 청교도 교리교육 전통을 연결한다."
+  },
+  {
+    "authorId": "abraham-kuyper",
+    "authorName": "아브라함 카이퍼",
+    "historyIds": ["history-index"],
+    "note": "카이퍼는 이후 신칼빈주의 항목을 추가할 때 별도 역사 허브로 확장할 인물이다."
+  },
+  {
+    "authorId": "charles-hodge",
+    "authorName": "찰스 하지",
+    "historyIds": ["history-index"],
+    "note": "하지는 이후 프린스턴 신학 항목을 추가할 때 별도 역사 허브로 확장할 인물이다."
+  },
+  {
+    "authorId": "herman-bavinck",
+    "authorName": "헤르만 바빙크",
+    "historyIds": [
+      "history-index",
+      "reformed-orthodoxy",
+      "natural-theology-debate",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "바빙크는 개혁파 일반계시론과 근대 이후 개혁파 교의학을 바르트와 비교할 때 핵심 인물이다."
+  },
+  {
+    "authorId": "louis-berkhof",
+    "authorName": "루이스 벌코프",
+    "historyIds": [
+      "synod-of-dort",
+      "westminster-assembly",
+      "reformed-orthodoxy",
+      "barth-election-doctrine",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "벌코프는 개혁파 정통 교리를 교육용 조직신학으로 정리한 비교 기준점이다."
+  },
+  {
+    "authorId": "friedrich-schleiermacher",
+    "authorName": "프리드리히 슐라이어마허",
+    "historyIds": ["modern-liberal-theology-background"],
+    "note": "슐라이어마허는 신정통주의가 비판적으로 반응한 근대 자유주의 신학의 중요한 배경이다."
+  },
+  {
+    "authorId": "adolf-von-harnack",
+    "authorName": "아돌프 폰 하르낙",
+    "historyIds": ["modern-liberal-theology-background"],
+    "note": "하르낙은 역사주의와 문화개신교 배경을 통해 바르트의 자유주의 신학 비판을 이해하게 한다."
+  },
+  {
+    "authorId": "eduard-thurneysen",
+    "authorName": "에두아르트 투르나이젠",
+    "historyIds": ["dialectical-theology"],
+    "note": "투르나이젠은 초기 변증법적 신학과 말씀 중심 목회신학을 연결한다."
+  },
+  {
+    "authorId": "emil-brunner",
+    "authorName": "에밀 브루너",
+    "historyIds": ["dialectical-theology", "barth-and-neo-orthodoxy", "natural-theology-debate"],
+    "note": "브루너는 바르트와 같은 신정통주의 흐름 안에 있지만 자연신학과 접촉점 문제에서 중요한 차이를 보인다."
+  },
+  {
+    "authorId": "rudolf-bultmann",
+    "authorName": "루돌프 불트만",
+    "historyIds": ["barth-and-neo-orthodoxy", "dialectical-theology"],
+    "note": "불트만은 바르트와 같은 20세기 문제 지평을 공유하지만 계시, 역사, 실존 해석에서 다른 방향을 보인다."
+  },
+  {
+    "authorId": "karl-barth",
+    "authorName": "칼 바르트",
+    "historyIds": [
+      "modern-liberal-theology-background",
+      "dialectical-theology",
+      "barth-and-neo-orthodoxy",
+      "natural-theology-debate",
+      "barth-election-doctrine",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "바르트는 신정통주의의 중심 인물이며 계시론, 자연신학, 예정론, 개혁파 정통과의 비교에서 핵심 허브가 된다."
+  }
+]

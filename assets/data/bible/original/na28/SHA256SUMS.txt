@@ -1,0 +1,5 @@
+af55101dcbec3ace1613d4bc59045c4a5b89877f45c253351616d0b76154a163  manifest.json
+0cba2d60f9f8c3be2dc978a1a2fe88a250ca424679d2017beb710a95516fdf18  chunks/nt-acts-paul.json.gz
+55c7fa7f1b59ee0a8d0385c02af151ca4759733c7122115f86b803c50fc76a59  chunks/nt-general.json.gz
+f44114cd643d72d27a6477662a34a330c544ac8d78bdb154a2561ce5f0423bdd  chunks/nt-gospels.json.gz
+523344bbab133ce0325a68a83dcc429c99fc2e6eb426eb714e0a68649faf3f2a  chunks/nt-revelation.json.gz

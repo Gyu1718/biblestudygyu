@@ -17,7 +17,7 @@
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-20"
+    updated: "2026-07-22"
   },
   sections: [
     {
@@ -37,14 +37,14 @@ window.SITE_CATALOG = {
           volumes: 14
         },
         {
-          id: "haggai",
-          path: "ot/haggai/index.html",
-          title: "학개 심층 연구",
-          original: "חַגַּי",
+          id: "hosea",
+          path: "ot/hosea/index.html",
+          title: "호세아서 연구 노트",
+          original: "הוֹשֵׁעַ",
           script: "heb",
-          meta: "3-문서 구조 — 개관 1편 · 장별 심층연구 2편(1·2장) · 원어 융합 표본(1:1–4) · Jacobs·Hill 대조",
-          desc: "넉 달의 예언으로 멈춘 성전 공사를 다시 세운 책. 책의 신학과 전체 개관을 갖추고, 원어는 파싱과 인터라이너를 한 문서로 융합한다.",
-          volumes: 4
+          meta: "일곱 주석 종합 — 종합 노트 1편(단일 문서) · 배경 연구 · 14장 절 단위 주해 · 신학 · 상호 참조 · 복음적 해석 · 쟁점 대조 · Kidner·Goldingay·Hubbard·Dearman·Keil-Delitzsch·Stuart·Moon",
+          desc: "고멜과의 혼인 서사에서 심판과 소생까지, 호세아서 열네 장을 일곱 주석으로 종합했다. 히브리어 병기와 주석가 칩으로 문장 단위 출처를 표시하고, 언약·혼인·지식의 축을 따라 배경·주해·신학·복음적 해석을 한 문서에 담았다.",
+          volumes: 7
         }
       ]
     },

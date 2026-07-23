@@ -1,0 +1,112 @@
+/* Ancient creeds self-translation renderer.
+   Adds a self-translated text section to the four ancient creed pages. */
+(function () {
+  var CREEDS = {
+    "사도신경": {
+      title: "사도신경 자체 번역",
+      note: "기존 한국어 판본을 옮기지 않고 공개 저장소용으로 새로 정리한 번역입니다.",
+      lines: [
+        "나는 전능하신 아버지 하나님, 하늘과 땅을 지으신 분을 믿습니다.",
+        "나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.",
+        "그는 성령으로 잉태되어 동정녀 마리아에게서 나셨고, 본디오 빌라도 아래에서 고난을 받아 십자가에 못 박혀 죽으시고 장사되셨으며, 죽음의 자리까지 낮아지셨습니다.",
+        "셋째 날에 죽은 자 가운데서 살아나셨고, 하늘에 오르셨으며, 전능하신 아버지 하나님 오른편에 앉아 계십니다.",
+        "거기로부터 살아 있는 자와 죽은 자를 심판하러 오실 것입니다.",
+        "나는 성령을 믿습니다. 거룩한 보편 교회와 성도의 교제, 죄의 용서와 몸의 부활, 그리고 영원한 생명을 믿습니다. 아멘."
+      ]
+    },
+    "니케아-콘스탄티노폴리스 신경": {
+      title: "니케아-콘스탄티노폴리스 신경 자체 번역",
+      note: "325/381년 공의회 신경의 공개 저장소용 자체 번역입니다.",
+      lines: [
+        "우리는 한 하나님, 전능하신 아버지를 믿습니다. 그분은 하늘과 땅, 보이는 것과 보이지 않는 모든 것을 지으신 분입니다.",
+        "우리는 한 주 예수 그리스도를 믿습니다. 그분은 하나님의 독생자이시며, 모든 시대 이전에 아버지에게서 나신 분입니다.",
+        "그분은 하나님에게서 나신 하나님, 빛에서 나신 빛, 참 하나님에게서 나신 참 하나님이십니다. 그분은 지음받지 않고 나셨으며, 아버지와 같은 본질이시고, 그분으로 말미암아 모든 것이 지어졌습니다.",
+        "그분은 우리 인간과 우리의 구원을 위하여 하늘에서 내려오셨고, 성령으로 동정녀 마리아에게서 몸을 취하여 사람이 되셨습니다.",
+        "그분은 우리를 위하여 본디오 빌라도 아래에서 십자가에 못 박히시고 고난을 받아 장사되셨으며, 성경대로 셋째 날에 다시 살아나셨습니다.",
+        "그분은 하늘에 오르셨고 아버지 오른편에 앉아 계시며, 영광 가운데 다시 오셔서 살아 있는 자와 죽은 자를 심판하실 것입니다. 그분의 나라는 끝이 없을 것입니다.",
+        "우리는 주님이시며 생명을 주시는 성령을 믿습니다. 성령은 아버지에게서 나오시며, 아버지와 아들과 함께 예배와 영광을 받으시고, 예언자들을 통하여 말씀하신 분입니다.",
+        "우리는 하나의 거룩하고 보편적이며 사도적인 교회를 믿습니다. 우리는 죄의 용서를 위한 하나의 세례를 고백합니다. 우리는 죽은 자들의 부활과 오는 세상의 생명을 기다립니다. 아멘."
+      ]
+    },
+    "칼케돈 신조": {
+      title: "칼케돈 신조 자체 번역",
+      note: "451년 칼케돈 공의회의 기독론 정의를 공개 저장소용으로 새로 옮긴 번역입니다.",
+      lines: [
+        "우리는 거룩한 교부들을 따라 한 분이신 아들, 우리 주 예수 그리스도를 고백합니다.",
+        "그분은 신성에 따라 완전하시고, 인성에 따라 완전하십니다. 참 하나님이시며 참 사람이시고, 이성 있는 영혼과 몸을 가지셨습니다.",
+        "신성으로는 아버지와 같은 본질이시며, 인성으로는 우리와 같은 본질이십니다. 죄는 없으시나 모든 점에서 우리와 같으십니다.",
+        "신성으로는 모든 시대 이전에 아버지에게서 나셨고, 인성으로는 마지막 날에 우리와 우리의 구원을 위하여 동정녀 마리아에게서 나셨습니다.",
+        "한 분이신 같은 그리스도, 아들, 주, 독생자는 두 본성 안에서 알려지십니다.",
+        "그 두 본성은 혼합되지 않고, 변화되지 않고, 나뉘지 않고, 분리되지 않습니다.",
+        "두 본성의 구별은 연합 때문에 없어지지 않으며, 각 본성의 고유성이 보존되고 한 인격과 한 위격 안에서 함께 있습니다.",
+        "그분은 두 인격으로 갈라지거나 나뉘지 않고, 한 분이신 같은 아들, 독생자, 하나님 말씀, 주 예수 그리스도이십니다."
+      ]
+    },
+    "아타나시우스 신경": {
+      title: "아타나시우스 신경 자체 번역",
+      note: "삼위일체와 성육신 교리를 요약한 서방교회 신경의 공개 저장소용 자체 번역입니다. 페이지에서는 교육용 가독성을 위해 단락별로 압축 표시합니다.",
+      lines: [
+        "보편 신앙은 이것입니다. 우리는 한 하나님을 삼위로, 삼위를 한 하나님으로 예배합니다. 위격들을 혼동하지 않고, 본질을 나누지 않습니다.",
+        "성부의 위격이 있고, 성자의 위격이 있으며, 성령의 위격이 있습니다. 그러나 성부와 성자와 성령의 신성은 하나이고, 영광은 같으며, 위엄은 함께 영원합니다.",
+        "성부는 창조되지 않으셨고, 성자도 창조되지 않으셨으며, 성령도 창조되지 않으셨습니다. 성부는 영원하시고, 성자도 영원하시며, 성령도 영원하십니다. 그러나 세 영원한 분이 아니라 한 영원하신 하나님이십니다.",
+        "성부는 하나님이시고, 성자는 하나님이시며, 성령은 하나님이십니다. 그러나 세 하나님이 아니라 한 하나님이십니다. 성부는 주님이시고, 성자는 주님이시며, 성령은 주님이십니다. 그러나 세 주님이 아니라 한 주님이십니다.",
+        "성자는 만들어지거나 창조되지 않으시고, 오직 성부에게서 나셨습니다. 성령은 만들어지거나 창조되거나 나지 않으시고, 성부와 성자에게서 나오십니다. 이 삼위 안에서 앞서거나 뒤서는 분이 없고, 더 크거나 더 작은 분도 없습니다.",
+        "또한 우리 주 예수 그리스도께서 하나님의 아들이시며, 하나님이시고 사람이시라는 것을 바르게 믿어야 합니다. 그분은 완전한 하나님이시며 완전한 사람이시고, 이성 있는 영혼과 인간의 몸을 가지셨습니다.",
+        "그분은 하나님이시며 사람이시나 두 그리스도가 아니라 한 그리스도이십니다. 신성이 육체로 바뀌어서 하나가 된 것이 아니라, 인성을 취하심으로 하나가 되셨습니다. 본질의 혼합이 아니라 인격의 하나됨으로 한 분이십니다.",
+        "그분은 우리의 구원을 위하여 고난을 받으시고, 죽음의 자리까지 내려가셨으며, 셋째 날에 죽은 자 가운데서 살아나셨습니다. 하늘에 오르셨고 아버지 오른편에 앉아 계시며, 산 자와 죽은 자를 심판하러 오실 것입니다. 이것이 보편 신앙입니다."
+      ]
+    }
+  };
+
+  function esc(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+
+  function pageTitle() {
+    var page = document.querySelector(".confession-page");
+    if (!page) return "";
+    var h3 = page.querySelector("h3");
+    if (!h3) return "";
+    return Object.keys(CREEDS).find(function (key) { return h3.textContent.indexOf(key) !== -1; }) || "";
+  }
+
+  function ensureStyles() {
+    if (document.querySelector("#ancient-creeds-text-styles")) return;
+    var style = document.createElement("style");
+    style.id = "ancient-creeds-text-styles";
+    style.textContent = "\
+      .ancient-creed-text{margin-top:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface-2);padding:18px;}\
+      .ancient-creed-text h4{font-family:var(--font-display);font-size:1.18rem;margin:0 0 6px;}\
+      .ancient-creed-text .note{margin:0 0 14px;color:var(--muted);font-size:.9rem;line-height:1.6;}\
+      .ancient-creed-lines{display:grid;gap:9px;}\
+      .ancient-creed-lines p{margin:0;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 13px;color:var(--ink);font-size:.92rem;line-height:1.75;}\
+    ";
+    document.head.appendChild(style);
+  }
+
+  function install() {
+    var key = pageTitle();
+    if (!key) return;
+    var page = document.querySelector(".confession-page");
+    if (!page || page.querySelector(".ancient-creed-text")) return;
+    ensureStyles();
+    var data = CREEDS[key];
+    var section = document.createElement("section");
+    section.className = "ancient-creed-text";
+    section.innerHTML = '<h4>' + esc(data.title) + '</h4><p class="note">' + esc(data.note) + '</p><div class="ancient-creed-lines">' + data.lines.map(function (line) { return '<p>' + esc(line) + '</p>'; }).join("") + '</div>';
+    page.appendChild(section);
+  }
+
+  function boot() {
+    install();
+    var view = document.querySelector("#view");
+    if (view) new MutationObserver(function () { setTimeout(install, 0); }).observe(view, { childList: true, subtree: true });
+    document.addEventListener("click", function () { setTimeout(install, 0); });
+    window.addEventListener("hashchange", function () { setTimeout(install, 0); });
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();

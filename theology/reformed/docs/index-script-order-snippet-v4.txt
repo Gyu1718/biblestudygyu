@@ -1,0 +1,4 @@
+<!-- Barth v4: load after quote preloaders and before app.js -->
+<script src="./js/barth-subtopic-context-normalize-v4.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/quote-context-enhance-v4.js"></script>

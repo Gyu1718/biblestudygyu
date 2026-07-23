@@ -1,0 +1,491 @@
+{
+  "id": "claude-calvin-content-pack-v1",
+  "project": "Reformed–Neo-Orthodox Theology Archive",
+  "work": {
+    "id": "calvin-institutes",
+    "titleKo": "기독교 강요",
+    "author": "John Calvin",
+    "contentPurpose": "Claude가 기존 구조와 비주얼을 유지한 채 카드, 상세 페이지, 개념 페이지에 넣을 콘텐츠를 선별·배치하도록 돕는 전달용 JSON"
+  },
+  "rulesForClaude": [
+    "HTML/CSS 레이아웃과 비주얼 구조를 바꾸지 말 것.",
+    "이 JSON은 콘텐츠 삽입용이다. 필요한 경우 기존 컴포넌트의 필드에 맞춰 변환하되, 카드 구조 자체는 유지할 것.",
+    "원문 전문을 공개하지 말 것.",
+    "quoteCandidates는 추천 인용구 후보일 뿐이며, 페이지에는 짧고 비대체적인 인용만 사용할 것.",
+    "인용구는 장의 논지를 여는 앵커로 쓰고, 본문 설명은 반드시 요약과 해설 중심으로 구성할 것.",
+    "개혁신학과 신정통주의 비교축은 단정적 판결보다 비교 질문 형태로 제시할 것."
+  ],
+  "quotePolicy": {
+    "maxLengthGuideline": "한국어 기준 25단어 이하의 짧은 인용만 사용",
+    "preferredQuoteType": ["장 제목 수준의 짧은 표현", "핵심 개념어", "본문을 대체하지 않는 짧은 구절"],
+    "avoid": ["긴 단락 인용", "연속된 원문 재현", "원문을 대체할 수 있는 상세 발췌", "출처 파일명 노출"],
+    "displayFormat": {
+      "quote": "짧은 인용",
+      "location": "권.장 또는 세부 위치",
+      "use": "이 인용이 카드나 상세 페이지에서 맡을 기능"
+    }
+  },
+  "schemaForClaude": {
+    "topicId": "string",
+    "topicTitle": "string",
+    "topicSummary": "2-4문장 요약",
+    "topicExplanation": "상세 페이지나 카드 설명에 들어갈 1-2문단 해설",
+    "chapters": [
+      {
+        "ref": "I.1",
+        "chapterTitle": "장 제목",
+        "cardSummary": "카드용 1-2문장 요약",
+        "detailExplanation": "상세 페이지용 설명",
+        "keyQuestions": ["질문"],
+        "keyClaims": ["주장"],
+        "quoteCandidates": [
+          {
+            "text": "짧은 인용 후보",
+            "location": "권.장",
+            "use": "카드/상세/개념 페이지에서의 사용처"
+          }
+        ],
+        "comparisonAxis": ["Bavinck", "Berkhof", "Barth"],
+        "recommendedPlacement": "overview-card | topic-card | chapter-detail | quote-block"
+      }
+    ]
+  },
+  "topicPacks": [
+    {
+      "topicId": "knowledge-of-god-and-self",
+      "topicTitle": "하나님 지식과 자기 지식",
+      "topicSummary": "칼빈의 신학은 하나님을 아는 지식과 인간 자신을 아는 지식이 서로를 비춘다는 명제로 시작한다. 인간은 하나님 앞에서만 자기의 존엄과 비참을 동시에 알 수 있다.",
+      "topicExplanation": "이 주제는 『기독교 강요』 전체의 입구다. 칼빈에게 자기 이해는 심리적 자기 분석이 아니라 하나님 앞에서 자신을 발견하는 신학적 사건이다. 이 구조는 이후 죄론, 은혜론, 교회론으로 이어지는 해석의 기준이 된다.",
+      "chapters": [
+        {
+          "ref": "I.1",
+          "chapterTitle": "하나님 지식과 자기 지식의 관계",
+          "cardSummary": "하나님 지식과 자기 지식은 분리되지 않는다. 하나님 앞에서 인간은 자신의 존엄과 비참을 함께 본다.",
+          "detailExplanation": "이 장은 『기독교 강요』의 문을 여는 장이다. 하나님을 아는 일은 인간 자신을 바르게 아는 일과 연결되고, 자기 지식은 다시 하나님께로 향하게 한다. 신학은 인간 중심의 자기 확신이 아니라 하나님 앞의 겸손으로 시작된다.",
+          "keyQuestions": ["하나님을 아는 지식과 자기 지식은 어떤 관계에 있는가?", "인간은 왜 하나님 앞에서 자신을 바르게 보게 되는가?"],
+          "keyClaims": ["하나님 지식과 자기 지식은 서로를 비춘다.", "하나님의 위엄 앞에서 인간은 자신의 한계와 비참을 인식한다."],
+          "quoteCandidates": [
+            {"text": "하나님을 아는 지식과 우리 자신을 아는 지식은 서로 연결되어 있음", "location": "I.1", "use": "첫 카드의 대표 인용"},
+            {"text": "하나님의 위엄 앞에서 인간의 모습", "location": "I.1", "use": "상세 페이지 소제목 인용"}
+          ],
+          "comparisonAxis": ["Bavinck: 계시와 신학 원리", "Barth: 하나님의 자기계시와 인간 인식"],
+          "recommendedPlacement": "overview-card"
+        },
+        {
+          "ref": "I.2",
+          "chapterTitle": "하나님을 안다는 것의 의미와 목적",
+          "cardSummary": "하나님을 안다는 것은 단순한 정보 습득이 아니라 경외와 신뢰와 예배로 나아가는 지식이다.",
+          "detailExplanation": "칼빈에게 하나님 지식은 사변적 지식이 아니다. 참된 하나님 지식은 하나님을 경외하고 의지하며 예배하는 삶을 낳는다. 이 장은 신학 지식과 경건의 분리를 경계한다.",
+          "keyQuestions": ["하나님을 안다는 것은 무엇인가?", "하나님 지식은 어떤 목적을 이루는가?"],
+          "keyClaims": ["하나님 지식은 경건을 지향한다.", "하나님을 아는 지식은 예배와 신뢰를 낳는다."],
+          "quoteCandidates": [
+            {"text": "하나님을 안다는 것은 무엇인가", "location": "I.2", "use": "질문형 카드 제목"},
+            {"text": "그를 아는 지식은 어떤 목적을 이루는가", "location": "I.2", "use": "상세 페이지 도입 문구"}
+          ],
+          "comparisonAxis": ["Bavinck: 하나님 지식의 경건성", "Berkhof: 조직신학의 서론적 목적"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "scripture-revelation-authority",
+      "topicTitle": "성경, 계시, 권위",
+      "topicSummary": "칼빈에게 성경은 죄로 흐려진 인간 인식을 교정하고 창조주 하나님께 나아가게 하는 안내자다. 성경의 권위는 교회의 승인보다 앞서 하나님께 근거하며 성령의 내적 증거로 확증된다.",
+      "topicExplanation": "이 주제는 개혁신학과 신정통주의를 비교하는 핵심 지점이다. 개혁신학은 성경을 신학의 최종 규범으로 강조하고, 바르트는 성경을 하나님의 말씀에 대한 증언으로 말한다. Claude는 이 차이를 싸움처럼 보이게 하기보다 ‘권위의 근거와 방식’이라는 비교 질문으로 배치해야 한다.",
+      "chapters": [
+        {
+          "ref": "I.6",
+          "chapterTitle": "성경이라는 안내자와 교사",
+          "cardSummary": "성경은 창조주 하나님께 나아가는 안내자이자 교사다. 죄로 흐려진 인간 인식은 말씀의 도움 없이는 하나님을 바르게 알 수 없다.",
+          "detailExplanation": "칼빈은 창조 세계가 하나님을 증언한다고 보지만, 타락한 인간은 그 증언을 바르게 읽지 못한다고 본다. 그래서 성경은 일반계시를 폐기하는 것이 아니라 그것을 바르게 읽게 하는 안내자와 교사로 기능한다.",
+          "keyQuestions": ["왜 창조 세계만으로는 충분하지 않은가?", "성경은 하나님 지식에서 어떤 역할을 하는가?"],
+          "keyClaims": ["성경은 하나님께 나아가는 안내자다.", "특별계시는 일반계시를 바르게 해석하게 한다."],
+          "quoteCandidates": [
+            {"text": "성경이라는 안내자와 교사", "location": "I.6", "use": "주제 카드 대표 인용"},
+            {"text": "창조주 하나님께로 나아가는 데에는 성경이라는 안내자가 필요함", "location": "I.6", "use": "상세 페이지 도입"}
+          ],
+          "comparisonAxis": ["Bavinck: 일반계시와 특별계시", "Barth: 성경과 하나님의 말씀"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "I.7",
+          "chapterTitle": "성령의 증거와 성경 권위",
+          "cardSummary": "성경의 권위는 교회의 승인보다 앞서 하나님께 근거한다. 성령은 성경의 신적 권위를 신자에게 확증하신다.",
+          "detailExplanation": "이 장은 성경 권위와 교회 권위의 순서를 다룬다. 칼빈은 교회가 성경을 세우는 것이 아니라 성경이 교회를 세운다고 본다. 성령의 내적 증거는 성경의 객관적 권위와 신자의 확신을 연결한다.",
+          "keyQuestions": ["성경의 권위는 어디에서 오는가?", "교회가 성경을 세우는가, 성경이 교회를 세우는가?"],
+          "keyClaims": ["성경의 권위는 하나님께 근거한다.", "교회는 성경 위에 서지 않고 성경에 의해 세워진다."],
+          "quoteCandidates": [
+            {"text": "성령의 증거가 성경의 권위의 확립에 필수적임", "location": "I.7", "use": "상세 페이지 인용 블록"},
+            {"text": "교회의 판단에 달려 있다는 논리는 사악한 거짓임", "location": "I.7", "use": "논쟁 지점 표시"}
+          ],
+          "comparisonAxis": ["Berkhof: 성경 권위", "Barth: 성경과 교회 선포"],
+          "recommendedPlacement": "quote-block"
+        },
+        {
+          "ref": "I.9",
+          "chapterTitle": "성경을 떠난 계시주의 비판",
+          "cardSummary": "성령을 말하면서 성경을 떠나는 신앙은 경건의 원리를 무너뜨린다. 성령은 성경을 폐기하지 않고 그 말씀 안에서 그리스도께 이끄신다.",
+          "detailExplanation": "칼빈은 성령과 말씀을 분리하는 광신적 경향을 비판한다. 이 장은 오늘날 ‘직통 계시’나 ‘주관적 영성’이 말씀의 규범성을 약화시킬 때에도 적용될 수 있다.",
+          "keyQuestions": ["성령을 말하면서 성경을 떠나는 태도는 왜 위험한가?", "성령과 말씀은 어떻게 함께 이해되어야 하는가?"],
+          "keyClaims": ["성령은 말씀을 폐기하지 않는다.", "성경 밖의 계시 추구는 경건의 원리를 무너뜨릴 수 있다."],
+          "quoteCandidates": [
+            {"text": "성경을 버리고 계시들을 좇는 광신자들", "location": "I.9", "use": "경계 카드 인용"},
+            {"text": "경건의 모든 원리를 파괴시킴", "location": "I.9", "use": "상세 페이지 강조 문구"}
+          ],
+          "comparisonAxis": ["Reformed: 말씀과 성령의 결합", "Neo-Orthodoxy: 말씀 사건과 증언"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "trinity-creation-providence",
+      "topicTitle": "삼위일체, 창조, 섭리",
+      "topicSummary": "칼빈은 성경이 한 본질 안의 삼위를 증언한다고 말하며, 창조와 섭리를 통해 하나님이 세계를 보존하고 다스리심을 설명한다. 창조는 하나님이 세계를 시작하셨다는 말에 그치지 않고, 섭리는 하나님이 지금도 세계를 붙들고 다스리신다는 고백이다.",
+      "topicExplanation": "이 묶음은 신론의 중심 구조를 만든다. 삼위일체는 하나님이 누구신가를 다루고, 창조와 섭리는 그 하나님이 세계와 역사에 어떻게 관계하시는가를 다룬다. 바르트와 비교할 때는 하나님의 자유로운 계시와 그리스도 중심 섭리 이해를 비교축으로 삼을 수 있다.",
+      "chapters": [
+        {
+          "ref": "I.13",
+          "chapterTitle": "삼위일체",
+          "cardSummary": "하나님은 한 본질 안에 성부·성자·성령으로 계신다. 삼위일체 용어는 성경의 진리를 보호하기 위한 교리적 도구다.",
+          "detailExplanation": "칼빈은 삼위일체를 사변적 철학이 아니라 성경이 증언하는 하나님 이해로 다룬다. 용어는 성경 위에 서지 않지만, 이단적 오해를 막고 성경의 진리를 명료하게 보존하기 위해 필요하다.",
+          "keyQuestions": ["성경은 삼위 하나님을 어떻게 증언하는가?", "삼위일체 용어는 왜 필요한가?"],
+          "keyClaims": ["하나님은 한 본질 안에 삼위로 계신다.", "삼위일체 용어는 성경 진리를 보호하는 도구다."],
+          "quoteCandidates": [
+            {"text": "한 본질이시며 그 안에 삼위가 계심", "location": "I.13", "use": "교리 카드 핵심 인용"},
+            {"text": "삼위일체 교리", "location": "I.13", "use": "주제 카드 라벨"}
+          ],
+          "comparisonAxis": ["Bavinck: 삼위일체의 교의학적 구조", "Barth: 계시의 삼위일체적 형식"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "I.16",
+          "chapterTitle": "섭리",
+          "cardSummary": "하나님은 창조하신 세계를 보존하고 다스리신다. 섭리 교리는 우연도 운명론도 아니며, 하나님의 살아 있는 통치를 말한다.",
+          "detailExplanation": "칼빈의 섭리론은 창조론과 분리되지 않는다. 하나님은 세계를 만드신 뒤 물러나신 분이 아니라, 지금도 세계를 보존하고 다스리시는 분이다. 이 교리는 신자에게 감사와 인내와 신뢰를 가르친다.",
+          "keyQuestions": ["창조와 섭리는 어떻게 연결되는가?", "우연과 운명론은 왜 배제되는가?"],
+          "keyClaims": ["하나님은 세계를 보존하고 다스리신다.", "섭리는 우연도 운명론도 아니다."],
+          "quoteCandidates": [
+            {"text": "그의 섭리로 그 모든 부분을 다스리심", "location": "I.16", "use": "대표 인용"},
+            {"text": "운명이나 우연은 없음", "location": "I.16", "use": "개념 설명 카드"}
+          ],
+          "comparisonAxis": ["Berkhof: 보존·협력·통치", "Barth: 그리스도 안의 하나님의 통치"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "sin-fall-inability",
+      "topicTitle": "타락, 원죄, 인간의 무능",
+      "topicSummary": "제2권 초반은 인간의 비참과 죄의 깊이를 다룬다. 칼빈은 인간의 자유를 완전히 부정하려는 것이 아니라, 은혜 없이는 하나님께 돌아갈 수 없는 인간의 영적 무능을 드러낸다.",
+      "topicExplanation": "이 주제는 복음을 필요하게 만드는 진단이다. 인간은 창조된 존엄을 지녔지만 타락 이후 죄와 비참 아래 있다. 이 진단을 과장된 인간 혐오로 만들지 않고, 그리스도의 은혜가 왜 필요한지를 보여주는 장치로 배치해야 한다.",
+      "chapters": [
+        {
+          "ref": "II.1",
+          "chapterTitle": "타락과 원죄",
+          "cardSummary": "아담의 타락은 인류 전체를 죄와 비참 아래 두었다. 원죄는 단순한 나쁜 습관이 아니라 인간 본성 전체의 부패를 가리킨다.",
+          "detailExplanation": "이 장은 인간의 현재 상태를 타락의 빛 아래서 읽는다. 칼빈은 죄를 단지 개별 행위의 문제가 아니라 하나님과의 관계가 무너진 인간 전체의 상태로 본다.",
+          "keyQuestions": ["타락은 인간 본성에 어떤 영향을 주었는가?", "원죄는 단순한 모방인가, 인류 전체의 상태인가?"],
+          "keyClaims": ["타락은 인류 전체를 죄 아래 두었다.", "원죄는 인간 본성 전체의 부패를 가리킨다."],
+          "quoteCandidates": [
+            {"text": "아담의 타락과 반역", "location": "II.1", "use": "도입 카드 인용"},
+            {"text": "원죄론", "location": "II.1", "use": "개념 라벨"}
+          ],
+          "comparisonAxis": ["Berkhof: 원죄와 전가", "Bavinck: 죄와 창조 질서의 파괴"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "II.2",
+          "chapterTitle": "자유의지 상실과 인간의 비참",
+          "cardSummary": "타락한 인간은 자력으로 하나님께 돌아갈 능력을 잃었다. 인간의 책임은 남아 있지만, 구원에 이르는 순종은 은혜 없이는 불가능하다.",
+          "detailExplanation": "칼빈의 자유의지 비판은 인간의 선택 행위 자체를 부정하는 것이 아니다. 문제는 타락한 의지가 하나님께 향하는 영적 선을 스스로 낳을 수 있는가에 있다. 이 장은 은혜의 절대 필요성을 드러낸다.",
+          "keyQuestions": ["타락 이후 인간의 자유는 어떤 상태에 있는가?", "책임과 무능은 어떻게 함께 말해질 수 있는가?"],
+          "keyClaims": ["인간은 은혜 없이는 하나님께 돌아갈 수 없다.", "자유의지의 무능은 은혜의 필요를 드러낸다."],
+          "quoteCandidates": [
+            {"text": "의지의 자유를 빼앗긴 채 종의 상태에 매여 있음", "location": "II.2", "use": "강한 문제 제기 인용"},
+            {"text": "사람의 비참한 현 상태", "location": "II.2", "use": "카드 소제목"}
+          ],
+          "comparisonAxis": ["Berkhof: 전적 부패", "Reformation: 자유의지 논쟁"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "law-gospel-covenant",
+      "topicTitle": "율법, 복음, 언약의 연속성과 차이",
+      "topicSummary": "칼빈은 율법을 복음의 적으로만 보지 않는다. 율법은 죄를 드러내고 그리스도께로 인도하며, 구약과 신약은 동일한 은혜의 실재를 다른 경륜 속에서 증언한다.",
+      "topicExplanation": "이 묶음은 구약과 신약, 율법과 복음의 관계를 정리하는 데 필요하다. Claude는 이 주제를 ‘율법 대 복음’의 단순 대립이 아니라 ‘그리스도 안에서 약속이 성취되는 구조’로 배치해야 한다.",
+      "chapters": [
+        {
+          "ref": "II.7",
+          "chapterTitle": "율법의 기능",
+          "cardSummary": "율법은 죄를 드러내고 그리스도께로 인도한다. 율법은 구약 백성을 절망에 가두기 위한 것이 아니라 그리스도 안의 소망을 붙들게 하기 위한 것이다.",
+          "detailExplanation": "칼빈은 율법을 복음과 분리된 차가운 명령 체계로만 보지 않는다. 율법은 죄를 드러내고, 인간의 무능을 폭로하며, 그리스도의 필요를 가르친다.",
+          "keyQuestions": ["율법은 죄인에게 어떤 기능을 하는가?", "율법은 복음과 대립하는가, 그리스도께 인도하는가?"],
+          "keyClaims": ["율법은 죄를 드러낸다.", "율법은 그리스도께 인도한다."],
+          "quoteCandidates": [
+            {"text": "그리스도 안에 있는 구원에 대한 소망", "location": "II.7", "use": "율법의 목적 설명"},
+            {"text": "의식법과 도덕법 모두가 그리스도를 지향함", "location": "II.7", "use": "구약-그리스도 연결 인용"}
+          ],
+          "comparisonAxis": ["Berkhof: 율법의 용도", "Covenant Theology: 은혜언약"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "II.10",
+          "chapterTitle": "구약과 신약의 유사점",
+          "cardSummary": "구약과 신약은 동일한 구원의 실재를 증언한다. 구약의 신자들도 동일한 중보자 그리스도 안에서 구원을 소망했다.",
+          "detailExplanation": "이 장은 구약과 신약의 통일성을 다룬다. 시대와 의식은 다르지만, 은혜의 실체는 하나이며 그 중심은 그리스도다.",
+          "keyQuestions": ["구약과 신약은 어떤 점에서 하나인가?", "구약 신자들도 동일한 구원을 받았는가?"],
+          "keyClaims": ["구약과 신약은 동일한 구원의 실재를 증언한다.", "동일한 중보자 그리스도 안에서 구원이 주어진다."],
+          "quoteCandidates": [
+            {"text": "구약과 신약은 근본적으로 동일함", "location": "II.10", "use": "언약 연속성 카드 인용"},
+            {"text": "구약과 신약의 유사점", "location": "II.10", "use": "챕터 제목 라벨"}
+          ],
+          "comparisonAxis": ["Bavinck: 언약과 구원사", "Reformed Covenant Theology: 은혜언약"],
+          "recommendedPlacement": "chapter-detail"
+        },
+        {
+          "ref": "II.11",
+          "chapterTitle": "구약과 신약의 차이점",
+          "cardSummary": "구약과 신약은 동일한 은혜를 다른 경륜과 표현으로 드러낸다. 신약은 그리스도 안에서 약속의 실체를 더 분명히 보여준다.",
+          "detailExplanation": "칼빈은 구약과 신약의 동일성만 말하지 않는다. 그는 차이도 인정한다. 다만 그 차이는 구원 실체의 차이가 아니라 경륜과 명확성의 차이다.",
+          "keyQuestions": ["구약과 신약은 어떤 점에서 다른가?", "신약의 복음은 구약보다 무엇을 더 분명히 드러내는가?"],
+          "keyClaims": ["은혜의 실체는 하나이지만 경륜은 다르다.", "신약은 그리스도 안에서 약속의 실체를 더 명확히 드러낸다."],
+          "quoteCandidates": [
+            {"text": "구약과 신약의 차이점", "location": "II.11", "use": "비교 카드 제목"},
+            {"text": "영적 축복을 세속적인 것들로 표현함", "location": "II.11", "use": "상세 설명 인용"}
+          ],
+          "comparisonAxis": ["Covenant Theology: 경륜의 차이", "Barth: 그리스도 안의 성취"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "christology-mediator-work",
+      "topicTitle": "그리스도의 인격과 사역",
+      "topicSummary": "타락한 인간은 그리스도 안에서만 구속을 얻는다. 칼빈은 그리스도가 참 하나님이자 참 인간으로서 중보자가 되시며, 선지자·왕·제사장으로 구원을 이루신다고 설명한다.",
+      "topicExplanation": "제2권 후반의 기독론은 제3권의 구원론을 위한 토대다. 그리스도의 인격과 사역이 분명하지 않으면 칭의, 성화, 성례, 교회론도 흔들린다. 이 묶음은 바르트의 화해론과 비교하기 가장 좋은 칼빈 텍스트군이다.",
+      "chapters": [
+        {
+          "ref": "II.12",
+          "chapterTitle": "중보자의 성육신 필요성",
+          "cardSummary": "중보자는 우리를 대표하기 위해 참 인간이어야 하고, 우리를 구원하기 위해 참 하나님이어야 한다. 성육신은 구속을 위한 필수적 은혜다.",
+          "detailExplanation": "칼빈은 성육신을 단순히 크리스마스 사건으로 보지 않는다. 죄인이 하나님께 나아가기 위해서는 하나님과 인간 사이를 실제로 화해시키는 중보자가 필요하다.",
+          "keyQuestions": ["중보자는 왜 참 하나님이자 참 인간이어야 하는가?", "성육신은 구속에서 어떤 필연성을 갖는가?"],
+          "keyClaims": ["성육신은 구속을 위한 필수적 은혜다.", "그리스도는 참 하나님이자 참 인간으로 중보자가 되신다."],
+          "quoteCandidates": [
+            {"text": "중보자의 직분을 행하기 위하여 사람이 되셔야 했음", "location": "II.12", "use": "성육신 카드 인용"},
+            {"text": "하나님이요 동시에 사람이셔야 하는 이유", "location": "II.12", "use": "상세 페이지 질문형 인용"}
+          ],
+          "comparisonAxis": ["Berkhof: 그리스도의 인격", "Barth: 성육신과 화해"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "II.15",
+          "chapterTitle": "그리스도의 삼중직",
+          "cardSummary": "그리스도는 선지자로 하나님의 뜻을 계시하고, 왕으로 우리를 다스리며, 제사장으로 자신을 드려 하나님과 화목하게 하신다.",
+          "detailExplanation": "삼중직은 그리스도의 사역을 균형 있게 이해하게 하는 핵심 틀이다. 죄인은 무지하고 반역하며 죄책을 지닌 존재이기 때문에, 그리스도는 선지자·왕·제사장으로 구원을 베푸신다.",
+          "keyQuestions": ["그리스도는 선지자·왕·제사장으로 무엇을 행하시는가?", "삼중직은 인간의 어떤 필요를 채우는가?"],
+          "keyClaims": ["그리스도는 계시하고 다스리며 화목하게 하신다.", "삼중직은 구원의 총체성을 보여준다."],
+          "quoteCandidates": [
+            {"text": "선지자직, 왕직, 제사장직", "location": "II.15", "use": "삼중직 대표 인용"},
+            {"text": "그의 세 가지 직분", "location": "II.15", "use": "카드 라벨"}
+          ],
+          "comparisonAxis": ["Berkhof: 그리스도의 직분", "Watson: 교리문답식 그리스도 직분 해설"],
+          "recommendedPlacement": "chapter-detail"
+        },
+        {
+          "ref": "II.16",
+          "chapterTitle": "죽음·부활·승천과 구속 사역",
+          "cardSummary": "그리스도의 죽음과 부활은 죄인을 하나님과 화목하게 한다. 십자가, 부활, 승천은 구속 사역의 한 흐름으로 읽어야 한다.",
+          "detailExplanation": "이 장은 복음의 사건적 중심을 다룬다. 그리스도의 죽음은 죄의 형벌을 담당하는 대속의 사건이고, 부활은 의롭다 하심과 새 생명의 근거이며, 승천은 그리스도의 통치와 중보 사역을 드러낸다.",
+          "keyQuestions": ["그리스도의 죽음과 부활은 구원에서 어떤 의미를 갖는가?", "그리스도의 낮아지심과 높아지심은 어떻게 연결되는가?"],
+          "keyClaims": ["그리스도의 죽음과 부활은 죄인을 하나님과 화목하게 한다.", "부활과 승천은 구속 사역의 완성을 드러낸다."],
+          "quoteCandidates": [
+            {"text": "죽으심과 부활과 승천", "location": "II.16", "use": "복음 사건 카드 인용"},
+            {"text": "하나님과 화목되었음", "location": "II.16", "use": "화해론 비교 인용"}
+          ],
+          "comparisonAxis": ["Berkhof: 속죄와 높아지심", "Barth: 화해론"],
+          "recommendedPlacement": "quote-block"
+        }
+      ]
+    },
+    {
+      "topicId": "union-faith-repentance",
+      "topicTitle": "그리스도와의 연합, 믿음, 회개",
+      "topicSummary": "제3권은 성령께서 신자를 그리스도와 연합시키신다는 사실로 시작한다. 믿음과 회개는 그리스도와의 연합에서 흘러나오는 은혜의 열매다.",
+      "topicExplanation": "이 묶음은 구원의 적용을 단순한 단계표로 만들지 않도록 돕는다. 칭의와 성화, 믿음과 회개는 모두 그리스도와의 연합이라는 중심축 안에서 이해되어야 한다.",
+      "chapters": [
+        {
+          "ref": "III.1",
+          "chapterTitle": "성령의 은밀한 역사와 그리스도와의 연합",
+          "cardSummary": "그리스도의 은혜는 성령의 역사로 우리에게 적용된다. 성령은 신자를 그리스도와 연합시키는 끈이다.",
+          "detailExplanation": "이 장은 제3권 전체의 열쇠다. 칭의, 성화, 성찬을 따로 흩어진 주제로 보지 않고, 그리스도와의 연합 안에서 함께 보게 한다.",
+          "keyQuestions": ["그리스도의 은혜는 어떻게 우리 것이 되는가?", "성령은 그리스도와 신자를 어떻게 연결하는가?"],
+          "keyClaims": ["성령은 신자를 그리스도와 연합시키신다.", "구원론은 그리스도와의 연합에서 출발한다."],
+          "quoteCandidates": [
+            {"text": "그리스도의 은혜는 성령의 은밀한 역사로 말미암아 베풀어짐", "location": "III.1", "use": "제3권 대표 인용"},
+            {"text": "그리스도와 연합", "location": "III.1", "use": "개념 카드 라벨"}
+          ],
+          "comparisonAxis": ["Berkhof: 구원의 서정", "Bavinck: 그리스도와의 연합", "Barth: 화해론"],
+          "recommendedPlacement": "overview-card"
+        },
+        {
+          "ref": "III.3",
+          "chapterTitle": "중생과 회개",
+          "cardSummary": "회개는 믿음에서 흘러나오는 삶의 전환이다. 참 회개는 자기혐오가 아니라 하나님께 돌아서는 복음적 방향 전환이다.",
+          "detailExplanation": "칼빈은 회개를 칭의를 얻기 위한 공로로 보지 않는다. 회개는 믿음의 열매이며, 성령께서 신자를 새롭게 하실 때 나타나는 삶의 방향 전환이다.",
+          "keyQuestions": ["회개는 믿음의 조건인가, 믿음의 열매인가?", "중생과 회개는 어떻게 연결되는가?"],
+          "keyClaims": ["회개는 믿음의 열매다.", "중생은 새 삶의 방향 전환으로 나타난다."],
+          "quoteCandidates": [
+            {"text": "믿음으로 말미암는 중생, 그리고 회개", "location": "III.3", "use": "회개론 카드 인용"},
+            {"text": "회개는 믿음의 열매임", "location": "III.3", "use": "핵심 주장 인용"}
+          ],
+          "comparisonAxis": ["Berkhof: 회심과 회개", "Watson: 회개의 교리문답적 해설"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "justification-grace",
+      "topicTitle": "칭의와 은혜의 복음",
+      "topicSummary": "칭의는 하나님 앞에서 의롭다 하심을 받는 것이다. 그 근거는 인간 공로나 내적 변화가 아니라 그리스도의 의이며, 믿음은 그 의를 받는 수단이다.",
+      "topicExplanation": "이 묶음은 복음 이해의 중심이다. 칭의와 중생은 구별되어야 하지만 그리스도와의 연합 안에서 분리되지 않는다. Claude는 이 주제를 ‘행위가 필요 없다’가 아니라 ‘행위가 칭의의 근거가 아니다’라는 정밀한 방식으로 배치해야 한다.",
+      "chapters": [
+        {
+          "ref": "III.11",
+          "chapterTitle": "믿음으로 말미암는 칭의",
+          "cardSummary": "칭의는 하나님 앞에서 의롭다 하심을 받는 것이다. 믿음은 의의 공로가 아니라 그리스도를 받는 수단이다.",
+          "detailExplanation": "이 장은 종교개혁 복음의 중심을 다룬다. 칭의는 내적 변화로 흡수될 수 없고, 하나님 앞에서 의롭다 하심을 받는 법정적 선언이다. 그러나 이 선언은 그리스도와의 연합에서 분리되지 않는다.",
+          "keyQuestions": ["칭의란 무엇인가?", "믿음은 칭의의 근거인가 수단인가?", "칭의와 중생은 어떻게 구별되는가?"],
+          "keyClaims": ["칭의의 근거는 그리스도의 의다.", "믿음은 그리스도를 받는 수단이다.", "칭의와 성화는 구별되지만 분리되지 않는다."],
+          "quoteCandidates": [
+            {"text": "믿음으로 말미암는 칭의", "location": "III.11", "use": "칭의 카드 대표 인용"},
+            {"text": "칭의와 중생", "location": "III.11", "use": "구별 설명 카드"}
+          ],
+          "comparisonAxis": ["Berkhof: 법정적 칭의", "Bavinck: 칭의와 언약", "Barth: 칭의와 화해"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "III.15",
+          "chapterTitle": "공로 자랑 비판",
+          "cardSummary": "공로 자랑은 은혜의 찬양과 구원의 확신을 무너뜨린다. 선행은 구원의 근거가 아니라 은혜의 열매다.",
+          "detailExplanation": "칼빈은 인간 공로가 들어올 때 두 가지가 무너진다고 본다. 하나는 하나님께 돌려야 할 영광이고, 다른 하나는 신자의 양심의 평안이다. 이 장은 공로주의를 신학적 문제이자 목회적 문제로 드러낸다.",
+          "keyQuestions": ["공로 자랑은 왜 복음과 충돌하는가?", "행위 공로는 구원의 확신을 세우는가 무너뜨리는가?"],
+          "keyClaims": ["공로 자랑은 은혜의 찬양을 무너뜨린다.", "신자의 확신은 자기 공로가 아니라 그리스도께 있다."],
+          "quoteCandidates": [
+            {"text": "행위의 공로에 대한 자랑", "location": "III.15", "use": "논쟁 지점 인용"},
+            {"text": "구원에 대한 확신을 무너뜨림", "location": "III.15", "use": "목회적 설명 인용"}
+          ],
+          "comparisonAxis": ["Reformation: sola gratia", "Watson: 의롭다 하심"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "predestination-election-calling",
+      "topicTitle": "예정, 선택, 부르심의 확증",
+      "topicSummary": "예정론은 말씀 밖의 사변이 아니라 성경이 가르치는 은혜의 교리로 다루어져야 한다. 신자는 자기 내면을 끝없이 파헤치는 방식이 아니라 그리스도와 복음의 부르심 안에서 선택의 확증을 찾는다.",
+      "topicExplanation": "이 묶음은 바르트와의 비교에서 특히 중요하다. 전통 개혁파는 선택과 유기를 하나님의 영원한 작정 안에서 말하고, 바르트는 예수 그리스도를 선택하시는 하나님이자 선택받은 인간으로 보며 예정론을 재구성한다.",
+      "chapters": [
+        {
+          "ref": "III.21",
+          "chapterTitle": "영원한 선택",
+          "cardSummary": "예정론은 말씀에 근거해 신중히 다루어야 한다. 침묵도 위험하지만 말씀 밖의 사변도 위험하다.",
+          "detailExplanation": "칼빈은 예정론을 호기심의 대상으로 다루지 않는다. 이 교리는 구원의 은혜를 깊이 깨닫게 하는 주제이지만, 말씀의 한계를 넘어설 때 위험해진다.",
+          "keyQuestions": ["예정론은 왜 다루어야 하며 어디까지 다루어야 하는가?", "예지와 예정은 어떻게 구별되는가?"],
+          "keyClaims": ["예정론은 말씀에 근거해 다루어야 한다.", "선택은 인간 공로가 아니라 하나님의 뜻에 근거한다."],
+          "quoteCandidates": [
+            {"text": "예정 교리는 오직 말씀에 근거하여 탐구해야 함", "location": "III.21", "use": "예정론 페이지 경계 문구"},
+            {"text": "영원한 선택", "location": "III.21", "use": "주제 카드 제목"}
+          ],
+          "comparisonAxis": ["Berkhof: 하나님의 작정", "Barth: CD II/2 선택론"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "III.24",
+          "chapterTitle": "부르심과 선택의 확증",
+          "cardSummary": "신자는 그리스도와 부르심 안에서 선택의 확증을 찾는다. 예정론은 두려움의 교리가 아니라 은혜의 깊이를 드러내는 교리다.",
+          "detailExplanation": "칼빈은 선택의 확증을 추상적 명부에서 찾게 하지 않는다. 신자는 말씀의 부르심과 그리스도 안에서 선택의 확증을 본다. 이 장은 예정론의 목회적 결론이다.",
+          "keyQuestions": ["신자는 선택의 확증을 어디에서 찾는가?", "부르심은 선택과 어떻게 연결되는가?"],
+          "keyClaims": ["선택은 부르심을 통해 확증된다.", "신자는 그리스도 안에서 확신을 찾는다."],
+          "quoteCandidates": [
+            {"text": "선택은 하나님의 부르심을 통해 확증됨", "location": "III.24", "use": "목회적 결론 인용"},
+            {"text": "선택과 부르심", "location": "III.24", "use": "카드 라벨"}
+          ],
+          "comparisonAxis": ["Bavinck: 선택과 확신", "Barth: 그리스도 안의 선택"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    },
+    {
+      "topicId": "church-sacraments-civil-government",
+      "topicTitle": "교회, 성례, 시민 정부",
+      "topicSummary": "제4권은 하나님께서 신자를 기르시는 외적 수단을 다룬다. 교회는 신자의 어머니이며, 성례는 말씀과 결합된 약속의 표징이고, 시민 정부는 영적 통치와 구별되지만 하나님의 질서 안에서 이해된다.",
+      "topicExplanation": "이 묶음은 탈교회 시대 교회론, 성례 교육, 공공신학으로 확장하기 좋다. Claude는 교회를 절대화하지 않으면서도 말씀·성례·권징의 외적 수단을 약화시키지 않는 방식으로 배치해야 한다.",
+      "chapters": [
+        {
+          "ref": "IV.1",
+          "chapterTitle": "참된 교회와 신자의 어머니",
+          "cardSummary": "교회는 말씀과 성례로 신자를 양육하는 외적 수단이다. 가시적 교회는 신앙을 낳고 기르는 어머니로 설명된다.",
+          "detailExplanation": "칼빈은 교회를 그리스도를 대체하는 기관으로 보지 않는다. 그러나 그리스도께서 신자를 기르시는 통상적 장으로 교회를 강조한다. 이 장은 개인주의적 신앙을 교정한다.",
+          "keyQuestions": ["교회는 왜 신자에게 필요한가?", "교회를 어머니라고 부르는 의미는 무엇인가?"],
+          "keyClaims": ["교회는 신자의 양육을 위한 외적 수단이다.", "교회의 연합과 질서는 신앙 형성에 필요하다."],
+          "quoteCandidates": [
+            {"text": "모든 경건한 자들의 어머니", "location": "IV.1", "use": "교회론 대표 인용"},
+            {"text": "신자의 어머니인 거룩한 공교회", "location": "IV.1", "use": "상세 페이지 소제목"}
+          ],
+          "comparisonAxis": ["Berkhof: 교회의 본질과 표지", "Barth: 교회와 증언 공동체"],
+          "recommendedPlacement": "topic-card"
+        },
+        {
+          "ref": "IV.14",
+          "chapterTitle": "성례 일반론",
+          "cardSummary": "성례는 말씀과 결합된 하나님의 약속의 표징이다. 성례는 믿음을 세우고 강화하는 은혜의 방편이다.",
+          "detailExplanation": "성례는 빈 의식도 아니고, 자동으로 은혜를 주는 마술적 장치도 아니다. 말씀과 결합될 때 성례는 하나님의 약속을 보이는 방식으로 확증한다.",
+          "keyQuestions": ["성례란 무엇인가?", "성례는 말씀과 어떤 관계에 있는가?"],
+          "keyClaims": ["성례는 약속의 표징이다.", "성례는 믿음을 강화하는 은혜의 방편이다."],
+          "quoteCandidates": [
+            {"text": "성례의 정의와 역할", "location": "IV.14", "use": "성례론 입구 인용"},
+            {"text": "성례", "location": "IV.14", "use": "카드 라벨"}
+          ],
+          "comparisonAxis": ["Berkhof: 성례 일반론", "Barth: 세례와 성찬 이해"],
+          "recommendedPlacement": "chapter-detail"
+        },
+        {
+          "ref": "IV.17",
+          "chapterTitle": "성찬",
+          "cardSummary": "성찬은 그리스도와의 영적 교제를 확증하는 은혜의 방편이다. 신자는 믿음으로 성찬에서 그리스도께 참여한다.",
+          "detailExplanation": "칼빈의 성찬론은 단순 기념설로 축소되지 않는다. 성찬은 그리스도의 은혜를 믿음으로 받게 하고, 그리스도와의 실제적 영적 교제를 확증한다.",
+          "keyQuestions": ["성찬은 신자에게 어떤 유익을 주는가?", "성찬에서 그리스도와의 교제는 어떻게 이해되는가?"],
+          "keyClaims": ["성찬은 그리스도와의 영적 교제를 확증한다.", "성찬은 은혜의 방편이다."],
+          "quoteCandidates": [
+            {"text": "그리스도의 성찬", "location": "IV.17", "use": "성찬 카드 대표 인용"},
+            {"text": "성찬으로 말미암아 얻는 유익", "location": "IV.17", "use": "상세 페이지 질문형 인용"}
+          ],
+          "comparisonAxis": ["Berkhof: 성찬과 영적 임재", "Barth: 성례와 교회 증언"],
+          "recommendedPlacement": "quote-block"
+        },
+        {
+          "ref": "IV.20",
+          "chapterTitle": "국가 통치",
+          "cardSummary": "영적 통치와 시민 통치는 구별되지만 반드시 대립하지 않는다. 그리스도인은 국가 권위를 우상화하지 않으면서도 공적 책임을 진다.",
+          "detailExplanation": "칼빈은 국가를 구원의 수단으로 만들지 않는다. 그러나 시민 정부는 질서와 정의를 위한 하나님의 섭리적 수단으로 이해된다. 이 장은 공공신학과 정치 과몰입 비판 모두에 연결될 수 있다.",
+          "keyQuestions": ["영적 통치와 시민 통치는 어떻게 구별되는가?", "그리스도인은 국가 권위와 어떻게 관계해야 하는가?"],
+          "keyClaims": ["영적 통치와 시민 통치는 구별된다.", "시민 정부는 질서와 정의를 위한 섭리적 수단이다."],
+          "quoteCandidates": [
+            {"text": "영적 통치와 국가의 통치는 서로 별개임", "location": "IV.20", "use": "공공신학 카드 핵심 인용"},
+            {"text": "국가의 통치", "location": "IV.20", "use": "장 제목 라벨"}
+          ],
+          "comparisonAxis": ["Bavinck: 국가와 사회", "Barth: 공동체와 국가", "Public Theology: 시민성"],
+          "recommendedPlacement": "chapter-detail"
+        }
+      ]
+    }
+  ],
+  "recommendedNextPacks": [
+    "bavinck-reformed-dogmatics-content-pack",
+    "berkhof-systematic-theology-content-pack",
+    "barth-church-dogmatics-comparison-pack",
+    "concept-map-reformed-neo-orthodox-pack"
+  ]
+}

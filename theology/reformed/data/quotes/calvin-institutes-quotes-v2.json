@@ -1,0 +1,18 @@
+{
+  "id": "calvin-institutes-quotes-v2",
+  "title": "칼빈 『기독교 강요』 한국어 인용 v2 — 제2권 핵심 장",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『기독교 강요』 한국어 변환본에서 제2권 핵심 장의 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "권.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"calvin-institutes","section":"II.2","chapter":"자유의지 상실과 인간의 비참","subtopic":"인간 능력의 빈곤","textKo":"사람에게 선한 것이 하나도 남아 있지 않음을 가르치는 것이 필요하다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.2 — 자유의지 상실과 인간의 비참 / 인간 능력의 빈곤","topic":"자유의지","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.6","chapter":"그리스도 안에서 구속을 구해야 함","subtopic":"중보자 없이는 구원 지식이 없음","textKo":"중보자를 떠나서는 하나님에 대한 그 어떠한 지식도 구원에 이르게 하는 능력이 되지 못했다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.6 — 그리스도 안에서 구속을 구해야 함 / 중보자 없이는 구원 지식이 없음","topic":"중보자 그리스도","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.7","chapter":"율법의 기능","subtopic":"율법과 그리스도","textKo":"율법은 그들로 하여금 심판에 대한 두려움 때문에 중보자를 바라보게 하였다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.7 — 율법의 기능 / 율법과 그리스도","topic":"율법","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.12","chapter":"중보자의 성육신 필요성","subtopic":"참 하나님이자 참 인간이신 중보자","textKo":"우리의 중보자가 되실 분이 참 하나님이시요 동시에 참 사람이시라는 것이 우리에게는 가장 중요한 문제였다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.12 — 중보자의 성육신 필요성 / 참 하나님이자 참 인간이신 중보자","topic":"성육신","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.14","chapter":"두 본성 한 위격","subtopic":"위격의 통일","textKo":"두 본성이 한 그리스도를 이루었다고 단언하는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.14 — 두 본성 한 위격 / 위격의 통일","topic":"그리스도의 두 본성","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.15","chapter":"그리스도의 삼중직","subtopic":"선지자·왕·제사장","textKo":"그리스도께서는 선지자와 왕과 제사장으로 주어지셨다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.15 — 그리스도의 삼중직 / 선지자·왕·제사장","topic":"그리스도의 삼중직","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.16","chapter":"그리스도의 죽음","subtopic":"그리스도 안의 구원","textKo":"그리스도 안에서 의와 자유와 생명과 구원을 구해야 한다는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.16 — 그리스도의 죽음 / 그리스도 안의 구원","topic":"그리스도의 죽음","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"II.17","chapter":"그리스도의 공로","subtopic":"공로와 은혜","textKo":"그리스도의 공로와 하나님의 긍휼하심을 서로 대치시키는 것은 어리석은 짓이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"II.17 — 그리스도의 공로 / 공로와 은혜","topic":"그리스도의 공로","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":8,"coverage":["II.2","II.6","II.7","II.12","II.14","II.15","II.16","II.17"]}
+}

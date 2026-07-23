@@ -1,0 +1,254 @@
+/* Non-book page UI consistency layer
+   Scoped to compare, authors, and history views. Book pages remain untouched. */
+
+.nonbook-view-header{
+  position:relative;
+  overflow:hidden;
+  margin:18px 0 16px;
+  padding:20px 22px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 96% 0%, rgba(140,47,34,.10), transparent 30%),
+    linear-gradient(135deg, rgba(255,255,255,.42), transparent 50%),
+    var(--surface);
+}
+
+.nonbook-view-header::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:var(--ref);
+}
+
+.nonbook-view-header .label{
+  display:block;
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:5px;
+}
+
+.nonbook-view-header h3{
+  font-family:var(--font-display);
+  font-size:1.28rem;
+  line-height:1.35;
+  letter-spacing:-.035em;
+  margin:0;
+}
+
+.nonbook-view-header p{
+  max-width:820px;
+  margin:7px 0 0;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.65;
+}
+
+#view.view-history .nonbook-view-header::before{background:var(--scripture);}
+#view.view-authors .nonbook-view-header::before{background:var(--neo);}
+
+/* Compare view */
+#view.view-compare .concept-switch{
+  margin-top:14px;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(246,247,242,.72);
+}
+
+#view.view-compare .concept-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border-radius:999px;
+  padding:8px 12px;
+  background:var(--surface);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+#view.view-compare .concept-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(22,24,26,.055);
+}
+
+#view.view-compare .concept-btn.is-active{
+  box-shadow:0 10px 22px rgba(30,74,91,.14);
+}
+
+#view.view-compare .compare{
+  box-shadow:0 16px 38px rgba(22,24,26,.055);
+}
+
+#view.view-compare .compare-head{
+  padding-top:24px;
+}
+
+#view.view-compare .compare-head h3,
+#view.view-topic .detail-hero h2{
+  letter-spacing:-.04em;
+}
+
+#view.view-compare .pole{
+  background:linear-gradient(180deg,var(--surface),rgba(239,241,234,.58));
+}
+
+#view.view-compare .position{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(246,247,242,.72);
+  padding:12px 13px;
+  margin-bottom:10px;
+}
+
+#view.view-compare .position:last-child{
+  margin-bottom:0;
+  border-bottom:1px solid var(--line);
+}
+
+#view.view-compare .position .holder{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--font-display);
+  letter-spacing:-.02em;
+}
+
+#view.view-compare .position .holder::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:999px;
+  background:var(--ref);
+}
+
+#view.view-compare .pole-neo .position .holder::before{background:var(--neo);}
+
+/* Authors / History list pages */
+#view.view-authors > .grid,
+#view.view-history > .grid{
+  margin-top:16px;
+}
+
+#view.view-authors .card,
+#view.view-history .card{
+  border-radius:18px;
+  box-shadow:0 10px 26px rgba(22,24,26,.04);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+#view.view-authors .card:hover,
+#view.view-history .card:hover{
+  transform:translateY(-2px);
+  border-color:var(--line-strong);
+  box-shadow:0 16px 34px rgba(22,24,26,.075);
+}
+
+#view.view-authors .card h3,
+#view.view-history .card h3{
+  letter-spacing:-.035em;
+}
+
+#view.view-authors .card .sum,
+#view.view-history .card .sum{
+  line-height:1.72;
+}
+
+#view.view-authors .card::before{width:5px;}
+#view.view-history .card::before{background:var(--scripture);width:5px;}
+
+#view.view-authors .meta-row,
+#view.view-history .meta-row{
+  min-height:26px;
+}
+
+#view.view-history .history-period{
+  color:var(--scripture-ink);
+  background:var(--scripture-soft);
+  border:1px solid rgba(111,106,46,.18);
+  border-radius:999px;
+  padding:3px 8px;
+}
+
+#view.view-authors .tags .tag,
+#view.view-history .tags .tag{
+  background:var(--surface-2);
+}
+
+/* Topic / History detail pages, but not book details. */
+#view.view-topic .detail-page,
+#view.view-history-detail .detail-page{
+  box-shadow:0 16px 38px rgba(22,24,26,.055);
+}
+
+#view.view-topic .topic-panel,
+#view.view-topic .topic-section,
+#view.view-history-detail .history-section{
+  border-radius:16px;
+}
+
+#view.view-topic .topic-panel h4,
+#view.view-topic .topic-section h4,
+#view.view-history-detail .history-section h4{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  letter-spacing:-.025em;
+}
+
+#view.view-topic .topic-panel h4::before,
+#view.view-topic .topic-section h4::before,
+#view.view-history-detail .history-section h4::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:var(--ref);
+  opacity:.75;
+}
+
+#view.view-topic .topic-grid .topic-panel:nth-child(2) h4::before{background:var(--neo);}
+#view.view-history-detail .history-section h4::before{background:var(--scripture);}
+
+/* Empty states for non-book views only. */
+#view.view-compare .empty,
+#view.view-authors .empty,
+#view.view-history .empty,
+#view.view-topic .empty,
+#view.view-history-detail .empty{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:
+    linear-gradient(135deg,var(--surface),var(--surface-2));
+  padding:24px 26px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+#view.view-compare .empty b,
+#view.view-authors .empty b,
+#view.view-history .empty b,
+#view.view-topic .empty b,
+#view.view-history-detail .empty b{
+  color:var(--ink);
+  font-family:var(--font-display);
+  font-size:1.08rem;
+}
+
+@media(max-width:860px){
+  .nonbook-view-header{margin-top:14px;padding:18px 18px 18px 20px;}
+  #view.view-compare .concept-switch{display:flex;flex-wrap:nowrap;overflow-x:auto;padding:10px;scroll-snap-type:x proximity;}
+  #view.view-compare .concept-btn{flex:0 0 auto;scroll-snap-align:start;}
+  #view.view-compare .position{padding:11px 12px;}
+}
+
+@media(max-width:640px){
+  .nonbook-view-header h3{font-size:1.14rem;}
+  #view.view-authors .card,
+  #view.view-history .card{border-radius:16px;}
+}

@@ -1,0 +1,96 @@
+{
+  "package": "Romans research integration",
+  "target_repository": "Gyu1718/biblestudygyu",
+  "generated": "2026-07-24",
+  "files": [
+    "PACKAGE-MANIFEST.json",
+    "ROMANS-PACKAGE.md",
+    "catalog.js",
+    "data/krv_rom.json",
+    "data/links/rom.json",
+    "nt/romans/ch01.html",
+    "nt/romans/ch02.html",
+    "nt/romans/ch03.html",
+    "nt/romans/ch04.html",
+    "nt/romans/ch05.html",
+    "nt/romans/ch06.html",
+    "nt/romans/ch07.html",
+    "nt/romans/ch08.html",
+    "nt/romans/ch09.html",
+    "nt/romans/index.html",
+    "nt/romans/overview.html",
+    "nt/romans/study/ch01.html",
+    "nt/romans/study/ch02.html",
+    "nt/romans/study/ch03.html",
+    "nt/romans/study/ch04.html",
+    "nt/romans/study/ch05.html",
+    "nt/romans/study/ch06.html",
+    "nt/romans/study/ch07.html",
+    "nt/romans/study/ch08.html",
+    "nt/romans/study/ch09.html",
+    "nt/romans/study/ch10.html",
+    "nt/romans/study/ch11.html",
+    "nt/romans/study/ch12.html",
+    "nt/romans/study/ch13.html",
+    "nt/romans/study/ch14.html",
+    "nt/romans/study/ch15.html",
+    "nt/romans/study/ch16.html",
+    "tools/build_links.py"
+  ],
+  "deep_study_coverage": {
+    "1": {
+      "mapped": 32,
+      "total": 32,
+      "missing": [],
+      "extra": []
+    },
+    "2": {
+      "mapped": 29,
+      "total": 29,
+      "missing": [],
+      "extra": []
+    },
+    "3": {
+      "mapped": 31,
+      "total": 31,
+      "missing": [],
+      "extra": []
+    },
+    "4": {
+      "mapped": 25,
+      "total": 25,
+      "missing": [],
+      "extra": []
+    },
+    "5": {
+      "mapped": 21,
+      "total": 21,
+      "missing": [],
+      "extra": []
+    },
+    "6": {
+      "mapped": 23,
+      "total": 23,
+      "missing": [],
+      "extra": []
+    },
+    "7": {
+      "mapped": 25,
+      "total": 25,
+      "missing": [],
+      "extra": []
+    },
+    "8": {
+      "mapped": 39,
+      "total": 39,
+      "missing": [],
+      "extra": []
+    },
+    "9": {
+      "mapped": 33,
+      "total": 33,
+      "missing": [],
+      "extra": []
+    }
+  }
+}

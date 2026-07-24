@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 종합 연구 — 책의 신학과 전체 조망</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --k:#7a5a38; --f:#37665a; --h:#8a4658; --t:#3c5a83; --b:#655a8c; --x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.2rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.05rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.4rem}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.42rem .5rem .42rem .55rem;border-left:2px solid transparent;margin-top:.5rem}
+nav.toc a.lv2{display:block;color:#b7c8d8;text-decoration:none;padding:.2rem .5rem .2rem 1.15rem;border-left:2px solid transparent;font-size:.76rem;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2.2rem;margin-bottom:1.6rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.6rem;color:var(--ochre);line-height:1.2}
+.hero h1{font-size:2.05rem;font-weight:900;line-height:1.35;margin:.4rem 0 .6rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.8}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1.1rem;letter-spacing:.02em}
+section.part{margin-top:4rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.55rem;font-weight:900;line-height:1.4;margin:.25rem 0 .2rem}
+.part-head .gloss{font-size:.86rem;color:var(--ink-soft)}
+h3{font-size:1.16rem;font-weight:700;margin:2.2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:1rem;font-weight:700;margin:1.5rem 0 .5rem;color:var(--lapis)}
+p{margin:.9rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.lead{font-size:1.02rem;color:var(--ink)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.2rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.caveat ul{margin:.3rem 0 0 0}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.74rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.mono{font-family:var(--sans);font-size:.82rem}
+.back{font-family:var(--sans);font-size:.75rem;margin-top:1.6rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:5rem;border-top:3px double var(--line);padding-top:1.4rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch01.html">성경 연구</a></div>
+  <div class="brand">로마서 종합 연구</div>
+  <div class="brand-sub">책의 신학과 전체 조망</div>
+  <a class="lv1" href="#overview">개요와 주석 스파인</a>
+  <a class="lv1" href="#p1">Ⅰ. 배경 — 저자·정황·연대</a>
+  <a class="lv2" href="#p1-paul">바울과 더디오</a>
+  <a class="lv2" href="#p1-plan">예루살렘·로마·서바나</a>
+  <a class="lv1" href="#p2">Ⅱ. 로마 교회</a>
+  <a class="lv2" href="#p2-origin">기원 — 회당에서</a>
+  <a class="lv2" href="#p2-claudius">추방령과 귀환</a>
+  <a class="lv2" href="#p2-audience">수신자 문제</a>
+  <a class="lv1" href="#p3">Ⅲ. 본문 전승과 통합성</a>
+  <a class="lv1" href="#p4">Ⅳ. 목적 논쟁</a>
+  <a class="lv1" href="#p5">Ⅴ. 책의 짜임</a>
+  <a class="lv1" href="#p6">Ⅵ. 관통 주제</a>
+  <a class="lv1" href="#p7">Ⅶ. 해석사와 새 관점</a>
+  <a class="lv1" href="#p8">Ⅷ. 쟁점 대조표</a>
+  <a class="lv1" href="#p9">Ⅸ. 서지</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="gk-title">δικαιοσύνη γὰρ θεοῦ ἐν αὐτῷ ἀποκαλύπτεται</div>
+    <h1>로마서 종합 연구</h1>
+    <p class="sub">"복음에는 하나님의 의가 나타나서"(1:17). 바울이 세우지 않은 교회, 가 본 적 없는 도시로 보낸 편지가 열여섯 장에 걸쳐 복음을 논증한다. 선교 여정의 전환점에서 쓰인 이 편지는 교리서가 아니라 상황 속의 편지이면서, 동시에 교회사에서 가장 두꺼운 주석의 지층을 쌓았다.</p>
+    <p class="meta">저자 바울 · 고린도에서 · 주후 57년경 · 전 16장 · Moo·Dunn·Jewett·Gaventa·Barth 대조 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="part" id="overview">
+    <div class="part-head">
+      <div class="eyebrow">OVERVIEW</div>
+      <h2>개요와 주석 스파인</h2>
+      <div class="gloss">교리의 정수라 불렸으나, 먼저 편지다.</div>
+    </div>
+
+    <p class="lead"><span class="c f">M</span> 로마서를 떠올릴 때 사람들은 교리를 떠올린다. 그 반응은 이해할 만하고 적절하기도 하다. 이 편지는 철저히 교리적이며, 루터의 표현으로는 "가장 순수한 복음"이다. 그러나 신약의 다른 책들처럼 로마서도 역사에 뿌리내리고 있다. 조직신학이 아니라 <em>편지</em>이며, 구체적 정황에서 구체적 목적을 가지고 쓰였다. 메시지는 시대를 넘어서지만, 그 메시지를 이해하려면 편지가 놓인 자리에서 시작해야 한다.</p>
+
+    <p>이 문서는 로마서 전체를 조망한다. 편지가 쓰인 정황과 로마 교회의 형편, 본문이 전승된 복잡한 경로, 목적을 둘러싼 오랜 논쟁, 편지의 짜임과 관통 주제, 그리고 해석사에서 갈라진 길들을 차례로 정리한다. 절 단위 주해는 장별 심층연구 문서로 넘긴다.</p>
+
+    <h3>주석 스파인 — 다섯 축</h3>
+    <p>느헤미야·학개에서 쓴 다섯 색 슬롯을 유지하되, 로마서의 해석 지형에 맞춰 다섯 축을 새로 배치했다. 이 편지는 주석 전통이 워낙 두꺼워, 서로 다른 방법론이 같은 본문에서 다른 결론에 이르는 일이 잦다. 스파인 자체가 그 갈림을 보여 주도록 짰다.</p>
+
+    <table>
+      <caption>표 1. 로마서 주석 스파인과 각 주석의 방법</caption>
+      <thead><tr><th>슬롯</th><th>주석</th><th>관점과 방법</th></tr></thead>
+      <tbody>
+        <tr><td class="head"><span class="c f">M</span></td><td>Moo, <i>The Letter to the Romans</i> (NICNT 2판, 2018)</td><td>주해와 성경신학의 표준. 이른바 "옛 관점"에 서되 새 관점의 논거를 폭넓게 다룬다. 본문 근거를 촘촘히 쌓고 대안 견해를 정리한 뒤 결론을 낸다.</td></tr>
+        <tr><td class="head"><span class="c t">D</span></td><td>Dunn, <i>Romans</i> (WBC 38A·38B, 1988)</td><td>새 관점의 대표. 바울의 유대적 배경에서 낱말을 읽으며, <span class="gw">δικαιοσύνη</span>를 절대적 윤리 규범이 아니라 <em>관계</em> 개념으로 본다(Cremer 이래의 흐름). 디아트리베 등 수사 형식에 민감하다.</td></tr>
+        <tr><td class="head"><span class="c b">J</span></td><td>Jewett, <i>Romans</i> (Hermeneia, 2007)</td><td>사회사와 수사학. 로마서를 서바나 선교 후원을 구하는 <em>대사적 서신</em>으로 읽고, 로마 사회의 명예 위계와 공동주택 교회의 생활 조건을 배경으로 놓는다.</td></tr>
+        <tr><td class="head"><span class="c h">G</span></td><td>Gaventa, <i>Romans</i> (NTL, 2024)</td><td>묵시적 읽기. 죄와 사망을 <em>권세</em>로 읽어, 3:9의 "죄 아래" 붙잡힘을 5:12–21의 세계를 뒤덮은 권세로 추적하고, 그리스도의 죽음과 부활을 그 권세의 패배로 본다.</td></tr>
+        <tr><td class="head"><span class="c k">B</span></td><td>Barth, <i>Der Römerbrief</i> (2판 1922 · 영역 1933)</td><td>신학적 독해이자 수용사의 분기점. 복음을 세상 안의 한 가능성이 아니라 <em>역설</em>로 읽으며, "복음은 스스로를 설명하거나 추천하지 않는다"고 쓴다.</td></tr>
+        <tr><td class="head"><span class="c x">보조</span></td><td>Longenecker(NIGTC, 2016) · Kruse(PNTC, 2012) · Cranfield(<i>Shorter</i>) · Stott(BST, 1994)</td><td>그리스어 본문과 구조, 균형 잡힌 중급 주해, ICC의 축약, 강해와 목회 적용.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ Ⅰ ============ -->
+  <section class="part" id="p1">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅰ</div>
+      <h2>배경 — 저자·정황·연대</h2>
+    </div>
+
+    <h3 id="p1-paul">바울과 더디오</h3>
+    <p><span class="c f">M</span> 로마서는 스스로 바울의 편지라고 밝히며(1:1), 이 주장은 진지하게 도전받은 적이 없다. 고대의 관례대로 바울은 대필자를 썼고, 16:22에서 그 이름이 <strong>더디오</strong>로 드러난다. 고대 저자들은 대필자에게 저마다 다른 재량을 주었다. 받아쓰기에 가까운 경우부터 착상을 문장으로 옮기는 폭넓은 책임까지 폭이 넓었다. 로마서에서 바울의 방식은 받아쓰기 쪽에 훨씬 가깝다. 문체가 갈라디아서·고린도전서와 매우 가까운데, 더디오가 그 두 편지의 작성에 관여했다는 증거는 없기 때문이다.</p>
+
+    <h3 id="p1-plan">예루살렘·로마·서바나</h3>
+    <p><span class="c f">M</span> 편지가 쓰인 일반적 정황도 논란거리가 아니다. 15:22–29에서 바울은 세 지역을 자기 계획 안에 놓는다. <strong>예루살렘</strong>이 당장의 목적지다. 이방인 교회들에서 모은 헌금을 그곳 성도에게 전하러 가는 길이며, 이 연보는 3차 전도여행 중에 쓴 모든 편지에서 언급될 만큼 그에게 중요한 일이었다(고전 16:1–4; 고후 8–9장).</p>
+    <p><span class="c f">M</span> <strong>로마</strong>는 두 번째 단계다(15:24·28). 로마 성도를 만나려는 마음은 진심이지만, 그는 로마를 서바나로 가는 여정의 경유지로 본다. 이는 로마 공동체를 낮잡는 말이 아니라 그의 소명 이해를 드러낸다. "그리스도의 이름을 부르는 곳에는 복음을 전하지 않기를 힘썼노니"(15:20). 처음 교회를 세우는 이 일을 그는 동지중해에서 마쳤다. 예루살렘에서 일루리곤까지 그리스도의 복음을 편만하게 전했다는 것이다(15:19).</p>
+    <p><span class="c f">M</span> 이 진술을 사도행전의 서술과 견주면, 로마서는 3차 전도여행의 끝 무렵에 쓰였음이 분명해진다. 바울이 자기가 세운 교회의 대표들과 함께 예루살렘으로 돌아갈 채비를 하던 때다(행 20:3–6). 누가는 그가 헬라에서 석 달을 지냈다고 전하므로, 그 체류 중에 편지를 썼다고 볼 수 있다. 머문 곳은 <strong>고린도</strong>였을 가능성이 크며, 겐그레아 교회의 일꾼 뵈뵈를 추천하는 대목이 이를 뒷받침한다. 연대는 주후 57년경으로 잡는다.</p>
+    <div class="note"><span class="tt">전환점에서 쓴 편지</span><span class="c f">M</span> 이 스케치에서 특히 중요한 것은 바울이 <b>선교 여정의 전환점</b>에서 이 편지를 쓴다는 사실이다. 스물다섯 해 가까이 동지중해에 교회를 세웠고, 이제 그 수고의 열매를 예루살렘으로 가져간다. 그 연보로 초기 교회의 가장 심각한 사회적·신학적 균열, 곧 하나님의 백성 안에서 유대인과 이방인의 관계를 치유하려 한다. 예루살렘 너머에는 서바나가 있고, 그 길목에 로마가 있다.</div>
+  </section>
+
+  <!-- ============ Ⅱ ============ -->
+  <section class="part" id="p2">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅱ</div>
+      <h2>로마 교회 — 기원과 구성</h2>
+    </div>
+
+    <h3 id="p2-origin">기원 — 회당에서</h3>
+    <p><span class="c f">M</span> 바울 자신의 상황은 그의 진술과 다른 편지들, 사도행전으로 재구성할 수 있다. 로마 교회의 형편에는 그런 직접 증거가 없다. 기원은 불분명하고, 바울 당시의 구성과 성격도 명확하지 않다.</p>
+    <p><span class="c f">M</span> 로마 교회를 베드로가(또는 베드로와 바울이 함께) 세웠다는 전승은 성립하기 어렵다. 바울은 바로 이 편지에서 "남의 터 위에 건축하지 아니하려" 한다는 원칙을 밝히기 때문이다(15:20). 그런 원칙을 세운 사람이 베드로가 세운 교회에 이 편지를 쓰고 1:8–15에서 말하는 방문을 계획했다고 보기는 어렵다. 다른 사도를 로마 교회와 잇는 전승도 없으므로, 4세기 교부 <strong>암브로시아스테르</strong>의 평가가 아마 옳다. 로마 교인들은 사도의 표적을 본 일 없이 신앙을 받아들였다는 것이다.</p>
+    <p><span class="c f">M</span> 암브로시아스테르는 로마 기독교의 출발점을 <strong>회당</strong>으로 지목했고, 이 역시 옳을 것이다. 주전 1세기 말이면 이미 상당수 유대인이 로마로 이주해 인구의 유의미한 부분을 이루었다. 그들은 하나의 조직 체계로 묶여 있지 않았고, 여러 회당이 서로 독립적으로 운영된 듯하다.</p>
+
+    <h3 id="p2-claudius">추방령과 귀환</h3>
+    <p><span class="c f">M</span> 로마 유대인 역사에서 중요한 사건 하나를 수에토니우스가 전한다. <i>클라우디우스 전기</i>에서 그는 글라우디오가 "크레스투스의 선동으로 계속 소요를 일으킨" 유대인들을 로마에서 추방했다고 적는다(25.2). 대다수 학자는 "크레스투스"를 <span class="gw">Χριστός</span>의 와전으로 보고, 이 소요를 회당 안에서 메시아 예수를 둘러싸고 벌어진 분쟁으로 읽는다.</p>
+    <p><span class="c f">M</span> 이 시나리오가 로마서에 갖는 의미는 분명하다. 추방 이전에도 공동체의 일부였을 <strong>이방인 그리스도인</strong>이, 유대인 그리스도인 전부 또는 대부분의 부재로 인해 더 큰 비중을 차지하게 되었다. 신학적으로도 공동체가 유대적 기원에서 멀어지는 흐름이 가속되었다. 추방령은 몇 해 안에 실효된 것으로 보이며(아마 주후 54년 글라우디오의 죽음과 함께), 바울이 편지를 쓰는 57년에는 브리스가와 아굴라 같은 유대인 그리스도인이 로마로 돌아와 있었다(16:3). 다만 <em>더 이상 주도 집단은 아니었다</em>. 사회적·신학적 균열이 자라기 좋은 조건이다.</p>
+    <p><span class="c b">J</span> Jewett은 여기에 로마 사회의 물질적 조건을 더한다. 로마 그리스도인 상당수는 후원자의 저택이 아니라 <strong>공동주택</strong>(인술라)에 모였을 것이며, 명예와 수치가 촘촘한 위계로 작동하는 도시에서 이 차이는 공동체 내부의 힘의 비대칭으로 이어진다. 14–15장의 "약한 자"와 "강한 자" 문제도 이 지형 위에서 읽힌다.</p>
+
+    <h3 id="p2-audience">수신자 문제</h3>
+    <p><span class="c f">M</span> 편지는 이 문제에서 엇갈린 신호를 보낸다. 한편에는 <strong>유대인 그리스도인</strong>을 염두에 둔 정황이 있다. 16장에서 브리스가와 아굴라, "내 친척" 안드로니고·유니아·헤로디온에게 문안하고(16:3·7·11), 2장에서 "유대인이라 불리는 네가"라고 직접 부르며(2:17), 독자를 모세 율법과 가깝게 묶고(6:14; 7:1·4), 아브라함을 "육신으로 우리 조상"이라 부른다(4:1).</p>
+    <p><span class="c f">M</span> 다른 한편 <strong>이방인 그리스도인</strong>을 가리키는 표지도 뚜렷하다. 편지 전체의 수신 인사에서 바울은 로마 성도를 자기가 부름받아 섬기는 이방인 가운데 포함시키고(1:5–6; 1:13; 15:14–21), 이스라엘의 자리를 논하는 대목을 "내가 이방인인 너희에게 말하노라"로 못 박는다(11:13). 15:7의 "서로 받으라"는 권면도 특히 이방인 그리스도인을 향한 듯하다.</p>
+    <p><span class="c f">M</span> 퀴멜의 정리대로 로마서는 "이중적 성격"을 띤다. 본질적으로 바울의 복음과 유대교의 논쟁이어서 독자가 유대인 그리스도인이라는 결론이 자연스러워 보이는데, 동시에 공동체가 이방인 그리스도인임을 특정해 가리키는 진술들이 있다(Moo 재인용). Moo 자신은 1:5–6이 결정적이라고 보아 <strong>이방인 그리스도인이 주된 수신자</strong>라는 쪽에 선다. 16장의 문안은 로마 공동체 안에 유대인 그리스도인이 있었음을 보여 주지만, 편지가 그들에게 <em>수신</em>되었음을 요구하지는 않는다. 2장의 2인칭 단수 호명은 문학적 장치이며, 4:1의 "우리 조상"은 독자가 아니라 바울 자신을 포함한 유대인을 가리킬 수 있다.</p>
+  </section>
+
+  <!-- ============ Ⅲ ============ -->
+  <section class="part" id="p3">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅲ</div>
+      <h2>본문 전승과 통합성</h2>
+      <div class="gloss">열넷인가, 열다섯인가, 열여섯인가.</div>
+    </div>
+
+    <p><span class="c f">M</span> 지금 성경에 실린 로마서는 바울이 로마 성도에게 보낸 그 편지와 같은가. 일부 학자는 아니라고 답한다. 분할 이론을 세우거나 후대 삽입으로 보는 구절을 지목하기도 하지만, 더 널리 논의된 것은 16장(경우에 따라 15장까지)이 원래 편지의 일부가 아니었다는 주장이다. 이 주장에는 사본상의 근거가 있다.</p>
+
+    <table>
+      <caption>표 2. 사본 전승에 나타나는 로마서의 여러 형태 <span class="c f">M</span></caption>
+      <thead><tr><th>형태</th><th>주요 증거</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">1:1–14:23; 15:1–16:23; 16:25–27</td><td>P61?, ℵ, B, C, D, 1739 등</td></tr>
+        <tr><td class="mono">1:1–14:23; 16:25–27; 15:1–16:23; 16:25–27</td><td>A, P, 5, 33, 104</td></tr>
+        <tr><td class="mono">1:1–14:23; 16:25–27; 15:1–16:24</td><td>Ψ, 다수 사본, syh</td></tr>
+        <tr><td class="mono">1:1–14:23; 15:1–16:24</td><td>F, G, 629</td></tr>
+        <tr><td class="mono">1:1–14:23; 16:24–27</td><td>일부 불가타 사본</td></tr>
+        <tr><td class="mono">1:1–15:33; 16:25–27; 16:1–23</td><td>P46</td></tr>
+      </tbody>
+    </table>
+
+    <p><span class="c f">M</span> 겉보기 문제는 송영(16:25–27)을 포함할지, 포함한다면 14장 끝인지 15장 끝인지 16장 끝인지다. 여기서 그쳤다면 비교적 사소한 본문 문제였을 것이다. 그러나 송영의 위치 차이가 다른 본문·문학적 쟁점과 맞물려 편지 전체의 기원과 전승사를 묻게 만든다. 여러 불가타 사본이 15:1–16:23을 통째로 빠뜨리고, 테르툴리아누스·이레나이우스·키프리아누스에게서 15·16장 인용이 발견되지 않는다는 사실이 <strong>14장 형태</strong>의 존재를 시사한다.</p>
+
+    <h4>15장 형태 가설</h4>
+    <p><span class="c f">M</span> 가장 널리 논의된 형태는 원래 편지가 1:1–15:33이었다는 주장이다. P46이 송영을 15장 뒤에 둔 것은 편지가 한때 거기서 끝났어야 설명된다는 것이다. 여기에 16장 자체의 내부 증거가 더해진다. 분쟁을 일으키는 자들에 대한 16:17–20의 경고가 1–15장과 어울리지 않아 보이고, 무엇보다 3–15절의 방대한 문안이 문제가 된다. 뵈뵈 외에 스물다섯 사람, 두 가정, 한 "교회", 그리고 수를 알 수 없는 형제와 성도들에게 문안하는데, 바울은 그 도시를 방문한 적이 없다. 그러니 16장은 바울이 잘 아는 교회, 곧 <strong>에베소</strong>에 보낸 것이라는 추정이다. 16:5가 "아시아에서 처음 맺은 열매"를 지목하고, 아굴라와 브리스길라를 마지막으로 만난 곳이 에베소였다는 점(행 18:19)이 근거가 된다.</p>
+
+    <h4>Moo의 결론</h4>
+    <p><span class="c f">M</span> 그러나 이 이론들은 거의 확실히 틀렸다. 초기 교회에 14장 형태가 있었다는 증거는 분명하지만, 14장과 15장의 긴밀한 연결 때문에 바울의 원래 편지가 15장 없이 존재했다고 볼 수 없다. Lightfoot은 바울 자신이 편지를 축약하면서 1:7과 1:15의 "로마에" 언급을 함께 지웠으리라 보았지만, 그것이 목적이었다면 논증 한가운데서 편지를 끊었을 리 없다. Gamble의 후대 축약설에도 같은 반론이 적용된다. 15장 형태는 출발부터 사본상 근거가 약하다. <strong>15장까지만 담은 로마서 사본은 하나도 없다.</strong> 유일한 증거는 P46의 송영 위치인데, P46은 16장을 빠뜨리지 않는다. 내부 논거도 강하지 않다. 16:17–20 같은 막바지 경고는 다른 편지에도 평행이 있고, 방대한 문안은 유대인과 유대인 그리스도인의 추방이 오히려 바울에게 그들을 만날 기회를 주었다는 점으로 설명된다. 현재 대다수 학자와 함께, 바울이 로마에 보낸 편지는 <em>열여섯 장 전체</em>였다고 결론짓는다.</p>
+  </section>
+
+  <!-- ============ Ⅳ ============ -->
+  <section class="part" id="p4">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅳ</div>
+      <h2>목적 논쟁</h2>
+      <div class="gloss">바울은 왜 이 편지를 썼는가.</div>
+    </div>
+
+    <p><span class="c f">M</span> 로마서의 목적에 답이 그토록 많은 까닭은 바울이 그 주제에 관해 거의 말하지 않기 때문이다. 서두(1:1–15)에서 로마 방문과 복음 전할 계획을 말하지만 편지의 목적은 말하지 않는다. 결론부는 그 계획을 부연할 뿐이고, 목적에 관해서는 "너희로 다시 생각나게 하려고 … 대략 너희에게 썼노니"(15:15)고만 한다. 너무 일반적이고 상투적이어서 건질 것이 적다. 그러므로 목적은 <strong>편지의 내용을 정황에 맞춰 읽어야</strong> 드러난다. 견해는 크게 두 갈래다. 바울 자신의 상황을 강조하는 쪽과 로마 공동체 내부의 문제를 강조하는 쪽이다.</p>
+
+    <h4>ⓐ 바울의 상황에 초점</h4>
+    <ul>
+      <li><b>서바나</b> — <span class="c f">M</span> 대다수 학자는 서바나 선교 준비를 목적의 하나로 본다. 안디옥에서 그토록 먼 곳의 개척은 온갖 실무 문제를 낳으므로, 활력 있고 지리적으로 중심에 놓인 로마 공동체의 도움을 구하는 것이 자연스럽다. 15:24의 <span class="gw">προπέμπω</span>가 물질적 후원을 함의한다. 이렇게 보면 로마서는 후원자 명단에 새 교회를 더하려는 <em>자기소개 편지</em>다. 편지가 신학 전반을 다루는 이유도 설명된다. 후원할 선교사의 정통성을 확인시키려는 것이다. <span class="c b">J</span> Jewett은 이 노선을 가장 멀리 밀고 나가, 로마서 전체를 서바나 선교의 후원을 구하는 <strong>대사적 서신</strong>으로 읽는다.</li>
+      <li><b>고린도·갈라디아</b> — <span class="c f">M</span> 유대 문제에 쏟는 비중을 설명하는 한 방식은, 로마서를 갈라디아와 고린도에서 유대주의자들과 싸우며 벼려 낸 입장의 정리로 보는 것이다. 헬라에서 보낸 석 달은 그 격전이 정리된 뒤였다. 율법과 할례를 다루는 균형 잡힌 태도가 이를 뒷받침한다.</li>
+      <li><b>예루살렘</b> — <span class="c f">M</span> 연보를 들고 갈 때 예루살렘에서 할 "연설"을 미리 적어 둔 것이라는 견해다. 바울은 로마 성도에게 그 여정을 위해 기도해 달라고 명시적으로 청한다(15:30–33).</li>
+    </ul>
+
+    <h4>ⓑ 로마의 문제에 초점</h4>
+    <p><span class="c f">M</span> F. C. Baur는 로마서를 시대를 초월한 신학 선언으로 보던 흐름에 맞서, 이 편지도 다른 편지처럼 수신 교회의 구체적 사안을 향한다고 주장하며 새 접근을 열었다. 바울이 로마를 방문한 적은 없지만 그곳 사정을 알 만한 통로는 충분했다(1:8; 7:1; 11:13; 14–15장; 브리스가와 아굴라). 근래 이 접근이 되살아났는데, 지금은 폴레믹보다 <strong>14:1–15:13의 "약한 자"와 "강한 자"</strong>가 초점이다. 토라 경건으로 그리스도인 정체성을 규정하려는 이들(주로 유대인)과 토라를 끌어들일 필요가 없다고 본 이들(주로 이방인) 사이의 균열을 치유하려 했다는 것이며, 이 권면이 편지의 절정이고 1–11장이 그 신학적 토대, 12–13장이 일반 권면의 토대가 된다는 구도다.</p>
+
+    <h4>Moo의 종합</h4>
+    <p><span class="c f">M</span> 로마서의 목적은 어느 하나로 좁힐 수 없고, 여러 목적을 갖는다. 다만 그 목적들에는 공통분모가 있다. <strong>바울의 선교적 상황</strong>이다. 갈라디아와 고린도에서 치른 지난 싸움, 다가오는 예루살렘의 위기, 서바나 사역을 위한 선교 기지 확보, 그 사역을 지지할 로마 교회를 "그의" 복음 아래 하나로 묶어야 할 필요. 이 모두가 그로 하여금 복음 이해를 조심스럽게 되짚는 편지를 쓰게 했으며, 특히 유대인과 이방인이라는 구속사적 물음과 구원 계획의 연속성에 초점이 맞춰졌다.</p>
+    <div class="note"><span class="tt">또 하나의 이유</span><span class="c f">M</span> 유대주의자들과의 싸움은 바울에게 "반(反)율법", 나아가 "반유대"라는 평판을 안겼다. 그런 소문이 로마에도 닿았을 수 있다는 단서가 3:8이다. 그러므로 그는 자기 복음을 로마 공동체에 소개하면서 그 소문을 무력화하고 이미 적대적인 이들의 마음까지 얻어야 했다. L.&nbsp;T.&nbsp;Johnson의 표현대로 로마서는 "<b>바울을 위한 바울의 추천서</b>"다(Moo 재인용). 목적에 관한 가장 이른 언급일 무라토리 정경(주후 200년경?)은 바울이 로마인들에게 "성경의 계획에 관하여, 그 기초가 그리스도임을 보이며" 더 길게 썼다고 적는다.</div>
+  </section>
+
+  <!-- ============ Ⅴ ============ -->
+  <section class="part" id="p5">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅴ</div>
+      <h2>책의 짜임</h2>
+    </div>
+    <table>
+      <caption>표 3. 로마서의 큰 짜임</caption>
+      <thead><tr><th>본문</th><th>단락</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:1–17</td><td>서두와 주제</td><td>인사(1:1–7), 감사와 방문 계획(1:8–15), 주제 선언(1:16–17)</td></tr>
+        <tr><td class="head">1:18–4:25</td><td>하나님의 의 ①</td><td>진노 아래 있는 인류(1:18–3:20), 속죄소이신 그리스도와 믿음의 의(3:21–31), 아브라함(4장)</td></tr>
+        <tr><td class="head">5:1–8:39</td><td>하나님의 의 ②</td><td>화평과 소망(5:1–11), 아담과 그리스도(5:12–21), 죄·율법에서의 자유(6–7장), 성령 안의 생명과 끊을 수 없는 사랑(8장)</td></tr>
+        <tr><td class="head">9:1–11:36</td><td>이스라엘</td><td>택하심과 남은 자, 감람나무, 온 이스라엘의 구원, 송영(11:33–36)</td></tr>
+        <tr><td class="head">12:1–15:13</td><td>권면</td><td>산 제물과 한 몸(12장), 권세와 사랑(13장), 약한 자와 강한 자(14:1–15:13)</td></tr>
+        <tr><td class="head">15:14–16:27</td><td>결론</td><td>선교 계획과 연보(15:14–33), 문안(16:1–16), 경고와 송영(16:17–27)</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c h">G</span> Gaventa는 이 짜임을 읽는 한 가지 관찰을 더한다. 1–4장을 지배하던 민족 언어(유대인·헬라인, 아브라함, 다윗)가 <strong>5–8장에서 사라진다</strong>는 점이다. 그 자리에 아담과 온 인류, 죄와 사망이라는 우주적 범위가 들어선다. 5:12–21에서 논증은 민족의 문제를 넘어 <em>보편적·우주적</em>인 것으로 다시 주조된다.</p>
+  </section>
+
+  <!-- ============ Ⅵ ============ -->
+  <section class="part" id="p6">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅵ</div>
+      <h2>관통 주제</h2>
+    </div>
+
+    <h3>① 하나님의 의 — <span class="gk">δικαιοσύνη θεοῦ</span></h3>
+    <p><span class="c f">M</span> 의(義) 계열 어휘는 로마서의 직물에 짜여 들어가 있다. 명사 <span class="gw">δικαιοσύνη</span>가 서른네 번(바울의 다른 모든 편지를 합쳐 스물네 번), 동사 <span class="gw">δικαιόω</span>가 열다섯 번, 형용사 <span class="gw">δίκαιος</span>가 일곱 번 나온다. 구약에서 하나님의 <span class="gw">δικαιοσύνη</span>는 대체로 언제나 옳은 일을 행하시는 하나님의 성품을 가리킨다. 불충한 언약 상대를 벌하시는 것도 그 "옳게 행하심"의 나타남이다. 그러나 포로기의 백성에게 특히 중요한 것은, 하나님이 개입하여 자기 백성을 구원하고 신원하심으로 그 성품을 나타내리라는 선포다. 그때 백성은 구원받고 신원된 <em>신분</em>을 누린다고 말할 수 있다.</p>
+    <p><span class="c t">D</span> Dunn은 여기서 언어의 바탕을 강조한다. <span class="gw">δικαιοσύνη</span>는 바울의 그리스어를 뚫고 그의 유대적 배경과 훈련에 비추어 이해해야 할 좋은 예다. 그리스-로마 전통에서 나와 서구 사상을 지배한 개념은 개별적 권리와 의무를 재는 이상적·절대적 윤리 규범으로서의 의였다. 그러나 Cremer의 기초적 연구 이래, 히브리적 사고에서 이 개념이 본질적으로 <strong>관계</strong> 개념임이 인정되어 왔다.</p>
+    <p><span class="c f">M</span> 이 어휘가 로마서에 특히 어울리는 이유도 있다. 하나님의 의가 나타나리라는 예고, 특히 이사야 40–66장의 그것은 <em>이방인</em>을 하나님의 목적 안에 포함시킨다. 하나님의 백성 안에 이방인이 들어오는 문제에 주목하는 편지에 이보다 맞춤한 주제가 없다.</p>
+
+    <h3>② 복음은 능력이다</h3>
+    <p><span class="c x">S</span> Stott은 1:16–17의 논리를 이렇게 정리한다. 복음을 부끄러워하지 않는 <em>까닭은</em> 그것이 구원을 주시는 하나님의 능력이기 때문이고, 능력인 <em>까닭은</em> 그 안에 하나님의 의가 나타나기 때문이다. <span class="c k">B</span> Barth는 같은 자리에서 훨씬 날 선 언어를 쓴다. 구원을 주시는 하나님의 능력은 이 세상에 너무나 새롭고 들어 본 적 없고 예기치 못한 것이어서, 우리 가운데 나타나 받아들여지고 이해될 때 오직 <em>모순</em>으로만 그리된다. 복음은 스스로를 해설하거나 추천하지 않고, 협상하거나 간청하거나 위협하거나 약속하지 않으며, 그 자체를 위해 들리지 않을 때는 언제나 스스로 물러난다.</p>
+
+    <h3>③ 유대인과 이방인</h3>
+    <p>"먼저는 유대인에게요 그리고 헬라인에게로다"(1:16)가 편지 전체를 관통한다. <span class="c f">M</span> 목적론에서 보았듯 이 구속사적 물음이 편지의 초점이며, 9–11장은 그 물음을 하나님의 신실하심에 관한 질문으로까지 밀고 간다. <span class="c t">D</span> Dunn은 2장의 디아트리베가 겨냥하는 것이 유대인의 자만, 곧 이스라엘이 율법의 백성이라는 사실이 하나님의 편애를 뜻한다는 전제라고 본다. 바울의 요지는 율법이 하나님이 세우신 <strong>보편적</strong> 기준으로 기능하도록 두어야지, 유대인과 이방인을 가르는 정체성 표지로 축소되거나 할례 같은 의례로 피상적으로 규정되어서는 안 된다는 것이다.</p>
+
+    <h3>④ 죄와 사망 — 권세로서의 죄</h3>
+    <p><span class="c h">G</span> Gaventa의 묵시적 읽기가 여기서 다른 결을 낸다. 바울은 유대인과 이방인 모두가 죄 아래 붙잡혀 있음을 말한 뒤(3:9), 그 사로잡힘을 마침내 아담과 온 세계를 뒤덮은 <strong>죄와 사망의 권세</strong>로 추적한다(5:12–21). 그리스도의 죽음과 부활은 이 권세들의 패배와 다름없으며(6:12–21), 모든 피조물의 해방이라는 소망을 연다(8:18–25). 그럼에도 그 권세들은 그리스도 예수 안에서 이루어진 하나님의 사랑에 저항하기를 계속한다(8:31–39). <span class="c h">G</span> Gaventa는 J. L. Martyn이 그리스도 사건을 하나님의 세계 "침입"이라 부른 것을 인용하며, 그 용어가 하나님의 일방적 행동과 세계의 저항을 정확히 포착한다고 본다. 다만 폭력적 함의가 불편하다면 "틈입"이 대안이 될 수 있다고 덧붙인다.</p>
+    <p><span class="c h">G</span> 이 읽기는 6장의 노예 언어를 다루는 방식에서도 드러난다. 바울은 왕권·노예제·폭력과 결부된 언어로 죄를 그리고, 죄를 향한 노예 됨 대신 하나님을 향한 순종의 노예 됨을 권한다(6:16·19–23). 두 예속의 결말은 정반대지만, 바울은 그 지점에서 노예 언어 자체를 문제 삼지 않은 채 둔다.</p>
+
+    <h3>⑤ 믿음의 순종</h3>
+    <p>편지는 <span class="gw">ὑπακοὴ πίστεως</span>("믿음의 순종", 1:5)로 열려 같은 어구로 닫힌다(16:26). 이 수미상관이 편지의 목표를 드러낸다. 복음이 요구하는 것은 동의가 아니라 순종이며, 그 순종이 모든 이방인 가운데서 그 이름을 위해 일어나야 한다는 것이다. 이 주제는 12:1의 "너희 몸을 하나님이 기뻐하시는 거룩한 산 제물로 드리라"에서 실천의 언어로 다시 나타난다.</p>
+  </section>
+
+  <!-- ============ Ⅶ ============ -->
+  <section class="part" id="p7">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅶ</div>
+      <h2>해석사와 새 관점</h2>
+    </div>
+
+    <h3>두꺼운 지층</h3>
+    <p>로마서는 서방 교회사의 분기점마다 다시 읽혔다. 아우구스티누스, 루터("가장 순수한 복음"), 칼뱅, 웨슬리, 그리고 20세기의 Barth가 각각 이 편지에서 자기 시대의 신학을 길어 올렸다. <span class="c k">B</span> Barth의 <i>로마서</i>는 그 계보에서 특별한 자리를 차지한다. 그에게 복음은 종교적 성취의 정점이 아니라 인간의 모든 가능성을 끊는 <em>역설</em>이며, 부활의 능력이고, 루터의 표현을 빌린 "기이한 싸움"이다. 믿음과 하나님의 능력이 있는 곳에서 사람은 자기가 아닌 자로 서며, 새 사람으로 문턱에 선다.</p>
+
+    <h3>새 관점 논쟁</h3>
+    <p>20세기 후반 이래 로마서 해석을 갈라 놓은 것은 이른바 <strong>바울에 관한 새 관점</strong>이다. 논쟁의 핵심은 바울이 맞선 것이 무엇이었느냐다. 개인이 공로로 구원을 얻으려는 시도인가, 아니면 이스라엘의 특권을 하나님 백성의 경계 표지로 삼는 태도인가.</p>
+    <p><span class="c t">D</span> Dunn은 이 논쟁의 한 축을 대표한다. 그의 WBC는 5:1–21을 아예 "믿음의 새 관점"이라는 표제 아래 다루며, 낱말들을 유대적 배경에서 다시 읽는다. 앞서 보았듯 그는 "의"를 관계 개념으로 보고, 율법을 유대인과 이방인을 가르는 <em>정체성 표지</em>로 축소하는 태도를 바울의 표적으로 지목한다.</p>
+    <p><span class="c f">M</span> Moo는 반대편에서 이 흐름과 폭넓게 대화한다. 그는 새 관점의 논거를 상세히 다루되 결론에서는 전통적 개신교 독법에 선다. 특히 그는 이른바 "케제만 학파"가 하나님의 의를 그리스도 이전 유대교의 묵시적 전문 용어로 보며 근거로 드는 쿰란 문헌(1QS 11장)의 용례를 검토하고, 그 근거가 주장만큼 명확하지 않다고 본다. 2판에서는 9–11장 주해 뒤에 "바울과 유대교에 관한 최근 평가"를 덧붙여 이른바 급진적 새 관점, 곧 "유대교 안의 바울" 흐름까지 다룬다.</p>
+    <p><span class="c f">M</span> 칭의의 성격을 둘러싼 논쟁도 여전하다. <span class="gw">δικαιόω</span>의 엄밀히 법정적인 의미는 종교개혁 이래 개신교 신학의 표지였다. 대다수 로마 가톨릭 해석자들은 이 "법정적 전용" 의미를 받아들이지 않고, 단지 법적인 것이 아니라 실제로 "의롭게 만드는" 것을 함의한다고 주장해 왔다. 최근에는 여러 신학 전통의 해석자들이 칭의의 범위에 변화(변혁)의 요소를 포함시키자고 논증한다. Ziesler는 동사는 좁게 법정적이고 명사는 법정적·도덕적 의미의 결합이라고 구분했으나, 명사와 동사(그리고 형용사의 일부 용례)가 지나치게 겹쳐 이 구분은 따르는 이가 적다.</p>
+  </section>
+
+  <!-- ============ Ⅷ ============ -->
+  <section class="part" id="p8">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅷ</div>
+      <h2>쟁점 대조표</h2>
+      <div class="gloss">주석 사이에서 갈리거나 미결로 남은 지점.</div>
+    </div>
+    <table>
+      <caption>표 4. 로마서 해석의 주요 쟁점</caption>
+      <thead><tr><th>쟁점</th><th>견해와 근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">편지의 범위</td><td><span class="c f">M</span> 14장·15장 형태 가설이 오래 논의되었으나, 15장까지만 담은 사본이 하나도 없고 14–15장의 연결이 긴밀해 열여섯 장 전체가 원형이라는 것이 대다수 결론.</td></tr>
+        <tr><td class="head">송영(16:25–27)</td><td>사본마다 위치가 다르며(14장 끝·15장 끝·16장 끝), 일부는 두 번 싣는다. 위치의 다양성이 전승사 논의의 출발점.</td></tr>
+        <tr><td class="head">수신자</td><td><span class="c f">M</span> 이방인 그리스도인 중심(1:5–6이 결정적). 유대인 그리스도인 존재는 16장이 보여 주나 수신을 요구하지 않는다. 퀴멜은 "이중적 성격"으로 정리.</td></tr>
+        <tr><td class="head">편지의 목적</td><td><span class="c f">M</span> 복수 목적, 공통분모는 선교적 상황. <span class="c b">J</span> 서바나 선교 후원을 구하는 대사적 서신. Baur 이래 로마 내부 문제(약한 자·강한 자)를 절정으로 보는 흐름.</td></tr>
+        <tr><td class="head">하나님의 의</td><td>신분(선물)인가, 구원하시는 하나님의 활동인가, 언약적 신실하심인가. <span class="c t">D</span> 관계 개념(Cremer 이래). <span class="c f">M</span> 케제만 학파의 쿰란 근거에 회의적.</td></tr>
+        <tr><td class="head">칭의의 성격</td><td>법정적 선언에 한정할 것인가, 변화의 요소를 포함할 것인가. Ziesler의 명사·동사 구분은 지지자가 적다. <span class="c f">M</span></td></tr>
+        <tr><td class="head">1:3–4의 성격</td><td><span class="c f">M</span> 최근 다수는 바울 이전 전승을 상정하나(Fitzmyer·Kruse·Longenecker), 전승 식별 기준이 충분히 정밀하지 않다. 전통적 언어를 쓴 것은 분명하되 정형 신조·찬가의 인용인지는 불분명. 인용한 것은 바울 자신이 긍정한 것이라는 원칙은 유지되어야 한다.</td></tr>
+        <tr><td class="head">1:17 "믿음에서 믿음으로"</td><td>수식 대상과 의미가 갈린다. 그리스도의 신실하심에서 믿는 자에게로 읽는 견해, 움직임·발전으로 읽는 견해, 강조로 읽는 견해. <span class="c f">M</span> 문맥은 인간의 믿음 쪽을 지지한다고 본다.</td></tr>
+        <tr><td class="head">죄의 성격</td><td><span class="c h">G</span> 인격화된 우주적 권세로 읽는 묵시적 독법과, 인간의 행위·상태로 읽는 독법이 갈린다.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ Ⅸ ============ -->
+  <section class="part" id="p9">
+    <div class="part-head">
+      <div class="eyebrow">PART Ⅸ</div>
+      <h2>서지</h2>
+    </div>
+
+    <h3>스파인 서지</h3>
+    <ul>
+      <li>Moo, Douglas J. <i>The Letter to the Romans</i>. 2nd ed. NICNT. Eerdmans, 2018.</li>
+      <li>Dunn, James D. G. <i>Romans 1–8</i> · <i>Romans 9–16</i>. WBC 38A·38B. Word, 1988.</li>
+      <li>Jewett, Robert (with Roy D. Kotansky). <i>Romans: A Commentary</i>. Hermeneia. Fortress, 2007.</li>
+      <li>Gaventa, Beverly Roberts. <i>Romans: A Commentary</i>. NTL. Westminster John Knox, 2024.</li>
+      <li>Barth, Karl. <i>The Epistle to the Romans</i>. 6th ed. Trans. E. C. Hoskyns. Oxford, 1933(독일어 2판 1922).</li>
+      <li>Longenecker, Richard N. <i>The Epistle to the Romans</i>. NIGTC. Eerdmans, 2016.</li>
+      <li>Kruse, Colin G. <i>Paul's Letter to the Romans</i>. PNTC. Eerdmans, 2012.</li>
+      <li>Cranfield, C. E. B. <i>Romans: A Shorter Commentary</i>. Eerdmans/T&amp;T Clark.</li>
+      <li>Stott, John. <i>The Message of Romans</i>. BST. IVP.</li>
+    </ul>
+
+    <div class="back"><a href="./index.html">← 로마서 서재로</a> · <a href="./ch01.html">1장 심층 연구 →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 종합 연구(책 신학·전체 조망) — 3-문서 구조의 첫 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988)·Gaventa(NTL 2024)·Barth(1933 영역)·Stott(BST) 직접 확인분. Käsemann·Sanders·Wright·Martyn·Kümmel·Bornkamm·L.&nbsp;T.&nbsp;Johnson·Cremer·Ziesler·Lightfoot·Gamble은 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

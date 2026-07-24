@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 6장 심층 연구 — 죄에 대하여 죽은 자</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="6" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch06.html">성경 연구</a></div>
+  <div class="brand">로마서 6장 심층 연구</div>
+  <div class="brand-sub">죄에 대하여 죽은 자</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html">2</a><a href="ch03.html">3</a><a href="ch04.html">4</a>
+    <a href="ch05.html">5</a>
+    <a href="ch06.html" aria-current="page">6</a>
+    <a class="off" href="#">7</a><a class="off" href="#">8</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 그럴 수 없느니라 (6:1–2)</a>
+  <a class="lv1" href="#s2">2. 세례와 연합 (6:3–11)</a>
+  <a class="lv1" href="#s3">3. 지체를 드리라 (6:12–14)</a>
+  <a class="lv1" href="#s4">4. 두 주인 (6:15–19)</a>
+  <a class="lv1" href="#s5">5. 삯과 은사 (6:20–23)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">τῇ ἁμαρτίᾳ ἀπεθάνομεν</div>
+    <h1>로마서 6장 · 죄에 대하여 죽은 자</h1>
+    <p class="sub">5:20이 은혜의 넘침을 선언하자마자 오해가 따라붙는다. 6장은 그 오해를 정면으로 받는다.</p>
+    <p class="meta">6:1–14 세례와 연합 · 6:15–23 두 주인 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">같은 물음이 두 번, 같은 대답이 두 번.</div>
+    </div>
+    <p>6장은 병행하는 두 단락으로 짜인다. 각 단락이 물음으로 열리고 <span class="gw">μὴ γένοιτο</span>("그럴 수 없느니라")로 부정된 뒤, 근거를 펴고 명령으로 맺는다.</p>
+    <p><span class="c x">S</span> Stott은 6:1–14를 <b>여덟 단계</b>로 읽는다. 우리가 죄에 대하여 죽었고(2), 세례로 그의 죽으심에 합하여(3), 함께 장사되어 새 생명 가운데 행하며(4), 그의 죽으심과 부활에 연합하고(5), 옛 사람이 함께 못 박혀 죄에 종 노릇 하지 않게 되며(6), 죽은 자가 죄에서 벗어났고(7), 그리스도께서 다시 죽지 아니하시듯 우리도 그러하며(8–10), 이제 우리가 그리스도께서 그러하신 그것 곧 "죄에 대하여 죽고 하나님께 대하여 살아 있는" 자로 여겨야 한다(11). 그리고 그 결과로 몸을 의의 무기로 드려야 하고(12–13), 죄가 주인 노릇 하지 못하는 것은 우리 처지가 "법 아래"에서 "은혜 아래"로 근본적으로 바뀌었기 때문이다(14). <b>은혜는 죄를 부추기지 않는다. 은혜는 죄를 불법화한다.</b></p>
+      <table>
+      <caption>표 1. 6장의 두 겹 구조</caption>
+      <thead><tr><th></th><th>첫째 단락 (6:1–14)</th><th>둘째 단락 (6:15–23)</th></tr></thead>
+      <tbody>
+        <tr><td class="head">물음</td><td>은혜를 더하게 하려고 죄에 거하겠느냐(1절)</td><td>법 아래 있지 않으니 죄를 지으리요(15절)</td></tr>
+        <tr><td class="head">부정</td><td>그럴 수 없느니라(2절)</td><td>그럴 수 없느니라(15절)</td></tr>
+        <tr><td class="head">근거</td><td>세례로 그의 죽으심에 연합함(3–10절)</td><td>순종하는 자의 종이 됨(16–20절)</td></tr>
+        <tr><td class="head">명령</td><td>여길지어다 · 드리라(11–13절)</td><td>거룩함에 이르라(19절)</td></tr>
+        <tr><td class="head">결론</td><td>죄가 주장하지 못하리니(14절)</td><td>죄의 삯은 사망(23절)</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c h">G</span> Gaventa의 읽기에서 이 장은 5:12–21의 연장이다. 그리스도의 죽음과 부활은 죄와 사망이라는 <strong>권세의 패배</strong>와 다름없으며(6:12–21), 6장의 논증은 그 패배가 신자의 삶에서 무엇을 뜻하는지를 편다.</p>
+  </section>
+
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">μὴ γένοιτο</div>
+      <div class="eyebrow">6:1–2</div>
+      <h2>1. 그럴 수 없느니라</h2>
+      <div class="gloss">메 게노이토 — 되받아친 혐의</div>
+    </div>
+
+    <div class="vs" id="v12" data-verses="1,2">
+      <span class="ref">6:1–2 — 물음의 출처</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>그런즉 우리가 무슨 말을 하리요 은혜를 더하게 하려고 죄에 거하겠느냐 <span class="vn">2</span>그럴 수 없느니라 죄에 대하여 죽은 우리가 어찌 그 가운데 더 살리요</p>
+      <p>1절의 물음은 새로 지어낸 것이 아니다. 3:8에서 바울에게 이미 씌워졌던 혐의, 곧 "선을 이루기 위하여 악을 행하자"가 5:20("죄가 더한 곳에 은혜가 더욱 넘쳤나니")을 만나 되살아난 것이다. 은혜가 죄에 비례해 커진다면 죄를 늘리는 편이 낫지 않느냐는 논리다.</p>
+      <p><span class="c x">C</span> Cranfield는 6:1과 6:15의 두 물음이 <em>같지 않다</em>는 점을 강조한다. 1절에서 물리치는 잘못된 추론은 5:20의 진술("죄가 더한 곳에 은혜가 더욱 넘쳤나니")에서 나온 것으로, 은혜를 더 넘치게 하려고 죄에 <b>머물러야</b> 한다는 것이다. 반면 15절에서 물리치는 추론은 6:14b("은혜 아래에 있음이라")에서 나온 것으로, 이제 죄의 <b>개별 행위가 더 이상 문제되지 않는다</b>는 것이다. 그리고 바울이 뒤이어 논점을 못 박으려 들이는 공은, 그런 오해의 위험이 단지 가설적이지 않았음을 보여 준다.</p>
+      <p>바울의 답은 논박이 아니라 <strong>사실의 확인</strong>이다. "죄에 대하여 죽은 우리가 어찌 그 가운데 더 살리요." <span class="gw">οἵτινες ἀπεθάνομεν τῇ ἁμαρτίᾳ</span>에서 동사는 부정과거로 이미 일어난 일을 가리키고, 여격 <span class="gw">τῇ ἁμαρτίᾳ</span>는 관계의 단절을 표시한다. 물음이 성립하지 않는 이유는 금지 때문이 아니라 <em>신분의 변화</em> 때문이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">συνετάφημεν</div>
+      <div class="eyebrow">6:3–11</div>
+      <h2>2. 세례와 연합</h2>
+      <div class="gloss">쉬네타페멘 — 함께 장사되었나니</div>
+    </div>
+
+    <div class="vs" id="v34" data-verses="3,4">
+      <span class="ref">6:3–4 — 그의 죽으심과 합하여</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">3</span>무릇 그리스도 예수와 합하여 세례를 받은 우리는 그의 죽으심과 합하여 세례를 받은 줄을 알지 못하느냐 <span class="vn">4</span>그러므로 우리가 그의 죽으심과 합하여 세례를 받음으로 그와 함께 장사되었나니 이는 아버지의 영광으로 말미암아 그리스도를 죽은 자 가운데서 살리심과 같이 우리로 또한 새 생명 가운데서 행하게 하려 함이라</p>
+      <p><span class="gw">ὅσοι ἐβαπτίσθημεν εἰς Χριστὸν Ἰησοῦν, εἰς τὸν θάνατον αὐτοῦ ἐβαπτίσθημεν</span>. 전치사 <span class="gw">εἰς</span>가 두 번 반복되며 방향과 편입을 함께 나타낸다. 그리스도 예수 <em>안으로</em> 세례를 받은 것이 곧 그의 죽음 <em>안으로</em> 세례를 받은 것이다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역은 5절의 연합을 "그의 죽으심에 <b>본떠 빚어졌다면</b>(conformed) 그의 부활에도 반드시 그리 되리라"로 옮겨, 단순한 병렬이 아니라 <em>형태의 일치</em>임을 드러낸다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 세례는 무엇을 하는가</span>
+      ① <b>성례적 실효</b> — 세례 자체가 죽음과의 연합을 <em>이룬다</em>는 읽기. <span class="gw">εἰς</span>의 편입 의미가 근거다. &nbsp;
+      ② <b>표징·인침</b> — 세례가 이미 일어난 연합을 <em>표시하고 확증한다</em>는 읽기. 4:11의 할례가 "표"이자 "인"이었던 것과 같은 구조이며, 개신교 주석의 다수 노선이다. &nbsp;
+      ③ <b>회심 전체의 환유</b> — "세례"가 의식만이 아니라 믿음·회개·세례를 아우르는 <em>입문 사건 전체</em>를 가리킨다는 읽기. &nbsp;
+      <span class="c x">S</span> Stott은 이 물음이 16세기 이래 칭의를 둘러싼 논쟁, 곧 의가 <em>전가되는가 주입되는가</em>의 다툼과 얽혀 있음을 지적하며, 1957년 Hans Küng이 Barth와의 대화를 담아 펴낸 <i>칭의</i>가 이 논쟁에 새 국면을 열었다고 본다. Küng은 칭의가 하나님의 <b>선언</b>이며 오직 믿음으로 됨을 인정하면서, 동시에 하나님의 말씀은 언제나 <b>효력을 낳는다</b>고 주장했다. 6장의 "새 생명 가운데서 행하게 하려 함"이 바로 그 효력의 자리다.</div>
+      <p>4절이 그 함의를 장례의 이미지로 편다. <span class="gw">συνετάφημεν</span>("함께 장사되었나니")은 접두어 <span class="gw">σύν</span>("함께")이 붙은 동사로, 6장에서 반복되는 <strong>연합의 어휘군</strong>을 이룬다(6:4 함께 장사됨, 6:5 연합함, 6:6 함께 십자가에 못 박힘, 6:8 함께 삶).</p>
+      <p>문장의 목적절이 중요하다. 장사됨의 목적은 "우리로 또한 <strong>새 생명 가운데서 행하게</strong> 하려 함"이다. 세례가 과거의 청산으로 끝나지 않고 새로운 걸음으로 이어진다. <span class="gw">περιπατέω</span>("행하다")는 바울이 윤리적 삶을 가리킬 때 쓰는 낱말이다.</p>
+      <p><span class="c f">M</span> 그리스도를 살리신 분은 "아버지의 영광"으로 표현되며, 신자의 새 생명이 그 부활 사건과 같은 능력에 잇닿아 있음을 함의한다.</p>
+    </div>
+
+    <div class="vs" id="v57" data-verses="5,6,7">
+      <span class="ref">6:5–7 — 옛 사람과 죄의 몸</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">5</span>만일 우리가 그의 죽으심과 같은 모양으로 연합한 자가 되었으면 또한 그의 부활과 같은 모양으로 연합한 자도 되리라 <span class="vn">6</span>우리가 알거니와 우리의 옛 사람이 예수와 함께 십자가에 못 박힌 것은 죄의 몸이 죽어 다시는 우리가 죄에게 종 노릇 하지 아니하려 함이니 <span class="vn">7</span>이는 죽은 자가 죄에서 벗어나 의롭다 하심을 얻었음이라</p>
+      <p>5절이 죽음의 연합에서 부활의 연합으로 논리를 잇는다. "같은 모양으로"(<span class="gw">τῷ ὁμοιώματι</span>)라는 표현이 신중하게 쓰였다. 신자의 죽음이 그리스도의 죽음과 동일하지 않고 그것에 <em>상응</em>한다는 뜻이다.</p>
+      <p><span class="c x">S</span> Stott은 6절의 구조를 셋으로 나눈다. <b>어떤 일이 일어났고</b>, 그것은 <b>다른 일이 일어나게 하려는 것</b>이었으며, 그것은 다시 <b>세 번째 일이 일어나게 하려는 것</b>이었다. 옛 사람이 함께 십자가에 못 박혔고 → 죄의 몸이 없어지게 하려 함이며 → 다시는 죄에게 종 노릇 하지 않게 하려 함이다. 바울의 논리를 잡는 가장 좋은 길이 이 세 겹의 목적 사슬을 따라가는 것이라고 그는 본다.</p>
+      <p>6절이 두 표현을 도입한다. <span class="gw">ὁ παλαιὸς ἡμῶν ἄνθρωπος</span>(<strong>옛 사람</strong>)와 <span class="gw">τὸ σῶμα τῆς ἁμαρτίας</span>(<strong>죄의 몸</strong>)다. 전자는 아담 안에 있던 옛 인간성을, 후자는 죄의 지배에 붙들린 존재 방식을 가리킨다. 5:12–21의 두 사람 구도가 여기서 개인의 실존으로 옮겨진다.</p>
+      <p>목적은 명확하다. "다시는 우리가 죄에게 <strong>종 노릇</strong> 하지 아니하려 함"이다. 동사 <span class="gw">δουλεύω</span>가 처음 등장하며, 이 낱말이 15–23절 전체를 지배하게 된다.</p>
+      <p><span class="c x">C</span> Cranfield는 7절을 "죽은 사람은 <b>죄로부터 의롭다 하심을 받았다</b>"로 직역해, 이 절이 일반 격언이 아니라 칭의 어휘를 그대로 쓰고 있음을 드러낸다.</p>
+      <p>7절은 짧지만 까다롭다. "죽은 자가 죄에서 벗어나 의롭다 하심을 얻었음이라." 여기 쓰인 동사는 <span class="gw">δεδικαίωται</span>로, 3–5장의 칭의 동사와 같다. 법정적 칭의를 가리키는지, 죽음이 죄의 관할권을 종결시킨다는 일반 원리를 가리키는지가 갈린다.</p>
+    </div>
+
+    <div class="vs" id="v811" data-verses="8,9,10,11">
+      <span class="ref">6:8–11 — 단번에, 그리고 여길지어다</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">8</span>만일 우리가 그리스도와 함께 죽었으면 또한 그와 함께 살 줄을 믿노니 <span class="vn">9</span>이는 그리스도께서 죽은 자 가운데서 살아나셨으매 다시 죽지 아니하시고 사망이 다시 그를 주장하지 못할 줄을 앎이로라 <span class="vn">10</span>그가 죽으심은 죄에 대하여 단번에 죽으심이요 그가 살아 계심은 하나님께 대하여 살아 계심이니 <span class="vn">11</span>이와 같이 너희도 너희 자신을 죄에 대하여는 죽은 자요 그리스도 예수 안에서 하나님께 대하여는 살아 있는 자로 여길지어다</p>
+      <p>9절이 근거를 그리스도 쪽에 둔다. 다시 죽지 아니하시고 "사망이 다시 그를 주장하지 못한다". <span class="gw">κυριεύει</span>("주장하다")는 주인 노릇 하는 것을 가리키는 동사로, 14절에서 죄에 대해 다시 쓰인다.</p>
+      <p><span class="c x">C</span> Cranfield는 9절의 "사망이 다시 그를 주장하지 못하리라"에서 동사가 <b>주 노릇 하다</b>(lordship)의 어휘임을 짚는다. 14절에서 같은 동사가 죄에 대해 쓰여, 그리스도에게서 무너진 사망의 주권과 신자에게서 무너지는 죄의 주권이 한 낱말로 묶인다.</p>
+      <p>10절의 <span class="gw">ἐφάπαξ</span>("단번에")가 이 단락의 핵심어다. 그리스도의 죽음은 반복되지 않는 일회적 사건이며, 그렇기에 그 죽음에 연합한 자의 신분도 반복해서 확보할 필요가 없다.</p>
+      <p>11절이 6장 최초의 명령을 낸다. <span class="gw">λογίζεσθε</span>, <strong>"여길지어다"</strong>다. 4장에서 열한 번 나온 그 회계 동사가 여기서 명령형으로 돌아온다. 하나님이 믿음을 의로 <em>여기신</em> 것처럼, 신자는 자기를 죄에 대하여 죽은 자로 <em>여겨야</em> 한다. 이 "여김"은 사실이 아닌 것을 상상하는 일이 아니라 이미 일어난 사실을 셈에 넣는 일이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">ὅπλα δικαιοσύνης</div>
+      <div class="eyebrow">6:12–14</div>
+      <h2>3. 지체를 드리라</h2>
+      <div class="gloss">호플라 디카이오쉬네스 — 의의 무기</div>
+    </div>
+
+    <div class="vs" id="v1214" data-verses="12,13,14">
+      <span class="ref">6:12–14 — 두 번째 명령</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">12</span>그러므로 너희는 죄가 너희 죽을 몸을 지배하지 못하게 하여 몸의 사욕에 순종하지 말고 <span class="vn">13</span>또한 너희 지체를 불의의 무기로 죄에게 내주지 말고 오직 너희 자신을 죽은 자 가운데서 다시 살아난 자 같이 하나님께 드리며 너희 지체를 의의 무기로 하나님께 드리라 <span class="vn">14</span>죄가 너희를 주장하지 못하리니 이는 너희가 법 아래에 있지 아니하고 은혜 아래에 있음이라</p>
+      <p>11절의 "여기라"에 이어 12–13절이 행동의 명령을 낸다. 죄가 몸을 <strong>지배하지 못하게</strong> 하고(<span class="gw">βασιλευέτω</span>, 5:21의 "왕 노릇"과 같은 어근), 지체를 죄에게 내주지 말고 하나님께 드리라는 것이다.</p>
+      <p><span class="c x">K</span> Kruse는 이 명령이 로마서의 다른 흐름과 어떻게 맞물리는지 짚는다. 의롭다 하심을 받은 자들이 악행을 지속하리라는 혐의(3:8)와 달리 그들은 <em>선을 지속한다</em>. 지체를 의의 무기로 드리는 일이 그것이며(6:11–14), 바울의 글에서 믿음으로 의롭다 하심을 받은 자들도 <b>그 행위에 따라 심판받는다</b>는 점이 분명히 드러난다(고전 3:12–15; 고후 5:10).</p>
+      <p><span class="gw">ὅπλα</span>는 "무기·병기"를 뜻하는 낱말이다. 개역개정의 "무기"가 이 어감을 살렸다. 지체가 어느 편에 배치되느냐의 문제로 그려지며, 중립 지대는 상정되지 않는다. <span class="c h">G</span> 이 군사·왕권 어휘가 죄를 <em>권세</em>로 그리는 Gaventa의 읽기와 맞물린다.</p>
+      <p>13절의 동사 <span class="gw">παραστήσατε</span>("드리라")는 12:1의 "너희 몸을 하나님이 기뻐하시는 거룩한 산 제물로 드리라"에 쓰인 그 동사다. 6장의 명령이 12장의 권면으로 이어지는 다리가 여기 놓인다.</p>
+      <p>14절이 첫째 단락을 닫는다. "죄가 너희를 주장하지 못하리니 이는 너희가 법 아래에 있지 아니하고 은혜 아래에 있음이라." <span class="gw">κυριεύσει</span>는 미래형으로, 명령이 아니라 <strong>약속</strong>이다. 그리고 그 약속의 근거가 율법이 아니라 은혜라는 진술이, 곧바로 15절의 새 물음을 부른다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">δοῦλοι</div>
+      <div class="eyebrow">6:15–19</div>
+      <h2>4. 두 주인</h2>
+      <div class="gloss">둘로이 — 종</div>
+    </div>
+
+    <div class="vs" id="v1518" data-verses="15,16,17,18">
+      <span class="ref">6:15–18 — 순종이 주인을 정한다</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">15</span>그런즉 어찌하리요 우리가 법 아래에 있지 아니하고 은혜 아래에 있으니 죄를 지으리요 그럴 수 없느니라 <span class="vn">16</span>너희 자신을 종으로 내주어 누구에게 순종하든지 그 순종함을 받는 자의 종이 되는 줄을 너희가 알지 못하느냐 혹은 죄의 종으로 사망에 이르고 혹은 순종의 종으로 의에 이르느니라 <span class="vn">17</span>하나님께 감사하리로다 너희가 본래 죄의 종이더니 너희에게 전하여 준 바 교훈의 본을 마음으로 순종하여 <span class="vn">18</span>죄로부터 해방되어 의에게 종이 되었느니라</p>
+      <p>둘째 물음은 첫째와 미묘하게 다르다. 1절이 "죄에 거하겠느냐"(지속)였다면 15절은 "죄를 지으리요"(개별 행위)다. 은혜 아래 있다는 사실이 개별 범죄를 사소하게 만드는가라는 물음이다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 16절의 논리를 선명히 한다. "너희가 누구든 그의 처분에 자신을 종으로 내맡기고 그에게 순종한다면, 너희는 <em>순종하는 그 대상의</em> 종이다. 그것이 사망을 귀결로 삼는 죄이든, 의를 귀결로 삼는 순종이든." 소속은 선언이 아니라 <b>실제 순종의 방향</b>으로 판명된다.</p>
+      <p>16절이 원리를 세운다. 자신을 종으로 내주어 순종하는 그 대상의 종이 된다. 소속은 선언으로 정해지지 않고 <strong>순종의 방향</strong>으로 드러난다. 그리고 선택지는 둘뿐이다. 죄의 종으로 사망에 이르든지, 순종의 종으로 의에 이르든지다.</p>
+      <div class="caveat"><span class="tt">어휘 — "교훈의 본"에 전하여 준 바 되었나니</span>
+      <span class="c x">C</span> Cranfield의 번역이 방향을 뒤집는다. "너희가 마음으로부터 <b>너희가 넘겨진 그 교훈의 본에</b> 순종하게 되었으니." 교훈이 그들에게 전달된 것이 아니라 <em>그들이 그 교훈에 넘겨졌다</em>는 것이며, 여기 쓰인 동사가 <span class="gw">παραδίδωμι</span>—1:24·26·28에서 하나님이 사람을 정욕에 "내버려 두신" 그 동사—라는 점이 이 뒤집힘을 만든다. &nbsp;
+      <span class="c x">S</span> Stott은 이것이 <b>회심에 대한 대단히 이례적인 묘사</b>라고 본다. 그들이 "순종하였다"는 것은 이해할 만하다. 복음에 대한 합당한 응답이 "믿음의 순종"이기 때문이다(1:5). 그러나 여기서 그들이 순종했다고 말해지는 대상은 하나님도 그리스도도 아니고 <em>어떤 형태의 교훈</em>이다. 이는 초기 교회에 이미 <b>정형화된 건전한 가르침의 틀</b>이 있었음을 시사한다.</div>
+      <p>17–18절이 로마 성도의 이력을 그 틀에 넣는다. 본래 죄의 종이었으나 "전하여 준 바 <strong>교훈의 본</strong>"(<span class="gw">τύπον διδαχῆς</span>)을 마음으로 순종하여 죄로부터 해방되어 의에게 종이 되었다. 해방과 예속이 한 문장 안에 함께 온다. 자유는 무소속이 아니라 <em>주인의 교체</em>다.</p>
+    </div>
+
+    <div class="vs" id="v19" data-verses="19">
+      <span class="ref">6:19 — 사람의 예대로</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">19</span>너희 육신이 연약하므로 내가 사람의 예대로 말하노니 전에 너희가 너희 지체를 부정과 불법에 내주어 불법에 이른 것 같이 이제는 너희 지체를 의에게 종으로 내주어 거룩함에 이르라</p>
+      <p>바울이 자기 비유를 스스로 해명한다. "너희 육신이 연약하므로 내가 <strong>사람의 예대로</strong> 말하노니"(<span class="gw">ἀνθρώπινον λέγω</span>). 종의 비유가 완전하지 않음을 인정하는 단서다.</p>
+      <p><span class="c x">C</span> Cranfield는 이 은유를 옹호하는 쪽에 선다. 은혜 아래 있는 삶을 특징짓는 <b>전적 소속과 전적 책임</b>을 이만큼 생생하고 힘 있게 담아내는 다른 이미지가 없다는 것이다. 그는 1:1의 "그리스도 예수의 종"에서 이미 같은 어휘가 명예의 칭호로 쓰였음을 상기시킨다.</p>
+      <div class="note"><span class="tt">노예 언어를 어떻게 읽을 것인가</span><span class="c h">G</span> Gaventa는 이 대목을 지적한다. 바울은 왕권·노예제·폭력과 결부된 언어로 죄를 그리고, 죄를 향한 노예 됨 대신 하나님을 향한 순종의 노예 됨을 권한다(6:16, 19–23). 두 예속의 결말은 정반대지만, 바울은 그 지점에서 <b>노예 언어 자체를 문제 삼지 않은 채 둔다</b>. 1세기 로마의 실제 노예제를 배경에 놓고 읽을 때, 이 비유가 해방의 은유이면서 동시에 그 시대의 제도를 전제한다는 사실을 함께 보아야 한다.</div>
+      <p>비유의 구조는 대칭적이다. 전에는 지체를 <em>부정과 불법</em>에 내주어 불법에 이르렀고, 이제는 <em>의</em>에게 내주어 거룩함에 이른다. 다만 결과가 갈린다. 앞의 사슬은 불법에서 불법으로 순환하고, 뒤의 사슬은 거룩함(<span class="gw">ἁγιασμός</span>)이라는 목적지를 갖는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">ὀψώνια · χάρισμα</div>
+      <div class="eyebrow">6:20–23</div>
+      <h2>5. 삯과 은사</h2>
+      <div class="gloss">옵소니아 · 카리스마 — 벌이와 선물</div>
+    </div>
+
+    <div class="vs" id="v2022" data-verses="20,21,22">
+      <span class="ref">6:20–22 — 열매와 마지막</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">20</span>너희가 죄의 종이 되었을 때에는 의에 대하여 자유로웠느니라 <span class="vn">21</span>너희가 그 때에 무슨 열매를 얻었느냐 이제는 너희가 그 일을 부끄러워하나니 이는 그 마지막이 사망임이라 <span class="vn">22</span>그러나 이제는 너희가 죄로부터 해방되고 하나님께 종이 되어 거룩함에 이르는 열매를 맺었으니 그 마지막은 영생이라</p>
+      <p>20절의 문장이 역설적이다. 죄의 종이었을 때 "의에 대하여 자유로웠다". 자유라는 낱말이 여기서는 결핍을 가리킨다. 어느 한쪽의 종이 된다는 것은 다른 쪽에 대해 자유롭다는 뜻이며, 문제는 <em>어느 쪽에 자유로운가</em>이다.</p>
+      <p><span class="c x">K</span> Kruse는 6:1–14와 6:15–23의 관계를 이렇게 정리한다. 앞 단락에서 바울은 자기 복음이 도덕적 무정부를 부추긴다는 <b>혐의에 응답</b>하면서 지체를 죄의 도구로 내주지 말고 자신을 의의 도구로 하나님께 드리라고 권했고, 그 논거는 신자가 죄에 대해 죽고 하나님께 대해 살아 있으므로 죄에 머물 수 없다는 데 있었다. 뒤 단락은 같은 결론을 <em>종의 은유</em>로 다시 세운다.</p>
+      <p><span class="c x">C</span> Cranfield의 19절 번역이 명령의 형태를 살린다. "너희가 전에 너희 지체를 부정과 불법에 종으로 <b>내맡겼던</b> 것같이, 이제는 너희 지체를 의에 종으로 내맡기라." 같은 동사가 과거의 습관과 현재의 명령에 나란히 쓰여, 요구되는 것이 <em>새로운 종류의 행위</em>가 아니라 <b>같은 행위의 방향 전환</b>임을 보인다.</p>
+      <p>21–22절이 두 삶을 결과로 견준다. 앞의 삶은 부끄러워할 열매를 냈고 "그 마지막이 사망"이며, 뒤의 삶은 거룩함에 이르는 열매를 맺고 "그 마지막은 영생"이다. <span class="gw">τέλος</span>("마지막")가 두 번 반복되며 시선을 끝으로 돌린다.</p>
+    </div>
+
+    <div class="vs" id="v23" data-verses="23">
+      <span class="ref">6:23 — 두 낱말의 비대칭</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">23</span>죄의 삯은 사망이요 하나님의 은사는 그리스도 예수 우리 주 안에 있는 영생이니라</p>
+      <p><span class="gw">τὰ γὰρ ὀψώνια τῆς ἁμαρτίας θάνατος, τὸ δὲ χάρισμα τοῦ θεοῦ ζωὴ αἰώνιος</span>. 이 절의 힘은 대구가 <strong>어긋난다</strong>는 데 있다.</p>
+      <p><span class="gw">ὀψώνια</span>는 군인에게 지급되는 <em>급료</em>를 가리키는 낱말이다. 노동에 대한 정당한 대가이며, 죄가 그 대가로 사망을 지급한다. 대구를 맞추려면 반대편에도 대가의 어휘가 와야 하는데, 바울은 <span class="gw">χάρισμα</span>, 곧 <strong>선물</strong>을 놓는다. 4:4에서 삯과 은혜를 갈랐던 그 대비가 이 장의 마지막 문장에서 다시 나타난다.</p>
+      <p>구조의 어긋남이 곧 신학이다. 죄와 의는 같은 종류의 두 고용주가 아니다. 한쪽은 벌이를 지급하고 다른 쪽은 값 없이 준다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 6장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">6:1</td><td>롬 3:8; 5:20</td><td>되살아난 혐의</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">6:3–4</td><td>갈 3:27; 골 2:12</td><td>세례와 그리스도에의 연합</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">6:4</td><td>롬 8:11; 엡 4:1</td><td>새 생명 가운데서 행함</td><td>본문</td></tr>
+        <tr><td class="head">6:6</td><td>엡 4:22; 골 3:9; 갈 2:20</td><td>옛 사람</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">6:9</td><td>계 1:18; 히 7:16</td><td>다시 죽지 아니하심</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">6:10</td><td>히 7:27; 9:12; 10:10</td><td>단번에(<span class="gw">ἐφάπαξ</span>)</td><td>NA28 난외</td></tr>
+        <tr><td class="head">6:11</td><td>롬 4:3·5·9; 갈 2:19</td><td>"여기다"(<span class="gw">λογίζομαι</span>)의 명령형</td><td>본문</td></tr>
+        <tr><td class="head">6:12</td><td>롬 5:17·21</td><td>왕 노릇 하는 죄</td><td>본문</td></tr>
+        <tr><td class="head">6:13</td><td>롬 12:1</td><td>"드리라"(<span class="gw">παρίστημι</span>)</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">6:14</td><td>롬 7:4·6; 갈 5:18</td><td>법 아래가 아니라 은혜 아래</td><td>본문</td></tr>
+        <tr><td class="head">6:16</td><td>마 6:24; 요 8:34</td><td>두 주인 · 죄의 종</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">6:23</td><td>롬 4:4; 5:15–17</td><td>삯과 선물의 대비</td><td><span class="c x">K</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 오해에 답하는 방식</h3>
+    <p><span class="c x">C</span> Cranfield가 6:1과 6:15의 두 물음이 서로 다른 진술(5:20과 6:14b)에서 나온다고 짚은 것이 이 장의 이중 구조를 설명한다. 6장은 "죄에 거하겠느냐"는 물음에 금지로 답하지 않는다. 신분의 사실로 답한다. 죄에 대하여 <em>죽었다</em>는 것이며, 죽은 자에게 그 물음은 성립하지 않는다. 은혜를 남용할 위험을 막는 장치가 더 강한 규범이 아니라 <strong>이미 일어난 사건</strong>이라는 점이 이 장의 논법을 규정한다.</p>
+
+    <h3>② 세례가 말하는 것</h3>
+    <p><span class="c x">S</span> Stott이 나눈 여덟 단계와 <span class="c x">C</span> Cranfield가 5절에서 읽어 낸 "본떠 빚어짐"이 이 단락의 뼈대다. 6:3–10의 무게중심은 의식(儀式)의 효력이 아니라 <em>연합</em>이다. 함께 장사되고, 함께 십자가에 못 박히고, 함께 산다. 접두어 <span class="gw">σύν</span>이 반복되며 신자의 이력이 그리스도의 이력에 포개어진다. 그리고 그 포개짐의 목적은 과거의 청산에서 그치지 않고 "새 생명 가운데서 행함"으로 열린다.</p>
+
+    <h3>③ 여김이라는 명령</h3>
+    <p><span class="c x">S</span> Stott의 여덟 단계에서 열한 번째 절이 전환점인 것도 이 때문이다. 6:11의 <span class="gw">λογίζεσθε</span>가 4장의 회계 동사를 명령형으로 되살린다. 하나님이 믿음을 의로 여기셨듯 신자는 자신을 죄에 대해 죽은 자로 여겨야 한다. 이것은 자기 암시가 아니라 <strong>사실의 인정</strong>이며, 그래서 명령이 가능하다. 없는 것을 있다고 여기라는 요구였다면 명령은 성립하지 않는다.</p>
+
+    <h3>④ 자유는 무소속이 아니다</h3>
+    <p><span class="c x">C</span> Cranfield는 이 은유를 옹호하며 은혜 아래 있는 삶의 <em>전적 소속</em>을 이만큼 담아내는 이미지가 없다고 본다. 6:15–23의 논리는 현대 독자에게 불편할 수 있다. 해방의 결과가 또 다른 예속이기 때문이다. 그러나 바울의 전제는 인간이 주인 없이 설 수 있다는 상정을 허락하지 않는다. 선택지는 주인의 유무가 아니라 <em>어느 주인인가</em>이며, 순종의 방향이 그것을 드러낸다. <span class="c h">G</span> 다만 Gaventa가 짚듯 바울은 노예 언어 자체를 문제 삼지 않은 채 두며, 이 비유를 오늘 읽을 때는 그 사실을 함께 셈에 넣어야 한다.</p>
+
+    <h3>⑤ 어긋난 대구</h3>
+    <p><span class="c x">K</span> Kruse가 정리한 두 단락의 관계—앞은 혐의에 대한 응답, 뒤는 같은 결론을 종의 은유로 재진술—가 이 마지막 절에서 만난다. 6:23이 장을 닫는 방식이 이 장 전체를 요약한다. 죄는 <em>삯</em>을 지급하고 하나님은 <em>선물</em>을 주신다. 대구를 맞추지 않은 그 어긋남이 요점이다. 두 주인이 대등한 두 선택지가 아니라는 것이며, 4:4의 "보수"와 "은혜"의 구분이 여기서 삶의 결말로 확장된다.</p>
+
+    <h3>⑥ 7장이 받는 물음</h3>
+    <p>6:14가 "법 아래에 있지 아니하고 은혜 아래에 있음이라"로 끝났다. 6:15가 그중 앞부분을 받아 물었다면, 7:7이 남은 물음을 받는다. 그렇다면 <em>율법은 죄인가</em>. 6장이 죄에서 해방된 자의 삶을 그렸다면, 7장은 그 해방이 율법과 어떤 관계에 있는지를 다룬다.</p>
+
+    <div class="back"><a href="./ch05.html">← 5장</a> · <a href="./overview.html">종합 연구</a> · <a href="./index.html">로마서 서재</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 6장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988)·Gaventa(NTL 2024) 직접 확인분. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

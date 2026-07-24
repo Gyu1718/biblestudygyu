@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 9장 심층 연구 — 이스라엘과 택하심</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="9" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch09.html">성경 연구</a></div>
+  <div class="brand">로마서 9장 심층 연구</div>
+  <div class="brand-sub">이스라엘과 택하심</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html">2</a><a href="ch03.html">3</a><a href="ch04.html">4</a>
+    <a href="ch05.html">5</a><a href="ch06.html">6</a><a href="ch07.html">7</a><a href="ch08.html">8</a>
+    <a href="ch09.html" aria-current="page">9</a><a class="off" href="#">10</a><a class="off" href="#">11</a><a class="off" href="#">12</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 큰 근심 (9:1–5)</a>
+  <a class="lv1" href="#s2">2. 두 이스라엘 (9:6–13)</a>
+  <a class="lv1" href="#s3">3. 하나님께 불의가 있느냐 (9:14–18)</a>
+  <a class="lv1" href="#s4">4. 토기장이 (9:19–24)</a>
+  <a class="lv1" href="#s5">5. 남은 자와 부딪칠 돌 (9:25–33)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">οὐ γὰρ πάντες οἱ ἐξ Ἰσραὴλ οὗτοι Ἰσραήλ</div>
+    <h1>로마서 9장 · 이스라엘과 택하심</h1>
+    <p class="sub">끊을 수 없는 사랑을 노래한 뒤 곧바로 큰 근심이 온다. 하나님의 말씀은 이스라엘에게서 폐하여졌는가.</p>
+    <p class="meta">9:1–5 근심과 특권 · 9:6–29 택하심 · 9:30–33 부딪칠 돌 · 아홉 주석 대조 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c b">J</span> Jewett Herm.</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">8장의 확신 뒤에 오는 물음.</div>
+    </div>
+    <p>8:39가 "끊을 수 없으리라"로 닫혔다. 그리고 9:1이 접속사 없이 시작한다. <span class="c t">D</span> Dunn은 이 <strong>접속사의 부재</strong>가 편지를 낭독하는 이로 하여금 8:39 끝에서 <em>멈추게</em> 하려는 의도임을 시사한다고 본다. 그는 또 1–3절이 겹말의 연속으로 짜여 비장함과 엄숙함을 높인다는 점을 지적한다("참말을 하고 / 거짓말을 아니하노라", "내 양심이 / 성령 안에서").</p>
+    <p>물음은 8장의 확신에서 곧바로 나온다. 하나님의 사랑이 끊어지지 않는다면, 하나님의 백성이었던 이스라엘에게는 무슨 일이 일어난 것인가.</p>
+    <p><span class="c x">K</span> Kruse는 9–11장 전체의 논증을 두 축으로 정리한다. 첫째, 9:1–29에서 바울은 "이스라엘에게서 난 그들이 다 이스라엘이 아니요"(9:6)라고 논증하며, 어떤 이는 복음의 복을 누리고 어떤 이는 그렇지 못한 궁극적 이유를 <b>하나님의 선택</b>에서 찾는다. 둘째, 9:30–10:21에서 그는 이스라엘 자신이 그 실패에 <b>책임이 있다</b>고 논증한다. 그들이 자기 의를 세우려 하여 하나님의 의에 복종하지 않았다는 것이다. 두 설명이 나란히 놓인다는 점이 이 단락을 읽는 첫 열쇠다.</p>
+    <p><span class="c x">K</span> Kruse는 9장에 보론을 하나 붙인다. <em>로마서의 예정 — 집단적인가 개인적인가</em>다. 이 물음이 9장 해석의 분수령이다.</p>
+    <table>
+      <caption>표 1. 9장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th><th>기능</th></tr></thead>
+      <tbody>
+        <tr><td class="head">근심</td><td>9:1–5</td><td>저주받기를 원할 만큼의 고통 · 여덟 특권</td><td>논의의 정서적 전제</td></tr>
+        <tr><td class="head">명제</td><td>9:6–13</td><td>말씀은 폐하지 않았다 · 이삭과 야곱</td><td>두 이스라엘</td></tr>
+        <tr><td class="head">반론 ①</td><td>9:14–18</td><td>하나님께 불의가 있느냐 · 모세와 바로</td><td>긍휼과 완악하게 하심</td></tr>
+        <tr><td class="head">반론 ②</td><td>9:19–24</td><td>어찌 허물하시느냐 · 토기장이</td><td>창조주의 권한</td></tr>
+        <tr><td class="head">확증</td><td>9:25–29</td><td>호세아와 이사야 인용</td><td>이방인의 포함과 남은 자</td></tr>
+        <tr><td class="head">전환</td><td>9:30–33</td><td>부딪칠 돌</td><td>10장으로 넘어감</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">ἀνάθεμα</div>
+      <div class="eyebrow">9:1–5</div>
+      <h2>1. 큰 근심</h2>
+      <div class="gloss">아나테마 — 저주</div>
+    </div>
+
+    <div class="vs" id="v13" data-verses="1,2,3">
+      <span class="ref">9:1–3 — 저주받기를 원할지라도</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1–2</span>내가 그리스도 안에서 참말을 하고 거짓말을 아니하노라 나에게 큰 근심이 있는 것과 마음에 그치지 않는 고통이 있는 것을 내 양심이 성령 안에서 나와 더불어 증언하노니</p>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">3</span>나의 형제 곧 골육의 친척을 위하여 내 자신이 저주를 받아 그리스도에게서 끊어질지라도 원하는 바로라</p>
+      <p>3절의 진술은 극단적이다. 골육의 친척을 위하여 자신이 <span class="gw">ἀνάθεμα</span>("저주")가 되어 그리스도에게서 끊어질지라도 원한다는 것이다. 동사가 미완료형이어서 "원하고 있었다" 또는 "원할 수도 있겠다"는 어감을 만들며, 실현 불가능한 소원임을 화자도 안다.</p>
+      <p><span class="gw">ἀνάθεμα</span>는 출애굽기 32:32에서 모세가 "주께서 그들의 죄를 사하시옵소서 그렇지 아니하시오면 원하건대 주께서 기록하신 책에서 내 이름을 지워 버려 주옵소서"라 한 대목과 겹친다. 중보자가 자기를 걸고 백성을 위해 서는 형식이다.</p>
+      <p>8:35에서 "누가 우리를 그리스도의 사랑에서 끊으리요"(<span class="gw">χωρίσει</span>)라 물은 바울이, 여기서 스스로 "끊어질지라도"(<span class="gw">ἀνάθεμα … ἀπὸ τοῦ Χριστοῦ</span>)라고 말한다. 두 장의 대비가 이 낱말에서 가장 날카롭다.</p>
+    </div>
+
+    <div class="vs" id="v45" data-verses="4,5">
+      <span class="ref">9:4–5 — 여덟 특권과 구두점 문제</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">4</span>그들은 이스라엘 사람이라 그들에게는 양자 됨과 영광과 언약들과 율법을 세우신 것과 예배와 약속들이 있고 <span class="vn">5</span>조상들도 그들의 것이요 육신으로 하면 그리스도가 그들에게서 나셨으니 그는 만물 위에 계셔서 세세에 찬양을 받으실 하나님이시니라 아멘</p>
+      <p>4–5절이 이스라엘의 특권을 열거한다. 양자 됨, 영광, 언약들, 율법, 예배, 약속들, 조상들, 그리고 육신으로 하면 그리스도까지다. 3:2에서 "하나님의 말씀을 맡았음"을 첫째로 든 뒤 목록이 끊겼는데, 여기서 그 목록이 완성된다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 9:5의 구두점</span>
+      그리스어 사본에는 구두점이 없으므로 문장을 어디서 끊느냐가 <b>그리스도를 하나님이라 부르는가</b>를 결정한다. <span class="c x">C</span> Cranfield가 검토할 다섯 안을 정리한다. &nbsp;
+      ① 전체를 그리스도에 대한 진술로 보고 "하나님"을 "만물 위에"와 연결 — <b>"그는 만물 위에 계신 하나님이시니 세세에 찬양을 받으실 이시로다, 아멘."</b> &nbsp;
+      ② 전체를 그리스도에 대한 진술로 보되 "하나님"을 "만물 위에"에서 분리 — "그는 만물 위에 계시고, 하나님은 세세에 찬양을 받으실 이시로다, 아멘." &nbsp;
+      ③ "만물 위에 계신 이"까지만 그리스도에 대한 진술로 보고 나머지를 <em>독립 송영</em>으로 — "그는 만물 위에 계시니라. 하나님이 세세에 찬양을 받으실지어다, 아멘." &nbsp;
+      ④ 전체를 독립 송영으로 보고 "하나님"과 "만물 위에 계신 이"를 연결 — "만물 위에 계신 하나님이 세세에 찬양을 받으실지어다, 아멘." &nbsp;
+      ⑤ 전체를 독립 송영으로 보는 또 다른 배열. &nbsp;
+      개역개정 "그는 만물 위에 계셔서 세세에 찬양을 받으실 하나님이시니라"는 ①에 해당한다. 신약에서 예수를 <span class="gw">θεός</span>로 부르는 드문 사례가 되므로 기독론적 무게가 크다.</div>
+      <p><span class="c t">D</span> Dunn은 이 절에 대해 제안된 본문 수정(<span class="gw">ὧν ὁ</span>)에는 근거가 없다고 보며, 문제는 어디까지나 <em>구두점</em>에 있다고 정리한다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">Ἰσραήλ</div>
+      <div class="eyebrow">9:6–13</div>
+      <h2>2. 두 이스라엘</h2>
+      <div class="gloss">이스라엘 — 같은 이름 다른 범위</div>
+    </div>
+
+    <div class="vs" id="v68" data-verses="6,7,8">
+      <span class="ref">9:6–8 — 명제</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">6</span>그러나 하나님의 말씀이 폐하여진 것 같지 않도다 이스라엘에게서 난 그들이 다 이스라엘이 아니요 <span class="vn">7</span>또한 아브라함의 씨가 다 그의 자녀가 아니라 오직 이삭으로부터 난 자라야 네 씨라 불리리라 하셨으니 <span class="vn">8</span>곧 육신의 자녀가 하나님의 자녀가 아니요 오직 약속의 자녀가 씨로 여기심을 받느니라</p>
+      <p><span class="gw">οὐ γὰρ πάντες οἱ ἐξ Ἰσραὴλ οὗτοι Ἰσραήλ</span>. <span class="c t">D</span> Dunn은 이 명제가 3–5절에 이미 <em>암묵적으로</em> 들어 있던 것을 명시한 것이라고 본다. 바울의 동족이 정당하게 자랑하는 그 복과 관계들이 <b>자연적 차원에서 배타적으로 또는 완전하게 주장될 수 없다</b>는 것이다. 이스라엘과 혈통으로 이어져 있다고 정당하게 주장할 수 있는 모든 이가 실제로 하나님의 이스라엘에 속하지는 않는다(갈 6:16 참조). 그리고 Dunn은 바울이 겉보기에 자기모순적인 이 주장을 <em>당연한 진술인 듯 담담하게</em> 내놓는다는 점을 짚는다.</p>
+      <p><span class="c x">S</span> Stott은 같은 명제를 "언제나 두 이스라엘이 있었다"로 푼다. 야곱에게서 육신으로 난 자들과 그의 영적 후손이며, 하나님의 약속은 후자를 향한 것이었다. 그리고 이 구분이 편지 앞부분에 이미 있었음을 상기시킨다. <b>겉으로 유대인인 자와 이면적 유대인</b>, 몸에 할례를 받은 자와 성령으로 마음에 할례를 받은 자의 구분(2:28–29)이다.</p>
+      <p>이스라엘의 실패가 <em>하나님의 말씀의 실패가 아니라는</em> 것이 6a절의 요지다. <span class="c x">S</span> Stott의 정리대로 이스라엘의 실패는 이스라엘 자신의 실패이며, 불신으로 복을 잃은 것이다.</p>
+    </div>
+
+    <div class="vs" id="v913" data-verses="9,10,11,12,13">
+      <span class="ref">9:9–13 — 이삭과 야곱</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">9</span>약속의 말씀은 이것이니 명년 이 때에 내가 이르리니 사라에게 아들이 있으리라 하심이라 <span class="vn">10</span>그뿐 아니라 또한 리브가가 우리 조상 이삭 한 사람으로 말미암아 임신하였는데 <span class="vn">11</span>그 자식들이 아직 나지도 아니하고 무슨 선이나 악을 행하지 아니한 때에 택하심을 따라 되는 하나님의 뜻이 행위로 말미암지 않고 오직 부르시는 이로 말미암아 서게 하려 하사 <span class="vn">12</span>리브가에게 이르시되 큰 자가 어린 자를 섬기리라 하셨나니 <span class="vn">13</span>기록된 바 내가 야곱은 사랑하고 에서는 미워하였다 하심과 같으니라</p>
+      <p>두 사례가 제시된다. 이스마엘이 아니라 이삭, 에서가 아니라 야곱이다. 두 번째 사례가 더 강한데, 리브가의 두 아들은 <em>같은 아버지에게서 한 태에</em> 났고 아직 나기도 전, 무슨 선이나 악을 행하기도 전에 갈렸기 때문이다.</p>
+      <p>11절이 그 이유를 명시한다. "택하심을 따라 되는 하나님의 뜻이 행위로 말미암지 않고 오직 부르시는 이로 말미암아 서게 하려 하사"다. <span class="gw">ἐκλογή</span>(택하심)가 여기서 처음 나오며, 11:5·7·28에서 다시 나온다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 집단인가 개인인가</span>
+      <span class="c x">K</span> Kruse가 "로마서의 예정 — 집단적인가 개인적인가"라는 보론을 따로 두는 이유가 여기 있다. &nbsp;
+      ① <b>집단적 읽기</b> — 이삭과 야곱은 개인이면서 동시에 <em>민족의 대표</em>다. 12절의 인용(창 25:23)이 원래 "두 <b>민족</b>이 네 태중에 있구나"라는 신탁이고, 13절의 인용(말 1:2–3)도 예언서 문맥에서 에돔과 이스라엘이라는 <b>민족</b>을 가리킨다. 그렇다면 9장의 논점은 개인의 영원한 운명이 아니라 <em>구속사에서 누가 약속의 통로가 되는가</em>이다. &nbsp;
+      ② <b>개인적 읽기</b> — 11절이 "그 자식들이 아직 나지도 아니하고 무슨 선이나 악을 행하지 아니한 때에"라고 <em>개인의 행위</em>를 명시하고, 9:24가 "우리"를 부르심의 대상으로 삼으며, 8:29–30의 사슬이 개인을 향한다는 점이 근거다. &nbsp;
+      ③ <b>양쪽 다</b> — 구속사적 대표성과 개인의 부르심이 겹쳐 있으며, 9:24("유대인 중에서뿐 아니라 이방인 중에서도")가 그 겹침을 보인다. &nbsp;
+      <span class="c t">D</span> Dunn은 여기에 방법론적 단서를 더한다. 택하심의 관념은 은혜를 해설하는 데서 자라난 <b>사후(事後)의 시각</b>이므로, 바르게 쓰인다면 결코 <em>예측적</em>일 수 없고 사람을 택함받은 자와 택함받지 못한 자로 미리 나누는 도구가 될 수는 더더욱 없다. 엄밀히 말하면 택하심은 <b>종말론적 교리</b>이며, 마지막 심판에 이르러서야 온전히 정식화될 수 있다.</div>
+      <p>13절의 "미워하였다"(<span class="gw">ἐμίσησα</span>)도 셈어 관용을 고려해 읽어야 한다. 창세기 29:30–31에서 야곱이 라헬을 "더 사랑하매" 레아가 "미움을 받는" 것으로 표현되듯, 이 대비는 정서적 증오가 아니라 <em>선택의 우선순위</em>를 가리킬 수 있다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">σκληρύνει</div>
+      <div class="eyebrow">9:14–18</div>
+      <h2>3. 하나님께 불의가 있느냐</h2>
+      <div class="gloss">스클레뤼네이 — 완악하게 하시느니라</div>
+    </div>
+
+    <div class="vs" id="v1416" data-verses="14,15,16">
+      <span class="ref">9:14–16 — 모세에게 하신 말씀</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">14</span>그런즉 우리가 무슨 말을 하리요 하나님께 불의가 있느냐 그럴 수 없느니라 <span class="vn">15</span>모세에게 이르시되 내가 긍휼히 여길 자를 긍휼히 여기고 불쌍히 여길 자를 불쌍히 여기리라 하셨으니 <span class="vn">16</span>그런즉 원하는 자로 말미암음도 아니요 달음박질하는 자로 말미암음도 아니요 오직 긍휼히 여기시는 하나님으로 말미암음이니라</p>
+      <p><span class="c t">D</span> Dunn의 번역이 14절의 어조를 살린다. "그런즉 우리가 무슨 말을 하리요. 하나님께 불의가 있는 것은 아니겠지요? 결코 그럴 수 없느니라." 부정 답을 기대하는 물음 형식이며, 3:5에서 이미 같은 물음이 나왔다.</p>
+      <p>15절의 인용은 출애굽기 33:19다. 금송아지 사건 직후 모세가 하나님의 영광을 보여 달라 구했을 때 주어진 말씀이며, 문맥이 <em>진노 이후의 긍휼</em>이라는 점이 중요하다.</p>
+      <p>16절이 결론을 낸다. "원하는 자로 말미암음도 아니요 달음박질하는 자로 말미암음도 아니요 오직 긍휼히 여기시는 하나님으로 말미암음이니라." <span class="gw">τρέχω</span>("달음박질하다")는 바울이 경주 은유로 자주 쓰는 낱말이다(고전 9:24; 갈 2:2; 빌 2:16).</p>
+    </div>
+
+    <div class="vs" id="v1718" data-verses="17,18">
+      <span class="ref">9:17–18 — 바로에게 하신 말씀</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">17</span>성경이 바로에게 이르시되 내가 이 일을 위하여 너를 세웠으니 곧 너로 말미암아 내 능력을 보이고 내 이름이 온 땅에 전파되게 하려 함이라 하셨으니 <span class="vn">18</span>그런즉 하나님께서 하고자 하시는 자를 긍휼히 여기시고 하고자 하시는 자를 완악하게 하시느니라</p>
+      <p><span class="c x">S</span> Stott은 15절과 17절을 <em>상보적</em>인 두 말씀으로 보고 18절이 그 둘을 요약한다고 읽는다. 모세에게 하신 말씀이 "긍휼히 여기고자 하시는 자를 긍휼히 여기시고", 바로에게 하신 말씀이 "완악하게 하고자 하시는 자를 완악하게 하시느니라"로 각각 맺힌다.</p>
+      <div class="note"><span class="tt">완악하게 하심의 성격</span><span class="c x">S</span> Stott은 Leon Morris의 관찰을 인용한다. <b>"여기서도 다른 어디서도 하나님이 먼저 스스로 완악하게 하지 않은 자를 완악하게 하신다고 말하지 않는다."</b> 바로가 하나님을 향해 자기 마음을 완악하게 하고 스스로 낮추기를 거부했다는 사실이 출애굽기 서사에 분명히 나타난다. 그러므로 하나님의 완악하게 하심은 <b>사법적 행위</b>이며, 그를 자기 완고함에 <em>내버려 두시는</em> 일이다. Stott은 이것이 1:24·26·28에서 하나님의 진노가 "내버려 두심"으로 표현된 것과 같은 방식이라고 본다.</div>
+      <p>이 연결이 9장을 1장과 잇는다. <span class="gw">παρέδωκεν</span>("내버려 두사")의 논리가 <span class="gw">σκληρύνει</span>("완악하게 하시느니라")에서 되풀이된다는 것이며, 두 경우 모두 심판이 <em>선택한 것 안에 넘겨지는</em> 형태를 띤다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">ὁ κεραμεύς</div>
+      <div class="eyebrow">9:19–24</div>
+      <h2>4. 토기장이</h2>
+      <div class="gloss">호 케라뮤스 — 토기장이</div>
+    </div>
+
+    <div class="vs" id="v1921" data-verses="19,20,21">
+      <span class="ref">9:19–21 — 대꾸하는 자</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">19</span>혹 네가 내게 말하기를 그러면 하나님이 어찌하여 허물하시느냐 누가 그 뜻을 대적하느냐 하리니 <span class="vn">20</span>이 사람아 네가 누구이기에 감히 하나님께 반문하느냐 지음을 받은 물건이 지은 자에게 어찌 나를 이같이 만들었느냐 말하겠느냐 <span class="vn">21</span>토기장이가 진흙 한 덩이로 하나는 귀히 쓸 그릇을, 하나는 천히 쓸 그릇을 만들 권한이 없느냐</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 20절의 어조를 살린다. "이 사람아, <b>하나님께 말대꾸하는</b> 네가 누구냐. 지음을 받은 물건이 지은 자에게 '어찌 나를 이같이 만들었느냐' 하겠느냐."</p>
+      <p><span class="c x">S</span> Stott은 19절의 물음("어찌 하나님이 아직도 허물하시느냐")에 대한 바울의 답이 <strong>세 겹</strong>이며, 각각 그 물음이 함축한 하나님 이해의 오류를 드러낸다고 정리한다. ⓐ 하나님은 토기장이로서 진흙을 빚을 권리가 있고 우리에게는 그분께 항의할 권리가 없다(20–21). ⓑ 하나님은 자기 진노와 영광을 알리시며 <em>자신을 있는 그대로 나타내셔야</em> 한다(22–23). ⓒ 하나님은 성경에서 이방인의 포함과 남은 자를 제외한 이스라엘의 배제를 미리 말씀하셨다(24–29).</p>
+      <p>토기장이 은유는 바울의 창안이 아니다. 이사야 29:16, 45:9, 64:8과 예레미야 18:1–6이 배경이며, 특히 예레미야의 토기장이 대목은 하나님이 빚으시는 동안 <em>회개에 따라 계획을 바꾸신다</em>는 문맥에 놓인다.</p>
+    </div>
+
+    <div class="vs" id="v2224" data-verses="22,23,24">
+      <span class="ref">9:22–24 — 두 그릇의 비대칭</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">22</span>만일 하나님이 그의 진노를 보이시고 그의 능력을 알게 하고자 하사 멸하기로 준비된 진노의 그릇을 오래 참으심으로 관용하시고 <span class="vn">23</span>또한 영광 받기로 예비하신 바 긍휼의 그릇에 대하여 그 영광의 풍성함을 알게 하고자 하셨을지라도 무슨 말을 하리요 <span class="vn">24</span>이 그릇은 우리니 곧 유대인 중에서뿐 아니라 이방인 중에서도 부르신 자니라</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 22–23절의 구조를 드러낸다. "만일 하나님이 자기의 진노를 보이시고 자기의 능력을 알게 하고자 하사 <b>멸하기로 준비된</b> 진노의 그릇을 오래 참으심으로 관용하시고, 또한 <b>영광 받기로 예비하신</b> 긍휼의 그릇에 대하여 그 영광의 풍성함을 알게 하고자 하셨을지라도 무슨 말을 하리요."</p>
+      <div class="caveat"><span class="tt">쟁점 — 두 동사의 비대칭</span>
+      22절의 "준비된"(<span class="gw">κατηρτισμένα</span>)은 <b>완료 수동 분사</b>로 행위자가 명시되지 않는다. 반면 23절의 "예비하신"(<span class="gw">ἃ προητοίμασεν</span>)은 <b>능동태</b>이며 주어가 분명히 하나님이시다. &nbsp;
+      ① <b>의도된 비대칭</b> — 바울이 긍휼에 대해서는 하나님을 명시적 주어로 세우고 진노에 대해서는 그렇게 하지 않은 것이 <em>신중한 선택</em>이라는 읽기. 하나님이 긍휼의 그릇을 예비하시는 방식과 진노의 그릇이 멸하기로 준비되는 방식이 같지 않다는 뜻이 된다. &nbsp;
+      ② <b>수사적 변주일 뿐</b> — 문맥이 이미 하나님의 주권을 논하고 있으므로 태(態)의 차이에 신학적 무게를 실을 수 없다는 읽기. &nbsp;
+      ③ <b>재귀적 읽기</b> — 수동태를 재귀로 읽어 "스스로 멸하기로 준비된"으로 옮기는 견해. 위 Morris의 관찰(하나님은 먼저 스스로 완악하게 하지 않은 자를 완악하게 하지 않으신다)과 맞물린다. &nbsp;
+      22절이 <span class="gw">εἰ δέ</span>("만일 ~할지라도")로 시작해 <b>귀결절 없이 끝난다</b>는 점도 함께 보아야 한다. 바울이 문장을 완성하지 않음으로써 판단을 유보한다는 읽기가 가능하다.</div>
+      <p>24절이 이 논증의 실제 목적지를 드러낸다. 긍휼의 그릇은 "유대인 중에서뿐 아니라 이방인 중에서도" 부르신 우리다. <span class="c x">K</span> Kruse의 정리대로, 토기장이가 진흙을 어떻게 할지 정하듯 하나님이 진노를 보이실 자와 영광의 풍성함을 알게 하실 자를 정하시되, 그 <b>긍휼의 그릇이 유대인과 이방인 양쪽에서 나온다</b>는 것이 논증의 도착점이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">λίθος προσκόμματος</div>
+      <div class="eyebrow">9:25–33</div>
+      <h2>5. 남은 자와 부딪칠 돌</h2>
+      <div class="gloss">리토스 프로스콤마토스 — 부딪칠 돌</div>
+    </div>
+
+    <div class="vs" id="v2529" data-verses="25,26,27,28,29">
+      <span class="ref">9:25–29 — 두 선지자</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">25</span>호세아의 글에도 이르기를 내가 내 백성 아닌 자를 내 백성이라, 사랑하지 아니한 자를 사랑한 자라 부르리라 <span class="vn">26</span>너희는 내 백성이 아니라 한 그 곳에서 그들이 살아 계신 하나님의 아들이라 일컬음을 받으리라 함과 같으니라 <span class="vn">27</span>또 이사야가 이스라엘에 관하여 외치되 이스라엘 자손들의 수가 비록 바다의 모래 같을지라도 남은 자만 구원을 받으리니 <span class="vn">28</span>주께서 땅 위에서 그 말씀을 이루고 속히 시행하시리라 하셨느니라 <span class="vn">29</span>또한 이사야가 미리 말한 바 만일 만군의 주께서 우리에게 씨를 남겨 두지 아니하셨더라면 우리가 소돔과 같이 되고 고모라와 같았으리로다 함과 같으니라</p>
+      <p>호세아 인용(2:23; 1:10)이 이방인의 포함을, 이사야 인용(10:22–23; 1:9)이 남은 자를 각각 뒷받침한다. 두 인용의 방향이 반대다. 하나는 <em>백성 아닌 자가 백성이 되는</em> 일이고, 다른 하나는 <em>백성 가운데 남은 자만 구원받는</em> 일이다.</p>
+      <p>호세아의 원래 문맥은 북이스라엘이었으므로, 바울이 이를 이방인에게 적용한 것은 <strong>본문의 확장 적용</strong>이다. 원리는 같다. 하나님이 "내 백성 아닌 자를 내 백성이라" 부르실 수 있다는 것이다.</p>
+      <p>29절의 이사야 1:9 인용이 남은 자 신학의 성격을 규정한다. "만군의 주께서 우리에게 씨를 남겨 두지 아니하셨더라면 우리가 소돔과 같이 되고 고모라와 같았으리로다." 남은 자의 존재는 <em>이스라엘의 공로가 아니라 하나님의 남겨 두심</em>이다.</p>
+    </div>
+
+    <div class="vs" id="v3033" data-verses="30,31,32,33">
+      <span class="ref">9:30–33 — 부딪칠 돌</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">30</span>그런즉 우리가 무슨 말을 하리요 의를 따르지 아니한 이방인들이 의를 얻었으니 곧 믿음에서 난 의요 <span class="vn">31</span>의의 법을 따라간 이스라엘은 율법에 이르지 못하였으니 <span class="vn">32</span>어찌 그러하냐 이는 그들이 믿음을 의지하지 않고 행위를 의지함이라 부딪칠 돌에 부딪쳤느니라 <span class="vn">33</span>기록된 바 보라 내가 걸림돌과 거치는 바위를 시온에 두노니 그를 믿는 자는 부끄러움을 당하지 아니하리라 함과 같으니라</p>
+      <p><span class="c x">S</span> Stott은 30절의 "그런즉 우리가 무슨 말을 하리요"를 결론의 신호로 읽는다. 교회의 구성—이방인 다수와 유대인 남은 자—에 대한 설명은, 이방인은 예수를 믿었고 이스라엘 대다수는 그를 걸림돌로 삼아 넘어졌다는 데 있다.</p>
+      <p>31–32절이 그 실패의 성격을 규정한다. 의의 법을 따라간 이스라엘이 그 법에 이르지 못한 것은 "믿음을 의지하지 않고 행위를 의지함이라"다. <span class="c x">K</span> Kruse가 정리한 9:30–10:21의 축, 곧 <b>이스라엘 자신의 책임</b>이 여기서 시작된다. 9:6–29가 하나님의 선택을 말했다면 9:30부터는 인간의 책임을 말하며, 두 설명이 이 장의 이음매에서 만난다.</p>
+      <p>33절의 인용은 이사야 8:14와 28:16의 결합이다. 같은 결합이 베드로전서 2:6–8에도 나타나므로, 초기 교회가 이미 이 두 본문을 묶어 사용하던 <em>증언 본문 모음</em>이 있었을 가능성이 있다.</p>
+      <p>인용의 마지막 어구가 9장을 1:16과 잇는다. "그를 믿는 자는 <strong>부끄러움을 당하지 아니하리라</strong>." 바울이 "내가 복음을 부끄러워하지 아니하노니"로 편지를 열었고, 5:5에서 "소망이 우리를 부끄럽게 하지 아니함은"이라 했다. 같은 어근이 세 번째로 여기 놓인다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 9장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">9:1–3</td><td>롬 8:35·39; 출 32:32</td><td>끊어짐 · 모세의 중보</td><td><span class="c t">D</span></td></tr>
+        <tr><td class="head">9:4–5</td><td>롬 3:2; 출 4:22; 신 7:6</td><td>이스라엘의 특권 목록</td><td>본문</td></tr>
+        <tr><td class="head">9:6</td><td>롬 2:28–29; 갈 6:16</td><td>두 이스라엘 — 표면과 이면</td><td><span class="c t">D</span> <span class="c x">S</span></td></tr>
+        <tr><td class="head">9:7</td><td>창 21:12</td><td>"이삭으로부터 난 자라야"</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:9</td><td>창 18:10·14</td><td>약속의 말씀</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:12</td><td>창 25:23</td><td>"두 민족이 네 태중에" — 집단적 신탁</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:13</td><td>말 1:2–3; 창 29:30–31</td><td>사랑과 미움 — 셈어 관용</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:14</td><td>롬 3:5</td><td>"하나님께 불의가 있느냐"의 재등장</td><td><span class="c t">D</span></td></tr>
+        <tr><td class="head">9:15</td><td>출 33:19</td><td>금송아지 이후의 긍휼</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:16</td><td>고전 9:24; 갈 2:2; 빌 2:16</td><td>달음박질(<span class="gw">τρέχω</span>)의 용례</td><td>본문</td></tr>
+        <tr><td class="head">9:17–18</td><td>출 9:16; 롬 1:24·26·28</td><td>완악하게 하심과 내버려 두심</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">9:20–21</td><td>사 29:16; 45:9; 64:8; 렘 18:1–6</td><td>토기장이 은유의 배경</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:24</td><td>롬 3:29–30; 10:12</td><td>유대인과 이방인 양쪽에서</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">9:25–26</td><td>호 2:23; 1:10</td><td>백성 아닌 자가 내 백성이 됨</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:27–29</td><td>사 10:22–23; 1:9</td><td>남은 자 — 하나님의 남겨 두심</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:33</td><td>사 8:14; 28:16; 벧전 2:6–8</td><td>부딪칠 돌 — 초기 증언 본문</td><td>NA28 난외</td></tr>
+        <tr><td class="head">9:33</td><td>롬 1:16; 5:5</td><td>"부끄러움을 당하지 아니하리라"</td><td>본문</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 확신 다음에 오는 근심</h3>
+    <p>8:39와 9:1 사이에 접속사가 없다. <span class="c t">D</span> Dunn이 짚은 이 침묵이 9–11장의 성격을 규정한다. 끊을 수 없는 사랑을 노래한 입에서 곧바로 "큰 근심"이 나온다는 것이며, 8장의 확신이 <em>이스라엘 문제를 우회해서</em> 얻어진 것이 아님을 보여 준다. 오히려 그 확신이 이 물음을 더 절박하게 만든다.</p>
+
+    <h3>② 저주받기를 원하는 사도</h3>
+    <p>8:35에서 "누가 우리를 끊으리요"라 물은 사람이 9:3에서 스스로 "끊어질지라도"라 말한다. 이 대비가 우연이 아니다. 모세가 출애굽기 32:32에서 자기 이름을 지워 달라 한 것과 같은 <strong>중보자의 형식</strong>이며, 논증에 앞서 <em>정서적 자격</em>을 먼저 세운다. 9–11장이 냉정한 예정론이 아니라 사랑하는 자의 씨름임을 첫 세 절이 못 박는다.</p>
+
+    <h3>③ 말씀은 폐하지 않았다</h3>
+    <p>9:6a가 이 장의 명제다. 그리고 그 변론 방식이 특이하다. 이스라엘의 실패를 부정하지 않고, <em>약속의 범위를 다시 규정한다</em>. <span class="c t">D</span> Dunn의 정리대로 혈통의 주장이 자연적 차원에서 배타적으로 성립하지 않으며, <span class="c x">S</span> Stott의 정리대로 이 구분은 이미 2:28–29에 있었다. 9장은 새 원리를 도입하지 않고 <b>2장의 원리를 이스라엘 역사 전체에 적용한다</b>.</p>
+
+    <h3>④ 택하심을 어디까지 읽을 것인가</h3>
+    <p>9:11–13의 인용들이 원래 <em>민족</em>에 관한 신탁이라는 사실(창 25:23의 "두 민족", 말 1:2–3의 에돔과 이스라엘)이 집단적 읽기의 근거이고, 11절의 "무슨 선이나 악을 행하지 아니한 때에"가 개인적 읽기의 근거다. <span class="c x">K</span> Kruse가 이 물음에 보론을 할애한 것이 논쟁의 무게를 보여 준다. <span class="c t">D</span> Dunn의 단서가 방법론적으로 유용하다. 택하심은 은혜를 해설하다 자라난 <b>사후의 시각</b>이므로 예측의 도구가 될 수 없고, 엄밀히는 <b>종말론적 교리</b>다.</p>
+
+    <h3>⑤ 완악하게 하심과 내버려 두심</h3>
+    <p>9:18의 <span class="gw">σκληρύνει</span>가 1:24·26·28의 <span class="gw">παρέδωκεν</span>과 같은 구조라는 <span class="c x">S</span> Stott의 관찰이 이 장의 신정론을 푸는 열쇠다. Morris의 정식대로 <b>먼저 스스로 완악하게 하지 않은 자를 하나님이 완악하게 하신다고 말하는 본문은 없다</b>. 완악하게 하심은 사법적 행위이며 자기 완고함에 넘기심이다. 1장의 심판 방식이 9장에서 이스라엘 문제에 적용된다.</p>
+
+    <h3>⑥ 완성되지 않은 문장</h3>
+    <p>9:22–23은 두 겹으로 비대칭이다. 진노의 그릇은 수동태로 행위자 없이 "준비된" 것이고, 긍휼의 그릇은 하나님이 능동으로 "예비하신" 것이다. 게다가 22절의 조건절이 <em>귀결절 없이</em> 끝난다. 바울이 여기서 문장을 완성하지 않는다는 사실 자체가, 이 대목을 대칭적 이중 예정으로 읽는 데 신중해야 할 이유가 된다.</p>
+
+    <h3>⑦ 논증의 도착점은 이방인이다</h3>
+    <p>9:24가 이 모든 논의의 목적지를 드러낸다. 긍휼의 그릇은 "유대인 중에서뿐 아니라 <strong>이방인 중에서도</strong>" 부르신 우리다. 3:29–30의 "하나님은 한 분이시니라"가 여기서 구속사의 서술로 확장된다. 9장의 주권 논의는 사변이 아니라 <em>이방인 포함을 정당화하는</em> 논증이며, 25–29절의 두 선지자 인용이 그것을 성경으로 확증한다.</p>
+
+    <h3>⑧ 두 설명이 만나는 이음매</h3>
+    <p><span class="c x">K</span> Kruse의 정리대로 9–11장에는 두 설명이 나란히 놓인다. 9:1–29의 <em>하나님의 선택</em>과 9:30–10:21의 <em>이스라엘의 책임</em>이다. 그리고 그 이음매가 9:30–33이다. 하나님의 주권을 끝까지 밀고 간 바로 그 장이, 마지막 네 절에서 "믿음을 의지하지 않고 행위를 의지함이라"로 방향을 튼다. 두 설명 가운데 하나를 지우면 9–11장은 읽히지 않는다.</p>
+
+    <div class="back"><a href="./ch08.html">← 8장</a> · <a href="./overview.html">종합 연구</a> · <a href="./index.html">로마서 서재</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 9장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 38B 1988)·Kruse(PNTC 2012)·Cranfield(<i>Shorter</i>)·Stott(BST) 직접 확인분. Morris는 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

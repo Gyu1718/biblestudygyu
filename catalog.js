@@ -17,7 +17,7 @@
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-23"
+    updated: "2026-07-24"
   },
   sections: [
     {
@@ -81,7 +81,18 @@ window.SITE_CATALOG = {
       label: "신약 연구",
       original: "Καινὴ Διαθήκη",
       script: "grk",
-      studies: []
+      studies: [
+        {
+          id: "romans",
+          path: "nt/romans/index.html",
+          title: "로마서 심층 연구",
+          original: "ΠΡΟΣ ΡΩΜΑΙΟΥΣ",
+          script: "grk",
+          meta: "종합 연구 1편 · 장별 심층 연구 1–9장 · 절별 성경 연구 1–16장 · Moo·Dunn·Jewett·Gaventa·Barth 대조 · 개역개정 4판 · NA28",
+          desc: "로마서의 역사적 정황과 신학적 구조를 조망하고, 1–9장을 절 단위로 주해한다. 16장 전체에는 개역개정 본문, 원어 성경읽기, 심층 연구를 잇는 절별 성경 연구 허브를 마련했다.",
+          volumes: 10
+        }
+      ]
     },
     {
       id: "theology",

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 7장 심층 연구 — 율법과 나</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="7" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch07.html">성경 연구</a></div>
+  <div class="brand">로마서 7장 심층 연구</div>
+  <div class="brand-sub">율법과 나</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html">2</a><a href="ch03.html">3</a><a href="ch04.html">4</a>
+    <a href="ch05.html">5</a><a href="ch06.html">6</a><a href="ch07.html" aria-current="page">7</a><a href="ch08.html">8</a>
+    <a href="ch09.html">9</a><a class="off" href="#">10</a><a class="off" href="#">11</a><a class="off" href="#">12</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 남편의 죽음 (7:1–6)</a>
+  <a class="lv1" href="#s2">2. 율법이 죄냐 (7:7–12)</a>
+  <a class="lv1" href="#s3">3. 선한 것이 사망이 되었느냐 (7:13)</a>
+  <a class="lv1" href="#s4">4. 원함과 행함 (7:14–20)</a>
+  <a class="lv1" href="#s5">5. 두 법의 전쟁 (7:21–25)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">ταλαίπωρος ἐγὼ ἄνθρωπος</div>
+    <h1>로마서 7장 · 율법과 나</h1>
+    <p class="sub">6:14가 "법 아래에 있지 아니하고"라 했다. 그렇다면 율법은 죄인가. 그 물음이 로마서에서 가장 뜨거운 스물다섯 절을 연다.</p>
+    <p class="meta">7:1–6 놓임 · 7:7–13 율법 변호 · 7:14–25 내적 갈등 · 아홉 주석 대조 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c b">J</span> Jewett Herm.</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">율법을 변호하는 장.</div>
+    </div>
+    <p>6:14가 "너희가 법 아래에 있지 아니하고 은혜 아래에 있음이라"로 끝났고, 5:20은 "율법이 들어온 것은 범죄를 더하게 하려 함이라"고 했다. 두 진술이 합쳐지면 하나의 결론이 유혹처럼 따라온다. <em>율법이 곧 악이 아닌가</em>. <span class="c x">C</span> Cranfield는 5:20, 6:14, 7:1–6이 특히 그런 인상을 줄 수 있다고 짚으며, 7:7–12가 바로 그 오해를 처리하려는 단락이라고 본다.</p>
+    <p><span class="c x">S</span> Stott은 7장을 두 부분으로 나눈다. <strong>"율법의 변호"</strong>(7–13)와 <strong>"율법의 약함"</strong>(14–25)이다. 앞은 율법이 죄가 아님을 밝히고, 뒤는 그 거룩한 율법이 죄를 이길 <em>힘은 없음</em>을 보인다. 그리고 8:1–4에서 하나님이 아들과 성령으로 율법이 하지 못한 일을 하신다.</p>
+    <p><span class="c x">K</span> Kruse는 이 장에 보론을 둘 붙인다. <em>도덕적 무력함에 관한 고전 문헌의 평행</em>과 <em>7:7–25의 "나"의 정체</em>다. 두 번째 보론의 존재 자체가 이 장의 난제가 어디 있는지를 말해 준다.</p>
+    <table>
+      <caption>표 1. 7장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th><th>시제</th></tr></thead>
+      <tbody>
+        <tr><td class="head">비유</td><td>7:1–6</td><td>남편의 죽음과 율법에서 놓임</td><td>과거·현재</td></tr>
+        <tr><td class="head">변호</td><td>7:7–12</td><td>율법이 죄냐 — 계명과 죄의 기회</td><td>과거</td></tr>
+        <tr><td class="head">전환</td><td>7:13</td><td>선한 것이 사망이 되었느냐</td><td>과거</td></tr>
+        <tr><td class="head">갈등 ①</td><td>7:14–20</td><td>원하는 것을 행하지 못함</td><td><b>현재</b></td></tr>
+        <tr><td class="head">갈등 ②</td><td>7:21–25</td><td>두 법의 전쟁과 부르짖음</td><td><b>현재</b></td></tr>
+      </tbody>
+    </table>
+    <p><span class="c x">C</span> Cranfield가 짚는 <strong>시제의 전환</strong>이 이 장을 읽는 첫 열쇠다. 14절에서 과거 시제가 현재 시제로 바뀌며, 그 변화가 뒤 단락의 정체 논쟁을 촉발한다.</p>
+  </section>
+
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">κατηργήθητε</div>
+      <div class="eyebrow">7:1–6</div>
+      <h2>1. 남편의 죽음</h2>
+      <div class="gloss">카테르게테테 — 벗어났으니</div>
+    </div>
+
+    <div class="vs" id="v13" data-verses="1,2,3">
+      <span class="ref">7:1–3 — 혼인의 비유</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>형제들아 내가 법 아는 자들에게 말하노니 너희는 그 법이 사람이 살 동안만 그를 주관하는 줄 알지 못하느냐 <span class="vn">2</span>남편 있는 여인이 그 남편 생전에는 법으로 그에게 매인 바 되나 만일 그 남편이 죽으면 남편의 법에서 벗어나느니라 <span class="vn">3</span>그러므로 만일 그 남편 생전에 다른 남자에게 가면 음녀라 그러나 만일 남편이 죽으면 그 법에서 자유롭게 되나니 다른 남자에게 갈지라도 음녀가 되지 아니하느니라</p>
+      <p>비유는 단순하다. 율법은 사람이 살아 있는 동안만 그를 주관한다. 남편이 죽으면 아내는 그에게 매던 법에서 놓인다. <span class="c x">C</span> Cranfield의 번역은 2절의 한정을 살린다. "남편이 죽으면 그 여자는 <em>남편에게 매는 한에서의</em> 그 법에서 놓인다."</p>
+      <div class="caveat"><span class="tt">쟁점 — 비유가 어긋나는 자리</span>
+      비유에서 죽는 것은 <b>남편</b>인데, 4절에서 죽는 것은 <b>독자 자신</b>("너희도 율법에 대하여 죽임을 당하였으니")이다. 대응이 뒤집힌다. &nbsp;
+      ① <b>비유의 요점만 취하는 읽기</b> — 바울이 강조하려는 것은 <em>죽음이 법적 구속을 끝낸다</em>는 원리 하나뿐이며, 인물 대응을 일일이 맞출 필요가 없다. &nbsp;
+      ② <b>이중 죽음으로 읽는 읽기</b> — 신자는 그리스도의 몸으로 죽었고(4절), 그럼으로써 옛 결합이 끝나 새 결합이 가능해졌다. 죽은 자는 "옛 사람"(6:6)이며 남편 자리에 있던 것은 율법 아래의 옛 자아다. &nbsp;
+      ③ <b>느슨한 예화로 보는 읽기</b> — 1절의 원리를 예시할 뿐이므로 4절과 정합할 의무가 없다. &nbsp;
+      어느 쪽이든 4절이 비유를 <em>넘어선다</em>는 점은 공통된다. 목적절이 그것을 보여 준다. 놓임의 목적은 자유 자체가 아니라 "<b>다른 이에게 가서</b> 하나님을 위하여 열매를 맺게" 하는 데 있다.</div>
+    </div>
+
+    <div class="vs" id="v46" data-verses="4,5,6">
+      <span class="ref">7:4–6 — 열매와 새로움</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">4</span>그러므로 내 형제들아 너희도 그리스도의 몸으로 말미암아 율법에 대하여 죽임을 당하였으니 이는 다른 이 곧 죽은 자 가운데서 살아나신 이에게 가서 우리가 하나님을 위하여 열매를 맺게 하려 함이라 <span class="vn">5</span>우리가 육신에 있을 때에는 율법으로 말미암는 죄의 정욕이 우리 지체 중에 역사하여 우리로 사망을 위하여 열매를 맺게 하였더니 <span class="vn">6</span>이제는 우리가 얽매였던 것에 대하여 죽었으므로 율법에서 벗어났으니 이러므로 우리가 영의 새로운 것으로 섬길 것이요 율법 조문의 묵은 것으로 아니할지니라</p>
+      <p>4절의 "그리스도의 몸으로 말미암아"는 십자가에서 죽으신 그의 육체를 가리키며, 6장의 연합 논리를 이어받는다. 놓임은 소속의 <em>이전</em>이지 소속의 소멸이 아니다. 6:16–18에서 주인이 교체되었듯 여기서는 결합이 교체된다.</p>
+      <p><span class="c x">S</span> Stott은 이 대목을 두 권으로 된 책에 비유해 읽는다. 그리스도와 함께 죽고 다시 산 사건이 제1권을 닫았으므로, 마치 그 죽음과 부활이 없었던 것처럼 제1권을 다시 펼치는 일은 생각할 수 없다는 것이다. 그리고 혼인의 이미지를 이어 간다. 결혼한 여인이 여전히 미혼인 것처럼 살 수 있는가. 불가능하지는 않다. 그러나 <b>자기가 누구인지를 기억하게 하라.</b> 손가락의 반지, 곧 남편과의 새 연합의 상징을 만져 보게 하라. 거듭난 그리스도인도 마찬가지여서, 자기 세례 곧 그리스도와의 연합의 상징을 상기하면 그에 맞게 살고자 하게 된다. 그래서 거룩한 삶의 큰 비밀은 <em>아는 데</em> 있다(6절).</p>
+      <p>6절의 대비가 2:29를 되받는다. <span class="gw">ἐν καινότητι πνεύματος</span>("영의 새로운 것으로")와 <span class="gw">οὐ παλαιότητι γράμματος</span>("율법 조문의 묵은 것으로 아니할지니")다. <span class="c x">S</span> Stott의 지적대로 성령은 7장에서 6절 외에는 언급되지 않다가 8장에서 폭발하듯 등장한다. 이 절이 8장을 향해 놓인 첫 표지판이다.</p>
+      <p><span class="c x">K</span> Kruse는 이 단락에서 율법의 <em>시대적 지위</em>를 읽는다. 율법을 받은 것이 이스라엘의 큰 특권 가운데 하나임을 바울이 인정하면서도, 하나님의 백성을 규율하는 규범으로서의 <b>그 역할의 기간이 그리스도의 죽음과 부활로 끝났음</b>을 함께 인정한다는 것이며, 7:1–6이 그 가장 분명한 표현이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">οὐκ ἐπιθυμήσεις</div>
+      <div class="eyebrow">7:7–12</div>
+      <h2>2. 율법이 죄냐</h2>
+      <div class="gloss">우크 에피튀메세이스 — 탐내지 말라</div>
+    </div>
+
+    <div class="vs" id="v78" data-verses="7,8">
+      <span class="ref">7:7–8 — 죄를 알게 하는 계명</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">7</span>그런즉 우리가 무슨 말을 하리요 율법이 죄냐 그럴 수 없느니라 율법으로 말미암지 않고는 내가 죄를 알지 못하였으니 곧 율법이 탐내지 말라 하지 아니하였더라면 내가 탐심을 알지 못하였으리라 <span class="vn">8</span>그러나 죄가 기회를 타서 계명으로 말미암아 내 속에서 온갖 탐심을 이루었나니 이는 율법이 없으면 죄가 죽은 것임이라</p>
+      <p><span class="gw">ὁ νόμος ἁμαρτία; μὴ γένοιτο</span>. 물음이 정면으로 제기되고 정면으로 부정된다. <span class="c x">C</span> Cranfield는 7절이 율법이 죄라는 제안을 <em>물리치면서</em> 동시에 율법이 죄와 <b>전혀 무관하지도 않음</b>을 밝힌다고 본다. 율법이 없었다면 죄를 알지 못했다는 것이다.</p>
+      <p>인용된 계명은 십계명의 마지막, <strong>"탐내지 말라"</strong>다. 이 선택이 우연이 아니다. 열 계명 가운데 유일하게 <em>외적 행위가 아니라 내면의 욕망</em>을 겨누는 조항이며, 7:14–25의 내적 갈등을 미리 준비한다.</p>
+      <p>8절의 <span class="gw">ἀφορμή</span>("기회")는 군사 용어로 작전의 <em>거점</em>을 가리킨다. 죄가 계명을 발판 삼는다. 계명이 금하는 순간 그 금지가 욕망의 지형도가 된다는 것이며, 율법의 잘못이 아니라 죄의 전술이다.</p>
+    </div>
+
+    <div class="vs" id="v912" data-verses="9,10,11,12">
+      <span class="ref">7:9–12 — 계명이 이르매</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">9</span>전에 율법을 깨닫지 못했을 때에는 내가 살았더니 계명이 이르매 죄는 살아나고 나는 죽었도다 <span class="vn">10</span>생명에 이르게 할 그 계명이 내게 대하여 도리어 사망에 이르게 하는 것이 되었도다 <span class="vn">11</span>죄가 기회를 타서 계명으로 말미암아 나를 속이고 그것으로 나를 죽였는지라 <span class="vn">12</span>이로 보건대 율법은 거룩하고 계명도 거룩하고 의로우며 선하도다</p>
+      <p><span class="c x">C</span> Cranfield는 이 대목의 배경으로 <strong>창세기 3장</strong>을 지목한다. 사람의 보존을 위한 하나님의 선하고 은혜로운 선물인 신적 계명이, 동시에 뱀이 사람을 망치는 데 이용할 수 있는 <em>기회</em>가 된 그 서사다. 죄가 계명을 통해 사람의 죽음을 이루었다. 그러므로 율법에 관한 참된 이해에는 두 가지가 함께 들어가야 한다. 율법이 죄의 목적을 위해 <b>효과적으로 이용당했다</b>는 인정과, 그럼에도 율법 자체는 하나님의 법으로 거룩하고 의롭고 선하다는 <b>근본 진리</b>(12절)다.</p>
+      <p>9절의 "전에 율법을 깨닫지 못했을 때에는 내가 살았더니"가 "나"의 정체 논쟁의 첫 뇌관이다. 바리새인 바울에게 율법 없던 시절이 있었는가. 이 물음이 아래 5절의 논쟁으로 이어진다.</p>
+      <p>10절의 역설이 단락의 핵심이다. <strong>생명에 이르게 할 그 계명이 도리어 사망에 이르게 하는 것이 되었다.</strong> 레위기 18:5("사람이 이를 행하면 그로 말미암아 살리라")가 배경이며, 10:5에서 다시 인용된다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">καθ᾽ ὑπερβολήν</div>
+      <div class="eyebrow">7:13</div>
+      <h2>3. 선한 것이 사망이 되었느냐</h2>
+      <div class="gloss">카트 휘페르볼렌 — 심히</div>
+    </div>
+
+    <div class="vs" id="v13v" data-verses="13">
+      <span class="ref">7:13 — 두 번째 부정</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">13</span>그런즉 선한 것이 내게 사망이 되었느냐 그럴 수 없느니라 오직 죄가 죄로 드러나기 위하여 선한 그것으로 말미암아 나를 죽게 만들었으니 이는 계명으로 말미암아 죄로 심히 죄 되게 하려 함이라</p>
+      <p><span class="c x">C</span> Cranfield는 13절이 9–12절에서 끌어낼 수 있는 <em>또 하나의 그릇된 추론</em>을 처리한다고 본다. 참으로 선한 그 율법이 사람의 죽음에 책임이 있다는 추론이다. 진실은 그 반대여서, 죄가 선한 것을 이용해 사람의 죽음을 이루었다.</p>
+      <p>그리고 13절은 죄가 율법을 이용한 일이 <strong>율법을 주신 하나님의 목적 두 가지를 실제로 성취한다</strong>고 밝힌다. <em>죄가 죄로 드러나게</em> 하는 것과, <em>계명으로 말미암아 그 죄됨이 극대화되게</em> 하는 것이다. 3:20의 "율법으로는 죄를 깨달음이니라"가 여기서 완성된 형태로 나타난다.</p>
+      <p>이 절이 문지방이다. 여기까지의 동사는 과거형이었고, 14절부터 현재형으로 바뀐다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">ἐγώ</div>
+      <div class="eyebrow">7:14–20</div>
+      <h2>4. 원함과 행함</h2>
+      <div class="gloss">에고 — 이 "나"는 누구인가</div>
+    </div>
+
+    <div class="vs" id="v1416" data-verses="14,15,16">
+      <span class="ref">7:14–16 — 팔린 자</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">14</span>우리가 율법은 신령한 줄 알거니와 나는 육신에 속하여 죄 아래에 팔렸도다 <span class="vn">15</span>내가 행하는 것을 내가 알지 못하노니 곧 내가 원하는 것은 행하지 아니하고 도리어 미워하는 것을 행함이라 <span class="vn">16</span>만일 내가 원하지 아니하는 그것을 행하면 내가 이로써 율법이 선한 것을 시인하노니</p>
+      <p><span class="gw">ἐγὼ δὲ σάρκινός εἰμι πεπραμένος ὑπὸ τὴν ἁμαρτίαν</span>. "육신에 속하여 죄 아래에 팔렸도다." <span class="gw">πεπραμένος</span>는 노예로 <em>팔린</em> 상태를 가리키는 완료 분사이며, 6장의 종 은유가 여기서 되돌아온다. 그러나 6:18은 "죄로부터 해방되어 의에게 종이 되었느니라"고 했다. 같은 어휘가 정반대 방향을 가리키는 이 충돌이 논쟁의 심장이다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 7:14–25의 "나"는 누구인가</span>
+      <span class="c x">S</span> Stott의 말대로 <b>로마서 7장을 둘러싼 논쟁은 본질적으로 이 "나"의 정체를 묻는 일로 환원된다</b>. 이 단락과 앞 단락이 온통 1인칭 단수로 채워져 있기 때문이다. &nbsp;
+      ① <b>거듭난 그리스도인</b> — <span class="c x">C</span> Cranfield의 입장이다. 14절에서 시제가 현재로 바뀌고 뒤 문맥이 분명히 하듯 바울은 <em>그리스도인을</em> 염두에 두고 있다. 이어지는 절들은 참 그리스도인에게 특징적인 내적 갈등을 생생히 그리며, <b>그런 갈등은 성령이 활동하시고 복음의 훈련 아래 마음이 새로워지는 사람에게만 가능하다</b>. 율법을 율법주의적으로가 아니라 그리스도의 빛 안에서 이해하여 그 요구의 진지함을 인식하고 참으로 순종하기를 원하는 사람, 죄의 권세가 실제로 진지하게 도전받고 있는 사람, 바로 그 사람에게서 죄의 권세가 뚜렷이 드러난다. <b>하나님의 영으로 새로워질수록 그는 자기 삶을 향한 죄의 지속적 권세와, 자기 최선의 활동조차 안에 자리 잡은 이기심으로 훼손되어 있다는 사실에 더 민감해진다.</b> &nbsp;
+      ② <b>거듭나지 않은 사람</b> — 회심 이전, 율법 아래 있던 자의 자화상으로 읽는다. 14절의 "죄 아래에 팔렸도다"가 6:18과 정면으로 충돌한다는 점, 그리고 8:2의 "죄와 사망의 법에서 너를 해방하였음이라"가 그 상태를 <em>지나간 것</em>으로 놓는다는 점이 근거다. &nbsp;
+      ③ <b>제3의 자리</b> — <span class="c x">S</span> Stott이 취하는 입장으로, 거듭난 자도 거듭나지 않은 자도 아닌 상태를 상정한다. 그는 이 단락의 목적이 정체 규명이 아니라 <em>율법의 약함을 드러내는</em> 데 있음을 강조한다. 이 사람의 패배는 율법 탓도(율법은 거룩하다), 그의 참된 자아 탓도 아니고 "내 속에 거하는 죄"(17·20절) 탓이며, <b>율법에는 그것을 제어할 힘이 없다</b>. 그리고 8:9의 "내주하시는 성령"이 내주하는 죄의 해답인데, 그 성령이 7장에서는 6절 외에 언급되지 않는다. &nbsp;
+      ④ <b>수사적 "나"</b> — 특정 개인이 아니라 율법 아래 있는 인류 또는 아담·이스라엘의 대표적 자아로 읽는다. <span class="c x">S</span> Stott은 7–13절에 관해 이 가능성을 검토하되, 서술이 <em>너무 사실적이고 생생하여</em> 순전한 수사 장치나 타인의 연기로 보기 어렵다고 판단한다. &nbsp;
+      ⑤ <b>종말론적 중첩</b> — 이미와 아직 사이에 선 신자의 실존으로 읽는다. 6장의 신분과 7장의 경험이 <em>두 시대의 겹침</em> 속에서 동시에 참이라는 것이며, 8:23의 "우리까지도 속으로 탄식하여"가 같은 긴장을 말한다.</div>
+      <p><span class="c x">K</span> Kruse는 이 대목에 <em>도덕적 무력함에 관한 고전 문헌의 평행</em>이라는 보론을 따로 둔다. 원하는 선을 알면서도 악을 행한다는 진술이 그리스-로마 도덕철학에도 널리 나타나므로, 이 서술의 <b>형식</b>은 바울만의 것이 아니라는 점을 짚기 위해서다. 다만 그 형식이 같다고 해서 내용까지 같다고 볼 수 없다. 고전 문헌의 갈등이 이성과 정념의 대립이라면, 바울의 갈등은 <em>하나님의 법과 죄의 법</em>의 대립이다.</p>
+    </div>
+
+    <div class="vs" id="v1720" data-verses="17,18,19,20">
+      <span class="ref">7:17–20 — 내가 아니요 죄니라</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">17</span>이제는 그것을 행하는 자가 내가 아니요 내 속에 거하는 죄니라 <span class="vn">18</span>내 속 곧 내 육신에 선한 것이 거하지 아니하는 줄을 아노니 원함은 내게 있으나 선을 행하는 것은 없노라 <span class="vn">19</span>내가 원하는 바 선은 행하지 아니하고 도리어 원하지 아니하는 바 악을 행하는도다 <span class="vn">20</span>만일 내가 원하지 아니하는 그것을 하면 이를 행하는 자는 내가 아니요 내 속에 거하는 죄니라</p>
+      <p>17절과 20절이 같은 문장을 반복한다. "이를 행하는 자는 내가 아니요 내 속에 거하는 죄니라." 이 진술을 책임 회피로 읽어서는 안 된다. 바울은 바로 앞뒤에서 "내가 행하는"이라고 계속 말하기 때문이다. 요점은 면책이 아니라 <strong>분열의 확인</strong>이다. 원하는 자아와 행하는 자아가 갈라져 있고, 그 틈에 "거하는 죄"(<span class="gw">ἡ οἰκοῦσα ἐν ἐμοὶ ἁμαρτία</span>)가 자리 잡고 있다.</p>
+      <p>동사 <span class="gw">οἰκέω</span>("거하다")가 8:9·11에서 <em>성령</em>에 대해 같은 형태로 쓰인다는 사실이 결정적이다. 내주하는 죄에 내주하는 성령이 대응한다. <span class="c x">S</span> Stott이 짚은 대로 7장의 문제에 대한 처방이 8장에 있다는 구조가 이 낱말 하나로 드러난다.</p>
+      <p>18절의 한정도 정확히 읽어야 한다. "내 속 <em>곧 내 육신에</em> 선한 것이 거하지 아니하는 줄을 아노니." 선한 것의 부재는 <span class="gw">σάρξ</span>(육신)에 한정되며, 22절의 "속사람"은 하나님의 법을 즐거워한다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">τίς με ῥύσεται</div>
+      <div class="eyebrow">7:21–25</div>
+      <h2>5. 두 법의 전쟁</h2>
+      <div class="gloss">티스 메 뤼세타이 — 누가 나를 건져내랴</div>
+    </div>
+
+    <div class="vs" id="v2123" data-verses="21,22,23">
+      <span class="ref">7:21–23 — 네 개의 "법"</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">21</span>그러므로 내가 한 법을 깨달았노니 곧 선을 행하기 원하는 나에게 악이 함께 있는 것이로다 <span class="vn">22</span>내 속사람으로는 하나님의 법을 즐거워하되 <span class="vn">23</span>내 지체 속에서 한 다른 법이 내 마음의 법과 싸워 내 지체 속에 있는 죄의 법으로 나를 사로잡는 것을 보는도다</p>
+      <p>이 세 절에서 <span class="gw">νόμος</span>가 여러 번, 서로 다른 뜻으로 쓰인다. 21절의 "한 법"은 <em>원리·법칙</em>에 가깝고, 22절의 "하나님의 법"은 토라이며, 23절의 "내 지체 속에서 한 다른 법"과 "죄의 법"은 죄의 지배 원리다. 3:27의 "믿음의 법"에서 이미 나타난 이 낱말의 폭이 여기서 최대로 벌어진다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 23절의 군사 이미지를 살린다. "내 지체 속에서 한 다른 법이 내 마음의 법과 <b>전쟁을 벌여</b> 내 지체 속에 있는 죄의 법으로 나를 <b>포로로 삼는</b> 것을 보는도다." 싸움과 포로됨이 함께 놓인다는 점이 중요하다. 저항 없는 예속이 아니라 <em>저항하는 중의 패배</em>다.</p>
+      <p>22절의 "속사람"(<span class="gw">ὁ ἔσω ἄνθρωπος</span>)은 고린도후서 4:16과 에베소서 3:16에도 나오며, 두 곳 모두 신자를 가리킨다. 이 어휘가 위 쟁점의 ①을 지지하는 근거로 자주 인용된다.</p>
+    </div>
+
+    <div class="vs" id="v2425" data-verses="24,25">
+      <span class="ref">7:24–25 — 부르짖음과 감사</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">24</span>오호라 나는 곤고한 사람이로다 이 사망의 몸에서 누가 나를 건져내랴 <span class="vn">25</span>우리 주 예수 그리스도로 말미암아 하나님께 감사하리로다 그런즉 내 자신이 마음으로는 하나님의 법을 육신으로는 죄의 법을 섬기노라</p>
+      <p><span class="gw">ταλαίπωρος ἐγὼ ἄνθρωπος· τίς με ῥύσεται ἐκ τοῦ σώματος τοῦ θανάτου τούτου;</span> "이 사망의 몸"은 죽어 가는 육체 자체를 가리킬 수도, 사망이 지배하는 실존 전체를 가리킬 수도 있다. 6:6의 "죄의 몸"과 8:10의 "몸은 죄로 말미암아 죽은 것이나"가 같은 어휘 계열에 놓인다.</p>
+      <div class="note"><span class="tt">절망인가 전투인가</span><span class="c x">C</span> Cranfield는 24–25절을 <b>절망이 아니라</b> 가혹하고 집요한 전쟁의 실제 고뇌로 읽는다. 이 마지막 단락에는 다섯 가지가 함께 표현되어 붙들려 있다. 그 고뇌, 최종적 건짐을 향한 간절한 열망, 하나님을 향한 감사에 찬 확신, 하나님의 법을 향한 진실한 헌신, 그리고 지속되는 죄성에 대한 정직한 인정이다. &nbsp; 그리고 그는 바울이 14–23절을 <em>이런 방식으로</em> 매듭짓는다는 사실 자체가, 이 단락을 13절의 뒷받침으로만이 아니라 <b>믿음으로 의롭게 된 사람에게 약속된 삶을 서술하는 데 없어서는 안 될 요소</b>로 보고 있다는 표지라고 읽는다.</div>
+      <p>25절의 순서가 오래 논란이 되었다. 감사("우리 주 예수 그리스도로 말미암아 하나님께 감사하리로다")가 먼저 오고, 그 뒤에 다시 갈등의 요약("내 자신이 마음으로는 하나님의 법을 육신으로는 죄의 법을 섬기노라")이 온다. 해방을 선언한 뒤 왜 다시 분열로 돌아가는가. 일부 학자가 후반절을 필사자의 삽입이나 위치 착오로 보아 24절 앞으로 옮기자고 제안했으나, 사본 증거는 현재 순서를 지지한다.</p>
+      <div class="caveat"><span class="tt">7:25b를 어떻게 읽는가</span>
+      ① <b>요약으로 읽기</b> — 25b가 14–24절 전체를 <em>되짚는</em> 요약이며, 새 진술이 아니다. 감사 뒤에 놓인 것은 논증의 정리일 뿐이다. &nbsp;
+      ② <b>지속되는 긴장으로 읽기</b> — 건짐이 약속되었으되 아직 완성되지 않았으므로, 25b는 <em>이미와 아직</em> 사이의 현재를 그대로 기록한다. <span class="c x">C</span> Cranfield가 7:14–25와 8장이 <b>서로에게 필수적이며 어느 하나만 따로 읽으면 그리스도인의 삶에 관한 참된 그림이 되지 못한다</b>고 말하는 것이 이 노선이다. &nbsp;
+      ③ <b>본문 재배치</b> — 25b를 23절 뒤로 옮기자는 제안. 사본 근거가 없어 소수설에 머문다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 7장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">7:1–6</td><td>롬 6:14; 5:20</td><td>율법이 악인가라는 오해의 출처</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">7:4</td><td>롬 6:3–11; 갈 2:19</td><td>그리스도의 몸으로 죽음 — 연합</td><td>본문</td></tr>
+        <tr><td class="head">7:6</td><td>롬 2:29; 8:2·4; 고후 3:6</td><td>영의 새로움과 조문의 묵음</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">7:7</td><td>출 20:17; 신 5:21</td><td>"탐내지 말라" — 내면을 겨눈 계명</td><td>NA28 난외</td></tr>
+        <tr><td class="head">7:7</td><td>롬 3:20; 5:13·20</td><td>율법으로 죄를 깨달음</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:8–11</td><td>창 3:1–19</td><td>계명이 기회가 된 서사</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">7:10</td><td>레 18:5; 롬 10:5; 갈 3:12</td><td>"행하면 살리라"의 역전</td><td>NA28 난외</td></tr>
+        <tr><td class="head">7:14</td><td>롬 6:17–18</td><td>"죄 아래 팔림"과 "죄에서 해방됨"의 충돌</td><td>본문</td></tr>
+        <tr><td class="head">7:17·20</td><td>롬 8:9·11</td><td>내주하는 죄와 내주하시는 성령(<span class="gw">οἰκέω</span>)</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">7:22</td><td>고후 4:16; 엡 3:16</td><td>속사람</td><td>NA28 난외</td></tr>
+        <tr><td class="head">7:23</td><td>갈 5:17; 약 4:1; 벧전 2:11</td><td>지체 속의 싸움</td><td>NA28 난외</td></tr>
+        <tr><td class="head">7:24</td><td>롬 6:6; 8:10·23</td><td>사망의 몸</td><td>본문</td></tr>
+        <tr><td class="head">7:25</td><td>롬 8:1–4</td><td>율법이 하지 못한 일을 하나님이 하심</td><td><span class="c x">S</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 율법을 변호하는 장</h3>
+    <p>7장의 표면 주제는 인간의 내면이 아니라 <em>율법의 명예</em>다. 5:20과 6:14가 남긴 오해, 곧 율법이 악이라는 추론을 바울은 두 번의 <span class="gw">μὴ γένοιτο</span>로 물리친다(7:7·13). 그리고 12절에서 판결을 낸다. 율법은 거룩하고 계명도 거룩하고 의로우며 선하다. <span class="c x">C</span> Cranfield의 정식대로, 율법이 죄에게 <b>효과적으로 이용당했다</b>는 인정과 율법 자체는 하나님의 법이라는 <b>근본 진리</b>가 함께 서야 한다.</p>
+
+    <h3>② 죄의 전술</h3>
+    <p>8절의 <span class="gw">ἀφορμή</span>("기회")가 이 장의 죄론을 압축한다. 죄는 율법을 무시하지 않고 <em>이용한다</em>. 계명이 금하는 바로 그 지점을 발판 삼아 욕망을 조직한다. <span class="c x">C</span> Cranfield가 창세기 3장을 배경으로 읽는 것이 이 구조를 드러낸다. 보존을 위해 주어진 계명이 파멸의 통로가 될 수 있다는 것이며, 그 전환의 주체는 계명이 아니라 뱀이다.</p>
+
+    <h3>③ 그럼에도 목적은 이루어진다</h3>
+    <p>13절이 역설을 한 걸음 더 밀고 간다. 죄가 율법을 이용한 그 일이 오히려 <strong>율법을 주신 목적을 성취한다</strong>. 죄가 죄로 드러나고, 그 죄됨이 극대화된다. 3:20의 "율법으로는 죄를 깨달음이니라"가 여기서 완성된다. 율법은 구원의 길이 아니지만 <em>진단의 도구</em>로서 실패하지 않는다.</p>
+
+    <h3>④ "나"를 둘러싼 논쟁이 왜 신학적인가</h3>
+    <p>이 물음은 주해의 세부가 아니라 <em>성화 이해 전체</em>를 가른다. <span class="c x">C</span> Cranfield처럼 읽으면 그리스도인의 삶은 갈등이 <b>깊어지는</b> 삶이 된다. 성령으로 새로워질수록 죄의 잔존 권세에 더 민감해지기 때문이다. ②로 읽으면 갈등은 회심 이전에 속하고 8장이 그 종결을 선포한다. ③ <span class="c x">S</span> Stott처럼 읽으면 초점이 인물에서 <em>율법의 무능</em>으로 옮겨간다. ⑤로 읽으면 6장의 신분과 7장의 경험이 두 시대의 겹침 속에서 동시에 참이 된다.</p>
+
+    <h3>⑤ 내주하는 죄, 내주하시는 성령</h3>
+    <p>같은 동사 <span class="gw">οἰκέω</span>가 7:17·20에서 죄에게, 8:9·11에서 성령에게 쓰인다. 이 어휘의 대응이 두 장의 관계를 결정한다. 7장의 진단이 정확할수록 8장의 처방이 필요해진다. <span class="c x">S</span> Stott의 정리대로 <b>내주하는 죄의 해답은 내주하시는 성령</b>이며, 그 성령이 7장에서는 6절 외에 침묵한다는 사실 자체가 이 장의 성격을 말해 준다.</p>
+
+    <h3>⑥ 부르짖음이 감사로</h3>
+    <p>24절과 25a절의 이음매가 이 장에서 가장 빠른 전환이다. "누가 나를 건져내랴"는 물음이 곧바로 "우리 주 예수 그리스도로 말미암아 하나님께 감사하리로다"로 넘어간다. 물음에 <em>답</em>이 아니라 <em>감사</em>가 온다는 점이 중요하다. 건져낼 이가 이미 있기 때문이다. <span class="c x">C</span> Cranfield가 이 단락을 절망이 아니라 <b>전쟁의 고뇌</b>로 읽는 근거가 여기 있다.</p>
+
+    <h3>⑦ 8장은 7장을 지우지 않는다</h3>
+    <p><span class="c x">C</span> Cranfield의 가장 무게 있는 진술이 이것이다. <strong>7:14–25와 8장은 서로에게 필수적이며, 어느 하나만 따로 읽으면 그리스도인의 삶에 관한 참된 그림이 되지 못한다.</strong> 7장만 읽으면 패배주의가 되고, 8장만 읽으면 승리주의가 된다. 25b가 감사 뒤에 남는 것도 그래서다. 해방은 선언되었고, 전투는 계속된다.</p>
+
+    <div class="back"><a href="./ch06.html">← 6장</a> · <a href="./ch08.html">8장 →</a> · <a href="./overview.html">종합 연구</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 7장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988)·Kruse(PNTC 2012)·Cranfield(<i>Shorter</i>)·Stott(BST) 직접 확인분. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 3장 심층 연구 — 모두 죄 아래, 이제는 하나님의 의</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="3" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch03.html">성경 연구</a></div>
+  <div class="brand">로마서 3장 심층 연구</div>
+  <div class="brand-sub">모두 죄 아래, 이제는 하나님의 의</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html">2</a><a href="ch03.html" aria-current="page">3</a><a href="ch04.html">4</a>
+    <a href="ch05.html">5</a><a href="ch06.html">6</a><a class="off" href="#">7</a><a class="off" href="#">8</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 유대인의 나음 (3:1–8)</a>
+  <a class="lv1" href="#s2">2. 다 죄 아래 (3:9–18)</a>
+  <a class="lv1" href="#s3">3. 모든 입을 막고 (3:19–20)</a>
+  <a class="lv1" href="#s4">4. 이제는 (3:21–26)</a>
+  <a class="lv1" href="#s5">5. 자랑의 배제 (3:27–31)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">Νυνὶ δὲ χωρὶς νόμου δικαιοσύνη θεοῦ πεφανέρωται</div>
+    <h1>로마서 3장 · 모두 죄 아래, 이제는 하나님의 의</h1>
+    <p class="sub">1:18부터 쌓아 온 고발이 모든 입을 막는 선고로 닫히고, 한 낱말 "이제는"이 편지의 방향을 돌려세운다.</p>
+    <p class="meta">3:1–8 하나님의 미쁘심 · 3:9–20 죄 아래 · 3:21–26 화목제물 · 3:27–31 믿음의 법 · Moo·Dunn·Gaventa 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c b">J</span> Jewett Herm.</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">고발의 종결과 논증의 전환이 한 장 안에 있다.</div>
+    </div>
+    <p>3장은 성격이 다른 두 덩어리를 담는다. 앞부분(3:1–20)은 1:18에서 시작된 고발을 마무리하고, 뒷부분(3:21–31)은 1:16–17의 주제 선언을 본격적으로 펴낸다. 그 경계에 <span class="gw">Νυνὶ δὲ</span>("이제는", 3:21)가 놓인다.</p>
+    <p><span class="c f">M</span> 3:21–26은 핵심 신학 용어가 밀집한 대목이다. "하나님의 의"(<span class="gw">δικαιοσύνη θεοῦ</span>)가 네 번 나오고(21·22·25·26절, 뒤 두 번은 "자기의 의로우심"), 동사 "의롭다 하다"(<span class="gw">δικαιόω</span>)가 두 번(24·26절), 형용사 "의로운"(<span class="gw">δίκαιος</span>)이 한 번(26절) 쓰인다. 이 의가 필요한 이유를 1:18–3:20이 상세히 논증했으니, 이제 바울은 그 의가 <em>어떻게</em> 죄인에게 닿는지를 설명할 준비를 마쳤다.</p>
+    <p><span class="c x">K</span> Kruse는 3:1–20을 "유대인의 불신이 하나님의 신실하심을 무효로 만들지 못한다"로 묶고, 그 안을 <em>다섯 개의 수사 의문</em>(3:1–9)과 성경의 확증(3:10–20)으로 나눈다. <span class="c x">S</span> Stott은 3:9–20을 "온 인류"로 이름 붙여, 1:18부터 이어진 세 겹의 고발(이방 사회 → 도덕주의자 → 유대인)이 여기서 하나로 합쳐진다고 본다.</p>
+    <table>
+      <caption>표 1. 3장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th><th>기능</th></tr></thead>
+      <tbody>
+        <tr><td class="head">문답</td><td>3:1–8</td><td>유대인의 나음 · 하나님의 미쁘심 · 예상 반론</td><td>2장이 남긴 물음 처리</td></tr>
+        <tr><td class="head">선언</td><td>3:9–18</td><td>다 죄 아래 · 구약 연쇄 인용</td><td>고발의 성경적 확증</td></tr>
+        <tr><td class="head">판결</td><td>3:19–20</td><td>모든 입을 막고 · 율법의 행위로는</td><td>1:18–3:18의 결론</td></tr>
+        <tr><td class="head">전환</td><td>3:21–26</td><td>이제는 · 화목제물 · 자기도 의로우시며</td><td>주제 선언의 전개</td></tr>
+        <tr><td class="head">귀결</td><td>3:27–31</td><td>자랑의 배제 · 한 분 하나님 · 율법을 세움</td><td>함의 정리</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">τὰ λόγια τοῦ θεοῦ</div>
+      <div class="eyebrow">3:1–8</div>
+      <h2>1. 유대인의 나음</h2>
+      <div class="gloss">타 로기아 투 테우 — 하나님의 말씀을 맡았음이니라</div>
+    </div>
+
+    <div class="vs" id="v12" data-verses="1,2">
+      <span class="ref">3:1–2 — 물음과 첫 대답</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>그런즉 유대인의 나음이 무엇이며 할례의 유익이 무엇이냐 <span class="vn">2</span>범사에 많으니 우선은 그들이 하나님의 말씀을 맡았음이니라</p>
+      <p>2:28–29가 표면적 유대인을 유대인이 아니라고 했으니, 반론이 즉시 따라온다. <span class="gw">Τί οὖν τὸ περισσὸν τοῦ Ἰουδαίου</span>, 곧 "그런즉 유대인의 나음이 무엇이며". 바울의 대답은 단호하다. <strong>범사에 많다</strong>. 그리고 그 첫째로 <span class="gw">ἐπιστεύθησαν τὰ λόγια τοῦ θεοῦ</span>, "그들이 하나님의 말씀을 맡았음"을 든다.</p>
+      <p><span class="c x">S</span> Stott은 이 "하나님의 말씀"이 계명이나 약속에 그치지 않고 <b>그것을 담고 있는 구약 성경 전체</b>이며 이스라엘의 보관에 맡겨진 것이라고 본다. 하나님의 특별 계시를 지키는 자가 된다는 것은 엄청난 특권이자 책임이었고, 그것은 "다른 어느 민족에게도" 주어지지 않았다.</p>
+      <div class="caveat"><span class="tt">쟁점 — "첫째는"은 목록의 시작인가</span>많은 주석가는 3:2의 <span class="gw">πρῶτον</span>("첫째는")이 더 긴 열거를 의도했으나 바울이 도중에 끊고 유대인의 이점 목록을 9:3–5로 미룬 것이라 본다. <span class="c b">J</span> Jewett은 이 열거 이론이 <span class="gw">ἐπιστεύθησαν</span>("맡겨졌다")이 <span class="gw">τὰ λόγια τοῦ θεοῦ</span>의 의미를 <em>규정하고 한정한다</em>는 점을 놓친다고 반박한다(Kruse 재인용). 곧 "첫째"는 순서의 첫 항목이 아니라 <b>무엇보다도</b>라는 뜻일 수 있다.</div>
+      <p><span class="gw">λόγια</span>는 "말씀들", 특히 <em>신적 발언</em>을 가리키는 낱말이다. 동사 <span class="gw">ἐπιστεύθησαν</span>은 수동태로 "맡겨졌다"는 뜻이며, 어근이 <span class="gw">πίστις</span>(믿음·신실함)와 같다. 맡김과 신실함이 같은 어근에서 나온다는 사실이 다음 절의 논증을 준비한다.</p>
+      <p><span class="c x">C</span> Cranfield는 이 물음과 답이 2:25–29를 읽는 열쇠임을 강조한다. 바울이 3:1의 물음에 3:2에서 "범사에 많으니"로 답하고 3:4에서 이스라엘의 불신이 하나님의 신실하심을 무효로 만든다는 제안을 단호히 물리치므로, 앞 장의 "표면적 유대인" 논의를 <b>할례의 무효화</b>로 읽어서는 안 된다는 것이다.</p>
+      <p><span class="c h">G</span> Gaventa는 이 대목을 유대인과 이방인의 <em>역사의 차이</em>로 읽는다. 이방인은 율법을 선물로 받지 못했고(2:14) 성경을 맡지도 못했으나(3:2), 그리스도 예수 안에서 행하신 하나님의 행동은 두 무리가 같은 자리에 이르렀음을 드러낸다. 둘 다 "죄 아래" 있다(3:9).</p>
+    </div>
+
+    <div class="vs" id="v34" data-verses="3,4">
+      <span class="ref">3:3–4 — 사람의 불신과 하나님의 미쁘심</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">3</span>어떤 자들이 믿지 아니하였으면 어찌하리요 그 믿지 아니함이 하나님의 미쁘심을 폐하겠느냐 <span class="vn">4</span>그럴 수 없느니라 사람은 다 거짓되되 오직 하나님은 참되시다 할지어다 기록된 바 주께서 주의 말씀에 의롭다 함을 얻으시고 판단 받으실 때에 이기려 하심이라 함과 같으니라</p>
+      <p><span class="gw">μὴ ἡ ἀπιστία αὐτῶν τὴν πίστιν τοῦ θεοῦ καταργήσει;</span> 어근의 대비가 선명하다. 사람의 <span class="gw">ἀπιστία</span>(믿지 아니함)가 하나님의 <span class="gw">πίστις</span>(미쁘심)를 무효로 만들 수 있느냐는 물음이다. 여기서 <span class="gw">πίστις</span>는 분명히 <strong>신실함</strong>을 뜻하며, 이 낱말이 "믿음"과 "신실함" 사이를 오갈 수 있다는 사실이 뒤의 3:22 논쟁에서 다시 문제가 된다.</p>
+      <p>대답은 <span class="gw">μὴ γένοιτο</span>("그럴 수 없느니라")다. <span class="c x">C</span> Cranfield는 이 표현이 로마서에서 언제나 <em>물음 뒤에</em> 온다는 점을 지적하고(3:6·31; 6:2·15; 7:7·13; 9:14; 11:1·11), 이어지는 "하나님은 참되시다 할지어다"의 헬라어 명령형이 여기서 <b>선언적 힘</b>을 지닌다고 본다. 전적으로 그릇된 제안을 단호히 물리친 뒤 참된 상황을 힘주어 진술하는 방식이라는 것이다. 그리고 "참되심"에는 <em>약속에 대한 하나님의 신실하심</em>이 특히 두드러진다.</p>
+      <p><span class="c x">S</span> Stott은 칼뱅의 평가를 전한다. "하나님은 참되시다 할지어다"라는 첫 명제는 <b>"모든 그리스도교 철학의 제일 공리"</b>이며, 뒤따르는 "사람은 다 거짓되다"는 시편 116:11의 인용이다. 사람의 불신실이 하나님의 신실하심을 무너뜨리기는커녕, 설령 한 사람도 남김없이 거짓되다 해도 하나님은 여전히 참되시다.</p>
+      <p>이 강한 부정은 로마서에서 열 번 나오며 디아트리베 문체의 표지다. 이어 시편 51:4가 인용되어, 하나님이 판단받는 자리에 서시더라도 의롭다 인정받으신다는 확언으로 닫힌다.</p>
+    </div>
+
+    <div class="vs" id="v58" data-verses="5,6,7,8">
+      <span class="ref">3:5–8 — 예상 반론과 그 정죄</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">5</span>그러나 우리 불의가 하나님의 의를 드러나게 하면 무슨 말 하리요 [내가 사람의 말하는 대로 말하노니] 진노를 내리시는 하나님이 불의하시냐 <span class="vn">6</span>결코 그렇지 아니하니라 만일 그러하면 하나님께서 어찌 세상을 심판하시리요 <span class="vn">7</span>그러나 나의 거짓말로 하나님의 참되심이 더 풍성하여 그의 영광이 되었다면 어찌 내가 죄인처럼 심판을 받으리요 <span class="vn">8</span>또는 그러면 선을 이루기 위하여 악을 행하자 하지 않겠느냐 어떤 이들이 이렇게 비방하여 우리가 이런 말을 한다고 하니 그들은 정죄 받는 것이 마땅하니라</p>
+      <p>반론이 논리를 극단으로 민다. 우리 불의가 하나님의 의를 드러낸다면 진노를 내리시는 하나님이 불의하신 것 아니냐, 나아가 <strong>선을 이루기 위하여 악을 행하자</strong> 하지 않겠느냐. <span class="c f">M</span> 바울은 8절에서 이 말이 실제로 자기에게 씌워진 혐의임을 드러낸다. 유대주의자들과의 싸움이 그에게 "반(反)율법"이라는 평판을 안겼고, 그 소문이 로마에도 닿았을 수 있다. 그렇다면 3:8은 편지 목적의 한 단서가 된다. 바울은 자기 복음을 소개하면서 동시에 그 소문을 무력화해야 했다.</p>
+      <p>5절의 <span class="gw">κατὰ ἄνθρωπον λέγω</span>("내가 사람의 말하는 대로 말하노니", 개역개정은 대괄호로 묶음)는 바울이 그 논리를 자기 것이 아니라 <em>인용된 반론</em>으로 다루고 있음을 표시한다. 그의 답은 반박이라기보다 판결이다. "그들은 정죄 받는 것이 마땅하니라."</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">ὑφ᾽ ἁμαρτίαν</div>
+      <div class="eyebrow">3:9–18</div>
+      <h2>2. 다 죄 아래</h2>
+      <div class="gloss">휘프 하마르티안 — 죄 아래에</div>
+    </div>
+
+    <div class="vs" id="v9" data-verses="9">
+      <span class="ref">3:9 — 선언</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">9</span>그러면 어떠하냐 우리는 나으냐 결코 아니라 유대인이나 헬라인이나 다 죄 아래에 있다고 우리가 이미 선언하였느니라</p>
+      <p><span class="gw">Τί οὖν; προεχόμεθα; οὐ πάντως· προῃτιασάμεθα γὰρ Ἰουδαίους τε καὶ Ἕλληνας πάντας ὑφ᾽ ἁμαρτίαν εἶναι</span>. 이 절은 그리스어 난제로 유명하다. <span class="gw">προεχόμεθα</span>는 형태가 중간태·수동태여서 "우리가 나으냐", "우리가 뒤지느냐", "우리가 변명거리를 내세우느냐" 등으로 읽힐 수 있고, 사본 전승에도 이형이 있다. 개역개정은 "우리는 나으냐"로 옮겼다.</p>
+      <div class="caveat"><span class="tt">쟁점 — <span class="gw">προεχόμεθα</span>를 어떻게 읽는가</span>
+      ① <b>능동 "우리가 나으냐"</b> — 개역개정과 NIV의 선택. <span class="c x">S</span> Stott은 이 동사의 형태와 의미 <em>양쪽에</em> 상당한 불확실성이 있음을 인정하면서도 이 번역을 받아들인다. &nbsp;
+      ② <b>수동 "우리가 뒤지느냐"</b> — Fitzmyer가 선호하는 읽기로, "우리(유대인)가 남들에게 뒤지느냐? 결코 아니라!"가 된다. 3:1–8의 논증 뒤에 어울리며 유대인 대화 상대와의 대화에 <em>절정의 물음</em>을 제공한다는 것이다. <span class="c b">J</span> Jewett도 "우리가 뒤지느냐, 곧 우리가 (그들보다) 더 나쁜 처지에 있느냐?"로 옮기고, 이 물음에 대한 "결코 아니라"가 <b>어느 집단도 유리하지 않다</b>는 논지를 진전시킨다고 본다(둘 다 Kruse 재인용). &nbsp;
+      ③ <b>중간태 "우리가 변명거리를 내세우느냐"</b> — 사본 전승에도 이형이 있다. &nbsp;
+      <span class="c x">S</span> Stott은 여기서 생기는 겉보기 모순을 정면으로 꺼낸다. 3:1에서 "유대인의 나음이 무엇이냐" 묻고 "범사에 많으니"라 답한 바울이, 몇 절 뒤 같은 물음에 "결코 아니라"로 답하는 듯 보인다. 해소의 열쇠는 물음의 <em>층위</em>가 다르다는 데 있다. 맡겨진 것(2절)은 많으나 <b>심판 앞의 처지</b>(9절)는 다르지 않다.</div>
+      <p>중요한 것은 결론의 어법이다. 바울은 사람들이 <em>죄를 지었다</em>고 하지 않고 <strong>죄 아래에 있다</strong>(<span class="gw">ὑφ᾽ ἁμαρτίαν</span>)고 쓴다. 전치사 <span class="gw">ὑπό</span>가 지배·예속의 관계를 만든다.</p>
+      <p><span class="c f">M</span> Moo는 이를 "죄의 <em>권능</em> 아래" 있음으로 읽고, 모든 사람이 그 권능 아래 있기에 오직 복음 안에 풀린 하나님의 능력만이 그들을 건질 수 있다고 정리한다. <span class="c h">G</span> Gaventa는 여기서 더 나아간다. 바울은 1:17에서 그 능력이 왜 필요한지를 설명하기 시작해, 먼저 유대인과 이방인이 모두 <strong>죄에게 사로잡혀</strong> 있음을 확립하고(3:9), 그 사로잡힘을 마침내 아담과 온 세계를 뒤덮은 죄와 사망의 권세로 추적한다(5:12–21). 그리스도의 죽음과 부활은 그 권세들의 패배와 다름없다(6:12–21).</p>
+    </div>
+
+    <div class="vs" id="v1018" data-verses="10,11,12,13,14,15,16,17,18">
+      <span class="ref">3:10–18 — 여섯 본문의 연쇄</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">10</span>기록된 바 의인은 없나니 하나도 없으며 <span class="vn">11</span>깨닫는 자도 없고 하나님을 찾는 자도 없고 <span class="vn">12</span>다 치우쳐 함께 무익하게 되고 선을 행하는 자는 없나니 하나도 없도다 <span class="vn">13</span>그들의 목구멍은 열린 무덤이요 그 혀로는 속임을 일삼으며 그 입술에는 독사의 독이 있고 <span class="vn">14</span>그 입에는 저주와 악독이 가득하고 <span class="vn">15</span>그 발은 피 흘리는 데 빠른지라 <span class="vn">16</span>파멸과 고생이 그 길에 있어 <span class="vn">17</span>평강의 길을 알지 못하였고 <span class="vn">18</span>그들의 눈 앞에 하나님을 두려워함이 없느니라 함과 같으니라</p>
+      <p><span class="c x">C</span> Cranfield는 이 연쇄 인용의 논리적 힘이 어디 있는지 짚는다. 유대인은 인간의 죄에 대한 하나님의 정죄에서 자신이 예외라고 여기기는커녕 그 정죄가 자신을 <b>분명히 포함한다</b>고 받아들여야 하는데, 성경이 말하는 바는 무엇보다 먼저 <em>그 성경을 가진 백성</em>에 관한 것이기 때문이다. 그리고 유대인이 예외가 아니라면 온 인류가 하나님 앞에 유죄로 설 수밖에 없다.</p>
+      <p><span class="c x">S</span> Stott은 이 목록이 죄의 <b>편재성</b>을 가르친다고 본다. 죄가 인간 구성의 모든 부분, 곧 지성·감정·성·양심·의지에 미치며, 13–17절이 신체 부위를 <em>의도적으로 열거하는</em> 방식이 그것을 드러낸다. 그에게 죄의 궁극적 정체는 <b>자기 신격화</b>, 곧 하나님께만 속한 보좌를 차지하려는 무모한 결단이다.</p>
+      <p><span class="c x">K</span> Kruse는 이 대목에 "연쇄 인용에서의 바울의 성경 사용"이라는 보론을 따로 둔다.</p>
+      <p>선언 뒤에 성경의 증언이 이어진다. 서로 다른 본문을 꿰어 하나의 고발장으로 만드는 <strong>연쇄 인용</strong>이다. 구조는 신체 기관을 따라 내려간다. 총론(10–12절) 다음에 목구멍·혀·입술(13절), 입(14절), 발(15–17절)이 오고, 마지막으로 눈(18절)에서 멈춘다.</p>
+      <table>
+        <caption>표 2. 3:10–18의 출처 (NA28 난외 기준)</caption>
+        <thead><tr><th>절</th><th>출처</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td class="head">3:10–12</td><td>시 14:1–3 (= 시 53:1–3)</td><td>의인은 없나니 하나도 없으며</td></tr>
+          <tr><td class="head">3:13a–b</td><td>시 5:9</td><td>열린 무덤 같은 목구멍, 속임을 일삼는 혀</td></tr>
+          <tr><td class="head">3:13c</td><td>시 140:3</td><td>입술의 독사의 독</td></tr>
+          <tr><td class="head">3:14</td><td>시 10:7</td><td>저주와 악독이 가득한 입</td></tr>
+          <tr><td class="head">3:15–17</td><td>사 59:7–8 (참조 잠 1:16)</td><td>피 흘리는 데 빠른 발, 평강의 길</td></tr>
+          <tr><td class="head">3:18</td><td>시 36:1</td><td>눈 앞에 하나님을 두려워함이 없음</td></tr>
+        </tbody>
+      </table>
+      <p>마지막 인용이 배치의 의도를 드러낸다. 목록은 행위의 나열로 시작해 <strong>"눈 앞에 하나님을 두려워함이 없느니라"</strong>로 끝난다. 문제의 뿌리가 행위가 아니라 하나님을 향한 시선의 부재에 있다는 것이며, 이는 1:21의 "하나님을 알되 하나님을 영화롭게도 아니하며"와 같은 지점을 가리킨다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">ἐξ ἔργων νόμου</div>
+      <div class="eyebrow">3:19–20</div>
+      <h2>3. 모든 입을 막고</h2>
+      <div class="gloss">엑스 에르곤 노무 — 율법의 행위로는</div>
+    </div>
+
+    <div class="vs" id="v19" data-verses="19">
+      <span class="ref">3:19 — 법정의 침묵</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">19</span>우리가 알거니와 무릇 율법이 말하는 바는 율법 아래에 있는 자들에게 말하는 것이니 이는 모든 입을 막고 온 세상으로 하나님의 심판 아래에 있게 하려 함이라</p>
+      <p><span class="gw">ἵνα πᾶν στόμα φραγῇ καὶ ὑπόδικος γένηται πᾶς ὁ κόσμος τῷ θεῷ</span>. 두 낱말이 법정을 그린다. <span class="gw">φραγῇ</span>는 "막히다·봉해지다", <span class="gw">ὑπόδικος</span>는 "책임을 져야 하는·기소될 만한"이다. <span class="c f">M</span> "입을 막는다"는 표현은 고소에 대해 더 할 말이 없는 피고의 처지를 함의한다. 이 낱말은 성경에 다른 데서 나오지 않으나 성경 밖 헬라어에서 "책임이 있는·기소 가능한"의 뜻으로 쓰인다. 하나님은 모욕당하신 당사자이면서 동시에 증거를 저울질하고 판결을 내리는 재판장으로 그려진다.</p>
+      <p><span class="c x">S</span> Stott은 19절이 주석가들에게 수수께끼였다고 말하며 가장 그럴듯한 설명을 제시한다. 구약 인용의 연쇄를 읽는 유대인 독자는 그것이 <em>저 사악하고 무법한 이방인들</em>에게 적용된다고 여겼을 것이고, 하나님의 심판이 당연히 그들에게 임하리라 생각했을 것이다. 그런데 바울은 그들이 이미 아는 사실을 상기시킨다. 율법이 말하는 바는 <b>율법 아래 있는 자들에게</b> 말한다는 것이다.</p>
+      <p><span class="c x">K</span> Kruse도 같은 방향으로 읽는다. 율법 아래 있는 자들은 유대인이며, 바울이 "율법"에서 인용을 끌어온 목적은 <b>율법 아래 있는 자들의 자랑을 잠재우는 것</b>이다. 그리하여 유대인과 이방인을 아우른 온 세상이 자기 죄에 대해 하나님 앞에 책임을 지게 된다.</p>
+      <p>19절 전반부의 논리도 짚어야 한다. 율법이 말하는 바는 <strong>율법 아래에 있는 자들에게</strong> 말한다. 앞의 연쇄 인용이 대부분 시편과 이사야, 곧 이스라엘의 성경이므로, 그 고발은 무엇보다 그 성경을 가진 이들에게 먼저 향한다. 그런데 그 결과가 "온 세상"으로 확장된다. 특권을 가진 쪽이 유죄라면 예외는 없다.</p>
+    </div>
+
+    <div class="vs" id="v20" data-verses="20">
+      <span class="ref">3:20 — 율법의 행위와 죄를 깨달음</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">20</span>그러므로 율법의 행위로 그의 앞에 의롭다 하심을 얻을 육체가 없나니 율법으로는 죄를 깨달음이니라</p>
+      <p><span class="gw">διότι ἐξ ἔργων νόμου οὐ δικαιωθήσεται πᾶσα σὰρξ ἐνώπιον αὐτοῦ, διὰ γὰρ νόμου ἐπίγνωσις ἁμαρτίας</span>. 전반부는 시편 143:2를 되울리되, 바울이 <strong>"율법의 행위로"</strong>를 더한다.</p>
+      <h4>쟁점 — <span class="gw">ἔργα νόμου</span>는 무엇인가</h4>
+      <p><span class="c x">K</span> Kruse는 이 어구에 "율법의 행위"라는 보론을 따로 두어, 그것이 로마서 해석의 독립된 문제임을 형식으로 표시한다.</p>
+      <p>이 어구가 새 관점 논쟁의 최전선이다. <span class="c t">D</span> Dunn은 이를 유대인의 정체성과 언약적 신실함을 유지하는 실천, 곧 <strong>정체성 표지</strong>로 읽는다. 유대인 그리스도인들에게 그런 "율법의 행위"는 원칙의 문제였고 그리스도를 믿는 믿음과 상충하지 않는 것으로 여겨졌다. 그러나 바울에게는 그리스도를 믿는 믿음의 원리가 더 급진적으로 적용되어야 했다. 할례만이 아니라 그런 유대적 관행들이 믿음과 상충하는데, 이방인이 복음을 받아들이는 데 <em>추가 요건</em>을 얹는 결과가 되기 때문이다.</p>
+      <p><span class="c f">M</span> Moo는 이 해석이 물음을 한 단계 뒤로 미룰 뿐이라고 반박한다. 율법의 행위가 정체성 표지이고 그것이 대표하는 언약이 의롭게 하지 못한다면, <em>왜</em> 그 언약은 의롭게 하지 못하는가. 바울은 그 이유를 2:1–3:19에서 이미 보였다. 율법은 그 "율법" 언약을 통해 칭의를 확보할 만큼 <strong>행해질 수 없다</strong>. 그러므로 율법의 행위가 의롭게 하지 못한다는 부정의 밑바닥 논리는 구속사나 사회적 장벽에 대한 관심이 아니라 <em>인간의 조건 자체</em>에 뿌리내린다. <span class="c f">M</span> 다만 그는 3:29–30의 논리(한 분 하나님이시니 칭의가 유대 민족에 국한될 수 없다)가 정체성 표지 해석을 지지할 수 있음도 인정하며, 율법이 칭의의 길이 아닌 이유가 <strong>배타적으로 유대적이기 때문이면서 동시에</strong> 지킬 수 없는 순종을 요구하기 때문이라고 정리한다.</p>
+      <p><span class="c x">C</span> Cranfield는 이 절의 전반부가 시편 143:2를 되울리되 바울이 <b>"율법의 행위로"</b>를 더했다는 점에 주목한다. 시편의 원래 진술은 이미 보편적이었고("주의 눈 앞에는 의로운 인생이 하나도 없나이다"), 바울의 추가는 그 보편성이 <em>어느 경로로도</em> 뚫리지 않음을 못 박는다.</p>
+      <p>후반부 <span class="gw">διὰ γὰρ νόμου ἐπίγνωσις ἁμαρτίας</span>가 율법의 적극적 기능을 남겨 둔다. 율법은 의롭게 하지 못하나 <em>죄를 깨닫게</em> 한다. 이 실마리가 7:7의 "율법으로 말미암지 않고는 내가 죄를 알지 못하였으니"로 이어진다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">ἱλαστήριον</div>
+      <div class="eyebrow">3:21–26</div>
+      <h2>4. 이제는</h2>
+      <div class="gloss">힐라스테리온 — 화목제물로 세우셨으니</div>
+    </div>
+
+    <div class="vs" id="v2122" data-verses="21,22">
+      <span class="ref">3:21–22 — 율법 외에, 그러나 율법이 증언하는</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">21</span>이제는 율법 외에 하나님의 한 의가 나타났으니 율법과 선지자들에게 증거를 받은 것이라 <span class="vn">22</span>곧 예수 그리스도를 믿음으로 말미암아 모든 믿는 자에게 미치는 하나님의 의니 차별이 없느니라</p>
+      <p><span class="gw">Νυνὶ δὲ</span>. 이 두 낱말이 편지의 방향을 돌린다. 시간의 전환이면서 구속사의 전환이다. <span class="c f">M</span> 1:17의 동사가 현재형("나타나서")이었던 데 비해 3:21은 완료형 <span class="gw">πεφανέρωται</span>를 쓴다. 완료형은 하나님이 자기 의를 세우신 <strong>결정적 개입의 때로서 십자가</strong>에 주목하게 한다.</p>
+      <p>21절은 긴장을 품은 문장이다. 하나님의 의가 <span class="gw">χωρὶς νόμου</span>("율법 외에") 나타났으되, 동시에 <span class="gw">μαρτυρουμένη ὑπὸ τοῦ νόμου καὶ τῶν προφητῶν</span>("율법과 선지자들에게 증거를 받은") 것이다. 율법은 칭의의 <em>수단</em>에서 배제되지만 <em>증인</em>으로는 남는다. 4장 전체가 이 증언을 아브라함에게서 확인하는 작업이 된다.</p>
+      <p><span class="c x">L</span> Longenecker는 이 대목의 어휘 밀도를 지적한다. 21–26절에 "하나님의 의"가 네 번, 동사 "의롭다 하다"가 두 번, 형용사 "의로운"이 한 번 나와, 바울이 편지 전체에서 다룰 의(義) 어휘가 여기에 집중된다.</p>
+      <h4>쟁점 — <span class="gw">διὰ πίστεως Ἰησοῦ Χριστοῦ</span></h4>
+      <p>22절의 이 속격 구문이 20세기 후반 이래 가장 뜨거운 논쟁 가운데 하나다. 목적어적 속격으로 읽으면 <strong>"예수 그리스도를 믿는 믿음으로"</strong>(개역개정)가 되고, 주어적 속격으로 읽으면 <strong>"예수 그리스도의 신실하심으로"</strong>가 된다. 1:17의 "믿음에서 믿음으로"를 둘러싼 논쟁과 같은 뿌리다.</p>
+      <p>주어적 속격을 지지하는 쪽은 <span class="gw">πίστις</span>가 3:3에서 하나님의 <em>신실하심</em>을 뜻했다는 점, 그리고 뒤따르는 "모든 믿는 자에게"가 목적어적 속격으로 읽을 경우 동어반복이 된다는 점을 든다. <span class="c f">M</span> Moo는 반대편에 서서 문맥이 인간의 믿음을 가리킨다고 보며, 이는 1:17에서 그가 취한 입장과 일관된다. 어느 쪽을 택하든 절의 무게중심이 <strong>차별 없음</strong>(<span class="gw">οὐ γάρ ἐστιν διαστολή</span>)에 있다는 사실은 달라지지 않는다.</p>
+    </div>
+
+    <div class="vs" id="v2324" data-verses="23,24">
+      <span class="ref">3:23–24 — 모든 사람이, 값 없이</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">23</span>모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니 <span class="vn">24</span>그리스도 예수 안에 있는 속량으로 말미암아 하나님의 은혜로 값 없이 의롭다 하심을 얻은 자 되었느니라</p>
+      <p><span class="gw">πάντες γὰρ ἥμαρτον καὶ ὑστεροῦνται τῆς δόξης τοῦ θεοῦ</span>. 두 동사의 시제가 다르다. "죄를 범하였으매"는 부정과거로 완결된 사실을, "이르지 못하더니"는 현재형으로 지속되는 상태를 가리킨다. 사건과 상태가 나란히 놓인다.</p>
+      <p>24절의 세 낱말이 칭의의 문법을 정한다. <span class="gw">δωρεάν</span>(값 없이), <span class="gw">τῇ αὐτοῦ χάριτι</span>(그의 은혜로), <span class="gw">διὰ τῆς ἀπολυτρώσεως</span>(속량으로 말미암아)다. <span class="gw">ἀπολύτρωσις</span>는 값을 치르고 놓아 주는 행위를 가리키는 낱말로, 출애굽 전승과 노예 해방의 이미지를 함께 품는다. <span class="c f">M</span> 여기서 놓치지 말아야 할 것은 <strong>주도권이 하나님께 있다</strong>는 점이다. 속량의 과정을 시작하시는 분은 그리스도도 사람도 아닌 하나님이시다. P.&nbsp;T.&nbsp;Forsyth의 말대로 "그리스도의 십자가에서 첫째 행위자는 하나님이셨다"(Moo 재인용).</p>
+    </div>
+
+    <div class="vs" id="v2526" data-verses="25,26">
+      <span class="ref">3:25–26 — 화목제물, 그리고 하나님의 딜레마</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">25</span>이 예수를 하나님이 그의 피로써 믿음으로 말미암는 화목제물로 세우셨으니 이는 하나님께서 길이 참으시는 중에 전에 지은 죄를 간과하심으로 자기의 의로우심을 나타내려 하심이니 <span class="vn">26</span>곧 이 때에 자기의 의로우심을 나타내사 자기도 의로우시며 또한 예수 믿는 자를 의롭다 하려 하심이라</p>
+      <p><span class="gw">ὃν προέθετο ὁ θεὸς ἱλαστήριον διὰ [τῆς] πίστεως ἐν τῷ αὐτοῦ αἵματι</span>. 동사 <span class="gw">προέθετο</span>는 "공개적으로 내세우다·제시하다"는 뜻이며, 십자가가 사적인 거래가 아니라 <em>드러난 사건</em>임을 함의한다.</p>
+      <h4>쟁점 — <span class="gw">ἱλαστήριον</span>의 세 후보</h4>
+      <p>이 낱말은 로마서 해석사의 격전지다. 후보는 셋이다.</p>
+      <ul>
+        <li><strong>속죄소(시은좌)</strong> — 칠십인역에서 <span class="gw">ἱλαστήριον</span>은 언약궤 위 속죄소를 가리키는 표준 역어다. NA28 난외도 이 절에 레위기 16:13–15와 히브리서 9:5를 나란히 든다. 대속죄일에 피를 뿌리던 그 자리에 하나님이 <em>예수를</em> 두셨다는 읽기다.</li>
+        <li><strong>제거(expiation)</strong> — "죄를 씻어 냄"이다. <span class="c f">M</span> 칠십인역에서 이 낱말의 동족 동사는 목적어로 하나님이 아니라 <em>죄</em>를 취한다는 점이 근거이며, C.&nbsp;H.&nbsp;Dodd 등이 이 노선에서 "죄를 덮음·용서함"의 관념을 주장했다(RSV·NAB).</li>
+        <li><strong>화목(propitiation)</strong> — "진노를 누그러뜨림"이다. 개역개정의 "화목제물"이 이 계열에 가깝다. <span class="c f">M</span> Moo는 Dodd 계열의 언어학적 논증이 설득력이 없다고 보며, 신학적으로 진노 개념을 밀어내려는 반론(하나님을 변덕스럽고 성난 신으로 만든다는 우려)도 받아들이지 않는다. 1:18의 진노가 이미 이 편지의 논증 안에 있기 때문이다.</li>
+      </ul>
+      <div class="caveat"><span class="tt">Kruse의 정리 — 세 의미가 다 자리를 갖는가</span><span class="c x">K</span> Kruse는 세 후보를 이렇게 규정한다. <b>제거</b>는 죄의 씻어 냄을, <b>속죄소</b>는 해마다 대속죄일에 제물의 피를 바르던 <em>장소</em>를, <b>화목</b>은 진노의 제거를 가리킨다. 그리고 셋을 배타적 선택지로 두지 않는다. 그리스도의 죽음에 근거해 하나님이 죄를 씻어 내시므로 속죄에는 제거가 포함되고, 이 본문에 속죄소의 암시가 있을 가능성도 있으며, 그리스도의 죽음이 화목으로도 기능한다는 사실은 부정할 수 없다는 것이다. 로마서에서 하나님의 진노가 모든 경건하지 않음과 불의에 대해 계시되었기 때문이다.</div>
+      <div class="caveat"><span class="tt">Cranfield의 Dodd 반박</span><span class="c x">C</span> Dodd는 칠십인역에서 이 어군에 이교 용법의 <em>달램·유화</em> 관념이 사실상 남아 있지 않으며, 행위 주체가 사람일 때는 죄의 <b>제거</b>를, 하나님일 때는 은혜를 베푸시고 긍휼히 여기시며 용서하심을 뜻한다고 논증했다. &nbsp; Cranfield의 반론은 두 갈래다. ① 변덕스럽고 보복적이며 사람 쪽의 뇌물로 달래져야 하는 하나님의 진노 관념이 구약에 낯설다는 것은 사실이나, <b>모든 신적 진노 관념이 낯설다는 것은 결코 사실이 아니다</b>. Morris가 보였듯 Dodd는 그 낱말들이 나타나는 <em>문맥</em>에 충분히 주의하지 않았다. ② 그러므로 화목의 관념이 칠십인역의 이 어군에 전적으로 낯설다고 볼 수 없으며, 오히려 <b>진노를 돌이킴</b>이라는 관념이 성경 밖 헬라어에서와 마찬가지로 구약에서도 이 어군의 기본을 이룬다. 다만 구약 용법의 독특함이 둘 있다. 첫째, 하나님의 진노는 모든 인간의 진노와 달리 <em>온전히 의로우며</em> 비합리성·변덕·보복성의 흔적이 없다. 둘째, 그 의로운 진노를 사람에게서 돌이키는 과정에서 <b>주도권을 잡으시는 분이 하나님 자신</b>이다.</div>
+      <p><span class="c x">S</span> Stott은 24–26절의 세 낱말로 십자가 사건을 정리한다. <b>속량</b>(<span class="gw">ἀπολύτρωσις</span>), <b>화목제물</b>(<span class="gw">ἱλαστήριον</span>), <b>나타내심</b>(<span class="gw">ἔνδειξις</span>)이다. 셋 다 복음이 전파되는 <em>지금</em> 일어나는 일이 아니라 그리스도 안에서 십자가 위에서 <b>단번에</b> 일어난 일을 가리키며, "그의 피"가 그 희생적 죽음을 분명히 지시한다. 그는 속량이 법정에서 빌려 온 "칭의"와 달리 <em>시장</em>에서 빌려 온 상거래 용어임을 짚는다.</p>
+      <p><span class="c f">M</span> 이 대목에 바울의 평소 어법과 다른 낱말과 관념이 나타난다는 점 때문에 많은 학자가 <em>초기 그리스도교 전승의 인용</em>을 상정한다. Moo는 그 가능성을 인정하면서도, 바울이 예수의 죽음에 관한 유대 그리스도교적 해석에 기대어 <strong>스스로 이 구절들을 썼을</strong> 개연성을 더 높게 본다. 그 해석은 히브리서 9–10장에도 나타난다. 한편 <span class="c b">J</span> Jewett처럼 레위기 16장의 의식이 성소의 정결에 초점이 있으므로 여기서 제거나 화목 어느 쪽도 함의하지 않는다고 보는 견해도 있다(Moo 재인용).</p>
+      <h4><span class="gw">πάρεσις</span> — 간과하심</h4>
+      <p>25절 후반의 <span class="gw">διὰ τὴν πάρεσιν τῶν προγεγονότων ἁμαρτημάτων</span>("전에 지은 죄를 간과하심으로")도 논쟁거리다. <span class="gw">πάρεσις</span>는 완전한 사면(<span class="gw">ἄφεσις</span>)과 구별되는 "지나쳐 넘김·유예"로 읽히는 것이 보통이며, 26절의 <span class="gw">ἐν τῇ ἀνοχῇ τοῦ θεοῦ</span>(하나님이 길이 참으시는 중에)와 짝을 이룬다.</p>
+      <p>여기서 논증의 진짜 표적이 드러난다. 문제는 사람이 어떻게 용서받느냐가 아니라 <strong>하나님이 어떻게 의로우신 채로 용서하시느냐</strong>다. 오래 참으심 속에 죄를 간과해 오셨다면 그분의 의는 어떻게 되는가. 26절이 답한다. <span class="gw">εἰς τὸ εἶναι αὐτὸν δίκαιον καὶ δικαιοῦντα</span>, 곧 "자기도 의로우시며 또한 예수 믿는 자를 의롭다 하려" 하심이다. <span class="c f">M</span> 죄 많은 인류를 상대하시는 하나님에게 이 둘을 어떻게 하나로 묶느냐가 문제였고, 그리스도교의 답이 이 구절에 있다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">νόμος πίστεως</div>
+      <div class="eyebrow">3:27–31</div>
+      <h2>5. 자랑의 배제</h2>
+      <div class="gloss">노모스 피스테오스 — 믿음의 법</div>
+    </div>
+
+    <div class="vs" id="v2728" data-verses="27,28">
+      <span class="ref">3:27–28 — 어떤 법으로</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">27</span>그런즉 자랑할 데가 어디냐 있을 수가 없느니라 무슨 법으로냐 행위로냐 아니라 오직 믿음의 법으로니라 <span class="vn">28</span>그러므로 사람이 의롭다 하심을 얻는 것은 율법의 행위에 있지 않고 믿음으로 되는 줄 우리가 인정하노라</p>
+      <p><span class="gw">Ποῦ οὖν ἡ καύχησις; ἐξεκλείσθη</span>. "자랑"(<span class="gw">καύχησις</span>)은 2:17·23에서 이미 나온 낱말이다. 율법을 자랑하고 하나님을 자랑하던 그 자랑이 여기서 <strong>배제된다</strong>. 동사 <span class="gw">ἐξεκλείσθη</span>는 문을 닫아 밖에 두는 이미지다.</p>
+      <p><span class="c x">C</span> Cranfield는 이 결론이 앞의 논증에서 <b>필연적으로</b> 따라 나온다고 본다. 21–26절만 보든 1:18–3:26 전체를 보든, 사람이 하나님을 자기 채무자로 만들 여지는 어디에도 없다. 수사 의문 "그런즉 자랑할 데가 어디냐"는 그 필연성을 드러내는 장치다.</p>
+      <div class="caveat"><span class="tt">쟁점 — Sanders 이후의 "자랑"</span><span class="c x">S</span> Stott이 논쟁의 지형을 정리한다. Sanders 이후 많은 학자가 1세기 팔레스타인 유대교가 <em>행위-의</em>의 종교가 아니었다는 그의 논지를 받아들이면서, 바울이 물리치는 "자랑"을 다시 규정할 필요를 느끼게 되었다. 유대교가 공로 체계가 아니었다면 바울이 염두에 둔 것은 그런 종류의 자랑일 수 없고, <b>유대교의 자기 확신</b>, 곧 민족적 특권 의식이어야 한다는 것이다. 3:29–30이 곧바로 유대인과 이방인의 문제로 넘어간다는 사실이 이 읽기를 뒷받침한다. 반면 <span class="c x">C</span> Cranfield처럼 읽으면 배제되는 것은 <em>사람이 하나님을 채무자로 만드는</em> 모든 자랑이 된다.</div>
+      <p>이어지는 물음과 답이 난해하다. "무슨 법으로냐 행위로냐 아니라 오직 <span class="gw">νόμου πίστεως</span>(믿음의 법)로니라." <span class="gw">νόμος</span>를 여기서 모세 율법으로 읽을지, "원리·질서"라는 넓은 뜻으로 읽을지가 갈린다. 후자로 읽으면 "행위의 원리가 아니라 믿음의 원리"가 되고, 전자로 읽으면 같은 율법이 믿음의 관점에서 다시 규정된다는 뜻이 되어 3:31의 "율법을 굳게 세우느니라"와 더 잘 맞물린다.</p>
+      <p><span class="c t">D</span> Dunn에게 이 대목은 새 관점의 시금석이다. "율법의 행위"가 유대인의 정체성과 언약적 신실함을 유지하는 실천이라면, 그것이 배제되는 이유는 그 실천이 <em>공로</em>여서가 아니라 이방인의 복음 수용에 <b>추가 요건</b>을 얹기 때문이다. 29–30절의 논증이 곧바로 유대인과 이방인의 문제로 넘어가는 것이 그 근거가 된다.</p>
+      <p>28절이 결론을 못 박는다. <span class="gw">λογιζόμεθα γὰρ δικαιοῦσθαι πίστει ἄνθρωπον χωρὶς ἔργων νόμου</span>. 루터가 독일어 번역에서 "오직"(allein)을 넣은 그 구절이며, 종교개혁 논쟁의 초점이 된 문장이다.</p>
+    </div>
+
+    <div class="vs" id="v2931" data-verses="29,30,31">
+      <span class="ref">3:29–31 — 한 분 하나님, 그리고 세워지는 율법</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">29</span>하나님은 다만 유대인의 하나님이시냐 또한 이방인의 하나님은 아니시냐 진실로 이방인의 하나님도 되시느니라 <span class="vn">30</span>할례자도 믿음으로 말미암아 또한 무할례자도 믿음으로 말미암아 의롭다 하실 하나님은 한 분이시니라 <span class="vn">31</span>그런즉 우리가 믿음으로 말미암아 율법을 파기하느냐 그럴 수 없느니라 도리어 율법을 굳게 세우느니라</p>
+      <p>29–30절의 논증은 유일신 신앙에서 곧바로 결론을 끌어낸다. 하나님이 한 분이시라면 유대인만의 하나님일 수 없고, 따라서 할례자든 무할례자든 <em>같은 근거</em>로 의롭다 하실 수밖에 없다. 신명기 6:4의 쉐마가 이방인 포용의 논거가 된다.</p>
+      <p><span class="c f">M</span> 이 논리는 "율법의 행위"를 유대적 정체성 표지로 읽는 해석을 지지할 수 있다. 하나님은 유대적 정체성 표지로 자기 백성을 구별하지 않으신다는 흐름이기 때문이다. 다만 Moo는 그 어구를 정체성 표지에만 가두기 어렵다고 보며, 율법이 칭의의 길이 아닌 이유가 배타적으로 유대적이라는 데 있으면서 <strong>동시에</strong> 그것이 요구하는 순종의 수준에도 있다고 본다.</p>
+      <p><span class="c x">S</span> Stott은 31절의 답이 "율법"에 어떤 뜻을 주느냐에 달려 있다고 본다. 여기서 율법을 <b>구약 성경 일반</b>으로 읽으면, 믿음으로 말미암는 칭의의 복음은 구약을 무너뜨리기는커녕 <em>구약 자체가 이미 그 진리를 가르쳤음</em>을 보임으로써 굳게 세운다(3:21 참조). 4장이 곧바로 창세기 15:6으로 가는 것이 이 읽기의 증명이 된다.</p>
+      <p>31절이 장을 닫으며 다음 장을 연다. 믿음으로 율법을 파기하느냐, <span class="gw">μὴ γένοιτο</span>. 도리어 <span class="gw">νόμον ἱστάνομεν</span>("율법을 굳게 세우느니라"). 어떻게 세우는지는 말하지 않은 채 장이 끝나고, 4장이 아브라함을 통해 그 답을 편다. 율법과 선지자가 증언하는 그 의(3:21)가 실제로 창세기 15:6에 있었음을 보이는 작업이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 3. 3장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th></tr></thead>
+      <tbody>
+        <tr><td class="head">3:2</td><td>롬 9:4; 신 4:7–8; 시 147:19–20</td><td>하나님의 말씀을 맡음</td></tr>
+        <tr><td class="head">3:4</td><td>시 51:4; 딤후 2:13</td><td>사람은 거짓되되 하나님은 참되심</td></tr>
+        <tr><td class="head">3:8</td><td>롬 6:1</td><td>"악을 행하자"는 혐의의 재등장</td></tr>
+        <tr><td class="head">3:9</td><td>롬 5:12–21; 갈 3:22</td><td>죄 아래 사로잡힘</td></tr>
+        <tr><td class="head">3:10–18</td><td>시 14:1–3; 5:9; 140:3; 10:7; 사 59:7–8; 시 36:1</td><td>연쇄 인용의 출처</td></tr>
+        <tr><td class="head">3:20</td><td>시 143:2; 갈 2:16; 롬 7:7</td><td>율법의 행위 · 죄를 깨달음</td></tr>
+        <tr><td class="head">3:21</td><td>롬 1:17; 사 51:5–8</td><td>하나님의 의의 나타남</td></tr>
+        <tr><td class="head">3:24</td><td>엡 1:7; 골 1:14; 딛 3:7</td><td>속량(<span class="gw">ἀπολύτρωσις</span>)</td></tr>
+        <tr><td class="head">3:25</td><td>레 16:13–15; 히 9:5</td><td>속죄소 — NA28 난외 지시</td></tr>
+        <tr><td class="head">3:25</td><td>롬 2:4</td><td>길이 참으심(<span class="gw">ἀνοχή</span>)</td></tr>
+        <tr><td class="head">3:27</td><td>롬 2:17·23; 고전 1:29·31</td><td>배제된 자랑</td></tr>
+        <tr><td class="head">3:30</td><td>신 6:4; 롬 10:12; 갈 3:20</td><td>한 분 하나님</td></tr>
+        <tr><td class="head">3:31</td><td>롬 8:4; 마 5:17</td><td>세워지는 율법</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 특권은 남고, 방패는 되지 않는다</h3>
+    <p>3:1–8은 2장의 결론이 자칫 유대인의 특권을 지워 버리는 것으로 읽힐 위험을 막는다. 나음은 <strong>범사에 많다</strong>. 하나님의 말씀을 맡은 일이 그 첫째다. 그러나 그 특권은 심판 앞의 방패가 아니라 오히려 먼저 물음이 오는 자리였다(2:9). 특권의 보존과 특권의 무효화 사이에서 바울은 제3의 길을 낸다. 특권은 실재하되, 그것이 <em>하나님의 신실하심</em>에 속한 것이지 사람의 성취에 속한 것이 아니라는 길이다.</p>
+
+    <h3>② 사람의 불신은 하나님의 신실하심을 무너뜨리지 못한다</h3>
+    <p>3:3–4의 <span class="gw">ἀπιστία</span>와 <span class="gw">πίστις</span>의 대비가 9–11장 전체를 미리 요약한다. 사람 쪽의 실패가 하나님 쪽의 약속을 취소하지 못한다는 이 확언이 없으면, 11장의 감람나무 논증도 설 자리가 없다.</p>
+
+    <h3>③ 죄는 행위이자 권세다</h3>
+    <p>3:9의 "죄 아래에"가 이 장의 무게중심이다. 3:10–18의 연쇄 인용이 구체적 행위를 열거하지만, 그 행위들은 <em>사로잡힘</em>의 증상으로 배치된다. <span class="c f">M</span> Moo는 이를 죄의 권능 아래 있음으로, <span class="c h">G</span> Gaventa는 아담과 온 세계를 뒤덮은 권세로 읽는다. 두 읽기의 차이는 5–8장에서 커지지만, 3:9에서 이미 갈림길이 열린다.</p>
+
+    <h3>④ 침묵이 복음의 자리를 연다</h3>
+    <p>3:19–20의 목표는 정보 전달이 아니다. <strong>모든 입을 막는 것</strong>이다. 법정에서 변론을 그친 피고의 침묵이 곧 3:21의 "이제는"이 놓일 자리다. 율법의 기능은 여기서 이중적이다. 의롭게 하지 못하나 죄를 깨닫게 하며, 그 깨달음이 침묵을 만든다.</p>
+
+    <h3>⑤ 의로우시며 의롭다 하시는</h3>
+    <p>3:21–26의 절정은 죄인의 구원이 아니라 <em>하나님의 의로우심</em>이다. 길이 참으심 속에 죄를 간과해 오신 하나님이 어떻게 의로우신 채로 계실 수 있는가. 화목제물로 세워진 그리스도가 그 물음의 답이다. <span class="c f">M</span> 속죄소·제거·화목의 세 후보 가운데 어느 것을 택하든, 이 단락이 <strong>하나님의 자기 정당화</strong>를 겨눈다는 점은 흔들리지 않는다. 26절의 "자기도 의로우시며 또한 예수 믿는 자를 의롭다 하려"가 그것을 한 문장에 담는다.</p>
+
+    <h3>⑥ 배제된 자랑, 세워진 율법</h3>
+    <p>3:27–31이 두 결론을 낸다. 자랑은 배제되고 율법은 세워진다. 자랑의 배제는 2:17에서 시작된 실을 매듭짓고, 율법의 세워짐은 21절의 "율법과 선지자들에게 증거를 받은"을 되받는다. 이 둘이 한 단락에 함께 놓인다는 사실이 로마서의 성격을 보여 준다. 율법을 상대화하는 논증이 곧 율법을 폐기하는 논증은 아니라는 것이며, 4장이 그 증명을 아브라함에게서 이어 간다.</p>
+
+    <div class="back"><a href="./ch02.html">← 2장</a> · <a href="./ch04.html">4장 →</a> · <a href="./overview.html">종합 연구</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 3장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988)·Kruse(PNTC 2012)·Longenecker(NIGTC 2016)·Cranfield(<i>Shorter</i>)·Stott(BST)·Gaventa(NTL 2024) 직접 확인분. Dodd·Morris·Forsyth·Jewett·Fitzmyer·Calvin·Sanders는 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

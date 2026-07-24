@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 4장 심층 연구 — 아브라함의 믿음</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="4" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch04.html">성경 연구</a></div>
+  <div class="brand">로마서 4장 심층 연구</div>
+  <div class="brand-sub">아브라함의 믿음</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html">2</a><a href="ch03.html">3</a>
+    <a href="ch04.html" aria-current="page">4</a>
+    <a href="ch05.html">5</a><a href="ch06.html">6</a><a class="off" href="#">7</a><a class="off" href="#">8</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 여겨진 바 되었느니라 (4:1–8)</a>
+  <a class="lv1" href="#s2">2. 할례시냐 무할례시냐 (4:9–12)</a>
+  <a class="lv1" href="#s3">3. 약속과 율법 (4:13–17)</a>
+  <a class="lv1" href="#s4">4. 바랄 수 없는 중에 바라고 (4:18–25)</a>
+  <a class="lv1" href="#s5">5. 상호 참조 총람</a>
+  <a class="lv1" href="#s6">6. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">ἐπίστευσεν Ἀβραὰμ τῷ θεῷ καὶ ἐλογίσθη αὐτῷ εἰς δικαιοσύνην</div>
+    <h1>로마서 4장 · 아브라함의 믿음</h1>
+    <p class="sub">3:31이 "율법을 굳게 세우느니라"로 끝났다. 4장은 그 증명을 창세기에서 가져온다.</p>
+    <p class="meta">4:1–8 여겨짐 · 4:9–12 할례의 순서 · 4:13–17 약속 · 4:18–25 부활의 하나님 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">한 구절의 주해가 한 장이 된다.</div>
+    </div>
+    <p>4장은 창세기 15:6 한 구절을 붙들고 그 낱말들을 차례로 풀어내는 <strong>주해 장</strong>이다. "아브라함이 하나님을 믿으매 그것이 그에게 의로 여겨진 바 되었느니라"에서 <em>여겨졌다</em>(4:1–8), <em>언제</em> 여겨졌는가(4:9–12), 무엇을 <em>약속</em>받았는가(4:13–17), 무엇을 <em>믿었는가</em>(4:18–25)를 순서대로 묻는다.</p>
+    <div class="note"><span class="tt">왜 아브라함이 논쟁의 자리인가</span><span class="c x">K</span> Kruse는 제2성전기 유대 문헌이 아브라함을 어떻게 읽었는지를 보여 준다. "아브라함이 시험을 받을 때 신실하다 인정되지 아니하였느냐, 그리하여 그것이 그에게 의로 여겨졌느니라"(마카베오상 2:51–53), "아브라함은 그의 모든 행위에서 온전하였고 평생 의로써 기뻐하심을 받았다"(희년서 23:10), "그가 지극히 높으신 이의 율법을 지켰고 그와 언약을 맺었으며 그 언약을 자기 육체에 확증하였고 시험받을 때 신실함이 입증되었다"(집회서 44:20). 랍비 전승은 한 걸음 더 나아가 "우리 조상 아브라함은 율법이 주어지기 전에 이미 온 율법을 행하였다"고 적는다. &nbsp; 창세기 15:6이 <b>이미 유대 해석 전통 안에서 아브라함의 신실함·순종의 증거로 읽히고 있었다</b>는 사실이 이 장의 판돌을 놓는다. 바울은 새 본문을 가져오지 않고, 논적과 <em>같은 본문</em>을 정반대 방향으로 읽는다.</div>
+    <p>이 장이 왜 필요한지는 3:21과 3:31이 말해 준다. 하나님의 의는 율법 외에 나타났으되 "율법과 선지자들에게 증거를 받은" 것이며, 믿음이 율법을 폐하지 않고 굳게 세운다. 그 증언과 세움이 실제로 어디 있는지를 4장이 보인다. <span class="c f">M</span> 아브라함은 유대 민족의 "조상"이므로, 그에게서 확인되는 것은 곧 구속사의 원리가 된다.</p>
+    <table>
+      <caption>표 1. 4장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>묻는 것</th><th>답</th></tr></thead>
+      <tbody>
+        <tr><td class="head">여겨짐</td><td>4:1–8</td><td>행위인가 믿음인가</td><td>보수가 아니라 은혜로 여겨짐 · 다윗의 증언</td></tr>
+        <tr><td class="head">시점</td><td>4:9–12</td><td>할례 전인가 후인가</td><td>무할례시 · 할례는 인침일 뿐</td></tr>
+        <tr><td class="head">근거</td><td>4:13–17</td><td>율법인가 약속인가</td><td>믿음의 의로 말미암은 약속</td></tr>
+        <tr><td class="head">내용</td><td>4:18–25</td><td>무엇을 믿었는가</td><td>죽은 자를 살리시는 하나님</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">ἐλογίσθη</div>
+      <div class="eyebrow">4:1–8</div>
+      <h2>1. 여겨진 바 되었느니라</h2>
+      <div class="gloss">엘로기스테 — 회계 장부의 낱말</div>
+    </div>
+
+    <div class="vs" id="v12" data-verses="1,2">
+      <span class="ref">4:1–2 — 물음의 형태</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>그런즉 육신으로 우리 조상인 아브라함이 무엇을 얻었다 하리요 <span class="vn">2</span>만일 아브라함이 행위로써 의롭다 하심을 받았으면 자랑할 것이 있으려니와 하나님 앞에서는 없느니라</p>
+      <p><span class="gw">Τί οὖν ἐροῦμεν εὑρηκέναι Ἀβραὰμ τὸν προπάτορα ἡμῶν κατὰ σάρκα;</span> 이 문장은 구문이 까다로워 여러 갈래로 읽힌다. 부정사 <span class="gw">εὑρηκέναι</span>("얻었다·발견했다")를 어디에 붙이느냐에 따라 "아브라함이 무엇을 얻었다 하리요"(개역개정)가 되기도 하고, "우리가 아브라함을 육신으로 우리 조상으로 <em>얻었다</em> 하리요"가 되기도 한다. 후자는 R. Hays가 제안한 읽기로, 물음의 초점을 아브라함의 성취에서 <strong>아브라함과 우리의 관계</strong>로 옮긴다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 4:1의 구문</span>
+      ① <b>"아브라함이 무엇을 얻었다 하리요"</b> — 부정사 <span class="gw">εὑρηκέναι</span>를 아브라함의 발견으로 읽는다. 개역개정과 대다수 번역의 선택이며, 물음의 초점이 <em>아브라함의 성취</em>에 놓인다. &nbsp;
+      ② <b>"우리가 아브라함을 육신으로 우리 조상으로 얻었다 하리요"</b> — R. Hays의 제안으로, 초점이 <em>아브라함과 우리의 관계</em>로 옮겨간다. 이렇게 읽으면 4장 전체가 "누가 아브라함의 자손인가"라는 물음의 답이 되며, 4:11–12의 두 겹 조상 논의와 매끄럽게 이어진다. &nbsp;
+      <span class="c x">C</span> Cranfield는 구문 문제와 별개로 이 물음이 놓인 <em>자리</em>를 강조한다. 아브라함은 3:27의 "자랑이 배제되었다"에 제기될 가장 명백한 반론이며, 바울은 그 반론을 불러들여 결정적으로 처리한다.</div>
+      <p><span class="c f">M</span> "육신으로 우리 조상"이라는 표현은 로마서의 수신자 문제에서도 자주 인용되는 대목이다. 다만 "우리"가 독자를 가리키는지 바울 자신을 포함한 유대인을 가리키는지가 갈린다.</p>
+      <p><span class="c x">C</span> Cranfield는 이 물음이 왜 여기 놓이는지를 밝힌다. 아브라함은 "자랑이 배제되었다"는 3:27의 진술에 <b>가장 명백히 제기될 수 있는 반론</b>이며, 바울은 그 반론을 일부러 불러들인다. 성경의 증언에 따르면 <em>그조차</em> 자랑할 근거가 없고 그 역시 믿음으로 의롭다 하심을 받았음을 보임으로써, 3:27의 진술이 결정적으로 확증되게 하려는 것이다.</p>
+      <p>2절이 가정법으로 논점을 세운다. 행위로 의롭다 하심을 받았다면 자랑할 것이 있다. 그러나 "하나님 앞에서는 없느니라". 3:27에서 배제된 자랑이 여기서 아브라함에게 적용된다.</p>
+    </div>
+
+    <div class="vs" id="v35" data-verses="3,4,5">
+      <span class="ref">4:3–5 — 보수와 은혜</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">3</span>성경이 무엇을 말하느냐 아브라함이 하나님을 믿으매 그것이 그에게 의로 여겨진 바 되었느니라 <span class="vn">4</span>일하는 자에게는 그 삯이 은혜로 여겨지지 아니하고 보수로 여겨지거니와 <span class="vn">5</span>일을 아니할지라도 경건하지 아니한 자를 의롭다 하시는 이를 믿는 자에게는 그의 믿음을 의로 여기시나니</p>
+      <p>창세기 15:6이 인용된다. 핵심 동사는 <span class="gw">ἐλογίσθη</span>, "여겨졌다"이다. 이 낱말은 회계 용어로 장부에 <em>기입한다</em>는 뜻이며, 4장에서 열한 번 나온다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 3절의 인용 형태를 보인다. "아브라함이 하나님을 믿으매 그것이 그에게 의로 여겨진 바 되었느니라." 창세기 15:6의 칠십인역 형태를 거의 그대로 옮긴 것이며, 4장 전체가 이 한 문장의 낱말들을 차례로 해설한다.</p>
+      <p>4–5절이 그 기입의 두 방식을 대비한다. 일하는 자에게 삯은 <span class="gw">κατὰ χάριν</span>(은혜를 따라)이 아니라 <span class="gw">κατὰ ὀφείλημα</span>(빚을 따라) 계산된다. 노동에는 채무가 발생하고, 채무의 상환은 선물이 아니다. 그러나 일하지 않고 믿는 자에게는 그 믿음이 의로 <em>여겨진다</em>.</p>
+      <p><span class="c x">S</span> Stott은 여기서 반드시 막아야 할 오해 하나를 지적한다. 바울은 <b>믿음과 의를 동등한 것으로</b> 가르치는 것이 아니며, 의가 없을 때 믿음이 대체물로 받아들여진다고 가르치는 것도 아니다. 그렇게 읽으면 믿음이 공로적 행위가 되어, 결국 랍비들의 손에 놀아나는 셈이 된다. 여겨짐은 믿음의 <em>가치</em>에 대한 평가가 아니라 하나님의 <em>수여</em>다.</p>
+      <p>5절의 표현이 이 장에서 가장 날카롭다. <span class="gw">τὸν δικαιοῦντα τὸν ἀσεβῆ</span>, <strong>"경건하지 아니한 자를 의롭다 하시는 이"</strong>. <span class="c f">M</span> 구약에서 재판관의 무죄 선고는 사실에 부합해야 했다(출 23:7; 왕상 8:32). 그런데 바울 교리의 요석은 하나님이 경건하지 않은 자를 의롭다 하신다는 데 있다. 죄의 심각성에 대한 인식과 그리스도 안에 나타난 하나님의 절대적 은혜를 지키려는 관심이 그를 이 결론으로 이끌었다. 하나님이 사실에 반해 <em>불의하게</em> 행하신다는 뜻이 아니다. 그분의 의롭다 하심은 예수의 죽음이 지닌 속죄의 성격을 포함한 <strong>더 큰 사실의 집합</strong>을 셈에 넣는다.</p>
+      <p><span class="c x">K</span> Kruse는 4장의 결론이 5:1로 이어지는 방식을 정리한다. 하나님이 의롭다 하시는 이들의 믿음은 <em>아브라함의 믿음과 같은 종류</em>이며, 하나님의 말씀을 그대로 받아들이고 그 아들에 관한 복음을 믿으며 구원의 약속을 받아들이는 믿음이다. 그들은 그렇게 하면서 자기 공로를 조금도 주장하지 않는다.</p>
+      <p><span class="c f">M</span> 믿음의 성격도 여기서 정해진다. 믿는다는 것은 그리스도의 십자가와 부활을 통해 "경건하지 않은 자를 의롭다 하시는" 하나님께 전적으로 신뢰를 두는 일이다. 지적 동의를 배제할 수 없으나 바울의 강조점은 의지의 행위로서의 <em>내어맡김</em>에 있으며(4:18; 10:9), 신약의 믿음은 교리 체계에 대한 동의가 아니라 <strong>한 인격에 대한 신뢰</strong>다.</p>
+    </div>
+
+    <div class="vs" id="v68" data-verses="6,7,8">
+      <span class="ref">4:6–8 — 다윗의 증언</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">6</span>일한 것이 없이 하나님께 의로 여기심을 받는 사람의 복에 대하여 다윗이 말한 바 <span class="vn">7</span>불법이 사함을 받고 죄가 가리어짐을 받는 사람들은 복이 있고 <span class="vn">8</span>주께서 그 죄를 인정하지 아니하실 사람은 복이 있도다 함과 같으니라</p>
+      <p>두 번째 증인으로 다윗이 불려 온다. 시편 32:1–2 인용이다. <span class="c f">M</span> 유대 주석 관행에서 같은 낱말이 나오는 두 본문을 잇는 방식이 있는데, 여기서는 창세기 15:6의 <span class="gw">λογίζομαι</span>와 시편 32:2의 같은 동사가 고리가 된다.</p>
+      <div class="caveat"><span class="tt">어휘 — 회계인가 법정인가</span><span class="c x">S</span> Stott은 <span class="gw">λογίζομαι</span>가 흠정역에서 "여기다·계산하다"가 아니라 <b>"전가하다"</b>(impute)로 옮겨지기도 했음을 상기시킨다. "주께서 그 죄를 <em>전가하지</em> 아니하실 사람은 복이 있도다"(8절), "일한 것이 없이 하나님께 의를 <em>전가받는</em> 사람"(6절)이다. &nbsp; 두 이미지의 출처가 다르다. 세고 기입하는 이미지는 <b>재정</b>에서, 전가의 이미지는 <b>법정</b>에서 온다. 둘 다 "무엇을 누구에게 속한 것으로 여긴다"는 뜻이지만, 앞의 경우 그것은 돈이고 뒤의 경우 무죄나 유죄다. 이 어휘가 16세기 논쟁, 곧 칭의에서 의가 <em>전가되는가 주입되는가</em>를 둘러싼 다툼의 전면에 서게 된다.</div>
+      <p>주목할 점은 인용의 <em>형태</em>다. 다윗의 복은 무엇을 받는 복이 아니라 <strong>받지 않는 복</strong>이다. 불법이 사함을 받고, 죄가 가리어지고, 주께서 그 죄를 인정하지 <em>아니하신다</em>. 셋 다 부정형이다. 4:5의 "경건하지 아니한 자"가 여기서 죄를 지은 자로 구체화되고, 의로 여기심이 죄를 인정하지 않으심과 같은 사건의 양면으로 놓인다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">σφραγῖδα</div>
+      <div class="eyebrow">4:9–12</div>
+      <h2>2. 할례시냐 무할례시냐</h2>
+      <div class="gloss">스프라기다 — 인침</div>
+    </div>
+
+    <div class="vs" id="v910" data-verses="9,10">
+      <span class="ref">4:9–10 — 순서라는 논거</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">9</span>그런즉 이 복이 할례자에게냐 혹은 무할례자에게도냐 무릇 우리가 말하기를 아브라함에게는 그 믿음이 의로 여겨졌다 하노라 <span class="vn">10</span>그런즉 그것이 어떻게 여겨졌느냐 할례시냐 무할례시냐 할례시가 아니요 무할례시니라</p>
+      <p>논증이 시간의 순서로 옮겨 간다. 아브라함에게 믿음이 의로 여겨진 것은 <em>언제</em>인가. 창세기 15:6이고, 할례는 창세기 17장이다. 그 사이에 여러 해가 놓인다. 그러므로 답은 <strong>무할례시</strong>다.</p>
+      <p><span class="c x">K</span> Kruse는 9–10절의 물음 형식을 짚는다. "이 복이 할례자에게냐 혹은 무할례자에게도냐"로 열고 "그가 할례를 받은 후냐 할례를 받기 전이냐"로 좁힌 뒤 <b>"할례시가 아니요 무할례시니라"</b>로 단정한다. 물음을 두 번 좁혀 답을 한 낱말로 만드는 방식이다.</p>
+      <p>이 논거의 힘은 단순함에 있다. 할례가 의의 조건이었다면 그것은 의보다 <em>먼저</em> 왔어야 한다. 성경의 서사 순서 자체가 반증이 된다.</p>
+    </div>
+
+    <div class="vs" id="v1112" data-verses="11,12">
+      <span class="ref">4:11–12 — 표와 인침, 그리고 두 겹의 조상</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">11</span>그가 할례의 표를 받은 것은 무할례시에 믿음으로 된 의를 인친 것이니 이는 무할례자로서 믿는 모든 자의 조상이 되어 그들도 의로 여기심을 얻게 하려 하심이라 <span class="vn">12</span>또한 할례자의 조상이 되었나니 곧 할례 받을 자에게뿐 아니라 우리 조상 아브라함이 무할례시에 가졌던 믿음의 자취를 따르는 자들에게도 그러하니라</p>
+      <p><span class="c x">C</span> Cranfield는 어휘의 출처를 짚는다. "표"로 옮긴 헬라어 낱말은 칠십인역 창세기 17:11에 쓰인 그것과 같다("너희는 포피를 베어라 이것이 나와 너희 사이의 언약의 <em>표징</em>이 되리라"). 할례는 <b>외적 표징</b>, 곧 그것이 가리키는 실재를 지시하는 표지다. 그는 11a절이 두 가지를 동시에 확언한다고 본다. 아브라함이 할례를 받았다는 것, 그리고 의가 할례 <em>이전에</em> 이미 그에게 여겨졌다는 것이다.</p>
+      <p><span class="c x">S</span> Stott은 두 낱말의 기능을 나눈다. <b>표</b>로서 그것은 아브라함과 그 후손을 하나님의 언약 백성으로 구별하는 식별 표지였고, <b>인</b>으로서 그것은 그들이 의롭다 하심을 받은 하나님의 백성임을 인증하는 것이었다. 그리고 결론은 순서에 있다. 아브라함은 하나님의 두 선물, 곧 <em>칭의와 할례</em>를 받았으며 <b>그 순서대로</b> 받았다.</p>
+      <p>할례의 지위가 재정의된다. <span class="gw">σημεῖον … σφραγῖδα</span>, 곧 "표"이자 "인친 것"이다. 인장은 이미 있는 것을 확인할 뿐 새로 만들지 않는다. 할례는 무할례시에 이미 주어진 의를 <em>확인</em>하는 표지다. 2:25–29에서 표지와 실상을 나눈 논의가 여기서 아브라함의 전기로 입증된다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 두 조상 됨의 조건을 정확히 드러낸다. 그는 "<b>무할례 상태에서</b> 믿는 모든 자의 조상"이 되고, 또한 "할례에 속할 뿐 아니라 <b>우리 조상 아브라함이 무할례시에 가졌던 그 믿음의 발자취를 따라 걷는</b> 자들에게 할례자의 조상"이 된다. 두 번째 조상 됨에만 조건절이 붙는다는 점이 논증의 방향을 보여 준다.</p>
+      <p>그 결과 아브라함은 <strong>두 겹의 조상</strong>이 된다. 무할례자로서 믿는 모든 자의 조상이며(11절), 동시에 할례자의 조상이다(12절). 다만 후자에는 조건이 붙는다. 할례를 받았다는 사실만으로가 아니라 "무할례시에 가졌던 믿음의 자취를 따르는" 자들에게 조상이 된다. 혈통이 아니라 <em>발자취</em>가 계보를 만든다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">ἐπαγγελία</div>
+      <div class="eyebrow">4:13–17</div>
+      <h2>3. 약속과 율법</h2>
+      <div class="gloss">에팡겔리아 — 세상의 상속자</div>
+    </div>
+
+    <div class="vs" id="v1315" data-verses="13,14,15">
+      <span class="ref">4:13–15 — 상속의 근거</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">13</span>아브라함이나 그 후손에게 세상의 상속자가 되리라고 하신 언약은 율법으로 말미암은 것이 아니요 오직 믿음의 의로 말미암은 것이니라 <span class="vn">14</span>만일 율법에 속한 자들이 상속자이면 믿음은 헛것이 되고 약속은 파기되었느니라 <span class="vn">15</span>율법은 진노를 이루게 하나니 율법이 없는 곳에는 범법도 없느니라</p>
+      <div class="caveat"><span class="tt">쟁점 — 아브라함의 "믿음"은 무엇이었나</span><span class="c x">K</span> Kruse가 보여 준 제2성전기 독법(마카베오상 2:51–53, 집회서 44:20, 희년서 23:10)에서 창세기 15:6의 <span class="gw">אמן</span>은 <b>시험을 견딘 신실함</b>으로 읽혔다. 곧 아브라함이 <em>신실했기에</em> 의로 여겨졌다는 것이다. 바울은 같은 구절을 <b>일하지 않고 믿는 자</b>의 사례로 뒤집어 읽는다(4:5). 두 독법 모두 히브리어 어근이 "믿다"와 "신실하다"를 함께 품는다는 사실에 기댈 수 있으며, 그래서 이 논쟁은 어휘로 결판나지 않는다. 결정적인 것은 바울이 4:4–5에서 도입한 <em>삯과 은혜의 대립</em>이라는 틀이다.</div>
+      <p>13절의 "세상의 상속자"(<span class="gw">κληρονόμον … κόσμου</span>)는 창세기의 어느 구절을 그대로 옮긴 표현이 아니다. 땅에 대한 약속(창 12:7; 15:18)과 모든 족속이 복을 받으리라는 약속(창 12:3; 22:18)이 후대 유대 전승에서 <em>세계</em> 규모로 확장되어 읽힌 흐름을 바울이 이어받는다.</p>
+      <p><span class="c x">S</span> Stott은 13절에서 우리가 놀라게 된다고 말한다. 창세기 본문에서 아브라함이 약속받은 것은 그가 선 자리의 "동서남북" 가나안이었고 그 경계는 뒤에 구획되었는데, 바울은 그것을 <b>"세상의 상속자"</b>로 옮겨 놓는다. 땅이 어떻게 세상이 되었는가. 그의 답은 두 갈래다. 하나는 일반 원리로서 <em>성경 예언의 성취는 언제나 그것이 처음 주어진 범주를 넘어선다</em>는 것이고, 다른 하나는 아브라함을 통해 땅의 모든 족속이 복을 받으리라는 부수 약속이 함께 주어졌다는 것이다.</p>
+      <p><span class="c x">C</span> Cranfield는 13–17a절의 논지를 이렇게 요약한다. 세상의 상속자가 되리라는 약속이 아브라함과 그 씨에게 주어진 것은 <b>율법 성취를 통해 공로로 얻는다는 조건 위에서가 아니라</b> 오직 믿음의 의에 근거해서였다.</p>
+      <p>14–15절이 반대 가정의 결과를 셈한다. 율법에 속한 자들이 상속자라면 <strong>믿음은 헛것이 되고 약속은 파기된다</strong>. 이유는 15절에 있다. "율법은 진노를 이루게 하나니." 율법은 위반을 규정하고 위반은 진노를 부른다. 약속을 율법에 매어 놓으면, 약속의 성취가 인간의 순종에 걸리고 그 순종은 3:20이 이미 불가능하다고 판정했다.</p>
+      <p><span class="c x">K</span> Kruse는 13–17절의 요지를 이렇게 정리한다. 아브라함이 세상을 유업으로 받으리라는 약속을 받은 것은 율법을 지켰기 때문이 아니라 <b>믿음을 통해서</b>였고, 그 약속은 아브라함과 같은 믿음을 가진 <em>모든</em> 후손, 곧 유대인만이 아니라 이방인에게도 이루어진다.</p>
+      <p>15절 후반의 "율법이 없는 곳에는 범법도 없느니라"는 죄가 없다는 뜻이 아니다. 5:13이 같은 논점을 다시 다룬다. 율법 있기 전에도 죄는 세상에 있었으나 "죄를 죄로 여기지" 않았다. 율법은 죄를 <em>범법</em>으로 규정하는 기능을 한다.</p>
+    </div>
+
+    <div class="vs" id="v1617" data-verses="16,17">
+      <span class="ref">4:16–17 — 은혜에 속하기 위하여</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">16</span>그러므로 상속자가 되는 그것이 은혜에 속하기 위하여 믿음으로 되나니 이는 그 약속을 그 모든 후손에게 굳게 하려 하심이라 율법에 속한 자에게뿐만 아니라 아브라함의 믿음에 속한 자에게도 그러하니 아브라함은 우리 모든 사람의 조상이라 <span class="vn">17</span>기록된 바 내가 너를 많은 민족의 조상으로 세웠다 하심과 같으니 그가 믿은 바 하나님은 죽은 자를 살리시며 없는 것을 있는 것으로 부르시는 이시니라</p>
+      <p>16절이 이 장의 논리를 한 문장에 담는다. 상속이 <strong>믿음으로</strong> 되는 목적은 그것이 <strong>은혜에 속하기 위해서</strong>이며, 그 목적은 다시 약속을 "모든 후손에게 굳게 하려" 함이다. 믿음 → 은혜 → 확실성의 사슬이다. 행위에 매인 약속은 흔들리지만 은혜에 속한 약속은 흔들리지 않는다.</p>
+      <p><span class="c x">C</span> Cranfield는 17b–22절의 성격을 규정한다. 17b절이 문법상으로는 16절에서 시작된 문장의 일부이나 내용으로는 뒤에 속하며, 이 단락 전체가 <b>창세기 15:6의 확장된 부연</b>이다. 22절을 제외하면 그것은 "아브라함이 하나님을 믿으매"라는 말의 뜻을 풀어내는 작업이며, 믿음의 본질적 성격에 관한 적극적 진술이 된다.</p>
+      <p><span class="c x">S</span> Stott은 16절이 왜 "은혜를 따라" 되어야 하는지를 <b>연합의 문제</b>로 읽는다. 약속이 "모든 후손에게 굳게" 서려면 그 범위가 육신으로 아브라함의 혈통을 잇는 유대인만이 아니라 믿음의 영적 계보에 속한 모든 신자를 포함해야 한다. 그리고 그는 결론을 이렇게 낸다. <b>율법은—특히 그 문화적·의례적 규정은—나눈다. 오직 은혜와 믿음의 복음만이 하나로 묶을 수 있으니, 이방인에게 문을 열고 모든 사람을 그리스도의 십자가 아래에서 평평하게 만들기 때문이다.</b></p>
+      <p><span class="c x">C</span> Cranfield는 같은 절을 "모든 씨에게 <em>성취가 확실하도록</em>"으로 옮겨, 이 어구의 무게가 <b>확실성</b>에 있음을 드러낸다.</p>
+      <p>17절이 창세기 17:5를 인용한 뒤 하나님을 두 관계절로 규정한다. <span class="gw">τοῦ ζῳοποιοῦντος τοὺς νεκροὺς καὶ καλοῦντος τὰ μὴ ὄντα ὡς ὄντα</span>, <strong>"죽은 자를 살리시며 없는 것을 있는 것으로 부르시는 이"</strong>다. 창조와 부활이 한 호흡에 놓인다. 이 규정이 다음 단락 전체를 떠받치며, 4:24의 "예수 우리 주를 죽은 자 가운데서 살리신 이"로 되돌아온다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">παρ᾽ ἐλπίδα ἐπ᾽ ἐλπίδι</div>
+      <div class="eyebrow">4:18–25</div>
+      <h2>4. 바랄 수 없는 중에 바라고</h2>
+      <div class="gloss">파르 엘피다 엡 엘피디 — 소망을 거슬러 소망 위에</div>
+    </div>
+
+    <div class="vs" id="v1822" data-verses="18,19,20,21,22">
+      <span class="ref">4:18–22 — 믿음의 내용</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">18</span>아브라함이 바랄 수 없는 중에 바라고 믿었으니 이는 네 후손이 이같으리라 하신 말씀대로 많은 민족의 조상이 되게 하려 하심이라 <span class="vn">19</span>그가 백 세나 되어 자기 몸이 죽은 것 같고 사라의 태가 죽은 것 같음을 알고도 믿음이 약하여지지 아니하고 <span class="vn">20</span>믿음이 없어 하나님의 약속을 의심하지 않고 믿음으로 견고하여져서 하나님께 영광을 돌리며 <span class="vn">21</span>약속하신 그것을 또한 능히 이루실 줄을 확신하였으니 <span class="vn">22</span>그러므로 그것이 그에게 의로 여겨졌느니라</p>
+      <p><span class="gw">ὃς παρ᾽ ἐλπίδα ἐπ᾽ ἐλπίδι ἐπίστευσεν</span>. 같은 낱말 <span class="gw">ἐλπίς</span>가 전치사를 바꿔 두 번 쓰인다. 소망을 <em>거슬러</em> 소망 <em>위에</em> 믿었다는 역설적 표현이며, 개역개정은 "바랄 수 없는 중에 바라고"로 옮겼다.</p>
+      <p><span class="c x">S</span> Stott은 이 믿음이 현실 도피가 아님을 강조한다. 아브라함은 자기 처지의 현실에서 달아나 환상의 세계로 들어간 것이 <em>아니다</em>. 도리어 "믿음이 약하여지지 아니하고 <b>그 사실을 직시했다</b>." 그것도 완고하고 고통스러운 두 가지 사실을 함께 보았다. 하나님의 능력에 대한 확고한 확신이 있었기에 그는 <em>바랄 수 없는 중에</em>와 <em>바라고</em>를 동시에 할 수 있었다.</p>
+      <p>19절이 그 "바랄 수 없음"의 내용을 밝힌다. 백 세의 몸과 사라의 태가 둘 다 "죽은 것 같음"이다. 여기서 <strong>죽음</strong>의 어휘가 나온 것이 결정적이다. 17절이 하나님을 "죽은 자를 살리시는 이"로 규정했으므로, 아브라함의 처지는 그 규정이 시험되는 자리가 된다. 그가 믿은 대상은 자기 몸의 가능성이 아니라 죽은 것을 살리시는 하나님이었다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 17b절의 두 관계절을 나란히 세운다. "그가 믿은 바 하나님, 곧 <b>죽은 자를 살리시며 없는 것을 있는 것으로 부르시는</b> 하나님 앞에서."</p>
+      <p><span class="c x">S</span> Stott은 17절 끝의 두 규정을 <b>부활과 창조</b>로 나눈다. "죽은 자를 살리시며"가 부활이고, "없는 것을 있는 것으로 부르시는"이 창조다. 그리고 이 둘이 인간을 가장 무력하게 만드는 두 실재를 겨눈다고 본다. 사람을 당혹하게 하는 것으로 <em>무(無)</em>와 <em>죽음</em>보다 더한 것이 없으며, 죽음은 결국 우리가 통제할 수도 벗어날 수도 없는 유일한 사건이기 때문이다.</p>
+      <p>20–21절이 그 믿음의 운동을 그린다. 의심하지 않고, 믿음으로 견고하여지고, 하나님께 영광을 돌리고, 능히 이루실 줄을 확신한다. <strong>영광을 돌린다</strong>는 표현이 1:21의 고발("하나님을 알되 하나님을 영화롭게도 아니하며")과 정면으로 대비된다. 아브라함은 1장이 그린 인류의 실패를 뒤집는 인물로 서 있다.</p>
+      <p>22절이 창세기 15:6의 후반부로 돌아와 단락을 닫는다. "그러므로 그것이 그에게 의로 여겨졌느니라."</p>
+    </div>
+
+    <div class="vs" id="v2325" data-verses="23,24,25">
+      <span class="ref">4:23–25 — 우리도 위함이니</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">23</span>그에게 의로 여겨졌다 기록된 것은 아브라함만 위한 것이 아니요 <span class="vn">24</span>의로 여기심을 받을 우리도 위함이니 곧 예수 우리 주를 죽은 자 가운데서 살리신 이를 믿는 자니라 <span class="vn">25</span>예수는 우리가 범죄한 것 때문에 내줌이 되고 또한 우리를 의롭다 하시기 위하여 살아나셨느니라</p>
+      <p><span class="c x">K</span> Kruse는 20–21절이 바울의 <b>믿음 이해</b>를 드러내는 대목이라고 본다. 의롭다 하심을 받게 하는 그 믿음의 성격이 여기서 규정된다는 것이다. 믿지 않아 의심하지 않고, 믿음으로 견고하여지고, 하나님께 영광을 돌리고, 약속하신 것을 능히 이루실 줄을 확신하는 믿음이다.</p>
+      <p><span class="c x">S</span> Stott은 23절의 "그에게만 위한 것이 아니요"를 성경 전체의 성격에 관한 진술로 읽는다. <b>아브라함 이야기 전체가 성경의 나머지와 마찬가지로 우리의 교훈을 위하여 기록되었다</b>(15:4). 그러므로 아브라함은 믿음으로 의롭다 하심을 받은 경험에서 <em>예외적 인물이 아니며</em>, 이것이 모든 사람을 향한 하나님의 구원 방식이다.</p>
+      <p>23–24절이 주해를 독자에게로 돌린다. 기록된 것은 아브라함만 위한 것이 아니라 "의로 여기심을 받을 우리도 위함"이다. 그리고 우리가 믿는 대상이 규정된다. <strong>"예수 우리 주를 죽은 자 가운데서 살리신 이"</strong>다. 17절의 "죽은 자를 살리시는 하나님"과 같은 표현이며, 아브라함의 믿음과 그리스도인의 믿음이 같은 하나님을 향한다는 사실이 이 반복으로 확정된다.</p>
+      <p><span class="c x">S</span> Stott은 24절의 규정에 주목한다. 우리가 신뢰해야 할 하나님은 <em>단지</em> 창조하고 살리시는 하나님이 아니라 <b>"예수 우리 주를 죽은 자 가운데서 살리신 이"</b>다. 아브라함이 믿은 하나님과 우리가 믿는 하나님이 같은 분이시되, 그 하나님을 알아보는 <em>표지</em>가 부활하신 예수로 특정된다.</p>
+      <p>25절은 대구가 정교해 초기 전승의 정형구로 보이기도 하는 문장이다. <span class="gw">ὃς παρεδόθη διὰ τὰ παραπτώματα ἡμῶν καὶ ἠγέρθη διὰ τὴν δικαίωσιν ἡμῶν</span>. "내줌이 되고"(<span class="gw">παρεδόθη</span>)는 이사야 53:12의 어휘를 되울리며, 1:24·26·28에서 하나님이 사람을 "내버려 두셨다"에 쓰인 그 동사(<span class="gw">παραδίδωμι</span>)이기도 하다. 사람을 정욕에 내주시던 그 동사가 여기서는 아들을 내주심으로 뒤집힌다.</p>
+      <p><span class="c x">S</span> Stott은 Hodge의 평가를 전한다. "이 구절은 <b>복음의 포괄적 진술</b>이다." 그리고 대구가 워낙 정교하게 벼려져 있어 이를 초기 그리스도교의 경구나 신조 단편으로 보는 이들이 있다고 덧붙인다. 동사 "내줌이 되고"(<span class="gw">παραδίδωμι</span>)는 복음서에서 예수께서 유다와 제사장들과 빌라도에게 "넘겨지심"을 가리킬 때 쓰인 그 동사다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 두 전치사구</span>25절의 두 <span class="gw">διά</span>를 같은 뜻으로 읽을지가 갈린다. 앞은 원인("우리 범죄 <em>때문에</em> 내줌이 되고"), 뒤는 목적("우리를 의롭다 하시기 <em>위하여</em> 살아나셨다")으로 읽는 것이 개역개정의 선택이며 대다수 번역이 따른다. 두 구를 모두 원인으로 읽으면 부활이 이미 이루어진 칭의에 근거한 것이 되어 결이 달라진다. 어느 쪽이든 죽음과 부활이 <b>칭의라는 한 사건의 두 면</b>으로 묶인다는 점은 같다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>5. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 4장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">4:2</td><td>롬 3:27; 고전 1:29·31</td><td>배제된 자랑</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:3·22</td><td>창 15:6; 갈 3:6; 약 2:23</td><td>"의로 여겨진 바 되었느니라"</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">4:5</td><td>출 23:7; 왕상 8:32; 롬 5:6</td><td>경건하지 않은 자를 의롭다 하심</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">4:7–8</td><td>시 32:1–2</td><td>다윗의 복 — 죄를 인정하지 않으심</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:10</td><td>창 15:6; 17:10–14</td><td>의와 할례의 시간 순서</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">4:11</td><td>롬 2:25–29; 골 2:11</td><td>표지와 실상</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">4:13</td><td>창 12:3·7; 15:18; 22:18</td><td>세상의 상속자</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">4:15</td><td>롬 3:20; 5:13; 7:7–8</td><td>율법과 범법의 규정</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">4:17</td><td>창 17:5; 롬 8:11; 고후 1:9</td><td>죽은 자를 살리시는 하나님</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">4:18</td><td>창 15:5</td><td>"네 후손이 이같으리라"</td><td>NA28 난외</td></tr>
+        <tr><td class="head">4:20</td><td>롬 1:21</td><td>영광을 돌림과 돌리지 않음의 대비</td><td>본문</td></tr>
+        <tr><td class="head">4:25</td><td>사 53:12; 롬 1:24·26·28</td><td>"내줌이 되고"(<span class="gw">παραδίδωμι</span>)</td><td><span class="c x">S</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>6. 신학 종합</h2>
+    </div>
+
+    <h3>① 성경이 증언한다는 것의 뜻</h3>
+    <p>3:21은 하나님의 의가 "율법과 선지자들에게 증거를 받은" 것이라 했고 3:31은 믿음이 율법을 굳게 세운다고 했다. 4장은 그 증언을 <em>새 원리의 예시</em>로 제시하지 않는다. 창세기 15:6이 이미 그렇게 말하고 있었다는 것이다. 복음은 성경에 덧붙은 것이 아니라 성경이 줄곧 말해 온 것의 성취로 놓인다.</p>
+
+    <h3>② 회계 장부의 두 방식</h3>
+    <p><span class="c x">S</span> Stott이 짚은 두 어휘—재정의 "세다"와 법정의 "전가하다"—가 이 대비의 두 얼굴이다. 4:4–5의 대비가 은혜의 문법을 정한다. 노동은 채무를 만들고 채무의 상환은 선물이 아니다. 믿음이 의로 <em>여겨진다</em>는 것은 없는 것을 있다고 우기는 일이 아니라, <span class="c f">M</span> 예수의 죽음이 지닌 속죄의 성격을 포함한 더 큰 사실의 집합을 셈에 넣는 일이다. 그러므로 칭의는 사실의 왜곡이 아니라 <strong>사실의 확장</strong>이다.</p>
+
+    <h3>③ 표지는 실상을 만들지 못한다</h3>
+    <p><span class="c x">C</span> Cranfield가 칠십인역 창세기 17:11에서 확인한 "표징" 어휘와 <span class="c x">S</span> Stott이 나눈 표와 인의 기능이 이 결론을 떠받친다. 4:9–12는 2:25–29의 원리를 전기(傳記)로 확인한다. 할례는 인침이지 근거가 아니다. 이 결론에서 아브라함은 두 겹의 조상이 되며, 할례자에게조차 그가 조상이 되는 조건은 혈통이 아니라 <em>믿음의 자취</em>다. 3:29–30의 "한 분 하나님"이 여기서 한 조상으로 구체화된다.</p>
+
+    <h3>④ 약속은 은혜에 속해야 확실하다</h3>
+    <p><span class="c x">C</span> Cranfield가 16절을 "모든 씨에게 성취가 <em>확실하도록</em>"으로 옮긴 것, 그리고 <span class="c x">S</span> Stott이 "율법은 나누고 은혜와 믿음의 복음만이 하나로 묶는다"고 정리한 것이 같은 지점을 가리킨다. 4:16이 왜 믿음이어야 하는지를 밝힌다. 확실성 때문이다. 율법에 매인 약속은 인간의 순종만큼만 확실하고, 3:20이 그 순종의 한계를 이미 판정했다. 은혜에 속할 때에만 약속이 "모든 후손에게 굳게" 선다. 믿음은 인간이 내놓는 최소한의 조건이 아니라 약속을 <strong>하나님 쪽에 묶어 두는</strong> 방식이다.</p>
+
+    <h3>⑤ 부활의 하나님을 믿는 믿음</h3>
+    <p><span class="c x">K</span> Kruse가 20–21절에서 읽어 낸 믿음의 규정—의심하지 않고, 견고하여지고, 영광을 돌리고, 능히 이루실 줄 확신함—이 이 믿음의 내용이다. 4:17과 4:24가 하나님을 같은 말로 규정하며 장을 감싼다. 죽은 자를 살리시고 없는 것을 부르시는 분이다. 아브라함이 마주한 것은 죽은 몸이었고 그리스도인이 마주하는 것은 죽었다가 살아나신 주다. 믿음의 <em>대상</em>이 같기에 두 시대의 믿음이 하나로 이어진다. <span class="c f">M</span> 그리고 그 믿음은 교리 목록에 대한 동의가 아니라 한 인격에 대한 신뢰이며, 의지의 내어맡김이다.</p>
+
+    <h3>⑥ 1장의 역상(逆像)</h3>
+    <p><span class="c x">S</span> Stott이 짚듯 아브라함은 현실에서 달아난 것이 아니라 두 고통스러운 사실을 <em>직시하고도</em> 하나님께 영광을 돌렸다. 4:20의 "하나님께 영광을 돌리며"가 1:21의 "하나님을 영화롭게도 아니하며"와 마주 선다. 1장의 인류는 아는 하나님을 다른 것과 바꾸었고, 아브라함은 볼 수 없는 약속 앞에서 하나님께 영광을 돌린다. 4장은 논증인 동시에 <strong>1장의 뒤집힌 초상</strong>이며, 5장의 "화평"은 이 뒤집힘 위에서 선언된다.</p>
+
+    <div class="back"><a href="./ch03.html">← 3장</a> · <a href="./ch05.html">5장 →</a> · <a href="./overview.html">종합 연구</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 4장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988) 직접 확인분. Hays는 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

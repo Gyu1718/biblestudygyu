@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 2장 심층 연구 — 하나님의 심판</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="2" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch02.html">성경 연구</a></div>
+  <div class="brand">로마서 2장 심층 연구</div>
+  <div class="brand-sub">하나님의 심판</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html" aria-current="page">2</a><a href="ch03.html">3</a><a href="ch04.html">4</a>
+    <a href="ch05.html">5</a><a href="ch06.html">6</a><a class="off" href="#">7</a><a class="off" href="#">8</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 판단하는 사람아 (2:1–5)</a>
+  <a class="lv1" href="#s2">2. 행한 대로 보응 (2:6–11)</a>
+  <a class="lv1" href="#s3">3. 듣는 자와 행하는 자 (2:12–16)</a>
+  <a class="lv1" href="#s4">4. 유대인이라 불리는 네가 (2:17–24)</a>
+  <a class="lv1" href="#s5">5. 마음의 할례 (2:25–29)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">οὐ γάρ ἐστιν προσωπολημψία παρὰ τῷ θεῷ</div>
+    <h1>로마서 2장 · 하나님의 심판</h1>
+    <p class="sub">1장의 고발이 방향을 튼다. 손가락질하던 자리에 앉은 사람에게 같은 판결이 돌아온다.</p>
+    <p class="meta">2:1–16 공평한 심판 · 2:17–29 율법과 할례 · 아홉 주석 대조 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c b">J</span> Jewett Herm.</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">고발의 화살이 방향을 바꾼다.</div>
+    </div>
+    <p><span class="c f">M</span> 1:18–3:20의 논증은 일반에서 특수로, 다시 일반으로 움직인다. 2장은 그 가운데 둘째 국면으로, 앞 장이 주로 이방인을 겨냥했다면 여기서는 유대인이 논의의 중심에 선다.</p>
+    <p><span class="c x">C</span> Cranfield는 2:1–3:20 전체의 기능을 한 문장으로 못 박는다. <strong>유대인도 복음의 판결에서 예외가 아님을 보이는 것</strong>, 곧 오직 한 사람 예수 그리스도를 제외하고는 아무도 하나님의 호의를 받을 만하지 않다는 판결에서 유대인 역시 예외가 아님을 보이는 것이다. 다만 그는 바울이 이 논증 안에서 <em>대응하는 긍정적 측면</em>도 함께 스케치하며, 명시하지는 않되 그리스도인 신자의 행위를 가리킴으로써 뒤에 올 논증을 예비한다고 본다.</p>
+    <p><span class="c f">M</span> 바울은 여기서 <strong>디아트리베</strong> 문체를 쓴다. 고대 여러 저자와 신약의 다른 곳(예: 야고보서)에서 확인되는 이 문체는 학생이나 논적과 나누는 <em>가상의 대화</em>라는 장치를 쓴다. 저자가 대화 상대에게 던지거나 상대가 던지는 잦은 질문, 예상되는 반론을 <span class="gw">μὴ γένοιτο</span>("결코 그럴 수 없다")로 단호히 물리치는 어법, 대화 상대를 2인칭으로 직접 부르는 호명이 그 요소다. <span class="c f">M</span> 최근 연구는 "디아트리베"가 장르라기보다 <em>문체</em>였음을 시사하며, 로마서의 일부(예: 2:1–3:8)가 이 문체를 쓴다고 해서 편지 전체를 디아트리베로 분류할 수는 없다.</p>
+    <p><span class="c x">K</span> Kruse는 2장을 "하나님은 편애하지 않으신다"(2:1–16)와 "율법과 할례를 가진 것이 면제를 주지 않는다"(2:17–29)로 나누고, 후자를 다시 "율법을 자랑하면서 지키지 않음"(2:17–24)과 "참된 할례"(2:25–29)로 가른다. 그는 이 장에 <em>보론</em>을 넷이나 붙인다. 2:14의 <span class="gw">φύσει</span> 용법, 율법이 요구하는 바를 행하는 이방인, 양심, 그리고 행하는 자를 위한 칭의다. 이 보론 배치 자체가 2장의 난제가 어디에 몰려 있는지를 보여 준다.</p>
+    <p><span class="c x">S</span> Stott은 1:18–3:20을 "타락한 이방 사회"(1:18–32), <strong>"비판적 도덕주의자"</strong>(2:1–16), "자신만만한 유대인"(2:17–3:8), "온 인류"(3:9–20)로 나눈다. 2:1의 대화 상대를 유대인으로 곧장 특정하지 않고 <em>도덕적으로 판단하는 자</em> 일반으로 두는 구분이며, 2:17에 가서야 그 정체가 밝혀진다는 본문의 순서를 존중한 것이다.</p>
+    <table>
+      <caption>표 1. 2장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th><th>겨냥</th></tr></thead>
+      <tbody>
+        <tr><td class="head">호명</td><td>2:1–5</td><td>판단하는 자에게 돌아온 정죄</td><td>익명의 대화 상대</td></tr>
+        <tr><td class="head">원칙</td><td>2:6–11</td><td>행한 대로 보응 · 외모로 취하지 않으심</td><td>유대인과 헬라인</td></tr>
+        <tr><td class="head">적용</td><td>2:12–16</td><td>율법을 듣는 자와 행하는 자 · 본성으로 행하는 이방인</td><td>율법 있는 자·없는 자</td></tr>
+        <tr><td class="head">고발</td><td>2:17–24</td><td>가르치는 자가 자신은 가르치지 않음</td><td>"유대인이라 불리는 네가"</td></tr>
+        <tr><td class="head">재정의</td><td>2:25–29</td><td>표면적 유대인과 이면적 유대인</td><td>할례의 의미</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">ὦ ἄνθρωπε</div>
+      <div class="eyebrow">2:1–5</div>
+      <h2>1. 판단하는 사람아</h2>
+      <div class="gloss">오 안트로페 — 이름 없는 대화 상대</div>
+    </div>
+
+    <div class="vs" id="v15" data-verses="1,2,3">
+      <span class="ref">2:1 — 되돌아온 "핑계하지 못할지니"</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>그러므로 남을 판단하는 사람아, 누구를 막론하고 네가 핑계하지 못할 것은 남을 판단하는 것으로 네가 너를 정죄함이니 판단하는 네가 같은 일을 행함이니라 <span class="vn">2</span>이런 일을 행하는 자에게 하나님의 심판이 진리대로 되는 줄 우리가 아노라 <span class="vn">3</span>이런 일을 행하는 자를 판단하고도 같은 일을 행하는 사람아, 네가 하나님의 심판을 피할 줄로 생각하느냐</p>
+      <p><span class="gw">Διὸ ἀναπολόγητος εἶ, ὦ ἄνθρωπε πᾶς ὁ κρίνων</span>. 1:20에서 이방 세계에 내려진 판결어 <span class="gw">ἀναπολόγητος</span>("핑계하지 못할")가 그대로 되돌아온다. 앞 장이 "그들"을 말했다면 여기서는 <strong>"너"</strong>다. <span class="c f">M</span> 복수형이 기대되는 자리에 단수 호명이 온 것은 바울이 디아트리베 문체를 쓰기 때문이며, 상대는 실재하는 특정 인물이 아니라 <em>가상의 대화 상대</em>다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 2:1의 "사람아"는 누구인가</span>
+      ① <b>유대인</b> — 2:17이 그 정체를 밝히므로 처음부터 유대인을 겨눈 것으로 읽는다. <span class="c x">C</span> Cranfield가 2:1–3:20 전체의 기능을 "유대인도 예외가 아님을 보이는 것"으로 규정하는 것이 이 노선이다. &nbsp;
+      ② <b>도덕적 판단자 일반</b> — <span class="c x">S</span> Stott은 2:1–16을 "비판적 도덕주의자"로 이름 붙여, 유대인 특정이 2:17에서야 이루어진다는 본문의 순서를 살린다. &nbsp;
+      ③ <b>문학적 장치</b> — <span class="c f">M</span> 디아트리베의 가상 대화 상대이므로 실재하는 집단을 곧바로 대입하지 않는다. &nbsp;
+      어느 쪽이든 익명 호명의 효과는 같다. 이름이 비어 있기에 <b>독자 누구든 그 자리에 앉을 수 있다.</b></div>
+      <p>고발의 논리는 단순하다. 판단하는 행위가 판단하는 자를 정죄한다. 그가 같은 일을 행하기 때문이다. 심판의 기준을 아는 것이 심판을 면제하지 않으며, 오히려 자기 판결의 근거가 된다.</p>
+    </div>
+
+    <div class="vs" id="v45" data-verses="4,5">
+      <span class="ref">2:4–5 — 인자하심과 쌓이는 진노</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">4</span>혹 네가 하나님의 인자하심이 너를 인도하여 회개하게 하심을 알지 못하여 그의 인자하심과 용납하심과 길이 참으심이 풍성함을 멸시하느냐 <span class="vn">5</span>다만 네 고집과 회개하지 아니한 마음을 따라 진노의 날 곧 하나님의 의로우신 심판이 나타나는 그 날에 임할 진노를 네게 쌓는도다</p>
+      <p>2:4는 세 낱말로 하나님의 오래 참으심을 편다. <span class="gw">χρηστότης</span>(인자하심), <span class="gw">ἀνοχή</span>(용납하심), <span class="gw">μακροθυμία</span>(길이 참으심)다. <span class="gw">ἀνοχή</span>는 3:25–26에서 "하나님이 길이 참으시는 중에 전에 지은 죄를 간과하심"으로 되돌아와, 이 참으심이 왜 십자가를 요구하는지를 설명하는 실이 된다.</p>
+      <p>세 낱말의 요지는 그 참으심이 <strong>회개로 인도하려는</strong> 것이라는 데 있다. 참으심을 면제로 오해하는 것이 곧 멸시다.</p>
+      <p>2:5의 동사가 그 오해의 결과를 그린다. <span class="gw">θησαυρίζεις</span>, 곧 <strong>쌓는다</strong>. 보물을 쌓듯 진노를 쌓는다는 역설적 표현이다. 쌓이는 곳은 "진노의 날 곧 하나님의 의로우신 심판이 나타나는 그 날"이며, <span class="gw">δικαιοκρισία</span>(의로우신 심판)는 신약에서 여기에만 나온다. <span class="c x">C</span> Cranfield는 이어지는 6–10절을 바로 이 "하나님의 의로우신 심판이 나타남"에 대한 <em>해설</em>로 읽는다.</p>
+      <div class="note"><span class="tt">진노는 인격적인가 — 1:18의 물음이 이어진다</span>
+      <span class="c x">S</span> Stott이 논쟁을 정리한다. C. H. Dodd는 바울이 진노 개념을 "하나님이 사람을 대하는 태도를 서술하기 위해서가 아니라 도덕적 우주 안에서 <b>불가피한 인과 과정</b>을 서술하기 위해" 유지한다고 결론지었다. A. T. Hanson은 <i>The Wrath of the Lamb</i>(1959)에서 이 견해를 확장해 하나님의 진노가 "전적으로 비인격적"이며 "역사 속에서 죄가 스스로 작동해 가는 불가피한 과정"이라고 주장했다. &nbsp;
+      <b>Stott의 반론</b> "하나님의 진노"라는 표현이 상대적으로 드물고 "진노" 또는 "그 진노"가 더 흔하다는 논거는 약하다. 바울이 <em>은혜</em>도 같은 방식으로 다루기 때문이다. 로마서 5장 끝에서 그는 "하나님의 은혜"(15절)와 그냥 "그 은혜"를 함께 쓴다. &nbsp;
+      <span class="c x">K</span> Kruse는 Manson의 정리를 인용한다. 사람과 하나님의 관계가 적대(<span class="gw">ἔχθρα</span>)라면 하나님과 사람의 대응 관계도 한 낱말, 곧 진노(<span class="gw">ὀργή</span>)로 서술된다. 이는 우리가 "분노"나 "격노"라 부를 만한 하나님 안의 정서적 상태가 아니라, Schlatter를 따라 <b>죄에 맞선 하나님의 의지</b>로 정의되어야 한다는 것이다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">κατὰ τὰ ἔργα</div>
+      <div class="eyebrow">2:6–11</div>
+      <h2>2. 행한 대로 보응</h2>
+      <div class="gloss">카타 타 에르가 — 그 행한 대로</div>
+    </div>
+
+    <div class="vs" id="v611" data-verses="6,7,8,9,10,11">
+      <span class="ref">2:6–11 — 교차 구조</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">6</span>하나님께서 각 사람에게 그 행한 대로 보응하시되 <span class="vn">7</span>참고 선을 행하여 영광과 존귀와 썩지 아니함을 구하는 자에게는 영생으로 하시고 <span class="vn">8</span>오직 당을 지어 진리를 따르지 아니하고 불의를 따르는 자에게는 진노와 분노로 하시리라 <span class="vn">9</span>악을 행하는 각 사람의 영에는 환난과 곤고가 있으리니 먼저는 유대인에게요 그리고 헬라인에게며 <span class="vn">10</span>선을 행하는 각 사람에게는 영광과 존귀와 평강이 있으리니 먼저는 유대인에게요 그리고 헬라인에게라 <span class="vn">11</span>이는 하나님께서 외모로 사람을 취하지 아니하심이라</p>
+      <p><span class="gw">ὃς ἀποδώσει ἑκάστῳ κατὰ τὰ ἔργα αὐτοῦ</span>. <span class="c x">C</span> Cranfield는 이 어구가 시편 62:12와 잠언 24:12의 언어를 되울린다고 지적하며, 하나님의 심판이 사람의 행위를 따른다는 확언이 성경에서 거듭 나타나고 <strong>신약에서도 구약 못지않게 강하게</strong> 확언된다고 본다. <span class="c x">K</span> Kruse는 칠십인역 시편 61:13(개역 62:12)의 문구가 바울의 표현과 거의 그대로 겹침을 보인다.</p>
+      <p>단락은 <strong>교차 배열</strong>로 짜인다. 선을 행하는 자에게 영생(7절) → 불의를 따르는 자에게 진노(8절) → 악을 행하는 각 사람에게 환난(9절) → 선을 행하는 각 사람에게 영광(10절). 바깥 두 항이 상급을, 안쪽 두 항이 형벌을 말한다. <span class="c x">K</span> Kruse는 Akio Ito의 <em>신명기적 읽기</em>를 소개한다. 2:7·10이 선을 행하는 자에게 복을 약속하고 2:8–9가 악을 행하는 자에게 심판을 선고하는 구조가, 신명기 27–30장의 축복과 저주 배치와 같다는 것이다.</p>
+      <p><span class="c x">S</span> Stott은 이 단락이 세 가지를 함께 다룬다고 본다. <em>우리가 구하는 것</em>(목표), <em>우리가 행하는 것</em>(행위), <em>우리가 가는 곳</em>(귀결)이다. 두 최종 운명은 "영생"(7절)과 "진노와 분노"(8절)로 명명되며, 이 갈림의 근거는 삶의 궁극적 목표와 실제 행위의 결합이다. 그는 이 구도가 산상수훈에서 예수께서 두 야망(물질적 안녕이냐 하나님 나라냐)과 두 행위를 나란히 놓으신 가르침과 매우 유사하다고 본다.</p>
+      <p>9절과 10절이 나란히 <strong>"먼저는 유대인에게요 그리고 헬라인에게"</strong>를 반복한다. 1:16에서 복음의 순서를 말하던 그 어구가, 여기서는 <em>심판</em>의 순서로 쓰인다. 특권이 곧 우선적 책임이다.</p>
+      <p>11절이 단락을 봉한다. <span class="gw">οὐ γάρ ἐστιν προσωπολημψία παρὰ τῷ θεῷ</span>. 개역개정의 "외모로 사람을 취하지 아니하심"은 히브리어 관용구 "얼굴을 들어 올리다"에서 온 표현으로, 법정에서 신분을 보고 판결을 기울이는 일을 가리킨다. <span class="c x">C</span> Cranfield는 6절의 요약 진술이 7–10절에서 펼쳐지고 11절에서 확증되는 구조로 읽는다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 행위에 따른 심판과 이신칭의</span>
+      2:6–11이 행위에 따른 심판을 말하고 3:28이 율법의 행위와 무관한 칭의를 말한다는 긴장은 로마서 해석의 오랜 물음이다. &nbsp;
+      <b>Cranfield의 열쇠</b> <span class="c x">C</span> 이 구절들을 바르게 이해하는 데 <b>절대적으로 긴요한</b> 것은, 6절의 진술이 율법주의적 의미로 주어진 것이 <em>아니며</em> 공로에 따른 보상의 주장이 <em>아니라는</em> 점, 그리고 7절과 10절이 거기 언급된 이들이 영생을 <em>번다</em>는 뜻을 함의하지 <em>않는다</em>는 점을 인정하는 것이다. 여기서 말하는 "선한 일"은 그런 성격의 것이 아니다. &nbsp;
+      <b>Stott의 정식</b> <span class="c x">S</span> 구원이 오직 믿음으로라면 왜 심판은 행위에 따르는가. "우리 마음속 구원하는 믿음의 있고 없음은 우리 삶에서 사랑의 선한 행위의 있고 없음으로 <b>드러난다</b>." 심판의 기준과 구원의 근거를 구분하는 고전적 해법이다. &nbsp;
+      <b>Käsemann의 정식</b> <span class="c x">K</span> Kruse가 인용한다. 결정적인 것은 행위에 따른 심판 교리를 칭의 <em>위에</em> 두지 않고 거꾸로 칭의의 빛 아래서 이해하는 것이다. 주해의 어려움은 대체로 선물로 받은 하나님의 의조차 <b>권세의 성격</b>을 지닌다는 사실을 충분히 고려하지 못한 데서 온다. 선물과 주시는 분, 주시는 분과 심판자를 근본적으로 갈라 놓기 때문이다. 선물이 결국 땅에서 그리스도의 주 되심의 표지이자 내용이라면, 우리는 더 이상 우리 자신의 뜻과 권리로 살 수 없고 늘 책임과 응답 가운데 서게 된다. &nbsp;
+      <b>다른 해법들</b> ④ 가정법으로 보아 실제로 이 기준을 통과할 사람은 없다는 읽기 ⑤ 2:14–15의 이방인을 이방인 <em>그리스도인</em>으로 보아 이 단락이 복음 아래 있는 자를 말한다는 읽기.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">φύσει</div>
+      <div class="eyebrow">2:12–16</div>
+      <h2>3. 듣는 자와 행하는 자</h2>
+      <div class="gloss">퓌세이 — 본성으로</div>
+    </div>
+
+    <div class="vs" id="v1213" data-verses="12,13">
+      <span class="ref">2:12–13 — 율법의 유무가 면제가 아니다</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">12</span>무릇 율법 없이 범죄한 자는 또한 율법 없이 망하고 무릇 율법이 있고 범죄한 자는 율법으로 말미암아 심판을 받으리라 <span class="vn">13</span>하나님 앞에서는 율법을 듣는 자가 의인이 아니요 오직 율법을 행하는 자라야 의롭다 하심을 얻으리니</p>
+      <p>12절이 두 무리를 나란히 놓는다. <span class="gw">ἀνόμως</span>(율법 없이) 범죄한 자는 율법 없이 망하고, <span class="gw">ἐν νόμῳ</span>(율법 안에서) 범죄한 자는 율법으로 심판받는다. 율법의 유무가 심판의 <em>방식</em>을 가르지만 심판 자체를 면하게 하지는 않는다.</p>
+      <p>13절이 원칙을 못 박는다. <span class="gw">οὐ γὰρ οἱ ἀκροαταὶ νόμου δίκαιοι παρὰ [τῷ] θεῷ, ἀλλ᾽ οἱ ποιηταὶ νόμου δικαιωθήσονται</span>. 듣는 자가 아니라 행하는 자다. <span class="c x">C</span> Cranfield는 13절 후반의 "율법을 행하는 자"라는 표현이 10절의 "헬라인"을 배제하지 않는다는 점을 짚는다. 곧 이 원칙은 유대인에게만 적용되는 것이 아니다.</p>
+      <p><span class="c t">D</span> Dunn은 2장의 디아트리베가 겨냥하는 목표를 놓치면 이 대목의 해석이 엉킨다고 본다. 그 목표는 <strong>유대인의 자만</strong>, 곧 이스라엘이 율법의 백성이라는 사실이 하나님의 편애를 뜻한다는 전제를 무너뜨리는 데 있다. 바울의 요지는 율법이 하나님이 세우신 <em>보편적</em> 기준으로 기능해야지, 유대인과 이방인을 가르는 정체성 표지로 축소되거나 할례 같은 의례로 피상적으로 규정되어서는 안 된다는 것이다.</p>
+    </div>
+
+    <div class="vs" id="v1416" data-verses="14,15,16">
+      <span class="ref">2:14–15 — 본성으로 율법의 일을 행하는 이방인</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">14</span>(율법 없는 이방인이 본성으로 율법의 일을 행할 때에는 이 사람은 율법이 없어도 자기가 자기에게 율법이 되나니 <span class="vn">15</span>이런 이들은 그 양심이 증거가 되어 그 생각들이 서로 혹은 고발하며 혹은 변명하여 그 마음에 새긴 율법의 행위를 나타내느니라) <span class="vn">16</span>곧 나의 복음에 이른 바와 같이 하나님이 예수 그리스도로 말미암아 사람들의 은밀한 것을 심판하시는 그 날이라</p>
+      <p><span class="gw">ὅταν γὰρ ἔθνη τὰ μὴ νόμον ἔχοντα φύσει τὰ τοῦ νόμου ποιῶσιν</span>. 개역개정이 괄호로 묶은 이 두 절은 2장에서 가장 논쟁이 많은 대목이며, <span class="c x">K</span> Kruse가 보론을 세 개(<span class="gw">φύσει</span> 용법 · 율법의 일을 행하는 이방인 · 양심)나 붙일 만큼 난제가 몰려 있다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 이 이방인은 누구인가</span>
+      <span class="c x">C</span> Cranfield가 검토해야 할 제안들을 열거한다. &nbsp;
+      ① 일부 이방인이 <b>자연법에 근거해</b> 실제로 하나님의 율법의 요구를 이행하여 그분의 호의를 <em>얻는다</em>는 읽기. &nbsp;
+      ② 바울이 <b>가정적으로만</b> 말하고 있으며, 그 목적은 하나님 앞에서 유대인과 이방인의 본질적 평등을 부각하는 데 있다는 읽기. &nbsp;
+      ③ 하나님만 아시는 <b>은밀하고 감춰진 믿음</b>이 존재함을 가리킨다는 읽기. &nbsp;
+      ④ <span class="c f">M</span> Moo는 여기 말하는 이방인이 특정 개인들도 극소수도 아니고 <em>이방인 일반</em>을 가리키며, 그중 일부가 "본성으로 율법의 일을 행한다"고 본다. 일부 주석가처럼 <span class="gw">φύσει</span>를 앞의 "율법 없는 이방인"에 붙여 그리스도 이전과 이후의 이방인을 구별하는 읽기(회심 후 성령의 사역으로 율법을 <em>가지게</em> 된다)보다, "본성으로"를 동사 "행한다"에 붙이는 편이 더 자연스러우며 주요 번역들도 그렇게 옮긴다. &nbsp;
+      ⑤ <span class="c x">S</span> Stott은 이것이 <b>보편적 주장이 아님</b>을 문법에서 읽는다. 바울이 정관사를 쓰지 않아 "그 이방인들"이라 하지 않았으므로, 어떤 이방인들이 어떤 때에 율법이 요구하는 것의 일부를 행한다는 말일 뿐이다. 그리고 이는 인류학자들이 어디서나 확인해 온 <em>관찰 가능한 사실</em>이다. 모든 사람이 사기꾼·악당·도둑·간음자·살인자인 것은 아니며, 어떤 이들은 부모를 공경하고 생명의 존엄을 인정하며 배우자에게 신실하고 정직을 실천하고 진실을 말한다.</div>
+      <div class="caveat"><span class="tt">어휘 — <span class="gw">φύσει</span>의 용례 폭</span><span class="c x">K</span> Kruse가 바울 문헌의 <span class="gw">φύσις/φυσικός</span> 어군을 정리한다. ① <b>출생이나 성품</b>을 가리킬 때 — "우리는 본래 유대인이요 이방 죄인이 아니로되"(갈 2:15), "본질상 진노의 자녀"(엡 2:3). ② <b>사물의 자연적 질서</b>를 가리킬 때 — "원 가지들"과 "본질상 돌감람나무", "본성을 거슬러 접붙임을 받았으니"(롬 11:21–24). 2:14의 <span class="gw">φύσει</span>가 어느 쪽에 가까운지에 따라 위 쟁점의 답이 갈린다.</div>
+      <p>15절이 그 근거를 셋으로 편다. 마음에 새긴 율법의 행위, 함께 증언하는 양심, 서로 고발하거나 변명하는 생각들이다. <span class="c x">C</span> Cranfield의 번역이 뉘앙스를 살린다. "그들은 율법이 요구하는 그 일이 자기 마음에 기록되어 있다는 사실을 <em>실제로 입증한다</em>." 이 셋은 이방인이 구원에 이르는 앎을 가졌다는 뜻이 아니라, <strong>심판대 앞에서 책임을 물을 수 있는 근거</strong>가 그들에게도 있다는 뜻이다.</p>
+      <p>16절이 이 모든 것의 시점을 정한다. "하나님이 예수 그리스도로 말미암아 사람들의 은밀한 것을 심판하시는 그 날"이며, 바울은 그것을 <strong>"나의 복음"</strong>이라 부른다. 심판의 날이 복음의 일부로 선언된다. <span class="c x">S</span> Stott은 이 절이 심판의 날에 관해 세 가지를 더한다고 보며, "심판을 축소하면 복음을 값싸게 만든다"고 정리한다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">Ἰουδαῖος ἐπονομάζῃ</div>
+      <div class="eyebrow">2:17–24</div>
+      <h2>4. 유대인이라 불리는 네가</h2>
+      <div class="gloss">유다이오스 에포노마제 — 이름과 실상</div>
+    </div>
+
+    <div class="vs" id="v1720" data-verses="17,18,19,20">
+      <span class="ref">2:17–20 — 다섯 겹의 자부</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">17</span>유대인이라 불리는 네가 율법을 의지하며 하나님을 자랑하며 <span class="vn">18</span>율법의 교훈을 받아 하나님의 뜻을 알고 지극히 선한 것을 분간하며 <span class="vn">19</span>맹인의 길을 인도하는 자요 어둠에 있는 자의 빛이요 <span class="vn">20</span>율법에 있는 지식과 진리의 모본을 가진 자로서 어리석은 자의 교사요 어린 아이의 선생이라고 스스로 믿으니</p>
+      <p>이제 대화 상대의 정체가 드러난다. <span class="gw">Εἰ δὲ σὺ Ἰουδαῖος ἐπονομάζῃ</span>. <span class="c x">C</span> Cranfield의 번역은 조건절의 무게를 살린다. "그러나 네가 '유대인'이라는 <em>이름</em>을 가지고 율법에 의지하며 하나님을 자랑하고…" 이름과 실상의 간격이 이 단락의 주제임을 첫 절이 이미 예고한다.</p>
+      <p>17–20절은 긴 조건절 하나로, 그 대화 상대가 스스로 인정하는 자부를 차곡차곡 쌓는다. 율법을 의지하고 하나님을 자랑하며, 뜻을 알고 지극히 선한 것을 분간하며, 맹인의 인도자요 어둠 속에 있는 자의 빛이요, 어리석은 자의 교사요 어린 아이의 선생이다.</p>
+      <p>이 목록은 조롱이 아니다. 열거된 항목은 실제로 이스라엘이 열방을 향해 맡은 소명의 언어이며(사 42:6–7의 빛 이미지), 바울은 그것을 부정하지 않는다. 문제는 그다음에 온다.</p>
+    </div>
+
+    <div class="vs" id="v2124" data-verses="21,22,23,24">
+      <span class="ref">2:21–24 — 네 개의 반문</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">21</span>그러면 다른 사람을 가르치는 네가 네 자신은 가르치지 아니하느냐 도둑질하지 말라 선포하는 네가 도둑질하느냐 <span class="vn">22</span>간음하지 말라 말하는 네가 간음하느냐 우상을 가증히 여기는 네가 신전 물건을 도둑질하느냐 <span class="vn">23</span>율법을 자랑하는 네가 율법을 범함으로 하나님을 욕되게 하느냐 <span class="vn">24</span>기록된 바와 같이 하나님의 이름이 너희 때문에 이방인 중에서 모독을 받는도다</p>
+      <p>긴 조건절이 네 개의 물음으로 무너진다. 가르치는 네가 네 자신은 가르치지 않느냐, 도둑질하지 말라 선포하는 네가 도둑질하느냐, 간음하지 말라 하는 네가 간음하느냐, 우상을 가증히 여기는 네가 신전 물건을 도둑질하느냐. 십계명의 조항이 차례로 호출된다.</p>
+      <p>23절이 요지를 압축한다. <strong>율법을 자랑하는 자가 율법을 범함으로 하나님을 욕되게 한다</strong>. 그리고 24절이 이사야 52:5(에스겔 36:20 참조)를 끌어와 판결을 확증한다. "하나님의 이름이 너희 때문에 이방인 중에서 모독을 받는도다." 이스라엘의 소명은 열방 가운데 하나님의 이름을 높이는 것이었는데, 그 결과가 정반대로 뒤집혔다는 고발이다.</p>
+      <p><span class="c x">K</span> Kruse는 2:17–29 전체를 <em>깨어진 언약에서 마음의 할례로</em> 나아가는 상호텍스트적 주해로 읽는 연구(Berkley)를 소개하며, 이 단락이 예레미야와 에스겔의 언약 갱신 본문을 바탕에 깔고 있다고 본다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">περιτομὴ καρδίας</div>
+      <div class="eyebrow">2:25–29</div>
+      <h2>5. 마음의 할례</h2>
+      <div class="gloss">페리토메 카르디아스 — 이면적 유대인</div>
+    </div>
+
+    <div class="vs" id="v2527" data-verses="25,26,27">
+      <span class="ref">2:25–27 — 할례와 무할례의 자리바꿈</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">25</span>네가 율법을 행하면 할례가 유익하나 만일 율법을 범하면 네 할례는 무할례가 되느니라 <span class="vn">26</span>그런즉 무할례자가 율법의 규례를 지키면 그 무할례를 할례와 같이 여길 것이 아니냐 <span class="vn">27</span>또한 본래 무할례자가 율법을 온전히 지키면 율법 조문과 할례를 가지고 율법을 범하는 너를 정죄하지 아니하겠느냐</p>
+      <p>25절이 조건을 건다. 율법을 행하면 할례가 유익하나, 율법을 범하면 그 할례는 <strong>무할례가 된다</strong>. 표지가 실상 없이 홀로 서지 못한다는 것이다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 할례가 <em>무효화</em>되는가</span><span class="c x">C</span> Cranfield는 흔한 오독을 경계한다. 25절 후반을 불순종한 유대인의 할례가 <b>단순히 무효가 된다</b>는 뜻으로 이해하는 일이 잦으나, 그렇게 읽어서는 안 된다는 것이다. 근거는 문맥에 있다. 바울이 3:1의 물음("유대인의 나음이 무엇이며")에 3:2에서 "범사에 많으니"로 답하고, 3:4에서 이스라엘의 불신이 하나님의 신실하심을 무효로 만든다는 제안을 단호히 물리치기 때문이다. 그러므로 표면적 유대인과 이면적 유대인, 겉의 할례와 마음의 할례를 가르는 이 구분은 <b>3:1–4, 4:9–12, 9:1–11:36과 함께</b> 읽어야 한다. 바울은 범법자의 할례가 아무 유익이 없다고 말하지 않았고, 할례의 성례적 성격을 제거하지도 않았다.</div>
+      <p>26–27절이 그 논리를 뒤집어 적용한다. 무할례자가 율법의 규례를 지키면 그 무할례가 할례로 여겨지고, 나아가 율법 조문과 할례를 가지고도 율법을 범하는 자를 <em>정죄하게</em> 된다. 표지를 가진 자가 표지 없는 자에게 판결을 받는 구도다. 2:1에서 판단하던 자가 여기서 판단받는 자리에 선다.</p>
+    </div>
+
+    <div class="vs" id="v2829" data-verses="28,29">
+      <span class="ref">2:28–29 — 표면과 이면</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">28</span>무릇 표면적 유대인이 유대인이 아니요 표면적 육신의 할례가 할례가 아니니라 <span class="vn">29</span>오직 이면적 유대인이 유대인이며 할례는 마음에 할지니 영에 있고 율법 조문에 있지 아니한 것이라 그 칭찬이 사람에게서가 아니요 다만 하나님에게서니라</p>
+      <p><span class="gw">οὐ γὰρ ὁ ἐν τῷ φανερῷ Ἰουδαῖός ἐστιν … ἀλλ᾽ ὁ ἐν τῷ κρυπτῷ Ἰουδαῖος, καὶ περιτομὴ καρδίας ἐν πνεύματι οὐ γράμματι</span>. 헬라어의 대비는 <span class="gw">ἐν τῷ φανερῷ</span>(드러난 데서)와 <span class="gw">ἐν τῷ κρυπτῷ</span>(감춰진 데서)이며, 개역개정은 이를 "표면적"과 "이면적"으로 옮겼다. <span class="c x">C</span> Cranfield는 이를 "가장 온전한 의미에서의 유대인"이라는 표현으로 풀어, 정도의 문제가 아니라 <em>충만한 실현</em>의 문제임을 드러낸다.</p>
+      <p><span class="c x">S</span> Stott은 이 개념이 바울의 창안이 아님을 구약에서 확인한다. 오경에서 하나님은 백성의 "할례받지 못한 마음"을 탄식하시고, 마음에 할례를 행하라 호소하시며, 마침내 <em>친히</em> 그것을 행하여 그들이 온 존재로 자기를 사랑하게 하시겠다고 약속하신다. 선지자들도 같은 이미지를 쓴다. 이방인은 "마음과 육체에 할례를 받지 못한 자"로 지목되고, "육체만 할례를 받고 마음은 할례받지 못한" 이들은 벌을 받으며, 야훼는 자기 백성에게 마음에 할례를 행하라 부르시고 "새 마음"을 주겠다고 약속하신다.</p>
+      <p><span class="c x">S</span> 다만 Stott은 바울이 그 이상을 바라본다고 본다. 육체의 예식을 단지 <em>보완</em>하는 데 그치지 않고 <strong>온전히 대체하는</strong> 마음의 할례다. 그리고 그것은 "영에 있고 율법 조문에 있지 아니한"(29절) 것, 곧 외적 기록된 법으로는 결코 이룰 수 없는 성령의 내적 사역이다. <span class="gw">γράμμα</span>(문자·조문)와 <span class="gw">πνεῦμα</span>(영)의 이 대비가 바울에게 옛 언약(외적 율법)과 새 언약(성령의 선물)의 차이를 요약하며, 그는 여기서 7:6과 8:4, 나아가 8장 전반부 전체에서 펼칠 것을 미리 내놓는다.</p>
+      <p><span class="c x">K</span> Kruse의 성령 목록도 이를 뒷받침한다. 로마서에서 성령의 활동이 <em>신자의 삶</em>과 무관하게 언급되는 두 곳이 1:4(부활로 능력 있는 하나님의 아들로 선포되심)와 <strong>2:29(성령이 이루시는 참된 마음의 할례)</strong>이며, 나머지는 모두 신자 안에서의 사역이다.</p>
+      <p>마지막 어구가 장 전체의 방향을 정한다. "그 칭찬이 사람에게서가 아니요 다만 하나님에게서니라." 2:17에서 시작된 "자랑"의 문제가 여기서 <em>칭찬의 출처</em> 문제로 재정의되며, 3:27의 "자랑할 데가 어디냐"로 이어진다. <span class="gw">Ἰουδαῖος</span>("유대인")가 "찬송하다"를 뜻하는 히브리어 어근(유다, <span class="gw">יהודה</span>)과 이어진다는 점을 보면, 이 결말은 이름 자체에 대한 언어유희로도 읽힌다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 2장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">2:1</td><td>롬 1:20</td><td>"핑계하지 못할" — 이방에서 판단하는 자에게로</td><td>본문</td></tr>
+        <tr><td class="head">2:4</td><td>롬 3:25–26; 9:22; 벧후 3:9</td><td>길이 참으심(<span class="gw">ἀνοχή</span>)과 회개</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:5</td><td>롬 5:9; 계 6:17; 습 1:14</td><td>진노의 날</td><td>NA28 난외</td></tr>
+        <tr><td class="head">2:6</td><td>시 62:12; 잠 24:12; 렘 17:10; 마 16:27</td><td>"그 행한 대로 보응하시되"</td><td><span class="c x">C</span> <span class="c x">K</span></td></tr>
+        <tr><td class="head">2:7–10</td><td>신 27–30장</td><td>축복과 저주의 신명기적 배치</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">2:9·10</td><td>롬 1:16</td><td>"먼저는 유대인에게요 그리고 헬라인에게"</td><td>본문</td></tr>
+        <tr><td class="head">2:11</td><td>신 10:17; 행 10:34; 엡 6:9; 골 3:25; 벧전 1:17</td><td>외모로 취하지 아니하심</td><td>NA28 난외</td></tr>
+        <tr><td class="head">2:13</td><td>마 7:21; 약 4:11; 롬 3:19; 10:5</td><td>듣는 자가 아니라 행하는 자</td><td>NA28 난외</td></tr>
+        <tr><td class="head">2:14</td><td>갈 2:15; 엡 2:3; 롬 11:21–24</td><td><span class="gw">φύσει</span> 어군의 용례 폭</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">2:15</td><td>롬 9:1; 13:5</td><td>양심(<span class="gw">συνείδησις</span>)</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">2:16</td><td>롬 16:25; 딤후 2:8; 행 10:42; 고전 4:5</td><td>"나의 복음" · 은밀한 것의 심판</td><td>NA28 난외</td></tr>
+        <tr><td class="head">2:19</td><td>사 42:6–7; 마 15:14; 눅 18:9</td><td>맹인의 인도자 · 어둠의 빛</td><td>NA28 난외</td></tr>
+        <tr><td class="head">2:24</td><td>사 52:5; 겔 36:20</td><td>이방 중에서 모독받는 이름</td><td>NA28 난외</td></tr>
+        <tr><td class="head">2:25</td><td>갈 5:3; 고전 7:19; 롬 3:1–4</td><td>할례의 조건성 — 무효화되지 않음</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">2:29</td><td>신 10:16; 30:6; 렘 4:4; 9:25; 골 2:11</td><td>마음의 할례</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">2:29</td><td>롬 7:6; 8:4; 고후 3:6</td><td>영과 율법 조문의 대비</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">2:29</td><td>롬 1:4</td><td>신자의 삶 밖에서 언급되는 성령의 두 자리</td><td><span class="c x">K</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 판단이 판결이 된다</h3>
+    <p>2장은 새 주제로 넘어가지 않는다. 1장의 판결어를 그대로 집어 들어 방향만 돌린다. 악을 알아보는 능력이 그 악에서 면제해 주지 않으며, 오히려 자기를 정죄할 근거가 된다. <span class="c f">M</span> 디아트리베의 익명 호명이 이 전환을 가능하게 한다. 실명이 없기에 독자 누구든 그 자리에 앉을 수 있으며, <span class="c x">S</span> Stott이 이 단락을 "비판적 도덕주의자"로 이름 붙인 것도 그 때문이다.</p>
+
+    <h3>② 공평이라는 원칙</h3>
+    <p>2:6–11의 교차 구조가 한 문장으로 닫힌다. 하나님께서 외모로 사람을 취하지 않으신다. 심판의 공평은 특권의 폐기가 아니라 <em>특권의 재해석</em>이다. "먼저는 유대인에게"가 복음의 순서이자 심판의 순서로 함께 놓이며, 받은 것이 많은 자리가 곧 물음이 먼저 오는 자리가 된다. <span class="c x">K</span> Kruse가 소개한 신명기적 읽기가 옳다면, 이 배치는 언약 백성에게 축복과 저주를 함께 제시하던 오랜 형식을 그대로 이어받은 것이다.</p>
+
+    <h3>③ 행위 심판과 칭의의 긴장</h3>
+    <p>이 장이 남기는 가장 큰 물음이다. <span class="c x">C</span> Cranfield는 6절이 <em>율법주의적 의미로</em> 주어진 것이 아님을 인정하는 것이 절대적으로 긴요하다고 못 박고, <span class="c x">S</span> Stott은 믿음의 있고 없음이 행위로 <em>드러난다</em>는 정식으로 답하며, <span class="c x">K</span> Kruse가 인용한 Käsemann은 행위 심판을 칭의 <em>위에</em> 두지 말고 칭의의 빛 아래서 읽으라고 요구한다. 세 해법이 다른 각도에서 같은 곳을 겨눈다. 선물로 받은 의가 <strong>권세의 성격</strong>을 지니므로, 그 선물을 받은 자는 더 이상 자기 뜻대로 살 수 없고 책임 가운데 선다는 것이다.</p>
+
+    <h3>④ 앎이 아니라 행함</h3>
+    <p>2:13의 "듣는 자가 아니요 행하는 자"는 2:17–24의 고발로 구체화된다. 가르치는 자가 자신을 가르치지 않고, 자랑하는 율법을 범한다. <span class="c t">D</span> Dunn의 읽기에서 이 고발의 표적은 개인의 위선이라기보다 율법을 <strong>정체성 표지</strong>로 축소하는 태도다. 율법이 보편적 기준으로 서면 그것을 가진 자가 먼저 그 기준 앞에 선다.</p>
+
+    <h3>⑤ 소명의 역전</h3>
+    <p>2:19–20의 자부 목록과 2:24의 이사야 인용이 한 쌍을 이룬다. 열방의 빛이 되라는 소명이, 열방 가운데 하나님의 이름이 모독받는 결과로 뒤집혔다. 심판의 무게가 여기서 가장 무겁다. 실패한 것이 개인의 윤리만이 아니라 <em>맡겨진 사명</em>이기 때문이다.</p>
+
+    <h3>⑥ 표지에서 실상으로 — 그러나 표지의 폐기는 아니다</h3>
+    <p>2:25–29가 정체성의 기준을 옮긴다. 다만 <span class="c x">C</span> Cranfield의 경고를 함께 새겨야 한다. 이 단락은 할례의 성례적 성격을 제거하지 않으며, 3:1–4와 9–11장을 함께 읽을 때에만 바르게 이해된다. 바울이 하는 일은 표지의 <em>폐기</em>가 아니라 표지와 실상의 <em>순서 확정</em>이다. <span class="c x">S</span> Stott이 짚듯 마음의 할례는 구약이 이미 요구한 것이며, 바울이 더하는 것은 그것이 육체의 예식을 보완하는 데 그치지 않고 <strong>대체한다</strong>는 점, 그리고 그 일이 성령의 사역이라는 점이다.</p>
+
+    <h3>⑦ 8장을 향해 놓인 다리</h3>
+    <p>2:29의 <span class="gw">γράμμα</span>와 <span class="gw">πνεῦμα</span> 대비가 이 장에서 가장 멀리 내다보는 문장이다. <span class="c x">S</span> Stott의 정리대로 이 짝은 옛 언약과 새 언약의 차이를 요약하며 7:6과 8:4에서 본격적으로 전개된다. <span class="c x">K</span> Kruse가 짚듯 2:29는 로마서에서 성령의 사역이 신자의 삶 밖에서 언급되는 두 자리 가운데 하나다. 심판을 논하는 장이 정작 그 끝에서 <em>성령</em>을 부른다는 사실이, 이 편지가 고발로 끝나지 않으리라는 첫 신호가 된다.</p>
+
+    <h3>⑧ 3장으로 열린 물음</h3>
+    <p>2장이 끝나는 자리에서 곧바로 반론이 예상된다. 표면적 유대인이 유대인이 아니라면 <em>유대인의 나음이 무엇인가</em>. 3:1이 그 물음을 그대로 받아 적고, 3:2가 "범사에 많으니"로 답한다. <span class="c h">G</span> 그리고 그 물음의 끝에서 바울은 유대인과 헬라인이 모두 <strong>죄 아래</strong> 있다는 선언에 이른다(3:9). Gaventa의 읽기에서 이 "죄 아래"는 개별 악행의 총합이 아니라 사로잡힘이며, 5:12–21에서 아담과 온 세계를 뒤덮은 권세로 추적된다.</p>
+
+    <div class="back"><a href="./ch01.html">← 1장</a> · <a href="./ch03.html">3장 →</a> · <a href="./overview.html">종합 연구</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 2장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988)·Kruse(PNTC 2012)·Cranfield(<i>Shorter</i>)·Stott(BST)·Gaventa(NTL 2024) 직접 확인분. Käsemann·Manson·Schlatter·Dodd·Hanson·Snodgrass·Ito·Berkley는 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

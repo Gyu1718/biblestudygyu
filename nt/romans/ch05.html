@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로마서 5장 심층 연구 — 화평과 두 사람</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<!-- 성서 연구 서고 공통 기능: 테마·연구 링크·성경 본문 팝오버 -->
+<link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+<link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+<link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body data-book="rom" data-chapter="5" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><a href="./study/ch05.html">성경 연구</a></div>
+  <div class="brand">로마서 5장 심층 연구</div>
+  <div class="brand-sub">화평과 두 사람</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="ch01.html">1</a><a href="ch02.html">2</a><a href="ch03.html">3</a><a href="ch04.html">4</a>
+    <a href="ch05.html" aria-current="page">5</a>
+    <a href="ch06.html">6</a><a class="off" href="#">7</a><a class="off" href="#">8</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 화평을 누리자 (5:1–5)</a>
+  <a class="lv1" href="#s2">2. 사랑의 확증 (5:6–11)</a>
+  <a class="lv1" href="#s3">3. 한 사람으로 말미암아 (5:12–14)</a>
+  <a class="lv1" href="#s4">4. 더욱 (5:15–19)</a>
+  <a class="lv1" href="#s5">5. 넘치는 은혜 (5:20–21)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">πολλῷ μᾶλλον</div>
+    <h1>로마서 5장 · 화평과 두 사람</h1>
+    <p class="sub">칭의의 논증이 끝나고 그 결과가 열린다. 그리고 논의의 지평이 아담에게까지 넓어진다.</p>
+    <p class="meta">5:1–11 화평·소망·사랑 · 5:12–21 아담과 그리스도 · 개역개정 4판 · NA28</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Moo NICNT²</span>
+    <span><span class="c t">D</span> Dunn WBC</span>
+    <span><span class="c h">G</span> Gaventa NTL</span>
+    <span><span class="c k">B</span> Barth</span>
+    <span><span class="c x">K</span> Kruse PNTC</span>
+    <span><span class="c x">L</span> Longenecker NIGTC</span>
+    <span><span class="c x">C</span> Cranfield</span>
+    <span><span class="c x">S</span> Stott BST</span>
+  </div>
+
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">전환점에 놓인 장.</div>
+    </div>
+    <p>5장은 로마서의 큰 이음매에 놓인다. 앞을 향하면 1:18–4:25의 칭의 논증이 맺는 열매이고, 뒤를 향하면 5–8장의 새 생명 단락이 여는 문이다. <span class="c t">D</span> Dunn은 5:1–21 전체를 "믿음의 새 관점"이라는 표제 아래 다루며, 5:1–11을 믿는 자의 현재와 미래에 관한 결론으로, 5:12–21을 인류를 향한 하나님의 의로운 목적에 관한 결론으로 읽는다.</p>
+    <div class="note"><span class="tt">Cranfield의 구조 — 5–8장은 "살리라"의 해설</span><span class="c x">C</span> Cranfield는 5:1–8:39 전체에 <b>"믿음으로 의로운 자에게 약속된 생명 — '살리라'의 해설"</b>이라는 표제를 붙인다. 1:17에서 인용된 하박국 2:4의 세 낱말 "의인 · 믿음 · 살리라" 가운데 앞의 둘이 1:18–4:25에서 다루어졌고, 남은 <em>"살리라"</em>가 5–8장에서 펼쳐진다는 것이다. 그 아래 그는 네 항목을 둔다. <b>하나님과의 화평으로 특징지어지는 생명</b>(5:1–21), <b>성화로 특징지어지는 생명</b>(6:1–23), <b>율법의 정죄에서 자유로운 생명</b>(7:1–25), 그리고 8장이다. 이 구조는 5–8장을 새 주제의 시작이 아니라 <em>편지 첫 주제 진술의 세 번째 낱말</em>을 푸는 작업으로 읽게 한다.</div>
+      <p><span class="c h">G</span> Gaventa는 여기서 어휘의 변화를 짚는다. 1–4장을 지배하던 민족 언어(유대인·헬라인, 아브라함, 다윗)가 5–8장에서 <strong>사라진다</strong>. 그 자리에 아담과 온 인류, 죄와 사망이라는 우주적 범위가 들어선다. 5:12–21에서 논증은 민족의 문제를 넘어 보편적·우주적인 것으로 다시 주조된다.</p>
+    <table>
+      <caption>표 1. 5장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th><th>열쇠말</th></tr></thead>
+      <tbody>
+        <tr><td class="head">결과</td><td>5:1–5</td><td>화평·은혜에 들어감·환난 중의 즐거움</td><td>소망(<span class="gw">ἐλπίς</span>)</td></tr>
+        <tr><td class="head">근거</td><td>5:6–11</td><td>연약할 때·죄인 되었을 때·원수 되었을 때</td><td>더욱(<span class="gw">πολλῷ μᾶλλον</span>)</td></tr>
+        <tr><td class="head">비교 ①</td><td>5:12–14</td><td>한 사람으로 죄와 사망이 들어옴</td><td>모형(<span class="gw">τύπος</span>)</td></tr>
+        <tr><td class="head">비교 ②</td><td>5:15–19</td><td>같지 아니하니 — 다섯 겹의 대조</td><td>더욱·넘침</td></tr>
+        <tr><td class="head">귀결</td><td>5:20–21</td><td>율법이 들어온 것 · 왕 노릇</td><td>왕 노릇(<span class="gw">βασιλεύω</span>)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">εἰρήνην ἔχομεν</div>
+      <div class="eyebrow">5:1–5</div>
+      <h2>1. 화평을 누리자</h2>
+      <div class="gloss">에이레넨 에코멘 — 한 글자가 가르는 문장</div>
+    </div>
+
+    <div class="vs" id="v12" data-verses="1,2">
+      <span class="ref">5:1–2 — 의롭다 하심의 세 열매</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>그러므로 우리가 믿음으로 의롭다 하심을 받았으니 우리 주 예수 그리스도로 말미암아 하나님과 화평을 누리자 <span class="vn">2</span>또한 그로 말미암아 우리가 믿음으로 서 있는 이 은혜에 들어감을 얻었으며 하나님의 영광을 바라고 즐거워하느니라</p>
+      <p>1절은 로마서에서 가장 널리 알려진 <strong>사본 이문</strong>을 품고 있다. <span class="c f">M</span> 사본 전승은 직설법 <span class="gw">ἔχομεν</span>("우리가 화평을 누린다")과 권유형 가정법 <span class="gw">ἔχωμεν</span>("화평을 누리자")을 모두 증언한다. 두 형태는 모음 하나 차이이며, 고대에는 비슷하게 소리 나는 모음이 혼동되곤 했다.</p>
+      <p><span class="c f">M</span> <strong>외적 증거</strong>는 가정법이 더 강하다. 가장 중요한 알렉산드리아 대문자 사본 ℵ와 B에서 원래 독법이었을 가능성이 있고(초기 교정으로 불확실하다), 이차 알렉산드리아 사본 A·C·33·81, 서방 대문자 D, 그리고 다수 사본의 일부가 이를 지지한다. 대다수 그리스 교부도 이 독법을 받아들여 그 권면을 죄를 그치라는 명령으로 해석했다.</p>
+      <p><span class="c f">M</span> 그러나 <strong>대다수 현대 번역과 학자는 직설법</strong>을 택한다. 문맥이 우리가 누리는 것을 <em>진술</em>하는 쪽을 강하게 지지하기 때문이다. 바울이 "누리자"의 뜻으로 이 동사를 쓸 수 있기는 하나(15:4), 그 의미는 객관적 상태를 가리키는 "화평"(화목된 신분)과 잘 맞지 않는다.</p>
+      <div class="caveat"><span class="tt">개역개정과의 관계</span>개역개정 4판은 <b>"화평을 누리자"</b>로 옮겨 가정법 독법을 따른다. 대다수 현대 영어 번역이 "we have peace"(직설법)를 택한 것과 갈리는 지점이다. 이 절을 설교나 강의에서 다룰 때, 한국어 본문이 어느 쪽에 서 있는지를 밝혀 두면 논지의 방향이 분명해진다. 신학적으로는 화평이 <em>이미 주어진 신분</em>인가 <em>붙들어야 할 부름</em>인가의 강조점 차이로 나타난다.</div>
+      <p><span class="c x">K</span> Kruse는 1절의 첫 유익을 이렇게 짚는다. 사람과 하나님 사이의 <b>적대가 끝났다</b>는 것이며, 바울은 이를 말하면서 현재 시제를 쓴다. 이 관찰은 위의 사본 이문 논쟁과 맞물린다. 직설법으로 읽으면 이미 끝난 적대의 <em>상태</em>가 되고, 가정법으로 읽으면 그 상태를 붙들라는 <em>부름</em>이 된다.</p>
+      <p><span class="c x">S</span> Stott은 5장이 시작되는 방식에 주목한다. 4장까지 이어지던 서술이 여기서 <b>연속되는 "우리" 선언</b>으로 바뀐다. 우리가 화평을 누린다, 우리가 은혜에 들어감을 얻었다, 우리가 즐거워한다, 우리가 환난 중에도 즐거워한다, 우리가 구원을 받을 것이다, 우리가 하나님 안에서 즐거워한다. 이 장엄한 믿음의 진술들로 사도는 유대인이든 이방인이든 믿음으로 의롭다 하심을 받은 <em>모든 이와 자신을 동일시하며</em>, 메시아 예수의 새 공동체인 하나님 백성의 연대를 표현한다.</p>
+      <p><span class="c x">K</span> Kruse는 이 대목에 Marshall의 칭의 정의를 인용한다. 의롭다 하심을 받는다는 것은 <b>하나님과의 올바른 관계 안에 놓인다</b>는 뜻이며, 그 관계 안에서 사람이 지은 죄가 더 이상 그에게 셈해지지 않고 따라서 진노가 아니라 화평으로 특징지어지는 관계에 들어갈 수 있게 된다.</p>
+      <p>2절이 두 열매를 더한다. 은혜에 <strong>들어감</strong>(<span class="gw">προσαγωγή</span>)을 얻었고, 하나님의 영광을 바라고 즐거워한다. <span class="gw">προσαγωγή</span>는 왕 앞에 나아가도록 안내받는 일을 가리키는 낱말이다. 3:23에서 "하나님의 영광에 이르지 못하더니"라고 했던 그 영광이 여기서 소망의 대상으로 되돌아온다.</p>
+    </div>
+
+    <div class="vs" id="v35" data-verses="3,4,5">
+      <span class="ref">5:3–5 — 환난에서 소망으로</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">3</span>다만 이뿐 아니라 우리가 환난 중에도 즐거워하나니 이는 환난은 인내를, <span class="vn">4</span>인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 <span class="vn">5</span>소망이 우리를 부끄럽게 하지 아니함은 우리에게 주신 성령으로 말미암아 하나님의 사랑이 우리 마음에 부은 바 됨이니</p>
+      <p>사슬 논증이 이어진다. 환난 → 인내 → 연단 → 소망이다. <span class="gw">δοκιμή</span>("연단")는 시험을 거쳐 <em>검증된 상태</em>를 가리키는 낱말로, 금속을 불에 넣어 순도를 확인하는 이미지에서 왔다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 사슬의 마디를 또렷이 한다. "환난이 <em>인내</em>를 이루고, 인내가 <em>입증됨</em>을, 입증됨이 소망을 이룬다." <span class="c x">S</span> Stott은 각 마디의 필연성을 짚는다. <b>환난 없이는 인내를 배울 수 없다. 견딜 것이 없기 때문이다.</b> 그리고 <span class="gw">δοκιμή</span>는 시험을 받아 통과한 사람의 자질로, "성숙한 인격"(필립스 역)이며 "신병이 아니라 <em>고참병</em>의 기질"이다.</p>
+      <p>5절이 그 사슬이 헛돌지 않는 이유를 댄다. 소망이 부끄럽게 하지 않는 것은 <strong>"성령으로 말미암아 하나님의 사랑이 우리 마음에 부은 바 됨"</strong>이기 때문이다. 로마서에서 성령이 실질적으로 처음 등장하는 자리이며, 8장의 성령 논의가 여기서 예고된다. 동사 <span class="gw">ἐκκέχυται</span>("부은 바 됨")는 완료형으로, 이미 일어나 지금까지 이어지는 상태를 가리킨다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">συνίστησιν</div>
+      <div class="eyebrow">5:6–11</div>
+      <h2>2. 사랑의 확증</h2>
+      <div class="gloss">쉬니스테신 — 확증하셨느니라</div>
+    </div>
+
+    <div class="vs" id="v68" data-verses="6,7,8">
+      <span class="ref">5:6–8 — 세 겹의 "때"</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">6</span>우리가 아직 연약할 때에 기약대로 그리스도께서 경건하지 않은 자를 위하여 죽으셨도다 <span class="vn">7</span>의인을 위하여 죽는 자가 쉽지 않고 선인을 위하여 용감히 죽는 자가 혹 있거니와 <span class="vn">8</span>우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라</p>
+      <p>단락은 우리 쪽의 처지를 세 마디로 반복한다. "아직 <strong>연약할</strong> 때에"(6절), "아직 <strong>죄인</strong> 되었을 때에"(8절), "<strong>원수</strong> 되었을 때에"(10절)다. 셋 다 그리스도의 죽음이 우리의 어떤 상태에 <em>응답</em>한 것이 아님을 못 박는다.</p>
+      <p>6절의 <span class="gw">ἀσεβῶν</span>("경건하지 않은 자")이 4:5의 "경건하지 아니한 자를 의롭다 하시는 이"를 그대로 되받는다. 4장이 칭의의 대상을 그렇게 규정했고, 5장은 그 대상을 위해 그리스도가 죽으셨다고 말한다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역은 7절 후반을 다르게 읽는다. "의인을 위하여 죽을 자는 거의 없거니와, <b>은인</b>을 위해서라면 혹 누군가 스스로 죽음을 무릅쓸지도 모른다." 개역개정의 "선인"을 추상적 선함이 아니라 <em>자기에게 은혜를 베푼 사람</em>으로 보는 읽기이며, 그렇게 읽으면 인간 희생의 최대치가 여전히 <b>보답의 논리</b> 안에 머문다는 점이 선명해진다.</p>
+      <p>7절이 인간 사회의 최대치를 견준다. 의인을 위해 죽는 자는 쉽지 않고, 선인을 위해서는 혹 있다. 그 최대치 위에 8절이 놓인다. 우리가 <em>죄인</em>이었을 때다. 동사 <span class="gw">συνίστησιν</span>("확증하셨느니라")은 현재형으로, 십자가가 과거의 사건이면서 지금도 사랑을 <strong>입증하고 있다</strong>는 어감을 만든다.</p>
+    </div>
+
+    <div class="vs" id="v911" data-verses="9,10,11">
+      <span class="ref">5:9–11 — "더욱"의 논법</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">9</span>그러면 이제 우리가 그의 피로 말미암아 의롭다 하심을 받았으니 더욱 그로 말미암아 진노하심에서 구원을 받을 것이니 <span class="vn">10</span>곧 우리가 원수 되었을 때에 그의 아들의 죽으심으로 말미암아 하나님과 화목하게 되었은즉 화목하게 된 자로서는 더욱 그의 살아나심으로 말미암아 구원을 받을 것이니라 <span class="vn">11</span>그뿐 아니라 이제 우리로 화목하게 하신 우리 주 예수 그리스도로 말미암아 하나님 안에서 또한 즐거워하느니라</p>
+      <div class="caveat"><span class="tt">쟁점 — "우리를 위하여"는 대리인가</span><span class="c x">S</span> Stott이 논점을 정리한다. 8절의 "우리를 위하여"는 <span class="gw">ὑπέρ</span>("~을 대신하여"가 아니라 "~을 위하여")이므로 대리 형벌을 담지 않는다는 판단이 가능해 보인다. 그러나 그는 이를 <b>피상적 판단</b>이라 본다. 성경에서 죄와 죽음이 짝지어질 때 죽음은 언제나 죄의 형벌 곧 "삯"이며(6:23; 참조 5:12), 그렇다면 "그리스도께서 죄인을 위하여 죽으셨다"는 진술은 <em>죄는 우리 것이고 죽음은 그의 것이었다</em>는 뜻이 되어, 그가 속죄제물로서 우리 자리에서 우리 죄가 마땅히 받을 형벌을 지셨다는 의미밖에 될 수 없다.</div>
+      <p><span class="gw">πολλῷ μᾶλλον</span>("더욱")이 이 단락과 5:12–21 전체를 관통하는 논법이다. 형식은 작은 것에서 큰 것으로 나아가는 추론이다. 원수 되었을 때 아들의 <em>죽으심</em>으로 화목하게 되었다면, 화목하게 된 자로서 그의 <em>살아나심</em>으로 구원받는 것은 <strong>더욱</strong> 확실하다.</p>
+      <p><span class="c x">K</span> Kruse는 10절의 "그의 살아나심으로 말미암아 구원을 받을 것이니라"가 부활하신 그리스도의 <b>중보 사역</b>을 가리킬 가능성을 제시한다(8:34 참조). <span class="c x">C</span> Cranfield는 9–11절 전체가 한 요점을 세운다고 본다. 믿음으로 의롭게 된 사람에게 약속된 생명은 <b>하나님과의 화평으로 특징지어지는 생명</b>이라는 것이다(1절의 "화평", 10절의 "화목").</p>
+      <p>주목할 것은 시제의 배치다. 의롭다 하심과 화목은 이미 이루어졌고(과거), 진노하심에서의 구원은 아직 남아 있다(미래). 칭의가 종점이 아니라 <em>보증</em>으로 기능한다.</p>
+      <p>11절의 "즐거워하느니라"가 2절·3절에 이어 세 번째다. 영광을 바라며 즐거워하고, 환난 중에 즐거워하고, 이제 하나님 안에서 즐거워한다. 대상이 미래에서 현재의 고난으로, 다시 하나님 자신에게로 옮겨 간다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">ἐφ᾽ ᾧ</div>
+      <div class="eyebrow">5:12–14</div>
+      <h2>3. 한 사람으로 말미암아</h2>
+      <div class="gloss">에프 호 — 로마서 최대의 구문 난제</div>
+    </div>
+
+    <div class="vs" id="v12v" data-verses="12">
+      <span class="ref">5:12 — 미완성 문장과 한 구절</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">12</span>그러므로 한 사람으로 말미암아 죄가 세상에 들어오고 죄로 말미암아 사망이 들어왔나니 이와 같이 모든 사람이 죄를 지었으므로 사망이 모든 사람에게 이르렀느니라</p>
+      <p>12절은 구조부터 특이하다. "…같이"로 시작한 비교가 대응절 없이 끊기고, 13–17절의 삽입을 거쳐 18절에 가서야 비교가 완성된다. 문장의 <em>미완성</em> 자체가 이 대목의 무게를 보여 준다.</p>
+      <p>순서는 명확하다. 한 사람으로 <strong>죄</strong>가 세상에 들어오고, 죄로 <strong>사망</strong>이 들어왔다. 그리고 마지막 어구가 문제다. <span class="gw">ἐφ᾽ ᾧ πάντες ἥμαρτον</span>.</p>
+      <p><span class="c x">C</span> Cranfield는 이 절의 앞부분을 이렇게 풀어 읽는다. 한 사람(아담)의 범죄가 죄에게 세상으로 들어올 통로를 주었고, 여기서 "세상"은 아마도 <em>인류</em> 또는 <em>인간의 삶</em>을 뜻한다. 이어 "죄로 말미암아 사망이"는 죄의 진입이 곧 사망의 진입을 뜻했음을 가리키며, <b>사망이 그림자처럼 죄를 뒤따랐다</b>. 그리고 "이와 같이 사망이 모든 사람에게"는 앞 절반에 이미 함축된 것을 명시한다. 죄와 사망이 사람의 세계로 들어온 일에 그 자연적 귀결이 뒤따라, 세대가 이어지는 동안 사망이 각 개인을 붙들었다는 것이다.</p>
+      <h4>쟁점 — <span class="gw">ἐφ᾽ ᾧ</span>를 어떻게 읽는가</h4>
+      <p><span class="c f">M</span> Moo의 정리에 따르면, 이 어구를 <strong>원인</strong>으로 읽어 "모든 사람이 죄를 지었으므로"로 옮기는 것이 대다수 주석가와 대다수 영어 번역의 선택이다. 개역개정도 이 계열이다. 이 읽기에서 논증은 사망이 보편적인 이유가 죄가 보편적이기 때문임을 보이는 데 있다.</p>
+      <p><span class="c f">M</span> 가장 유명한 대안은 <strong>"그 안에서"</strong>로 읽는 것이며, 아우구스티누스와 소수의 학자가 택했다. 관계대명사의 선행사를 "한 사람"으로 잡으면 이 절은 원죄의 명시적 진술이 된다. "아담 안에서 모든 사람이 죄를 지었다"는 것이다. Moo는 이 해석과 유사한 문법적 근거에 기대는 다른 해석들에 대해 비판적이다.</p>
+      <p><span class="c x">S</span> Stott은 이 물음을 문법이 허용하는 <b>두 답</b>으로 압축한다. 모든 사람이 아담의 죄를 <em>본떠 되풀이함으로</em> 죄를 지었거나, 아담이 죄를 지을 때 그 안에 포함되어 <em>함께</em> 죄를 지었거나다. 앞은 <b>모방</b>(아담<em>처럼</em> 죄지음), 뒤는 <b>참여</b>(아담<em>안에서 그와 함께</em> 죄지음)다. 그리고 그는 이 갈림에 이름을 붙인다. 첫째 설명은 통상 <b>펠라기우스</b>와 결부되며, 5세기 초 브리튼 출신의 이 수도사는 원죄를 부인하고 일종의 자기 구원을 가르쳤으며 아우구스티누스의 반대에 부딪혔다. &nbsp; <span class="c x">S</span> Stott은 또 12절의 <span class="gw">οὕτως</span>("이와 같이")가 무엇을 가리키는지도 둘로 나눈다. 죄와 사망의 본질적 연결(한 사람이 죄지어 사망이 왔듯 모든 사람이 죄지어 사망이 왔다)일 수도, 두 일이 일어난 <em>통로</em>(한 사람으로 죄와 사망이 세상에 "들어왔듯" 한 사람으로 그것이 온 세상에 "퍼졌다")일 수도 있다.</p>
+      <p><span class="c x">K</span> Kruse는 여기서 죄를 <b>권세</b>로 규정한다. 아담의 죄의 결과로 세상에 들어와 <em>모든 사람을 괴롭히는 권세</em>라는 것이다. NIV가 <span class="gw">ἐφ᾽ ᾧ</span>를 "때문에"로 읽어 각 사람이 자기 인격으로 죄를 지었기에 사망에 매인다고 옮기는 반면, "그 안에서"로 읽으면 결론이 달라진다.</p>
+      <p>번역의 선택이 신학의 방향을 크게 바꾼다. 원인으로 읽으면 각 사람의 실제 범죄가 사망의 근거가 되고, "그 안에서"로 읽으면 아담과의 연대가 근거가 된다. 다만 14절이 그 선택을 단순하게 두지 않는다.</p>
+    </div>
+
+    <div class="vs" id="v1314" data-verses="13,14">
+      <span class="ref">5:13–14 — 아담과 모세 사이</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">13</span>죄가 율법 있기 전에도 세상에 있었으나 율법이 없었을 때에는 죄를 죄로 여기지 아니하였느니라 <span class="vn">14</span>그러나 아담으로부터 모세까지 아담의 범죄와 같은 죄를 짓지 아니한 자들까지도 사망이 왕 노릇 하였나니 아담은 오실 자의 모형이라</p>
+      <div class="caveat"><span class="tt">쟁점 — 원죄를 어디서 읽어 내는가</span>
+      12절의 <span class="gw">ἐφ᾽ ᾧ</span>를 "때문에"로 읽으면 이 절 자체는 <b>각자의 실제 범죄</b>를 사망의 근거로 삼는다. 그렇다면 원죄 교리는 어디서 오는가. &nbsp;
+      ① <b>12절 자체</b> — 아우구스티누스처럼 "그 안에서"로 읽으면 이 절이 곧 원죄의 명시적 진술이 된다. <span class="c f">M</span> Moo는 이 문법적 근거에 비판적이다. &nbsp;
+      ② <b>14절</b> — "아담의 범죄와 같은 죄를 짓지 아니한 자들까지도" 사망이 왕 노릇 했다는 진술이, 사망을 개별 범죄만으로 설명할 수 없게 만든다. 명시적 계명이 없던 시대에도 사망이 미쳤다는 사실이 <em>연대</em>를 요구한다. &nbsp;
+      ③ <b>단락 전체의 구조</b> — 15–19절이 줄곧 "한 사람으로 말미암아"를 반복하므로, 원죄는 한 절의 전치사구가 아니라 <b>아담·그리스도 병행 자체</b>에서 나온다. <span class="c x">S</span> Stott의 모방/참여 구분도 결국 이 층위에서 갈린다.</div>
+      <p>13절이 4:15의 논점을 되받는다. 죄는 율법 있기 전에도 있었으나 "죄를 죄로 여기지" 않았다. 율법이 없으면 죄가 <em>범법</em>으로 계산되지 않는다는 것이다.</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 13절의 요지를 정밀하게 옮긴다. "율법이 주어지기 전에도 죄는 이미 세상에 있었으나, 율법이 없는 상태에서는 <b>죄가 온전히 분명하게 기재되지 않는다</b>." 죄의 존재와 죄의 <em>등록</em>을 구분하는 표현이다.</p>
+      <p><span class="c x">S</span> Stott은 14절이 말하는 "아담의 범죄와 같은 죄를 짓지 아니한 자들"이 죄가 없었다는 뜻이 아님을 짚는다. 그중 일부는 마음에 기록된 하나님의 도덕법(2:14 이하)을 노골적으로 어겼고 실제로 심판을 받았다. 홍수와 바벨탑의 심판이 그 예다. 요점은 그들에게 <em>명시적 계명을 어긴 범법</em>이 없었음에도 사망이 왕 노릇 했다는 데 있다.</p>
+      <p>그런데 14절이 그 사이 시대에도 <strong>사망이 왕 노릇 했다</strong>고 말한다. 더 정확히는 "아담의 범죄와 같은 죄를 짓지 아니한 자들까지도" 그러했다. 명시적 계명을 어긴 일이 없는 이들에게도 사망이 미쳤다는 사실이, 사망을 각자의 개별 범죄만으로 설명하기 어렵게 만든다. 12절의 해석 논쟁이 여기서 다시 불붙는다.</p>
+      <p>14절 끝의 <span class="gw">τύπος</span>("모형")가 다음 단락을 연다. 아담은 "오실 자의 모형"이다. 이 낱말은 도장이 남긴 자국을 가리키며, 대응 관계가 있되 동일하지는 않음을 함의한다. 15절이 곧바로 "같지 아니하니"로 시작하는 이유가 여기 있다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">οὐχ ὡς</div>
+      <div class="eyebrow">5:15–19</div>
+      <h2>4. 더욱</h2>
+      <div class="gloss">우크 호스 — 같지 아니하니</div>
+    </div>
+
+    <div class="vs" id="v1517" data-verses="15,16,17">
+      <span class="ref">5:15–17 — 비대칭의 강조</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">15</span>그러나 이 은사는 그 범죄와 같지 아니하니 곧 한 사람의 범죄를 인하여 많은 사람이 죽었은즉 더욱 하나님의 은혜와 또한 한 사람 예수 그리스도의 은혜로 말미암은 선물은 많은 사람에게 넘쳤느니라 <span class="vn">16</span>또 이 선물은 범죄한 한 사람으로 말미암은 것과 같지 아니하니 심판은 한 사람으로 말미암아 정죄에 이르렀으나 은사는 많은 범죄로 말미암아 의롭다 하심에 이름이니라 <span class="vn">17</span>한 사람의 범죄로 말미암아 사망이 그 한 사람을 통하여 왕 노릇 하였은즉 더욱 은혜와 의의 선물을 넘치게 받는 자들은 한 분 예수 그리스도를 통하여 생명 안에서 왕 노릇 하리로다</p>
+      <p><span class="c x">C</span> Cranfield는 15절의 첫머리를 "'범행이 그러하니 은사도 그러하다'는 식의 문제가 아니다"로 옮기며, 두 사람 사이의 <b>차이가 무한하다</b>고 정리한다.</p>
+      <p>아담과 그리스도의 병행이 세워지자마자 <strong>비대칭</strong>이 강조된다. 15절과 16절이 각각 "같지 아니하니"로 시작하고, 15절과 17절이 "더욱"으로 결론을 낸다. 두 사람은 구조가 닮았을 뿐 무게가 같지 않다.</p>
+      <p><span class="c x">S</span> Stott은 15–17절이 <b>세 가지를 차례로 대조한다</b>고 정리한다. 두 <em>행위</em>의 성격(15), 그 <em>즉각적 결과</em>(16), 그리고 <em>궁극적 효과</em>(17)다. 15a의 "그 은사는 그 범죄와 같지 아니하니"는 나머지 단락 전체의 주제문에 가깝다. 아담의 <span class="gw">παράπτωμα</span>는 하나님이 분명히 보여 주신 길에서 벗어난 <b>이탈</b>이었고, 그리스도의 <span class="gw">χάρισμα</span>는 아담의 행위와 조금도 닮지 않은 <b>자기희생의 행위</b>다.</p>
+      <table>
+        <caption>표 2. 아담과 그리스도의 대조</caption>
+        <thead><tr><th>절</th><th>아담 쪽</th><th>그리스도 쪽</th></tr></thead>
+        <tbody>
+          <tr><td class="head">5:15</td><td>한 사람의 범죄로 많은 사람이 죽음</td><td>은혜와 선물이 많은 사람에게 <em>넘침</em></td></tr>
+          <tr><td class="head">5:16</td><td>한 사람으로 말미암은 심판 → 정죄</td><td><em>많은</em> 범죄로 말미암은 은사 → 의롭다 하심</td></tr>
+          <tr><td class="head">5:17</td><td>사망이 왕 노릇 함</td><td>받는 자들이 생명 안에서 왕 노릇 함</td></tr>
+          <tr><td class="head">5:18</td><td>한 범죄 → 많은 사람이 정죄</td><td>한 의로운 행위 → 많은 사람이 생명에</td></tr>
+        <tr><td class="head">5:19</td><td>한 사람의 불순종 → 죄인 됨</td><td>한 사람의 순종 → 의인 됨</td></tr>
+        </tbody>
+      </table>
+      <p>16절의 비대칭이 특히 날카롭다. 정죄는 <em>하나의</em> 범죄에서 나왔으나, 칭의는 <em>많은</em> 범죄를 상대로 주어진다. 은혜는 손해를 원상 복구하는 데 그치지 않고 그 범위를 넘어선다.</p>
+      <p>17절의 대칭이 어긋나는 지점도 의도적이다. 아담 쪽에서는 <em>사망</em>이 왕 노릇 하는데, 그리스도 쪽에서는 <em>생명</em>이 왕 노릇 한다고 하지 않고 <strong>사람들이</strong> 생명 안에서 왕 노릇 한다고 한다. 지배당하던 자가 지배하는 자리로 옮겨진다.</p>
+    </div>
+
+    <div class="vs" id="v1819" data-verses="18,19">
+      <span class="ref">5:18–19 — 완성되는 비교</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">18</span>그런즉 한 범죄로 많은 사람이 정죄에 이른 것 같이 한 의로운 행위로 말미암아 많은 사람이 의롭다 하심을 받아 생명에 이르렀느니라 <span class="vn">19</span>한 사람이 순종하지 아니함으로 많은 사람이 죄인 된 것 같이 한 사람이 순종하심으로 많은 사람이 의인이 되리라</p>
+      <p>12절에서 끊겼던 비교가 마침내 완성된다. "한 범죄로 … 같이 한 의로운 행위로 말미암아 …"이다. 두 절 모두 <span class="gw">οἱ πολλοί</span>("많은 사람")를 쓴다.</p>
+      <div class="caveat"><span class="tt">쟁점 — "많은 사람"의 범위</span>18–19절의 "많은 사람"이 양쪽에서 같은 범위인지가 논쟁거리다. 아담 쪽의 "많은 사람"이 전 인류라면 그리스도 쪽도 그러한가. 보편 구원의 근거로 읽는 해석이 여기서 나오고, 대다수 주석가는 문맥(특히 17절의 "받는 자들")이 그 범위를 <em>받는 이들</em>로 한정한다고 본다. 병행의 형식이 반드시 범위의 동일함을 요구하지는 않는다는 것이며, 이 단락 전체가 강조하는 것도 병행이 아니라 <b>비대칭</b>이다.</div>
+      <p>19절의 낱말 선택도 눈여겨볼 만하다. 아담 쪽은 <span class="gw">παρακοή</span>(불순종), 그리스도 쪽은 <span class="gw">ὑπακοή</span>(순종)다. 1:5와 16:26의 "믿어 순종하게"에 쓰인 그 낱말이며, 그리스도의 순종이 신자의 순종의 근거로 놓인다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">ὑπερεπερίσσευσεν</div>
+      <div class="eyebrow">5:20–21</div>
+      <h2>5. 넘치는 은혜</h2>
+      <div class="gloss">휘페레페리쓔센 — 더욱 넘쳤나니</div>
+    </div>
+
+    <div class="vs" id="v2021" data-verses="20,21">
+      <span class="ref">5:20–21 — 율법의 자리와 두 왕권</span>
+      <p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">20</span>율법이 들어온 것은 범죄를 더하게 하려 함이라 그러나 죄가 더한 곳에 은혜가 더욱 넘쳤나니 <span class="vn">21</span>이는 죄가 사망 안에서 왕 노릇 한 것 같이 은혜도 또한 의로 말미암아 왕 노릇 하여 우리 주 예수 그리스도로 말미암아 영생에 이르게 하려 함이라</p>
+      <p><span class="c x">C</span> Cranfield의 번역이 20절의 어감을 살린다. "그러나 율법이 <b>상황의 새로운 요소로</b> 들어온 것은 그 범과를 더하게 하려 함이라." <span class="gw">παρεισῆλθεν</span>을 단순한 진입이 아니라 <em>이미 진행 중이던 국면에 끼어든</em> 것으로 읽는다.</p>
+      <p>20절이 율법의 자리를 정한다. 율법이 "들어온 것"(<span class="gw">παρεισῆλθεν</span>, 곁으로 들어옴)은 <strong>범죄를 더하게 하려</strong> 함이다. 4:15와 5:13이 준비한 결론이며, 7:7–13이 이를 길게 풀어낸다. 율법은 구원의 길이 아니라 죄를 드러내어 그 정체를 확정하는 자리에 놓인다.</p>
+      <p>그러나 문장은 거기서 끝나지 않는다. "죄가 더한 곳에 은혜가 더욱 넘쳤나니." 동사 <span class="gw">ὑπερεπερίσσευσεν</span>은 "넘치다"에 강조 접두어가 붙은 형태로, 넘침을 넘어서는 넘침이다.</p>
+      <p>21절이 장을 왕권의 언어로 닫는다. 죄가 <em>사망 안에서</em> 왕 노릇 한 것 같이 은혜도 <em>의로 말미암아</em> 왕 노릇 한다. <span class="c h">G</span> 이 왕권 어휘가 Gaventa의 묵시적 읽기가 기대는 지점이다. 죄는 개별 행위의 총합이 아니라 <strong>왕 노릇 하는 권세</strong>로 그려지며, 그 권세의 통치가 다른 통치로 교체된다.</p>
+      <p>동시에 20절의 진술은 곧바로 오해를 부른다. 은혜가 더 넘치려면 죄가 더해야 하는가. 6:1이 그 물음을 그대로 받아 적는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 3. 5장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">5:1</td><td>롬 3:28; 4:25</td><td>믿음으로 의롭다 하심의 결과</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">5:2</td><td>롬 3:23; 8:18·30</td><td>하나님의 영광 — 잃음에서 소망으로</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">5:5</td><td>롬 8:9·15–16; 갈 4:6</td><td>부어진 성령과 하나님의 사랑</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">5:6</td><td>롬 4:5</td><td>경건하지 않은 자를 위하여</td><td>본문</td></tr>
+        <tr><td class="head">5:9</td><td>롬 1:18; 3:25; 살전 1:10</td><td>진노에서의 구원</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">5:10</td><td>고후 5:18–20; 골 1:21–22</td><td>화목(<span class="gw">καταλλαγή</span>)</td><td><span class="c x">K</span></td></tr>
+        <tr><td class="head">5:12</td><td>창 2:17; 3:1–19; 고전 15:21–22</td><td>한 사람으로 들어온 죄와 사망</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">5:13</td><td>롬 4:15; 7:7–8</td><td>율법과 범법의 계산</td><td><span class="c x">S</span></td></tr>
+        <tr><td class="head">5:14</td><td>고전 15:45–49</td><td>아담과 오실 자 — 모형론</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">5:19</td><td>빌 2:8; 롬 1:5; 16:26</td><td>순종(<span class="gw">ὑπακοή</span>)</td><td>NA28 난외</td></tr>
+        <tr><td class="head">5:20</td><td>롬 7:7–13; 갈 3:19</td><td>율법이 들어온 목적</td><td><span class="c x">C</span></td></tr>
+        <tr><td class="head">5:21</td><td>롬 6:12·14·23</td><td>왕 노릇 하는 두 권세</td><td><span class="c h">G</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 칭의는 종점이 아니다</h3>
+    <p><span class="c x">C</span> Cranfield가 5–8장 전체를 하박국 2:4의 "살리라"에 대한 해설로 배치한 것이 이 장의 위치를 규정한다. 5:1–11은 의롭다 하심 <em>다음</em>을 말한다. 화평, 은혜에 들어감, 영광의 소망, 부어진 사랑이다. 그리고 9–10절이 그 모두를 하나의 논법으로 묶는다. 더 어려운 일이 이미 이루어졌으니 남은 일은 더욱 확실하다. 칭의는 도착점이 아니라 <strong>보증</strong>이며, 그래서 5장은 8:31–39의 확신으로 곧장 이어지는 길을 낸다.</p>
+
+    <h3>② 환난이 소망을 깎지 않는다</h3>
+    <p><span class="c x">S</span> Stott의 정식—"환난 없이는 인내를 배울 수 없다, 견딜 것이 없기 때문이다"—이 이 사슬의 논리다. 3–5절의 사슬은 고난을 미화하지 않는다. 환난이 인내를, 인내가 연단을, 연단이 소망을 이룬다는 진술이 성립하는 근거는 마지막 절에 있다. 성령으로 부어진 하나님의 사랑이다. 사슬을 돌리는 힘이 사람의 인내력이 아니라 <em>이미 부어진 사랑</em>이라는 점에서, 이 단락은 도덕적 훈계가 아니라 신학적 진술이다.</p>
+
+    <h3>③ 사랑은 상태에 응답하지 않는다</h3>
+    <p><span class="c x">C</span> Cranfield가 7절의 "선인"을 <em>은인</em>으로 읽은 것이 이 논점을 날카롭게 한다. 인간 희생의 최대치조차 보답의 논리 안에 머물기 때문이다. 연약할 때, 죄인이었을 때, 원수였을 때. 세 마디가 같은 것을 말한다. 그리스도의 죽음은 우리 안의 어떤 가능성에 대한 <em>반응</em>이 아니다. 7절이 인간 사회의 최대치를 견주어 놓은 것도 그 최대치와 십자가가 같은 종류가 아님을 보이기 위해서다. 4:5의 "경건하지 아니한 자를 의롭다 하시는 이"가 5:6에서 십자가의 수신자로 되돌아온다.</p>
+
+    <h3>④ 두 사람, 두 시대</h3>
+    <p><span class="c x">K</span> Kruse의 규정대로 죄는 여기서 아담의 범죄를 통해 세상에 들어와 <em>모든 사람을 괴롭히는 권세</em>다. 5:12–21은 개인의 결단을 다루지 않는다. 두 사람이 각각 여는 <strong>두 시대</strong>를 다룬다. 아담이 연 시대에는 죄가 사망 안에서 왕 노릇 하고, 그리스도가 연 시대에는 은혜가 의로 말미암아 왕 노릇 한다. <span class="c h">G</span> Gaventa의 읽기에서 1–4장의 민족 언어가 여기서 사라지는 것은 우연이 아니다. 논의가 유대인과 이방인의 문제를 넘어 인류 전체와 그 위에 군림하는 권세로 옮겨 갔기 때문이다.</p>
+
+    <h3>⑤ 비대칭이 요점이다</h3>
+    <p><span class="c x">S</span> Stott이 나눈 세 대조—행위의 성격, 즉각적 결과, 궁극적 효과—와 <span class="c x">C</span> Cranfield의 "두 사람 사이의 차이가 무한하다"가 같은 것을 말한다. 아담과 그리스도의 병행은 균형을 위한 것이 아니다. "같지 아니하니"가 두 번 나오고 "더욱"이 세 번 나온다. 정죄는 하나의 범죄에서 왔으나 칭의는 많은 범죄를 상대한다(16절). 사망이 왕 노릇 하던 자리에서 이제 <em>사람들이</em> 왕 노릇 한다(17절). 은혜는 손실을 메우는 데서 그치지 않고 <strong>넘친다</strong>.</p>
+
+    <h3>⑥ 열린 오해와 6장</h3>
+    <p>20절의 "죄가 더한 곳에 은혜가 더욱 넘쳤나니"는 그 자체로 복음의 정점이면서 동시에 가장 위험한 문장이다. 3:8에서 이미 바울에게 씌워졌던 혐의, 곧 "선을 이루기 위하여 악을 행하자"가 여기서 논리적으로 재생산될 수 있다. 6:1이 그 물음을 정면으로 받는다. 5장이 은혜의 넘침을 선언했다면, 6장은 그 넘침이 죄에 거할 자유가 아님을 보인다.</p>
+
+    <div class="back"><a href="./ch04.html">← 4장</a> · <a href="./ch06.html">6장 →</a> · <a href="./overview.html">종합 연구</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 로마서 5장 심층 연구 — 3-문서 구조의 둘째 문서.<br>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 1988)·Gaventa(NTL 2024) 직접 확인분. 아우구스티누스는 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<!-- 공통 기능: 화면 모드 + 성경 장절 자동 인식/본문 팝오버 -->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

@@ -1,40 +1,21 @@
 {
-  "package": "biblestudygyu-reference-hover-automation-v2.1",
-  "created": "2026-07-24",
-  "changes": [
-    "All commentator-chip text is forced to white in every theme.",
-    "Chip backgrounds were adjusted to maintain at least 4.5:1 contrast with white."
-  ],
-  "validation": {
-    "A-Z_unique_colors": true,
-    "minimum_white_text_contrast": 4.584,
-    "general_text_untouched": true
-  },
+  "package": "biblestudygyu-v2.0-to-v2.1-commentator-chip-hotfix",
+  "base_required": "reference-hover-automation-v2.0",
   "files": [
     {
-      "path": "PATCH-README.md",
-      "bytes": 1549,
-      "sha256": "c145c59c021445bb0f26620f7ed7f0be557e04bc38c12982bbdf7a972be274c3"
-    },
-    {
-      "path": "assets/css/bible-reader.css",
-      "bytes": 6928,
-      "sha256": "3cdecd54bf42320a1ed514ef5c7be78c07cbceacaba50eb0e26b73303a513823"
-    },
-    {
-      "path": "assets/css/commentator-chips.css",
-      "bytes": 1740,
-      "sha256": "280570c69b9c9a733db95585af49965d6358b4233246397b46c0396fabc6b74d"
-    },
-    {
       "path": "assets/js/bible-reader.js",
-      "bytes": 34328,
-      "sha256": "5c38aaf66f07e2790492ca60f44d30c46628ebe469b03d2c7c097014c1c6b130"
+      "sha256": "5c38aaf66f07e2790492ca60f44d30c46628ebe469b03d2c7c097014c1c6b130",
+      "bytes": 34328
     },
     {
       "path": "assets/js/commentator-chips.js",
-      "bytes": 4567,
-      "sha256": "867c564d4830446be35c9f68212217ce550c4886b44660c6f27eea01b635021e"
+      "sha256": "867c564d4830446be35c9f68212217ce550c4886b44660c6f27eea01b635021e",
+      "bytes": 4567
+    },
+    {
+      "path": "assets/css/commentator-chips.css",
+      "sha256": "280570c69b9c9a733db95585af49965d6358b4233246397b46c0396fabc6b74d",
+      "bytes": 1740
     }
   ]
 }

@@ -496,3 +496,22 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
+
+/* 주석 칩 A–Z 고정 팔레트 자동 로더 */
+(function () {
+  "use strict";
+  if (typeof document === "undefined") return;
+  if (window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ || document.querySelector("script[data-commentator-chips-js]")) return;
+  window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ = true;
+  var current = document.currentScript;
+  var src = current && current.src
+    ? new URL("commentator-chips.js?v=20260724.2", current.src).href
+    : "assets/js/commentator-chips.js?v=20260724.2";
+  var loader = document.createElement("script");
+  loader.src = src;
+  loader.defer = true;
+  loader.dataset.commentatorChipsJs = "";
+  loader.addEventListener("load", function () { window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ = false; });
+  loader.addEventListener("error", function () { window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ = false; });
+  document.head.appendChild(loader);
+})();

@@ -1,0 +1,41 @@
+/* ============================================================
+   주석 칩 전용 A–Z 고정 팔레트 스타일
+   JavaScript가 확인한 주석 칩에만 data-commentator-color를 부여한다.
+   ============================================================ */
+
+span.c[data-commentator-color],
+span.commentator-chip[data-commentator-color],
+span[data-commentator-chip][data-commentator-color] {
+  background: var(--cc-chip-bg-light) !important;
+  background-color: var(--cc-chip-bg-light) !important;
+  color: var(--cc-chip-fg-light) !important;
+  border-color: transparent !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+:root[data-theme="dark"] span.c[data-commentator-color],
+:root[data-theme="dark"] span.commentator-chip[data-commentator-color],
+:root[data-theme="dark"] span[data-commentator-chip][data-commentator-color] {
+  background: var(--cc-chip-bg-dark) !important;
+  background-color: var(--cc-chip-bg-dark) !important;
+  color: var(--cc-chip-fg-dark) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) span.c[data-commentator-color],
+  :root:not([data-theme="light"]):not([data-theme="dark"]) span.commentator-chip[data-commentator-color],
+  :root:not([data-theme="light"]):not([data-theme="dark"]) span[data-commentator-chip][data-commentator-color] {
+    background: var(--cc-chip-bg-dark) !important;
+    background-color: var(--cc-chip-bg-dark) !important;
+    color: var(--cc-chip-fg-dark) !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  span.c[data-commentator-color],
+  span.commentator-chip[data-commentator-color],
+  span[data-commentator-chip][data-commentator-color] {
+    transition: background-color .22s ease, color .22s ease;
+  }
+}

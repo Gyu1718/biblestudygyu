@@ -1,57 +1,86 @@
-# 반응형 연구 도크 수정 패치 v1.1
+# 주석 칩 A–Z 고정 팔레트 패치 v1.1
 
-이 패치는 첫 연구 도크 패치가 홈페이지·원어성경·원어사전에서 로드되지 않던 문제를 수정합니다.
+## 이전 v1.0은 사용하지 마세요
 
-## 원인
+v1.0에는 공통 주석 칩 클래스 `.c`와 알파벳 C용 규칙이 충돌할 수 있는 문제가 있었습니다.
+이 v1.1은 그 규칙을 완전히 제거하고, 주석 칩 요소 안의 표시 문자만 안전하게 읽습니다.
 
-기존 패치는 `assets/app.js`가 모든 페이지에서 로드된다고 가정했습니다. 실제로는 연구 문서 일부만 `app.js`를 사용하며, 홈페이지·원어성경·원어사전은 이를 불러오지 않습니다.
+## 적용 방법
 
-## 적용
+ZIP을 압축 해제한 뒤 저장소 루트에 내용물을 그대로 덮어씁니다.
 
-ZIP의 내용물을 저장소 루트에 업로드하고 같은 이름의 파일을 덮어씁니다.
+```text
+assets/js/bible-reader.js          교체
+assets/js/commentator-chips.js     추가
+assets/css/commentator-chips.css   추가
+```
 
-반드시 다음 경로가 저장소에 직접 보여야 합니다.
-
-- `assets/js/research-dock-loader.js`
-- `assets/js/research-dock.js`
-- `assets/js/original-lexicon-bridge.js`
-- `assets/js/lexicon-page.js`
-- `assets/css/research-dock.css`
-- `assets/app.js`
-- `catalog.js`
-- `bible/original.html`
-- `lexicon/index.html`
-- `lexicon/entry.html`
-
-ZIP 파일 자체나 `research_dock_fix_v1.1` 폴더를 통째로 저장소 안에 넣으면 작동하지 않습니다.
-
-## 로딩 경로
-
-- 홈페이지: `catalog.js` → 공통 로더
-- 연구 문서: `assets/app.js` → 공통 로더
-- 원어성경: `bible/original.html` → 공통 로더
-- 원어사전: `lexicon/index.html`, `lexicon/entry.html` → 공통 로더
-
-공통 로더는 `theme.css`, `app.css`, `research-dock.js`를 저장소 루트 기준 절대 URL로 계산해 불러옵니다.
-
-## 확인
-
-업로드 후 브라우저 개발자 도구의 Network에서 다음 파일이 모두 200으로 로드되는지 확인합니다.
-
-- `assets/js/research-dock-loader.js`
-- `assets/js/research-dock.js`
-- `assets/js/original-lexicon-bridge.js`
-- `assets/js/lexicon-page.js`
-- `assets/css/research-dock.css`
-- `assets/theme.css`
-
-그 후 강력 새로고침을 실행합니다.
+업로드 후 강력 새로고침합니다.
 
 - Windows: `Ctrl + Shift + R`
 - macOS: `Cmd + Shift + R`
 
-## 중복 방지와 캐시 갱신
+## 정확한 적용 범위
 
-원어성경과 사전은 HTML 직접 로드와 기존 페이지 스크립트 로드의 두 경로를 둡니다. 먼저 실행된 로더가 전역 잠금값을 설정하므로 도크는 한 번만 생성됩니다.
+다음처럼 HTML에서 이미 주석 칩으로 지정된 `span` 요소만 처리합니다.
 
-모든 새 로더 주소에는 `v=20260724.2`가 붙어 브라우저와 GitHub Pages의 이전 캐시를 우회합니다.
+```html
+<span class="c f">M</span>
+<span class="c x">K</span>
+<span class="commentator-chip">D</span>
+<span data-commentator-chip>J</span>
+```
+
+프로그램은 일반 문장 전체에서 알파벳을 검색하지 않습니다.
+다음 요소는 변경하지 않습니다.
+
+- 일반 본문과 일반 알파벳
+- 제목과 내비게이션
+- 히브리어·헬라어 원문
+- 성경 절 번호
+- 원어 파싱·품사·형태론 배지
+- 상태 배지와 책등 디자인
+- 성경 탐색기와 연구 도크 내부
+
+## A–Z 고정색
+
+A부터 Z까지 26개 알파벳 각각에 서로 다른 고정색을 배정했습니다.
+
+- 같은 알파벳은 모든 책과 장에서 같은 색을 받습니다.
+- 기존 `.k`, `.f`, `.x` 등의 색상 클래스와 관계없이 칩에 실제로 보이는 문자를 기준으로 처리합니다.
+- 로마서에서 같은 `.x` 클래스를 쓰던 K·L·C·S도 서로 다른 색을 받습니다.
+- `KD`, `HB` 같은 두 글자 약어는 문자열 해시로 26색 중 하나를 안정적으로 배정합니다.
+
+## 기존 색상 교체
+
+연구 HTML 내부에 이미 다음 규칙이 있어도 새 팔레트가 우선합니다.
+
+```css
+.c.k { background: ... }
+.c.x { background: ... }
+```
+
+새 스타일은 확인된 주석 칩의 배경색·글자색만 교체합니다.
+칩의 문자, 크기, 글꼴, 여백, 모양과 위치는 유지합니다.
+
+## 테마
+
+- 라이트모드: 고정된 짙은 팔레트
+- 다크모드: 같은 색 계열의 밝은 팔레트
+- 각 배경에서 흰색과 짙은색 중 대비가 높은 글자색을 자동 선택
+- 시스템 테마와 명시적 라이트·다크 테마 모두 지원
+
+## 자동 적용
+
+현재 연구 페이지들이 공통으로 불러오는 `assets/js/bible-reader.js`가 주석 칩 프로그램을 자동으로 로드합니다.
+새 장을 만들 때 별도의 스크립트 태그나 CSS 링크를 추가할 필요가 없습니다.
+
+## 검증
+
+- `bible-reader.js` 기존 원본 부분의 Git blob SHA 일치:
+  `23aa465fafe3c1416a8c071390df9389f2edab9c`
+- 두 JavaScript 파일 `node --check` 통과
+- A–Z 고유 색상 26개 확인
+- 로마서 M·D·J·G·B·K·L·C·S 색상 분리 확인
+- CSS 자동 로더 경로 확인
+- 일반 텍스트에는 속성이나 스타일을 추가하지 않음

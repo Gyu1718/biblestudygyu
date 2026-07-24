@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  if (window.__SCRIPTORIUM_BIBLE_READER__) return;
+  window.__SCRIPTORIUM_BIBLE_READER__ = true;
+
   var script = document.currentScript;
   var siteRoot = script && script.src ? new URL("../../", script.src).href : "/biblestudygyu/";
   var DATA_ROOT = new URL("assets/data/bible/kor/", siteRoot).href;
@@ -52,9 +55,20 @@
     [book.name, book.short].forEach(function (alias) { aliasToBook[alias] = book; });
   });
 
+  var CHAPTER_COUNTS = {
+    GEN:50,EXO:40,LEV:27,NUM:36,DEU:34,JOS:24,JDG:21,RUT:4,"1SA":31,"2SA":24,"1KI":22,"2KI":25,"1CH":29,"2CH":36,
+    EZR:10,NEH:13,EST:10,JOB:42,PSA:150,PRO:31,ECC:12,SNG:8,ISA:66,JER:52,LAM:5,EZK:48,DAN:12,HOS:14,JOL:3,AMO:9,
+    OBA:1,JON:4,MIC:7,NAM:3,HAB:3,ZEP:3,HAG:2,ZEC:14,MAL:4,MAT:28,MRK:16,LUK:24,JHN:21,ACT:28,ROM:16,"1CO":16,
+    "2CO":13,GAL:6,EPH:6,PHP:4,COL:4,"1TH":5,"2TH":3,"1TI":6,"2TI":4,TIT:3,PHM:1,HEB:13,JAS:5,"1PE":5,"2PE":3,
+    "1JN":5,"2JN":1,"3JN":1,JUD:1,REV:22
+  };
+
   var aliasPattern = Object.keys(aliasToBook).sort(function (a, b) { return b.length - a.length; }).map(escapeRegExp).join("|");
-  var explicitRe = new RegExp("(" + aliasPattern + ")\\s*(\\d{1,3})(?:\\s*장)?(?:\\s*[:：]\\s*(\\d{1,3})(?:\\s*[–—-]\\s*(\\d{1,3}))?\\s*(?:절)?)?", "g");
-  var bareRe = /(^|[^0-9가-힣A-Za-z])(\d{1,3})\s*[:：]\s*(\d{1,3})(?:\s*[–—-]\s*(\d{1,3}))?/g;
+  var WORD_CHARS = "0-9A-Za-z가-힣";
+  /* 앞 경계를 강제해 ‘특히 1:16’의 ‘히’를 히브리서 약어로 오인하지 않는다. */
+  var explicitRe = new RegExp("(^|[^" + WORD_CHARS + "])(" + aliasPattern + ")\\s*(\\d{1,3})(?:\\s*장)?(?:\\s*[:：]\\s*(\\d{1,3})(?:\\s*[–—-]\\s*(?:(\\d{1,3})\\s*[:：]\\s*)?(\\d{1,3}))?\\s*(?:절)?)?", "g");
+  var bareRe = /(^|[^0-9가-힣A-Za-z])(\d{1,3})\s*[:：]\s*(\d{1,3})(?:\s*[–—-]\s*(?:(\d{1,3})\s*[:：]\s*)?(\d{1,3}))?/g;
+  var verseOnlyRe = /(^|[^0-9가-힣A-Za-z])(\d{1,3})(?:\s*[–—-]\s*(\d{1,3}))?\s*절/g;
 
   var manifestPromise = null;
   var chunkCache = new Map();
@@ -65,32 +79,98 @@
   function escapeRegExp(value) { return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
   function escapeHtml(value) { return String(value).replace(/[&<>\"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); }
 
+  function normalizeBookCode(value) {
+    var raw = String(value || "").trim();
+    if (!raw) return null;
+    var upper = raw.toUpperCase().replace(/[^0-9A-Z]/g, "");
+    if (codeToBook[upper]) return upper;
+    var lower = raw.toLowerCase();
+    if (folderToCode[lower]) return folderToCode[lower];
+    if (aliasToBook[raw]) return aliasToBook[raw].code;
+    return null;
+  }
+
   function contextFromPage() {
+    var body = document.body;
+    var code = body ? normalizeBookCode(body.getAttribute("data-book")) : null;
+    var source = code ? "body" : null;
     var path = location.pathname.toLowerCase().split("/").filter(Boolean);
-    var code = null;
-    Object.keys(folderToCode).some(function (folder) {
-      if (path.indexOf(folder) !== -1) { code = folderToCode[folder]; return true; }
-      return false;
-    });
-    var file = path[path.length - 1] || "";
-    var m = file.match(/(?:ch|chapter)[-_]?(\d{1,3})\.html?$/i);
-    var chapter = m ? Number(m[1]) : null;
-    if (!chapter) {
-      var titleMatch = document.title.match(/(\d{1,3})장/);
-      chapter = titleMatch ? Number(titleMatch[1]) : null;
+
+    if (!code) {
+      Object.keys(folderToCode).some(function (folder) {
+        if (path.indexOf(folder) !== -1) {
+          code = folderToCode[folder];
+          source = "path";
+          return true;
+        }
+        return false;
+      });
     }
-    return { code: code, chapter: chapter || 1 };
+
+    if (!code) {
+      var title = document.title || "";
+      BOOKS.slice().sort(function (a, b) { return b[1].length - a[1].length; }).some(function (row) {
+        if (title.indexOf(row[1]) !== -1) {
+          code = row[0];
+          source = "title";
+          return true;
+        }
+        return false;
+      });
+    }
+
+    var chapter = body ? Number(body.getAttribute("data-chapter")) : 0;
+    if (!Number.isFinite(chapter) || chapter < 1) chapter = 0;
+    if (!chapter) {
+      var file = path[path.length - 1] || "";
+      var fileMatch = file.match(/(?:ch|chapter)[-_]?(\d{1,3})\.html?$/i);
+      chapter = fileMatch ? Number(fileMatch[1]) : 0;
+    }
+    if (!chapter) {
+      var titleMatch = (document.title || "").match(/(\d{1,3})장/);
+      chapter = titleMatch ? Number(titleMatch[1]) : 0;
+    }
+    return { code: code, chapter: chapter || null, source: source };
+  }
+
+  function endChapterOf(ref) {
+    return ref.endChapter || ref.chapter;
+  }
+
+  function endVerseOf(ref) {
+    return ref.endVerse != null ? ref.endVerse : ref.verse;
+  }
+
+  function isCrossChapter(ref) {
+    return endChapterOf(ref) !== ref.chapter;
   }
 
   function refKey(ref) {
-    return ref.code + "." + ref.chapter + (ref.verse ? "." + ref.verse + (ref.endVerse && ref.endVerse !== ref.verse ? "-" + ref.endVerse : "") : "");
+    var key = ref.code + "." + ref.chapter;
+    var endChapter = endChapterOf(ref);
+    var endVerse = endVerseOf(ref);
+    if (ref.verse != null) {
+      key += "." + ref.verse;
+      if (endChapter !== ref.chapter) key += "-" + endChapter + "." + endVerse;
+      else if (endVerse != null && endVerse !== ref.verse) key += "-" + endVerse;
+    } else if (endChapter !== ref.chapter) {
+      key += "-" + endChapter;
+    }
+    return key;
   }
 
   function labelFor(ref) {
     var book = codeToBook[ref.code];
     var label = (book ? book.name : ref.code) + " " + ref.chapter;
-    if (ref.verse) label += ":" + ref.verse + (ref.endVerse && ref.endVerse !== ref.verse ? "–" + ref.endVerse : "");
-    else label += "장";
+    var endChapter = endChapterOf(ref);
+    var endVerse = endVerseOf(ref);
+    if (ref.verse != null) {
+      label += ":" + ref.verse;
+      if (endChapter !== ref.chapter) label += "–" + endChapter + ":" + endVerse;
+      else if (endVerse != null && endVerse !== ref.verse) label += "–" + endVerse;
+    } else {
+      label += endChapter !== ref.chapter ? "–" + endChapter + "장" : "장";
+    }
     return label;
   }
 
@@ -98,53 +178,109 @@
     var url = new URL(ORIGINAL_URL);
     url.searchParams.set("book", ref.code);
     url.searchParams.set("chapter", String(ref.chapter || 1));
-    if (ref.verse) url.searchParams.set("verse", String(ref.verse));
-    if (ref.endVerse && ref.endVerse !== ref.verse) url.searchParams.set("end", String(ref.endVerse));
+    if (ref.verse != null) url.searchParams.set("verse", String(ref.verse));
+    if (!isCrossChapter(ref) && endVerseOf(ref) != null && endVerseOf(ref) !== ref.verse) url.searchParams.set("end", String(endVerseOf(ref)));
     return url.href;
   }
 
+  function buildRef(code, chapter, verse, endChapter, endVerse) {
+    var hasVerse = verse != null && verse !== "";
+    var startChapter = Number(chapter);
+    var startVerse = hasVerse ? Number(verse) : null;
+    var finalChapter = endChapter ? Number(endChapter) : startChapter;
+    var finalVerse = endVerse ? Number(endVerse) : startVerse;
+    return {
+      code: code,
+      chapter: startChapter,
+      verse: startVerse,
+      endChapter: finalChapter,
+      endVerse: finalVerse
+    };
+  }
+
+  function overlapsAny(start, end, candidates) {
+    return candidates.some(function (candidate) { return start < candidate.end && end > candidate.start; });
+  }
+
+  function inheritedCode(text, start, candidates) {
+    for (var i = candidates.length - 1; i >= 0; i--) {
+      var previous = candidates[i];
+      if (!previous.explicit || previous.end > start) continue;
+      if (/^\s*[;,·]\s*$/.test(text.slice(previous.end, start))) return previous.ref.code;
+      break;
+    }
+    return null;
+  }
+
   function parseReferenceText(text, pageContext) {
+    pageContext = pageContext || { code: null, chapter: null };
     explicitRe.lastIndex = 0;
     bareRe.lastIndex = 0;
+    verseOnlyRe.lastIndex = 0;
     var candidates = [];
     var match;
+
     while ((match = explicitRe.exec(text))) {
-      var book = aliasToBook[match[1]];
+      var prefix = match[1] || "";
+      var book = aliasToBook[match[2]];
       if (!book) continue;
+      var start = match.index + prefix.length;
+      var end = explicitRe.lastIndex;
       candidates.push({
-        start: match.index,
-        end: explicitRe.lastIndex,
-        raw: match[0],
-        ref: { code: book.code, chapter: Number(match[2]), verse: match[3] ? Number(match[3]) : null, endVerse: match[4] ? Number(match[4]) : (match[3] ? Number(match[3]) : null) }
+        start: start,
+        end: end,
+        raw: text.slice(start, end),
+        explicit: true,
+        ref: buildRef(book.code, match[3], match[4], match[5], match[6])
       });
     }
+
     while ((match = bareRe.exec(text))) {
       var offset = match[1] ? match[1].length : 0;
       var start = match.index + offset;
       var end = bareRe.lastIndex;
-      if (candidates.some(function (c) { return start < c.end && end > c.start; })) continue;
-      var inherited = null;
-      for (var i = candidates.length - 1; i >= 0; i--) {
-        var prev = candidates[i];
-        if (prev.end <= start && /^\s*[;,·]\s*$/.test(text.slice(prev.end, start))) { inherited = prev.ref.code; break; }
-      }
-      var code = inherited || pageContext.code;
+      if (overlapsAny(start, end, candidates)) continue;
+      var code = inheritedCode(text, start, candidates) || pageContext.code;
       if (!code) continue;
       candidates.push({
         start: start,
         end: end,
         raw: text.slice(start, end),
-        ref: { code: code, chapter: Number(match[2]), verse: Number(match[3]), endVerse: match[4] ? Number(match[4]) : Number(match[3]) }
+        explicit: false,
+        ref: buildRef(code, match[2], match[3], match[4], match[5])
       });
     }
-    return candidates.sort(function (a, b) { return a.start - b.start; }).filter(validBasicRef);
+
+    if (pageContext.code && pageContext.chapter) {
+      while ((match = verseOnlyRe.exec(text))) {
+        var offset = match[1] ? match[1].length : 0;
+        var start = match.index + offset;
+        var end = verseOnlyRe.lastIndex;
+        if (overlapsAny(start, end, candidates)) continue;
+        candidates.push({
+          start: start,
+          end: end,
+          raw: text.slice(start, end),
+          explicit: false,
+          ref: buildRef(pageContext.code, pageContext.chapter, match[2], null, match[3])
+        });
+      }
+    }
+
+    return candidates.sort(function (a, b) { return a.start - b.start || b.end - a.end; }).filter(validBasicRef);
   }
 
   function validBasicRef(candidate, index, all) {
     var r = candidate.ref;
-    if (!r.code || r.chapter < 1 || r.chapter > 150) return false;
-    if (r.verse !== null && (r.verse < 1 || r.verse > 176)) return false;
-    if (r.endVerse !== null && r.endVerse < r.verse) return false;
+    if (!r.code || !codeToBook[r.code]) return false;
+    var maxChapter = CHAPTER_COUNTS[r.code] || 150;
+    var endChapter = endChapterOf(r);
+    var endVerse = endVerseOf(r);
+    if (r.chapter < 1 || r.chapter > maxChapter || endChapter < 1 || endChapter > maxChapter) return false;
+    if (endChapter < r.chapter) return false;
+    if (r.verse != null && (r.verse < 1 || r.verse > 176)) return false;
+    if (endVerse != null && (endVerse < 1 || endVerse > 176)) return false;
+    if (r.verse != null && endChapter === r.chapter && endVerse < r.verse) return false;
     if (index && candidate.start < all[index - 1].end) return false;
     return true;
   }
@@ -152,12 +288,38 @@
   function shouldSkip(node) {
     var parent = node.parentElement;
     if (!parent || !node.nodeValue || !node.nodeValue.trim()) return true;
-    return Boolean(parent.closest("a,button,script,style,pre,code,textarea,input,select,option,nav,.bible-reader-ui,.hw,[data-no-scripture-link]"));
+    return Boolean(parent.closest("a,button,script,style,pre,code,textarea,input,select,option,nav,.bible-reader-ui,.scripture-ref,.hw,[data-bible-ref],[data-bible-range],[data-no-scripture-link]"));
+  }
+
+  function parseDeclaredReference(value, pageContext) {
+    var direct = parseKey(value);
+    if (direct) return direct;
+    var parsed = parseReferenceText(value, pageContext);
+    return parsed.length ? parsed[0].ref : null;
+  }
+
+  function prepareDeclaredReferences(root, pageContext) {
+    root.querySelectorAll("[data-bible-ref],[data-bible-range]").forEach(function (node) {
+      if (node.closest("[data-no-scripture-link]")) return;
+      var value = node.getAttribute("data-bible-ref") || node.getAttribute("data-bible-range") || node.textContent;
+      var ref = parseDeclaredReference(value, pageContext);
+      if (!ref) return;
+      node.classList.add("scripture-ref");
+      node.dataset.bibleRef = refKey(ref);
+      node.dataset.bibleRangeKind = isCrossChapter(ref) ? "cross" : "single";
+      node.setAttribute("aria-label", labelFor(ref) + " 성경 본문 열기");
+      if (node.tagName === "A") node.href = "#bible=" + encodeURIComponent(refKey(ref));
+      else {
+        node.setAttribute("role", "button");
+        if (!node.hasAttribute("tabindex")) node.tabIndex = 0;
+      }
+    });
   }
 
   function linkReferences() {
     var root = document.querySelector("main, article") || document.body;
     var pageContext = contextFromPage();
+    prepareDeclaredReferences(root, pageContext);
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     var nodes = [];
     while (walker.nextNode()) if (!shouldSkip(walker.currentNode)) nodes.push(walker.currentNode);
@@ -173,6 +335,7 @@
         a.className = "scripture-ref";
         a.href = "#bible=" + encodeURIComponent(refKey(item.ref));
         a.dataset.bibleRef = refKey(item.ref);
+        a.dataset.bibleRangeKind = isCrossChapter(item.ref) ? "cross" : "single";
         a.setAttribute("aria-label", labelFor(item.ref) + " 성경 본문 열기");
         a.textContent = item.raw;
         frag.appendChild(a);
@@ -224,21 +387,46 @@
     return promise;
   }
 
-  function getVerses(data, ref, limit) {
-    var chapter = data.chapters[String(ref.chapter)];
+  function chapterRows(data, chapterNumber, startVerse, endVerse) {
+    var chapter = data.chapters[String(chapterNumber)];
     if (!chapter) return [];
-    var start = ref.verse || 1;
-    var verseNumbers = Object.keys(chapter).map(Number);
-    var end = ref.verse ? (ref.endVerse || ref.verse) : Math.max.apply(null, verseNumbers);
-    var rows = [];
-    for (var v = start; v <= end; v++) if (chapter[String(v)]) rows.push({ verse: v, text: chapter[String(v)] });
-    return limit ? rows.slice(0, limit) : rows;
+    var numbers = Object.keys(chapter).map(Number).sort(function (a, b) { return a - b; });
+    if (!numbers.length) return [];
+    var start = startVerse != null ? startVerse : numbers[0];
+    var end = endVerse != null ? endVerse : numbers[numbers.length - 1];
+    return numbers.filter(function (verse) { return verse >= start && verse <= end; }).map(function (verse) {
+      return { chapter: chapterNumber, verse: verse, text: chapter[String(verse)] };
+    });
   }
 
-  function renderVerses(rows) {
+  function getRangeRows(data, ref) {
+    var rows = [];
+    var lastChapter = endChapterOf(ref);
+    for (var chapter = ref.chapter; chapter <= lastChapter; chapter++) {
+      var start = chapter === ref.chapter ? ref.verse : null;
+      var end = chapter === lastChapter ? endVerseOf(ref) : null;
+      rows = rows.concat(chapterRows(data, chapter, start, end));
+    }
+    return rows;
+  }
+
+  function renderVerses(rows, showChapter) {
     return rows.map(function (row) {
-      return '<p class="br-verse"><b>' + row.verse + '</b><span>' + escapeHtml(row.text) + '</span></p>';
+      var number = showChapter ? row.chapter + ":" + row.verse : row.verse;
+      return '<p class="br-verse' + (showChapter ? ' br-verse-cross' : '') + '"><b>' + number + '</b><span>' + escapeHtml(row.text) + '</span></p>';
     }).join("");
+  }
+
+  function renderRange(data, ref, threshold, edgeCount) {
+    var rows = getRangeRows(data, ref);
+    if (!rows.length) return { html: "", count: 0, truncated: false };
+    var showChapter = isCrossChapter(ref);
+    if (rows.length <= threshold) return { html: renderVerses(rows, showChapter), count: rows.length, truncated: false };
+    var head = rows.slice(0, edgeCount);
+    var tail = rows.slice(-edgeCount);
+    var omitted = Math.max(rows.length - head.length - tail.length, 0);
+    var gap = '<div class="br-range-gap" role="note"><span>…</span><b>' + omitted + '개 절 생략</b><span>…</span></div>';
+    return { html: renderVerses(head, true) + gap + renderVerses(tail, true), count: rows.length, truncated: true };
   }
 
   function ensureUI() {
@@ -263,7 +451,7 @@
       '<button class="br-close" type="button" aria-label="성경 패널 닫기">×</button>',
       '</header>',
       '<div class="br-modes" role="tablist"><button type="button" class="is-active" data-br-mode="reference">장절 열기</button><button type="button" data-br-mode="text">본문 검색</button></div>',
-      '<form class="br-search br-reference-search" data-br-form="reference"><input type="search" placeholder="예: 학개 1:5–6" aria-label="성경 장절 검색"><button type="submit">열기</button></form>',
+      '<form class="br-search br-reference-search" data-br-form="reference"><input type="search" placeholder="예: 롬 1:16–15:13" aria-label="성경 장절 검색"><button type="submit">열기</button></form>',
       '<form class="br-search br-text-search" data-br-form="text" hidden><input type="search" placeholder="예: 하늘의 하나님" aria-label="성경 본문 단어 검색"><button type="submit">검색</button></form>',
       '<div class="br-status" aria-live="polite"></div>',
       '<div class="br-content"><p class="br-empty">연구 페이지의 성경 장절을 누르거나 장절을 입력하세요.</p></div>',
@@ -314,7 +502,7 @@
       event.preventDefault();
       var value = event.currentTarget.querySelector("input").value.trim();
       var parsed = parseReferenceText(value, contextFromPage());
-      if (!parsed.length) return setStatus("장절을 인식하지 못했습니다. 예: 학개 1:5–6");
+      if (!parsed.length) return setStatus("장절을 인식하지 못했습니다. 예: 롬 1:16–15:13");
       openReference(parsed[0].ref, true);
     });
 
@@ -336,13 +524,18 @@
     setStatus("본문을 불러오는 중…");
     view.panel.querySelector(".br-content").innerHTML = "";
     loadBook(ref.code).then(function (data) {
-      var rows = getVerses(data, ref);
-      if (!rows.length) throw new Error("해당 장절을 찾지 못했습니다");
-      setStatus("");
+      var rendered = renderRange(data, ref, 24, 3);
+      if (!rendered.count) throw new Error("해당 장절을 찾지 못했습니다");
+      setStatus(rendered.truncated ? "긴 범위는 시작과 끝 본문을 요약해 표시합니다." : "");
+      var note = rendered.truncated
+        ? '<p class="br-range-note">전체 ' + rendered.count + '개 절 가운데 시작과 끝을 표시합니다.</p>'
+        : '';
+      var linkLabel = isCrossChapter(ref) || rendered.truncated ? "시작 본문을 원어성경에서 보기 ↗" : "원어성경과 나란히 보기 ↗";
       view.panel.querySelector(".br-content").innerHTML = [
         '<div class="br-ref-title"><span>' + escapeHtml(data.translation || "개역개정") + '</span><h3>' + escapeHtml(labelFor(ref)) + '</h3></div>',
-        renderVerses(rows),
-        '<a class="br-original-link" href="' + escapeHtml(originalUrl(ref)) + '" target="_blank" rel="noopener">원어성경과 나란히 보기 ↗</a>'
+        note,
+        rendered.html,
+        '<a class="br-original-link" href="' + escapeHtml(originalUrl(ref)) + '" target="_blank" rel="noopener">' + linkLabel + '</a>'
       ].join("");
       if (updateHash !== false) history.replaceState(null, "", "#bible=" + encodeURIComponent(refKey(ref)));
     }).catch(function (error) {
@@ -410,17 +603,25 @@
   }
 
   function parseKey(key) {
-    var m = String(key || "").match(/^([1-3A-Z]{3})\.(\d{1,3})(?:\.(\d{1,3})(?:-(\d{1,3}))?)?$/);
-    return m ? { code: m[1], chapter: Number(m[2]), verse: m[3] ? Number(m[3]) : null, endVerse: m[4] ? Number(m[4]) : (m[3] ? Number(m[3]) : null) } : null;
+    var value = String(key || "").trim().toUpperCase();
+    var repeatedCode = value.match(/^([1-3A-Z]{3})\.(\d{1,3})\.(\d{1,3})-([1-3A-Z]{3})\.(\d{1,3})\.(\d{1,3})$/);
+    if (repeatedCode && repeatedCode[1] === repeatedCode[4]) {
+      return buildRef(repeatedCode[1], repeatedCode[2], repeatedCode[3], repeatedCode[5], repeatedCode[6]);
+    }
+    var verseRange = value.match(/^([1-3A-Z]{3})\.(\d{1,3})\.(\d{1,3})(?:-(?:(\d{1,3})\.)?(\d{1,3}))?$/);
+    if (verseRange) return buildRef(verseRange[1], verseRange[2], verseRange[3], verseRange[4], verseRange[5]);
+    var chapterRange = value.match(/^([1-3A-Z]{3})\.(\d{1,3})(?:-(\d{1,3}))?$/);
+    if (chapterRange) return buildRef(chapterRange[1], chapterRange[2], null, chapterRange[3], null);
+    return null;
   }
 
   function showTooltip(anchor, ref) {
     if (matchMedia("(hover: none)").matches) return;
     var view = ensureUI();
     loadBook(ref.code).then(function (data) {
-      var rows = getVerses(data, ref, 3);
-      if (!rows.length) return;
-      view.tip.innerHTML = '<b>' + escapeHtml(labelFor(ref)) + '</b>' + renderVerses(rows) + (getVerses(data, ref).length > 3 ? '<small>클릭하여 전체 범위 보기</small>' : '');
+      var rendered = renderRange(data, ref, 4, 2);
+      if (!rendered.count) return;
+      view.tip.innerHTML = '<b>' + escapeHtml(labelFor(ref)) + '</b>' + rendered.html + (rendered.truncated ? '<small>긴 범위입니다. 클릭하면 시작과 끝을 더 크게 봅니다.</small>' : (rendered.count > 3 ? '<small>클릭하여 전체 범위 보기</small>' : ''));
       var rect = anchor.getBoundingClientRect();
       view.tip.hidden = false;
       var tipRect = view.tip.getBoundingClientRect();
@@ -459,6 +660,13 @@
       if (anchor) { var ref = parseKey(anchor.dataset.bibleRef); if (ref) showTooltip(anchor, ref); }
     });
     document.addEventListener("focusout", function (event) { if (event.target.closest(".scripture-ref")) hideTooltip(); });
+    document.addEventListener("keydown", function (event) {
+      var target = event.target.closest('.scripture-ref[role="button"]');
+      if (!target || (event.key !== "Enter" && event.key !== " ")) return;
+      event.preventDefault();
+      var ref = parseKey(target.dataset.bibleRef);
+      if (ref) openReference(ref, true);
+    });
   }
 
   function injectOriginalButton() {
@@ -485,6 +693,16 @@
     if (ref) openReference(ref, false);
   }
 
+  window.__SCRIPTORIUM_REFERENCE_ENGINE__ = {
+    contextFromPage: contextFromPage,
+    parseReferenceText: parseReferenceText,
+    parseKey: parseKey,
+    refKey: refKey,
+    labelFor: labelFor,
+    renderRange: renderRange,
+    getRangeRows: getRangeRows
+  };
+
   function init() {
     ensureUI();
     injectOriginalButton();
@@ -505,8 +723,8 @@
   window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ = true;
   var current = document.currentScript;
   var src = current && current.src
-    ? new URL("commentator-chips.js?v=20260724.2", current.src).href
-    : "assets/js/commentator-chips.js?v=20260724.2";
+    ? new URL("commentator-chips.js?v=20260724.4", current.src).href
+    : "assets/js/commentator-chips.js?v=20260724.4";
   var loader = document.createElement("script");
   loader.src = src;
   loader.defer = true;

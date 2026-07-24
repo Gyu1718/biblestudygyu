@@ -1,14 +1,16 @@
 {
-  "package": "biblestudygyu-commentator-chip-palette",
-  "version": "1.1.0",
-  "generated": "2026-07-24",
-  "scope": "Only explicitly marked commentator chip span elements",
-  "alphabet_colors": 26,
+  "package": "biblestudygyu-reference-hover-automation-v2.0",
+  "created": "2026-07-24",
   "files": [
     {
       "path": "PATCH-README.md",
-      "bytes": 3082,
-      "sha256": "9d03747fd987d58f2fd0b95f0171e438e3e00c938b254bb3132461d12a542490"
+      "bytes": 1814,
+      "sha256": "9f82deda22cbb154c951313cb211ce175005c84479d25a79e75318c351921d3c"
+    },
+    {
+      "path": "assets/css/bible-reader.css",
+      "bytes": 6928,
+      "sha256": "3cdecd54bf42320a1ed514ef5c7be78c07cbceacaba50eb0e26b73303a513823"
     },
     {
       "path": "assets/css/commentator-chips.css",
@@ -17,19 +19,13 @@
     },
     {
       "path": "assets/js/bible-reader.js",
-      "bytes": 25306,
-      "sha256": "69c412468c9f141f09935d0b2adf90d0a6802d4e5834b4efbd197b63bf5e3521"
+      "bytes": 34328,
+      "sha256": "dcd4f97ed71336baefc85c0ef04bc2ed88c9f2eeacbdb9e0e2eb79f39bc0f7a5"
     },
     {
       "path": "assets/js/commentator-chips.js",
       "bytes": 5331,
-      "sha256": "b20d4e38b664945d5710667687f7d4aea611b8322b810b553ede0d77182a3a00"
+      "sha256": "1b9310e13accd9c567a5e493be2753db3c1a71f4d9488d30b901006ef71b7cde"
     }
-  ],
-  "validation": {
-    "javascript_syntax": "passed",
-    "original_bible_reader_git_blob": "23aa465fafe3c1416a8c071390df9389f2edab9c",
-    "alphabet_unique_colors": 26,
-    "general_text_modified": false
-  }
+  ]
 }

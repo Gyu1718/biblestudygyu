@@ -24,3 +24,13 @@
 html.bible-reader-open{overflow:hidden}
 @media(max-width:700px){.bible-reader-tab{top:auto;bottom:1.1rem;right:1rem;border-radius:999px;writing-mode:horizontal-tb;letter-spacing:0;padding:.72rem 1rem}.bible-reader-panel{top:auto;bottom:0;width:100%;height:min(78dvh,680px);border-radius:15px 15px 0 0;transform:translateY(103%)}.bible-reader-panel.is-open{transform:translateY(0)}.bible-reader-tooltip{display:none!important}.br-head{border-radius:15px 15px 0 0}}
 @media print{.bible-reader-tab,.bible-reader-backdrop,.bible-reader-panel,.bible-reader-tooltip,.original-bible-nav{display:none!important}.scripture-ref{text-decoration:none}}
+
+/* 장간 범위·긴 범위 호버링 */
+.scripture-ref[data-bible-range-kind="cross"]{text-decoration-style:dashed}
+.br-verse.br-verse-cross{grid-template-columns:3.2rem 1fr}
+.br-range-note{margin:.45rem 0 .7rem;padding:.55rem .7rem;border-radius:6px;background:#f4f1e8;color:#68727b;font:500 .7rem/1.5 "Noto Sans KR",sans-serif}
+.br-range-gap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.55rem;margin:.55rem 0;color:#8a7655;font:600 .66rem/1.2 "Noto Sans KR",sans-serif;text-align:center}
+.br-range-gap span{height:1px;background:#ddd5c7}.br-range-gap b{font-weight:700}
+.bible-reader-tooltip .br-verse.br-verse-cross{grid-template-columns:2.7rem 1fr}
+.bible-reader-tooltip .br-range-gap{margin:.35rem 0;font-size:.6rem}
+@media(max-width:700px){.br-verse.br-verse-cross{grid-template-columns:3rem 1fr}}

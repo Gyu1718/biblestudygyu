@@ -219,3 +219,22 @@
     boot();
   }
 })();
+
+/* ---------- (3) 반응형 연구 도크 자동 로더 ---------- */
+(function () {
+  "use strict";
+  if (typeof document === "undefined") return;
+  if (window.__SCRIPTORIUM_RESEARCH_DOCK_LOADING__ || document.querySelector("script[data-research-dock-js]")) return;
+  window.__SCRIPTORIUM_RESEARCH_DOCK_LOADING__ = true;
+  var current = document.currentScript;
+  var src = current && current.src
+    ? new URL("js/research-dock.js", current.src).href
+    : "assets/js/research-dock.js";
+  var loader = document.createElement("script");
+  loader.src = src;
+  loader.defer = true;
+  loader.dataset.researchDockJs = "";
+  loader.addEventListener("load", function () { window.__SCRIPTORIUM_RESEARCH_DOCK_LOADING__ = false; });
+  loader.addEventListener("error", function () { window.__SCRIPTORIUM_RESEARCH_DOCK_LOADING__ = false; });
+  document.head.appendChild(loader);
+})();

@@ -1,0 +1,79 @@
+/* 실제 배경 명도에 따라 auto-contrast.js가 생성하는 전경색 변수 */
+:root{
+  --panel:var(--card,#fff);
+  --soft:var(--ink-soft,#59606b);
+  --deep:var(--lapis-deep,#16354f);
+  --on-paper:var(--ink,#20242b);
+  --on-paper-soft:var(--ink-soft,#59606b);
+  --on-card:var(--ink,#20242b);
+  --on-card-soft:var(--ink-soft,#59606b);
+  --on-panel:var(--on-card,var(--ink,#20242b));
+  --on-panel-soft:var(--on-card-soft,var(--ink-soft,#59606b));
+  --on-band:var(--ink,#20242b);
+  --on-band-soft:var(--ink-soft,#59606b);
+  --on-lapis:#fff;
+  --on-lapis-deep:#fff;
+  --on-deep:#fff;
+  --on-ochre:#171b22;
+}
+
+body{color:var(--on-paper,var(--ink));background-color:var(--paper)}
+body{transition:var(--theme-transition,background-color .25s ease,color .25s ease,border-color .25s ease)}
+
+/* 카드·패널 */
+.set-card,.method .item,.feature,.xref-panel,
+.lx-result,.lx-empty,.lx-entry-head,.lx-card,
+.or-reader,.bible-reader-panel,.bible-reader-tooltip{
+  color:var(--on-panel,var(--on-card,var(--ink)));
+}
+.set-card .meta,.set-card .desc,.method .item p,.feature p,
+.lx-rbody small,.lx-rbody p,.lx-entry-meta,.lx-en,.lx-source,.lx-foot,
+.or-status,.or-footer,.or-column-head small{
+  color:var(--on-panel-soft,var(--ink-soft));
+}
+
+/* 폼 요소 */
+input,select,textarea,
+.lx-search input,.lx-search select,.lx-entry-nav button,
+.or-controls select,.or-controls input,.or-nav-buttons button{
+  background:var(--panel-resolved,var(--panel));
+  color:var(--on-panel,var(--ink));
+  border-color:var(--line);
+}
+input::placeholder,textarea::placeholder{color:var(--on-panel-soft,var(--ink-soft));opacity:.82}
+
+/* 강조 버튼은 강조 배경 자체의 명도에 맞춰 자동 결정 */
+.set-card .cta,.lx-search button,.or-controls>button,
+.bible-reader-tab,.br-original-link{
+  color:var(--on-lapis,#fff)!important;
+}
+.theme-toggle{background:var(--card-resolved,var(--card));color:var(--on-card,var(--ink))}
+.c.k,.c.f,.c.h,.c.t,.c.b{color:#fff}
+
+/* 홈페이지 */
+.set-card,.method .item{background:var(--panel-resolved,var(--panel))}
+.next-slot{color:var(--on-paper-soft,var(--ink-soft))}
+.next-slot p b{color:var(--on-paper,var(--ink))}
+
+/* 원어성경 읽기 */
+.or-header{background:var(--deep-resolved,var(--deep));color:var(--on-deep,#fff)}
+.or-header p,.or-home{color:var(--on-deep-soft,#d4dbe2)}
+.or-controls{background:color-mix(in srgb,var(--paper) 94%,transparent)}
+.or-reader{background:var(--panel-resolved,var(--panel))}
+.or-column-head,.or-original-head{background:var(--band-resolved,var(--band));color:var(--on-band,var(--ink))}
+.or-cell:first-child{background:var(--panel-resolved,var(--panel))}
+.or-verse-row{border-color:var(--line)}
+.or-verse-row.is-selected .or-cell{background:color-mix(in srgb,var(--ochre) 17%,var(--panel-resolved,var(--panel)))}
+.or-empty{color:var(--on-panel-soft,var(--ink-soft))}
+
+/* 원어사전 */
+.lx-result,.lx-empty,.lx-entry-head,.lx-card{background:var(--panel-resolved,var(--panel))}
+.lx-raw{background:var(--paper-resolved,var(--paper));color:var(--on-paper,var(--ink))}
+.lx-card h2,.lx-rlemma,.lx-entry-lemma{color:var(--lapis-deep)}
+
+/* 임의 배경 블록: data-auto-contrast 속성만 추가하면 된다. */
+[data-auto-contrast]{color:var(--auto-contrast-ink)!important}
+[data-auto-contrast] [data-auto-contrast-muted]{color:var(--auto-contrast-soft)!important}
+
+@media (prefers-reduced-motion:reduce){body,body *{transition:none!important}}
+@media print{.theme-toggle{display:none!important}}

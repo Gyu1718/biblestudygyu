@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>성경읽기 — 원어·개역개정 병렬</title>
+<meta name="description" content="구약 WLC/OSHB 히브리어 본문과 신약 NA28 헬라어 본문을 개역개정과 절 단위로 나란히 읽는 성경읽기 페이지.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Serif+Hebrew:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/original-reader.css">
+<link rel="stylesheet" href="../assets/css/lexicon-hover.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="../assets/css/auto-contrast.css">
+</head>
+<body>
+<header class="or-header">
+  <a class="or-home" href="../index.html">← 성서 연구 서고</a>
+  <div>
+    <p class="or-eyebrow">BIBLE READER · ORIGINAL &amp; KOREAN</p>
+    <h1>성경읽기</h1>
+    <p>원문과 개역개정을 절 단위로 나란히 읽고 대조합니다. 원어 단어에 마우스를 올리거나 터치하면 사전 풀이가 열립니다.</p>
+  </div>
+</header>
+<main class="or-shell">
+  <section class="or-controls" aria-label="본문 선택">
+    <label>성경책<select id="or-book"></select></label>
+    <label>장<select id="or-chapter"></select></label>
+    <label>절<input id="or-verse" type="number" min="1" inputmode="numeric" placeholder="전체"></label>
+    <button id="or-open" type="button">본문 열기</button>
+    <div class="or-nav-buttons"><button id="or-prev" type="button">← 이전 장</button><button id="or-next" type="button">다음 장 →</button></div>
+  </section>
+  <section class="or-status" id="or-status" aria-live="polite">본문을 불러오는 중입니다.</section>
+  <section class="or-reader" aria-label="원어와 한국어 병렬 본문">
+    <div class="or-column-head or-original-head"><span id="or-original-label">원어</span><small id="or-original-source"></small></div>
+    <div class="or-column-head or-korean-head"><span>개역개정</span><small>학업·학술용 허가 범위 내 사용</small></div>
+    <div id="or-verses" class="or-verses"></div>
+  </section>
+</main>
+<footer class="or-footer">구약은 WLC/OSHB 히브리어 본문을 사용하며, 신약은 사용자가 제공한 NA28 EPUB에서 변환한 헬라어 본문을 사용합니다. 사전 호버는 한글 스트롱 사전과 단어 연결 색인을 사용합니다.</footer>
+<script src="../assets/js/auto-contrast.js" defer></script>
+<script src="../assets/app.js" defer></script>
+<script src="../assets/js/lexicon-core.js" defer></script>
+<script src="../assets/js/lexicon-hover.js" defer></script>
+<script src="../assets/js/original-reader.js" defer></script>
+<script src="../assets/js/original-lexicon-bridge.js" defer></script>
+</body>
+</html>

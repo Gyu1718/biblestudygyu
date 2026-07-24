@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html data-theme="auto" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>에스더 종합 연구 — 책의 신학과 전체 조망</title><meta content="에스더의 MT·LXX·알파 텍스트, 페르시아 궁정 배경, 정경 구조, 신학, 수용사와 주요 해석 쟁점을 종합한 연구 개관." name="description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Serif+Hebrew:wght@400;700&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --k:#7a5a38; --f:#37665a; --h:#8a4658; --t:#3c5a83; --b:#655a8c; --x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.2rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.05rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.4rem}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.42rem .5rem .42rem .55rem;border-left:2px solid transparent;margin-top:.5rem}
+nav.toc a.lv2{display:block;color:#b7c8d8;text-decoration:none;padding:.2rem .5rem .2rem 1.15rem;border-left:2px solid transparent;font-size:.76rem;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2.2rem;margin-bottom:1.6rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.18;direction:rtl}
+.hero h1{font-size:2.05rem;font-weight:900;line-height:1.35;margin:.4rem 0 .6rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.8}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1.1rem;letter-spacing:.02em}
+section.part{margin-top:4rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.55rem;font-weight:900;line-height:1.4;margin:.25rem 0 .2rem}
+.part-head .gloss{font-size:.86rem;color:var(--ink-soft)}
+h3{font-size:1.16rem;font-weight:700;margin:2.2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:1rem;font-weight:700;margin:1.5rem 0 .5rem;color:var(--lapis)}
+p{margin:.9rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.lead{font-size:1.02rem;color:var(--ink)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.2rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.caveat ul{margin:.3rem 0 0 0}
+.oracle{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:1.3rem 1.4rem;margin:1.3rem 0}
+.oracle .tag{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--lapis);border-radius:4px;padding:.15rem .55rem;display:inline-block;margin-bottom:.5rem}
+.oracle h3{margin-top:.2rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.74rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.chiasm{font-family:var(--sans);font-size:.84rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.3rem;margin:1.2rem 0;line-height:1.9}
+.chiasm .lvl{display:block}
+.chiasm .ax{font-weight:700;color:var(--lapis);background:#eef3f8;border-radius:4px;padding:.1rem .5rem;display:inline-block;margin:.25rem 0}
+.back{font-family:var(--sans);font-size:.75rem;margin-top:1.6rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:5rem;border-top:3px double var(--line);padding-top:1.4rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,table,.oracle,.chiasm{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/>
+<link data-esther-suite-css="" href="esther-suite.css" rel="stylesheet"/></head>
+<body data-book="est" data-kind="study-page" data-root="../../">
+<div class="frame">
+<nav aria-label="목차" class="toc">
+<div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a><a href="../../bible/original.html?book=EST&amp;chapter=1">성경읽기</a></div>
+<div class="brand">에스더 종합 연구</div>
+<div class="brand-sub">책의 신학과 전체 조망</div>
+<a class="lv1" href="#overview">개요와 연구 자료 칩</a>
+<a class="lv1" href="#p1">Ⅰ. 본문의 세계 — 세 본문과 편집 과정</a>
+<a class="lv2" href="#p1-witness">본문 증거 — MT·LXX·AT와 그 딸판</a>
+<a class="lv2" href="#p1-proto">프로토에스더에서 마소라 본문으로</a>
+<a class="lv2" href="#p1-add">여섯 첨가문 A–F</a>
+<a class="lv1" href="#p2">Ⅱ. 배경 — 페르시아 제국과 수산 궁정</a>
+<a class="lv2" href="#p2-xerxes">아하수에로와 역사의 크세르크세스</a>
+<a class="lv2" href="#p2-court">궁정의 리얼리아 — 사료로서의 에스더</a>
+<a class="lv2" href="#p2-persica">그리스 문학의 페르시아와 "페르시카"</a>
+<a class="lv1" href="#p3">Ⅲ. 연대와 장르</a>
+<a class="lv2" href="#p3-date">연대 — 페르시아기와 헬레니즘기 사이</a>
+<a class="lv2" href="#p3-genre">장르 — 궁정 설화·역사 소설·벌레스크</a>
+<a class="lv1" href="#p4">Ⅳ. 책의 짜임</a>
+<a class="lv2" href="#p4-banquets">열 잔치 — 쌍으로 도는 구조</a>
+<a class="lv2" href="#p4-chiasm">동심원 교차구조와 그 축</a>
+<a class="lv2" href="#p4-reversal">반전의 건축 — <span style="font-family:var(--heb)">וְנַהֲפוֹךְ הוּא</span></a>
+<a class="lv1" href="#p5">Ⅴ. 장별 조망</a>
+<a class="lv1" href="#p6">Ⅵ. 관통 주제</a>
+<a class="lv2" href="#p6-god">하나님의 부재와 숨은 독법</a>
+<a class="lv2" href="#p6-identity">정체성 — 감춤과 드러냄</a>
+<a class="lv2" href="#p6-diaspora">디아스포라의 생존술</a>
+<a class="lv2" href="#p6-feast">잔치와 금식</a>
+<a class="lv2" href="#p6-violence">9장의 폭력이라는 물음</a>
+<a class="lv1" href="#p7">Ⅶ. 수용사 스케치</a>
+<a class="lv1" href="#p8">Ⅷ. 쟁점 대조표</a>
+<a class="lv1" href="#p9">Ⅸ. 서지와 자료 상태</a>
+</nav>
+<main>
+<header class="hero">
+<div class="heb-title" dir="rtl">וְנַהֲפוֹךְ הוּא</div>
+<h1>에스더 종합 연구</h1>
+<p class="sub">"유다인이 도리어 자기들을 미워하는 자들을 제거하게 된 그 날에"(9:1). 하나님의 이름이 한 번도 나오지 않는 책에서, 왕의 불면과 뒤바뀐 제비 사이로 한 민족이 살아남는다. 열 장 백육십칠 절이 감춤과 드러남, 위기와 반전이라는 두 축을 함께 돌린다.</p>
+<p class="meta">배경 크세르크세스 1세 치세(주전 486–465) · 저작 페르시아 말기–하스몬기(논쟁) · 다섯 직접 확인 자료 종합 · 개역개정 4판 대조</p>
+</header>
+<div class="caveat">
+<div class="tt">확인 전제</div>
+<ul>
+<li>인용 구절은 서고의 <b>개역개정 정본 데이터</b>(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP Bible·BHS 재확인 전제.</li>
+<li>관찰의 출처는 업로드된 <b>Macchi</b>(IECOT 2018, <span class="c f">M</span>), <b>Grossman</b>(2011, <span class="c t">G</span>), <b>Llewellyn-Jones</b>(2023, <span class="c b">L</span>), <b>Carruthers</b>(Blackwell 2008, <span class="c h">C</span>), <b>Bechtel</b>(Interpretation 2002, <span class="c x">E</span>)에서 직접 확인한 것에 한한다. Fox·Berlin·Clines·Levenson·Berg·Meinhold 등은 이 다섯 직접 확인 자료의 재인용을 통해서만 반영했고 그 사실을 표기했다. <b>Baldwin</b>(TOTC 1984, <span class="c k">B</span>)은 djvu에 텍스트 레이어가 없어 OCR 전까지 인용을 보류한다.</li>
+<li>이 문서의 초안 문장은 사용자의 명시적 위임에 따라 AI가 주석 근거를 정리해 작성했다(CONTENT-SPEC §0의 예외 조항). 논지 채택과 문장 확정은 사용자 검수를 전제로 한다.</li>
+</ul>
+</div>
+<!-- ============ OVERVIEW ============ -->
+<section class="part" id="overview">
+<div class="part-head">
+<div class="eyebrow">OVERVIEW</div>
+<h2>개요와 연구 자료 칩</h2>
+<div class="gloss">푸림의 두루마리 — 잘 짜인 이야기 밑에 무거운 물음이 흐른다.</div>
+</div>
+<p class="lead"><span class="c f">M</span> 유대인에게 에스더 두루마리는 해마다 카니발 같은 푸림 축제에서 낭독되는 베스트셀러이고, 기독교권에서는 비교적 낯선 책으로 남아 있다. <span class="c f">M</span> 첫눈에 이 책은 선악이 뚜렷하고 짜임새 있는 짧은 역사 소설로 읽힌다. 인물들은 유형적이고, 서스펜스·유머·아이러니가 갖춰져 있으며, 성과 폭력도 빠지지 않는다. 그 단순한 첫인상 너머에서 이 작품은 판본의 다양성, 저작 시기와 사상적 배경, 허구적 외피 속의 비극적 주제라는 굵직한 물음을 연다.</p>
+<p><span class="c f">M</span> 소수자 억압, 특히 유대인 박해가 이 작품의 중심 주제로 꼽힌다. 하만의 짧은 발언(3:8–9)은 낯선 자로 규정된 이들의 관습을 유해하다고 몰아가는 차별과 공포의 수사를 몇 절 안에 압축하고, 왕권이 그 배제의 언설을 가볍게 승인한 뒤 학살의 기제가 얼마나 멈추기 어려운지를 길게 보여 준다. 20세기 유럽사에 비춰 보면 이 서사는 예언적으로 읽힌다. <span class="c f">M</span> 저항의 전략도 함께 무대에 오른다. 모르드개는 품위와 비폭력으로 맞서 자기 자신에게 충실하기를 고집하고, 에스더는 제한된 힘을 지혜와 담대함으로 운용해 군주를 움직이며, 법과 정의가 공포를 멈추지 못하는 지경에 이르러서야 자기방어의 싸움이 벌어진다.</p>
+<h3>연구 자료 칩 — 표시 글자와 출처 구분</h3>
+<p>에스더 연구에 사용한 직접 확인 자료를 여섯 개의 표시 글자로 구분한다. 신학·설교 자료(<span class="c x">E</span>))도 독립된 자료 칩으로 표시한다.</p>
+<table>
+<thead><tr><th>슬롯·글자</th><th>자료</th><th>관점과 방법</th><th>자료 상태</th></tr></thead>
+<tbody>
+<tr><td class="head"><span class="c f">M</span></td><td>Macchi, <i>Esther</i> (IECOT, 2018)</td><td>본문사와 편집비평. AT를 히브리어 프로토에스더의 번역으로 보고, 마소라 본문을 하스몬기 편집의 산물로 재구성한다. 헬레니즘 문학과의 대화("페르시카")를 축으로 삼는다.</td><td>사용 가능</td></tr>
+<tr><td class="head"><span class="c t">G</span></td><td>Grossman, <i>Esther: The Outer Narrative and the Hidden Reading</i> (Siphrut, 2011)</td><td>문학·서사 분석. 겉 서사와 숨은 독법의 이중 구조, 동심원 교차구조, 성구 인유와 아이러니를 추적한다. 랍비 해석을 본문 관찰의 자원으로 활용한다.</td><td>사용 가능</td></tr>
+<tr><td class="head"><span class="c b">L</span></td><td>Llewellyn-Jones, <i>Ancient Persia and the Book of Esther</i> (2023)</td><td>아케메네스 왕조사와 궁정 문화. 에스더를 페르시아기의 진짜 사료로 놓고 도상학적 주해(iconographic exegesis)로 궁정의 리얼리아를 복원한다.</td><td>사용 가능</td></tr>
+<tr><td class="head"><span class="c h">C</span></td><td>Carruthers, <i>Esther Through the Centuries</i> (Blackwell, 2008)</td><td>수용사. 유대·기독교·문학·예술에서 에스더가 읽히고 전유되어 온 역사를 다룬 첫 단행본 연구.</td><td>사용 가능</td></tr>
+<tr><td class="head"><span class="c x">E</span></td><td>Bechtel, <i>Esther</i> (Interpretation, 2002)</td><td>교회를 위한 신학적 주해. 비례(proportion)의 지혜, 제한된 권력 아래의 신실함, 익명으로 일하는 하나님이라는 주제를 편다.</td><td>사용 가능</td></tr>
+<tr><td class="head"><span class="c k">B</span></td><td>Baldwin, <i>Esther</i> (TOTC, 1984)</td><td>경건·복음주의 주해. 간결한 절 단위 해설.</td><td>djvu · OCR 보류</td></tr>
+</tbody>
+</table>
+</section>
+<!-- ============ Ⅰ. 본문의 세계 ============ -->
+<section class="part" id="p1">
+<div class="part-head">
+<div class="eyebrow">PART Ⅰ</div>
+<h2>본문의 세계 — 세 본문과 편집 과정</h2>
+<div class="gloss">에스더는 성경 안에서 판본 차이가 가장 큰 책 가운데 하나다.</div>
+</div>
+<h3 id="p1-witness">본문 증거 — MT·LXX·AT와 그 딸판</h3>
+<p><span class="c f">M</span> 에스더는 서로 크게 다른 본문 형태로 전해진다. 히브리어 마소라 본문(MT), 그리고 여섯 개의 긴 첨가문(A–F)을 지닌 두 고대 그리스어 역본 — 다수 본문인 칠십인역(LXX)과 소수 본문인 알파 텍스트(AT) — 이 공존하며, 라틴어 전승(옛라틴어·불가타)도 제 나름의 특징을 지닌다. <span class="c f">M</span> MT는 1009년의 레닌그라드 사본 등 중세 대사본들에 실려 있고 변이가 적어 티베리아 본문이 잘 안정되어 있다. <span class="c f">M</span> 쿰란에서는 에스더 단편이 발견되지 않았다. 이 부재는 책이 배제되었기 때문일 수도, 발견의 우연 탓일 수도 있어 해석이 갈리며, 쿰란 사본 여러 곳에 에스더를 연상시키는 어법이 있다는 관찰이 판단을 더 조심스럽게 만든다.</p>
+<p><span class="c f">M</span> 공통 서사 부분에서 LXX는 MT에 가까운 히브리어 저본의 비교적 자유로운 번역으로 평가된다. AT는 사정이 다르다. 11–13세기의 네 사본으로 전해지는 이 소수 본문은 공통 서사에서 MT보다 약 사분의 일이 짧고, MT의 1:17–18·22; 2:10–16·19–23; 3:12–14; 4:5–8a 전체가 AT에 상응 구절을 갖지 않는다. 유대인 정체를 감추는 모티프(2:10–11·19–20)가 AT에는 없고, 궁정 운영의 부조리를 꼬집는 강세도 훨씬 약하다. <span class="c f">M</span> 병행 구절에서 두 그리스어 본문의 어휘와 구문이 서로 닮지 않아, 공통 서사에서 한쪽이 다른 쪽에 직접 의존했다고 보기 어렵다.</p>
+<p><span class="c f">M</span> 요세푸스는 『유대 고대사』 11권에서 에스더 이야기를 다시 쓰는데, 첨가문 B·D·E는 알고 A·F는 모르며, 신적 개입과 유대인의 경건을 부각한다. 옛라틴어(OL)는 LXX 계열의 크게 손질된 딸판으로, 원수 학살 기사(9:5–19 상당 부분)를 아예 싣지 않아 결말의 보복성이 크게 줄어 있다. 불가타는 1:1–10:3을 MT에서 옮기고 여섯 첨가문을 끝에 몰아 붙인 혼성 본문이다. 페시타와 두 타르굼은 MT 계열, 콥트·에티오피아·아르메니아 역본은 LXX 계열에 선다.</p>
+<h3 id="p1-proto">프로토에스더에서 마소라 본문으로</h3>
+<p><span class="c f">M</span> 에스더 연구의 큰 흐름 하나는 AT를 MT보다 오래된 히브리어 본문 — <em>프로토에스더</em> — 의 번역으로 본다. Macchi는 Clines와 Fox의 모델을 이어받아 이 입장을 편다. 첨가문과 결말(원수 학살·푸림 제정)을 뺀 AT가 프로토에스더를 꽤 축자적으로 옮겼고, "프로토마소라 편집자들"이 이 본문에 수많은 플러스를 삽입하고 8–10장의 결말을 덧붙여 MT 계열 본문을 만들었다는 재구성이다. <span class="c f">M</span> 1:4에서 "그의 위엄"과 "여러 날"이, 2:18에서 "모든 지방관과 신하들을 위하여"와 "왕의 이름으로 큰 상을 주니라"에 해당하는 어절이 AT에 없는 것이 편집 삽입의 표본으로 제시된다. 5:10–12에서는 하만의 "자랑" 동사와 "아들들" 언급이 5:11의 삽입과 맞물려 원문에서 제거된 흔적이 재구성된다.</p>
+<p><span class="c f">M</span> 이 재구성이 옳다면 프로토에스더의 제국상은 MT보다 훨씬 관대하다. 하만 같은 위험 인물이 있어도 법과 황제가 유대인을 구하며, 유대인 정체를 감출 필요도 없다. 프로토마소라 편집은 제국을 둔중하고 부조리한 체제로 다시 그리고, 철회 불가능한 조서(8:8) 앞에서 무장 자위 외에 길이 없는 세계를 만들었다. <span class="c f">M</span> 이런 시각 전환은 제국 제도에 대한 신뢰가 무너진 마카비 위기를 전제할 때 잘 설명된다. 다만 AT를 LXX 기반의 후대 개작으로 보는 반대 계열(de Troyer 등)도 유력하게 존재하며, 이 쟁점은 Ⅷ부의 대조표에 정리한다.</p>
+<h3 id="p1-add">여섯 첨가문 A–F</h3>
+<p><span class="c f">M</span> 그리스어 본문들의 첨가문은 모두 105절로, MT와 병행하는 167절에 얹힌다. 모르드개의 꿈과 해몽(A·F), 두 조서의 전문(B·E), 모르드개와 에스더의 기도(C), 에스더의 어전 진입 장면 확장(D)이 그것이다. 첨가문은 사건의 신학적 차원을 명시화한다. 하나님의 개입을 직접 말하고, 주인공들의 경건을 그리며, 조서 전문으로 반유대 언설을 정면 반박한다. <span class="c f">M</span> A·C·D·F에는 셈어투가 있어 히브리어(또는 아람어) 원문의 번역으로, B·E는 문학적 그리스어라 그리스어 작문으로 평가된다. 삽입의 방향(LXX→AT인지 그 역인지)과 순서는 복잡한 논쟁거리로 남아 있다.</p>
+<div class="note"><span class="tt">읽기의 함의</span><span class="c t">G</span> MT에서 감춰진 독법이 칠십인역에서는 드러난 독법이 된다. MT가 "그 날 밤에 왕이 잠이 오지 아니하므로"(6:1)라고만 말하는 곳에서 LXX는 주님이 왕의 잠을 거두셨다고 명시한다. 아람어 타르굼들도 같은 부재를 감지하고 본문과 미드라쉬적 부연으로 그 틈을 메웠다. 판본 비교 자체가 이 책의 신학적 침묵이 얼마나 일찍부터 독자를 불편하게 했는지 보여 준다.</div>
+</section>
+<!-- ============ Ⅱ. 배경 ============ -->
+<section class="part" id="p2">
+<div class="part-head">
+<div class="eyebrow">PART Ⅱ</div>
+<h2>배경 — 페르시아 제국과 수산 궁정</h2>
+</div>
+<h3 id="p2-xerxes">아하수에로와 역사의 크세르크세스</h3>
+<p><span class="c t">G</span> 아하수에로가 아케메네스 왕조(주전 539–330)의 어느 왕인지에 두 견해가 있다. LXX와 요세푸스는 아닥사스다(아르타크세르크세스 2세, 403–359)로 읽고, 다수 학설은 크세르크세스 1세(486–465)로 본다. 다수설의 근거는 넷이다. 페르시아어 왕명(흐샤야르샤)과 히브리어 표기 <span class="hw">אֲחַשְׁוֵרוֹשׁ</span>(아하쉬베로쉬)의 근접성, 헤로도토스가 그리는 크세르크세스상(여인과 술에 탐닉하고 수산에 장려한 궁을 두고 인도에서 구스까지 다스림), 십바르 출토 행정 문서의 수산 출신 고관 "마르두카"라는 이름, 그리고 고레스–다리오–아하수에로–아닥사스다로 이어지는 스 4:4–7의 왕명 순서다.</p>
+<p><span class="c x">E</span> 다만 역사 기록과의 긴장도 뚜렷하다. 에 2:16이 가리키는 제칠년 무렵 크세르크세스는 살라미스 원정에 있었고, 헤로도토스가 전하는 그의 왕비는 아메스트리스다. 책이 거듭 말하는 "백이십칠 지방"(1:1)에 대해 다른 고대 사료들은 이십에서 삼십 사이의 관구를 안다. 페르시아 법의 철회 불가(1:19; 8:8)도 에스더와 다니엘 6장 밖에서는 확인되지 않아, 역사 관행이기보다 플롯 장치일 수 있다. <span class="c f">M</span> 에스더나 와스디라는 왕비 이름, 유대인이 연루된 제국 내전 모두 페르시아 사료에 흔적이 없고, 학살을 열한 달 전에 예고하는 조서 같은 설정은 개연성이 낮다.</p>
+<h3 id="p2-court">궁정의 리얼리아 — 사료로서의 에스더</h3>
+<p><span class="c b">L</span> Llewellyn-Jones의 논지는 단순하다. 에스더는 진짜 페르시아기 사료이며, 고대 페르시아사 연구자가 이 책을 건너뛰는 것은 실수다. 책은 수산 궁정 생활의 리얼리아 — 하렘과 환관 제도, 궁정 의전, 수산의 지형 — 를 풍부하게 담고, 피지배 민족의 눈에 비친 페르시아상이라는 더 큰 주제까지 알려 준다. <span class="c b">L</span> 저자는 알려져 있지 않으나 표준적 후기 성서 히브리어로 생동감 있게 쓰며, 요셉 이야기를 미세하게 되울리고(창 41:42와 에 3:10; 8:2 등), 본문에 페르시아어 낱말이 흩어져 있다. 페르시아 귀족 사회를 잘 알고 고향 전통에는 무심한, 수산 태생일 수 있는 엘리트 디아스포라 유대인이라는 프로필이 그려진다.</p>
+<p><span class="c b">L</span> 히브리어 에스더에는 유대 제의·언약·모세·토라·예루살렘·성전이 한 번도 언급되지 않는다. 죽음의 위협 앞에서도 기도가 서술되지 않고, 왕후는 이방인과 혼인하며 이방의 잔칫상을 나눈다. 바벨론 탈무드의 한 대목이 에스더에서 "불경의 냄새가 난다"(메길라 7a)고 적은 배경이다. 그럼에도 두라 에우로포스 회당 벽화(3세기)는 에스더와 모르드개를 성막 맞은편의 영예로운 벽에 그렸고, 시므온 벤 라키쉬는 메시아가 와도 토라와 에스더 두루마리는 남으리라고 말했다.</p>
+<h3 id="p2-persica">그리스 문학의 페르시아와 "페르시카"</h3>
+<p><span class="c f">M</span> 에스더의 페르시아 묘사는 그리스 문학의 페르시아상과 놀랄 만큼 겹친다. 제국의 핵을 "바사와 메대"로 부르는 어법(1:3 등), 인도에서 구스까지의 판도와 127 지방(1:1), 왕궁 건축과 정원의 사치(1:5–8), 효율적 파발 제도와 다언어 조서(3:12–15), 하렘을 관리하고 음모를 꾸미는 환관들(1:10; 2:21–23), 일곱 대신의 토포스(1:13–15), 취기가 관건이 되는 연회 관습 — 모두 헤로도토스·크테시아스류의 서술과 부합한다. <span class="c f">M</span> 개별 일화도 닮은꼴이 있다. 와스디의 거부는 정실 왕비가 연회 후반부에 배석하지 않는 관습으로, 모르드개의 부복 거부는 부복을 페르시아식 굴종으로 여긴 그리스적 감각으로 읽힌다. 왕후 파이디메의 목숨을 건 행보(헤로도토스)는 에스더의 어전 진입을 연상시킨다.</p>
+<p><span class="c f">M</span> Macchi는 이 유사성에서 저작 환경을 읽는다. 그리스 세계가 페르시아를 소재로 "페르시카"와 대역사서를 즐겨 짓던 시대에, 유대인들이 같은 문학적 코드로 자기들의 페르시카를 지었다는 것이다. <span class="c b">L</span> Llewellyn-Jones는 같은 자료를 다르게 읽는다. 그리스인들이 이 이야기들을 지어낸 것이 아니라 근동에 널리 유통되던 설화를 수집했을 뿐이며(Berlin 재인용), 페르시아·바벨론·레반트에서 자생한 궁정 설화 전통이 에스더의 토양이라는 것이다. 두 읽기의 차이는 곧 연대 논쟁으로 이어진다.</p>
+</section>
+<!-- ============ Ⅲ. 연대와 장르 ============ -->
+<section class="part" id="p3">
+<div class="part-head">
+<div class="eyebrow">PART Ⅲ</div>
+<h2>연대와 장르</h2>
+</div>
+<h3 id="p3-date">연대 — 페르시아기와 헬레니즘기 사이</h3>
+<p><span class="c x">E</span> Bechtel은 다수설의 넓은 창을 취한다. "이 일은 아하수에로 왕 때에 있었던 일이니"(1:1)라는 서두부터가 사후의 시점을 전제하고, 책의 히브리어는 에스라·느헤미야·역대기와 같은 후기 히브리어와 통하므로, 배경 시대보다 적어도 팔십 년 뒤, 곧 주전 400–200년 사이가 유력하다. 셀레우코스 치하의 항구적 적대와 달리 책 속의 위협은 한 개인의 일시적 적의에서 나오고 이방 통치자를 향한 태도도 순응 쪽에 기울어, 마카비 이전이 자연스럽다는 것이다.</p>
+<p><span class="c b">L</span> Llewellyn-Jones는 더 이르게, 주전 400–350년의 아케메네스 고제국기로 본다. 페르시아어·아람어 어휘가 많고 그리스어 낱말이 없다는 언어 관찰(Gordis 재인용), 페르시아 법·관습·언어에 밝은 저자상이 근거다. 다만 그는 9장을 예외로 놓는다. 어조가 책의 나머지와 단절된 이 장은 마카비–하스몬기의 삽입이며, 하누카와 니가노르의 날 전승이 보여 주는 집단 폭력의 기억과 궤를 같이한다는 것이다. <span class="c f">M</span> Macchi는 전체 편집사를 헬레니즘기에 놓는다. 프로토에스더는 주전 3세기 알렉산드리아 디아스포라의 산물로, 프로토마소라 편집은 마카비 위기 이후 2세기 후반 유대(시몬–요한 히르카누스 무렵)의 산물로 본다. 9장의 전투가 니가노르를 이긴 유다 마카비의 승전(아달월 13일, 1마카 7장; 2마카 15장)과 여러 유비를 보이고, 8:17의 집단 개종("유다인 되는 자가 많더라")이 히르카누스의 유대화 정책을 연상시킨다는 관찰이 축이다. 2마카 15:36이 "모르드개의 날"을 이미 알고 있어 하한선이 된다.</p>
+<h3 id="p3-genre">장르 — 궁정 설화·역사 소설·벌레스크</h3>
+<p><span class="c b">L</span> 에스더는 근동에서 주전 7–4세기에 꽃핀 "궁정 설화"(Court Tale)의 계보에 선다. 아히카르 이야기, 다니엘과 요셉 서사, 그리고 쿰란 4Q550의 아람어 단편들 — 다리오·크세르크세스 궁정을 무대로 파티레자와 바가사로 같은 궁정 신하의 부침을 그리는 이야기들 — 이 같은 유형이다. Meinhold는 요셉·다니엘·에스더를 디아스포라에서의 삶의 방식을 제시하는 "디아스포라 노벨라"로 묶었다(재인용). 크테시아스의 페르시카와 크세노폰의 노벨라들도 같은 문학 기후를 증언한다. <span class="c f">M</span> Macchi의 명명도 궤를 같이한다. 에스더는 "역사 소설"이며, 역사적 배경을 독자가 알아볼 만큼 그럴듯하게 그리면서 완결된 플롯·반전·과장·유머라는 소설의 문법으로 움직인다.</p>
+<p><span class="c x">E</span> Bechtel은 Berlin의 "벌레스크" 규정을 가장 생산적인 제안으로 소개한다. 과장, 캐리커처, 우스꽝스러운 상황, 우연, 언어 유희, 장면과 어구의 반복, 뒤집기로 짜인 익살극이라는 것이다. 이 렌즈를 끼면 큰 해석적 난점들이 풀리고, 카니발 축제 푸림에서 낭독되는 책이라는 사실과도 맞아든다. 허구성은 진리의 결핍이기보다 진리의 운반 수단이며, 디킨스의 『크리스마스 캐럴』이 그렇듯 역사적 정확성 너머의 진실을 겨냥한다.</p>
+</section>
+<!-- ============ Ⅳ. 책의 짜임 ============ -->
+<section class="part" id="p4">
+<div class="part-head">
+<div class="eyebrow">PART Ⅳ</div>
+<h2>책의 짜임</h2>
+<div class="gloss">잔치가 뼈대를 세우고, 교차구조가 반전을 새긴다.</div>
+</div>
+<h3 id="p4-banquets">열 잔치 — 쌍으로 도는 구조</h3>
+<p><span class="c f">M</span> 에스더에 언급되는 열 번의 잔치는 쌍을 이루며 서사에 구조를 준다. 제국 엘리트를 위한 왕의 잔치(1:2–4)와 수산 주민을 위한 잔치(1:5–8), 와스디의 여인 잔치(1:9)와 에스더의 즉위 잔치(2:18), 조서를 자축하는 하만의 술자리(3:15), 에스더가 연 두 잔치(5:1–8; 7:1–9), 반대 조서를 기뻐하는 잔치(8:17), 그리고 지방과 수산의 유다인 잔치(9:17–19)다. 잔치는 인물의 사회적 정점을 표시한다. 와스디·에스더·하만은 각자의 잔치에서 정점에 섰다가 곧이어 흔들리고(1:13–22; 4:16; 7:1–10), 마지막 세 잔치는 유다인의 승리를 봉인한다. <span class="c f">M</span> 4장의 금식(4:3·16)은 잔치들의 대극, 곧 유다인 인물들이 바닥에 닿는 순간을 표시한다.</p>
+<div class="note"><span class="tt">병행 관찰</span><span class="c x">E</span> Bechtel도 Fox의 잔치 도식(재인용)을 소개하며, 두 날의 명절 푸림을 영속화하려는 책이 "열 잔치, 곧 다섯 쌍"으로 짜인 것은 우연으로 보기 어렵다는 Levenson의 정리를 덧붙인다. 페르시아의 잔치(1–2번)와 푸림의 잔치(9–10번), 와스디의 폐위로 끝난 잔치와 에스더의 대관으로 끝난 잔치가 서로를 비춘다.</div>
+<h3 id="p4-chiasm">동심원 교차구조와 그 축</h3>
+<p><span class="c t">G</span> Grossman은 주요 장면들을 살피면 두 절반이 역순으로 마주 보는 동심원 구조가 드러난다고 본다(Levenson·Radday·Berg·Dorsey의 유사 제안과 계보를 같이한다).</p>
+<div class="chiasm">
+<span class="lvl">A. 서두 — 아하수에로 왕국의 판도 (1:1)</span>
+<span class="lvl">  B. 왕이 연 두 잔치 — 전 지방 백팔십 일 · 수산 칠 일 (1장)</span>
+<span class="lvl">    C. 에스더가 왕에게 이끌려 가며 정체를 감춤 (2장)</span>
+<span class="lvl">      D. 하만의 지위 — "지위를 높이 올려" (3:1–2)</span>
+<span class="lvl">        E. 제비 — 아달월 십삼일의 싸움 (3:3–7)</span>
+<span class="lvl">          F. 하만에게 반지 · 하만의 조서 · 굵은 베 · 금식 (3:8–4:17)</span>
+<span class="lvl">            G. 에스더의 첫 잔치 — 하만이 득의함 (5:1–8)</span>
+<span class="lvl">              H. 하만과 측근들의 낙관 (5:9–14)</span>
+<span class="lvl ax">Ⅰ. 왕의 불면 — 말 탄 모르드개 (6장)</span>
+<span class="lvl">              H′. 하만과 측근들의 비관 (6:12–14)</span>
+<span class="lvl">            G′. 에스더의 둘째 잔치 — 하만이 달림 (7장)</span>
+<span class="lvl">          F′. 모르드개에게 반지 · 모르드개의 조서 · 왕복 · 잔치 (8장)</span>
+<span class="lvl">        E′. 아달월 십삼일의 싸움 (9:1–2)</span>
+<span class="lvl">      D′. 유다인과 모르드개의 지위 — "점점 창대하매" (9:3–11)</span>
+<span class="lvl">    C′. 에스더가 왕 앞에 나아가 하루를 더 구함 · "유다인 되는 자" (9:12–17)</span>
+<span class="lvl">  B′. 유다인의 두 잔치 — 전 지방 십사일 · 수산 십오일 (9:17–32)</span>
+<span class="lvl">A′. 결어 — 아하수에로 왕국의 판도 (10장)</span>
+</div>
+<p><span class="c t">G</span> 이 구조에서 세 가지가 읽힌다. 첫째, 구조는 하만과 그 측근의 시점을 반영한다. 6장까지 그들은 상승을 확신하고 6장부터 추락을 깨닫는데, 독자는 에스더의 첫 잔치에서 이미 하만의 몰락을 예감한다. 둘째, 축이 되는 사건이 밤에 일어난다는 것이 상징적이다. "그 날 밤에 왕이 잠이 오지 아니하므로"(6:1) — 야곱의 씨름과 출애굽의 한밤처럼, 밤은 표층의 인과 아래 숨은 진실이 불쑥 드러나는 시간이다. 셋째, 왕국의 판도로 여닫는 인클루지오(A–A′)는 이 책이 아하수에로의 이야기인 척하게 만들고, 표면 아래의 문학적 진실은 정반대를 속삭인다. 저자는 이 주인공을 여러 방식으로 조롱한다.</p>
+<p><span class="c t">G</span> B–B′의 병행에도 이중의 결이 있다. 밖에서 보면 왕의 잔치와 유다인의 잔치는 구별되지 않는다 — "술 취한 이방인과 토라를 공부하는 유대인의 대조에서 우리는 멀리 있다"(Goitein, 재인용). 동시에 저자는 두 잔치 사이에 감춰진 차이의 실마리들을 흩어 두어, 겉의 닮음과 속의 간극을 함께 읽게 한다. Grossman은 여기서 더 나아가, 구조가 6장을 절정처럼 보이게 만들지만 서사의 참된 전환은 4장 — 금식과 결단 — 에서 이미 일어났다고 주장한다. 겉 구조와 숨은 전환점의 어긋남 자체가 이 책의 서술 전략이라는 것이다.</p>
+<h3 id="p4-reversal">반전의 건축 — <span class="heb">וְנַהֲפוֹךְ הוּא</span></h3>
+<p><span class="c f">M</span> 반전이 서사를 구축한다. 왕은 잔치에서 높임을 받다가 와스디에게 무안을 당하고, 유다인은 조서로 위험에 빠졌다가 반대 조서로 승리하며, 모르드개는 처형 위협에서 총리로, 하만은 총리에서 처형대로 서로 역방향을 달린다. 모르드개의 죽음을 청하러 갔다가 그의 영예를 주선하게 되는 6:1–11이 경첩이며, 이후 서사의 전면적 뒤집힘을 예고한다. <span class="c f">M</span> 3:1의 하만 승진에서 8:2·15의 모르드개 승진까지, 조서(3:12–15)에서 반대 조서(8:9–14)까지, 두 잔치와 두 귀가 장면이 정확히 데칼코마니를 이룬다. 이 반전 관념은 본문이 스스로 명시한다 — "유다인이 도리어 자기들을 미워하는 자들을 제거하게 된 그 날에"(9:1). <span class="c t">G</span> Grossman은 반전을 문학적 장식 너머의 논쟁, 곧 운명("제비")을 신뢰하는 이방적 세계관을 겨눈 숨은 논박으로 읽는다.</p>
+</section>
+<!-- ============ Ⅴ. 장별 조망 ============ -->
+<section class="part" id="p5">
+<div class="part-head">
+<div class="eyebrow">PART Ⅴ</div>
+<h2>장별 조망</h2>
+<div class="gloss">장별 심층연구(ch01–ch10)의 지도. 에피소드 구분은 Macchi의 열여섯 에피소드를 참조했다.</div>
+</div>
+<table>
+<caption>표 1. 열 장의 흐름과 심층연구 계획</caption>
+<thead><tr><th>장</th><th>표제</th><th>줄거리와 관찰 지점</th></tr></thead>
+<tbody>
+<tr><td class="head">1장</td><td>와스디의 폐위</td><td>두 잔치의 과시(1:1–9), 와스디의 거부(1:10–12), 일곱 대신의 법제화(1:13–22). 제국의 화려함과 우스꽝스러움이 함께 노출되는 개막.</td></tr>
+<tr><td class="head">2장</td><td>에스더의 등극</td><td>새 왕후 선발(2:1–18)과 궁정의 음모 적발(2:19–23). 정체 은폐 명령(2:10·20)과 모르드개의 충성 기록이 뒤의 복선이 된다.</td></tr>
+<tr><td class="head">3장</td><td>하만의 음모</td><td>부복 거부(3:2), 부르 곧 제비(3:7), 민족 말살 조서(3:8–15). "한 민족이 … 흩어져 거하는데"의 수사학.</td></tr>
+<tr><td class="head">4장</td><td>모르드개의 호소</td><td>굵은 베와 통곡(4:1), 에스더와의 교신, "이 때를 위함이 아닌지 누가 알겠느냐"(4:14), "죽으면 죽으리이다"(4:16). 숨은 전환점.</td></tr>
+<tr><td class="head">5장</td><td>에스더의 첫 잔치</td><td>어전 진입과 "나라의 절반이라도"(5:3), 첫 잔치의 지연 전략(5:1–8), 하만의 자기 과시와 나무 세우기(5:9–14).</td></tr>
+<tr><td class="head">6장</td><td>왕의 불면</td><td>역대 일기와 미지급 보상(6:1–3), 하만의 오판과 굴욕의 시가행진(6:4–11), 세레스의 예언 같은 말(6:13). 서사의 축.</td></tr>
+<tr><td class="head">7장</td><td>둘째 잔치와 하만의 최후</td><td>"내 생명을 내게 주시고 … 내 민족을 내게 주소서"(7:3), 정체 공개와 고발, 자기가 세운 나무에 달리는 하만(7:10).</td></tr>
+<tr><td class="head">8장</td><td>반대 조서</td><td>반지의 이양(8:2), 철회 불가의 법과 그 우회(8:8), 자위를 허용하는 조서, 수산의 기쁨과 "유다인 되는 자"(8:17).</td></tr>
+<tr><td class="head">9장</td><td>싸움과 푸림</td><td>아달월 십삼일의 반전(9:1), 수산의 이틀과 하만의 열 아들(9:6–15), 탈취하지 않은 손(9:10·16), 푸림 제정의 두 서신(9:20–32).</td></tr>
+<tr><td class="head">10장</td><td>결어</td><td>조공과 역대 일기(10:1–2), "그의 백성의 이익을 도모하며"(10:3). 왕국의 판도로 닫히는 인클루지오.</td></tr>
+</tbody>
+</table>
+</section>
+<!-- ============ Ⅵ. 관통 주제 ============ -->
+<section class="part" id="p6">
+<div class="part-head">
+<div class="eyebrow">PART Ⅵ</div>
+<h2>관통 주제</h2>
+</div>
+<h3 id="p6-god">하나님의 부재와 숨은 독법</h3>
+<p><span class="c t">G</span> 성경의 서사는 표층 아래 메시지를 감추곤 하며, 에스더는 그 현상의 정점이다. Grossman이 인용하는 Fox의 표현대로 "하나님 언급의 회피는 저자의 계획의 의도적 일부로 보인다. 가까이 다가갔다가 조심스럽게 비켜 간다"(재인용). 은폐는 기법에 그치지 않고 주제와 맞물린다. 감춤과 드러남이 이야기의 내용 자체이기에, 감추는 문체가 그 내용을 몸으로 수행한다. <span class="c t">G</span> 겉의 경쾌함과 속의 무거움이 어긋나는 것도 에스더의 고유함이다. 숨겨진 층위는 증명의 대상이기보다 "그럴 법함"의 축적으로 다가오며, 랍비들의 메길라 강해가 그 실마리를 일찍부터 붙들었다.</p>
+<p><span class="c x">E</span> Bechtel은 같은 자리를 목회적으로 읽는다. 이름이 빠진 이유로 전해지는 설명 — 취흥이 도는 푸림 낭독에서 신명이 함부로 불리지 않게 하려는 조치 — 이 사실이든 아니든, 이름의 부재가 곧 하나님의 부재는 아니라는 것이다. "다른 데로 말미암아"(4:14)라는 에두른 표현과 함께, 요셉·룻 이야기처럼 "우연들"에서 하나님의 손길이 감지된다. 왕의 불면(6:1), 열두 달 뒤로 떨어진 제비(3:7), 왕이 모르드개의 보상을 궁리하는 순간의 하만 등장(6:4), 하만이 에스더 앞에 엎드러진 순간의 왕의 귀환(7:8) — 이 우연들이 없다면 이야기는 비극으로 끝난다. 하나님은 이 책의 등장인물이되, 익명을 택한 등장인물이다. <span class="c f">M</span> Macchi의 편집사적 설명도 겹쳐 둘 만하다. 편집자들은 독자가 사건 뒤에서 신적 개입을 식별할지, 하나님이 남녀의 행동을 통해 일하시는지를 스스로 묻도록 신학적 질문을 열어 두었다.</p>
+<h3 id="p6-identity">정체성 — 감춤과 드러냄</h3>
+<p><span class="c f">M</span> "에스더가 자기의 민족과 종족을 말하지 아니하니"(2:10; 2:20 병행). 낯선 다수 문화 속에서 정체를 감추도록 유혹받다가 끝내 드러내고 지키게 되는 인물들의 궤적은, 이민자와 그 후손, 주변화된 공동체, 다수와 신념이 다른 모든 이에게 낯익은 문제를 무대에 올린다. <span class="c f">M</span> 은폐 모티프(2:10–11·19–20)가 AT에 없는 프로토마소라의 플러스라는 관찰은 이 주제의 무게를 편집사 쪽에서 확인해 준다. 정체를 밝히는 일이 위험해진 시대(2마카 6:6 병행)의 감각이 새겨진 것이다. 한편 모르드개는 왕의 신하들에게 자기가 유다인임을 밝히면서 부복을 거부하고(3:4), 조서가 내려진 뒤에는 에스더에게 정체를 걸고 나서기를 촉구한다. 감춤의 전략은 이야기 안에서 스스로 한계에 부딪힌다.</p>
+<h3 id="p6-diaspora">디아스포라의 생존술</h3>
+<p><span class="c x">E</span> 에스더의 유다인들에게 움직일 수 없는 삶의 조건은 제한된 권력이다. Bechtel의 은유로, 그들은 내내 "카누의 앞자리에서 방향을 잡으려" 애쓴다. 에스라·느헤미야, 다니엘 1–6장, 요셉 이야기가 같은 조건을 다룬다. White의 정리(재인용)처럼 이 책에는 디아스포라에서 생산적으로 사는 법을 가르치는 교훈적 목적이 있다. <span class="c x">E</span> 인물들은 그 조건에 대한 응답의 스펙트럼을 이룬다. 와스디의 비타협적 거부는 통쾌하되 값비싸고, 모르드개의 완강한 거부는 공동체 전체를 벼랑까지 끌고 가며, 에스더는 비판적 타협 — 문화에 적응하되 죽음을 각오할 지점을 아는 길 — 을 택해 체제로 체제를 상대한다. 곳곳에 등장하는 환관들(헤개의 조언, 하르보나의 한마디)도 한계 안에서 사는 법의 또 다른 표본이다. <span class="c f">M</span> 프로토에스더와 MT의 차이는 이 생존술의 두 국면을 보여 준다. 전자에서는 제국의 법과 정의에 기대는 길이 통하고, 후자에서는 그 신뢰가 무너진 세계에서 공동체가 스스로를 지킨다.</p>
+<h3 id="p6-feast">잔치와 금식</h3>
+<p><span class="c f">M</span> 열 잔치의 구조(Ⅳ부)는 주제이기도 하다. 왕의 백팔십 일 과시(1:4)에서 푸림의 "서로 예물을 주며 가난한 자를 구제하라"(9:22)까지, 잔치의 성격 자체가 반전을 겪는다. <span class="c x">E</span> Bechtel은 이를 비례(proportion)의 지혜로 읽는다. 백팔십 일의 술잔치, 일곱 환관과 일곱 법률가, 제국의 처녀를 다 모으는 간택, 한 사람의 무례에 한 민족의 진멸로 답하는 하만, 오십 규빗의 나무(5:14) — 과잉의 인물들 사이에서 에스더만이 절제의 화신이다. 헤개가 정하여 준 것 외에 구하지 않고(2:15), 잔치들 사이에 삼 일 금식을 두며(4:16), 반대 조서마저 하만의 극단이 강요한 만큼만 쓴다. 지혜문학이 말하는 분별이 서사의 몸을 입는다.</p>
+<h3 id="p6-violence">9장의 폭력이라는 물음</h3>
+<p><span class="c b">L</span> 9장은 책의 나머지와 어조가 뚜렷이 다르다. 수산의 오백과 지방의 칠만 오천(9:16), 하루의 연장 요청과 열 아들의 시신 효수(9:13–14)를 누그러뜨리려는 해석들은 만족스럽지 못하며, Llewellyn-Jones는 이 장을 마카비기의 삽입으로 보아 문제를 편집사로 옮긴다. <span class="c f">M</span> Macchi의 재구성도 결이 통한다. 9장은 프로토마소라 편집의 산물로, 니가노르 승전의 기억을 새긴 층위다. 동시에 그는 최종 본문의 자기 이해를 짚는다. 저자들은 전쟁이 언제나 끔찍함을 알았고, 책 끝의 싸움을 학살 기도자들에 맞선 자기방어로, 다른 길이 없어진 지경의 일로만 정당화한다. 탈취를 세 번이나 부정하는 손(9:10·15·16)이 그 절제의 표지다. <span class="c h">C</span> 수용사는 이 장이 남긴 곤혹을 길게 증언한다. "복음의 정신에서 구약의 어느 책보다 멀다"는 Driver의 평, 에스더를 "구속받지 못한 인간성의 그림"이라 부른 Browne의 적대적 읽기가 19세기 이래 한 흐름을 이뤘고, 옛라틴어 역본이 일찍이 학살 기사를 통째로 들어낸 것은 같은 불편의 고대적 표현이다.</p>
+</section>
+<!-- ============ Ⅶ. 수용사 스케치 ============ -->
+<section class="part" id="p7">
+<div class="part-head">
+<div class="eyebrow">PART Ⅶ</div>
+<h2>수용사 스케치</h2>
+<div class="gloss">한 권 전체가 수용사인 Carruthers를 뼈대로, 장별 연구에서 상세화한다.</div>
+</div>
+<h3>유대 전통 — 푸림의 책</h3>
+<p><span class="c h">C</span> 기독교 문헌이 중세까지 에스더를 거의 언급하지 않는 동안, 유대 전통에서 에스더는 꾸준히 사랑받았다. 탈무드는 한 권(메길라)을 이 책과 푸림 논의에 바쳤고, 에스더는 성경에서 유일하게 두 개의 타르굼을 지닌 책이다. 아달월의 푸림에서 두루마리는 저녁과 아침 회당 예배에서 낭독되며, 남녀노소가 들어야 한다는 규례가 이야기의 세부(9:22·28)에서 자라났다. 축제는 카니발적이다. 학생이 스승 노릇을 하고, 변장이 성행하며, 이야기 속 뒤집힘이 하루의 뒤집힘으로 연행된다. <span class="c x">E</span> "하만이 저주받으리라"와 "모르드개가 복되리라"를 분간하지 못할 만큼 마시라는 메길라 7b의 권고가 그 분위기를 요약한다. <span class="c h">C</span> 랍비 문헌은 애정과 불안을 함께 남겼다. 두루마리의 영감을 따지는 논의, 에스더의 수록이 "열방의 미움을 살 것"이라는 우려(메길라 7a)가 그것이다.</p>
+<h3>기독교 전통 — 정경의 가장자리에서</h3>
+<p><span class="c h">C</span> 에스더의 정경성은 4세기 말 히포(393)와 카르타고(397) 공의회에 이르러서야 논란 없는 지위를 얻었다. 아타나시오스는 유딧·토비트와 함께 "유익한 읽을거리"로 분류했고, 이 책을 받아들인 교부들도 대개 목록 끝에 두었다. <span class="c b">L</span> 루터의 발언 — "이 책과 에스더가 아예 없기를 바랄 수 있을 정도"라는 탁상담화 — 은 개신교권의 오랜 무관심을 상징하는데, Bardtke는 루터가 다른 글에서 에스더를 자주 인용했음을 들어 그 적대의 단순화를 경계한다(Carruthers 재인용). <span class="c h">C</span> 어느 본문의 에스더인가도 수용을 갈랐다. 유대·개신교는 MT의 열 장을, 가톨릭·정교회는 첨가문을 지닌 그리스어 계열을 정경으로 읽으며, 개신교 독자들이 영적 독법을 위해 "비정경적"이되 더 종교적인 첨가문으로 손을 뻗는 역설이 되풀이되었다.</p>
+<h3>근·현대 — 곤혹과 재발견</h3>
+<p><span class="c h">C</span> Carruthers의 연구는 에스더 수용사를 다룬 첫 단행본으로, 이 책이 "구제 불능"으로 불리면서도 끊임없이 다시 읽힌 역사를 좇는다. 종교적 내용의 결핍은 독법을 막기는커녕 신학적 창의성의 촉매가 되었고 — 에스더에서 "섭리의 모든 신비를 여는 신적 열쇠"를 본 19세기의 Carson처럼 — 여백 많은 인물들은 문학과 예술의 상상을 불렀다. 근대의 에스더상은 순종의 본보기로 소환되는 만큼이나 경계적 여성, 전사 여성으로도 전유되어, 여성 인물의 스펙트럼이 넓게 펼쳐졌다. <span class="c x">E</span> 현대의 한 장면이 이 책의 현재성을 보여 준다. 홀로코스트 부정론자와의 소송에서 이긴 역사가 데버라 립스타트는 푸림 낭독에서 4:14를 들으며 자신의 교육과 이력이 "이 일을 위해" 주어졌을지 모른다고 술회했다. "이 때를 위함이 아닌지 누가 알겠느냐"는 물음은 밀레니엄을 건너 여전히 독자를 세운다.</p>
+</section>
+<!-- ============ Ⅷ. 쟁점 대조표 ============ -->
+<section class="part" id="p8">
+<div class="part-head">
+<div class="eyebrow">PART Ⅷ</div>
+<h2>쟁점 대조표</h2>
+<div class="gloss">연구 자료 사이에서 갈리거나 미결로 남은 지점.</div>
+</div>
+<table>
+<caption>표 2. 에스더 해석의 주요 쟁점</caption>
+<thead><tr><th>쟁점</th><th>견해와 근거</th></tr></thead>
+<tbody>
+<tr><td class="head">아하수에로의 정체</td><td><span class="c t">G</span> 다수설은 크세르크세스 1세(왕명 음운·헤로도토스의 인물상·"마르두카" 문서·스 4:4–7의 순서). LXX·요세푸스 계열은 아르타크세르크세스 2세로 읽는다.</td></tr>
+<tr><td class="head">저작 연대</td><td><span class="c b">L</span> 주전 400–350 아케메네스기(그리스어 낱말 부재, 궁정 지식). <span class="c x">E</span> 400–200의 넓은 창(후기 히브리어, 마카비 이전의 순응적 태도). <span class="c f">M</span> 프로토에스더는 3세기 알렉산드리아, 마소라 편집은 2세기 후반 하스몬기(니가노르 유비, 8:17의 유대화, 페르시카 코드).</td></tr>
+<tr><td class="head">알파 텍스트(AT)의 위치</td><td><span class="c f">M</span> Clines–Fox–Macchi: 마소라 이전 히브리어 프로토에스더의 번역. 반대 계열(de Troyer 등, 재인용): LXX에 기반한 후대 개작. Jobes(재인용)는 MT에 가까운 저본의 이른 번역으로 본다.</td></tr>
+<tr><td class="head">9장의 지위</td><td><span class="c b">L</span> 어조 단절을 근거로 마카비기의 삽입. <span class="c f">M</span> 프로토마소라 편집층으로서 8–10장 전체가 후대 확장. 최종 형태의 통일적 읽기를 앞세우는 흐름(Berlin류의 벌레스크 독법, <span class="c x">E</span> 재인용)도 있다.</td></tr>
+<tr><td class="head">역사성</td><td><span class="c f">M</span><span class="c x">E</span> 다수는 역사 소설로 본다(아메스트리스 문제, 127 지방, 철회 불가의 법, 개연성 낮은 설정). <span class="c t">G</span> 역사적 핵을 상정하는 절충(Eissfeldt·Kaufmann 재인용, 스 4:6의 고발 기사)도 이어진다.</td></tr>
+<tr><td class="head">푸림의 기원</td><td><span class="c f">M</span> 신화 기원설(이쉬타르·마르둑 어원)과 이방 축제 유대화설은 근거가 약해 퇴조했고, Macchi는 마카비–하스몬기의 승전 기념(니가노르의 날과 잇단 이틀)에서 제정 자체를 찾는다. "부림"이라는 이름의 유래는 미결.</td></tr>
+<tr><td class="head">서사의 축</td><td><span class="c t">G</span> 구조상의 축은 6장(왕의 불면)이되, 숨은 전환은 4장(금식과 결단)이라는 이중 읽기. <span class="c x">E</span> Levenson 계열(재인용)은 6장을 피벗으로 정리한다.</td></tr>
+<tr><td class="head">주인공 논쟁</td><td><span class="c x">E</span> "머리는 모르드개, 에스더는 지시를 따랐을 뿐"이라는 Moore류의 전통 평가(재인용)에 맞서, Bechtel은 위기를 부른 쪽이 모르드개이고 풀어낸 쪽이 에스더임을 들어 균형을 뒤집는다.</td></tr>
+<tr><td class="head">하나님의 침묵</td><td><span class="c t">G</span> 의도된 은폐 문체(Fox 재인용)이자 숨은 독법으로의 초대. <span class="c x">E</span> 익명으로 일하는 하나님, "우연들"의 신학. <span class="c f">M</span> 독자의 신학적 판단을 여는 편집 의도.</td></tr>
+</tbody>
+</table>
+</section>
+<!-- ============ Ⅸ. 서지 ============ -->
+<section class="part" id="p9">
+<div class="part-head">
+<div class="eyebrow">PART Ⅸ</div>
+<h2>서지와 자료 상태</h2>
+</div>
+<h3>서지</h3>
+<ul>
+<li>Macchi, Jean-Daniel. <i>Esther</i>. IECOT. Kohlhammer, 2018.</li>
+<li>Grossman, Jonathan. <i>Esther: The Outer Narrative and the Hidden Reading</i>. Siphrut 6. Eisenbrauns, 2011.</li>
+<li>Llewellyn-Jones, Lloyd. <i>Ancient Persia and the Book of Esther: Achaemenid Court Culture in the Hebrew Bible</i>. Bloomsbury, 2023.</li>
+<li>Carruthers, Jo. <i>Esther Through the Centuries</i>. Blackwell Bible Commentaries. Blackwell, 2008.</li>
+<li>Bechtel, Carol M. <i>Esther</i>. Interpretation. John Knox, 2002.</li>
+<li>Baldwin, Joyce G. <i>Esther: An Introduction and Commentary</i>. TOTC. IVP, 1984. <i>(djvu · OCR 보류)</i></li>
+<li>Fox, Michael V. <i>Character and Ideology in the Book of Esther</i>. 2판. Eerdmans, 2001. <i>(보조, 재인용)</i></li>
+<li>Berlin, Adele. <i>Esther</i>. JPS Bible Commentary. JPS, 2001. <i>(보조, 재인용)</i></li>
+<li>Clines, David J. A. <i>The Esther Scroll: The Story of the Story</i>. JSOTSup 30. JSOT Press, 1984. <i>(보조, 재인용)</i></li>
+<li>Levenson, Jon D. <i>Esther</i>. OTL. Westminster John Knox, 1997. <i>(보조, 재인용)</i></li>
+</ul>
+<div class="back"><a href="./index.html">← 에스더 서재로</a></div>
+</section>
+<footer>
+    성서 연구 서고 · 에스더 종합 연구(책 신학·전체 조망) — 개관 + 장별 심층연구 구조의 첫 문서.<br/>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Berlin·Clines·Levenson·Berg·Meinhold·White·Goitein 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+<script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script>
+<script data-esther-research-dock="" defer="" src="../../assets/js/research-dock-loader.js?v=20260724.2"></script></body>
+</html>

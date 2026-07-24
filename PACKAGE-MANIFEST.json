@@ -1,21 +1,73 @@
 {
-  "package": "biblestudygyu-psalms-floating-controls-hotfix-v1.1",
-  "base_required": "biblestudygyu-psalms-git-package-v1",
+  "package": "biblestudygyu-esther-git-package-v1",
+  "created": "2026-07-24",
+  "source": "files (4).zip",
+  "live_catalog_base_sha": "ae7a2aca8e964e242f10be0fdff1f197e8b8f716",
+  "validation": {
+    "html": {
+      "index.html": {
+        "ids": 2,
+        "unique_ids": true,
+        "source_chips": 6,
+        "bible_reader": true,
+        "research_dock": true
+      },
+      "overview.html": {
+        "ids": 26,
+        "unique_ids": true,
+        "source_chips": 95,
+        "bible_reader": true,
+        "research_dock": true
+      }
+    },
+    "catalog": {
+      "javascript_syntax": true,
+      "esther_count": 1,
+      "psalms_preserved": true,
+      "order": [
+        "nehemiah",
+        "esther",
+        "psalms",
+        "hosea",
+        "haggai"
+      ]
+    },
+    "links": {
+      "broken_package_links": [],
+      "missing_anchors": []
+    },
+    "dependencies": [
+      "assets/css/bible-reader.css",
+      "assets/js/bible-reader.js",
+      "assets/js/research-dock-loader.js",
+      "bible/original.html"
+    ]
+  },
   "files": [
     {
-      "path": "README.md",
-      "bytes": 620,
-      "sha256": "05f0ad89cec986c92666ed2c393a0d9ce531d0aedfc74ac3a630e13bad3d3af8"
+      "path": "catalog.js",
+      "bytes": 7937,
+      "sha256": "adb59e234598462f87f8bf47373e5445cec396d8accd07867f5f7613670b65ce"
     },
     {
-      "path": "ot/psalms/psalms-suite.css",
-      "bytes": 6191,
-      "sha256": "36336290f8ad7e781ebf89d8fd847b3b9b714bac3bcf5e962ba96e27abb1d63c"
+      "path": "ot/esther/README.md",
+      "bytes": 1938,
+      "sha256": "118c50f04f8b0d9c0ee64aa55f4d45dca45a0c54d498c035efe85566361c7e26"
     },
     {
-      "path": "ot/psalms/psalms-suite.js",
-      "bytes": 7868,
-      "sha256": "2b18e0e5ee6bde9ab52d3aa53ab6667eadc7a94578443e08db895945dfeb77e2"
+      "path": "ot/esther/esther-suite.css",
+      "bytes": 3495,
+      "sha256": "5076c0aef6d4724fac8eabf081d452e1337208ed14dc7a61f424116df7e77756"
+    },
+    {
+      "path": "ot/esther/index.html",
+      "bytes": 19500,
+      "sha256": "639aa4c602efdcf45d91b5ed58ea467589f79ff7d753c945f257d345e74caacc"
+    },
+    {
+      "path": "ot/esther/overview.html",
+      "bytes": 56251,
+      "sha256": "cc50e3f86b0f722c71acc4ad27563def5366abfe88ee32ca78521a2f8148cc99"
     }
   ]
 }

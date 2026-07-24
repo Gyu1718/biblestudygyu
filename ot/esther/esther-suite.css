@@ -1,0 +1,103 @@
+/* 에스더 연구 세트 — 공통 사이트 기능과 다크 모드 보완 */
+body[data-book="est"] .topbar nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:.35rem .75rem;
+}
+body[data-book="est"] .topbar nav a{margin-left:0!important}
+
+.esther-chapter-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:.65rem;
+}
+.esther-chapter-grid a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:86px;
+  padding:.72rem .45rem;
+  border:1px solid var(--line);
+  border-top:3px solid var(--ochre);
+  border-radius:8px;
+  background:var(--panel,var(--card,#fff));
+  color:var(--ink);
+  text-decoration:none;
+  text-align:center;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;
+}
+.esther-chapter-grid a:hover,.esther-chapter-grid a:focus-visible{
+  transform:translateY(-2px);
+  border-color:var(--ochre);
+  box-shadow:0 8px 22px rgba(22,53,79,.14);
+  outline:none;
+}
+.esther-chapter-grid span{
+  color:var(--lapis);
+  font:900 1rem/1.2 var(--sans);
+}
+.esther-chapter-grid small{
+  margin-top:.28rem;
+  color:var(--ink-soft);
+  font:700 .67rem/1.35 var(--sans);
+}
+body[data-book="est"] .soon{
+  pointer-events:none;
+  user-select:none;
+}
+body[data-book="est"] .site-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem .8rem;
+}
+body[data-book="est"] .site-nav a{margin-right:0!important}
+
+/* 공통 화면 설정의 다크 모드가 인라인 배경에도 반영되도록 보완 */
+html[data-theme="dark"] body[data-book="est"] .shelf-zone{
+  background:linear-gradient(color-mix(in srgb,var(--panel) 72%,var(--paper)),var(--paper));
+}
+html[data-theme="dark"] body[data-book="est"] .row:hover,
+html[data-theme="dark"] body[data-book="est"] tr:nth-child(even) td{
+  background:color-mix(in srgb,var(--panel) 78%,var(--paper))!important;
+}
+html[data-theme="dark"] body[data-book="est"] td.head{
+  background:color-mix(in srgb,var(--panel) 68%,var(--paper))!important;
+}
+html[data-theme="dark"] body[data-book="est"] .note,
+html[data-theme="dark"] body[data-book="est"] .caveat{
+  background:color-mix(in srgb,var(--panel) 88%,var(--paper));
+}
+html[data-theme="dark"] body[data-book="est"] .badge.done,
+html[data-theme="dark"] body[data-book="est"] .badge.spec,
+html[data-theme="dark"] body[data-book="est"] .badge.soon{
+  background:color-mix(in srgb,var(--panel) 78%,var(--paper));
+  color:var(--ink-soft);
+}
+@media (prefers-color-scheme:dark){
+  html:not([data-theme="light"]) body[data-book="est"] .shelf-zone{
+    background:linear-gradient(color-mix(in srgb,var(--panel) 72%,var(--paper)),var(--paper));
+  }
+  html:not([data-theme="light"]) body[data-book="est"] .row:hover,
+  html:not([data-theme="light"]) body[data-book="est"] tr:nth-child(even) td{
+    background:color-mix(in srgb,var(--panel) 78%,var(--paper))!important;
+  }
+  html:not([data-theme="light"]) body[data-book="est"] td.head{
+    background:color-mix(in srgb,var(--panel) 68%,var(--paper))!important;
+  }
+  html:not([data-theme="light"]) body[data-book="est"] .note,
+  html:not([data-theme="light"]) body[data-book="est"] .caveat{
+    background:color-mix(in srgb,var(--panel) 88%,var(--paper));
+  }
+}
+@media(max-width:720px){
+  .esther-chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-book="est"] .topbar{align-items:flex-start;gap:1rem}
+}
+@media(max-width:420px){
+  .esther-chapter-grid{grid-template-columns:1fr}
+}
+@media print{
+  .esther-bible-section{break-inside:avoid}
+}

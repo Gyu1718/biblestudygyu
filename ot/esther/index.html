@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html data-theme="auto" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>에스더 심층 연구 — 서재</title><meta content="에스더 종합 개관과 장별 연구 준비 현황을 연결하고, 에스더 1–10장 성경 본문으로 바로 이동하는 연구 서재." name="description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Serif+Hebrew:wght@400;700&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--ochre-soft:#c9b27a;
+  --line:#d9d5c9;--board:#2b2119;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.8;font-size:16.5px;word-break:keep-all}
+a{color:var(--lapis)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.4rem}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;font-family:var(--sans);font-size:.8rem}
+.topbar .mark{font-family:var(--serif);font-weight:900;color:var(--lapis-deep);text-decoration:none;letter-spacing:.02em}
+.topbar .mark .hb{font-family:var(--heb);color:var(--ochre);margin-right:.4rem}
+.topbar nav a{color:var(--ink-soft);text-decoration:none;margin-left:1.2rem}
+.topbar nav a:hover{color:var(--lapis)}
+header.hero{display:grid;grid-template-columns:1fr auto;gap:1rem 2.5rem;align-items:end;border-bottom:3px double var(--line);padding:2.6rem 0 2.2rem}
+.hero .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.26em;color:var(--lapis);font-weight:700}
+.hero h1{font-size:2.15rem;font-weight:900;line-height:1.3;margin:.35rem 0 .5rem}
+.hero .sub{color:var(--ink-soft);font-size:.96rem;max-width:34rem}
+.hero .big-heb{font-family:var(--heb);font-size:4rem;line-height:1;color:var(--ochre);direction:rtl;text-align:right}
+.hero .big-heb small{display:block;font-family:var(--sans);font-size:.66rem;color:var(--ink-soft);letter-spacing:.06em;direction:ltr;text-align:right;margin-top:.55rem}
+section{margin-top:3.4rem}
+.sec-head{margin-bottom:1.4rem}
+.sec-head .eyebrow{font-family:var(--sans);font-size:.68rem;letter-spacing:.24em;color:var(--lapis);font-weight:700}
+.sec-head h2{font-size:1.45rem;font-weight:900;margin-top:.2rem}
+.sec-head .hint{font-size:.88rem;color:var(--ink-soft);margin-top:.25rem}
+.overview-card{display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--ochre);border-radius:8px;padding:1.5rem 1.7rem;text-decoration:none;color:inherit;transition:box-shadow .18s ease, transform .18s ease;margin-bottom:1rem}
+.overview-card:hover{box-shadow:0 10px 26px rgba(22,53,79,.14);transform:translateY(-2px)}
+.overview-card .hb{font-family:var(--heb);font-size:1.9rem;color:var(--ochre);direction:rtl;white-space:nowrap}
+.overview-card h3{font-size:1.15rem;font-weight:900}
+.overview-card p{font-size:.9rem;color:var(--ink-soft);margin-top:.25rem}
+.overview-card .go{font-family:var(--sans);font-size:.8rem;font-weight:700;color:var(--lapis);white-space:nowrap}
+.overview-card.soon{border-left-color:var(--line);opacity:.72;cursor:default}
+.overview-card.soon:hover{box-shadow:none;transform:none}
+.overview-card.soon .go{color:var(--ink-soft)}
+.badge{display:inline-block;font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.08em;padding:.15em .5em;border-radius:3px;vertical-align:.15em;margin-left:.5rem}
+.badge.done{background:#e5efec;color:#37665a}
+.badge.spec{background:#fbebd2;color:#b06a17}
+.badge.soon{background:#eceae2;color:#7a746a}
+.shelf-zone{background:linear-gradient(#f3f1ea,#eeeade);border:1px solid var(--line);border-radius:10px;padding:2.4rem 1.6rem 0}
+.shelf{display:flex;justify-content:center;align-items:flex-end;gap:9px;flex-wrap:nowrap;padding:0 .6rem;position:relative}
+.shelf::after{content:"";position:absolute;left:-1.6rem;right:-1.6rem;bottom:-16px;height:16px;background:linear-gradient(#3a2d21,var(--board));border-radius:0 0 10px 10px;box-shadow:0 10px 18px rgba(43,33,25,.35)}
+.spine{position:relative;display:flex;flex-direction:column;align-items:center;width:56px;height:230px;padding:10px 0 12px;text-decoration:none;border-radius:3px 3px 0 0;background:linear-gradient(100deg,#1d4368 0%,var(--lapis-deep) 55%,#122a40 100%);box-shadow:inset -7px 0 11px rgba(0,0,0,.3),inset 2px 0 4px rgba(255,255,255,.07),0 2px 5px rgba(0,0,0,.18);border-top:3px double var(--ochre);transition:transform .18s ease, box-shadow .18s ease}
+.spine:hover,.spine:focus-visible{transform:translateY(-12px);box-shadow:inset -7px 0 11px rgba(0,0,0,.3),0 14px 22px rgba(22,53,79,.35);outline:none}
+.spine .num{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.06em;color:var(--ochre-soft)}
+.spine .ko{writing-mode:vertical-rl;flex:1;display:flex;align-items:center;justify-content:center;font-size:.84rem;font-weight:600;letter-spacing:.3em;color:#e8eef4;margin:9px 0 7px}
+.spine .band{width:26px;border-top:3px double var(--ochre);opacity:.85}
+.spine.wide{width:88px;background:linear-gradient(100deg,#b8944e 0%,var(--ochre) 55%,#8d6c30 100%);border-top-color:var(--lapis-deep)}
+.spine.wide .num{color:#16354f}.spine.wide .ko{color:#1c1508;font-weight:700}.spine.wide .band{border-top-color:var(--lapis-deep)}
+.spine.soon{filter:grayscale(.55) brightness(.9);opacity:.7}
+.shelf-note{font-family:var(--sans);font-size:.72rem;color:var(--ink-soft);text-align:center;padding:2rem 0 1.1rem}
+.chapter-list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:3.2rem minmax(9rem,auto) 1fr auto;gap:1.2rem;align-items:baseline;padding:1rem .4rem;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s ease}
+.row:hover{background:#fbfaf4}
+.row.soon{opacity:.62}
+.row.soon:hover{background:transparent}
+.row .no{font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--ochre)}
+.row .hb{font-family:var(--heb);font-size:1.12rem;color:var(--lapis-deep);direction:rtl;text-align:left;white-space:nowrap}
+.row .body h3{display:inline;font-size:.98rem;font-weight:700;color:var(--lapis-deep)}
+.row .body p{font-size:.86rem;color:var(--ink-soft);margin-top:.15rem}
+.row .st{font-family:var(--sans);font-size:.64rem;font-weight:700;color:var(--ink-soft);white-space:nowrap}
+.row:hover .body h3{text-decoration:underline;text-underline-offset:3px}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.15rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin-top:2rem}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:#7a5a38}.c.f{background:#37665a}.c.h{background:#8a4658}.c.t{background:#3c5a83}.c.b{background:#655a8c}.c.x{background:#78736b}
+footer{margin-top:4rem;border-top:3px double var(--line);padding:1.4rem 0 2.6rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+@media (max-width:780px){
+  header.hero{grid-template-columns:1fr}
+  .hero .big-heb{text-align:left;font-size:2.8rem;order:-1}
+  .hero .big-heb small{text-align:left}
+  .overview-card{grid-template-columns:1fr;gap:.7rem}
+  .shelf-zone{padding:1.4rem 1rem 0}
+  .shelf{flex-wrap:wrap;justify-content:flex-start;gap:8px}
+  .shelf::after{display:none}
+  .spine{width:calc(50% - 4px);height:auto;flex-direction:row;padding:.75rem .9rem;border-radius:6px;border-top:none;border-left:3px double var(--ochre)}
+  .spine .ko{writing-mode:horizontal-tb;letter-spacing:.06em;margin:0 0 0 .7rem;flex:1;justify-content:flex-start;font-size:.88rem}
+  .spine .band{display:none}
+  .spine.wide{width:100%}
+  .shelf-note{padding:1.2rem 0 .9rem}
+  .row{grid-template-columns:2.4rem 1fr auto}
+  .row .hb{display:none}
+}
+</style>
+<link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/>
+<link data-esther-suite-css="" href="esther-suite.css" rel="stylesheet"/></head>
+<body data-book="est" data-kind="study-home" data-root="../../">
+<div class="wrap">
+<div class="topbar">
+<a class="mark" href="../../index.html"><span class="hb">דָּרַשׁ</span>성서 연구 서고</a>
+<nav><a href="../../index.html">서고 홈</a> · <a href="../../bible/original.html?book=EST&amp;chapter=1">성경읽기</a></nav>
+</div>
+<header class="hero">
+<div>
+<div class="eyebrow">STUDY SET · ESTHER</div>
+<h1>에스더 심층 연구</h1>
+<div class="sub">하나님의 이름 없이 하나님의 일을 이야기하는 책. 개관과 장별 심층연구(전 10장)로 엮는다.</div>
+</div>
+<div class="big-heb">אֶסְתֵּר<small>에스테르 — 에스더 (에 2:7)</small></div>
+</header>
+<!-- 문서 유형 -->
+<section>
+<div class="sec-head">
+<div class="eyebrow">DOCUMENTS</div>
+<h2>두 문서</h2>
+<div class="hint">개관이 먼저 서고, 장별 심층연구가 그 지도를 따라 채워진다.</div>
+</div>
+<a class="overview-card" href="overview.html">
+<span class="hb">וְנַהֲפוֹךְ הוּא</span>
+<span>
+<h3>① 개관 — 책의 신학과 전체 조망<span class="badge done">완성</span></h3>
+<p>세 본문(MT·LXX·AT)과 편집 과정, 페르시아 궁정 배경, 연대·장르 논쟁, 열 잔치와 교차구조, 관통 주제, 수용사, 쟁점 대조표.</p>
+</span>
+<span class="go">열기 →</span>
+</a>
+<span aria-disabled="true" class="overview-card soon" role="note" title="장별 심층연구 준비 중">
+<span class="hb">מִי יוֹדֵעַ</span>
+<span>
+<h3>② 장별 심층연구<span class="badge soon">준비 중</span></h3>
+<p>절 단위 주해 — 단락 짜임, 절범위 주해, 여섯 연구 자료 칩, 상호 참조, 장 신학 종합. 1장부터 순차 작성.</p>
+</span>
+<span class="go">준비 중</span>
+</span>
+</section>
+<!-- 서가 -->
+<section aria-labelledby="esther-bible-title" class="esther-bible-section">
+<div class="sec-head">
+<div class="eyebrow">BIBLE READING · CHAPTERS 1–10</div>
+<h2 id="esther-bible-title">에스더 본문 바로가기</h2>
+<div class="hint">장별 심층연구가 준비되는 동안 히브리어 원문과 개역개정을 먼저 읽는다.</div>
+</div>
+<div class="esther-chapter-grid">
+<a href="../../bible/original.html?book=EST&amp;chapter=1"><span>01</span><small>왕의 잔치</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=2"><span>02</span><small>에스더의 등극</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=3"><span>03</span><small>하만의 조서</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=4"><span>04</span><small>이 때를 위함</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=5"><span>05</span><small>첫 잔치</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=6"><span>06</span><small>왕의 불면</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=7"><span>07</span><small>하만의 최후</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=8"><span>08</span><small>반대 조서</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=9"><span>09</span><small>싸움과 푸림</small></a>
+<a href="../../bible/original.html?book=EST&amp;chapter=10"><span>10</span><small>모르드개의 높임</small></a>
+</div>
+</section><section>
+<div class="sec-head">
+<div class="eyebrow">SHELF</div>
+<h2>서가</h2>
+</div>
+<div class="shelf-zone">
+<div class="shelf">
+<a class="spine wide" href="overview.html"><span class="num">개관</span><span class="ko">에스더 · 개관</span><span class="band"></span></a>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">01</span><span class="ko">와스디의 폐위</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">02</span><span class="ko">에스더의 등극</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">03</span><span class="ko">하만의 음모</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">04</span><span class="ko">이 때를 위함</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">05</span><span class="ko">첫 잔치</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">06</span><span class="ko">왕의 불면</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">07</span><span class="ko">하만의 최후</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">08</span><span class="ko">반대 조서</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">09</span><span class="ko">싸움과 푸림</span><span class="band"></span></span>
+<span aria-disabled="true" class="spine soon" role="note" title="장별 심층연구 준비 중"><span class="num">10</span><span class="ko">결어</span><span class="band"></span></span>
+</div>
+<div class="shelf-note">개관 1편 완성 · 심층연구 10편 준비 중</div>
+</div>
+</section>
+<!-- 장별 목록 -->
+<section id="ch">
+<div class="sec-head">
+<div class="eyebrow">CHAPTERS</div>
+<h2>장별</h2>
+<div class="hint">전 10장. 심층연구 문서는 개관의 장별 조망(표 1)을 지도로 삼아 채운다.</div>
+</div>
+<div class="chapter-list">
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">01</span><span class="hb">מִשְׁתֶּה</span><span class="body"><h3>미쉬테, "잔치"</h3><p>두 잔치의 과시와 와스디의 거부, 일곱 대신의 법제화(1:1–22).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">02</span><span class="hb">הֲדַסָּה הִיא אֶסְתֵּר</span><span class="body"><h3>하닷사 히 에스테르, "하닷사 곧 에스더"</h3><p>새 왕후 선발과 정체 은폐, 궁정 음모의 적발(2:1–23).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">03</span><span class="hb">פּוּר</span><span class="body"><h3>푸르, "제비"</h3><p>부복 거부와 하만의 조서 — 민족 말살의 수사학(3:1–15).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">04</span><span class="hb">מִי יוֹדֵעַ</span><span class="body"><h3>미 요데아, "누가 알겠느냐"</h3><p>굵은 베와 통곡, "이 때를 위함", "죽으면 죽으리이다"(4:1–17).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">05</span><span class="hb">עַד־חֲצִי הַמַּלְכוּת</span><span class="body"><h3>아드-하치 함말쿠트, "나라의 절반이라도"</h3><p>어전 진입과 첫 잔치의 지연 전략, 하만의 나무(5:1–14).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">06</span><span class="hb">נָדְדָה שְׁנַת הַמֶּלֶךְ</span><span class="body"><h3>나데다 셰나트 함멜렉, "왕이 잠이 오지 아니하므로"</h3><p>역대 일기와 굴욕의 시가행진 — 서사의 축(6:1–14).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">07</span><span class="hb">אִישׁ צַר וְאוֹיֵב</span><span class="body"><h3>이쉬 차르 베오예브, "대적과 원수"</h3><p>둘째 잔치의 고발, 자기 나무에 달리는 하만(7:1–10).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">08</span><span class="hb">אֵין לְהָשִׁיב</span><span class="body"><h3>엔 레하쉬브, "철회할 수 없음이니라"</h3><p>반지의 이양과 반대 조서, 수산의 기쁨(8:1–17).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">09</span><span class="hb">וְנַהֲפוֹךְ הוּא</span><span class="body"><h3>브나하포크 후, "도리어"</h3><p>아달월 십삼일의 반전과 푸림 제정의 두 서신(9:1–32).</p></span><span class="st">준비 중</span></span>
+<span aria-disabled="true" class="row soon" role="note" title="장별 심층연구 준비 중"><span class="no">10</span><span class="hb">דֹּרֵשׁ טוֹב לְעַמּוֹ</span><span class="body"><h3>도레쉬 토브 레암모, "백성의 이익을 도모하며"</h3><p>왕국의 판도로 닫히는 인클루지오(10:1–3).</p></span><span class="st">준비 중</span></span>
+</div>
+<div class="legend">
+<span><b>연구 자료 칩</b></span>
+<span><span class="c f">M</span> Macchi IECOT</span>
+<span><span class="c t">G</span> Grossman Siphrut</span>
+<span><span class="c b">L</span> Llewellyn-Jones</span>
+<span><span class="c h">C</span> Carruthers Blackwell</span>
+<span><span class="c x">E</span> Bechtel Interpretation</span>
+<span><span class="c k">B</span> Baldwin TOTC <span style="color:#a99">(OCR 보류)</span></span>
+</div>
+</section>
+<footer>
+  성서 연구 서고 · 에스더 심층 연구 — 개관 + 장별 심층연구 구조.<br/>
+  개역개정 인용은 서고 정본 데이터(EST) 대조, 히브리어(BHS·STEP Bible) 재확인 전제. 관찰 출처는 Macchi·Grossman·Llewellyn-Jones·Carruthers·Bechtel 직접 확인분에 한한다.
+</footer>
+</div>
+<script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script>
+<script data-esther-research-dock="" defer="" src="../../assets/js/research-dock-loader.js?v=20260724.2"></script></body>
+</html>

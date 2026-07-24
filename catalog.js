@@ -61,6 +61,16 @@ window.SITE_CATALOG = {
           volumes: 14
         },
         {
+          id: "esther",
+          path: "ot/esther/index.html",
+          title: "에스더 심층 연구",
+          original: "אֶסְתֵּר",
+          script: "heb",
+          meta: "종합 개관 1편 · 장별 심층연구 10편 준비 중 · Macchi·Grossman·Llewellyn-Jones·Carruthers·Bechtel 직접 확인 · 개역개정 대조",
+          desc: "하나님의 이름 없이 하나님의 일을 이야기하는 책. 세 본문(MT·LXX·AT)과 편집 과정, 페르시아 궁정 배경, 열 잔치와 교차구조, 수용사까지 조망하는 개관을 먼저 세우고, 열 장의 심층연구를 그 지도 위에 채운다.",
+          volumes: 1
+        },
+        {
           id: "psalms",
           path: "ot/psalms/index.html",
           title: "시편 상세 연구",
@@ -89,7 +99,7 @@ window.SITE_CATALOG = {
           meta: "3-문서 구조 — 개관 1편 · 장별 심층연구 2편 · 원어 융합 표본 · Jacobs·Hill 대조",
           desc: "넉 달의 예언으로 멈춘 성전 공사를 다시 세운 책. 책의 신학과 전체 개관을 갖추고, 원어는 파싱과 인터라이너를 한 문서로 융합한다.",
           volumes: 4
-        }
+        },
       ]
     },
     {
@@ -143,6 +153,7 @@ window.SITE_CATALOG = {
   link.dataset.homeCompactCss = "";
   document.head.appendChild(link);
 })();
+
 
 /* 홈페이지 연구 도크 로더 */
 (function () {

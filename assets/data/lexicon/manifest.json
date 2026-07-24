@@ -1,0 +1,15 @@
+{
+  "version": "2026-07-24",
+  "bucketSize": 250,
+  "counts": {
+    "greek": 5523,
+    "hebrew": 8674
+  },
+  "max": {
+    "greek": 5624,
+    "hebrew": 8674
+  },
+  "searchIndex": "index.json.gz",
+  "greekForms": "forms/greek.json.gz",
+  "sourcePolicy": "한글 스트롱 사전을 주자료로 보존하고 STEP TBESG/TBESH는 누락 필드 보충에만 사용"
+}

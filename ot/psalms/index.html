@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>시편 상세 연구본 — 1–150편 다섯 권</title>
+<meta content="시편 전체 개관과 자료집, 시편 1–150편을 다섯 권으로 나눈 상세 연구를 연결한 성서 연구 서재." name="description"/>
+<meta content="시편 상세 연구본 — 1–150편" property="og:title"/>
+<meta content="복 있는 사람에서 호흡이 있는 자마다까지. 시편 150편 다섯 권 연구본." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Sans+KR:wght@400;500;700&amp;family=Noto+Serif+Hebrew:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#23252d;
+  --ink-soft:#535a68;
+  --paper:#f6f4ec;
+  --panel:#fffefb;
+  --wine:#4a3d73;
+  --wine-deep:#2e2650;
+  --gold:#a8842f;
+  --vine:#4d6b46;
+  --line:#ddd7c8;
+  --c:#34597e; --d:#a1513c; --l:#8a6a24;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.wrap{max-width:56rem;margin:0 auto;padding:0 1.6rem}
+@media(max-width:640px){.wrap{padding:0 1.15rem}}
+
+/* ── 표제 ─────────────────────────────── */
+.masthead{padding:4.5rem 0 0;text-align:center}
+.masthead .heb{font-family:var(--heb);font-size:clamp(3.2rem,10vw,5.2rem);color:var(--gold);line-height:1;direction:rtl;letter-spacing:.02em}
+.masthead h1{font-size:clamp(1.75rem,5vw,2.5rem);font-weight:900;line-height:1.3;margin:.7rem 0 .4rem}
+.masthead .sub{font-family:var(--sans);font-size:.83rem;letter-spacing:.2em;color:var(--wine);font-weight:700}
+.masthead .blurb{max-width:33rem;margin:1.4rem auto 0;color:var(--ink-soft);font-size:.97rem}
+
+/* ── 시편의 활 (signature) ──────────────── */
+.arc{margin:3.4rem 0 0}
+.arc-ends{display:flex;justify-content:space-between;gap:1rem;font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);margin-bottom:.55rem;line-height:1.5}
+.arc-ends b{display:block;font-family:var(--serif);font-size:.94rem;font-weight:700;color:var(--wine-deep)}
+.arc-ends span:last-child{text-align:right}
+.band{display:flex;gap:3px;height:104px}
+.seg{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:.6rem .65rem;text-decoration:none;color:#fff;border-radius:4px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.seg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+.seg:hover,.seg:focus-visible{transform:translateY(-4px);box-shadow:0 6px 18px rgba(46,38,80,.22)}
+.seg:hover::after,.seg:focus-visible::after{transform:scaleX(1)}
+.seg .num{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.18em;opacity:.72}
+.seg .rng{font-family:var(--sans);font-size:.82rem;font-weight:700;line-height:1.3}
+.seg .cnt{font-family:var(--sans);font-size:.68rem;opacity:.66}
+.s1{flex:41 1 0;background:#584a86}
+.s2{flex:31 1 0;background:#4a3d73}
+.s3{flex:17 1 0;background:#241d40}
+.s4{flex:17 1 0;background:#3f5a4b}
+.s5{flex:44 1 0;background:linear-gradient(100deg,#7a6a2e,var(--gold))}
+.arc-caps{display:flex;gap:3px;margin-top:.45rem;font-family:var(--sans);font-size:.72rem;color:var(--ink-soft)}
+.arc-caps span{text-align:center;line-height:1.4}
+.arc-caps span:nth-child(1){flex:41 1 0}
+.arc-caps span:nth-child(2){flex:31 1 0}
+.arc-caps span:nth-child(3){flex:17 1 0;color:var(--wine-deep);font-weight:700}
+.arc-caps span:nth-child(4){flex:17 1 0}
+.arc-caps span:nth-child(5){flex:44 1 0}
+.arc-note{font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);margin-top:1rem;text-align:center;line-height:1.7}
+@media(max-width:640px){
+  .band{height:88px}
+  .seg{padding:.5rem .35rem}
+  .seg .rng,.seg .cnt{display:none}
+  .seg .num{font-size:.68rem;letter-spacing:.08em;opacity:1}
+  .arc-caps{font-size:.62rem}
+}
+
+/* ── 수치 ─────────────────────────────── */
+.tally{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:3rem 0 0}
+.tally div{background:var(--panel);padding:1.05rem .7rem;text-align:center}
+.tally b{display:block;font-size:1.5rem;font-weight:900;color:var(--wine-deep);line-height:1.2}
+.tally span{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);letter-spacing:.04em}
+@media(max-width:560px){.tally{grid-template-columns:1fr 1fr}}
+
+/* ── 섹션 ─────────────────────────────── */
+section{margin-top:4.6rem}
+.head{border-top:3px solid var(--wine);padding-top:1.1rem;margin-bottom:1.8rem;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.head .eyebrow{font-family:var(--sans);font-size:.71rem;letter-spacing:.22em;color:var(--wine);font-weight:700}
+.head h2{font-size:1.5rem;font-weight:900}
+.head .gloss{font-size:.85rem;color:var(--ink-soft);flex:1 1 100%;margin-top:-.3rem}
+
+/* ── 다섯 권 카드 ──────────────────────── */
+.books{display:grid;gap:1rem}
+.book{display:grid;grid-template-columns:5.2rem 1fr;gap:1.3rem;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:1.35rem 1.5rem;text-decoration:none;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.book:hover,.book:focus-visible{border-color:var(--wine);box-shadow:0 4px 16px rgba(74,61,115,.13);transform:translateY(-2px)}
+.book .mark{text-align:center;border-right:1px solid var(--line);padding-right:1.1rem}
+.book .mark .h{font-family:var(--heb);font-size:1.7rem;color:var(--gold);direction:rtl;line-height:1.15;display:block}
+.book .mark .n{font-family:var(--sans);font-size:.66rem;letter-spacing:.16em;color:var(--wine);font-weight:700;margin-top:.35rem}
+.book h3{font-size:1.16rem;font-weight:900;color:var(--wine-deep);line-height:1.4}
+.book h3 small{font-family:var(--sans);font-size:.75rem;font-weight:500;color:var(--ink-soft);letter-spacing:.02em;margin-left:.5rem}
+.book p{font-size:.93rem;color:var(--ink);margin:.4rem 0 .6rem;line-height:1.75}
+.book .keys{font-family:var(--sans);font-size:.73rem;color:var(--ink-soft);line-height:1.9}
+.book .keys b{display:inline-block;background:#f1eee5;border:1px solid var(--line);border-radius:3px;padding:.05rem .38rem;margin-right:.25rem;font-weight:500;color:var(--wine-deep)}
+@media(max-width:560px){
+  .book{grid-template-columns:1fr;gap:.8rem}
+  .book .mark{text-align:left;border-right:0;border-bottom:1px solid var(--line);padding:0 0 .6rem}
+  .book .mark .h{display:inline-block;font-size:1.4rem;vertical-align:-.1em}
+  .book .mark .n{display:inline-block;margin:0 0 0 .6rem}
+}
+
+/* ── 구성 층 ──────────────────────────── */
+.layers{counter-reset:ly;display:grid;gap:.55rem}
+.layer{display:grid;grid-template-columns:1.9rem 1fr;gap:.9rem;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--wine);border-radius:6px;padding:.75rem 1rem}
+.layer::before{counter-increment:ly;content:counter(ly);font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--wine);padding-top:.1rem}
+.layer b{font-size:.96rem}
+.layer span{display:block;font-size:.87rem;color:var(--ink-soft);line-height:1.7}
+.layer.hi{border-left-color:var(--gold);background:#faf6ec}
+.layer.hi b::after{content:"보완";font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--gold);border-radius:3px;padding:.14em .4em;margin-left:.5rem;vertical-align:.15em}
+
+/* ── 주석 ─────────────────────────────── */
+.chip{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.24em .46em;border-radius:3px;color:#fff;vertical-align:.16em}
+.cc{background:var(--c)}.cd{background:var(--d)}.cl{background:var(--l)}
+.srcs{display:grid;gap:.7rem}
+.src{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.9rem 1.1rem;font-size:.92rem}
+.src .t{font-weight:700;color:var(--wine-deep)}
+.src .a{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);margin-left:.4rem}
+.src p{margin-top:.25rem;color:var(--ink-soft);font-size:.88rem;line-height:1.75}
+
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--gold);border-radius:6px;padding:1rem 1.2rem;font-size:.91rem;line-height:1.8}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:#8a6a1e;margin-bottom:.35rem}
+.caveat p+p{margin-top:.6rem}
+
+footer{margin-top:5rem;border-top:3px double var(--line);padding:1.8rem 0 4rem;font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);line-height:1.9}
+footer .heb{font-family:var(--heb);color:var(--gold);font-size:1.1rem;direction:rtl}
+</style>
+<link data-psalms-suite-css="" href="psalms-suite.css" rel="stylesheet"/><link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/></head>
+<body data-book="psa" data-kind="index" data-psalms-page="index" data-root="../../">
+<div class="wrap"><nav aria-label="시편 연구 이동" class="ps-site-nav"><a href="../../index.html">서고 홈</a><a aria-current="page" href="index.html">시편 서재</a><a href="overview.html">전체 개관</a><a href="sourcebook.html">시편 자료집</a><a href="../../bible/original.html?book=PSA&amp;chapter=1">성경읽기</a></nav>
+<header class="masthead">
+<div class="heb">תְּהִלִּים</div>
+<h1>시편 상세 연구본</h1>
+<div class="sub">1–150편 · 다섯 권</div>
+<p class="blurb">시편 150편을 히브리 시편의 다섯 권 구분 그대로 나누어, 각 편의 배경과 절별 주석과 신학적 해석을 정리하고 복음적 해석과 다른 성경과의 연결까지 이었다. 해석은 세 주석서에 근거를 두고, 어느 주석에서 온 견해인지 본문에 표시했다.</p>
+</header>
+<section aria-labelledby="suite-tools-title" class="suite-tools">
+<div class="head">
+<span class="eyebrow">STUDY PATHS</span>
+<h2 id="suite-tools-title">시편 연구 문서</h2>
+<p class="gloss">전체 구조를 먼저 읽거나, 150편 자료집을 검색하거나, 다섯 권의 상세 연구로 바로 들어갈 수 있다.</p>
+</div>
+<div class="suite-tool-grid">
+<a href="overview.html"><b>전체 개관</b><span>정경 구조 · 장르 · 표제 · 신학 · 여섯 주석 종합</span></a>
+<a href="sourcebook.html"><b>시편 자료집</b><span>구조 · 장르 · 신학 · 시편 1–150편 해설 검색</span></a>
+<a href="../../bible/original.html?book=PSA&amp;chapter=1"><b>성경읽기</b><span>히브리어 원문과 개역개정을 절 단위로 병렬 대조</span></a>
+</div>
+</section><div class="arc">
+<div class="arc-ends">
+<span>시작 · 시 1:1<b>복 있는 사람</b></span>
+<span>끝 · 시 150:6<b>호흡이 있는 자마다</b></span>
+</div>
+<div class="band">
+<a class="seg s1" href="book1.html"><span class="num">Ⅰ</span><span class="rng">1–41편</span><span class="cnt">41편</span></a>
+<a class="seg s2" href="book2.html"><span class="num">Ⅱ</span><span class="rng">42–72편</span><span class="cnt">31편</span></a>
+<a class="seg s3" href="book3.html"><span class="num">Ⅲ</span><span class="rng">73–89편</span><span class="cnt">17편</span></a>
+<a class="seg s4" href="book4.html"><span class="num">Ⅳ</span><span class="rng">90–106편</span><span class="cnt">17편</span></a>
+<a class="seg s5" href="book5.html"><span class="num">Ⅴ</span><span class="rng">107–150편</span><span class="cnt">44편</span></a>
+</div>
+<div class="arc-caps">
+<span>도움을 구하는 기도</span>
+<span>72:20 콜로폰</span>
+<span>88·89 무응답</span>
+<span>여호와께서 다스리신다</span>
+<span>마지막 할렐루야</span>
+</div>
+<p class="arc-note">띠의 너비는 각 권의 실제 편수에 비례한다. 어둠은 제1권이 아니라 <strong>제3권</strong>에서 가장 짙어지고, 제4권의 응답을 지나 제5권의 찬양으로 열린다.</p>
+</div>
+<div class="tally">
+<div><b>150</b><span>편 전체 수록</span></div>
+<div><b>369</b><span>절별 주석 블록</span></div>
+<div><b>621</b><span>주석 인용 표시</span></div>
+<div><b>34</b><span>쟁점 대조표</span></div>
+</div>
+<section id="books">
+<div class="head">
+<span class="eyebrow">FIVE BOOKS</span>
+<h2>다섯 권</h2>
+<p class="gloss">각 권은 본문 연구(Ⅰ–Ⅱ부)와 종합 해설(Ⅲ–Ⅶ부)로 이루어진 독립 문서다.</p>
+</div>
+<div class="books">
+<a class="book" href="book1.html">
+<div class="mark"><span class="h">תְּפִלָּה</span><span class="n">BOOK Ⅰ</span></div>
+<div>
+<h3>제1권 · 1–41편<small>41편 · 343KB</small></h3>
+<p>다윗의 탄원이 지배하는 권이다. 제이콥슨의 정리대로 이곳은 찬양의 책이라기보다 <em>도움을 구하는 기도의 책</em>이며, 1편과 2편이 시편 전체의 두 갈래 서문을 이루고 41:13의 송영으로 닫힌다.</p>
+<div class="keys"><b>1편 두 길</b><b>8편 사람이 무엇이기에</b><b>19편 하늘이 선포하고</b><b>22편 어찌 나를 버리셨나이까</b><b>23편 여호와는 나의 목자</b><b>32편 허물의 사함을 받고</b></div>
+</div>
+</a>
+<a class="book" href="book2.html">
+<div class="mark"><span class="h">אֱלֹהִים</span><span class="n">BOOK Ⅱ</span></div>
+<div>
+<h3>제2권 · 42–72편<small>31편 · 213KB</small></h3>
+<p>신명 대신 <em>엘로힘</em>을 쓰는 편집층이 덮인 권이다. 사슴의 목마름(42편)에서 왕의 통치(72편)까지 나아가고, <em>이새의 아들 다윗의 기도가 끝나니라</em>(72:20)라는 콜로폰으로 봉인된다.</p>
+<div class="keys"><b>42–43편 목마른 사슴</b><b>46편 하나님은 우리의 피난처</b><b>51편 나를 정결하게 하소서</b><b>63편 주를 갈망하나이다</b><b>69편 물이 내 영혼까지</b><b>72편 왕의 직무</b></div>
+</div>
+</a>
+<a class="book" href="book3.html">
+<div class="mark"><span class="h">חֹשֶׁךְ</span><span class="n">BOOK Ⅲ</span></div>
+<div>
+<h3>제3권 · 73–89편<small>17편 · 145KB</small></h3>
+<p>시편에서 가장 어두운 권이다. 587년의 붕괴가 배경에 깔리고, 88편은 <em>흑암</em>이라는 낱말로 응답 없이 끝나며 89편은 언약이 어찌 되었느냐는 물음으로 끝난다. 태너의 표현대로 그것은 믿음의 결핍이 아니라 담대한 믿음이다.</p>
+<div class="keys"><b>73편 악인의 형통</b><b>78편 가르치는 역사</b><b>84편 주의 궁정</b><b>88편 응답 없는 기도</b><b>89편 하나님을 위한 역사 강의</b></div>
+</div>
+</a>
+<a class="book" href="book4.html">
+<div class="mark"><span class="h">מֶלֶךְ</span><span class="n">BOOK Ⅳ</span></div>
+<div>
+<h3>제4권 · 90–106편<small>17편 · 139KB</small></h3>
+<p>89편의 물음에 <em>여호와께서 다스리신다</em>로 답하는 권이다. 모세의 기도로 열리고 즉위시들이 중심을 이루며, 히브리서가 즐겨 인용하는 본문들이 여기 모여 있다. 106:47의 <em>우리를 모으소서</em>라는 미완결로 닫힌다.</p>
+<div class="keys"><b>90편 모세의 기도</b><b>91편 지존자의 은밀한 곳</b><b>95편 오늘 그의 음성을</b><b>100편 감사함으로</b><b>103편 내 영혼아</b><b>104편 창조의 노래</b></div>
+</div>
+</a>
+<a class="book" href="book5.html">
+<div class="mark"><span class="h">הַלְלוּ־יָהּ</span><span class="n">BOOK Ⅴ</span></div>
+<div>
+<h3>제5권 · 107–150편<small>44편 · 277KB</small></h3>
+<p>가장 긴 권이며 <em>모으셨도다</em>(107:3)로 응답을 시작한다. 이집트 할렐과 176절의 토라 시편, 열다섯 편의 순례 노래를 거쳐 다섯 편의 할렐루야로 시편 전체를 닫는다.</p>
+<div class="keys"><b>110편 멜기세덱의 서열</b><b>118편 버린 돌</b><b>119편 176절 토라</b><b>120–134편 성전에 올라가는 노래</b><b>130편 깊은 곳에서</b><b>139편 나를 살피사</b><b>146–150편 마지막 할렐루야</b></div>
+</div>
+</a>
+</div>
+</section>
+<section id="structure">
+<div class="head">
+<span class="eyebrow">HOW IT READS</span>
+<h2>한 편이 놓이는 순서</h2>
+<p class="gloss">모든 편이 같은 일곱 층을 지난다. 어느 편을 펴도 찾는 자리가 같다.</p>
+</div>
+<div class="layers">
+<div class="layer"><div><b>배경과 상황</b><span>양식 분류, 표제의 뜻, 저작·연대 논의, 시가 놓인 자리.</span></div></div>
+<div class="layer"><div><b>구조</b><span>연 구분과 후렴, 수미상관과 교차 구조 등 시 자체의 짜임.</span></div></div>
+<div class="layer"><div><b>절별 주석</b><span>핵심 절을 히브리어 낱말과 함께 풀이한다. 전체 369개 블록.</span></div></div>
+<div class="layer"><div><b>신학적 해석</b><span>그 시가 하나님과 사람에 대해 무엇을 주장하는가.</span></div></div>
+<div class="layer hi"><div><b>주석가별 초점</b><span>NICOT과 Longman이 그 편에 대해 내놓는 서로 다른 해석 각도를 나란히 놓았다. 148개 편 전부에 있다.</span></div></div>
+<div class="layer"><div><b>복음적 해석</b><span>신약이 그 시를 어떻게 읽었고 그리스도께 어떻게 이어지는가.</span></div></div>
+<div class="layer"><div><b>다른 성경과의 연결</b><span>구약 전승과 신약 인용을 절 단위로 짚는다.</span></div></div>
+</div>
+<p style="font-size:.9rem;color:var(--ink-soft);margin-top:1.2rem">본문 뒤에는 각 권마다 <strong>Ⅲ부 신학 · Ⅳ부 성경 연결 · Ⅴ부 복음적 해석 종합 · Ⅵ부 쟁점 대조표 · Ⅶ부 연구 서지</strong>가 붙는다. Ⅵ부의 대조표는 주석가들이 갈라지는 지점을 한 표에 놓고 어느 쪽도 닫지 않는다.</p>
+</section>
+<section id="sources">
+<div class="head">
+<span class="eyebrow">SOURCES</span>
+<h2>근거로 삼은 주석</h2>
+<p class="gloss">본문의 기호는 그 견해가 어느 주석서에서 직접 왔는지를 가리킨다.</p>
+</div>
+<div class="srcs">
+<div class="src">
+<span class="chip cc">C</span> <span class="t">Word Biblical Commentary</span><span class="a">Craigie(19) · Tate(20) · Allen(21)</span>
+<p>본문비평과 구조 분석의 축. 히브리어 본문의 난제, 양식비평의 계보, 고대 근동 배경을 이 주석에서 가져왔다.</p>
+</div>
+<div class="src">
+<span class="chip cd">D</span> <span class="t">NICOT: The Book of Psalms</span><span class="a">deClaissé-Walford · Jacobson · Tanner</span>
+<p>정경적 배열과 신학적 해석의 축. 세 저자가 시편을 나누어 맡았으므로 <strong>각 편의 실제 집필자를 이름으로 밝혔다</strong>—제이콥슨, 태너, 드클레세-월포드.</p>
+</div>
+<div class="src">
+<span class="chip cl">L</span> <span class="t">Tyndale OTC: Psalms</span><span class="a">Tremper Longman Ⅲ</span>
+<p>장르 규정과 그리스도 중심 독법의 축. 각 편의 <em>Meaning</em> 항목이 신약과의 연결을 어디까지 말할 수 있는지 절제 있게 그어 준다.</p>
+</div>
+</div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin-top:1.1rem">본문에 <strong>기호 없이 이름만</strong> 나오는 학자들—궁켈, 모빙켈, 베스터만, 브루그만, 크라우스, 젱거, 메이스, 맥캔, 골딩게이, 클리퍼드, 림버그, 게르스텐베르거 등—은 위 세 주석서가 인용하거나 논의하는 학자이므로 기호를 붙이지 않았다.</p>
+</section>
+<section id="notes">
+<div class="head">
+<span class="eyebrow">BEFORE YOU READ</span>
+<h2>일러두기</h2>
+</div>
+<div class="caveat">
+<div class="tt">읽기 전에</div>
+<p><strong>성경 인용은 개역개정을 따른다.</strong> 절 번호도 개역개정 기준이므로, 표제를 1절로 세는 히브리 성경과는 한 절씩 차이가 난다.</p>
+<p><strong>9–10편과 42–43편은 한 편으로 묶어 다뤘다.</strong> 알파벳 이합체와 후렴이 두 편을 하나의 작품으로 잇기 때문이다. 그래서 150편이 148개 블록에 담겼다.</p>
+<p><strong>저주 단락(58, 83, 109, 137, 139, 149편)은 해석의 방향만 제시하고 결론을 닫지 않았다.</strong> 이 본문들은 읽는 이의 처지에 따라 다르게 읽히며, 그것이 정당하다고 보았다.</p>
+<p><strong>분량은 편마다 다르다.</strong> 119편(176절)과 다섯 절 안팎의 순례 노래를 같은 밀도로 다룰 수 없으므로, 긴 시는 구조 중심으로 짧은 시는 핵심 절 중심으로 접근했다.</p>
+</div>
+</section>
+<footer>
+<span class="heb">תְּהִלִּים</span> · 시편 상세 연구본 · 1–150편 다섯 권<br/>
+    주 자료: Craigie·Tate·Allen(WBC 19–21) · deClaissé-Walford 외(NICOT) · Longman(TOTC) · 성경 인용은 개역개정<br/>
+    각 권 문서는 단일 HTML 파일이며 인터넷 연결 없이도 열린다(웹폰트만 온라인에서 불러온다).
+  </footer>
+</div>
+<script data-psalms-suite-js="" defer="" src="psalms-suite.js"></script><script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script><script data-psalms-research-dock="" defer="" src="../../assets/js/research-dock-loader.js?v=20260724.2"></script></body>
+</html>

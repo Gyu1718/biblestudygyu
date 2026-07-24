@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>시편 제1권 상세 연구본 — 1–41편</title><meta content="시편 제1권 1–41편의 배경, 구조, 절별 주석, 신학, 복음적 해석과 성경 연결을 정리한 상세 연구." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Sans+KR:wght@400;500;700&amp;family=Noto+Serif+Hebrew:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#23252d;          /* 본문 잉크 */
+  --ink-soft:#535a68;
+  --paper:#f6f4ec;        /* 양피지 바탕 */
+  --panel:#fffefb;
+  --wine:#4a3d73;         /* 다윗 왕권의 남보라 — 구조 축 */
+  --wine-deep:#2e2650;
+  --gold:#a8842f;         /* 성전 금박 — 히브리어·복음 상자 */
+  --vine:#4d6b46;         /* 시냇가 나무의 녹색 */
+  --line:#ddd7c8;
+  --c:#34597e; --d:#a1513c; --l:#8a6a24;   /* 주석가 칩 */
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--wine-deep);color:#ece8f4;padding:2.1rem 1.3rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .brand-heb{font-family:var(--heb);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:1}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.05rem;line-height:1.45;color:#fff;margin-top:.3rem}
+nav.toc .brand-sub{color:#b6a9d2;font-size:.7rem;letter-spacing:.13em;margin-bottom:1.4rem}
+nav.toc a{display:block;color:#cfc7e2;text-decoration:none;padding:.24rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--gold);background:rgba(255,255,255,.06);outline:none}
+nav.toc .lv1{font-weight:700;color:#ece8f4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1rem;font-size:.77rem}
+nav.toc .home{color:var(--gold);font-size:.73rem;margin-bottom:.7rem}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  nav.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+
+header.hero{border-bottom:3px double var(--line);padding-bottom:2.2rem;margin-bottom:2.6rem}
+.hero .heb-title{font-family:var(--heb);font-size:3.3rem;color:var(--gold);line-height:1.1;direction:rtl}
+.hero h1{font-size:2.05rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.95rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1.1rem}
+
+section.part{margin-top:4.2rem}
+.part-head{border-top:3px solid var(--wine);padding-top:1.3rem;margin-bottom:1.7rem}
+.part-head .heb{font-family:var(--heb);font-size:2.4rem;color:var(--gold);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;color:var(--wine);font-weight:700}
+.part-head h2{font-size:1.55rem;font-weight:900;line-height:1.4;margin:.25rem 0 .2rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.14rem;font-weight:700;margin:2.1rem 0 .8rem;color:var(--wine-deep);scroll-margin-top:1rem}
+h4{font-size:.98rem;font-weight:700;margin:1.5rem 0 .5rem}
+p{margin:.85rem 0}
+em{font-style:normal;font-weight:500;color:var(--wine-deep)}
+
+hr.wall{border:0;height:8px;margin:2.6rem 0;background:
+ repeating-linear-gradient(90deg,var(--line) 0 30px,transparent 30px 34px) 0 0/100% 2px no-repeat,
+ repeating-linear-gradient(90deg,transparent 0 15px,var(--line) 15px 45px,transparent 45px 49px) 0 5px/100% 2px no-repeat}
+
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.cc{background:var(--c)}.c.cd{background:var(--d)}.c.cl{background:var(--l)}
+.legend{display:grid;gap:.5rem;font-family:var(--sans);font-size:.79rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1rem 1.15rem;margin:1.2rem 0}
+.legend .name{color:var(--ink-soft)}
+
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--wine);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--wine);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--gold);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:#8a6a1e;margin-bottom:.25rem}
+.gold-box{background:#f7f3ea;border:1px solid #e6d9b8;border-left:4px solid var(--gold);border-radius:6px;padding:.95rem 1.15rem;margin:1.2rem 0;font-size:.93rem}
+.gold-box .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#8a6a2c;margin-bottom:.28rem}
+.link-box{background:#f2f5f1;border:1px solid #d6e0d3;border-left:4px solid var(--vine);border-radius:6px;padding:.95rem 1.15rem;margin:1.2rem 0;font-size:.93rem}
+.link-box .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#3d5738;margin-bottom:.28rem}
+
+.vs{margin:1.3rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.85rem;color:var(--wine);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.965rem}
+
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:1.3rem 0;background:var(--panel)}
+th{font-family:var(--sans);font-size:.74rem;letter-spacing:.05em;text-align:left;background:var(--wine-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+
+.chap{margin:2.8rem 0;padding:1.5rem 1.6rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;scroll-margin-top:1rem}
+.chap>h3{margin-top:0;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.chap .chip-num{font-family:var(--sans);font-weight:700;font-size:.7rem;background:var(--wine);color:#fff;border-radius:4px;padding:.28em .6em;letter-spacing:.05em;white-space:nowrap}
+.chap .lead{font-size:.93rem;color:var(--ink-soft);margin-top:-.2rem}
+
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.35rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.6rem}
+.back a{color:var(--wine);text-decoration:none}
+footer{margin-top:5rem;border-top:3px double var(--line);padding-top:1.4rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
+
+@media print{
+  nav.toc{display:none}
+  .frame{display:block}
+  body{background:#fff;font-size:10.5pt}
+  main{max-width:100%;padding:0}
+  .chap,.note,.caveat,.gold-box,.link-box,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link data-psalms-suite-css="" href="psalms-suite.css" rel="stylesheet"/><link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/></head>
+<body data-book="psa" data-kind="volume" data-psalms-page="volume" data-psalms-volume="1" data-root="../../">
+<div class="frame">
+<nav aria-label="목차" class="toc"><nav aria-label="시편 연구 이동" class="ps-site-nav"><a href="../../index.html">서고 홈</a><a href="index.html">시편 서재</a><a href="overview.html">전체 개관</a><a href="sourcebook.html">시편 자료집</a><a href="../../bible/original.html?book=PSA&amp;chapter=1">성경읽기</a></nav>
+<div class="brand-heb">סֵפֶר רִאשׁוֹן</div>
+<div class="brand">시편 제1권 상세 연구본</div>
+<div class="brand-sub">PSALMS 1–41</div><div aria-label="권 이동" class="volume-jump"><a aria-current="page" href="book1.html" title="시편 1–41편">1권</a><a href="book2.html" title="시편 42–72편">2권</a><a href="book3.html" title="시편 73–89편">3권</a><a href="book4.html" title="시편 90–106편">4권</a><a href="book5.html" title="시편 107–150편">5권</a></div>
+
+<div class="cols">
+<a class="lv1" href="#overview">개요·주석 프로필</a>
+<a class="lv1" href="#part1">Ⅰ. 제1권 배경 연구</a>
+<a class="lv2" href="#p1-place">제1권의 자리</a>
+<a class="lv2" href="#p1-david">다윗 시집과 표제</a>
+<a class="lv2" href="#p1-edit">편집과 소그룹 구조</a>
+<a class="lv2" href="#p1-genre">장르 분포와 신명</a>
+<a class="lv2" href="#p1-world">시인의 세계</a>
+<a class="lv1" href="#part2">Ⅱ. 각 편 상세 주해</a>
+<a class="lv2" href="#g-intro">서론 1–2편</a>
+<a class="lv2" href="#g-a">3–14편</a>
+<a class="lv2" href="#g-b">15–24편</a>
+<a class="lv2" href="#g-c">25–34편</a>
+<a class="lv2" href="#g-d">35–41편</a>
+<a class="lv1" href="#part3">Ⅲ. 제1권 신학</a>
+<a class="lv1" href="#part4">Ⅳ. 다른 성경과의 연결</a>
+<a class="lv1" href="#part5">Ⅴ. 복음적 해석 종합</a>
+<a class="lv1" href="#part6">Ⅵ. 쟁점 대조표</a>
+<a class="lv1" href="#part7">Ⅶ. 연구 서지</a>
+</div>
+</nav>
+<main>
+<header class="hero" id="top">
+<div class="heb-title">סֵפֶר רִאשׁוֹן</div>
+<h1>시편 제1권 상세 연구본</h1>
+<div class="sub">시편 1–41편 — 배경 · 절별 주석 · 신학적 해석 · 복음적 해석 · 성경 연결</div>
+<div class="meta">
+    편별 구성: <strong>배경과 상황 → 구조 → 절별 주석 → 신학적 해석 → 복음적 해석 → 다른 성경과의 연결</strong><br/>
+    성경 인용은 개역개정(마소라 본문) 절 번호 기준 · 히브리어는 (발음, 뜻) 병기
+  </div>
+</header>
+<!-- ═══════════ 개요 ═══════════ -->
+<section class="part" id="overview">
+<div class="part-head">
+<div class="eyebrow">OVERVIEW</div>
+<h2>개요와 주석 프로필</h2>
+<div class="gloss">이 연구본의 자료 기반과 읽는 법</div>
+</div>
+<p>시편 제1권(1–41편)은 시편 다섯 권 가운데 <strong>가장 다윗적이고 가장 개인적인</strong> 묶음이다. 41편 중 39편에 다윗의 이름이 붙고, 절반을 훌쩍 넘는 시가 개인 탄원이며, 원수·질병·죄책·버림받음이라는 인간 경험의 밑바닥이 여과 없이 드러난다. 그러면서도 이 권은 "복 있는 사람"(1:1)으로 열려 "복이 있음이여"(41:1)로 닫히고, 마지막에 "여호와를 송축할지어다"(41:13)라는 송영으로 매듭지어진다. <strong>정직에서 찬양으로</strong>—이것이 제1권이 그리는 활이다.</p>
+<p>이 연구본은 편마다 여섯 층으로 파고든다. <em>배경과 상황</em>(표제·장르·역사적 자리), <em>구조</em>(시의 짜임), <em>절별 주석</em>(본문의 흐름을 따라가는 세부 주해), <em>신학적 해석</em>(이 시가 증언하는 하나님), <em>복음적 해석</em>(그리스도와 복음에 이르는 길), <em>다른 성경과의 연결</em>(구약 전승과 신약 인용).</p>
+<div class="legend">
+<div><span class="c cc">C</span> <span class="name"><strong>Craigie</strong>, WBC 19 <em>Psalms 1–50</em> (개정판 2004) — 제1권 전체를 다루는 표준 주석. 히브리 시학·우가릿 비교·양식 분석에 강하며, 각 편의 "Explanation"에서 신학적 요지를 제시한다. 이 연구본의 주된 주해 기반.</span></div>
+<div><span class="c cd">D</span> <span class="name"><strong>NICOT</strong> = deClaissé-Walford·Jacobson·Tanner, <em>The Book of Psalms</em> (2014) — 정경·이야기·양식비평 종합. 시편을 포로기 이후 공동체의 "생존의 이야기"로 읽으며, 구조 분석과 신학적 증언에 강하다.</span></div>
+<div><span class="c cl">L</span> <span class="name"><strong>Longman</strong>, TOTC <em>Psalms</em> (2014) — 장르 중심 입문과 명시적 그리스도 중심 독법. "시편은 예수의 기도책"이라는 관점이 복음적 해석에 유익하다.</span></div>
+</div>
+<div class="note">
+<div class="tt">표기 원칙</div>
+<p>① 칩(<span class="c cc">C</span> <span class="c cd">D</span> <span class="c cl">L</span>)은 위 세 주석의 견해임을 표시한다. 궁켈·모빙켈·베스터만·브루그만·윌슨·메이스·크리치·차일즈 등은 이 주석들이 인용하는 학자이므로 <strong>칩 없이 이름으로</strong> 적는다. ② 히브리어는 <span class="hw">חֶסֶד</span>(헤세드, 인자) 형식으로 병기한다. ③ 절 번호는 개역개정을 따르며, 히브리 성경이 표제를 1절로 세어 번호가 하나씩 밀리는 경우 필요할 때만 밝힌다. ④ <span style="color:#8a6a2c;font-weight:700">복음적 해석</span> 상자는 본문의 원래 의미에서 출발해 신약과 그리스도께 이르는 길을 밝히며, 본문에 없는 것을 억지로 읽어 넣지 않는 것을 원칙으로 삼는다.</p>
+</div>
+<div class="caveat">
+<div class="tt">해석의 층위 — 이 연구본이 따르는 원칙 <span class="c cc">C</span></div>
+<p>크레이기의 정리대로 한 시의 의미에는 층위가 있다. <strong>(1) 최초의 의미</strong>—이 시가 처음 불린 자리(예: 2편은 유다 왕의 대관식). <strong>(2) 정경적 의미</strong>—왕정이 무너진 뒤 시편에 배치되며 얻은 새 기능(2편이 시편의 서론이 되어 종말론적 대망을 품음). <strong>(3) 신약적 의미</strong>—그리스도 안에서의 성취(히 1:5). <strong>(4) 오늘의 의미</strong>—신자의 삶에의 적용. "시의 말은 변하지 않지만 그 기능과 의미는 시간 속에서 발전한다. 후대의 의미는 새로운 신학이 아니라 최초의 핵으로부터의 성장이다." 그러므로 복음적 해석은 최초의 의미를 지워 버리는 알레고리가 아니라, 그 의미가 자라 도달한 열매를 확인하는 일이다.</p>
+</div>
+</section>
+<!-- ═══════════ Ⅰ부 ═══════════ -->
+<section class="part" id="part1">
+<div class="part-head">
+<div class="heb">אַשְׁרֵי</div>
+<div class="eyebrow">PART Ⅰ</div>
+<h2>제1권 배경 연구</h2>
+<div class="gloss">제1권의 자리 · 다윗 시집 · 편집과 소그룹 · 장르와 신명 · 시인의 세계</div>
+</div>
+<h3 id="p1-place">1. 제1권의 자리: 복으로 열고 복으로 닫다</h3>
+<p>시편은 다섯 권으로 나뉘며 각 권은 송영으로 닫힌다. 제1권의 송영은 41:13이다—"이스라엘의 하나님 여호와를 영원부터 영원까지 송축할지로다 아멘 아멘." '아멘'은 시편에서 오직 이 권말 송영들에만 나타나며, 이는 다섯 권 구분이 우연이 아니라 <strong>의도적 편집</strong>임을 보여 주는 가장 강력한 표지다.</p>
+<p>제1권은 정교한 <strong>수미상관</strong>으로 묶여 있다. 첫 시의 첫 단어가 <span class="hw">אַשְׁרֵי</span>(아쉬레, 복 있는)이고(1:1), 마지막 시의 첫 단어도 아쉬레다(41:1). 그런데 그 내용이 대조적이다. 1편의 복은 <em>토라를 묵상하는 자</em>의 복이고, 41편의 복은 <em>가난한 자를 보살피는 자</em>의 복이다. 곧 제1권은 <strong>말씀 앞에서의 경건으로 열려 이웃 앞에서의 자비로 닫힌다.</strong> 하나님을 향한 수직축과 사람을 향한 수평축이 한 권을 감싸는 셈이다.</p>
+<div class="note">
+<div class="tt">제1권을 여닫는 대칭</div>
+<p><strong>1편</strong> 복 있는 사람 = 토라를 주야로 묵상하는 자 → 시냇가에 심긴 나무 → "악인들의 길은 망하리로다"<br/>
+<strong>41편</strong> 복 있는 사람 = 가난한 자를 보살피는 자 → 병상에서 붙드시는 하나님 → "여호와를 송축할지로다"<br/>
+    두 시 모두 의인과 악인의 대조, 하나님의 인정과 원수의 실패라는 같은 골격을 공유한다. 41편은 제1권의 결론이면서 동시에 <strong>1편의 이상이 현실의 병상과 배신 속에서 시험당한 뒤의 재확인</strong>이다.</p>
+</div>
+<h3 id="p1-david">2. 다윗 시집: 41편 중 39편</h3>
+<p>제1권에서 표제 없는 시는 1편과 2편(서론) 그리고 10편·33편뿐이며—10편은 9편과 한 편을 이루고 33편은 32편과 짝을 이룬다—나머지 전부에 <span class="hw">לְדָוִד</span>(레다비드)가 붙는다. 표제 보유율 95%, 다윗 표제 비율 95%로 다섯 권 가운데 가장 높다. 제1권은 명실공히 <strong>다윗 시집의 핵심</strong>이다.</p>
+<p>'레다비드'의 전치사 <span class="hw">לְ</span>는 '~의(저작)', '~을 위한', '~에 관한', '~에게 속한(모음집)' 등으로 두루 읽힌다. <span class="c cd">D</span>는 시대착오적 요소(성전 언급 등)를 근거로 '다윗 왕가에 속한'이라는 소속 표기로 보고 사실상 익명으로 다루며, <span class="c cc">C</span>는 다윗이 "이스라엘의 노래 잘하는 자"(삼하 23:1)였고 예배 음악 직무를 세웠다는 점(대상 15–16장)에서 저작 가능성을 완전히 배제하지 않는다. 이 연구본은 <strong>양쪽을 함께 제시하되</strong>, 크레이기의 결론—"저작권 정보의 부재는 시편 이해에 심각한 장애가 아니다. 시편의 주제는 사람과 하나님의 관계이며, 그 변주는 저작권의 특수성을 초월한다"—을 따라 본문 자체의 증언에 집중한다.</p>
+<p>제1권에는 다윗 생애의 특정 사건과 연결된 <strong>역사적 표제</strong>가 다섯 개 나온다: 3편(압살롬을 피할 때), 7편(구시의 말로 말미암아), 18편(모든 원수와 사울의 손에서 건지신 날), 34편(아비멜렉 앞에서 미친 체하다 쫓겨났을 때), 그리고 제1권 밖이지만 51편(밧세바 사건). 이 표제들은 작성 상황의 기록이라기보다 <strong>초기 독자들이 이 시를 어떻게 읽었는지 보여 주는 해석의 단서</strong>다—차일즈는 이를 초기 미드라쉬적 활동의 흔적으로 보았다. 그 효과는 분명하다: 익명의 기도가 <em>한 사람의 구체적 인생</em> 속에 자리를 얻고, 독자는 자기 인생의 자리에서 같은 기도를 드리도록 초대받는다.</p>
+<h3 id="p1-edit">3. 편집과 소그룹 구조</h3>
+<p>제1권은 무작위 모음이 아니다. 호스펠트-쳉어를 비롯한 편집비평 연구는 <strong>네 개의 소그룹</strong>을 식별하며, 각 그룹은 중심에 한 편의 큰 시를 두고 그 둘레에 탄원시를 배치하는 경향을 보인다.</p>
+<table>
+<tr><th style="width:18%">소그룹</th><th>중심축</th><th>성격</th></tr>
+<tr><td class="head">1–2편</td><td>—</td><td>서론. 토라(1편)와 메시아(2편)라는 두 문. 표제가 없고 '아쉬레'와 '길'로 서로 묶인다.</td></tr>
+<tr><td class="head">3–14편</td><td>8편 (창조 찬양)</td><td>개인 탄원의 밀집 구간. 아침·저녁 기도(3–5편), 질병(6편), 무고(7편)를 지나 창조의 경이(8편)가 한가운데 박히고, 다시 탄원(9–14편)이 이어진다.</td></tr>
+<tr><td class="head">15–24편</td><td>19편 (토라)</td><td>가장 정교한 교차 구조. 15편(입장)–16편(신뢰)–17편(탄원)–18편(제왕)–<strong>19편(토라)</strong>–20·21편(제왕)–22편(탄원)–23편(신뢰)–24편(입장)의 거울 대칭.</td></tr>
+<tr><td class="head">25–34편</td><td>29편 (여호와의 소리)</td><td>알파벳 이합체시 25편과 34편이 앞뒤를 감싼다. 죄 용서(32편)와 감사(30·34편)의 비중이 커진다.</td></tr>
+<tr><td class="head">35–41편</td><td>37편 (지혜)</td><td>다시 탄원이 짙어지나, 악인의 형통을 다루는 지혜시 37편이 답을 제시하고 41편의 복과 송영으로 닫힌다.</td></tr>
+</table>
+<div class="caveat">
+<div class="tt">읽기 요령 — 이웃한 시를 함께 읽으라</div>
+<p>편집자는 표제어(catchword)로 이웃 시를 잇는다. 3편과 4편은 '눕다/자다'로(아침 기도와 저녁 기도), 1편과 2편은 '복 있는'으로, 22편과 23편은 극단적 대비로 이어진다—버림받음의 절규("어찌 나를 버리셨나이까") 바로 다음에 목자의 신뢰("내게 부족함이 없으리로다")가 온다. 이 배치 자체가 해석이다. 한 편을 읽을 때 <strong>좌우 이웃을 함께 보면</strong> 편집자가 심어 둔 대화가 들린다.</p>
+</div>
+<h3 id="p1-genre">4. 장르 분포와 신명 사용</h3>
+<p>제1권은 <strong>탄원의 책</strong>이다. 41편 중 약 24편(59%)이 탄원시이며 그중 대부분이 개인 탄원이다. 찬양시는 약 20%에 그친다. 이 비율은 뒤로 갈수록 역전되어 제5권에서는 찬양이 52%에 이른다. 곧 시편 전체가 '부르짖음에서 찬양으로' 움직이는데, <strong>제1권은 그 여정의 출발점—부르짖음의 자리</strong>다.</p>
+<p>신명 사용도 뚜렷하다. 제1권에서 <span class="hw">יְהוָה</span>(야웨)는 272회, <span class="hw">אֱלֹהִים</span>(엘로힘)은 15회로 약 18:1의 압도적 비율이다. 반면 42–83편(엘로힘 시편)에서는 정반대가 된다. 제1권은 <strong>언약의 이름으로 부르는 기도</strong>—이름을 아는 자가 그 이름을 부르는 친밀함—의 자리다.</p>
+<h3 id="p1-world">5. 시인의 세계: 원수·질병·성전</h3>
+<p>제1권을 읽을 때 반복해 부딪히는 세 가지 세계가 있다.</p>
+<p><strong>① 원수(<span class="hw">אֹיֵב</span> 오예브).</strong> 제1권에서 가장 자주 등장하는 위기다. 이들의 정체를 두고 학설이 갈린다—외적, 정적, 마술사·주술사, 거짓 고발자, 혹은 문학적 유형. <span class="c cc">C</span>는 어느 하나로 확정하기보다 시가 의도적으로 <em>일반화된 언어</em>를 쓴다고 본다. 그래서 후대의 모든 예배자가 자기 원수를 여기에 대입할 수 있다. 원수는 대개 <strong>말</strong>로 공격한다(거짓 증언, 조롱, 비방)—이는 고대 근동 사회에서 명예와 생존이 공동체의 평판에 달려 있었기 때문이다.</p>
+<p><strong>② 질병과 죽음.</strong> 6편·38편·41편은 병상의 기도이고, 여러 시에서 <span class="hw">שְׁאוֹל</span>(스올)과 <span class="hw">בּוֹר</span>(구덩이)가 위협으로 등장한다. 히브리적 이해에서 죽음은 단순한 종말이 아니라 <strong>하나님을 찬양할 수 없게 되는 상태</strong>다(6:5; 30:9). 그래서 병에서의 구원 요청은 곧 <em>찬양할 자리로 돌려 달라</em>는 요청이다.</p>
+<p><strong>③ 성전과 임재.</strong> 15편·24편의 입장 예전, 23:6·27:4의 "여호와의 집", 26편의 제단 순행이 보여 주듯 제1권의 기도는 <strong>성소를 향한다</strong>. 다만 이 시들이 최종 형태를 얻은 시대(포로기 이후)에는 그 성전이 무너졌다 다시 세워졌으므로, '여호와의 집'은 건물이자 동시에 <em>하나님의 임재 자체</em>를 가리키는 말로 확장되어 읽혔다 <span class="c cd">D</span>.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════════ Ⅱ부 ═══════════ -->
+<section class="part" id="part2">
+<div class="part-head">
+<div class="heb">מִזְמוֹר</div>
+<div class="eyebrow">PART Ⅱ</div>
+<h2>각 편 상세 주해 (1–41편)</h2>
+<div class="gloss">배경 → 구조 → 절별 주석 → 신학적 해석 → 복음적 해석 → 성경 연결</div>
+</div>
+<h3 id="g-intro">서론 — 1–2편: 시편으로 들어가는 두 문</h3>
+<div class="chap" data-psalm-context="1" id="ps1">
+<h3><span class="chip-num">1편</span> 두 길 — 시편의 문을 여는 지혜시</h3>
+<p class="lead">복은 소유가 아니라 방향이다. 뿌리내린 나무와 바람에 날리는 겨.</p>
+<p><strong>배경과 상황.</strong> 표제가 없다. 서론으로서의 기능을 위해 의도적으로 무표제로 남겨진 것으로 보인다. 장르는 <strong>지혜시(교훈시)</strong>로, 용어와 사상이 잠언(특히 잠 2:12–15, 20–22)을 반영한다. <span class="c cc">C</span>는 이 시가 본래 공적 예배용으로 지어진 것이 아니라 <em>사람과 그 운명의 양극성을 놀랍도록 선명하게 표현한 문학적·시적 작품</em>이라고 본다(운율이 거의 없어 불로는 "리듬 있는 산문"이라 평했다). 자리는 포로기 이후—성전과 왕이 사라진 자리에서 말씀 묵상이 하나님과 동행하는 길이 된 시대다. 여호수아 1:8("주야로 그것을 묵상하여")과 예레미야 17:5–8(물가에 심긴 나무)의 언어를 그대로 계승한다.</p>
+<p><strong>구조.</strong> (1) 의인의 견고한 기초(1–3절), (2) 악인의 덧없음(4–5절), (3) 두 길의 대조(6절). 1–2절과 3절, 4절과 5절이 A–B–B′–A′의 교차대구를 이루고, 6절의 반의적 평행이 전체를 매듭짓는다. <span class="c cd">D</span>는 네 연으로 나눈다: 악인의 길(1절)–여호와의 토라(2절)–토라 안의 번영(3절)–악인의 심판(4–6절).</p>
+<div class="vs">
+<span class="ref">1절 — 세 번의 부정으로 정의되는 복</span>
+<p>시편의 첫 단어가 <span class="hw">אַשְׁרֵי</span>(아쉬레, "복 있는/얼마나 행복한가")다. 하나님께 돌리는 송축(<span class="hw">בָּרוּךְ</span> 바루크)이 아니라 <strong>사람의 상태를 가리키는 감탄</strong>이다. 복은 먼저 <em>하지 않는 것</em>으로 규정된다—악인의 꾀를 따르지 <strong>않고</strong>, 죄인의 길에 서지 <strong>않고</strong>, 오만한 자의 자리에 앉지 <strong>않는다</strong>. '걷다–서다–앉다'의 점층법이 뚜렷하다: 스쳐 지나가던 것이 멈춰 서는 것이 되고, 마침내 눌러앉아 한패가 된다. 악과의 동화는 결단이 아니라 <strong>체류의 문제</strong>임을 시가 문법으로 보여 준다.</p>
+</div>
+<div class="vs">
+<span class="ref">2절 — 시 전체의 심장</span>
+<p>부정 뒤에 단 하나의 긍정이 온다. "여호와의 <span class="hw">תּוֹרָה</span>(토라, 가르침)를 즐거워하여 그의 율법을 주야로 묵상하는도다." <span class="c cc">C</span>는 이 시의 지혜 전체가 결국 2절로 환원된다고 본다—의인의 형통과 행복은 <em>토라에서 '즐거움(</em><span class="hw">חֵפֶץ</span><em> 헤페츠)'을 발견하는 데</em> 달려 있다. 그런데 그 즐거움은 어떻게 얻는가? 실천적으로는 끊임없는 묵상을 통해서다. <span class="hw">הָגָה</span>(하가)는 조용히 <strong>읊조리다·중얼거리다</strong>는 뜻으로, 머릿속 사색이 아니라 입술을 움직이는 반복이다. 토라는 창조주가 주시는 <em>창조의 의미에 관한 지침</em>이며, 그 의미를 발견하지 못한 삶은 헛되이 살아지는 삶이다 <span class="c cc">C</span>.</p>
+</div>
+<div class="vs">
+<span class="ref">3절 — 시냇가에 심긴 나무</span>
+<p><span class="hw">שָׁתוּל</span>(샤툴)은 저절로 난 나무가 아니라 <strong>옮겨 심긴</strong> 나무다. '시냇가'로 옮긴 <span class="hw">פַּלְגֵי מָיִם</span>(팔게이 마임)은 자연 하천이라기보다 <strong>관개 수로</strong>에 가깝다. 곧 이 나무의 생명은 우연한 입지가 아니라 <em>누군가 심었고 물길을 대 준</em> 은혜의 결과다. 세 가지 결실—"철을 따라 열매를 맺으며"(때를 아는 결실), "그 잎사귀가 마르지 아니함"(가뭄에도 지속되는 생명력), "그가 하는 모든 일이 다 형통하리로다". 마지막 어구는 만사형통의 보증이 아니라, 뿌리내린 삶이 결국 <strong>목적에 도달한다</strong>는 선언이다.</p>
+</div>
+<div class="vs">
+<span class="ref">4–5절 — 겨, 그리고 설 수 없음</span>
+<p>"악인들은 그렇지 아니함이여 오직 바람에 나는 겨와 같도다." <span class="hw">מֹץ</span>(모츠, 겨)는 타작마당에서 키질할 때 날아가는 껍데기다. 나무의 대응물이 '나쁜 나무'가 아니라 <strong>뿌리 자체가 없는 것</strong>이라는 점이 핵심이다—악인의 문제는 열매의 질이 아니라 <em>실체 없음</em>이다. 5절의 "서지 못하며"는 1절의 "서지 아니하며"와 같은 동사로 이어진다: 죄인의 길에 <em>서기를</em> 택한 자는 심판 때 <em>설</em> 자리를 잃는다.</p>
+</div>
+<div class="vs">
+<span class="ref">6절 — 두 길의 매듭</span>
+<p>"무릇 의인들의 길은 여호와께서 <span class="hw">יָדַע</span>(야다)하시나 악인들의 길은 망하리로다." '야다'는 정보로 안다가 아니라 <strong>인정하고 돌보며 관계 맺어 아신다</strong>는 뜻이다(창 18:19; 암 3:2). 두 길의 차이는 결국 길 자체의 우열이 아니라 <em>여호와께서 아시는가</em>에 있다. <span class="c cc">C</span>가 지적하듯 이 시의 지혜는 본질적으로 <strong>현세의 삶</strong>과 관련되며, 내세 교리를 명시하지는 않는다.</p>
+</div>
+<p><strong>신학적 해석.</strong> "여호와를 경외하는 것이 지혜의 근본"(잠 1:7)이라는 원리를 <em>일상의 행실</em>로 풀어낸 시다 <span class="c cc">C</span>. 의인은 완전한 사람이 아니라 <strong>경외가 매일의 삶에 영향을 미치는 사람</strong>이다. 그가 악을 피하고 토라에서 사는 법을 배우는 것—거기에 그의 지혜가 있다. 시편의 문에 이 시가 놓임으로써 뒤따르는 149편 전체가 '묵상해야 할 토라'로 규정된다. 시편은 우리가 하나님께 드리는 말이면서 동시에 <strong>하나님이 우리에게 주시는 가르침</strong>이 된다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 두 길은 지형이 아니라 <em>그 길을 걷는 사람의 성품</em>으로 구별된다. 나무 심상만으로는 부족하고 시내 심상을 함께 붙들어야 한다—우리를 나무와 동일시하되 그 물을 하나님의 토라와 동일시해야 한다. 나무가 뿌리로 조용히, 보이지 않게, 끊임없이 생명을 공급받듯.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 1편은 <em>레위인 문지기</em>처럼 서서 악인에게 더 들어오지 말라 경고한다. 시편이라는 문학적 성소는 물리적 성소가 그러하듯 의인만이 누릴 수 있는 친밀함을 전제하기 때문이다. 신약 독자는 예수를 예외 없는 유일한 의인으로 알아본다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>예수의 좁은 문과 두 길 교훈(마 7:13–14; 눅 13:24)이 이 시의 원리를 <strong>종말론적 차원</strong>으로 확장한다 <span class="c cc">C</span>. 시편 1편이 현세의 두 길을 말한다면, 예수는 그 길이 생명과 멸망이라는 궁극적 목적지로 이어짐을 밝히신다. 더 깊은 차원이 있다. 이 시가 그리는 사람—토라를 온전히 즐거워하고 철따라 열매 맺으며 잎이 마르지 않는 사람—을 우리는 실제로 살아내지 못한다. 성경이 이 초상에 완전히 부합하는 한 사람을 증언한다면 그분은 그리스도시다. 그분의 양식은 아버지의 뜻을 행하는 것이었고(요 4:34), 광야에서 기록된 말씀으로 서셨다(마 4:4). 그러므로 복음적 독법은 두 겹이다. <strong>본받음</strong>—우리도 말씀에 뿌리내리라. 그리고 그보다 먼저 <strong>연합</strong>—우리는 스스로 시냇가에 자란 나무가 아니라 <em>옮겨 심긴</em>(3절 '샤툴') 나무이며, 참포도나무에 붙어 있어야 열매를 맺는다(요 15:5). 1편의 복은 성취해야 할 조건이기 전에 그리스도 안에서 받는 선물이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>여호수아 1:8</strong>—"주야로 묵상하여"의 직접적 원천. 여호수아에게 주어진 지도자의 규범이 여기서 <em>모든 신자</em>의 규범이 된다. <strong>예레미야 17:5–8</strong>—물가에 심긴 나무와 사막의 떨기나무 대조; 예레미야는 '사람을 믿는 자'와 '여호와를 의지하는 자'로 두 길을 규정한다. <strong>잠언 2:12–15, 20–22</strong>—악인의 길과 선한 자의 길. <strong>시편 92:12–14</strong>—"의인은 종려나무 같이 번성하며 … 늙어도 여전히 결실하며". <strong>시편 145:20</strong>—"악인들은 다 멸하시리로다"로 1:6과 수미상관을 이루어 시편 전체를 감싼다. <strong>마태 7:13–14</strong>, <strong>요한 15:1–8</strong>, <strong>요한계시록 22:2</strong>(생명나무의 잎사귀가 만국을 치료).</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="2" id="ps2">
+<h3><span class="chip-num">2편</span> 왕들의 왕 — 대관식의 노래</h3>
+<p class="lead">열방은 소요하나 하늘 보좌는 웃으신다. "너는 내 아들이라."</p>
+<p><strong>배경과 상황.</strong> 표제가 없고 1편과 함께 서론을 이룬다. 두 시는 '하가'(1:2 묵상하다 / 2:1 꾸미다), '길'(1:1, 6; 2:12), '복 있는'(1:1; 2:12)의 표제어로 묶이며, 사도행전 13:33의 한 사본 이문은 이 시를 "첫째 시"로 부른다. 장르는 <strong>제왕시, 그중에서도 대관식 시</strong>다 <span class="c cc">C</span>. 대관식은 왕관 수여, 증서(문서)의 정식 전달, 기름 부음과 선포로 이루어졌고(왕하 11:12), 나단의 신탁(삼하 7:8–16)과의 병행이 다윗 왕조 대관식과의 연관을 확증한다. 고대 근동에서 왕의 교체기는 봉신국들의 반란 적기였으므로 1–3절의 소요는 실제 정치 현실을 반영한다.</p>
+<p><strong>구조.</strong> 길이가 엇비슷한 <strong>네 장면의 드라마</strong> <span class="c cc">C</span>: (1) 열방과 통치자들의 반역 선언(1–3절), (2) 하늘 보좌의 조소와 왕 세우심의 선포(4–6절), (3) 왕이 낭독하는 여호와의 칙령(7–9절), (4) 열방을 향한 경고와 권고(10–12절). 예전적으로는 회중·제사장(1–6절), 왕(7–9절), 회중·제사장(10–12절)의 교창이었을 가능성이 있다.</p>
+<div class="vs">
+<span class="ref">1–3절 — 무대 아래: 열방의 소요</span>
+<p>"어찌하여 이방 나라들이 분노하며 민족들이 헛된 일을 꾸미는가." '꾸미다'가 1:2의 '묵상하다'와 같은 어근 <span class="hw">הָגָה</span>(하가)다—<strong>같은 동사가 정반대로 쓰인다.</strong> 의인은 토라를 읊조리고, 열방은 반역을 읊조린다. 무엇을 되뇌는가가 그 사람이 누구인지를 결정한다. 3절의 "그들의 맨 것을 끊고 그의 결박을 벗어 버리자"는 봉신 조약의 멍에를 벗겠다는 선언이다. 주목할 것은 그 반역이 <em>여호와와 그 기름 부음 받은 자</em>를 함께 겨눈다는 점이다(2절)—지상의 왕에 대한 반역은 곧 하늘의 왕에 대한 반역이다.</p>
+</div>
+<div class="vs">
+<span class="ref">4–6절 — 무대 위: 하늘의 웃음</span>
+<p>"하늘에 계신 이가 웃으심이여." 성경에서 하나님의 웃음은 유쾌함이 아니라 <strong>위협의 무력함에 대한 판정</strong>이다. 대조가 극적이다—땅에서는 왕들이 총궐기하는데, 하늘에서는 앉아 계신 분이 웃으신다. 그리고 그 응답은 군대 파병이 아니라 <strong>한 문장의 선언</strong>이다: "내가 나의 왕을 내 거룩한 산 시온에 세웠다"(6절). 하나님의 대응은 반역의 규모에 비례하지 않는다. 이미 하신 일을 알리는 것으로 충분하다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–9절 — 칙령의 낭독: "너는 내 아들이라"</span>
+<p>왕이 즉위식에서 받은 증서를 읽는다. "여호와께서 내게 이르시되 너는 내 아들이라 오늘 내가 너를 낳았도다." 이는 생물학적 출생이 아니라 <strong>즉위일의 입양 선언</strong>이며, 나단 신탁의 "나는 그에게 아버지가 되고 그는 내게 아들이 되리니"(삼하 7:14)의 예전적 실행이다. 8절의 "내게 구하라 내가 이방 나라를 네 유업으로 주리니"는 <em>구함</em>을 전제한다—세계 통치조차 왕이 쟁취하는 것이 아니라 아버지께 구하여 받는 것이다. 9절의 철장과 질그릇 깨뜨림은 애굽의 저주 의식(원수 이름을 적은 토기를 깨는 의례)을 배경으로 하는 왕권의 상징 언어다. <span class="c cc">C</span>가 짚듯 다윗 왕들에게 <strong>세계 통치는 언제나 현실이 아닌 이상</strong>이었다.</p>
+</div>
+<div class="vs">
+<span class="ref">10–12절 — 무대 밖: 열방을 향한 권고</span>
+<p>드라마는 심판 선고가 아니라 <strong>초청</strong>으로 끝난다. "그런즉 군왕들아 지혜를 얻으며 … 여호와를 경외함으로 섬기고 떨며 즐거워할지어다." 12절 "그의 아들에게 입맞추라"는 히브리 본문이 난해하기로 유명해(<span class="hw">נַשְּׁקוּ־בַר</span> 나쉬쿠-바르) 여러 수정 제안이 있으나, 문맥상 <strong>복종의 예를 갖추라</strong>는 뜻으로 읽는 것이 자연스럽다. 마지막 행—"여호와께 피하는 모든 사람은 다 복이 있도다"—이 결정적이다. 1편의 첫 단어 '아쉬레'가 여기서 되울리며 서론을 닫고, 크리치가 본 대로 시편 전체를 <strong>'피난처 찾기'의 책</strong>으로 선포한다.</p>
+</div>
+<p><strong>신학적 해석.</strong> 이 시의 열쇠는 <strong>하나님 나라의 이중 왕권</strong>이다 <span class="c cc">C</span>. 왕정 시대에 하나님 나라는 이스라엘(후에는 유다) 국가와 동일시되었다. 그 국가에는 인간 왕이 있었으나 궁극적 왕은 하나님이셨다—신정 국가였다. 보좌에 앉으신 이가 우주의 왕이시고 그 지상 대리자가 '아들'인 다윗 왕이다. 그러나 587/6년 유다의 멸망과 함께 다윗 왕조가 끊기자, 한 번도 실현된 적 없던 세계 통치의 이상은 불가능한 꿈처럼 보였다. 이 위기가 유대교 내부의 근본적 재사유를 낳았다—새 언약(렘 31:31–34)은 새 왕권을 함축했고, 본래 현직 왕에게만 붙던 '기름 부음 받은 자(<span class="hw">מָשִׁיחַ</span> 마쉬아흐)'라는 칭호가 <strong>종말론적·메시아적 울림</strong>을 얻었다(단 9:25 참조). 왕조의 종말이 이상을 폐기한 것이 아니라 <em>대망으로 바꾸어 놓은 것</em>이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 1편과 2편은 둘 다 다윗 표제가 없고, 하가(읊조리다)·데레크(길)·아쉬레(복이 있도다)라는 열쇠말로 묶여 수미상관을 이룬다. 왕정이 실패한 이유 하나는 왕들이 자신을 재야 할 이상에 끝내 이르지 못한 것이었다. 하나님으로부터의 독립은 자유가 아니라 속박이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 즉위 예식의 노래로 기능했을 것이며, 기름 부음은 그 직무를 위한 <em>신적 권위와 능력 부여</em>를 상징했다. 다만 사무엘서와 열왕기의 증언은 이 시가 기대한 경건하고 유능한 왕이 역사 속에서 드물게만 나타났음을 보여준다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>시편 2편은 신약이 가장 많이 인용·암시하는 시편의 하나이며, 초기 기독교에서 <strong>메시아 시의 정수</strong>였다. 예수께서 사역을 시작하실 때 그 중심 주제가 하나님 나라였고(막 1:14–15), 복음서 기자들이 보기에 예수는 그 나라의 왕이셨다. 그래서 2:2의 '기름 부음 받은 자'가 그분의 이름(그리스도)이 되고, 2:7의 '내 아들'이 그분의 신분이 된다 <span class="c cc">C</span>. 다윗 왕의 대관식이 하루에 끝났다면 <strong>예수의 대관식은 사역 전체에 걸쳐 진행된다</strong>—세례(마 3:17), 변화산(마 17:5), 그리고 무엇보다 부활(행 13:33; 롬 1:4)에서 "너는 내 아들"이 선포된다.</p>
+<p>그러나 결정적 차이가 있다. 옛 대관식에서 열방의 반역은 <em>철장으로</em> 진압될 것이었고 시는 폭력의 공기를 내쉰다(2:9). 초대교회는 그 반역을 헤롯과 빌라도와 이방인과 이스라엘의 공모로 해석했는데(행 4:24–28), <strong>그 폭력은 더 큰 폭력으로 맞받아쳐지지 않고 예수의 죽음 안에서 받아들여졌다</strong> <span class="c cc">C</span>. 새 나라는 폭력을 <em>가함</em>이 아니라 <em>당함</em>으로 세워졌고, 대관식의 절정은 죽음을 이기신 부활이었다. 이것이 그분을 한낱 지상의 왕과 구별하며 천사보다 뛰어나게 한다(히 1:5; 5:5). 그리고 다윗 왕의 세계 통치가 이상이었듯 그리스도의 통치도 아직 눈에 보이지 않는다—세상은 여전히 소요하는 열방과 반역하는 통치자로 가득하다. 그래서 요한계시록이 이 시의 언어로 <strong>왕으로 나신 이의 최종 승리</strong>를 앞당겨 노래한다(계 2:26–27; 12:5; 19:15) <span class="c cc">C</span>. 2편은 이미 이루어진 즉위와 아직 오지 않은 완성 사이에 우리를 세운다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘하 7:8–16</strong>(나단 신탁)—"아버지와 아들"의 언약적 원천. <strong>열왕기하 11:12</strong>—대관식 절차(왕관과 증서). <strong>시편 89편</strong>—같은 언약이 위기에 처하는 자리(제3권 결말). <strong>시편 110편</strong>—같은 대관식 신학의 짝. <strong>다니엘 9:25</strong>—'기름 부음 받은 자'의 종말론적 용례. <strong>신약</strong>: 마 3:17; 17:5(하늘 음성) · 행 4:25–26(박해받는 교회의 기도) · 행 13:33(부활) · 롬 1:4 · 히 1:5; 5:5 · 계 2:26–27; 12:5; 19:15.</p>
+</div>
+</div>
+<hr class="wall"/>
+<h3 id="g-a">첫째 묶음 — 3–14편: 탄원의 학교 (중심축 8편)</h3>
+<div class="chap" data-psalm-context="3" id="ps3">
+<h3><span class="chip-num">3편</span> 아침의 기도 — 사면초가에서 잠들고 깨어나다</h3>
+<p class="lead">"많은 자들"과 한 분. 잠들 수 있었다는 사실 자체가 이미 응답이다.</p>
+<p><strong>배경과 상황.</strong> 시편 최초의 표제이자 최초의 <strong>역사적 표제</strong>다—"다윗이 그의 아들 압살롬을 피할 때에 지은 시"(삼하 15–18장). 첫 '미즈모르(시)'이기도 하다. 장르는 개인 탄원시이나, 모빙켈의 정밀한 구분으로는 이미 벌어진 재난을 애도하는 탄식이 아니라 <strong>현재적·임박한 위험 앞의 보호시</strong>다. <span class="c cc">C</span>는 본문 전체에 군사 용어가 깔려 있음을 지적한다: 대적·원수, 구원(=승리), 방패, '백성'(=군대), 진 치다(배치되다), "여호와여 일어나소서"(궤의 출정 함성, 민 10:35), "구원은 여호와께 있사오니"(전투 함성). 본래 <strong>왕의 보호시</strong>—출정 전 예식의 기도—였을 가능성이 크며, 이는 압살롬 표제와도 잘 어울린다. 시편에 편입되면서 이스라엘의 <em>아침 기도</em>로 일반화되었고, 편집자는 이 시를 저녁 기도인 4편 곁에 나란히 두었다 <span class="c cc">C</span>.</p>
+<p><strong>구조.</strong> (1) 탄원(1–2절), (2) 신뢰의 고백(3–4절), (3) 잠과 깨어남의 간증(5–6절), (4) 간구와 축복(7–8절). <span class="hw">רַב</span>(랍, 많다)이 1–2절에 세 번, 6절에 다시 나와 수적 열세의 압박을 각인시킨다.</p>
+<div class="vs">
+<span class="ref">1–2절 — "많은 자들"의 공세</span>
+<p>"여호와여 나의 대적이 어찌 그리 많은지요 … 많은 사람이 나를 대적하여 말하기를 그는 하나님께 구원을 받지 못한다 하나이다." 공격은 무기가 아니라 <strong>말</strong>로 시작된다. 그리고 그 말의 표적은 시인의 몸이 아니라 그의 <em>하나님</em>이다—"그에게는 구원이 없다." 탄원시에서 원수의 조롱이 늘 신학적 형태를 띠는 이유가 여기 있다. 고통보다 견디기 어려운 것은 고통이 하나님의 부재를 증명한다는 해석이다.</p>
+</div>
+<div class="vs">
+<span class="ref">3–4절 — 세 겹의 신뢰 고백</span>
+<p>"여호와여 주는 나의 방패시요 나의 영광이시요 나의 머리를 드시는 자이시니이다." 세 은유가 정확히 세 가지 결핍에 대응한다—공격 앞의 <strong>방패</strong>, 수치 앞의 <strong>영광</strong>, 낙심 앞의 <strong>머리를 드심</strong>. 4절 "내가 나의 목소리로 여호와께 부르짖으니 그의 성산에서 응답하시는도다"는 완료형으로, 아직 상황이 바뀌기 전에 이미 응답을 <em>과거로</em> 말하는 믿음의 문법이다.</p>
+</div>
+<div class="vs">
+<span class="ref">5–6절 — 잠, 그리고 두려워하지 않음</span>
+<p>"내가 누워 자고 깨었으니 여호와께서 나를 붙드심이로다." 이 시의 심장이다. 쫓기는 자에게 잠은 가장 취약한 시간인데, 시인은 그 밤을 통과했다. 그리고 그 사실 하나를 <strong>하나님이 붙드셨다는 증거</strong>로 읽는다. 6절 "천만인이 나를 에워싸 진 친다 하여도 나는 두려워하지 아니하리이다"—숫자는 그대로다. 바뀐 것은 그 숫자를 세는 사람의 위치다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–8절 — 일어나소서, 그리고 축복</span>
+<p>"여호와여 일어나소서"는 언약궤가 진영을 떠날 때 외치던 모세의 함성이다(민 10:35). "주께서 나의 모든 원수의 뺨을 치시며 악인의 이를 꺾으셨나이다"는 거칠지만, <span class="c cc">C</span>가 지적하듯 이는 원수 자체가 아니라 <strong>그들이 말하고 행하는 악</strong>을 겨눈 기도로 변형되어 사용되었다. 마지막 행이 시선을 완전히 돌린다—"구원은 여호와께 있사오니 주의 복을 주의 백성에게 내리소서." 개인의 기도가 <strong>공동체의 축복 기원</strong>으로 끝난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cd">D</span>의 제목처럼 이 시는 <strong>'많은 자들' 대 '한 분'</strong>의 대결이다. 시는 숫자를 부정하지 않는다—원수는 실제로 많다. 다만 그 많음을 세는 자리를 옮긴다. <span class="c cc">C</span>의 아침 기도 해설이 이 시의 백미다: 근심 있는 사람에게 하루의 첫 의식은 사방의 문제로 가득할 수 있다. 이 시는 그 의식을 <em>문제에서 하나님께로</em> 옮기도록 요구한다. 어떤 잠 뒤에도 감사와 신뢰의 이유가 있다—무의식의 시간이 끝나고 생명이 재개된 것은 오직 하나님이 끊임없이 지탱하시는 분이기 때문이다. 그리고 같은 지탱자가 오늘의 승리도 주실 수 있다. "자연스러운 불안에서 신뢰와 감사를 거쳐 하나님의 구원을 구하는 기도로"—<strong>이것이 매일 아침 반복되어야 할 영적 행로</strong>다 <span class="c cc">C</span>.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 3–41편은 다윗 시가 지배하며 도움을 구하는 기도의 밀도가 매우 높다—<strong>제1권은 찬양의 책이라기보다 도움을 구하는 기도의 책</strong>이다. 이 시는 땅의 신뢰 근거가 모두 녹아버린 자리에서 쓰였고, 그래서 하늘의 토대 위에 소망을 쌓는다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 표제의 목적은 사건을 기념하는 것이 아니라 <em>비슷한 처지에 놓인 이들에게 모범을 제공하는 것</em>이다. 리어든의 지적대로 이 싸움은 1편이 연 도덕적 싸움과 2편이 연 신학적 싸움을 이어받는다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>신약에서 전쟁의 언어는 일관되게 <strong>영적 싸움의 언어로 변형</strong>된다. <span class="c cc">C</span>가 강조하듯 이 변형은 신약의 발명이 아니다—이미 이 시가 시편에 편입될 때 왕의 출정 기도가 모든 예배자의 기도로 바뀌면서 시작되었다. "방패"는 믿음의 방패가 되고(엡 6:16), "일어나소서"는 부활의 언어와 만난다. 특히 5절이 그렇다. 초대교회 이래 "내가 누워 자고 깨었으니"는 <strong>죽음과 부활의 예표</strong>로 읽혀 왔다. 그리스도께서는 폭풍 속 배에서 주무셨고(막 4:38), 무덤에서 잠드셨으며, 아버지께서 그분을 붙드셔서 일으키셨다. 그러므로 이 시를 기도하는 신자는 자기 힘으로 밤을 견딘 자가 아니라, <em>이미 죽음의 밤을 통과해 깨어나신 분</em>께 붙들려 잠드는 자다. 마지막 절이 개인에서 "주의 백성"으로 넓어지는 것도 복음적이다—그리스도의 승리는 결코 사유물이 아니다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘하 15–18장</strong>(압살롬의 반역)—표제가 지시하는 서사; 특히 삼하 16:8에서 시므이가 "그에게는 구원이 없다"는 취지의 저주를 퍼붓는 장면이 2절과 겹친다. <strong>민수기 10:35</strong>—"여호와여 일어나사". <strong>시편 4편</strong>—짝을 이루는 저녁 기도('눕다·자다'의 표제어 연결). <strong>시편 23:4</strong>—두려워하지 않음의 같은 논리("주께서 나와 함께 하심이라"). <strong>에베소서 6:16</strong>—믿음의 방패. <strong>마가복음 4:38</strong>—폭풍 속에서 주무시는 예수.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="4" id="ps4">
+<h3><span class="chip-num">4편</span> 저녁의 기도 — 평안히 눕는 믿음</h3>
+<p class="lead">상황은 그대로인데 잠들 수 있다. 기도가 바꾸는 것은 바깥이 아니라 속사람이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 현악에 맞춘 노래"—<strong>'인도자를 따라(라므낫세아흐)'가 처음 등장</strong>한다(시편 전체 55회). 전통적으로 개인 탄원시로 분류되나 <span class="c cc">C</span>는 더 정밀하게 <strong>신뢰시</strong>로 본다—무고한 예배자가 탄식의 근거들을 딛고 확신으로 올라서는 시다. <span class="c cd">D</span>는 거짓 비방에 눌린 자의 기도로 보는 다수 견해와, 공동체에게 헛된 것을 버리라 권하는 예전적·교훈적 시로 보는 견해를 함께 소개한다. <span class="c cc">C</span>가 강조하듯 <strong>대적과 고발의 정체가 특정되지 않는 것이 이 시의 '천재성'</strong>이다—시인이 겪은 위기는 그만의 것이었겠지만 그 원리와 경험은 만인에게 공통되기에, 누구든 자기 상황으로 이 시를 기도할 수 있다. 8절 때문에 저녁 기도가 되어 아침 기도(3편) 곁에 놓였다.</p>
+<p><strong>구조.</strong> (1) 하나님을 향한 부름(1절), (2) 사람들을 향한 권고(2–5절), (3) '많은 사람'의 결핍과 마음의 기쁨(6–7절), (4) 평안한 잠(8절). 부르다/듣다/마음/눕다/의/많다의 단어쌍이 시 전체를 촘촘히 엮는다.</p>
+<div class="vs">
+<span class="ref">1절 — 좁은 데서 넓은 데로</span>
+<p>"내 의의 하나님이여 … 곤란 중에 나를 너그럽게 하셨사오니." 히브리어의 심상이 공간적이다—<strong>좁음(</strong><span class="hw">צַר</span><strong> 차르)에서 넓힘(</strong><span class="hw">רָחַב</span><strong> 라하브)으로.</strong> 압박은 조여드는 것이고 구원은 숨 쉴 자리가 생기는 것이다. 그리고 그 근거를 시인은 <em>과거 경험</em>에 둔다: 전에 넓혀 주셨으니 이번에도 들으소서.</p>
+</div>
+<div class="vs">
+<span class="ref">2–5절 — 사람들을 향해 돌아서다</span>
+<p>기도 중에 시인이 갑자기 사람들에게 말을 건다. "인생들아 어느 때까지 나의 영광을 바꾸어 욕되게 하며 헛된 일을 좋아하고 거짓을 구하려는가." 명예 훼손이 문제의 핵심이다. 3절에서 그는 신학으로 응수한다—"여호와께서 자기를 위하여 경건한 자를 택하신 줄 너희가 알지어다." 사람의 평판이 아니라 <strong>하나님의 택하심</strong>이 그의 신원이다. 4절 "너희는 떨며 범죄하지 말지어다 자리에 누워 심중에 말하고 잠잠할지어다"는 칠십인역을 통해 바울에게 전해져 <strong>"분을 내어도 죄를 짓지 말며"</strong>(엡 4:26)가 되었다. 분노를 부정하지 않되 그것을 밤새 키우지 말고 침상에서 잠잠히 하나님께 맡기라는 지혜다. 5절 "의의 제사를 드리고 여호와를 의지할지어다"가 그 처방을 예배로 완성한다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–7절 — 두 종류의 기쁨</span>
+<p>"여러 사람의 말이 우리에게 선을 보일 자 누구뇨 하오니 여호와여 주의 얼굴을 들어 우리에게 비추소서." 앞부분은 시대의 냉소이고, 뒷부분은 <strong>아론의 축복</strong>(민 6:25 "여호와는 그의 얼굴을 네게 비추사")의 인용이다. 시인은 냉소에 논증으로 답하지 않고 축복문으로 답한다. 7절이 결론이다—"주께서 내 마음에 두신 기쁨은 그들의 곡식과 새 포도주가 풍성할 때보다 더하니이다." 추수의 기쁨은 <em>가진 것</em>에서 오고 시인의 기쁨은 <em>주신 분</em>에게서 온다.</p>
+</div>
+<div class="vs">
+<span class="ref">8절 — 평안히 눕다</span>
+<p>"내가 평안히 눕고 자기도 하리니 나를 안전히 살게 하시는 이는 오직 여호와이시니이다." '오직'이 문장의 무게를 진다. 고발은 멈추지 않았고 비방자도 그대로다. 그런데 시인은 잠든다. <strong>기도의 결과로 바뀐 것은 외부 상황이 아니라 예배자의 내면</strong>이다 <span class="c cc">C</span>.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 해설이 이 시의 신학을 정확히 짚는다. 이 시는 참회시가 아니다—지은 죄를 자각한 데서 나온 기도가 아니라 <strong>무죄한 자가 겪는 압제와 불의</strong>를 다룬다. 전도서가 냉정하게 관찰한 대로 압제는 인간 경험의 가장 보편적 요소이며, 압제자에게는 힘이 있고 눌린 자에게는 위로할 이가 없다(전 4:1–3). 더욱이 불의의 경험은 사람을 하나님에게서 <em>멀어지게</em> 만들 수 있다—세상이 공의롭다면 이런 일이 왜 있는가. 시편 4편은 이 문제에 <strong>이론적 해답이 아니라 일종의 치료</strong>를 제시한다: 기도. 고발은 마음에 박힌 가시처럼 계속 찌르지만, 기도는 그 고발을 안고도 견딜 수 있는 <em>더 큰 평온</em>을 하나님에게서 받게 한다. 여기에 <span class="c cc">C</span>는 날카로운 자기 성찰을 덧붙인다—이 시는 눌린 자의 경험을 반영하지만 그 고통은 <strong>다른 인간의 말과 행동</strong>에서 비롯되었다. 우리는 눌리는 데는 예민하나 자신이 누르는 데는 둔감하다. 압제에서 벗어나기를 구하기 전에 자기 삶 속의 압제를 살피는 것이 마땅하다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 명예는 인간됨의 일부이며 <strong>거짓 증언은 이웃을 비인간화한다</strong>. 현대 서구 문화는 사회적 명예의 값과 수치의 대가를 과소평가하는 경향이 있다. 에베소서 4:15의 사랑 안에서 진리를 말함이 그 성숙한 믿음이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — <em>저녁 기도</em>로 알려진 시다. 다윗 표제를 달았으나 공적 사용을 위해 지어졌다. 예루살렘에서의 재판을 앞두고 겟세마네에서 아버지의 뜻에 복종하며 8절이 말한 평안을 경험하신 예수가 이 태도의 실례다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>바울이 4절을 인용해 교회의 분노 윤리로 삼은 것(엡 4:26–27)은 이 시의 복음적 수용의 첫 사례다. 더 깊은 울림은 7–8절에 있다. "곡식과 새 포도주보다 더한 기쁨"과 "평안히 눕고 자기도 하리니"는 신약에서 <strong>모든 지각에 뛰어난 평강</strong>(빌 4:6–7)으로 다시 나타난다—바울 역시 "아무것도 염려하지 말고 다만 모든 일에 기도와 간구로" 아뢰라 한 뒤, 상황의 변화가 아니라 <em>마음과 생각을 지키시는 평강</em>을 약속한다. 정확히 시편 4편의 논리다. 그리고 이 시가 그리는 사람—고발이 쏟아지는 밤에 하나님만 의지하여 잠드는 사람—을 완전히 사신 분이 그리스도시다. 그분은 거짓 증언 앞에서 잠잠하셨고(마 26:63), 십자가에서 "내 영혼을 아버지 손에 부탁하나이다"(눅 23:46, 시 31:5)라며 마지막 잠에 드셨다. 신자가 이 시를 기도할 때 그는 홀로 용기를 내는 것이 아니라, <strong>먼저 그렇게 누우신 분</strong> 곁에 눕는 것이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>민수기 6:24–26</strong>(아론의 축복)—6절의 "주의 얼굴을 들어 비추소서"; 시 67:1과 80:3·7·19에서도 되풀이된다. <strong>전도서 4:1–3</strong>—압제의 보편성. <strong>시편 3편</strong>—짝을 이루는 아침 기도. <strong>시편 127:2</strong>—"그가 사랑하시는 자에게는 잠을 주시는도다". <strong>에베소서 4:26–27</strong>—4절의 직접 인용. <strong>빌립보서 4:6–7</strong>—기도가 주는 평강. <strong>마가복음 4:38–39</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="5" id="ps5">
+<h3><span class="chip-num">5편</span> 아침 성전의 기도 — 하나님과 악인 사이에서</h3>
+<p class="lead">악인의 정체는 '혀'다. 그러므로 이 기도는 악인에게서의 보호이자 악인처럼 되는 것에서의 보호다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 관악(<span class="hw">נְחִילוֹת</span> 느힐롯)에 맞춘 노래"—피리류로 추정된다. 전통적으로 개인 탄원시이며, 궁켈의 세분류로는 <strong>무죄 주장의 시</strong>, 모빙켈과 <span class="c cc">C</span>의 판단으로는 실질상 <strong>보호시(신뢰시)</strong>다. <span class="c cd">D</span>는 거짓 고발당한 자가 성전의 재판 의식에서 무죄 판결을 구하는 기도로 보는 견해(크라우스)를 소개한다. 3절("아침에 내가 주께 기도하고 바라리이다")과 7절("주의 집에 들어가 … 성전을 향하여 예배하리이다")은 <strong>성전 아침 예배</strong>—혹은 아침 제사와 신탁을 기다리는 자리—를 시사한다. 3절의 '바라다'로 옮긴 <span class="hw">עָרַךְ</span>(아라크)는 본래 제물을 <em>벌여 놓다</em>는 제사 용어여서, 기도를 아침 제물처럼 차려 놓고 응답을 기다리는 심상을 만든다.</p>
+<p><strong>구조.</strong> 기도와 악인 묘사가 교대하는 5부 구성. (1) 들으소서—왕이시며 하나님이신 이를 향한 아침의 부르짖음(1–3절), (2) 악인은 하나님 앞에 설 수 없음(4–6절), (3) 인자하심을 힘입은 예배와 인도의 간구(7–8절), (4) 악인의 혀에 대한 고발(9–10절), (5) 피하는 자들의 기쁨과 방패 같은 은총(11–12절).</p>
+<div class="vs">
+<span class="ref">1–3절 — 아침에 차려 놓는 기도</span>
+<p>"나의 말에 귀를 기울이사 나의 심정을 헤아려 주소서." '심정'으로 옮긴 <span class="hw">הָגִיג</span>(하기그)는 1:2의 '하가'와 같은 어근으로, <strong>소리 없이 읊조리는 속엣말</strong>이다. 시인은 정연한 문장만이 아니라 <em>말이 되지 못한 신음</em>까지 들어 달라고 청한다. "나의 왕, 나의 하나님이여"라는 호칭은 이 기도가 신하가 왕께 올리는 탄원의 형식임을 드러낸다.</p>
+</div>
+<div class="vs">
+<span class="ref">4–6절 — 하나님의 성품에 근거한 논증</span>
+<p>"주는 죄악을 기뻐하는 신이 아니시니 악이 주와 함께 머물지 못하며." 시인은 자기의 억울함을 호소하기 전에 <strong>하나님이 어떤 분이신가</strong>에서 출발한다. 오만한 자, 거짓말하는 자, 피 흘리기를 즐기는 자, 속이는 자—이 목록이 뒤의 9절과 짝을 이룬다. 탄원의 근거는 감정이 아니라 <em>하나님의 성품과 그 성품에 어긋나는 현실 사이의 불일치</em>다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–8절 — 인자하심을 힘입어, 그리고 인도해 주소서</span>
+<p>"오직 나는 주의 풍성한 <span class="hw">חֶסֶד</span>(헤세드, 인자)를 의지하여 주의 집에 들어가리이다." 결정적 전환이다. 앞서 악인은 하나님 앞에 설 수 없다고 했는데, 그렇다면 시인은 어떻게 서는가? <strong>자기 무죄가 아니라 하나님의 헤세드로</strong>다. 8절 "주의 의로 나를 인도하시고 주의 길을 내 목전에 곧게 하소서"—원수 때문에 길이 굽어 보일 때 필요한 것은 원수의 제거가 아니라 <em>곧은 길의 분별</em>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">9–10절 — 열린 무덤 같은 목구멍</span>
+<p>"그들의 입에 신실함이 없고 그들의 심중이 심히 악하며 그들의 목구멍은 열린 무덤 같고 그들의 혀로는 아첨하나이다." 악인의 초상이 <strong>전적으로 말</strong>로 그려진다—거짓, 아첨, 그리고 삼키는 무덤. 고대 이스라엘은 행위의 폭력만 있는 원시 사회가 아니라, 오늘 우리처럼 <strong>말의 죄가 정교하게 넘치던 사회</strong>였다 <span class="c cc">C</span>. 바울은 바로 이 구절을 인간 죄성의 목록에 편입시킨다(롬 3:13).</p>
+</div>
+<div class="vs">
+<span class="ref">11–12절 — 피하는 자의 기쁨</span>
+<p>"주께 피하는 모든 사람은 다 기뻐하며 … 주는 방패로 함 같이 은혜로 그를 호위하시리이다." 2:12의 '피하다'가 되울린다. 마지막 단어 '방패'는 <span class="hw">צִנָּה</span>(친나)로, 3:3의 작은 방패가 아니라 <strong>온몸을 가리는 대형 방패</strong>다. 은혜가 부분이 아니라 전면적 엄호로 그려진다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 분석대로 이 시는 기도 생활의 <strong>양극과 긴장</strong>을 선명히 보여 준다—한쪽에 하나님, 다른 쪽에 악한 사람들이 있고 시인의 생각이 두 극 사이를 오간다. 들어 달라 구하다가 악인은 하나님 앞에 설 수 없음을 떠올리고, 다시 하나님께 돌아가 예배와 인도를 구하다가 또 혀의 악을 상기하며, 마침내 확신으로 마친다. 이 왕복 운동 자체가 실제 기도의 모습이다. 그리고 결론이 중요하다—<strong>이 기도는 악인'으로부터'의 보호만이 아니라 악인'처럼 되는 것으로부터'의 보호를 구한다</strong> <span class="c cc">C</span>. 하나님을 찬양하는 혀가 동시에 자랑하고 아첨하는 혀일 수 없기 때문이다. 그런 의미에서 5편은 <em>자기 혀로부터의 보호를 구하는 기도</em>이자 <strong>하나님 없는 인간의 거울</strong>이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 기도는 악인의 길에서 피할 은신처를 구하는 동시에, <em>우리 발이 스스로 그 길을 걷지 않도록</em> 인도를 구하는 겸손한 요청이다. 하박국·미가와 함께 시인은 하나님 나라의 완성을 기다리되, 그 기다림은 수동적 체념이 아니다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 4편이 저녁 기도라면 5편은 <em>아침 기도</em>다(3절). 하나님의 임재에 나아가는 것은 공로가 아니라 은혜의 결과임을 7절이 밝힌다. 바울은 9절을 로마서 3:13에 인용해 유대인과 이방인이 모두 죄 아래 있음을 논증했다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>바울이 5:9를 로마서 3:13에 인용한 자리가 결정적이다. 그 문맥은 "의인은 없나니 하나도 없으며"(롬 3:10)—곧 <strong>시편의 '악인'이 특정 원수가 아니라 하나님 없는 인류 전체의 초상으로 확장된다.</strong> <span class="c cc">C</span>가 말하듯 시인의 원수들은 하나님 없이, 복음 없이 사는 모든 사람을 상징하며, 그렇다면 그들에게 필요한 것은 심판만이 아니라 <em>복음</em>이다. 그러므로 신약의 빛에서 이 시를 단순한 보호 기도로 제한할 수 없다—이것은 <strong>자기 성찰의 기도이자 용서와 건지심을 구하는 기도</strong>가 된다. 또 하나의 울림이 있다. 악인의 목구멍은 '열린 무덤'이었다. 복음서의 마지막에 또 하나의 열린 무덤이 등장하는데, 그 무덤은 삼키는 무덤이 아니라 <strong>비어 있는 무덤</strong>이다. 말로 사람을 삼키는 세상 한복판에서, 죽음이 사람을 삼키지 못한 자리가 생겼다. 7절 "주의 풍성한 인자를 의지하여 주의 집에 들어가리이다"는 이제 히브리서의 담대함으로 자란다—우리는 자기 의가 아니라 그리스도의 피를 힘입어 성소에 들어간다(히 10:19–22).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 1편</strong>—악인이 심판에 서지 못함(1:5)과 5:5의 병행. <strong>시편 2:12</strong>—"여호와께 피하는 자"의 복이 5:11에서 반복. <strong>로마서 3:10–18</strong>—5:9를 포함한 시편 연쇄 인용(시 14, 5, 140, 10, 36편). <strong>야고보서 3:1–12</strong>—혀의 신학. <strong>히브리서 10:19–22</strong>—피를 힘입어 성소에 들어감. <strong>민수기 28:1–8</strong>—아침 상번제(3절의 배경).</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="6" id="ps6">
+<h3><span class="chip-num">6편</span> 병상의 눈물 — 첫 번째 참회시</h3>
+<p class="lead">"내가 눈물로 침상을 띄우며." 죽음이 생생해질 때 신앙은 무엇을 붙드는가.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 현악 여덟째 줄(<span class="hw">שְׁמִינִית</span> 스미닛)에 맞춘 노래"—낮은 음역 지시로 추정된다. 장르는 개인 탄원시, 정밀하게는 <strong>병자의 시</strong>다. 몸과 영이 함께 무너진다("내 뼈가 떨리오니" 2절, "나의 영혼도 매우 떨리나이다" 3절). 교회 전통은 이 시를 <strong>일곱 참회시</strong>(6, 32, 38, 51, 102, 130, 143편)의 첫 자리에 놓았는데, <span class="c cd">D</span>(나수티)의 지적대로 실은 명시적 죄 고백도 사죄 간구도 없다—근거는 1절의 '주의 진노'에 대한 의식이었다. 8–9절의 급격한 어조 전환은 <strong>제사장의 구원 신탁</strong>을 받은 자리로 설명되곤 한다.</p>
+<p><strong>구조.</strong> (1) 진노 중의 간구(1–3절), (2) 돌이키심의 간구와 죽음의 논거(4–5절), (3) 눈물의 밤(6–7절), (4) 전환—승리 선언과 응답의 확신(8–10절). '은혜를 베푸소서·떨다·돌이키다'가 앞뒤를 묶어 통일성을 지킨다.</p>
+<div class="vs">
+<span class="ref">1–3절 — 진노를 멈춰 달라는 것이 아니라</span>
+<p>"여호와여 주의 분노로 나를 책망하지 마시오며 주의 진노로 나를 징계하지 마옵소서." 시인이 구하는 것은 <em>징계의 철회</em>가 아니라 <strong>진노 아닌 다른 방식의 징계</strong>다. 곧 그는 하나님의 손 아래 있다는 사실 자체를 부정하지 않는다. 3절의 "여호와여 어느 때까지니이까"는 문장이 도중에 끊긴 채 미완으로 남는데, 이 미완성이 오히려 고통의 실감을 전한다.</p>
+</div>
+<div class="vs">
+<span class="ref">4–5절 — 죽음의 논거</span>
+<p>"사망 중에서는 주를 기억하는 일이 없사오니 스올에서 주께 감사할 자 누구리이까." 놀랍도록 대담한 논리다. 시인은 자기 생명의 가치가 아니라 <strong>하나님이 잃으실 찬양</strong>을 근거로 삼는다. 히브리적 이해에서 죽음의 참혹함은 소멸이 아니라 <em>찬양의 중단</em>이다(30:9; 88:10–12; 115:17). 그러므로 살려 달라는 기도는 곧 <strong>찬양할 자리로 돌려 달라</strong>는 기도다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–7절 — 눈물로 띄우는 침상</span>
+<p>"내가 눈물로 나의 침상을 띄우며 내 요를 적시나이다." 과장법이지만 그 과장이 정직하다. 시편은 슬픔의 크기를 줄여 말하지 않는다. 7절 "내 눈이 근심으로 말미암아 쇠하며"—고통이 시력까지 갉아먹는다는 표현은 고대 근동 탄원시의 공통 관용어이면서, 동시에 오래 우는 사람의 실제 경험이다.</p>
+</div>
+<div class="vs">
+<span class="ref">8–10절 — 밤을 건너는 한 문장</span>
+<p>"악을 행하는 너희는 다 나를 떠나라 여호와께서 내 울음 소리를 들으셨도다." 상황 묘사는 없이 문장 하나로 밤이 아침이 된다. '들으셨도다'가 완료형인 것이 핵심이다—병이 나았다는 보고가 아니라 <strong>들으셨다는 확신</strong>이 먼저 온다. 시편의 탄원이 가르치는 순서다: 응답의 증거보다 응답하시는 분에 대한 신뢰가 앞선다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 해설이 이 시의 깊이를 연다. 죽음은 인간 조건의 본질이며, 건강한 사람은 그것을 <em>알면서 잊고</em> 산다. 그러나 병자에게는 그 평정이 무너지고 죽음이 생생해진다. 병상에서 지어진 시들이 깊은 페이소스를 띠는 이유다—산 자의 말이지만 죽음의 그림자가 어른거린다. 여기서 <span class="c cc">C</span>는 현대 독자에게 중요한 경고를 한다. 우리는 부활과 영생의 관점을 가지고 이 시를 읽지만, <strong>그 관점을 너무 성급히 덧씌우면 죽음을 값싸게 이해하게 된다</strong>. 초기 이스라엘에는 명료한 내세 교리가 없었고, 신약 시대에도 부활을 두고 논쟁이 있었다. 시인처럼 <em>이 생명을 온전히 소중히 여긴 뒤에야</em> 그 너머를 바라볼 수 있다. 안이한 믿음은 실제로 병과 죽음이 닥칠 때 무너지기 쉽다. 시인처럼 우리도 고통과 하나님으로부터 단절된 느낌을 통과한 뒤에야 하나님께 온전히 기대는 믿음에 이를지 모른다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — <strong>하나님의 진노는 하나님의 사랑에 필연적으로 따라오는 상관 개념</strong>이다. 진노 없는 사랑은 값싼 감상으로 축소된다. 진노는 영구한 상태가 아니라 이웃을 향한 폭력이 일으키는 것이며, 언제나 관계와 창조 세계의 안녕을 위해 작동한다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 명시적 죄 고백이 없다는 바로 그 점 때문에, 이 시는 겟세마네에서 예수께서 겪으신 감정(마 26:36–46)을 표현하는 것으로 읽을 수 있다. 잔을 옮겨 달라 구하시고 끝내 뜻에 복종하신 그 자리다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p><span class="c cc">C</span>가 짚듯 이 시에 스민 번민과 곤고는 <strong>예수께서 실제로 겪으신 것</strong>이며 그분의 말씀에 영향을 주었다. 4절 "여호와여 돌아와 나의 영혼을 건지시며"의 정서는 요한복음 12:27의 "지금 내 마음이 괴로우니 무슨 말을 하리요 아버지여 나를 구원하여 이 때를 면하게 하여 주옵소서"에서 되울린다. 그러므로 이 시의 페이소스는 <strong>수난의 문맥에서 읽을 때 가장 선명해진다</strong>. 그리스도께서는 스올의 논리를 부정하신 것이 아니라 그 안으로 들어가심으로 그것을 깨뜨리셨다—찬양이 끊기는 자리까지 내려가셔서, 거기서 찬양을 다시 시작하셨다(히 2:12). 또한 8절 "악을 행하는 너희는 다 나를 떠나라"는 예수의 심판 선언(마 7:23 "불법을 행하는 자들아 내게서 떠나가라")의 언어가 되었다. 병상에서 터져 나온 한 사람의 절규가 마지막 날 심판주의 어휘로 자란 셈이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 30:9; 88:10–12; 115:17</strong>—죽은 자는 찬양하지 못한다는 같은 논거. <strong>시편 38편·41편</strong>—제1권의 다른 병상 기도. <strong>이사야 38:9–20</strong>(히스기야의 글)—병상에서 회복된 왕의 시, 5절과 같은 논리("스올이 주께 감사하지 못하며"). <strong>예레미야 10:24</strong>—"진노로 마옵소서"의 병행. <strong>요한복음 12:27</strong>, <strong>마태복음 7:23</strong>, <strong>히브리서 2:12</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="7" id="ps7">
+<h3><span class="chip-num">7편</span> 무고당한 자의 기도 — 하늘 법정에 서다</h3>
+<p class="lead">짓지 않은 죄는 회개할 수도 배상할 수도 없다. 남는 길은 의로우신 재판장뿐이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 <span class="hw">שִׁגָּיוֹן</span>(식가욘), 베냐민인 구시의 말에 따라 여호와께 드린 노래"—'식가욘'은 뜻이 확정되지 않았다(격정적 노래? 합 3:1 참조). 구시 사건은 성경에 전하지 않으나, 다윗이 사울 생전과 사후에 베냐민 지파의 적대를 겪은 것은 잘 기록되어 있다(삼상 24–26장; 삼하 16:5 시므이; 20:1 세바). <span class="c cc">C</span>는 <strong>사건이 알려지지 않았다는 사실 자체가 오히려 표제의 고대성과 진정성을 지지한다</strong>고 본다—후대에 지어낸 표제라면 유명한 사건을 골랐을 것이기 때문이다. 장르는 무고당한 자의 보호 기도이며, 3–5절의 <strong>자기 저주 맹세</strong>가 결정적 표지다. 민수기 5장의 시죄 의식이나 열왕기상 8:31–32의 성전 재판이 배경으로 제안된다.</p>
+<p><strong>구조.</strong> (1) 피난과 구원의 간구(1–2절), (2) 무죄의 맹세(3–5절), (3) 하나님의 법정 소집(6–9절), (4) 의로우신 재판장과 그 무기(10–13절), (5) 악의 자기 파멸(14–16절), (6) 감사의 서원(17절).</p>
+<div class="vs">
+<span class="ref">1–2절 — 사자 앞에서</span>
+<p>"여호와 내 하나님이여 주께 피하오니 … 건져 내지 아니하시면 그들이 사자 같이 나를 찢고 뜯을까 하나이다." 원수가 <strong>사자</strong>로 그려진다. 법정의 언어가 지배할 이 시의 첫 이미지가 맹수라는 점이 의미심장하다—무고는 논리의 문제이기 전에 <em>포식의 경험</em>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">3–5절 — 자기에게 내리는 저주</span>
+<p>"내가 이런 일을 행하였거든 … 원수가 나의 영혼을 쫓아 잡아 나의 생명을 땅에 짓밟게 하소서." 고대의 <strong>결백 맹세</strong> 형식이다. 자기 무죄를 주장하는 가장 강력한 방식은 거짓일 경우 감당할 저주를 스스로 부르는 것이었다. 오늘의 독자에게 낯설지만, 이 형식은 하나님의 심판이 <em>실재한다</em>는 전제 위에서만 성립한다. 진실을 아는 분이 계시다는 확신 없이는 이런 말을 할 수 없다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–9절 — 법정을 열어 주소서</span>
+<p>"여호와여 진노로 일어나사 … 나를 위하여 깨소서 주께서 심판을 명령하셨나이다. 민족들의 모임이 주를 둘러싸게 하시고." 시인은 개인의 억울함을 <strong>만민이 지켜보는 우주적 법정</strong>으로 확대한다. 그리고 9절에서 그 재판장의 자격을 밝힌다—"의로우신 하나님이 사람의 마음과 양심을 감찰하시나이다." 사람의 법정은 증거를 다루지만 하나님의 법정은 <em>마음</em>을 다룬다. 무고당한 자에게 이보다 큰 위로는 없다.</p>
+</div>
+<div class="vs">
+<span class="ref">10–13절 — 방패와 활</span>
+<p>"하나님은 의로우신 재판장이심이여 매일 분노하시는 하나님이시로다." 심판의 무기가 나열되지만(칼, 활, 화살) 그 앞에 조건이 붙는다—"사람이 회개하지 아니하면"(12절). <strong>하나님의 진노는 자동 작동하는 기계가 아니라 회개 앞에서 멈추는 인격적 반응</strong>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">14–16절 — 악의 잉태와 출산</span>
+<p>"악인이 죄악을 낳음이여 재앙을 배어 거짓을 낳았도다. 그가 웅덩이를 파 만듦이여 제가 만든 함정에 빠졌도다." 임신과 출산, 그리고 함정 파기—두 은유가 같은 말을 한다. <strong>악은 외부의 형벌을 기다리기 전에 스스로 무너지는 구조를 품고 있다.</strong> 이것은 시편 윤리의 상수이며(9:15; 35:8; 57:6; 잠 26:27), 하나님의 심판이 종종 <em>일이 제 결과에 도달하도록 놓아두시는 방식</em>으로 이루어짐을 말한다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 성찰이 이 시를 오늘의 경험으로 옮겨 놓는다. 지은 죄에 대한 공개적 고발은 견딜 만하다—적어도 고발에 정의가 있고 회개와 배상의 길이 있다. 그러나 <strong>짓지 않은 죄에 대한 무고는 견디기 어렵다</strong>. 하지 않은 일을 회개할 수 없고 배상할 수도 없으며, 무고하는 자는 쉽게 물러가지 않기 때문이다. 이때의 불안은 <em>정당한 면과 부당한 면</em>을 함께 지닌다. 평판·가족·생계에 실제 피해가 생기므로 정당하고, 다른 사람의 평가를 하나님의 평가보다 중히 여기는 교만과 얽힐 때 부당하다. 결정적 통찰은 이것이다—<strong>무고는 사람을 속일 수 있어도 하나님을 속이지 못하며, 하나님 앞에서의 신분을 결코 훼손하지 못한다.</strong> 시의 시작에서 균형을 잃었던 시인은 끝에 이르러 균형을 회복하는데, 그 균형은 하나님의 의로우심과 악의 본질을 바르게 인식하는 데서 온다. 시는 그가 결국 신원되었는지 알려 주지 않는다. 다만 <em>자기 처지를 받아들일 수 있을 만큼 하나님을 알게 되었다</em>는 것만 알려 준다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시를 기도하는 사람은 반드시 물어야 한다—<em>오늘 나를 원수로 두고 이 시를 기도할 사람이 있는가?</em> 심판에는 두 행위자가 있다. 하나님의 의가 하나님을 무죄한 자의 건지심에 묶고, 원수는 악을 꾀한 순간 스스로 자기 파멸의 행위자가 된다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 예수의 오심으로 육체적 전쟁의 시대는 끝났으나 이 기도의 적실성은 끝나지 않았다. 그리스도인은 혈과 육이 아닌 어둠의 권세와의 싸움(엡 6:12)을 염두에 두고 이 시를 기도하며, 그래서 이 시는 종말론적 차원을 얻는다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>이 시의 자기 결백 맹세(3–5절)를 그리스도인이 그대로 드리기는 어렵다—우리는 무죄하지 않기 때문이다. 그러나 바로 그 지점에서 복음적 독법이 열린다. 성경에서 이 맹세를 온전한 진실로 드릴 수 있는 유일한 분은 <strong>거짓 증언 앞에 서신 그리스도</strong>시다(마 26:59–63). 그분은 무고당하셨고, 스스로를 변호하지 않으셨으며, "공의로 심판하시는 이에게 부탁하셨다"(벧전 2:23)—이는 시편 7편의 자세를 그대로 옮긴 문장이다. 그리고 그분은 자기 저주를 <em>부르시기만</em> 한 것이 아니라 <strong>실제로 짊어지셨다</strong>(갈 3:13). 그러므로 무고당한 신자는 두 가지를 함께 얻는다. 첫째, 자기 신원을 하늘 법정에 맡길 근거—"마음과 양심을 감찰하시는" 재판장이 계시다. 둘째, 자신도 완전히 결백하지는 않음을 알기에 <em>고발자를 향한 심판만이 아니라 그를 위한 복음</em>을 함께 구할 이유. 십자가는 하나님의 의(7:11)와 죄인의 용서가 만난 자리다(롬 3:25–26).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘상 24–26장</strong>—다윗이 사울 앞에서 무죄를 호소하는 장면들. <strong>민수기 5:11–31</strong>·<strong>열왕기상 8:31–32</strong>—맹세와 성전 재판. <strong>욥기 31장</strong>—결백 맹세의 가장 긴 예. <strong>잠언 26:27</strong>—"함정을 파는 자는 거기 빠질 것이요". <strong>시편 9:15; 35:8; 57:6</strong>—같은 자기 파멸 모티프. <strong>베드로전서 2:23</strong>—공의로 심판하시는 이에게 부탁하심. <strong>갈라디아서 3:13</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="8" id="ps8">
+<h3><span class="chip-num">8편</span> 사람이 무엇이기에 — 창조 안의 인간</h3>
+<p class="lead">밤하늘은 인간의 왜소함만 가르친다. 존엄은 오직 이름을 계시하신 분에게서 온다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 <span class="hw">גִּתִּית</span>(깃딧)에 맞춘 노래"—가드의 악기이거나 포도주틀 노래 곡조로 추정된다. 장르는 찬양시, 정밀하게는 <strong>창조시</strong>다. <span class="c cc">C</span>는 찬양·지혜·탄원의 요소가 뒤섞여 <em>범주화가 불가능하다는 사실 자체</em>를 시인의 천재성의 표지로 본다. 시편에서 처음부터 끝까지 하나님을 '주(2인칭)'로 부르는 유일한 찬양시이기도 하다. 열한 편의 탄원시가 밀집한 3–14편 한가운데 이 창조 찬양이 박혀 있다는 <strong>배치</strong>가 곧 해석이다—부르짖음의 한복판에 하늘을 우러르는 자리가 있다.</p>
+<p><strong>구조.</strong> 수미상관(1a, 9절: "여호와 우리 주여 주의 이름이 온 땅에 어찌 그리 아름다운지요") 안에 두 연. (1) 하나님의 영광과 인간의 왜소함(1b–4절), (2) 그 물음에 대한 대답(5–8절).</p>
+<div class="vs">
+<span class="ref">1–2절 — 하늘의 영광과 아기의 입</span>
+<p>"주의 영광이 하늘을 덮었나이다. 주의 대적으로 말미암아 어린 아이들과 젖먹이들의 입으로 권능을 세우심이여." 시의 첫 대조가 이미 시 전체의 논리를 담는다—<strong>가장 큰 것(하늘)과 가장 작은 것(젖먹이의 입)</strong>이 같은 문장에 놓이고, 원수를 잠잠하게 하는 힘이 후자에게 있다고 선언된다. 하나님의 권능은 규모의 논리를 따르지 않는다.</p>
+</div>
+<div class="vs">
+<span class="ref">3–4절 — 밤하늘 아래의 물음</span>
+<p>"주의 손가락으로 만드신 주의 하늘과 주가 베풀어 두신 달과 별들을 내가 보오니 사람이 무엇이기에 주께서 그를 생각하시며." 우주 창조가 <strong>'손가락'</strong>의 일로 표현된다—수고가 아니라 여유의 심상이다. 그 광대함 앞에서 나오는 것은 감탄이 아니라 <em>질문</em>이다. <span class="c cc">C</span>의 신학적 요지가 여기 있다: <strong>자연은 그 자체로 인간의 자리를 계시하지 않는다.</strong> 정직하게 우주를 응시하는 사람이 얻는 것은 오직 왜소함의 감각이며, 경외를 느낄 수는 있어도 인간의 역할에 관한 어떤 명시적 계시도 거기에 담겨 있지 않다. 시인은 자연을 계시의 통로로 제시하려는 것이 아니라, <em>특별 계시에 선행해야 할 무(無)의 감각</em>을 불러일으키고 있다.</p>
+</div>
+<div class="vs">
+<span class="ref">5–8절 — 대답: 관을 씌우셨나이다</span>
+<p>"그를 하나님보다 조금 못하게 하시고 영화와 존귀로 관을 씌우셨나이다." <span class="hw">אֱלֹהִים</span>(엘로힘)을 '하나님'으로 읽을지 '천사/신적 존재'로 읽을지는 오랜 논쟁이며 칠십인역은 후자를 택해 히브리서 2:7에 반영되었다. 어느 쪽이든 요지는 같다—인간은 창조 안에서 <strong>왕적 지위</strong>를 받았다. '관을 씌우다'와 '다스리게 하다'는 즉위식의 언어다. 다스림의 목록이 양과 소에서 시작해 바다 물고기로 끝나는 것은 창세기 1:26–28의 순서를 따른 것이며, 인간의 통치가 <em>정복이 아니라 위임받은 청지기직</em>임을 뜻한다.</p>
+</div>
+<p><strong>신학적 해석.</strong> 이 시의 핵심 주장은 <strong>인간의 존엄이 자기 안에서 발견되는 것이 아니라 밖에서 주어진다</strong>는 것이다. 우주에서 인간의 역할은 자연 관찰이나 자연 철학으로 알아낼 수 없고, 오직 특별한 계시—하나님의 이름의 계시와 그 안에서 밝혀진 위임—로만 알려진다 <span class="c cc">C</span>. <span class="c cd">D</span>의 표현대로 "인간 가치의 금고는 우리 자신 안이 아니라, 우리를 지으신 하나님과 우리에게 맡겨진 창조 세계라는 두 원천에 있다." 그래서 이 시는 인간론과 생태 신학의 원천 본문이 된다. 존엄과 책임은 한 동전의 양면이다—관을 쓴 자에게는 다스릴 대상에 대한 책임이 따른다. 그리고 수미상관이 이 모든 것을 제자리에 둔다. 시는 인간의 영광이 아니라 <strong>"주의 이름이 어찌 그리 아름다운지요"</strong>로 시작하고 끝난다. 인간론은 언제나 신론의 괄호 안에 있다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 림버그의 표현으로 <em>별을 바라보는 자를 위한 시편</em>이자 동시에 영혼을 살피는 자를 위한 시편이다. 인간 정체성의 역설이 여기 있다—우리는 창조에 속해 몸에 흙을 지니면서, 동시에 하늘에 속해 지으신 이의 표를 영혼에 지닌다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 잠언 3:19–20, 8:22–31과 이어지는 <em>지혜시</em>로 보는 것이 가장 적절하다. 욥기 7:17이 이 시를 패러디해 같은 물음을 던지되, 감사의 경외 대신 하나님의 세심한 돌보심을 악의적 감시로 뒤집어 불평한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>신약의 사용이 두 갈래다 <span class="c cc">C</span>. <strong>첫째, 예수 자신의 사용.</strong> 성전을 정화하신 뒤 "호산나 다윗의 자손이여" 외치는 아이들을 두고 대제사장들이 분개하자 예수는 8:2를 인용하신다(마 21:16). 원 시의 대조가 그대로 재현된다—<em>아이들이 이름을 입에 올리고 권세자들이 분개할 때, 진리를 더 바르게 붙든 쪽은 아이들이며 분개하는 자들이 곧 시편의 '대적'</em>이다. <strong>둘째, 초대교회의 그리스도론적 사용.</strong> "만물을 그의 발 아래 두셨으니"(8:6)가 부활하시고 높아지신 그리스도의 통치로 읽힌다(고전 15:27; 엡 1:22; 히 2:6–9). <span class="c cc">C</span>가 짚듯 한편으로 이는 원 시에 없던 새로운 의미이지만, 다른 한편 <strong>지극히 자연스러운 성장</strong>이다. 시인이 말한 인간의 통치는 신학적 실재였으나 인류 역사에서 한 번도 온전한 역사적 실재였던 적이 없기 때문이다. 히브리서는 이 간극을 정면으로 인정한다—"지금 우리가 만물이 아직 그에게 복종한 것을 보지 못하고 오직 … 예수를 보니"(히 2:8–9). 8편이 그린 참사람의 초상은 그리스도 안에서 회복되며, 그 회복은 <em>영광의 관</em>이 아니라 <em>죽음의 고난</em>을 통과해 온다. 사람이 무엇이기에 주께서 그를 생각하시는가—그 물음에 대한 마지막 대답은 성육신이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>창세기 1:26–28</strong>—하나님의 형상과 다스림의 위임; 8편은 이를 찬양의 언어로 재연한다. <strong>욥기 7:17–18</strong>—"사람이 무엇이기에"의 <em>역전</em>; 욥은 같은 물음을 항의로 뒤집는다("어찌하여 나를 놓지 아니하시나이까"). <strong>시편 144:3</strong>—같은 물음의 또 다른 변주. <strong>시편 19편·104편</strong>—창조 찬양의 짝. <strong>마태복음 21:16</strong>, <strong>고린도전서 15:27</strong>, <strong>에베소서 1:22</strong>, <strong>히브리서 2:6–9</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="" id="ps9-10">
+<h3><span class="chip-num">9–10편</span> 찬양과 탄원 — 반쪽씩 나뉜 하나의 시</h3>
+<p class="lead">"하나님이 없다"는 실천적 무신론에 맞서, 짓밟힌 자가 하나님의 시선을 복원한다.</p>
+<p><strong>배경과 상황.</strong> 9편에 "다윗의 시, 인도자를 따라 <span class="hw">מוּת לַבֵּן</span>(뭇랍벤)에 맞춘 노래"가 붙고 <strong>10편은 무표제</strong>다—제1권에서 매우 이례적이며 두 시가 본래 하나였음을 시사한다. 다른 근거들: 알파벳 이합체가 9편에서 시작해 10편에서 끝나고, 칠십인역·불가타와 일부 히브리 사본이 한 편으로 취급하며, "환난 때"(9:9; 10:1)·"가난한 자"·"인생(<span class="hw">אֱנוֹשׁ</span> 에노쉬)"(9:19–20; 10:18) 같은 특이 어휘를 공유한다. <span class="c cc">C</span>의 가설은 본래 알파벳당 네 행의 온전한 이합체시가 있었고 편집 과정에서 예전적 이유로 둘로 나뉘었거나 이미 손상된 본문을 물려받았다는 것이다. 내용상 <strong>열방의 심판(9편)과 국내 압제자의 횡포(10편)</strong>가 짝을 이루어 대외·대내의 이중 위기를 반영한다.</p>
+<p><strong>구조.</strong> 9:1–12 찬양과 신뢰(공의로 심판하시는 이, 압제당한 자의 요새) → 9:13–20 간구와 신뢰(스올의 문에서 들어 올리시는 이) → 10:1–11 탄원(악인의 자화상) → 10:12–18 간구와 신뢰("주는 벌써 보셨나이다").</p>
+<div class="vs">
+<span class="ref">9:1–12 — 심판하시므로 찬양한다</span>
+<p>"내가 전심으로 여호와께 감사하오며 주의 모든 기이한 일들을 전하리이다." 찬양의 이유가 곧 <strong>심판</strong>이라는 점이 현대 독자에게 낯설다. "여호와께서 영원히 앉으심이여 심판을 위하여 보좌를 준비하셨도다"(7절). 그러나 9절이 그 심판의 성격을 밝힌다—"여호와는 압제를 당하는 자의 요새이시요 환난 때의 요새이시로다." <strong>심판은 짓밟힌 자에게는 구원의 다른 이름</strong>이다. 10절의 "주의 이름을 아는 자는 주를 의지하오리니"는 이름을 아는 것과 신뢰가 하나임을 말한다.</p>
+</div>
+<div class="vs">
+<span class="ref">9:13–20 — 스올의 문에서</span>
+<p>"사망의 문에서 나를 일으키시는 주여 … 딸 시온의 문에서 주를 찬송하리이다." <strong>두 개의 문</strong>이 대조된다—죽음의 문에서 들어 올려져 시온의 문에서 찬양하기까지가 구원의 궤적이다. 16절 "악인은 자기 손이 행한 일에 스스로 얽혔도다"는 7편 14–16절의 자기 파멸 논리를 반복한다. 20절의 마지막 청원이 인상적이다—"여호와여 그들을 두렵게 하시며 이방 나라들이 자기는 인생일 뿐인 줄 알게 하소서." 심판의 목적이 절멸이 아니라 <em>자기가 사람일 뿐임을 아는 것</em>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">10:1–11 — 악인의 자화상</span>
+<p>"여호와여 어찌하여 멀리 서시며 어찌하여 환난 때에 숨으시나이까." 앞선 찬양과의 낙차가 크다. 그리고 2–11절은 시편에서 가장 상세한 <strong>악인의 초상</strong>이다. 그는 자랑하고(3절), 탐욕을 축복하며, "그의 모든 사상에 하나님이 없다"(4절). 그의 신학은 세 문장으로 요약된다—"하나님이 잊으셨고 그의 얼굴을 가리셨으니 영원히 보지 아니하시리라"(11절). 8–10절의 사냥꾼 은유(엎드려 기다리다, 그물에 걸다)는 압제를 <em>계획된 포식</em>으로 그린다.</p>
+</div>
+<div class="vs">
+<span class="ref">10:12–18 — "주는 벌써 보셨나이다"</span>
+<p>"여호와여 일어나옵소서 하나님이여 손을 드옵소서 가난한 자들을 잊지 마옵소서." 그리고 14절이 이 쌍시 전체의 심장이다—"주께서는 보셨나이다 주는 재앙과 원한을 감찰하시고 주의 손으로 갚으려 하시오니." <strong>악인이 지운 하나님의 시선을 짓밟힌 자가 복원한다.</strong> 16절의 "여호와께서는 영원무궁하도록 왕이시니"가 그 신학적 토대이며, 18절이 그 왕권의 목적을 밝힌다—"고아와 압제당하는 자를 위하여 심판하사 세상에 속한 자가 다시는 위협하지 못하게 하시리이다."</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 쌍시에서 가장 도발적인 주제로 <strong>무신론</strong>을 꼽는다. 다만 문제는 이론적 무신론이 아니라 <strong>실천적·기능적 무신론</strong>이다. 기능적 무신론자는 하나님의 존재 여부를 이론적으로 다투지 않는다. 그는 <em>하나님이 없는 것처럼 살고 행동한다</em>. 존재 가능성을 인정하면서도 그 존재가 무의미하다고 말과 행실로 선언하는 것이다. 고대 세계에서 이론적 무신론자는 드물었고, 사실 이론적 무신론자가 반드시 위험한 것도 아니다—오히려 매우 도덕적인 무신론자도 많다. 위험한 쪽은 기능적 무신론자다. 그 성격이 하나님에 대한 믿음을 버린 데서가 아니라, 고대 세계에서 신의 존재를 전제하던 <strong>도덕과 정의의 개념 자체를 버린 데서</strong> 규정되기 때문이다. 그는 자기 확신에 차 있고("나는 흔들리지 아니하리라", 10:6) 오직 힘과 안락을 원하며, 그 목표를 위해서라면 무엇이든 한다. 약자는 착취 대상이고 강자는 안전을 위해서만 인정된다.</p>
+<p>그런데 <span class="c cc">C</span>가 짚는 이 시의 진짜 섬뜩함은 악인 묘사 자체가 아니라 <strong>의로운 고난자가 받는 시험</strong>에 있다. 10:2–11에서 기능적 무신론자의 실상을 응시하다 보면 하나님과 도덕과 정의에 대한 시인 자신의 신뢰가 흔들릴 수밖에 없다. 하나님이 계시다고 말하기는 쉽고 정의가 중요하다고 믿기도 쉽지만, 경험적 현실이 정확히 그 반대를 가리킬 때 그 말은 공허하게 울린다. 이 시의 대답은 논증이 아니라 <strong>기도로 시선을 회복하는 것</strong>이다—"주께서는 보셨나이다."</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 두 편은 하나의 확장된 알파벳 이합체이며 칠십인역·불가타와 일부 히브리 사본이 한 단위로 다룬다. 후반부는 입·눈·마음·얼굴·손, 심지어 코까지 몸의 심상으로 가득한데, 이는 <strong>우리가 믿음을 말이 아니라 몸으로 구현한다</strong>는 뜻이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 9편이 알레프에서 카프까지, 10편이 라멛에서 타우까지를 맡는다. 표제가 규범이던 자리에서 10편에만 표제가 없다는 점이 본래 한 편이었다는 또 하나의 증거다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>"주는 벌써 보셨나이다"(10:14)의 신학이 복음서에서 인격을 얻는다. 예수께서는 <strong>보이지 않던 사람들을 보시는 분</strong>으로 등장하신다—혈루증 앓는 여인, 나무 위의 삭개오, 과부의 두 렙돈, 길가의 맹인. 10:18의 "고아와 압제당하는 자를 위하여 심판하사"는 마리아의 노래에서 성취의 언어로 되울린다—"권세 있는 자를 그 위에서 내리치셨으며 비천한 자를 높이셨고"(눅 1:52). 또한 이 쌍시가 붙들고 씨름한 실천적 무신론—"하나님이 잊으셨다"—에 대한 궁극적 반박은 논증이 아니라 사건이다. <strong>하나님이 잊지 않으셨다는 증거는 그분이 오셨다는 것이다.</strong> 십자가에서 그리스도는 이 시가 그리는 무고한 고난자의 자리에 서셨고, 그 순간 "하나님이 그를 버리셨다"는 조롱까지 그대로 받으셨다(마 27:43). 그러나 그 자리가 하나님의 부재가 아니라 <em>가장 깊은 임재</em>였음이 부활로 드러났다. 그러므로 이 시를 기도하는 신자는 아직 보이지 않는 정의를 기다리되, 이미 한 번 결정적으로 개입하신 분을 근거로 기다린다(행 17:31).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 14:1</strong>—"어리석은 자는 그의 마음에 이르기를 하나님이 없다 하는도다"(10:4의 짝). <strong>시편 73편</strong>—악인의 형통 앞에서 흔들리는 신앙의 확장판. <strong>욥기 21장</strong>—같은 문제 제기. <strong>출애굽기 22:22–24</strong>·<strong>신명기 10:18</strong>—고아와 과부를 신원하시는 하나님(10:18의 율법적 뿌리). <strong>이사야 1:17</strong>. <strong>누가복음 1:52</strong>, <strong>사도행전 17:31</strong>, <strong>요한계시록 6:10</strong>("어느 때까지 심판하지 아니하시나이까").</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="11" id="ps11">
+<h3><span class="chip-num">11편</span> 터가 무너지면 — 도피 권고를 이기는 신뢰</h3>
+<p class="lead">"의인이 무엇을 하랴." 이 시를 부르는 행위 자체가 그 질문의 대답이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." 장르는 <strong>개인 신뢰시</strong>인데, 하나님께 직접 아뢰는 기도가 아니라 위기를 성찰하며 신뢰로 올라서는 <em>독백형</em>이라는 점이 특징이다. 상황은 이렇다—폭력적 대적의 위협 속에서 시인은 여호와께 피했는데, 친구들(혹은 내면의 소리)이 "새 같이 네 산으로 도망하라"(1절)고 권한다. 크라우스는 성전에 피신한 자가 성소에서 받은 도피 권고를 물리치는 장면을, 거스텐버거는 재판 의식의 정황을 상상하지만 확정할 수 없다. 4절의 성전 언급이 예배 맥락의 가능성을 열어 둔다.</p>
+<p><strong>구조.</strong> 두 목소리의 대결. (1) 절망의 목소리—도망 권고와 "터가 무너지면 의인이 무엇을 하랴"(1–3절), (2) 신뢰의 목소리—하늘 보좌에서 감찰하시는 여호와(4–7절).</p>
+<div class="vs">
+<span class="ref">1–3절 — "네 산으로 도망하라"</span>
+<p>"내가 여호와께 피하였거늘 너희가 내 영혼에게 새 같이 네 산으로 도망하라 함은 어찌함인가." 시인은 이미 <em>피난처</em>를 정했는데(2:12의 그 '피하다'), 조언자들은 다른 피난처를 권한다. 2절이 그 권고의 근거다—악인이 활을 당기고 화살을 시위에 먹였다. 3절 "터가 무너지면 의인이 무엇을 하랴"는 시편에서 가장 무거운 질문 중 하나다. <span class="hw">שָׁתוֹת</span>(샤톳, 터·기초)은 사회의 법과 정의의 기반을 가리킨다. 개인의 위기가 아니라 <strong>질서 자체의 붕괴</strong>가 문제다.</p>
+</div>
+<div class="vs">
+<span class="ref">4–7절 — 무너지지 않은 하나의 터</span>
+<p>"여호와께서는 그의 성전에 계시고 여호와의 보좌는 하늘에 있음이여 그의 눈이 인생을 통촉하시고 그의 안목이 그들을 감찰하시도다." 대답은 논증이 아니라 <strong>시선의 이동</strong>이다. 땅의 터는 흔들려도 하늘 보좌는 흔들리지 않는다. 그리고 그 보좌의 첫 기능이 통치가 아니라 <em>보심</em>으로 묘사되는 점이 중요하다—10:11의 "그는 보지 아니하시리라"에 대한 정면 반박이다. 7절이 시의 목적지다: "여호와는 의로우사 의로운 일을 좋아하시나니 정직한 자는 그의 얼굴을 뵈오리로다." 구원의 최종 내용이 안전이 아니라 <strong>하나님의 얼굴을 뵙는 것</strong>이다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cd">D</span>의 통찰이 정확하다—이 시는 3절의 질문에 대한 답을 <em>말하지</em> 않는다. <strong>시 자체가 그 대답이다.</strong> 혼돈 앞에서 신뢰의 노래를 부르는 행위, 그것이 무너진 터 위에서 의인이 할 수 있는 일이다. <span class="c cc">C</span>는 여기에 분별의 지혜를 더한다. 신앙의 삶에서 확신은 필수이자 미덕이지만, <strong>확신에는 참과 거짓이 있으므로 지혜로 조율되어야 한다</strong>. 어떤 때는 도피가 두려움이 아니라 분별이며, 어떤 때는 물러서지 않고 서는 것이 믿음이다. 위기의 성격을 냉정히 판단하기란 쉽지 않고 그 판단 과정 자체가 확신을 흔들 수 있다—시인이 처한 자리가 정확히 그곳이다. 주목할 점은 그의 확신이 <em>기도의 결과로</em> 생기지 않았다는 것이다. 확신은 위기(1–3절)만이 아니라 <strong>모든 위기 위에 주권자로 계신 하나님(4–7절)을 함께 볼 때</strong> 생겨난다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시는 물음에 답을 주는 것이 아니라 <strong>시 자체가 답</strong>이다—혼돈 앞에 선 급진적이고 반문화적인 신뢰의 표현인 것이다. 피난하는 것은 수동적 후퇴가 아니라 능동적 행위이며, 미래에 대한 통제를 내려놓는 일이 도리어 공세적일 수 있다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 확신의 노래이되 지혜의 언어와 개념을 쓴다—야샤르(정직)와 차디크(의인)를 악인과 갈라 세우는 방식이 그렇다. 조언자들이 피하라 권하지만 시인은 침착히 위협을 마주한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p><span class="c cc">C</span>의 예시가 이 시를 복음으로 연결한다. 예수께서 광야 시험에서 성전 꼭대기에서 뛰어내리기를 거부하신 것은(마 4:5–7) <strong>거짓 확신과 참 확신의 구별</strong>이었다. 천사가 붙들어 주리라는 '확신'은 시편 91편의 인용이었지만, 그것은 하나님을 <em>신뢰</em>하는 것이 아니라 <em>시험</em>하는 것이었다. 반면 겟세마네에서 도망하지 않고 서신 것은 참 확신이었다. 11편이 붙든 것도 같은 분별이다. 또한 3절의 물음—"터가 무너지면"—은 십자가에서 극한에 이른다. 그날 성소 휘장이 찢어지고 땅이 진동했다(마 27:51). 정의의 터가 완전히 무너진 것처럼 보인 그 순간에도 <strong>하늘 보좌는 비어 있지 않았다.</strong> 그러므로 신자는 무너진 터 위에서 절망하지 않는다. 7절의 소망—"정직한 자는 그의 얼굴을 뵈오리로다"—이 요한계시록의 결말에서 성취되기 때문이다: "그의 얼굴을 볼 터이요"(계 22:4).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 82:5</strong>—"땅의 모든 터가 흔들리도다"(같은 어휘). <strong>시편 46편</strong>—"땅이 변하든지 산이 흔들려 바다 가운데에 빠지든지"의 병행 신학. <strong>하박국 1:2–4</strong>—율법이 해이하고 정의가 굽은 시대의 물음. <strong>마태복음 4:5–7</strong>, <strong>요한계시록 22:4</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="12" id="ps12">
+<h3><span class="chip-num">12편</span> 말의 전쟁 — 아첨하는 입술과 순은 같은 말씀</h3>
+<p class="lead">말은 하나님의 선물이기에 가장 심하게 더럽혀질 수 있다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 여덟째 줄(스미닛)에 맞춘 노래." 장르는 탄원시로, <strong>공동체 탄원</strong>이 유력하나 개인 탄원 독법도 가능하다(칠십인역은 1절을 "나를 구원하소서"로 읽는다). 5절에 여호와의 직접 발언이 나오기 때문에 예전적 <strong>신탁 구조</strong>—제사장이나 예언자가 회중에게 하나님의 응답을 전하는 자리—를 상정하는 학자가 많으나, <span class="c cc">C</span>는 그것이 문학적 장치일 수도 있다고 신중히 본다. 상황은 "경건한 자가 끊어지며 충실한 자들이 인생 중에 없어지나이다"(1절)—<strong>거짓과 아첨이 사회를 지배하는 시대</strong>다. 너무 보편적이어서 특정 시기로 좁힐 수 없다.</p>
+<p><strong>구조.</strong> 대조의 건축물이다. (1) 사람들의 헛된 말(1–4절), (2) 하나님의 확실한 말씀(5–6절), (3) 그 말씀 위에 선 신뢰(7–8절).</p>
+<div class="vs">
+<span class="ref">1–4절 — 두 마음으로 말하는 입술</span>
+<p>"그들이 이웃에게 각기 거짓을 말함이여 아첨하는 입술과 두 마음으로 말하는도다." 히브리어는 문자적으로 <strong>"마음과 마음으로"</strong>(<span class="hw">בְּלֵב וָלֵב</span> 베레브 바레브)—속과 겉이 다른 이중 인격이다. 4절이 그 시대의 신조를 드러낸다: "우리의 혀가 이기리라 우리 입술은 우리 것이니 우리를 주관할 자 누구리요." 말이 <em>소유물</em>이 되고 책임의 대상에서 벗어나는 순간, 말은 무기가 된다.</p>
+</div>
+<div class="vs">
+<span class="ref">5절 — 하나님이 말씀하신다</span>
+<p>"가난한 자들의 눌림과 궁핍한 자들의 탄식으로 말미암아 내가 이제 일어나 그를 그가 원하는 안전한 지대에 두리라 하시도다." 사람의 말이 홍수처럼 넘치는 시 한복판에 <strong>하나님의 한 문장</strong>이 놓인다. 주목할 것은 그 발언의 계기다—신학적 논쟁이 아니라 <em>가난한 자의 탄식</em>이 하나님을 일으킨다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–8절 — 일곱 번 단련한 은</span>
+<p>"여호와의 말씀은 순결함이여 흙 도가니에 일곱 번 단련한 은 같도다." 인간의 말이 불순물투성이인 세계에서 하나님의 말씀은 <strong>정련된 은</strong>이다. 8절이 현실을 냉정하게 남겨 둔다—"비열함이 인생 중에 높임을 받는 때에 악인들이 곳곳에서 날뛰는도다." 시는 상황이 좋아졌다고 말하지 않는다. 다만 그 상황 속에서 <em>무엇을 신뢰할지</em>가 정해졌다고 말한다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 해설이 빼어나다. 히브리 신학에서 <strong>말은 하나님의 창조 행위의 근본</strong>이며(창 1장), 피조물의 말도 마땅히 창조주의 말의 성품을 닮아야 한다. 하나님의 말씀은 순결하니(12:6) 사람의 말도 순결해야 한다. 그런데 창조 질서 안에서 <strong>가장 고귀한 것일수록 가장 심하게 타락할 수 있다</strong>—순수하고 선한 것일수록 더 불순하고 썩은 것이 될 수 있다. 창조 안의 최고 가치인 사랑이 참혹히 남용될 수 있음을 예언자들이 밝힌 것처럼(호 1–3장), 사람과 사람 사이·사람과 하나님 사이의 중심인 말도 근본적으로 남용될 수 있다. 시인이 그린 것은 <strong>강간당한 말</strong>이다—가치가 헛됨과, 진실이 아첨과, 겸손이 교만과 맞바꿔졌다. 그리고 처방이 중요하다: 악한 말에서 벗어나는 길은 <em>악한 말로 되갚는 것이 아니라</em> 하나님의 순결한 말씀을 듣고 그 신뢰성을 성찰하는 데 있다. 가짜 뉴스와 여론 조작의 시대에 섬뜩하도록 현대적인 시다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시는 <strong>말(言)에 관한 시</strong>다. 악인의 말과 그 폭력으로 시작해, 한가운데서 하나님의 말씀이 그것을 맞받고, 그 말씀이 신뢰할 만하다는 확언으로 닫는다. 히브리어로 두 단어뿐인 <em>이제 내가 일어나리라</em>가 우리가 그 뒤에 숨어 사는 망상을 벗긴다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 압제, 특히 자랑과 아첨과 속임이라는 말의 압제를 겪는 이들을 위한 모범 기도다. 예수도 해치려는 자들의 언어적 공격과 기만을 당하셨으나 하나님을 신뢰해 소용돌이 한가운데서 평안을 얻으셨다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>말이 오염된 세계에 하나님이 보내신 최종적 응답은 <strong>말씀이 육신이 되신 사건</strong>이다(요 1:14). 12편이 "여호와의 말씀은 일곱 번 단련한 은 같도다"라고 노래한 그 순결한 말씀이 한 인격으로 오셨고, 그분의 입에는 "거짓이 없었다"(벧전 2:22, 사 53:9 인용). 5절의 "내가 이제 일어나"는 하나님이 가난한 자의 탄식 때문에 일어나시겠다는 선언인데, 예수의 첫 설교가 정확히 그 성취를 선포한다—"가난한 자에게 복음을 전하게 하시려고"(눅 4:18). 그리고 신자에게 주어지는 실천적 결론이 있다. 이 시가 고발하는 "우리 입술은 우리 것이니"라는 태도는 그리스도인에게 허락되지 않는다. 우리 혀는 우리 것이 아니며(약 3:1–12), 우리가 하는 모든 무익한 말에 대해 심문을 받을 것이기 때문이다(마 12:36). 동시에 이것은 위로다—비방과 거짓 소문에 시달릴 때 우리의 방어는 더 큰 목소리가 아니라, <strong>단련된 은 같은 말씀 위에 서는 것</strong>이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 5:9</strong>·<strong>시편 120:2–4</strong>—혀의 죄를 다루는 자매 본문. <strong>시편 19:10</strong>·<strong>119:140</strong>—정련된 말씀의 심상. <strong>잠언 30:5</strong>—"하나님의 말씀은 다 순전하며". <strong>이사야 59:14–15</strong>—진실이 거리에 엎드러진 시대. <strong>야고보서 3:1–12</strong>, <strong>마태복음 12:36</strong>, <strong>요한복음 1:14</strong>, <strong>누가복음 4:18</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="13" id="ps13">
+<h3><span class="chip-num">13편</span> 어느 때까지니이까 — 탄원시의 교과서</h3>
+<p class="lead">여섯 절 안에 심연에서 신뢰까지의 전 여정이 압축되어 있다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." <strong>개인 탄원시의 교과서적 표본</strong>으로, 양식비평가들이 이 유형을 설명할 때 가장 즐겨 인용하는 시다. 위기의 실체는 특정되지 않는다—3절("내가 사망의 잠을 잘까 하오며")로 보아 중병이 유력하나, <span class="c cd">D</span>의 지적처럼 본래 위기의 흔적이 의도적으로 지워져 <em>어떤 고난자도 재사용할 수 있는 기도</em>가 되었을 수 있다. 5–6절의 급전환은 예배 중의 개입(제사장의 확신의 말)을 반영할 수 있으나 확실치 않다.</p>
+<p><strong>구조.</strong> 세 연이 계단처럼 이어진다. (1) 탄원(1–2절), (2) 간구(3–4절), (3) 신뢰와 찬양의 서원(5–6절). 델리치의 유명한 묘사—"파도가 점점 짧아지다가 마침내 기쁨으로만 일렁이는, 거울처럼 잔잔해진 바다."</p>
+<div class="vs">
+<span class="ref">1–2절 — 네 번의 "어느 때까지"</span>
+<p>"여호와여 어느 때까지니이까 나를 영원히 잊으시나이까." <span class="hw">עַד־אָנָה</span>(아드-아나)가 네 번 반복되며 네 방향을 향한다—하나님의 <em>잊으심</em>, 하나님의 <em>얼굴 가리심</em>, 내 <em>영혼의 번민</em>, 원수의 <em>자고함</em>. 곧 위, 안, 밖의 고통이 한 호흡에 쏟아진다. 주목할 것은 이 항의가 불신앙이 아니라는 점이다. <strong>응답하실 분이 아니라면 "어느 때까지"라고 물을 이유조차 없다.</strong> 탄원은 하나님을 '향해' 있으며, 그래서 시편에는 하나님 없는 절망의 독백이 없다(베스터만).</p>
+</div>
+<div class="vs">
+<span class="ref">3–4절 — 눈을 밝히소서</span>
+<p>"나의 눈을 밝히소서 두렵건대 내가 사망의 잠을 잘까 하오며." '눈이 밝아지다'는 히브리어에서 <strong>생기가 돌아오다</strong>를 뜻하는 관용구다(삼상 14:27). 4절의 근거 제시가 6편 5절과 같은 논리다—"두렵건대 나의 원수가 이르기를 내가 그를 이겼다 할까 하오며." 시인은 자기 명예가 아니라 <em>하나님의 명예</em>가 걸린 문제로 기도를 밀어붙인다.</p>
+</div>
+<div class="vs">
+<span class="ref">5–6절 — 완료형으로 말하는 신뢰</span>
+<p>"나는 오직 주의 <span class="hw">חֶסֶד</span>(헤세드)를 의지하였사오니 나의 마음은 주의 구원을 기뻐하리이다." 상황은 아직 아무것도 변하지 않았는데 동사가 <strong>완료형</strong>이다. 신뢰는 결과가 아니라 <em>결단</em>이며, 탄원 한복판에서 내려진다. 6절 "내가 여호와를 찬송하리니 이는 주께서 내게 은덕을 베푸심이로다"—찬양이 미래형으로 서원된다. 13편에서 "언제까지"가 "내가 찬송하리니"로 바뀌는 이 이동이 곧 <strong>기도가 하는 일</strong>이다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시에서 <strong>히브리적 인간 이해</strong>를 읽어 낸다. 히브리 사상에서 사람의 본질은 몸·영·혼으로 편리하게 쪼개지지 않는다—인간은 하나의 전체다. 물론 실제적으로는 몸, 마음(히브리어로 '심장'), 감정('영혼')의 차원이 구별되지만 <strong>그 부분들은 독립적으로 작동하지 않는다.</strong> 몸의 건강이 마음과 감정에 영향을 주고 그 역도 성립한다. 이 시는 몸의 지배로 시작한다—육체가 병에 삼켜져 죽음에 가까웠다. 그런데 히브리적 이해에서 몸을 떠난 생명이 없으므로, 몸의 상태가 속사람을 근본적으로 흔든다. 죽음의 근접은 하나님과의 관계에 <em>심연</em>을 만든다. 그러나 시인의 속사람은 체념하지 않는다—만약 체념했다면 시는 3절에서 끝났을 것이다. 그리고 결정적 관찰: 마지막에 찾아온 확신은 <strong>몸 상태의 변화가 아니라 태도의 변화</strong>에 근거한다. 과거의 신뢰에 대한 기억(5절)과 미래의 구원에 대한 기대(6절)가 현재를 받아들이고 미래를 기뻐할 <em>확신의 틀</em>을 제공한 것이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 위기의 성격은 불분명하지만 두 가지는 분명하다. 시인은 자기 위기를 <em>하나님과의 관계에 관한 영적·신학적 위기</em>로 이해하며, 이 시는 이제 어떤 신자든 다양한 상황에서 다시 쓸 수 있도록 열려 있다. 하나님을 고발하는 것이야말로 시인이 절망을 거부하는 방식이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — <em>왜</em>가 아니라 <em>어느 때까지</em>를 묻는 것은, 하나님의 떠나심에 이유가 있음을 인정하되 이제는 그 형벌이 다할 때가 되지 않았느냐고 압박하는 것이다. 예수께서는 십자가에서 <em>어느 때까지</em>가 아니라 <em>왜</em>를 물으셨다(막 15:34).</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>"어느 때까지니이까"는 성경이 끝날 때까지 사라지지 않는 질문이다. 제단 아래 영혼들이 같은 말로 부르짖고(계 6:10), 교회는 여전히 그렇게 기도한다. 복음은 이 질문을 없애 주지 않는다. 대신 <strong>그 질문을 함께 물으신 분</strong>을 준다. 십자가의 "어찌하여 나를 버리셨나이까"(마 27:46, 시 22:1)는 13:1의 "어느 때까지 주의 얼굴을 나에게서 숨기시겠나이까"와 같은 계열의 부르짖음이다. 그리스도께서 하나님의 얼굴이 감추인 자리까지 들어가셨기에, 이제 신자의 "어느 때까지"는 <em>버림받은 자의 외침</em>이 아니라 <em>이미 응답받은 자의 기다림</em>이 된다. 또한 5절의 구조가 복음의 문법 그대로다—구원이 눈에 보이기 전에 <strong>헤세드를 근거로</strong> 신뢰가 선포된다. 이것이 믿음으로 의롭다 함을 얻는 삶의 매일의 형태다(롬 5:2–5).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 6편</strong>—같은 병상 기도의 짝(원수의 조롱 논거까지 병행). <strong>시편 22:1; 74:10; 79:5; 89:46</strong>—"어느 때까지"의 계열. <strong>하박국 1:2</strong>. <strong>사무엘상 14:27</strong>—'눈이 밝아지다'의 용례. <strong>로마서 5:2–5</strong>, <strong>요한계시록 6:10</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="14" id="ps14">
+<h3><span class="chip-num">14편</span> 어리석은 자의 초상 — 53편과 쌍둥이</h3>
+<p class="lead">'어리석은 자'는 인류의 희귀종이 아니다. 하나님의 지혜를 떠난 모든 사람의 자화상이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." 장르는 <strong>혼합형</strong>이다. 탄원으로 분류되곤 하나 지혜·예언·찬양의 요소가 섞여 있으며, <span class="c cc">C</span>는 1편처럼 지혜 전통에서 기원해 탄원과 구원의 소망으로 전개된 '지혜의 변용'으로 본다. <span class="c cd">D</span>는 교훈시로 규정하고, 3+2의 애가(<span class="hw">קִינָה</span> 키나) 운율에서 <em>어리석은 자의 장례를 미리 조상하는</em> 풍자를 읽는다. 이 시는 제2권의 53편과 중복되는데(신명 야웨↔엘로힘 교체, 5–6절의 본문 차이), <span class="c cc">C</span>는 14편이 더 이른 형태이며 두 판본의 차이가 이른 시기의 본문 손상에 대한 상이한 복원 시도일 수 있다고 본다.</p>
+<p><strong>구조.</strong> (1) 어리석은 자의 독백(1절), (2) 하늘에서 내려다보시는 감찰(2–3절), (3) 압제자 고발과 그들의 공포(4–6절), (4) 시온에서 나올 구원의 갈망(7절).</p>
+<div class="vs">
+<span class="ref">1절 — "하나님이 없다"</span>
+<p>"어리석은 자는 그의 마음에 이르기를 하나님이 없다 하는도다." <span class="hw">נָבָל</span>(나발)은 지능의 결함이 아니라 <strong>도덕적·영적 방향의 문제</strong>다(삼상 25장의 나발이 그 인격화다). 그리고 그 선언의 위치가 중요하다—"그의 <em>마음에</em>" 이른다. 공개적 무신론 선언이 아니라 실천적 전제다(9–10편의 '기능적 무신론' 참조). 그 결과가 곧바로 따라온다—"그들은 부패하고 그 행실이 가증하니."</p>
+</div>
+<div class="vs">
+<span class="ref">2–3절 — 하늘에서의 조사</span>
+<p>"여호와께서 하늘에서 인생을 굽어살피사 지각이 있어 하나님을 찾는 자가 있는가 보려 하신즉." 창세기 11장(바벨탑)과 18장(소돔)의 <strong>'하나님이 내려와 보시다'</strong> 모티프가 울린다. 결과는 참혹하다—"다 치우쳐 함께 더러운 자가 되고 선을 행하는 자가 없으니 하나도 없도다." <em>하나도 없다</em>는 이 전면 부정이 바울의 인간론에 결정적 근거를 제공한다.</p>
+</div>
+<div class="vs">
+<span class="ref">4–7절 — 떡 먹듯 삼키는 자들, 그리고 시온의 구원</span>
+<p>"내 백성을 먹으면서 떡 먹듯 하고 여호와를 부르지 아니하는 자들은 다 무지하냐." 압제가 <strong>식사처럼 일상화된</strong> 모습이다. 그러나 5절에서 반전이 온다—"그러나 거기서 그들은 두려워하고 두려워하였으니 하나님이 의인의 세대에 계심이로다." 7절이 시선을 미래로 옮긴다: "이스라엘의 구원이 시온에서 나오기를 원하도다." 개인의 탄식이 <strong>공동체의 종말론적 소망</strong>으로 끝난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>가 바울의 사용(롬 3:10–12)에서 끌어낸 통찰이 이 시 해석의 열쇠다. 현대 독자는 너무 쉽게 <em>압제당한 자</em>와 자신을 동일시하고 '어리석은 자'를 언제나 남으로 생각한다. 그러나 바울은 이 본문으로 <strong>인류 전체의 보편적 악과 어리석음</strong>을 신학적으로 확정한다. 어리석은 자는 인류 안의 희귀 아종이 아니다—하나님의 지혜를 떠나면 <em>모든 인간이</em> 어리석은 자다. 그리고 그의 행위는 결코 하나님 앞에서 의롭다 함을 얻지 못한다. 하나님의 본질인 헤세드가 그에게 없기 때문이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 탄원·예언적 예전·신뢰시로 다양하게 분류되나 <strong>교훈시</strong>로 보는 것이 가장 낫다. 골딩게이의 말대로 신앙의 진술에 가깝기 때문이다. 제이콥슨은 이 시의 결론에서 본회퍼를 길게 인용한다—우리를 돕는 것은 그리스도의 전능이 아니라 그의 약함과 고난이라는 것(마 8:17).</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 53편과 거의 쌍둥이이며 실질적 차이는 14:5하–6과 53:5하뿐이다. 바울은 1–3절을 전도서 7:20과 함께 로마서 3:10–12에 인용해 <strong>의인은 없으며 아무도 율법 준수로 구원을 얻을 수 없음</strong>을 논증한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>따라서 <span class="c cc">C</span>의 결론대로 이 시는 신약의 빛에서 <strong>하나의 영적 순례</strong>로 읽힌다. 독자는 처음에 <em>어리석은 자가 서 있는 자리</em>에 서서 읽기 시작한다. 그러나 읽어 갈수록 어리석음의 본질과 그 결과인 악을 깨닫고 탄식하게 되며, 마침내 시인과 함께 <strong>그 어리석음으로부터의 구원</strong>을 구하게 된다. 7절의 "이스라엘의 구원이 시온에서 나오기를"이 바로 그 기도다. 그리고 신약은 그 구원이 실제로 시온에서 나왔다고 증언한다—예루살렘에서 십자가에 못 박히시고 일어나신 분에게서. 여기에 <span class="c cc">C</span>가 덧붙이는 깊이가 있다. 지혜는 사랑과 통찰과 도덕을 말하지만, 신약 문맥에서 <strong>하나님의 궁극적 지혜는 예수 그리스도의 복음</strong>에 있다(고전 1:23–25). 그 복음은 어떤 인간적 관점에서는 미련해 보이지만 실상은 구원에 이르는 하나님의 능력이다. 원 시에서 어리석은 자와 의인 사이에 놓였던 간극은, 복음 안에서 <em>어리석은 자가 의롭다 함을 얻는 길</em>로 메워진다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 53편</strong>—쌍둥이 시. <strong>시편 10:4</strong>—"그의 모든 사상에 하나님이 없다". <strong>사무엘상 25장</strong>—'나발'의 인격화. <strong>창세기 6:5, 11:5, 18:21</strong>—하나님이 내려다보시는 모티프. <strong>로마서 3:10–12</strong>—14:1–3의 직접 인용. <strong>고린도전서 1:18–25</strong>—십자가의 미련함과 하나님의 지혜.</p>
+</div>
+</div>
+<hr class="wall"/>
+<h3 id="g-b">둘째 묶음 — 15–24편: 토라를 중심에 둔 교차 구조 (중심축 19편)</h3>
+<div class="note">
+<div class="tt">이 묶음의 설계</div>
+<p>15–24편은 제1권에서 가장 정교하게 짜인 단위다. 15편(입장 예전)–16편(신뢰)–17편(탄원)–18편(제왕)–<strong>19편(토라)</strong>–20·21편(제왕)–22편(탄원)–23편(신뢰)–24편(입장 예전)이 <strong>19편을 축으로 한 거울 대칭</strong>을 이룬다. 성전 문에서 시작해 성전 문에서 끝나고, 그 한가운데 하늘과 토라의 노래가 놓인다. 22편의 절규 바로 다음에 23편의 신뢰가 오는 배치도 이 설계의 일부다.</p>
+</div>
+<div class="chap" data-psalm-context="15" id="ps15">
+<h3><span class="chip-num">15편</span> 누가 주의 장막에 머무르리이까 — 예배자의 십계명</h3>
+<p class="lead">예배를 준비하는 정직한 자기 성찰이 곧 예배의 필요를 밝혀 준다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 장르는 <strong>입장 예전</strong>(entrance liturgy)—궁켈 이래의 다수 견해다. 순례자들이 성소 문에서 입장 자격을 묻고(1절), 제사장이 요건을 답하며(2–5b절), 약속으로 맺는(5c절) 구조다. 다만 <span class="c cc">C</span>는 그 요건이 근동의 병행 문서들과 달리 <strong>전적으로 도덕적이고 제의적 요소가 전무하다</strong>는 점에서, 입장 예전의 형식을 빌린 <em>지혜시</em>—예배의 도덕적 함의를 가르치는 교훈시—일 가능성도 제시한다. <span class="c cd">D</span>는 두 독법의 신학적 결론이 사실상 같다고 본다. 미가 6:6–8과 이사야 33:14–16이 같은 양식의 자매 본문이다.</p>
+<p><strong>구조.</strong> 질문(1절) — 열 가지 조건(2–5b절) — 약속(5c절). 조건은 모빙켈이 관찰한 대로 <strong>긍정 3 – 부정 3 – 긍정 2 – 부정 2</strong>의 '십계명적' 배열을 이룬다.</p>
+<div class="vs">
+<span class="ref">1절 — 문 앞의 질문</span>
+<p>"여호와여 주의 장막에 머무를 자 누구오며 주의 성산에 사는 자 누구오니이까." 두 동사가 중요하다—'머무르다(<span class="hw">גּוּר</span> 구르)'는 나그네로 <em>체류하다</em>이고 '살다(<span class="hw">שָׁכַן</span> 샤칸)'는 <em>거하다</em>이다. 예배자는 하나님의 집에서 주인이 아니라 초대받은 나그네다.</p>
+</div>
+<div class="vs">
+<span class="ref">2–5b절 — 열 가지 문턱</span>
+<p>대답에는 제사 규정이나 정결 예식이 하나도 없다. 대신 <strong>이웃과의 관계</strong>가 나열된다: 정직히 행함, 공의 실천, 마음의 진실 / 혀로 남을 허물하지 않음, 이웃에게 악을 행하지 않음, 비방하지 않음 / 망령된 자를 멸시하고 여호와 경외하는 자를 존대함, <strong>서원한 것은 해로울지라도 지킴</strong> / 이자를 받지 않음, 뇌물을 받지 않음. 넷째 항목의 "해로울지라도"가 특히 날카롭다—손해를 감수하고 약속을 지키는가가 예배자의 표지다. 마지막 두 항목은 <em>돈</em>에 관한 것이며(출 22:25; 신 23:19), 예배의 자격이 경제 윤리에까지 닿는다.</p>
+</div>
+<div class="vs">
+<span class="ref">5c절 — 흔들리지 아니하리이다</span>
+<p>"이런 일을 행하는 자는 영원히 흔들리지 아니하리이다." 1편 3절의 나무 심상과 통하고, 이어지는 16:8("내가 흔들리지 아니하리로다")로 연결된다. 편집자가 심어 둔 표제어다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 목회적 통찰이 이 시의 신학을 정확히 요약한다. 유대교와 기독교 예배의 역사에는 두 극단의 유혹이 있어 왔다. 한쪽에서는 하나님의 거룩이 너무 강조되어 평범한 인간이 도무지 나아갈 수 없다고 느꼈고, 다른 쪽에서는 하나님께 나아가는 길이 너무 값싸져 <strong>무심하고 습관적인 일</strong>이 되었다. 이 시는 그 양극 사이의 <em>바른 중간</em>을 제시한다—거룩하신 하나님께 나아갈 길은 분명히 열려 있으나 그 길은 조심스럽게, 합당한 준비와 경외로 사용되어야 한다.</p>
+<p>그런데 여기에 문제가 있다. 이 열 조건을 통찰 없이 오래 들여다보면 <strong>예배는 영영 불가능해진다</strong>. 이 도덕적 성실을 진지하게 추구한 사람은 많았어도 온전한 성취를 주장할 수 있는 사람은 없기 때문이다. 그렇게 되면 15편은 모두를 예배에서 차단하는 <em>장벽</em>이 되어 버린다. 이 시를 장벽에서 <strong>관문</strong>으로 바꾸는 것은 하나의 깨달음이다—<em>예배를 위한 준비가 곧 예배의 필요성을 밝혀 준다</em>는 것. 한편으로 우리는 위선 없이 예배를 준비할 수 있도록 그렇게 살아야 하고, 다른 한편으로 그 준비 과정의 자기 성찰은 <strong>용서가 필요하다는 사실</strong>을 의심의 여지 없이 드러낸다. 열 조건을 이루지 못했음을 알기에 우리는 하나님 앞에 나아가기 전 용서를 구해야 한다. 오직 그때에야 이 특권이 결코 값싸게 소비될 수 없다는 것과, 동시에 거룩하신 하나님이 <em>다가갈 수 없는 분이 아니라는 것</em>을 함께 깨닫는다 <span class="c cc">C</span>.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 실제 예전인지 문학적 모방인지의 구별은 역사가에게는 중요하나 신학적 해석자에게는 사실상 무의미하다. 놀라운 것은 <strong>하나님 앞에서는 격식이 무관하다</strong>는 점이다—요구되는 것은 이웃을 극진히 대하는 것이지 성전 뜰에 입에 발린 경의를 표하는 것이 아니다(마 5:23–24).</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 이것이 죄인의 성전 출입 금지를 뜻하지는 않는다. 율법은 도리어 죄지은 자에게 성소에 나아와 제사를 드리라 명했다. <em>흠 없음</em>이란 순종하는 마음을 지니되 범죄했을 때 회개하고 제사를 드리는 것이다. 그리스도 이후로는 모든 곳이 거룩하다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>15편의 질문—"누가 주의 장막에 머무르리이까"—에 대한 신약의 대답은 두 단계다. 첫째, <strong>단 한 사람만이 이 열 조건을 온전히 통과하셨다.</strong> 그분은 마음에 진실을 말씀하셨고 이웃에게 악을 행하지 않으셨으며 해로울지라도—십자가에 이르기까지—서원을 지키셨다. 둘째, 그러므로 <strong>그분 안에서 우리도 들어간다.</strong> 히브리서는 15편의 질문을 정면으로 다시 묻고 답한다: "우리가 예수의 피를 힘입어 성소에 들어갈 담력을 얻었나니 … 참 마음과 온전한 믿음으로 하나님께 나아가자"(히 10:19–22). 다만 이 담대함은 조건의 폐기가 아니다. 같은 히브리서가 "모든 사람과 더불어 화평함과 거룩함을 따르라"(히 12:14)고 명한다. 은혜로 들어간 자는 은혜에 합당하게 산다. 산상수훈이 정확히 이 구조다—"마음이 청결한 자는 복이 있나니 그들이 하나님을 볼 것임이요"(마 5:8). 15편이 성전 문 앞의 문답이었다면, 복음은 그 문이 이미 열렸고 <em>이제 그 안에서 어떻게 살 것인가</em>를 묻는다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 24:3–6</strong>—짝을 이루는 입장 예전(15–24편 대칭의 다른 끝). <strong>미가 6:6–8</strong>—"여호와께서 네게 구하시는 것은 오직 정의를 행하며". <strong>이사야 33:14–16</strong>—"우리 중에 누가 삼키는 불과 함께 거하겠느냐". <strong>출애굽기 22:25</strong>·<strong>신명기 23:19</strong>—이자 금지. <strong>마태복음 5:8</strong>, <strong>히브리서 10:19–22; 12:14</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="16" id="ps16">
+<h3><span class="chip-num">16편</span> 주밖에 나의 복이 없다 — 죽음 앞의 확신</h3>
+<p class="lead">시인은 죽음의 위험 앞에서 일어섰고, 그리스도는 죽음의 요새 안에서 일어나셨다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 <span class="hw">מִכְתָּם</span>(믹담)"—뜻이 확정되지 않았다(16, 56–60편). '금(金) 시' 또는 '새김 글(inscription)'로 추정되는데, 후자라면 이 시는 <em>구원 기념비에 새긴 시</em>로 출발했을 수 있다. 장르는 신뢰시·신앙고백시다. <span class="c cc">C</span>의 흥미로운 재구성에 따르면 2–4절은 시인과 <strong>혼합주의자</strong>—여호와도 섬기고 이방의 '신성한 자들'도 함께 섬기자는 사람—의 대화로 읽을 수 있다. 그렇다면 이 시는 위기 때 '보험'으로 다른 신을 겸하여 섬기라는 유혹을 물리친 신앙의 기록이다. <span class="c cd">D</span>는 제사·분깃·잔·기업 같은 레위인 어휘에 근거해 시인을 제사장으로 보는데, 땅의 기업이 없는 레위인에게 "여호와는 나의 산업과 나의 잔의 소득이시니"(5절)는 <strong>문자적 실존 고백</strong>이 된다.</p>
+<p><strong>구조.</strong> (1) 피난과 고백(1–2절), (2) 두 길—성도를 기뻐함과 다른 신 거절(3–4절), (3) 분깃과 기업의 아름다움(5–6절), (4) 훈계하시는 여호와와 흔들리지 않는 확신(7–8절), (5) 절정—스올에 버리지 않으심(9–11절).</p>
+<div class="vs">
+<span class="ref">1–4절 — 보험을 들지 않는 믿음</span>
+<p>"주는 나의 주님이시오니 주밖에는 나의 복이 없다 하였나이다." 그리고 4절이 그 배타성의 값을 말한다—"다른 신에게 예물을 드리는 자는 괴로움이 더할 것이라 나는 그들이 드리는 피의 전제를 드리지 아니하며 내 입술로 그 이름도 부르지 아니하리로다." 고대 세계에서 여러 신을 겸하여 섬기는 것은 <em>합리적 위험 분산</em>이었다. 시인은 그 합리성을 거절한다. 이름조차 부르지 않겠다는 것은 <strong>마음의 여지까지 두지 않겠다</strong>는 뜻이다.</p>
+</div>
+<div class="vs">
+<span class="ref">5–6절 — 줄로 재어 준 기업</span>
+<p>"여호와는 나의 산업과 나의 잔의 소득이시니 나의 분깃을 지키시나이다. 내게 줄로 재어 준 구역은 아름다운 곳에 있음이여 나의 기업이 실로 아름답도다." <strong>가나안 땅 분배</strong>의 언어다(수 13–19장). 레위 지파는 땅 대신 "여호와가 그들의 기업"이 되셨는데(신 10:9), 시인은 그 특수한 규정을 <em>모든 신자의 고백</em>으로 확장한다. 소유가 아니라 관계가 유업이다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–8절 — 밤에 훈계하시는 양심</span>
+<p>"나를 훈계하신 여호와를 송축할지라 밤마다 내 양심이 나를 교훈하도다." 문자적으로는 "내 <strong>콩팥</strong>이 나를 교훈한다"—히브리인에게 콩팥은 가장 깊은 내면의 자리다. 8절 "내가 여호와를 항상 내 앞에 모심이여 그가 나의 오른쪽에 계시므로 내가 흔들리지 아니하리로다"는 15:5c와 표제어로 이어지며, 베드로가 오순절 설교에서 인용할 구절이다.</p>
+</div>
+<div class="vs">
+<span class="ref">9–11절 — 생명의 길</span>
+<p>"주께서 내 영혼을 스올에 버리지 아니하시며 주의 거룩한 자를 멸망시키지 않으실 것임이니이다. 주께서 생명의 길을 내게 보이시리니 주의 앞에는 충만한 기쁨이 있고 주의 오른쪽에는 영원한 즐거움이 있나이다." 본래 문맥에서 이는 <em>때 이른 죽음에서 건지심</em>에 대한 확신이지 부활 교리의 진술은 아니다 <span class="c cc">C</span>. 그러나 "주 앞의 충만한 기쁨"이라는 표현은 이미 <strong>하나님과의 교제가 죽음보다 강하다</strong>는 직관을 품고 있다.</p>
+</div>
+<p><strong>신학적 해석.</strong> 이 시의 중심 주장은 <strong>하나님 자신이 상급</strong>이라는 것이다. 시인이 거절한 것은 다른 신들만이 아니라 <em>하나님 외의 안전장치</em> 일반이다. 그가 붙든 것은 땅도 재물도 아니고 "나의 분깃"이신 분이며, 그 확신이 죽음의 위협 앞에서도 흔들리지 않는다. 여기서 주목할 것은 이 확신이 <strong>고립된 개인의 배짱이 아니라는</strong> 점이다. 분깃·기업·줄·잔 같은 어휘는 모두 <em>공동체의 언약 역사</em>에서 온 것으로, 시인은 이스라엘의 기억 위에 서서 자기 고백을 한다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 레위 제사장직과 관련된 여러 용어에 근거해 시인을 <em>제사장</em>으로 본다. 그리고 4절의 피의 전제를 드리지 않겠다는 고백을 오늘 하려면, 사라진 가나안 제의만이 아니라 <strong>여전히 주의 이름과 예수의 이름으로 솟아나는 폭력적 이념들</strong>에 맞서서도 그렇게 말할 수 있어야 한다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 탄원처럼 열리지만 확신의 시다. 10–11절이 죽음 자체에서도 지키시는 하나님의 능력을 주장하며, 이는 신약의 몸의 부활 교리로 만개하는 <em>사후 생명 신앙의 구약적 배경</em>을 이룬다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>초대교회는 이 시를 <strong>부활의 예언</strong>으로 읽었다—베드로의 오순절 설교(행 2:25–28)와 바울의 비시디아 안디옥 설교(행 13:35)가 모두 16:8–11을 인용한다. <span class="c cc">C</span>는 본래 의미와 신약적 의미의 관계를 C. S. 루이스의 '이중 의미' 개념으로 설명하며, 그 관계가 단순한 진전이 아니라 <strong>대조</strong>를 포함한다고 짚는다. 시인은 임박한 죽음에 직면해 그 위험 <em>위로</em> 일어섰다. 그러나 예수는 임박한 죽음에 직면하실 뿐 아니라 <strong>실제로 죽으셨다</strong>. 시인의 신학에서 죽음은 모든 것의 끝이었지만, 예수의 경험에서 죽음은 <em>문</em>이 되었다. 하나님이 시인을 스올에 버리지 않으신 반면, 예수는 <strong>스올에서 건져내어졌다</strong>. 시인은 죽음의 위험에 맞서 확신 가운데 일어섰고, 예수는 죽음의 요새 그 자체로부터 확신 가운데 일어나셨다.</p>
+<p>이 해석의 진전은 우리 삶의 진전도 시사한다 <span class="c cc">C</span>. 우리도 시인과 함께 때 이른 죽음에서의 건지심을 구하고 그 위험 위로 담대히 설 수 있다. 그러나 결국 <em>때에 맞는 죽음</em>은 모든 사람에게 온다. 그런데 이제 모든 사람을 위한 새로운 확신의 근거가 있다—예수의 때 이른 죽음이 부활로 완성되었기 때문이다. 죽음의 두려움은 온전히 살기 위해 반드시 다스려져야 하지만 결코 절대적으로 다스릴 수 없는 두려움이다. 16편의 새 의미 안에서 <strong>그 쏘는 것이 제거되었다</strong>(고전 15:55).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>신명기 10:9; 18:2</strong>·<strong>여호수아 13:33</strong>—"여호와가 그들의 기업이시니"(5–6절의 뿌리). <strong>시편 73:26</strong>—"하나님은 내 마음의 반석이시요 영원한 분깃이시라". <strong>시편 49:15</strong>—스올에서 건지심. <strong>예레미야애가 3:24</strong>. <strong>사도행전 2:25–31; 13:35</strong>—16:8–11의 직접 인용. <strong>고린도전서 15:55</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="17" id="ps17">
+<h3><span class="chip-num">17편</span> 눈동자같이 지키소서 — 무죄한 자의 밤샘 기도</h3>
+<p class="lead">개인의 기도가 민족의 기억을 입는다. 광야에서 눈동자같이 지키신 그 하나님께.</p>
+<p><strong>배경과 상황.</strong> "다윗의 <span class="hw">תְּפִלָּה</span>(테필라, 기도)"—시편에서 '기도'로 명명된 첫 시다(17, 86, 90, 102, 142편). 거스텐버거에 따르면 이 단어는 사실상 <strong>탄원·간구시의 전문 용어</strong>에 가깝다. 장르는 개인 탄원시, 정밀하게는 무죄한 자의 보호 기도다. 강한 무죄 주장(3–5절) + 원수 고발(9–12절) + 성전 피신 암시(주의 얼굴, 날개 그늘)의 결합으로 보아 <em>무고당한 자의 기도</em>로 보는 견해가 많다. 3절의 "주께서 밤에 나를 감찰하시고 나를 시험하사"는 야간 시죄 의식이나 <strong>성전에서 밤을 지새우며 아침 판결을 기다리는 정황</strong>(크라우스)을 시사한다.</p>
+<p><strong>구조.</strong> 무죄와 원수라는 두 주제가 교대로 직조된 3부. (1) 무죄에 근거한 기도(1–5절), (2) 원수의 공격에 근거한 기도(6–12절), (3) 구원의 기도와 소망(13–15절).</p>
+<div class="vs">
+<span class="ref">1–5절 — 밤에 감찰하신 마음</span>
+<p>"주께서 내 마음을 시험하시고 밤에 내게 오시어서 나를 감찰하셨으나 흠을 찾지 못하셨사오니." 대담한 진술이다. 그러나 이는 무죄 일반의 주장이 아니라 <strong>특정 고발에 대한 결백</strong>의 주장이다(7편과 같은 문맥). 4절 "주의 입술의 말씀을 따라 스스로 삼가서 포악한 자의 길을 가지 아니하였사오며"—그의 결백의 근거도 자기 의지가 아니라 <em>말씀</em>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–12절 — 눈동자와 날개 그늘</span>
+<p>"나를 눈동자 같이 지키시고 주의 날개 그늘 아래에 감추사." 두 은유가 모두 <strong>신명기 32:10–11</strong>에서 왔다—광야에서 이스라엘을 "눈동자 같이 지키셨도다"와 독수리가 새끼를 날개로 업듯 인도하셨다는 모세의 노래. 개인의 기도가 <em>민족의 기억</em>을 입는 순간이다. 눈동자(문자적으로 "눈의 딸, 작은 사람")는 몸에서 가장 연약하면서 가장 본능적으로 보호되는 부위다. 10–12절의 원수 묘사가 대조를 이룬다—"그들의 마음은 기름에 잠겼으며", 움킨 것을 찢으려는 사자 같은.</p>
+</div>
+<div class="vs">
+<span class="ref">13–15절 — 두 종류의 만족</span>
+<p>14절은 이 세상에서 분깃을 받은 자들을 묘사한다—"그들은 주의 재물로 배부르고 자녀로 만족하고." 그리고 15절이 대조한다: "나는 의로운 중에 주의 얼굴을 뵈오리니 <strong>깰 때에 주의 형상으로 만족하리이다</strong>." '깰 때에'는 본래 밤샘 기도 뒤의 아침을 뜻할 것이나, 후대 독자들에게는 더 깊은 각성을 암시하는 말로 읽혔다. 배부름의 두 종류가 대조된다—재물과 <em>얼굴</em>.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시의 가장 의미심장한 면모로 <strong>언약 신학의 구조</strong>를 꼽는다. 시인은 사방에서 압박당하지만 확신 가운데 상황 위로 올라선다. 그런데 그 상승은 그의 굳센 신앙과 초월 능력에 대한 증언이 아니라, 무엇보다 <strong>언약 공동체의 신앙에 대한 증언</strong>이다. 소망과 확신을 가능하게 하는 것은 <em>언약의 하나님이 어떤 분인지에 대한 인식</em>이다. 시인이 곤경에 처한 첫 사람도 마지막 사람도 아니다. 그가 믿은 것은 헤세드를 근본 성품으로 삼으신 언약의 하나님이며(7절), 이스라엘이 경험한 헤세드의 첫째가는 최대 증거는 <strong>출애굽</strong>이었다. 곧 시인은 <em>이미 구원받은 공동체</em>에 속한 사람이다. 자기 위기 속에서 그는 '위기 중의 구원자'로 알려진 하나님을 부를 수 있다. 언약 공동체에 속한다는 것의 근본은 <strong>언약의 기억을 공유하는 것</strong>이며, 그 기억의 초점은 언약이 존재하는 이유가 하나님이 먼저 건지셨기 때문이라는 사실이다. 그래서 기도를 마칠 때 시인은 자기만이 아니라 하나님의 "보배로운 자들"을 함께 생각한다(14b–15절). 그는 <em>구원 역사</em>라는 특정한 역사 위에 굳게 서서, 그 옛 실재를 자기 시간의 경험 속에 새롭게 한다 <span class="c cc">C</span>.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시는 <strong>몸으로 구현된 기도</strong>다. 시인의 몸이 행한 것 때문에 위험에 처했고, 응답 또한 하나님의 얼굴을 뵙는 새 상황으로 몸을 입고 오기를 구한다. 성육신은 하나님이 한 번 취하신 행동일 뿐 아니라, 우리가 육이기에 은혜가 거듭 육신으로 우리에게 와야 함을 뜻한다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 표제의 <em>기도(테필라)</em>가 말해 주듯 오직 하나님께만 말을 거는 순수한 기도다. 15절의 <em>깰 때에</em>가 죽음 이후에도 이어질 임재를 암시하며, 요한일서 3:2가 바로 그날을 내다본다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>구원 역사의 연속성이라는 이 감각 때문에 15절은 현대 독자에게 <strong>새로운 신학적 차원</strong>을 얻는다 <span class="c cc">C</span>. "깰 때에 주의 형상으로 만족하리이다"는 본래 아침의 신원을 가리켰겠지만, 부활의 빛에서 이 문장은 <em>마지막 아침</em>을 향해 열린다. 요한일서가 거의 같은 언어로 말한다—"그가 나타나시면 우리가 그와 같을 줄을 아는 것은 그의 참모습 그대로 볼 것이기 때문이니"(요일 3:2). 시인이 밤을 새우며 기다린 그 얼굴을, 신자는 잠에서 깨어나 뵙게 된다. 또한 이 시의 무죄 주장은 그리스도 안에서 <strong>전가된 의</strong>로 다시 읽힌다. 우리는 "흠을 찾지 못하셨나이다"라고 말할 수 없지만, 우리를 위해 그렇게 말씀하실 수 있는 분이 계시고(요 8:46; 벧전 2:22), 그분 안에서 우리도 "흠 없이 그 영광 앞에 서게" 된다(유 24). 눈동자같이 지키시는 하나님은 이제 <em>독생자를 아끼지 아니하신</em> 하나님으로 알려진다(롬 8:32).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>신명기 32:10–11</strong>—눈동자와 독수리 날개(8절의 직접 원천). <strong>스가랴 2:8</strong>—"너희를 범하는 자는 그의 눈동자를 범하는 것이라". <strong>시편 36:7; 57:1; 63:7; 91:4</strong>—날개 그늘 계열. <strong>시편 7편</strong>—무죄 주장의 짝. <strong>요한일서 3:2</strong>, <strong>로마서 8:32</strong>, <strong>유다서 24</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="18" id="ps18">
+<h3><span class="chip-num">18편</span> 나의 힘이신 여호와 — 왕의 대감사시 (=사무엘하 22장)</h3>
+<p class="lead">한 사람을 건지시려 우주가 진동한다. 개인의 구원에 대한 가장 장대한 묘사.</p>
+<p><strong>배경과 상황.</strong> 시편에서 <strong>가장 긴 표제</strong>가 붙는다—"여호와의 종 다윗의 시 … 여호와께서 다윗을 그 모든 원수들의 손에서와 사울의 손에서 건져 주신 날에." 사무엘하 22:1과 동일하며, 시 전체가 <strong>사무엘하 22장과 병행 본문</strong>이라는 것이 최대 특징이다(역사서와 시편이 공유하는 가장 긴 본문). 크로스와 프리드먼의 고전적 연구 이래 두 본문은 공통 원본을 공유하거나 한쪽이 다른 쪽에 의존한 것으로 본다. 철자법상 사무엘하 22장이 더 고형(古形)이지만, <span class="c cc">C</span>는 <strong>예배에서 계속 사용된 시편 본문이 '현대화'되는 것은 자연스러운 과정</strong>이라고 지적하고, 구전 작법을 감안하면 단일 '원본'을 상정하는 것 자체가 부적절할 수 있다고 본다. 언어의 고태성(우가릿 병행)은 이 시가 실제로 왕정 초기의 작품일 가능성을 지지한다. 장르는 <strong>왕의 감사시</strong>로, 특정 전투가 아니라 모든 승리의 날 혹은 연례 절기에 사용되었을 것이다.</p>
+<p><strong>구조.</strong> (1) 사랑의 고백과 은유의 폭포(1–3절), (2) 사망의 줄에서의 부르짖음(4–6절), (3) 신현(7–15절), (4) 건지심(16–19절), (5) 의에 따른 갚으심(20–30절), (6) 전사 훈련과 승리(31–45절), (7) 송축과 열방의 찬양(46–50절).</p>
+<div class="vs">
+<span class="ref">1–6절 — 은유의 폭포, 그리고 사망의 줄</span>
+<p>"나의 힘이신 여호와여 내가 주를 사랑하나이다." 1절의 동사 <span class="hw">רָחַם</span>(라함)은 어머니의 자궁적 사랑과 같은 어근으로, 시편에서 사람이 하나님께 이 동사를 쓰는 유일한 자리다. 이어 <strong>일곱 개의 은유</strong>가 쏟아진다—반석, 요새, 건지시는 이, 하나님, 피할 바위, 방패, 구원의 뿔, 산성. 은유의 과잉 자체가 감사의 강도를 보여 준다. 4–5절의 "사망의 줄"과 "스올의 줄"은 죽음을 사냥꾼의 올무로 그린다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–15절 — 우주가 진동하다</span>
+<p>시편에서 가장 장대한 <strong>신현(theophany)</strong> 묘사다. 땅이 진동하고 산의 터가 흔들리며, 코에서 연기가 하늘이 드리우고 캄캄함이 발 아래 있으며, 그룹을 타고 바람 날개로 날아오시고, 우박과 숯불이 쏟아진다. 이는 <strong>시내산과 출애굽의 언어</strong>(출 19장; 삿 5장)로, 여기서 놀라운 것은 그 우주적 규모가 <em>한 사람의 구원</em>에 동원된다는 점이다. 이것이 시편의 신앙 문법이다—개인의 위기에 우주의 하나님이 우주적 규모로 개입하신다.</p>
+</div>
+<div class="vs">
+<span class="ref">16–30절 — 넓은 곳으로, 그리고 의에 따라</span>
+<p>"나를 넓은 곳으로 인도하시고 나를 기뻐하시므로 나를 구원하셨도다"(19절). 4편에서 본 '좁음→넓힘'의 심상이 반복된다. 그리고 결정적 한마디—"<strong>나를 기뻐하시므로</strong>." 구원의 최종 근거는 공로가 아니라 기쁨이다. 20–24절의 의에 따른 갚으심은 자기 의의 주장처럼 들리나, 언약 문맥에서는 <em>언약에 신실했다</em>는 진술이다. 25–26절이 그 원리를 일반화한다—"자비로운 자에게는 주의 자비로우심을 나타내시며 … 사악한 자에게는 주의 거스르심을 보이시리니." 30절 "그의 도는 완전하고 여호와의 말씀은 순수하니"가 12:6과 이어진다.</p>
+</div>
+<div class="vs">
+<span class="ref">31–50절 — 손을 가르쳐 싸우게 하시니</span>
+<p>"나의 손을 가르쳐 싸우게 하시니 내 팔이 놋 활을 당기도다"(34절). 승리가 왕의 역량이 아니라 <strong>훈련시키신 분</strong>에게 돌려진다. 35절의 "주의 온유함이 나를 크게 하셨나이다"는 이 긴 전쟁 서사 한가운데 놓인 뜻밖의 문장이다. 결말(46–50절)에서 시야가 열방으로 넓어지고, 50절이 언약으로 매듭짓는다—"그의 왕에게 큰 구원을 주시며 기름 부음 받은 자에게 인자를 베푸심이여 영원토록 다윗과 그 후손에게로다."</p>
+</div>
+<p><strong>신학적 해석.</strong> 18편은 <strong>구원의 규모</strong>에 관한 시다. 한 사람이 사망의 줄에 얽혔을 때 하늘이 갈라지고 땅이 흔들린다. 이 과장법은 문학적 장식이 아니라 신학적 진술이다—<em>하나님께는 한 사람의 구원이 우주적 사건이다</em>. 동시에 이 시는 왕의 시이므로 개인과 공동체가 분리되지 않는다. 왕이 건짐받는 것은 백성이 건짐받는 것이고, 그래서 시는 개인의 감사로 시작해 열방의 찬양으로 끝난다. 20–24절의 '의에 따른 갚으심'과 19절의 '나를 기뻐하시므로'가 나란히 놓인 것도 중요하다—<strong>언약적 신실함과 값없는 은혜는 시편에서 대립하지 않는다.</strong></p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 사무엘하 22장과의 관계는 공통 원본을 공유했거나 시편 18편이 직접 의존한 것으로 보인다(크로스와 프리드먼의 비교 연구). 왕정기의 시가 포로기 이후 편집자들에게 보존된 것은, 맥캔의 말대로 <strong>소망을 살려 두려는 의도</strong>였다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 6–15절에서 하나님이 구름을 타고 내려오시는 묘사가, 예수께서 구름 병거를 타고 재림하시는 장면(마 24:30; 26:64; 계 1:7)과 겹친다. 시인은 자기 의를 근거로 삼았으나(20–24절) 그리스도인은 <em>그리스도의 의</em>를 가리킬 수 있다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p><span class="c cc">C</span>는 2편과 마찬가지로 18편도 <em>예언적·예측적 의미의</em> 메시아 시는 아니라고 분명히 한다—일차적 관심은 다윗 왕과 고대 이스라엘에 나타난 하나님 나라의 첫 현현이다. 신약에서 2편만큼 자주 인용되지도 않는다. 바울이 49절을 이방 선교의 근거로 짧게 인용할 뿐이다(롬 15:9—"그러므로 내가 열방 중에서 주께 감사하고"). 그러나 <span class="c cc">C</span>가 덧붙이듯 <strong>신약의 관점에서 이 시에는 잠재적 메시아적 의미가 있다</strong>. "사망의 줄"에서 기름 부음 받은 자가 건지심을 받는다는 이 시의 중심 사건은, 죽음 그 자체로부터 건지심을 받으신 예수 안에서 <em>더 깊은 의미</em>를 얻는다. 4–6절의 절규와 7–19절의 개입은 부활 사건의 구조와 정확히 겹친다—죽음이 삼키려 했고, 하나님이 하늘을 가르고 내려오셨으며, "넓은 곳으로" 인도하셨다. 그리고 50절의 "영원토록 다윗과 그 후손에게로다"라는 마지막 문장이 왕조가 끊긴 뒤에도 남아, 다윗의 자손이신 분에게서 성취를 기다렸다. 신자는 이 시를 <strong>이미 건져지신 왕에게 속한 자로서</strong> 부른다—우리의 사망의 줄도 이미 끊어졌기 때문이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘하 22장</strong>—병행 본문 전체. <strong>출애굽기 15장</strong>·<strong>사사기 5장</strong>—승전가와 신현의 고대 시가. <strong>출애굽기 19:16–19</strong>—시내산 신현. <strong>하박국 3장</strong>—같은 계열의 신현시. <strong>시편 144편</strong>—18편의 여러 구절을 재사용한 후대 시. <strong>로마서 15:9</strong>—18:49 인용. <strong>누가복음 1:69</strong>—"구원의 뿔"(18:2).</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="19" id="ps19">
+<h3><span class="chip-num">19편</span> 하늘과 토라 — 두 권의 책, 한 분 하나님</h3>
+<p class="lead">하늘은 하나님의 영광을 선포하고, 토라는 사람을 향한 하나님의 뜻을 선포한다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." <span class="c cc">C</span>의 분류로는 <strong>지혜 찬양시</strong>이며, 두(혹은 세) 부분의 결합체다—창조 찬양(1–6절: 신명 '<span class="hw">אֵל</span> 엘', 길고 유연한 시행), 토라시(7–10절: 신명 '야웨'가 여섯 번, 정형적 시행), 종의 기도(11–14절). 별개 작품의 결합으로 보는 학자가 많으나 <span class="c cc">C</span>는 현재 형태의 <strong>통일성</strong>을 확신한다—한 시인이 옛 태양 찬양 단편을 취해 신학적 주석으로 확장했을 가능성이다. 고대 근동에는 태양 찬가가 흔했는데(이집트의 태양 찬가 등), 이 시는 그 소재를 빌리면서 <strong>태양을 신이 아니라 하나님의 피조물이자 증인으로 강등</strong>시킨다. 태양 숭배가 성행하던 세계에서 그 자체로 논쟁적인 시다. 15–24편 교차 구조의 <strong>중심축</strong>에 놓였다.</p>
+<p><strong>구조.</strong> (1) 하늘의 말 없는 설교(1–6절), (2) 토라의 여섯 겹 찬사(7–10절), (3) 종의 기도(11–14절).</p>
+<div class="vs">
+<span class="ref">1–6절 — 소리 없는 소리</span>
+<p>"하늘이 하나님의 영광을 선포하고 궁창이 그의 손으로 하신 일을 나타내는도다. 날은 날에게 말하고 밤은 밤에게 지식을 전하니." 3–4절의 역설이 이 대목의 심장이다—"언어도 없고 말씀도 없으며 들리는 소리도 없으나 그의 소리가 온 땅에 통하고 그의 말씀이 세상 끝까지 이르도다." <strong>말 없는 증언이 온 땅에 들린다.</strong> 4–6절의 태양은 "신방에서 나오는 신랑" 같고 "그의 길을 달리기 기뻐하는 장사" 같으며, 그 열기에서 피할 자가 없다. <span class="c cc">C</span>는 루이스를 따라 <strong>6절 마지막 어구("그의 열기에서 피할 자가 없도다")가 두 부분을 잇는 이음매</strong>라고 본다—태양이 낮 하늘을 지배하듯 토라가 인간의 삶을 지배하며, 태양이 따스함으로 반가우면서 그 가차 없는 열기로 두렵기도 하듯 토라도 그러하다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–10절 — 토라의 여섯 겹</span>
+<p>여섯 개의 문장이 같은 틀로 반복된다: <strong>이름 + 성품 + 효력</strong>. 여호와의 율법은 완전하여 <em>영혼을 소성시키고</em>, 증거는 확실하여 <em>우둔한 자를 지혜롭게 하며</em>, 교훈은 정직하여 <em>마음을 기쁘게 하고</em>, 계명은 순결하여 <em>눈을 밝게 하며</em>, 도(경외)는 정결하여 <em>영원까지 이르고</em>, 법도는 진실하여 <em>다 의롭도다</em>. 그리고 두 비교급—"금 곧 많은 순금보다 더 사모할 것이며 꿀과 송이꿀보다 더 달도다." 토라가 <strong>가치(금)와 즐거움(꿀)</strong> 양쪽에서 최고로 선언된다. 1편 2절의 '즐거워하여'가 여기서 감각적 언어를 얻는다.</p>
+</div>
+<div class="vs">
+<span class="ref">11–14절 — 그리고 나는</span>
+<p>계시가 인격에 와 닿는 순간 시는 곧바로 <strong>용서의 기도</strong>가 된다. "자기 허물을 능히 깨달을 자 누구리요 나를 숨은 허물에서 벗어나게 하소서"(12절)—토라의 빛은 나 자신도 모르는 죄를 드러낸다. 13절은 한 단계 더 나아가 <em>고의의 죄</em>가 주장하지 못하게 해 달라고 구한다. 마지막 14절은 예배의 결론이자 설교자의 기도로 널리 사랑받는 문장이다—"나의 반석이시요 나의 구속자이신 여호와여 내 입의 말과 마음의 묵상이 주님 앞에 열납되기를 원하나이다." '묵상(<span class="hw">הָגָיוֹן</span> 히가욘)'이 1:2의 '하가'와 같은 어근이라는 점이 이 시를 시편 서론과 잇는다.</p>
+</div>
+<p><strong>신학적 해석.</strong> C. S. 루이스는 19편을 두고 "시편에서 가장 위대한 시이며 세계 최고의 서정시 중 하나"라고 했다 <span class="c cc">C</span>. 그 위대함은 <strong>가장 아름다운 시와 가장 심오한 성경 신학의 결합</strong>에 있다. <span class="c cc">C</span>가 짚는 이 시의 운동은 <strong>대우주에서 소우주로</strong>—우주와 그 영광에서 하나님 앞에 겸손히 선 한 개인으로—의 이동이며, 절정은 하늘의 함성이 아니라 <em>소우주</em>에 있다. 왜 그런가? 하늘은 하나님의 <strong>영광</strong>을 선포하지만, 피조물인 인간을 향한 하나님의 <strong>뜻</strong>을 선포하는 것은 토라뿐이기 때문이다. 저 높은 광대한 궁창이 하나님을 찬양해도, 인간에게 우주적 질서 속에서 <em>자기 자리가 있음</em>을 계시하는 것은 오직 하나님의 토라다. 그리고 그 자리는 인간의 자랑이나 우주에 대한 지배 선언의 근거가 아니다—토라의 계시가 시인 개인에게 밝아 오는 순간, 그것은 즉시 <strong>용서와 열납을 구하는 기도</strong>로 터져 나온다. 일반계시와 특별계시, 창조와 말씀, 우주와 양심을 한 편에 담은 시편 신학의 축소판이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시는 <em>시편의 문제아</em>라고도, <em>시편 최고의 시이자 세계 최고의 서정시 가운데 하나</em>라고도 불려 왔다—접근법에 따라 두 평가 모두 타당하다. 숨은 죄라는 이 시의 관심사에 대해 성경에서 가장 절실한 문장은 누가복음 23:34이며, 그리스도의 그 간구는 19편의 신실한 연장이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 1–11절만 있었다면 지혜시로 분류되었을 것이나, 12–13절의 고의적·은밀한 죄 고백과 도움 간구가 이 시를 <em>탄원</em>으로 만든다. 바울은 로마서 10:18에서 4절을 인용해 복음이 이미 들려졌음을 논증한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>바울이 19:4를 인용하는 자리가 의미심장하다—"그러나 내가 말하노니 그들이 듣지 아니하였느냐 그렇지 아니하다 그 소리가 온 땅에 퍼졌고 그 말씀이 땅 끝까지 이르렀도다"(롬 10:18). 하늘의 말 없는 증언에 관한 문장이 <strong>복음 선포의 보편성</strong>에 적용된 것이다. 창조의 증언이 온 땅에 미치듯 복음도 그러해야 한다는 논리다. 더 깊은 연결은 이 시의 두 부분이 요한복음 1장에서 한 인격으로 만난다는 데 있다. 만물을 지으신 <strong>말씀</strong>(요 1:3)이 곧 육신이 되어 우리 가운데 거하셨다(요 1:14)—창조의 하나님과 토라의 하나님이 같은 분임을 이 시가 노래했다면, 복음은 그 두 계시가 <em>한 얼굴</em>을 가졌다고 말한다. 또한 12–13절의 기도—숨은 허물과 고의의 죄로부터의 정결—는 시편 51편을 거쳐 십자가에서 응답된다. 시인은 "나를 숨은 허물에서 벗어나게 하소서"라고 구했고, 요한일서는 "그 아들 예수의 피가 우리를 모든 죄에서 깨끗하게 하실 것이요"(요일 1:7)라고 답한다. 마지막으로 14절의 '구속자(<span class="hw">גֹּאֵל</span> 고엘)'—가장 가까운 친족으로서 값을 치르고 되사는 자—라는 호칭 자체가 복음의 씨앗이다(룻 4장; 사 43:1).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>창세기 1장</strong>—문학적 배경(클라인스는 우가릿보다 창세기 1–3장과의 친연성을 강조). <strong>시편 8편·104편</strong>—창조 찬양의 짝. <strong>시편 1편·119편</strong>—토라시 삼형제. <strong>욥기 38장</strong>—창조의 증언. <strong>로마서 1:19–20</strong>(일반계시), <strong>로마서 10:18</strong>(19:4 인용). <strong>요한복음 1:1–14</strong>, <strong>요한일서 1:7</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="20" id="ps20">
+<h3><span class="chip-num">20편</span> 전쟁 전날의 기도 — 병거와 말과 이름</h3>
+<p class="lead">출정 전에 먼저 성전으로 후퇴한다. 무엇을 자랑하는가가 누구인지를 결정한다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." 장르는 <strong>왕의 예전</strong>이다. 회중의 중보(1–5절, 왕을 '너'로 부름) → 제사장·예언자의 확신 선언(6절) → 회중의 신뢰 고백과 간구(7–9절)로 이어지는 <em>교창</em> 구조가 뚜렷하다. 자리는 왕과 군대의 출정 직전 성소에서 드린 특별 예배다(모빙켈). 역대하 20장의 여호사밧 기사—왕의 기도, 레위인의 신탁, 회중의 찬양—가 이런 의식의 실황에 가깝다. <span class="c cd">D</span>는 1–5절과 9절이 후대에 <em>모든 사람의 '환난 날'</em>을 위한 중보로 재사용되었다고 본다.</p>
+<p><strong>구조.</strong> 두 연이 각각 간구로 마무리된다. (1) 중보(1–4절)+청원(5절), (2) 확신(6–8절)+청원(9절). '응답하다'와 '날'이 처음과 끝을 묶고(1, 9절), '이름'이 세 번 울린다(1, 5, 7절).</p>
+<div class="vs">
+<span class="ref">1–5절 — 회중이 왕을 위해 기도한다</span>
+<p>"환난 날에 여호와께서 네게 응답하시고 야곱의 하나님의 이름이 너를 높이 드시며." 주목할 것은 <strong>백성이 왕을 위해 기도한다</strong>는 구도다. 왕은 신적 권리로 도움을 요구하지 않고, 제물을 드리며 자신의 무자격과 하나님의 도우심의 필요를 함께 고백한다 <span class="c cc">C</span>. 3절의 번제 언급이 그것이다. 그리고 온 회중이 그 고백에 동참한다—<em>왕의 무자격은 백성의 무자격이고 왕의 필요는 백성의 필요다.</em></p>
+</div>
+<div class="vs">
+<span class="ref">6절 — 아직 싸우지 않았는데 "아노니"</span>
+<p>"여호와께서 자기에게 기름 부음 받은 자를 구원하시는 줄 이제 내가 아노니." 단수 화자(제사장 혹은 예언자)의 신탁이다. <span class="c cd">D</span>는 여기서 <strong>'종말이 중간을 침입하는' 구조</strong>를 읽는다—전투는 아직 시작도 안 했는데 승리가 완료된 사실로 선포된다. 중보 기도는 <em>미래의 확실성을 현재로 끌어오는 언어</em>다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–9절 — 어떤 사람은 병거를, 우리는 이름을</span>
+<p>"어떤 사람은 병거, 어떤 사람은 말을 의지하나 우리는 여호와 우리 하나님의 이름을 자랑하리로다." 이 시의 정점이다. 유의할 것은 이것이 <strong>군사 기술의 부정이 아니라 신뢰의 서열</strong>이라는 점이다. 이스라엘도 전략과 훈련과 병거가 필요했다. 문제는 무엇을 <em>자랑하는가</em>, 곧 무엇을 최종 의지의 대상으로 호명하는가다. 8절의 대조가 결과를 그린다—"그들은 비틀거리며 엎드러지고 우리는 일어나 바로 서도다."</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 배경 설명이 이 시의 신학을 연다. 고대 이스라엘의 경험에서 전쟁은 빈번했고, 이스라엘에서 전쟁은 종교와 분리되지 않았다—여호와는 "용사"이시며 자기 백성과 함께 전쟁의 경험에 참여하셨다(출 15:3). 군사적으로 전투에는 치밀한 계획과 훈련된 군대와 우월한 장비와 싸울 용기가 필요했다. 그러나 이스라엘에는 출정 전에 <strong>한 가지가 더</strong> 필요했다. 전투의 성패가 일차적으로 군사 전략이 아니라 하나님께 달렸다는 것이 히브리 신앙의 근본이었기 때문이다. 그래서 원정을 시작하기 전에 먼저 <strong>성전으로 '후퇴'</strong>해야 했다. 군대를 이끌면서 동시에 백성 가운데서 하나님을 대표하는 왕이 그 예배에서 핵심 역할을 맡았다. 이 시는 히브리 역사와 신학 전체를 관통하는 긴장을 반영한다—역사적 실존의 필요(원수의 존재)와 언약적 신뢰의 요구가 한 예배 안에서 만난다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 6–8절의 확신 뒤에 9절이 다시 간구로 돌아가는 것은 앞의 신뢰가 허세였다는 뜻이 아니라, <strong>믿음의 삶이 무엇인지 보여주는 단서</strong>다. 시인은 약속을 받았고 이제 <em>이미와 아직</em> 사이에서 산다—구원하시리라 확신하면서 동시에 구원하소서 기도한다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 20편과 21편은 한 쌍의 제왕시로 둘 다 전쟁의 때를 배경으로 한다. 오늘 하나님의 백성은 군대를 지닌 국가가 아니므로, 이 시는 에베소서 6:12과 고린도후서 10:4이 말하는 <em>영적 싸움</em>의 맥락에서 적실성을 유지한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>7절의 대조는 신약에서 자랑의 신학으로 이어진다—"자랑하는 자는 주 안에서 자랑하라"(고전 1:31; 렘 9:23–24 인용). 바울은 육체의 자랑거리를 열거한 뒤 그것을 배설물로 여긴다고 말하는데(빌 3:4–8), 이는 병거와 말을 셈하지 않는 20편의 셈법과 같다. 더 깊은 연결은 <strong>싸움의 방식 자체가 바뀌었다</strong>는 데 있다. 그리스도의 나라에서 무기는 육체에 속한 것이 아니며(고후 10:3–4), 참된 승리는 원수를 죽임으로써가 아니라 원수를 위해 죽으심으로 얻어졌다. 그러므로 신자는 이 시를 <em>실제 전쟁의 기도</em>가 아니라 <strong>영적 싸움의 중보</strong>로 부른다. 그리고 6절의 구조—아직 보이지 않는 승리를 이미 아는 것—가 복음의 확신 그 자체다: "우리를 사랑하시는 이로 말미암아 우리가 넉넉히 이기느니라"(롬 8:37).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>출애굽기 15:3</strong>—"여호와는 용사시니". <strong>신명기 17:16; 20:1</strong>—왕은 말을 많이 두지 말 것, 병거를 두려워 말 것. <strong>역대하 20:1–30</strong>—여호사밧의 출정 예배. <strong>이사야 31:1</strong>—"애굽으로 내려가는 자들은 화 있을진저 … 병거를 의지하며". <strong>스가랴 4:6</strong>. <strong>고린도전서 1:31</strong>, <strong>고린도후서 10:3–4</strong>, <strong>로마서 8:37</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="21" id="ps21">
+<h3><span class="chip-num">21편</span> 왕의 기쁨 — 구하기 전에 주신 복</h3>
+<p class="lead">생존을 위해 싸우는 나라에는, 무엇을 위한 생존인지 기억할 시간이 필요하다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." 장르는 <strong>왕의 예전</strong>으로, 감사(1–7절)—전환구(8절)—왕을 향한 예언적 확신 선언(9–12절)—회중의 응답(13절)으로 구성된다. 과거 승리에 대한 감사와 미래 승리에 대한 확신이 공존해 특정 전투 전후로 좁히기 어렵다. <span class="c cc">C</span>는 <strong>대관 기념일 혹은 언약 갱신 의식</strong>을 유력하게 본다—3절의 "순금 관을 그의 머리에 씌우셨나이다"가 (재)대관 예식을, 7절이 언약적 기초를 가리킨다. 20편(출정 기도)과 21편(응답 감사)을 한 쌍으로 읽는 전통적 이해도 있다.</p>
+<p><strong>구조.</strong> 6개 대구(1–7절) + 1개 대구(8절) + 6개 대구(9–13절)의 균형. '주의 힘'이 1절과 13절에서 수미상관을 이룬다.</p>
+<div class="vs">
+<span class="ref">1–7절 — 앞서 가시는 은혜</span>
+<p>"그의 마음의 소원을 들어주셨으며 그의 입술의 요구를 거절하지 아니하셨나이다"(2절). 그리고 3절이 한 걸음 더 나아간다—"주의 <strong>아름다운 복으로 그를 영접하시고</strong> 순금 관을 그의 머리에 씌우셨나이다." 구하기도 전에 마중 나오시는 은혜, 곧 <em>선행 은총</em>의 언어다. 4절 "그가 생명을 구하매 주께서 그에게 주셨으니 곧 영원한 장수로소이다"는 왕조의 영속(다윗 언약)을 가리키며 후대에는 메시아적 생명으로 읽혔다. 7절이 모든 것의 기초를 밝힌다—"왕이 여호와를 의지하오니 지존하신 이의 <span class="hw">חֶסֶד</span>(인자)로 흔들리지 아니하리이다."</p>
+</div>
+<div class="vs">
+<span class="ref">8–13절 — 미래를 향한 확신</span>
+<p>8절부터 화자가 왕에게 직접 말하며 미래의 승리를 선언한다. 9–12절의 심판 언어는 강렬하나(풀무불, 화살), 문맥은 <em>왕의 개인적 복수</em>가 아니라 하나님의 언약 백성을 위협하는 세력에 대한 심판이다. 13절의 회중 응답이 시의 방향을 최종적으로 정한다—"여호와여 <strong>주의 능력으로 높임을 받으소서</strong> 우리가 주의 권능을 노래하고 찬송하게 하소서." 높임받으실 분은 왕이 아니라 여호와시다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 해설이 이 시의 자리를 밝힌다. <strong>다윗 언약은 왕의 통치 전 영역에 영향을 미쳤다</strong>—대관식, 전쟁 수행, 국정 운영 등 언약의 범위 밖에 있는 것은 없었다. 그러나 언약이 <em>모든 일의 배경</em>으로만 머물지 않고 <em>의식적으로 전면에 나오는</em> 때가 한 해에 몇 번 있었으니, 왕의 예전이 바로 그 시간이었다. 역사적 조건상 왕의 시간과 관심의 상당 부분은 전쟁에 쓰일 수밖에 없었다—사방에 나라를 노리는 원수가 있었기 때문이다. <strong>그러나 그 나라는 오직 언약 때문에 존재했다.</strong> 따라서 전쟁 수행도 언약의 틀 안에서 이루어져야 했고, 예전은 <em>기본으로 돌아가는 시간</em>이었다: 승리와 구원은 군사력만으로 얻어진 적이 없고 앞으로도 없으며 오직 하나님의 힘으로 얻어진다는 사실을 되새기는 시간. <span class="c cc">C</span>의 한 문장이 이 시의 요지를 압축한다—"원수의 공격에서 살아남기 위한 끊임없는 분투 속에서, <strong>왜 생존이 필요한지를 기억하기 위해 따로 떼어 놓은 시간이 있어야 했다.</strong>"</p>
+<p>또 하나의 요점은 <strong>과거·현재·미래의 긴밀한 상호 관계</strong>다. 과거를 기억하는 것은 지난 승리만이 아니라 그 승리가 <em>하나님의 행하심의 결과</em>였음을 상기하는 일이며(2–7절), 하나님이 과거에 행하셨으므로 미래에도 승리를 주실 수 있다(9–13절). 기억이 미래의 선례를 세운다. 다만 과거와 미래는 언제나 언약에 달려 있다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 메이스의 정식대로 <strong>이 시의 신학적 목적은 인간 왕을 신적 왕에게 종속시키는 것</strong>이다—왕이 지닌 모든 것, 왕이 하는 모든 것이 하나님에게서 온다. 따라서 리더십은 선물이자 위탁이며, 거기 딸린 복은 지도자의 이익이 아니라 공동체와 세상을 위한 것이다(창 12:1–3).</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 20편이 전투의 도움을 구하며 끝나고 21편이 승리를 감사하며 시작하므로 둘은 한 쌍이다. 골딩게이 등이 지적하듯 둘째 연(8–13절)이 데살로니가후서 1:6–7의 위로 뒤에 있을 것이다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>3절의 "순금 관"과 4절의 "영원한 장수"가 그리스도 안에서 만난다. 히브리서는 <strong>영광과 존귀로 관 쓰신 예수</strong>를 말하는데(히 2:9), 그 관은 대관식에서 씌워지기 전에 <em>가시관</em>으로 먼저 씌워졌다(요 19:2). 21편의 왕은 승리 후에 관을 받았지만, 참된 왕은 <strong>죽음을 통과하여</strong> 관을 받으셨다. 그리고 4절이 구한 "영원한 장수"는 다윗 왕조에서 은유였으나 그리스도에게서 문자가 되었다—"그는 멸망하지 아니할 생명의 능력을 따라 되었으니"(히 7:16). 7절의 구조도 복음적이다: 왕이 흔들리지 않는 이유는 자기 힘이 아니라 <em>지존자의 헤세드</em>다. 신자의 견인(perseverance)도 같은 문법을 따른다(롬 8:38–39). 마지막으로 13절이 모든 왕의 시가 도달해야 할 자리를 보여 준다—높아지실 분은 왕이 아니라 하나님이시며, 그래서 계시록의 어린양 찬양은 왕이신 그분께로 향한다(계 5:12).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘하 7:8–16</strong>—다윗 언약(4절 '영원한 장수'의 근거). <strong>시편 20편</strong>—짝을 이루는 출정 기도. <strong>시편 61:6–7; 72:5</strong>—왕의 장수 기원. <strong>히브리서 2:9; 7:16</strong>, <strong>요한복음 19:2</strong>, <strong>요한계시록 5:12</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="22" id="ps22">
+<h3><span class="chip-num">22편</span> 어찌 나를 버리셨나이까 — 십자가의 시</h3>
+<p class="lead">버림받음의 절규로 시작해 아직 태어나지 않은 세대의 찬양으로 끝난다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 '아침의 암사슴(<span class="hw">אַיֶּלֶת הַשַּׁחַר</span> 아옐렛 하샤하르)'에 맞춘 노래"—곡조명으로 추정된다. 장르는 탄원(1–21절)과 감사·찬양(22–31절)이 결합된 <strong>개인의 예전(liturgy)</strong>이다. 두 시가 융합되었다는 견해가 있으나 <span class="c cc">C</span>는 현재 형태의 통일성—탄원에서 기도로, 기도에서 찬양으로 옮겨 가는 <em>하나의 예배 순서</em>—을 지지한다. 결정적 이음매는 21절 끝의 "주께서 내게 응답하시고"(히브리어 완료형)다: 기도(19–21절) 뒤에 <strong>본문에 기록되지 않은 구원 신탁</strong>이 선포되었고 그 확신이 22절 이하의 찬양을 폭발시킨다.</p>
+<p><strong>구조.</strong> 탄원부는 하나님을 향한 시선과 고난의 묘사가 교대한다—버림받음(1–2절) / 조상들의 신뢰 회상(3–5절) / 벌레 같은 나와 조롱(6–8절) / 태에서부터의 하나님(9–11절) / 짐승들의 포위(12–18절) / 구원의 간구(19–21절). 찬양부는 회중의 찬송(22–26절)에서 온 세계와 모든 세대(27–31절)로 확장된다.</p>
+<div class="vs">
+<span class="ref">1–2절 — 성경에서 가장 어두운 첫 행</span>
+<p>"내 하나님이여 내 하나님이여 어찌 나를 버리셨나이까." 그런데 절규의 형식을 보라—버림받았다고 말하면서도 <strong>"내 하나님"이라 부른다.</strong> 관계는 끊기지 않았고, 끊긴 것은 <em>응답</em>이다. 2절 "내가 낮에도 부르짖고 밤에도 잠잠하지 아니하오나 응답하지 아니하시나이다"가 그 고통의 성격을 규정한다.</p>
+</div>
+<div class="vs">
+<span class="ref">3–11절 — 조상들은 건짐받았는데</span>
+<p>"우리 조상들이 주께 의뢰하고 의뢰하였으므로 그들을 건지셨나이다"(4절). 이 회상이 위로가 아니라 <strong>고통을 심화시킨다</strong>—그들은 건짐받았는데 나는 왜? 6절의 자기 인식이 처참하다: "나는 벌레요 사람이 아니라." 7–8절의 조롱은 신학의 형태를 띤다—"그가 여호와께 의탁하니 구원하실 걸." 9–11절에서 시인은 마지막 근거로 <em>태에서부터의 하나님</em>을 붙든다. 욥기 3장, 예레미야 20:14–18처럼 출생의 순간을 되짚지만, 저들과 달리 시인은 그 기억에서 <strong>저주가 아니라 근거</strong>를 찾는다.</p>
+</div>
+<div class="vs">
+<span class="ref">12–18절 — 짐승들과 무너지는 몸</span>
+<p>바산의 황소, 찢으며 부르짖는 사자, 개들의 무리가 에워싼다. 그 사이에서 몸이 해체된다—"나는 물 같이 쏟아졌으며 내 모든 뼈는 어그러졌으며 내 마음은 밀랍 같아서 내 속에서 녹았으며"(14절). 15절 "내 혀가 입천장에 붙었나이다"는 극심한 탈수의 묘사다. 그리고 17–18절—"내가 내 모든 뼈를 셀 수 있나이다 … 내 겉옷을 나누며 속옷을 제비 뽑나이다." 16절의 "내 수족을 찔렀나이다"는 히브리 본문이 난해해(<span class="hw">כארי</span>) 칠십인역·시리아역과 마소라 사이에 오랜 논쟁이 있는 대목이다.</p>
+</div>
+<div class="vs">
+<span class="ref">19–26절 — 응답, 그리고 회중 한가운데의 찬양</span>
+<p>"내 생명을 칼에서 건지시며 … 사자의 입에서 나를 구하소서 주께서 내게 응답하시고 들소의 뿔에서 구원하셨나이다"(20–21절). 문장 하나 안에서 간구가 응답으로 바뀐다. 그리고 22절—"내가 주의 이름을 <strong>형제에게 선포하고 회중 가운데에서</strong> 주를 찬송하리이다." 구원의 다음 동작이 사적 안도가 아니라 <em>공동체 앞의 증언</em>이다. 26절 "겸손한 자는 먹고 배부를 것이며"는 감사 제사의 잔치를 가리킨다.</p>
+</div>
+<div class="vs">
+<span class="ref">27–31절 — 시야의 폭발</span>
+<p>"땅의 모든 끝이 여호와를 기억하고 돌아오며 모든 나라의 모든 족속이 주의 앞에 예배하리니." 한 사람의 구원이 <strong>열방의 회심</strong>으로 번진다. 더 나아가 29절은 "진토 속으로 내려가는 자"—죽어 가는 자들—까지, 30–31절은 <strong>아직 태어나지 않은 세대</strong>까지 포괄한다. "그가 이를 행하셨다"(31절)는 마지막 어구는 히브리어로 단 한 단어(<span class="hw">עָשָׂה</span> 아사)이며, 십자가의 "다 이루었다"(요 19:30)와 놀랍게 공명한다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 파스칼의 말—"사람은 홀로 죽는다"—로 이 시를 연다. 시인은 <strong>죽어 감의 고독</strong>으로 탄원을 시작한다. 그것은 하나님의 부재 속의 고독이며, 동무도 위로도 주지 않는 악한 사람들의 존재로 더 무거워진 고독이다. 그래서 이 시는 구약에서 가장 깊은 황폐를 표현하는 글들—욥의 저주(욥 3장), 예레미야의 탄식(렘 20:14–18)—과 나란히 선다. 그러나 <strong>결정적 차이</strong>가 있다. 이 시는 <em>예전</em>이라는 성격 때문에, 죽어 감의 고독을 즉시 <strong>돌보는 공동체의 문맥</strong> 안에 놓는다. 완전한 황폐 속에서 말을 시작한 예배자가 <em>동료 예배자들을 하나님 찬양으로 초대하며</em> 끝맺는다. 황폐에서 건지시는 분은 하나님 자신이지만, 그 건지심이 선포되는 자리는 다름 아닌 <strong>하나님 백성의 공동체</strong>다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 이 기도를 <strong>십자가에 두고 끝내서는 안 된다</strong>. 고난받고 수치당하며 원수에게 둘러싸인 자의 부르짖음은 애굽에서 부르짖은 이스라엘의 것일 수도, 비참 속에서 하나님께 부르짖은 아프리카 노예들의 것일 수도 있다. 하나님께는 그리스도 이전에도 고난받는 자를 향한 귀가 있으셨다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 이 시는 <em>예언이 아니라 탄원</em>이며, 널리 알려진 기독론적 의미가 그 사실을 흐리게 해서는 안 된다. 오늘도 고통 한가운데서 하나님의 임재를 구하는 예배자의 모범 기도이며, 끝의 확신과 기쁨이 소망을 전한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p><span class="c cc">C</span>는 이 시가 원래 의미와 배경에서는 메시아 시가 아니지만 <strong>신약의 관점에서는 최고의 메시아 시</strong>로 해석될 수 있다고 정리한다. 그 근거가 본문 자체에 있다. 십자가에서 예수는 이 시의 첫 행으로 부르짖으셨고(마 27:46; 막 15:34), 그럼으로써 <em>자신의 고독과 고난을 시인의 그것과 동일시하셨다</em>. 복음서 기자들도 이 시의 빛에서 십자가를 해석하여 그 어휘로 현장을 묘사했다—머리를 흔드는 조롱(마 27:39; 22:7), "그가 하나님을 신뢰하니 이제 그를 구원하실지라"(마 27:43; 22:8), 겉옷을 나누고 제비 뽑음(요 19:24; 마 27:35; 22:18). 그래서 이 시는 <strong>예언적 예고의 외양</strong>을 띠게 된다.</p>
+<p>여기서 중요한 것은 예수께서 <em>첫 절만</em> 인용하신 것이 아니라는 점이다. 유대인의 관습에서 시의 첫 행은 시 전체를 부르는 방식이었다. 그러므로 십자가의 부르짖음은 절망의 종결이 아니라 <strong>22편 전체의 궤적—버림받음에서 열방의 찬양까지—을 자신의 길로 삼으신 선언</strong>이다. 히브리서가 이를 확증한다: 22:22("내가 주의 이름을 내 형제들에게 선포하고 내가 주를 교회 중에서 찬송하리라")를 <strong>부활하신 그리스도의 말씀</strong>으로 인용하기 때문이다(히 2:12). 절규로 시작한 시가 승리의 찬양으로 끝나듯, 십자가는 부활로 끝난다. 그리고 31절의 "그가 이를 행하셨다"가 "다 이루었다"와 만난다. 신자가 이 시를 기도할 때, 그는 <em>하나님께 버림받은 적이 있는 유일한 분</em> 곁에서 기도하는 것이며, 그렇기에 결코 버림받지 않는다(히 13:5).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>욥기 3장</strong>·<strong>예레미야 20:14–18</strong>—황폐의 자매 본문. <strong>이사야 53장</strong>—고난받는 종. <strong>시편 69편</strong>—또 하나의 수난 시편. <strong>시편 23편</strong>—바로 다음에 오는 신뢰의 노래(편집적 대비). <strong>신약</strong>: 마 27:35, 39, 43, 46 · 막 15:24, 29, 34 · 눅 23:34–35 · 요 19:24, 28, 30 · 히 2:12 · 벧전 2:23.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="23" id="ps23">
+<h3><span class="chip-num">23편</span> 여호와는 나의 목자시니 — 신뢰시의 왕관</h3>
+<p class="lead">위험이 깊어질수록 하나님은 '그'가 아니라 '당신'이 되신다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 궁켈 이래 <strong>신뢰시</strong>로 보는 것이 공감대다. 감사시(포크트)나 왕의 시(이튼, 메릴—<span class="c cd">D</span>의 태너도 '목자-왕이신 야웨와 봉신인 시인'이라는 왕적 독법을 지지)로 보는 견해도 있으나, 은유로 가득한 일반적 언어라 특정이 어렵다. 원 배경 논쟁—사적 신앙시, 감사 제사 잔치의 예전(5절의 상을 문자적으로), 포로기 독법—도 확정 불가하다. <span class="c cd">D</span>의 결론처럼 회복 불가능한 '원 자리'를 추적하기보다 <strong>시의 신학적 증언 자체</strong>에 집중하는 편이 낫다. 편집상의 자리가 의미심장하다—22편의 버림받음 절규 바로 다음이다.</p>
+<p><strong>구조.</strong> 두 개의 심상. (1) 목자이신 여호와(1–4절), (2) 주인(host)이신 여호와(5–6절). 3인칭("그가")에서 2인칭("주께서")으로의 전환이 <strong>골짜기 구절(4절)에서</strong> 일어난다.</p>
+<div class="vs">
+<span class="ref">1–3절 — 부족함이 없으리로다</span>
+<p>"여호와는 나의 목자시니 내게 부족함이 없으리로다." 고대 근동에서 '목자'는 <strong>왕의 칭호</strong>였다(함무라비도 자신을 목자라 불렀다). 그러므로 이 은유는 목가적 낭만이 아니라 <em>통치의 언어</em>다. 다만 이스라엘에서 그 통치는 돌봄으로 정의된다. 2–3절의 동사들이 모두 <strong>주어가 하나님</strong>이다—누이시고, 인도하시고, 소생시키시고, 인도하신다. 양은 아무것도 하지 않는다. 3절 "자기 이름을 위하여 의의 길로 인도하시는도다"—인도의 최종 근거가 양의 자격이 아니라 <em>목자의 명예</em>다.</p>
+</div>
+<div class="vs">
+<span class="ref">4절 — 시의 심장</span>
+<p>"내가 사망의 음침한 골짜기로 다닐지라도 해를 두려워하지 않을 것은 <strong>주께서 나와 함께 하심이라</strong>." 여기서 인칭이 바뀐다. 앞서 "그가"였던 분이 골짜기에 들어서자 "주께서"가 된다—<em>위험이 깊어질수록 하나님은 삼인칭 신학에서 이인칭 임재로 바뀐다.</em> <span class="c cd">D</span>의 요약대로 이 시의 심장은 "주께서 나와 함께 하심이라"(<strong>임마누엘</strong>)이며, 시 전체가 앞뒤에서 이 한 구절을 떠받친다. 지팡이(<span class="hw">שֵׁבֶט</span> 셰베트)와 막대기(<span class="hw">מִשְׁעֶנֶת</span> 미쉬에네트)는 각각 맹수를 물리치는 무기와 길을 인도하는 도구—<strong>보호와 인도</strong>다.</p>
+</div>
+<div class="vs">
+<span class="ref">5–6절 — 원수의 목전에서 차린 상</span>
+<p>"주께서 내 원수의 목전에서 내게 상을 차려 주시고." 은유가 목자에서 <strong>주인(host)</strong>으로 바뀐다. 놀라운 것은 원수가 <em>제거되지 않았다</em>는 점이다—여전히 보고 있는데 그 앞에서 잔치가 벌어진다. 고대의 손님 환대는 주인이 손님의 안전을 자기 명예로 보증하는 제도였다. 기름 부음과 넘치는 잔은 그 환대의 절정이다. 6절의 "따르리니"(<span class="hw">רָדַף</span> 라다프)는 본래 <strong>추격하다</strong>는 뜻의 강한 동사다—원수가 쫓아오는 세상에서 <em>선하심과 인자하심이 나를 추격한다.</em> 그리고 "여호와의 집에 영원히 살리로다"로 끝난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 평가가 이 시의 위대함을 짚는다. 매력의 일부는 시의 단순함과 아름다움, 그리고 거기서 뿜어 나오는 잔잔한 확신에 있다. 그러나 그 이상으로 시인의 천재성은 <strong>하나님과의 신뢰 관계를 표현해 낸 방식</strong>에 있다. 그런 관계를 단순한 언어로 표현하기란 결코 쉽지 않다—한편으로는 단조로운 확언의 반복으로 가라앉기 쉽고, 다른 한편으로는 그 심오함 때문에 언어의 능력을 벗어나 버리기 쉽다. 시인은 두 극단을 피해 <em>단순하면서 동시에 심오한</em> 중간 길을 찾았다.</p>
+<p>결정적 관찰은 이것이다—<strong>이 시는 일관되게 '양의 관점'에서 쓰였다.</strong> 곧 신뢰와 확신의 표현은 신뢰하는 자 편의 <em>무력함과 필요에 대한 자각</em>을 전제한다. 그리고 시인은 언약 관계의 근본을 주(主)와 종의 언어가 아니라 <strong>목자와 양이라는 훨씬 더 친밀한 언어</strong>로 제시했다. 22편 다음에 이 시가 놓인 편집도 신학적이다—버림받음의 절규를 지나온 자리에서 "주께서 나와 함께 하심이라"가 들린다. 신뢰시는 탄원이 없는 사람의 노래가 아니라 <em>탄원을 통과한 사람의 노래</em>다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시의 심장에 <strong>주께서 나와 함께 하심이라</strong>는 우아하고 지속적인 신앙 진술이 있다. 이는 하나님의 가장 근본적인 약속 <em>내가 너와 함께 있으리라</em>에 대한 믿음의 응답이며, 신앙의 삶은 그 두 흐름 사이에서 밀물과 썰물처럼 오간다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 4절의 <em>사망의 음침한 골짜기</em>와 6절의 <em>영원히 살리로다</em>라는 전통적 번역은 오늘날 의문시된다. 그 결과 이 시는 죽음을 앞둔 이들만이 아니라 <strong>삶의 온갖 어려움을 겪는 모든 이</strong>에게 훨씬 넓게 적용된다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p><span class="c cc">C</span>가 지적하듯 23편은 신약에 명시적으로 인용되지는 않지만 <strong>복음서의 실체를 이해하는 데 중요하다</strong>. 예수께서 "나는 선한 목자라"(요 10:11)고 하셨을 때, 그분은 청중이 히브리 성경에서 익히 아는 은유를 활용하신 것만이 아니었다. 구약에서 <em>목자</em>는 궁극적으로 여호와의 칭호였기에(시 23편; 겔 34장), 그 선언은 자기 정체에 관한 주장을 함축한다. 게다가 예수는 그 은유에 없던 것을 더하신다—"선한 목자는 양들을 위하여 목숨을 버리거니와"(요 10:11). 23편의 목자는 양을 <em>사망의 골짜기로 인도해 통과시키는</em> 분이지만, 요한복음의 목자는 <strong>양 대신 그 골짜기에서 죽으시는</strong> 분이다. 에스겔 34장의 약속—"내가 친히 내 양의 목자가 되어"—이 여기서 성취된다.</p>
+<p>5절의 상도 새 의미를 얻는다. 원수의 목전에서 차려진 그 상은 교회에서 <strong>성찬</strong>으로 이어졌다—죽음과 죄가 여전히 지켜보는 세상 한복판에서, 이미 승리한 주인이 차려 주시는 잔치다. 그리고 6절의 "여호와의 집에 영원히 살리로다"는 요한복음 14:2("내 아버지 집에 거할 곳이 많도다")과 요한계시록 7:17에서 완성된다—"보좌 가운데에 계신 어린 양이 그들의 <em>목자</em>가 되사 생명수 샘으로 인도하시고."</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>창세기 48:15</strong>—"나를 기르신 하나님"(야곱의 축복). <strong>에스겔 34장</strong>—거짓 목자들과 친히 목자 되실 하나님. <strong>이사야 40:11</strong>—"그는 목자 같이 양 떼를 먹이시며". <strong>시편 80:1; 95:7; 100:3</strong>—목자 은유 계열. <strong>요한복음 10:1–18</strong>, <strong>히브리서 13:20</strong>("양들의 큰 목자"), <strong>베드로전서 2:25; 5:4</strong>, <strong>요한계시록 7:17</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="24" id="ps24">
+<h3><span class="chip-num">24편</span> 영광의 왕이 들어가신다 — 문들아 머리를 들지어다</h3>
+<p class="lead">사람이 하나님께 올라가고, 하나님이 사람에게 들어오신다. 한 시에서 두 강림이 만난다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 세 요소의 결합이다—창조 찬양(1–2절), 입장 예전(3–6절, 15편과 자매), <strong>궤 행렬 예전</strong>(7–10절, 문답 형식). <span class="c cd">D</span>가 소개하는 크로스의 고전적 견해는 가을 축제에서 언약궤의 성전 입성을 기념한 교창 예전으로 보는 것이고, <span class="c cc">C</span>는 <strong>전쟁에서 돌아오는 궤</strong>—임재의 상징으로 전투에 동행했던 궤가 승리와 함께 귀환하는 장면(민 10:36)—의 예전으로 본다. 사무엘하 6장(다윗의 궤 운반)이 원형적 장면이다. 칠십인역 표제는 이 시를 <strong>주간 첫날</strong>의 시로 지정했다(성전의 요일별 시편 중 일요일 시, 창조 주제 때문).</p>
+<p><strong>구조.</strong> (1) 창조 주권(1–2절), (2) 입장 자격(3–6절), (3) 문과 왕의 문답(7–10절).</p>
+<div class="vs">
+<span class="ref">1–2절 — 땅과 거기 충만한 것</span>
+<p>"땅과 거기에 충만한 것과 세계와 그 가운데에 사는 자들은 다 여호와의 것이로다. 여호와께서 그 터를 바다 위에 세우심이여." 성전 예전이 <strong>지역 신전이 아니라 온 세계</strong>에 대한 선언으로 시작된다. '바다 위에 세우심'은 고대 근동의 혼돈 물 모티프를 반영하되, 여기서 바다는 대등한 적수가 아니라 이미 제압된 기초일 뿐이다. 바울이 이 구절을 우상 제물 문제에 인용한다(고전 10:26).</p>
+</div>
+<div class="vs">
+<span class="ref">3–6절 — 누가 오를 것인가</span>
+<p>"여호와의 산에 오를 자가 누구며 그의 거룩한 곳에 설 자가 누구인가." 15편의 질문이 되풀이되고, 대답은 더 압축된다—"곧 <strong>손이 깨끗하며 마음이 청결하며</strong> 뜻을 허탄한 데에 두지 아니하며 거짓 맹세하지 아니하는 자로다." 손(행위)과 마음(동기)이 함께 요구된다는 점이 핵심이다. 6절 "이는 여호와를 찾는 자들이요"—자격자의 최종 정의가 도덕적 성취가 아니라 <em>찾는 자</em>라는 방향으로 마무리되는 것이 중요하다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–10절 — 문답</span>
+<p>"문들아 너희 머리를 들지어다 영원한 문들아 들릴지어다 영광의 왕이 들어가시리로다." 성문이 <strong>인격화</strong>되어 머리를 들라는 명령을 받는다. 왕이 너무 크셔서 기존의 문 높이로는 부족하다는 심상이다. 그리고 문지기의 물음—"영광의 왕이 누구시냐"—에 대한 답이 <strong>전쟁 언어</strong>다: "강하고 능한 여호와시요 <em>전쟁에 능한</em> 여호와시로다." 마지막 대답이 "만군의 여호와께서 곧 영광의 왕이시로다"로 절정에 이른다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 구약 문헌에서 <strong>하나님의 왕권</strong>보다 중심적인 주제가 드물다고 하면서, 24편을 그 개념의 폭과 의미를 이해하는 핵심 본문으로 꼽는다. 여호와의 왕권은 단순한 종교적 확언이 아니라 <em>예배와 찬양의 근거</em>다. 예배하는 자란 그 왕권을 인정하고 주권자 하나님의 통치를 받아들이는 자다. 그런데 이 시의 천재성은 <strong>우주론적 신앙과 역사적 경험을 하나로 묶은 데</strong> 있다. 우주론의 관점에서 세계는 창조되었고 따라서 <em>질서</em>를 대표한다(1–2절)—그 질서는 왕이신 하나님이 세우셨다. 그러나 전쟁과 갈등으로 점철된 역사적 경험은 다른 실재, 곧 세계가 실제로는 <em>혼돈</em>으로 얼룩져 있음을 시사한다. 이 시가 그 딜레마를 해소한다: <strong>질서의 창조자이신 하나님이 곧 이스라엘의 용사이시며</strong>, 이스라엘의 질서 있는 실존을 위협하는 군사적 혼돈을 제압하신다. 창조의 질서와 역사 속의 승리·평화는 하나의 개념—<em>하나님은 왕이시다</em>—의 두 면이다.</p>
+<p>그리고 결정적 단서가 붙는다. 창조의 질서가 <strong>도덕적 질서</strong>이듯("그의 거룩한 곳", 3절), 용사 왕이 이루신 평화와 승리도 이스라엘이 "깨끗한 손과 청결한 마음"을 지니는 동안에만 그들의 것이었다. 하나님의 왕권을 인정하는 것은 그 왕권을 인정하는 자들의 예배로 이어져야 하며, <strong>예배는 도덕적 성실을 전제한다</strong>—이것이 이 시의 중심점이다 <span class="c cc">C</span>. <span class="c cd">D</span>의 제목 '상호 강림(Mutual Advents)'이 구조를 요약한다: 사람이 하나님께 올라가는 입장(3–6절)과 하나님이 사람에게 들어오시는 입성(7–10절)이 한 시에서 만난다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 영광의 왕에 대한 신약의 증언은 어떤 서부극 줄거리보다 깊고 복잡하다. 영원에서 오신 이가 권세와 주권을 지니셨으나 그것을 내려놓으셨다—<strong>죽이는 대신 죽임당하기를 택하셨고</strong>, 그 죽음에서 죽음 자체가 죽었다(롬 6:4–5).</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 세 부분이 처음엔 느슨해 보이나 물러서서 보면 응집성이 드러난다. 입장 예전은 궤가 성소로 돌아오는 일의 서곡으로 이해되며, 바다 위에 땅을 세우신 창조주의 권위 선언(1–2절)이 전체의 알맞은 서곡이 된다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>교회는 이 시를 오래도록 <strong>대림절과 승천일</strong>에 불러 왔고, 그 사용에는 신학적 근거가 있다. 7–10절은 왕이 자기 도성에 들어오시는 장면인데, 복음서에는 그 장면이 두 번 나온다. 한 번은 종려주일의 예루살렘 입성으로—그러나 그 왕은 병거가 아니라 나귀를 타셨다(마 21:5; 슥 9:9). "전쟁에 능한 여호와"가 무장 해제된 모습으로 들어오신 것이다. 또 한 번은 승천으로—에베소서가 시편의 언어로 이를 노래한다(엡 4:8, 시 68편 인용). 초대교회는 "영광의 왕이 누구시냐"라는 물음에 <strong>영광의 주</strong>라는 답을 붙였다(고전 2:8; 약 2:1).</p>
+<p>3–6절과 7–10절의 관계도 복음적으로 결정적이다. <em>누가 여호와의 산에 오를 것인가</em>—15편에서처럼 이 질문은 우리를 정직하게 만들되 절망하게 만든다. 그런데 이 시는 그 질문을 던진 뒤 <strong>다른 방향의 운동</strong>을 보여 준다: 하나님이 <em>내려오신다.</em> 사람이 올라가지 못하는 자리에 왕이 친히 들어오시는 것—이것이 성육신의 문법이다. 그리고 그렇게 오신 왕이 우리 대신 깨끗한 손과 청결한 마음을 지니셨기에, 이제 그분 안에서 우리도 오를 수 있다(히 12:22 "너희가 이른 곳은 시온 산과"). 6절의 "여호와를 찾는 자들"이 자격의 최종 정의였다는 점도 여기서 빛난다—<strong>자격은 성취가 아니라 방향</strong>이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘하 6장</strong>—궤의 예루살렘 입성. <strong>민수기 10:35–36</strong>—궤의 출정과 귀환 함성. <strong>시편 15편</strong>—짝을 이루는 입장 예전(15–24편 대칭의 양 끝). <strong>시편 68편</strong>—궤 행렬의 또 다른 시. <strong>고린도전서 10:26</strong>—24:1 인용. <strong>스가랴 9:9</strong>·<strong>마태복음 21:5</strong>, <strong>에베소서 4:8</strong>, <strong>고린도전서 2:8</strong>, <strong>히브리서 12:22</strong>.</p>
+</div>
+</div>
+<hr class="wall"/>
+<h3 id="g-c">셋째 묶음 — 25–34편: 이합체시로 감싼 용서와 감사 (중심축 29편)</h3>
+<div class="note">
+<div class="tt">이 묶음의 설계</div>
+<p>알파벳 이합체시인 <strong>25편과 34편</strong>이 앞뒤를 감싸고(둘 다 알파벳 밖의 '페' 행으로 끝나는 공통 후기를 가진다), 그 안에서 죄 용서(32편)와 감사(30·34편)의 비중이 커진다. 중심에는 뇌우 속의 왕이신 여호와를 노래하는 29편이 놓인다.</p>
+</div>
+<div class="chap" data-psalm-context="25" id="ps25">
+<h3><span class="chip-num">25편</span> 알파벳으로 드리는 기도 — 주의 길을 내게 가르치소서</h3>
+<p class="lead">1편이 두 길을 가리키는 이정표라면, 25편은 그 길을 걷는 자의 동반 기도다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 개인 탄원으로 분류되곤 하나 어조상 <strong>신뢰의 기도</strong>가 더 정확하다 <span class="c cc">C</span>. <strong>알파벳 이합체시</strong>(각 자음마다 한 대구)라는 형식이 지배적이어서 사고가 선형적으로 전개되지 않고 간구와 신뢰가 교대한다. 언약 어휘(헤세드 6·7·10절; 언약 10·14절)와 지혜 어휘(길 4·5·8·9·12절; 경외 12·14절)가 공존한다. 문학적 창작으로 보는 견해가 유력하며 후에 회중 예배용이 되었다. 22절("이스라엘을 그 모든 환난에서 속량하소서")은 개인의 시를 <em>공동체화한 후기</em>로, 알파벳 밖의 추가 '페' 행이다(34편도 동일—두 시의 편집적 연관).</p>
+<p><strong>구조.</strong> 이합체의 틀 안에 교차 구조가 제안된다(묄러): A(1–3 수치)–B(4–7 가르침과 기억)–C(8–10 선하신 교사)–<strong>D(11 중심: 죄 사함)</strong>–C′(12–14 경외하는 자를 가르치심)–B′(15–18 사죄)–A′(19–21 수치).</p>
+<div class="vs">
+<span class="ref">4–7절 — 가르치소서, 그리고 기억하지 마소서</span>
+<p>"여호와여 주의 도를 내게 보이시고 주의 길을 내게 가르치소서." 이 시의 핵심 동사는 <strong>'가르치다'</strong>이며, 5절에서 그 이유가 밝혀진다—"주는 내 구원의 하나님이시니." 7절이 기억의 두 방향을 대비한다: "내 젊은 시절의 죄와 허물을 <em>기억하지 마시고</em> 주의 인자하심을 따라 나를 <em>기억하시옵소서</em>." 같은 동사가 정반대로 쓰인다. 은혜란 하나님의 기억이 <strong>죄에서 사람에게로 옮겨지는 일</strong>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">8–14절 — 죄인을 가르치시는 교사</span>
+<p>"여호와는 선하시고 정직하시니 그러므로 <strong>그 도로 죄인들을 교훈하시리로다</strong>"(8절). 논리가 놀랍다—하나님이 선하시므로 죄인을 <em>버리시는</em> 것이 아니라 <em>가르치신다</em>. 11절이 이합체 구조의 중심에 놓인다: "여호와여 나의 죄악이 크오니 주의 이름으로 말미암아 사하소서." 사죄의 근거가 죄의 작음이 아니라 <strong>하나님의 이름</strong>이다. 14절 "여호와의 친밀하심이 그를 경외하는 자들에게 있음이여"—<span class="hw">סוֹד</span>(소드)는 왕의 <em>측근 회의</em>를 뜻하는 말로, 경외하는 자가 하나님의 비밀 회의에 초대받는다는 심상이다.</p>
+</div>
+<div class="vs">
+<span class="ref">15–22절 — 외로움과 고난, 그리고 공동체</span>
+<p>"나는 외롭고 괴로우니 내게 돌이키사 나에게 은혜를 베푸소서"(16절). 17–18절이 안팎의 고통을 함께 아뢴다—마음의 근심과 원수의 미움, 그리고 "내 모든 죄를 사하소서." 마지막 22절이 시선을 개인에서 <strong>이스라엘 전체</strong>로 옮긴다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 비교가 이 시의 자리를 정확히 잡아 준다. <strong>25편의 기도는 1편의 지혜를 보완한다.</strong> 1편은 교훈적 지혜 전통에서 의인의 길과 악인의 길이라는 두 길을 제시했다. 그러나 1편만 따로 읽으면 오해를 부를 수 있다—마치 인생의 본질이 <em>옳은 길을 선택하는 것</em>이고 일단 선택하면 만사가 잘될 것처럼 들릴 수 있기 때문이다. 25편에서 지혜의 주제들이 다시 나타나되 이번에는 <strong>기도의 문맥</strong> 안에 놓인다. 이는 이미 선택을 마치고 의인의 길을 걷고 있는 사람의 기도다. 냉정한 지혜가 <em>간절한 간구</em>로 변모했는데, 그 길이 걷기에 결코 쉽지 않기 때문이다. 길가에는 걷는 이를 수치스럽게 만들려는 원수들이 늘어서 있고, 나그네 자신도 지난날 길을 벗어났던 기억과 옛 죄를 떠올리며 내적 의심에 시달린다. <strong>의인의 길의 본질은 이것이다—하나님의 동행과 우정 없이는 걷기에 너무 어려운 길.</strong> 안팎으로 괴로운 시인은 길 위에서 잠시 멈춰 섰다. 돌아갈 수 없음은 알지만 어떻게 계속 갈지는 거의 알지 못한다. 그래서 그는 길을 보여 주시고 그 길로 걷게 해 달라고 기도한다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 도움을 구하는 기도 특유의 절박함이 없고 하나님의 부재·원수·개인의 죄·가르침·개입 요청을 두루 아우른다. 곧 <em>단일 사건에 대한 반응이 아니라 기도하는 이의 삶을 형성해 온 사건들에 대한 성찰</em>이다. 하나님은 우리를 단번에 구원하고 마시지 않고 삶의 오르내림 속에서 거듭 찾아오신다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 77편의 시인이 하나님을 언약 불이행으로 고발해 행동을 촉구한다면, 25편의 탄원자는 <strong>자신이 품은 신뢰에 하나님이 부응하시라고 도전한다</strong>. 죄인임을 인정하면서도 은혜로 대해 주시기를 기대하는 자리다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>11절이 복음의 문법을 미리 보여 준다—"나의 죄악이 <strong>크오니</strong> … 사하소서." 죄가 작아서가 아니라 크기 때문에 용서를 구한다는 이 논리는, 죄가 더한 곳에 은혜가 더욱 넘친다는 바울의 진술(롬 5:20)로 이어진다. 8절도 그렇다—"그 도로 <em>죄인들을</em> 교훈하시리로다"는 "나는 의인을 부르러 온 것이 아니요 죄인을 부르러 왔노라"(막 2:17)와 같은 신학이다. 그리고 이 시의 중심 요청—"주의 길을 내게 가르치소서"—에 대한 최종 응답이 요한복음에 있다: "내가 곧 길이요 진리요 생명이니"(요 14:6). 시인이 길을 <em>배우기</em> 원했다면, 복음은 길이 <em>인격으로</em> 오셔서 앞서 걸으신다고 말한다. 그러므로 그리스도인의 제자도는 지도를 익히는 일이 아니라 <strong>동행하는 일</strong>이다. 14절의 '소드'—하나님의 측근 회의—도 요한복음에서 성취된다: "너희를 친구라 하였노니 내가 내 아버지께 들은 것을 다 너희에게 알게 하였음이라"(요 15:15).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 1편</strong>—두 길(25편이 그 길 위의 기도). <strong>시편 34편</strong>—짝을 이루는 이합체시(같은 형식의 후기). <strong>시편 119편</strong>—"주의 길을 가르치소서"의 확장. <strong>출애굽기 34:6–7</strong>—6절 "주의 긍휼하심과 인자하심"의 원천. <strong>아모스 3:7</strong>—'소드'의 예언자적 용례. <strong>로마서 5:20</strong>, <strong>요한복음 14:6; 15:15</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="26" id="ps26">
+<h3><span class="chip-num">26편</span> 나를 판단하소서 — 성전 문 앞의 결백 선언</h3>
+<p class="lead">이 시의 결백은 무죄함이 아니라 온전함, 곧 방향의 일관성이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 궁켈은 무죄 주장의 탄원(병자의 기도)으로 보았으나, <span class="c cc">C</span>는 포크트를 따라 <strong>성전 문에서의 순례자 의식</strong>—15·24편과 근친인 입장 예전의 일부—으로 본다. 예배 참여 전 정결 의식("무죄하므로 손을 씻고 주의 제단에 두루 다니며", 6절)과 결백 선언, 심판 요청으로 구성된다. 12절의 '무리'는 절기 행렬 용어다(68:26). <span class="c cd">D</span>는 25편과의 연속 독법을 제안한다—죄와 수치를 다룬 25편 다음에 오는 '수치의 정반대', 곧 헤세드에 근거한 담대한 검증 요청이라는 것이다.</p>
+<p><strong>구조.</strong> (1) 판단과 시험의 요청(1–3절), (2) 결백의 내용(4–5절), (3) 성전 사랑(6–8절)과 죄인들과 구별해 달라는 청원(9–10절), (4) 완전함의 행보와 회중의 송축(11–12절). 1–3절과 11–12절이 수미상관.</p>
+<div class="vs">
+<span class="ref">1–3절 — 단련하소서</span>
+<p>"여호와여 나를 판단하소서 내가 나의 <span class="hw">תֹּם</span>(톰, 완전함)에 행하였사오며." '톰'은 죄 없음이 아니라 <strong>갈라지지 않은 마음, 방향의 일관성</strong>을 뜻한다. 2절 "나를 살피시고 시험하사 내 뜻과 내 양심을 단련하소서"는 금속 정련의 언어다. 그리고 3절이 이 담대함의 근거를 밝힌다—"주의 인자하심이 내 목전에 있나이다." <strong>자기 확신이 아니라 헤세드가 검증을 요청할 용기를 준다.</strong></p>
+</div>
+<div class="vs">
+<span class="ref">4–10절 — 함께 앉지 아니하고</span>
+<p>"허망한 사람과 같이 앉지 아니하였사오니." 1편 1절의 '앉다'가 되울린다—결백은 무엇을 했는가만이 아니라 <strong>누구와 자리를 함께했는가</strong>로 규정된다. 6–8절에서 어조가 바뀌어 사랑의 고백이 된다: "여호와여 내가 주께서 계신 집과 주의 영광이 머무는 곳을 사랑하오니." 결백 선언의 목적이 자기 과시가 아니라 <em>그 집에 들어가는 것</em>임이 드러난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 배경 신학이 이 시의 필요를 설명한다. 히브리 종교는 하나님의 편재를 확언했지만, 하나님의 <em>특정한</em> 임재는 이동식 성소와 훗날 예루살렘 성전과 결부되었다. 임재와 영광이 성전에 갇힐 수는 없어도(왕상 8:27) 그곳에서 특별한 방식으로 경험될 수 있었고, 절기에는 그 경험이 더욱 강렬해졌다. 그런데 임재를 특정 장소에 국한하는 데는 위험이 따랐다—근본적인 위험은 <strong>익숙함</strong>이었고, 익숙함은 무심한 예배로, 거기서 위선적이고 피상적인 태도로 흐르기 쉬웠다. 성전의 임재는 신현(theophany)의 경험과 근본적으로 달랐다. 신현에서는 동반하는 현상들이 너무나 두려워 예배자가 즉시 자기 무자격을 자각했다—모세와 욥과 이사야가 그랬다. 그러나 성전의 임재는 실재성에서 조금도 덜하지 않으면서도 그런 압도적 현상을 동반하지 않았기에 익숙함의 위험이 생겨났다. <strong>입장 준비 의식(15·24·26편)은 바로 그 위험에 맞선 전통</strong>—임재 앞에 서기 전에 자신을 살피는 훈련—이었다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 4–7절의 무죄 선언이 자기 의로 들릴 수 있으나, 림버그의 지적대로 이는 <em>생명 자체가 쓸려갈까 두려워 무죄 입증이 절실한 자</em>의 말이다. 요점은 자기를 증명하는 것이 아니라 하나님의 헤세드와 은혜의 능력을 신뢰함을 드러내는 것이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 무죄를 선언하는 탄원들은 신약의 인간 타락 교리 때문에 현대 독자에게 소화하기 어렵다. 그러나 <strong>모든 사람이 죄인이라는 것과, 사람들이 받을 자격 없는 고통의 피해자라는 것은 양립한다</strong>—이 시는 바로 그런 상황을 위한 것이다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>종교개혁적 죄인관으로 읽으면 이 시의 결백 선언은 자기 의처럼 들린다. 그러나 3절이 그 오해를 막는다—담대함의 근거는 <em>내 행위</em>가 아니라 <strong>내 앞에 있는 주의 인자하심</strong>이다. 신약의 언어로 바꾸면 "우리가 우리 마음을 주 앞에서 굳세게 하리로다"(요일 3:19)에 가깝다. 동시에 이 시는 값싼 은혜에 대한 경고이기도 하다. 예수께서 성전 뜰의 장사꾼들을 쫓아내신 것(막 11:15–17)은 26편이 두려워한 <em>익숙함의 타락</em>이 극에 달한 자리에서의 행동이었다. 6절의 "손을 씻고"는 빌라도의 손 씻음(마 27:24)과 대비된다—하나는 예배로 들어가기 위한 정결이고 다른 하나는 책임을 회피하기 위한 시늉이다. 궁극적으로 이 시가 구한 검증은 그리스도 안에서 완결된다: 우리를 <strong>"흠 없이 그 영광 앞에 서게 하실"</strong> 분이 계시기에(유 24), 신자는 "나를 살피소서"라고 담대히 기도할 수 있다(시 139:23–24).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 15편·24:3–6</strong>—입장 예전 자매 본문. <strong>시편 1:1</strong>—"앉지 아니하며". <strong>시편 139:23–24</strong>—"나를 살피사". <strong>열왕기상 8:27</strong>. <strong>요한일서 3:19–21</strong>, <strong>유다서 24</strong>, <strong>마가복음 11:15–17</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="27" id="ps27">
+<h3><span class="chip-num">27편</span> 한 가지 소원 — 확신과 간구의 이중주</h3>
+<p class="lead">확신이 먼저 오고 탄원이 뒤에 온다. 신앙의 실제 순서가 그렇다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 1–6절(확신, 여호와를 3인칭으로)과 7–14절(탄원, 여호와를 2인칭으로)의 대비 때문에 궁켈 이래 <strong>두 시 분리설</strong>이 우세했으나, <span class="c cc">C</span>는 비르켈란트를 따라 통일성을 지지한다—구원·대적·마음·일어나다·찾다·생명 같은 공유 어휘가 두 부분을 꿰매고 있으며, <em>예전적 순서</em>로 읽으면 자연스럽다: 공적 신앙 고백(1–6절) → [제사] → 기도(7–13절) → [신탁 준비] → 오라클·권면(14절). <span class="c cc">C</span>는 군사 언어("군대가 나를 대적하여 진 칠지라도", 3절)와 부모 주제(10절)에 근거해 <strong>왕의 의식(대관 기념)</strong>을 조심스럽게 제안한다.</p>
+<p><strong>구조.</strong> (1) 빛과 구원의 고백(1–3절), (2) 한 가지 소원(4–6절), (3) 얼굴을 구하는 기도(7–12절), (4) 확신과 권면(13–14절).</p>
+<div class="vs">
+<span class="ref">1–6절 — 한 가지 일</span>
+<p>"여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요." 그리고 4절이 시 전체의 심장이다—"내가 여호와께 바라는 <strong>한 가지 일</strong> 그것을 구하리니 곧 내가 내 평생에 여호와의 집에 살면서 여호와의 아름다움을 바라보며 그의 성전에서 사모하는 그것이라." 군대가 진 친 상황(3절)에서 구하는 것이 <em>안전이 아니라 임재</em>다. 소원의 개수가 '하나'라는 점이 결정적이다—여러 소원 중 하나가 아니라 <strong>모든 소원을 하나로 모은 것</strong>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–12절 — 주의 얼굴을 찾으리이다</span>
+<p>"너희는 내 얼굴을 찾으라 하실 때에 내가 마음으로 여호와께 여짜오되 여호와여 내가 주의 얼굴을 찾으리이다"(8절). 하나님의 초청이 먼저 있고 사람의 응답이 뒤따른다—<strong>기도는 언제나 응답</strong>이다. 10절이 가장 아픈 자리를 건드린다: "내 부모는 나를 버렸으나 여호와는 나를 영접하시리이다." 인간관계의 가장 근원적 보호막이 무너져도 남는 관계가 있다는 선언이다.</p>
+</div>
+<div class="vs">
+<span class="ref">13–14절 — 산 자들의 땅에서</span>
+<p>"내가 산 자들의 땅에서 여호와의 선하심을 보게 될 줄 확실히 믿었도다." 죽음 이후가 아니라 <em>이생에서</em> 보겠다는 확신이다. 14절은 시인 자신에게, 또 회중에게 주는 권면으로 끝난다—"너는 여호와를 기다릴지어다 강하고 담대하며 여호와를 기다릴지어다." '기다리다'와 '강하고 담대하라'가 한 문장에 있다는 점이 중요하다. <strong>기다림은 수동이 아니라 용기다.</strong></p>
+</div>
+<p><strong>신학적 해석.</strong> 확신(1–6절)이 앞서고 탄원(7–12절)이 뒤따르는 <strong>역순 배열</strong>이 이 시의 가르침이다. 신앙의 실제 삶에서 확신과 위기는 정해진 순서 없이 교차하며, 오히려 확신의 고백이 위기의 기도를 지탱한다. <span class="c cc">C</span>는 이 시가 왕의 예식이라면 <strong>다윗 언약의 연속성</strong>에 대한 통찰을 준다고 본다. 그 언약은 영원했지만(삼하 7:16) 새 왕의 즉위 때마다 갱신되었고, 각 왕의 치세 안에서 언약 전통은 두 가지 위험에 노출되었다—<em>안에서는</em> 왕이 언약의 의무를 잊고 정해진 길에서 벗어날 위험, <em>밖에서는</em> 외세의 군사적 위협이 특정 왕의 생명만이 아니라 왕가 언약 전통의 연속성 자체를 겨누는 위험. 그래서 왕은 전쟁에 나가기 전 반드시 하나님께 여쭙고 제사와 기도를 드렸으며(20편), 해마다 대관의 서약을 갱신했다. 그리고 <span class="c cc">C</span>의 날카로운 관찰—<strong>확신의 공적 선언은 본질상 겸손의 진술</strong>이다. 권력자에게 가장 위험한 '자기 확신의 교만'을, "여호와는 나의 빛이시니"라는 고백이 해체하기 때문이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 두려움의 말과 신뢰의 말이 한 시 안에 있고, 그 둘은 생각만큼 멀리 떨어져 있지 않다. 제이콥슨은 아프리카계 미국인의 영가와 블루스 전통을 <em>성경적 탄원의 실천이 보존된 자리</em>로 꼽으며, B. B. King이 부른 어머니 말고는 아무도 나를 사랑하지 않는다는 노래를 10절과 나란히 놓는다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 어조가 절박하지 않고 확신에 차 있다. 26편·28편과 마찬가지로 시인은 <strong>하나님의 임재가 만져지는 자리인 하나님의 집</strong>을 향한 강한 갈망을 표현한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>4절의 "한 가지 일"이 복음서에서 되울린다—마르다는 많은 일로 염려하나 "몇 가지만 하든지 혹은 한 가지만이라도 족하니라 마리아는 이 좋은 편을 택하였으니"(눅 10:41–42). 임재를 구하는 한 가지 소원이 예수의 발치에 앉은 자세로 나타난 것이다. 또 부자 청년에게 "네게 아직 한 가지 부족한 것이 있으니"(눅 18:22)라고 하신 말씀도 같은 계열이다. 10절의 "내 부모는 나를 버렸으나"는 십자가에서 극한의 형태로 성취된다—버려지신 분이 계시기에 우리가 영접받는다(요 1:12). 그리고 1절 "여호와는 나의 빛이요"는 요한복음에서 인격이 된다: "나는 세상의 빛이니"(요 8:12). 마지막으로 14절의 <strong>기다림</strong>이 그리스도인의 종말론적 자세를 규정한다. 아직 보지 못한 것을 바라며 참음(롬 8:25), 그것이 "강하고 담대하며 여호와를 기다리는" 삶이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 23:6</strong>—"여호와의 집에 영원히 살리로다"(4절과 짝). <strong>시편 84편</strong>—성전 사모의 확장. <strong>여호수아 1:6–9</strong>—"강하고 담대하라"(14절의 원천). <strong>이사야 40:31</strong>—"여호와를 앙망하는 자". <strong>누가복음 10:41–42</strong>, <strong>요한복음 8:12</strong>, <strong>로마서 8:25</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="28" id="ps28">
+<h3><span class="chip-num">28편</span> 침묵하지 마소서 — 침묵에서 들으심으로, 노래로</h3>
+<p class="lead">기도하는 자에게 최악은 거절이 아니라 무응답이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 개인 탄원과 감사가 결합된 예전이다. <span class="c cc">C</span>는 리더보스를 따라 <strong>4부 예전</strong>으로 분석한다: (1) 탄원의 기도(1–4절), (2) 제사장·성전 봉사자의 심판 선언(5절), (3) 신탁에 응답하는 감사와 찬양(6–7절), (4) 온 백성을 위한 결어(8–9절). <span class="c cc">C</span>의 흥미로운 제안에 따르면 시인은 어떤 <strong>계약 관계</strong>(세속적 의미의 <span class="hw">בְּרִית</span> 브리트—동맹·계약)의 당사자였는데 상대가 배신했거나 시인을 배신자로 몰았다. 고대 근동의 계약은 엄숙한 서약과 <em>저주의 발동</em>으로 봉인되었고, 그 저주의 집행자는 계약의 증인이신 하나님이었다. 3절("그들의 입으로는 화평을 말하나 그들의 마음에는 악독이 있나이다")과 4절의 갚으심 요청이 그 문맥에서 이해된다—법정으로 갈 수 없거나 무죄가 입증되지 않을 때 <strong>계약의 증인께 드리는 최종 항소</strong>다.</p>
+<div class="vs">
+<span class="ref">1–5절 — 잠잠하지 마소서</span>
+<p>"여호와여 내가 주께 부르짖으오니 나의 반석이여 내게 귀를 막지 마소서 주께서 내게 잠잠하시면 내가 무덤에 내려가는 자와 같을까 하나이다." 이 시의 공포는 <strong>하나님의 침묵</strong>이다. 2절의 "주의 지성소를 향하여 나의 손을 들 때에"가 성전 예배의 정황을 명시한다. 4–5절의 보응 요청은 개인의 앙심이 아니라 <em>계약 저주의 발동</em> 요청으로 읽어야 하며, 5절이 그 근거를 밝힌다—그들이 "여호와께서 행하신 일과 손으로 지으신 것을 생각하지 아니하므로."</p>
+</div>
+<div class="vs">
+<span class="ref">6–9절 — 들으심, 그리고 노래</span>
+<p>"여호와를 찬송함이여 <strong>내 간구하는 소리를 들으심이로다</strong>"(6절). 시 한가운데서 침묵이 들으심으로 바뀌고, 그 전환이 곧바로 노래를 낳는다—"내 마음이 그를 의지하여 도움을 얻었도다 그러므로 내 마음이 크게 기뻐하며 내 노래로 그를 찬송하리로다"(7절). 그리고 8–9절에서 시야가 <strong>개인에서 공동체로</strong> 열린다: "주의 백성을 구원하시며 주의 산업에 복을 주시고 또 그들의 목자가 되시어 영원토록 그들을 인도하소서."</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cd">D</span>의 제목 '침묵, 들으심, 노래'가 이 시의 운동을 요약한다. 주목할 것은 시가 <em>상황의 변화</em>를 보고하지 않는다는 점이다. 배신자는 여전히 있고 계약 분쟁도 해결되지 않았다. 바뀐 것은 <strong>하나님이 들으셨다는 확신</strong>이며, 그 하나 때문에 탄원이 노래가 된다. 그리고 개인의 구원이 즉시 공동체의 기도로 확장되는 결말이 시편 영성의 문법이다—구원받은 자는 자기 구원에서 멈추지 않는다. 9절에서 '목자'와 '산업(기업)'이라는 23편·16편의 어휘가 다시 등장해 이 묶음을 잇는다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 개인을 적대적 공동체에서 건져 달라는 기도이면서 동시에 의로운 공동체를 구원하고 인도해 달라는 부름이다. 그래서 이 시는 <strong>압제에 맞서 싸우는 공동체 전체의 소명</strong>을 증언한다. 로마서 8:17이 말하듯 그리스도와 공동 상속자인 우리에게 고난의 면제는 없다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 8절의 <em>기름 부음 받은 자</em>에 대한 언급이 늦고 미묘하기 때문에, 이 시는 곤경에 처한 누구나 어렵지 않게 자기 것으로 쓸 수 있다. 동시에 그 언급이 메시아와의 연결을 열어 준다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>1절의 두려움—하나님의 침묵—은 십자가에서 실제가 되었다. 22:2의 "내가 낮에도 부르짖고 밤에도 잠잠하지 아니하오나 응답하지 아니하시나이다"가 그 자리다. 그리스도께서 <strong>하나님의 침묵을 대신 겪으셨기에</strong>, 신자는 이제 "우리가 무엇을 구하든지 들으시는 줄을 안즉"(요일 5:15)이라고 말할 수 있다. 4절의 보응 기도는 그리스도인에게 그대로 옮겨지지 않는다—신약은 원수를 위해 기도하라고 명하기 때문이다(마 5:44). 그러나 이 기도의 <em>구조</em>는 남는다: 사적 복수를 포기하고 <strong>심판을 하나님께 맡기는 것</strong>(롬 12:19; 벧전 2:23). 시편의 보응 기도는 폭력의 허가가 아니라 폭력의 <em>양도</em>다. 마지막 9절의 "그들의 목자가 되시어 영원토록 그들을 인도하소서"는 요한복음 10장에서 응답된다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 35편·109편</strong>—계약 위반과 보응 기도의 계열. <strong>시편 23편·80:1</strong>—목자 은유. <strong>시편 22:2</strong>—응답 없는 부르짖음. <strong>로마서 12:19</strong>, <strong>베드로전서 2:23</strong>, <strong>요한일서 5:14–15</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="29" id="ps29">
+<h3><span class="chip-num">29편</span> 뇌우 속의 영광 — 바알의 언어로 부르는 여호와 찬양</h3>
+<p class="lead">우주를 흔드는 그 소리의 하나님이, 자기 백성에게는 평강을 주신다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 장르는 찬양시로, 구조는 (1) 하늘 존재들을 향한 찬양 명령(1–2절), (2) '<strong>여호와의 소리</strong>(<span class="hw">קוֹל יְהוָה</span> 콜 야웨)' 일곱 번의 우렛소리(3–9절), (3) 홍수 위에 좌정하신 왕(10–11절)이다. 이 시에는 유명한 <strong>가나안 배경 논쟁</strong>이 따른다. 긴즈버그(1935) 이래 많은 학자가 본래 바알 찬양이던 페니키아 찬송의 개작으로 보았고(크로스는 '결정적'이라고까지 평가했다), 근거는 폭풍 신 소재, 레바논·시룐(헬몬)·가데스 광야라는 북방 지형, 우가릿적 언어, 10절의 '바알 승리 정식'이다. <span class="c cc">C</span>는 신중한 중간 입장을 취한다—가나안 배경을 해석에 반영해야 할 만큼 병행이 충분하지만 '가나안 원본'을 상정할 필요까지는 없으며, <strong>이스라엘 시인이 당대의 언어를 의도적으로 전유했다</strong>고 본다. 여호와의 이름이 18회 나온다—시 전체가 그 이름의 우렛소리다.</p>
+<div class="vs">
+<span class="ref">1–2절 — 하늘 법정을 향한 명령</span>
+<p>"너희 권능 있는 자들아 영광과 능력을 여호와께 돌리고 돌릴지어다." '권능 있는 자들'은 문자적으로 <span class="hw">בְּנֵי אֵלִים</span>(브네 엘림, <em>신들의 아들들</em>)로, 하늘 회의의 구성원을 가리킨다. 찬양의 명령이 사람이 아니라 <strong>하늘 존재들</strong>에게 먼저 내려진다는 점이 이 시의 규모를 정한다.</p>
+</div>
+<div class="vs">
+<span class="ref">3–9절 — 일곱 번의 소리</span>
+<p>"여호와의 소리가 물 위에 있도다 … 여호와의 소리가 힘 있음이여 … 백향목을 꺾으시도다 … 화염을 가르시도다 … 광야를 진동하시도다 … 암사슴을 낙태하게 하시고 삼림을 말갛게 벗기시니." 뇌우가 지중해에서 시작해 레바논 산맥을 부수고 남쪽 가데스 광야까지 <strong>지리적으로 이동</strong>한다. 7회 반복은 완전수의 강조다. 9절 끝—"그의 성전에서는 모든 것들이 말하기를 영광이라 하는도다." 자연의 굉음이 성전의 찬양으로 번역된다.</p>
+</div>
+<div class="vs">
+<span class="ref">10–11절 — 홍수 위의 보좌, 그리고 평강</span>
+<p>"여호와께서 홍수 때에 좌정하셨음이여 여호와께서 영원하도록 왕으로 좌정하시도다." <span class="hw">מַבּוּל</span>(마불)은 창세기 홍수에 쓰이는 바로 그 단어다—<strong>혼돈의 물조차 그분의 보좌 아래</strong> 있다. 그리고 마지막 절의 낙차가 이 시의 백미다: "여호와께서 자기 백성에게 힘을 주심이여 여호와께서 자기 백성에게 <strong>평강</strong>의 복을 주시리로다." 우주를 찢는 뇌우가 <em>샬롬</em>으로 끝난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 해설이 이 시의 논쟁적 성격을 드러낸다. 히브리 종교사에서 이스라엘이 배우기 가장 어려웠던 교훈 하나는 <strong>그들의 하나님이 역사의 주일 뿐 아니라 자연의 주</strong>시라는 것이었다. 예언자들은 백성이 바알 종교로 돌아서는 것을 끊임없이 책망했는데(호 1–3장), 그런 이탈은 추수와 생존에 결정적인 <em>폭풍과 비의 힘</em>을 여호와가 실제로 주관하신다는 믿음의 결핍을 반영했다. 시편 29편은 하나님이 자연의 주이실 뿐 아니라, <strong>약속의 땅 안팎의 사람들이 흔히 바알에게 돌리던 자연의 모든 힘이 실은 여호와의 속성</strong>임을 선포하는 성경에서 가장 독특한 확언이다. 그 언어와 심상은 기후를 다스리는 모든 속성을 바알에게서 여호와께로 옮길 뿐 아니라, 함축적으로 <em>바알에게 돌려지던 능력을 조롱한다</em>. 게스터가 오래전에 지적했듯 이 시인은 구세군 창설자 부스 대장과 닮았다—부스가 "악마가 좋은 곡조를 다 가질 수는 없다"며 당대의 대중 음악을 예배용으로 개작했듯, 시인은 자기 시대의 대중적 종교 관념을 정복해 자기 하나님을 예배하는 데 사용했다. <span class="c cd">D</span>는 이를 '이교의 나무를 성탄의 상징으로 세례 준' 교회의 관행에 비유한다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 가나안 배경 문제에 대해 크레이기의 중간 지대를 따른다—배경은 고려해야 하나 가나안 원본을 상정할 필요는 없다. 더 중요한 것은 <strong>은유가 불안정하게 만든다</strong>는 점이다. 나무를 꺾고 광야를 흔들고 삼림을 벗기는 뇌우의 심상은 깔끔한 신학의 상자에 구멍을 내고 하나님에 대한 안락한 관념을 흔든다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 반복적 평행법, 레바논·시룐·가데스라는 북방 지명, 신적 회의를 가리키는 표현 등이 우가릿 시와 닮았다. 곧 이 시는 <em>당대에 거짓 신 숭배를 조장하던 언어를 가져다가 참 하나님의 예배를 북돋우는 데 쓴다</em>.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>"여호와의 소리"가 물 위에 있고 그 앞에서 백향목이 꺾인다는 이 시를 아는 사람이라면, 갈릴리 바다에서 바람과 바다를 꾸짖으신 한 사람의 <strong>목소리</strong> 앞에서 제자들이 던진 질문의 무게를 이해한다—"그가 누구이기에 바람과 바다도 순종하는가"(막 4:41). 29편이 그 답을 미리 준비해 두었다. 또 하나의 연결이 있다. 이 시에서 여호와의 소리는 파괴적이지만, 요단강에서 들린 하늘의 소리는 "이는 내 사랑하는 아들이요"(마 3:17)였다—<em>물 위에 있는 목소리</em>가 심판이 아니라 아들 됨의 선포로 나타난 것이다. 그리고 11절의 구조가 복음의 형태 그 자체다: 온 우주를 진동시키는 능력의 최종 목적지가 <strong>자기 백성의 평강</strong>이다. 그 평강이 인격으로 오셨고(엡 2:14 "그는 우리의 화평이신지라"), 폭풍 뒤에 "잔잔하라" 하신 그 음성으로 주어진다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>창세기 6–9장</strong>—'마불'(홍수)과 그 위의 주권. <strong>출애굽기 19장</strong>·<strong>열왕기상 19:11–12</strong>—폭풍 신현과 그 뒤의 세미한 소리. <strong>시편 18:7–15</strong>—같은 계열의 신현. <strong>시편 93편·96–99편</strong>—여호와의 왕권 시편. <strong>마가복음 4:35–41</strong>, <strong>마태복음 3:17</strong>, <strong>에베소서 2:14</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="30" id="ps30">
+<h3><span class="chip-num">30편</span> 슬픔이 변하여 춤이 되게 하셨나이다</h3>
+<p class="lead">저녁에는 울음이 깃들일지라도 아침에는 기쁨이 오리로다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 곧 <strong>성전 낙성가</strong>"—시의 내용(개인의 치유 감사)과 표제(성전 봉헌)의 긴장이 흥미롭다. 이는 개인 감사시가 후대에 성전(제2성전, 혹은 마카비 시대의 재봉헌—하누카) 봉헌 축제용으로 재사용되었음을 보여 주는 표제로, <strong>시의 '재사용의 역사'가 표제에 화석처럼 남은 사례</strong>다. 장르는 개인 감사시(베스터만의 용어로 '서술적 찬양시')이며, 병과 죽음의 위험에서의 치유가 계기다(2절). 히스기야의 감사시(사 38장)와 언어·구조가 유사하다.</p>
+<p><strong>구조.</strong> (1) 서론적 찬양과 요약(1–5절), (2) 회고의 상세—자만, 위기, 탄원의 인용, 구원(6–11절), (3) 결어(12절).</p>
+<div class="vs">
+<span class="ref">1–5절 — 잠깐과 평생</span>
+<p>"주께서 내 영혼을 스올에서 끌어내어 나를 살리사." 그리고 5절이 시편에서 가장 자주 인용되는 위로의 문장을 낳는다—"그의 노염은 <strong>잠깐</strong>이요 그의 은총은 <strong>평생</strong>이로다 저녁에는 울음이 깃들일지라도 아침에는 기쁨이 오리로다." 대조가 이중이다: 시간의 길이(잠깐↔평생)와 하루의 방향(저녁↔아침). 밤은 지나가는 것이지 머무는 것이 아니다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–11절 — 자만, 붕괴, 그리고 항변</span>
+<p>"내가 형통할 때에 말하기를 영원히 흔들리지 아니하리라 하였도다"(6절). 시인은 자기 위기의 뿌리를 정직하게 밝힌다—<strong>형통이 낳은 자만</strong>. 7절 "주의 얼굴을 가리시매 내가 근심하였나이다." 9절은 6편·13편과 같은 논거다: "내가 무덤에 내려갈 때에 나의 피가 무슨 유익이 있으리요 진토가 어떻게 주를 찬송하며." 그리고 11절이 전환을 노래한다—"주께서 나의 슬픔이 변하여 내게 <strong>춤</strong>이 되게 하시며 나의 베옷을 벗기고 기쁨으로 띠 띠우셨나이다."</p>
+</div>
+<div class="vs">
+<span class="ref">12절 — 살아난 이유</span>
+<p>"이는 내 영광으로 주를 찬송하고 잠잠하지 아니하게 하심이니 여호와 나의 하나님이여 내가 주께 영원히 감사하리이다." 회복의 <em>목적</em>이 명시된다. 시인은 살아났다는 사실에서 멈추지 않고 <strong>무엇을 위해 살아났는가</strong>를 안다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시의 의미가 <strong>히브리 언약</strong>의 문맥에서 분명해진다고 본다. 하나님의 언약 약속의 중심은 <em>생명</em>이었고 죽음은 그 약속의 반립이었다(신 30:15–20). 고대적 형태의 언약은 <strong>이 생명</strong>을 하나님의 복과 번영이 경험되는 무대로 삼았으므로, 수를 다 채우기 전의 죽음은 단지 육신의 소멸이 아니라 <em>하나님과의 언약 관계의 단절</em>이었다. 시인은 건강과 번영이 따라다니는 사람들을 쉽게 사로잡는 그릇된 안전감의 먹이가 되었다. 변하는 세상 속에서 자기는 굳게 서 있다고 여겼다. 그러나 질병이 그 환상을 부수고 그를 <strong>자기 필멸성의 가장자리</strong>로 데려갔다. 죽음을 마주했을 때 그를 덮친 것은 막연한 공포만이 아니었다—죄의 자각과, 스올이 자기 집이 되면 하나님과의 산 관계가 지속될 수 없다는 깨달음이 함께 왔다. 그래서 그는 <strong>먼저 영적 건강으로, 그 다음에 육체적 건강으로</strong> 돌아오는 길을 걷기 시작했다. 이 감사시는 그 여정의 마지막 단계다. 그는 그저 나아서 전과 같이 살아간 것이 아니다. <em>하나님의 자비로운 개입의 결과로</em> 회복되었고, 그래서 회복 후 첫 공식 행위가 예배였다. 브루그만이 정위–혼돈–재정위의 순환을 이 시의 6–11절에서 순서대로 발견한 것은 유명하다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 루터가 이사야 28:21에서 빌려 온 <strong>하나님의 낯선 일</strong>(alien work) 개념이 이 시의 열쇠다—심판하고 정죄하고 벌하시는 일은 오직 하나님의 <em>본래의 일</em>, 곧 구원하고 복 주고 은혜 베푸시는 일을 이루기 위해서만 존재한다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 브루그만의 범주로 재난이라는 방향상실 뒤에 오는 <em>재정위의 노래</em>다. 표제가 성전 봉헌과 연결되어 문제가 되나, 다윗이 아들이 성전을 지을 것을 알고(삼하 7:13) 봉헌을 위해 미리 준비했을 가능성이 있다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>5절의 "저녁에는 울음이 깃들일지라도 아침에는 기쁨이 오리로다"는 부활 아침의 문법이다. 여인들이 울며 무덤으로 간 것은 아직 어두울 때였고(요 20:1), 기쁨은 아침에 왔다. 그리고 이 시가 그리는 궤적—스올의 문턱에서 끌어올려져 춤으로 옷 갈아입는 것—은 신자의 구원 경험 전체의 축소판이다. 베옷을 벗기고 기쁨의 띠를 띠우시는 하나님은 이사야 61:3("슬픔 대신 희락의 기름, 근심 대신 찬송의 옷")에서 메시아의 사역으로 예고되었고, 예수께서 그 본문으로 자기 사역을 선포하셨다(눅 4:18–19). 또한 6절의 진단—형통 속의 자만—은 라오디게아 교회를 향한 책망("나는 부자라 부족한 것이 없다 하나 네 곤고한 것을 알지 못하는도다", 계 3:17)과 정확히 겹친다. 마지막으로 12절이 그리스도인의 생존 이유를 규정한다: 우리가 살아난 것은 <strong>찬송하기 위해서</strong>다(벧전 2:9).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>이사야 38:9–20</strong>—히스기야의 감사시. <strong>신명기 30:15–20</strong>—생명과 사망의 언약. <strong>시편 6편·13편·41편</strong>—병상 기도의 계열. <strong>이사야 61:3</strong>·<strong>누가복음 4:18–19</strong>. <strong>요한복음 20:1</strong>, <strong>요한계시록 3:17</strong>, <strong>베드로전서 2:9</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="31" id="ps31">
+<h3><span class="chip-num">31편</span> 주의 손에 내 영을 부탁하나이다</h3>
+<p class="lead">시인은 죽음에서 건져 달라며 이 말을 했고, 예수는 죽음 속에서 이 말을 하셨다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." 개인 탄원과 감사가 결합된 시다. <span class="c cc">C</span>의 구조 분석은 기도부(1–18절)를 A(기도)–B(신뢰)–C(탄원)–B′(신뢰)–A′(기도)의 교차 구조로 보고, 신탁 선포를 사이에 둔 뒤 감사와 찬양부(19–24절)가 이어진다고 본다. <span class="c cd">D</span>는 두 번의 기도 사이클(1–8절, 9–24절)로 읽으며, 이 이중 구조가 <em>한 인생의 두 국면</em>이든 <em>미완의 신뢰의 재출발</em>이든 독자의 상황에 따라 읽히도록 열려 있다고 본다. 곤경은 포위된 성읍 같고(21절), 중상과 공포가 사방을 감싼다—13절의 "사방이 두려움"은 예레미야 20:10과 같은 어구로, 이 시와 예레미야의 언어적 친연성이 자주 지적된다. 1–3절은 시편 71:1–3에 재사용되었다.</p>
+<div class="vs">
+<span class="ref">1–8절 — 부탁하나이다</span>
+<p>"내가 나의 영을 주의 손에 부탁하나이다 진리의 하나님 여호와여 나를 속량하셨나이다"(5절). <span class="hw">פָּקַד</span>(파카드)는 <strong>맡기다·위탁하다</strong>—귀중품을 신뢰할 수 있는 이에게 보관시키는 상거래 용어다. 그리고 뒤이어 "나를 속량하셨나이다"가 완료형으로 온다. 위탁의 근거는 앞으로의 기대가 아니라 <em>이미 이루어진 속량</em>이다.</p>
+</div>
+<div class="vs">
+<span class="ref">9–18절 — 깨진 그릇</span>
+<p>"내가 잊어버린 바 됨이 <strong>깨진 그릇</strong>과 같으니이다"(12절). 시편에서 가장 아픈 자기 인식 가운데 하나다—버려진 것이 아니라 <em>잊힌</em> 것, 쓸모가 다해 폐기된 것. 그 한복판에서 15절이 솟아오른다: "나의 <strong>앞날이 주의 손에 있사오니</strong>." 5절에서 '영'을 맡겼던 그 손에 이제 '때'를 맡긴다.</p>
+</div>
+<div class="vs">
+<span class="ref">19–24절 — 쌓아 두신 은혜</span>
+<p>"주를 두려워하는 자를 위하여 <strong>쌓아 두신</strong> 은혜 곧 주께 피하는 자를 위하여 인생 앞에 베푸신 은혜가 어찌 그리 큰지요"(19절). 은혜가 <em>저장고</em>에 비축된 것으로 그려진다—아직 받지 못했다고 없는 것이 아니다. 24절이 27:14와 같은 권면으로 닫는다—"여호와를 바라는 너희들아 강하고 담대하라."</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시 전체를 관통하는 주제를 <strong>신뢰와 그 신뢰의 성취</strong>로 짚는다. 곤경을 탄식하며 기도하러 나아오지만, 기도하는 그 순간에도 시인의 영은 하나님을 향한 신뢰로 솟아오른다(5, 6–8, 14절). 그 신뢰가 헛되지 않았고 바른 자리에 두어졌다는 것이 마지막 찬양과 감사에서 분명해진다. 주목할 점은 <em>탄원과 신뢰가 번갈아</em> 나온다는 것이다—신뢰는 탄원을 종결시키지 않고 탄원 안에서 자란다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 8절에서 끝난 듯한 기도가 9절에서 다시 시작하는 <strong>이중 구조</strong>가 열쇠다. 우리 삶은 논리적 순서로 펼쳐지지 않으며 믿음과 의심이 그 순환의 일부다. 이 시의 의미는 우리 모두가 공유하는 <em>믿음과 의심 사이의 얇은 선</em>을 살피는 데 있다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 21절의 단서로 보아 배경은 성읍이 포위된 전쟁 상황이다. 예수께서 십자가에서 5절을 그대로 말씀하셨고(눅 23:46), 하나님은 십자가에서 건지지 않으시고 <strong>부활로 건지셨다</strong>.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>이 시의 신뢰라는 중심 주제를 이해할 때 신약에서의 의미가 보인다 <span class="c cc">C</span>. 예수께서 십자가에서 숨을 거두시며 31:5를 인용하셨다—"아버지 내 영혼을 아버지 손에 부탁하나이다"(눅 23:46). 그런데 여기에는 <strong>분명한 관점의 차이</strong>가 있다. 시인은 죽음<em>으로부터의</em> 건지심을 구했고 그 건지심이 오리라 신뢰하며 이 말을 했다. 반면 예수는 <strong>죽어 가시면서</strong> 같은 신뢰의 진술을 발화하셨다. 그분이 기대하신 것은 죽음에서 벗어남이 아니라, <em>죽어 감과 죽음 속에서도</em> 하나님을 신뢰하는 것이었고—그 신뢰는 훗날 부활로 성취되었다. 예수의 이 사용에 비추어 볼 때 이 시가 오늘의 신앙을 위해 어떻게 변모하는지가 분명해진다. 시인은 생명을 위해, 죽음에서 건져지기 위해 기도했고 그것이 이 시의 근본적이고 정당한 의미다. 그러나 <strong>부활 신앙의 문맥에서 이 시는 삶의 기도이자 동시에 죽음의 기도</strong>가 되었다—시인에게는 허락되지 않았던 지평이 그의 말을 통해 열린 것이다. 스데반이 돌에 맞으며 "주 예수여 내 영혼을 받으시옵소서"(행 7:59)라 한 이래, 수많은 순교자와 임종하는 신자들이 이 한 절로 숨을 거두었다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>예레미야 20:10</strong>—"사방이 두려움". <strong>시편 71:1–3</strong>—31:1–3의 재사용. <strong>시편 22편</strong>—수난 시편의 짝. <strong>누가복음 23:46</strong>, <strong>사도행전 7:59</strong>, <strong>베드로전서 4:19</strong>("자기 영혼을 미쁘신 창조주께 부탁할지어다").</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="32" id="ps32">
+<h3><span class="chip-num">32편</span> 사함의 복 — 어거스틴의 시</h3>
+<p class="lead">지식의 시작은 자신이 죄인임을 아는 것이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 <span class="hw">מַשְׂכִּיל</span>(마스길)"—교훈시를 뜻하는 이 표제의 첫 등장이다(총 13편). <span class="c cc">C</span>는 감사시의 골격에 지혜적 각색이 입혀진 <strong>문학적 작품</strong>으로 본다. 서두의 '아쉬레' 이중 선언(1–2절)은 감사시 서론으로는 이례적이며 지혜 문학의 문법이다. 교회는 이 시를 두 번째 참회시로 삼았는데, 일곱 참회시 중 실제 죄 고백과 용서를 명시하는 것은 <strong>32편과 51편뿐</strong>이다. 질병 체험이 배경일 수 있으나(3–4절), 그 병은 <em>침묵—죄를 자백하지 않음—의 결과</em>로 해석된다. 전통은 다윗의 밧세바 사건 이후(51편의 속편)로 읽어 왔다.</p>
+<p><strong>구조.</strong> 지혜(1–2절 A)–감사(3–5절 B)–감사(6–8절 B′)–지혜(9–10절 A′)–찬양 결어(11절)의 교차 구조.</p>
+<div class="vs">
+<span class="ref">1–2절 — 복의 재정의</span>
+<p>"허물의 사함을 받고 자신의 죄가 가려진 자는 복이 있도다." 1편의 '아쉬레'가 여기서 <strong>전혀 다른 내용</strong>으로 채워진다—1편의 복이 <em>죄를 피한 자</em>의 복이라면 32편의 복은 <em>죄를 용서받은 자</em>의 복이다. 제1권을 통과하며 인간의 실상이 드러난 뒤에 오는 이 재정의가 중요하다. 죄를 가리키는 세 단어(허물·죄·죄악)와 용서를 가리키는 세 단어(사함·가려짐·인정하지 않으심)가 대응한다.</p>
+</div>
+<div class="vs">
+<span class="ref">3–5절 — 침묵의 해부학</span>
+<p>"내가 입을 열지 아니할 때에 종일 신음하므로 내 뼈가 쇠하였도다 주의 손이 주야로 나를 누르시오니 내 진액이 빠져서 여름 가뭄에 마름 같이 되었나이다." 억압된 죄책의 <strong>심신 증상</strong>이 정확히 묘사된다. 그리고 5절—"내가 이르기를 내 허물을 여호와께 자복하리라 하고 … <strong>곧</strong> 주께서 내 죄악을 사하셨나이다." 자백을 <em>결심한</em> 순간과 사죄 사이에 아무 조건도 절차도 없다. 용서의 즉효성이 문법으로 표현된다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–11절 — 노새가 되지 말라</span>
+<p>8절에서 화자가 바뀐다(하나님 혹은 지혜 교사)—"내가 네 갈 길을 가르쳐 보이고 너를 주목하여 훈계하리로다." 9절의 권면이 인상적이다: "너희는 무지한 말이나 노새 같이 되지 말지어다 그것들은 재갈과 굴레로 단속하지 아니하면 너희에게 가까이 가지 아니하리로다." 하나님은 <strong>재갈이 아니라 눈으로</strong> 인도하기를 원하신다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시를 문학 작품으로 볼 때 그것이 전하는 근본 지혜를 어거스틴의 말로 요약한다—<em>intelligentia prima est ut te nôris peccatorem</em>, "지식의 시작은 <strong>자신이 죄인임을 아는 것</strong>." 실제로 32편은 어거스틴이 가장 사랑한 시였고, 그는 이 시를 자주 읽었으며 죽기 전에는 병상 곁 벽에 이 시의 말씀을 써 붙이게 하여 그 말씀으로 자신을 단련하고 위로받았다. 시는 원리의 진술(1–2절)에서 원리의 예시(3–5절)로, 기도의 초청(6절)에서 완고하지 말라는 훈계(9–10절)로 매끄럽게 나아가 힘찬 찬양으로 끝난다. 이 시는 <strong>영적 건강의 전제</strong>—자기 삶의 죄성에 대한 자각과, 그 자각을 하나님 앞의 고백으로 옮기는 행동—를 강력하게 예시한다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 엄밀히는 감사시이나 실은 하나님만이 주실 수 있는 <strong>용서와 회복의 축하</strong>다. 우리가 기뻐해야 할 이유는 처음 구원을 깨달은 그 한 순간에만 있지 않고, 날마다 고백하고 새 피조물로 다시 시작하는 <em>매일</em>에 있다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 용서는 자동으로 오지 않고 고백과 회개 뒤에 온다(잠 28:13). 세례 요한의 첫 메시지(막 1:15)와 야고보서 4:8–10이 같은 순서를 말하며, 시인은 스스로를 낮춘 자의 모범이다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>바울이 1–2절을 인용한 자리가 결정적이다(롬 4:6–8). 그는 아브라함의 칭의를 논하며 이 시를 <strong>"일한 것이 없이 하나님께 의로 여기심을 받는 사람의 복"</strong>의 구약적 증거로 든다. <span class="c cc">C</span>가 정리하듯 이 시는 인류를 위한 칭의와 용서가 율법이나 할례의 기초 위에서가 아니라 <strong>오직 하나님의 은혜</strong>—고백에 응답해 흘러나온 그 은혜—위에서 이루어진다는 것을 확립한다. 2절의 "마음에 간사함이 없는 자"는 요한복음에서 나다나엘에게 그대로 적용된다("보라 이는 참으로 이스라엘 사람이라 그 속에 간사한 것이 없도다", 요 1:47). 그리고 5절의 즉효성이 복음의 핵심이다—"만일 우리가 우리 죄를 자백하면 그는 미쁘시고 의로우사 우리 죄를 사하시며"(요일 1:9). 자백은 용서를 <em>구매하는</em> 행위가 아니라 이미 마련된 용서를 <em>받는</em> 자리다. 십자가에서 "우리의 죄가 가려졌다"는 이 시의 언어가 문자 그대로 성취되었다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 51편</strong>—참회시의 정점(32편의 짝). <strong>사무엘하 11–12장</strong>—전통적 배경. <strong>잠언 28:13</strong>—"자기의 죄를 숨기는 자는 형통하지 못하나". <strong>로마서 4:6–8</strong>—32:1–2 인용. <strong>요한일서 1:8–9</strong>, <strong>요한복음 1:47</strong>, <strong>누가복음 15:11–24</strong>(탕자).</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="33" id="ps33">
+<h3><span class="chip-num">33편</span> 새 노래로 노래하라 — 말씀·계획·눈·능력의 하나님</h3>
+<p class="lead">세상은 여호와의 인자하심으로 충만하다. 헤세드로 가득 찬 우주.</p>
+<p><strong>배경과 상황.</strong> <strong>표제가 없다</strong>—제1권에서 극히 드문 경우로 1·2·10·33편뿐이다. 32:11과 33:1의 연결어("의인들아 … 즐거워하라/기뻐하라") 때문에 32편의 속편처럼 배치되었을 가능성이 있다. 장르는 창조 찬양시이며, <strong>22절</strong>—히브리 자모 수와 같은 절수를 갖춘 '알파벳화' 시(이합체는 아니다)—로 정제되어 있다. 회중 예배용이며 가을 축제나 언약 축제가 제안되나 특정할 수 없다. 말씀 창조 신학 때문에 포로기 이후로 보는 견해가 있으나, <span class="c cc">C</span>는 사사기 5장과의 문체 유사성을 들어 이른 연대의 가능성도 열어 둔다.</p>
+<p><strong>구조.</strong> 찬양 명령(1–3절) → 찬양의 이유 넷: 여호와의 <strong>말씀</strong>(4–9절), <strong>계획</strong>(10–12절), <strong>눈</strong>(13–15절), <strong>능력</strong>(16–19절) → 신뢰와 기도(20–22절).</p>
+<div class="vs">
+<span class="ref">1–9절 — 말씀으로 지으심</span>
+<p>"새 노래로 그를 노래하며 즐거운 소리로 아름답게 연주할지어다." 5절이 시의 열쇠다—"<strong>세상에는 여호와의 인자하심(헤세드)이 충만하도다.</strong>" 그리고 6·9절이 창조 신학을 압축한다: "여호와의 말씀으로 하늘이 지음이 되었으며 … 그가 <em>말씀하시매</em> 이루어졌으며 <em>명령하시매</em> 견고히 섰도다." 야콥슨의 관찰대로 시편 전체에서 <strong>말씀에 의한 창조를 노래하는 유일한 시</strong>—창세기 1장의 예배적 짝이다.</p>
+</div>
+<div class="vs">
+<span class="ref">10–19절 — 계획, 눈, 그리고 말의 헛됨</span>
+<p>"여호와께서 나라들의 계획을 폐하시며 … 여호와의 계획은 영원히 서고"(10–11절). 이어 하늘에서 굽어보시며 "그들의 마음을 지으시며 그들이 하는 일을 굽어살피시는"(15절) 하나님. 16–17절이 20편 7절의 주제를 되풀이한다—"많은 군대로 구원 얻은 왕이 없으며 용사가 힘이 세어도 스스로 구원하지 못하는도다 구원하는 데에 <strong>군마는 헛되며</strong>." 그리고 18절이 대안을 제시한다: "여호와는 그를 경외하는 자 곧 그의 인자하심을 바라는 자를 살피사."</p>
+</div>
+<div class="vs">
+<span class="ref">20–22절 — 기다림과 기도</span>
+<p>"우리 영혼이 여호와를 바람이여 그는 우리의 도움과 방패시로다." 우주적 찬양이 <strong>공동체의 기다림</strong>으로 착지한다. 마지막 절이 기도다—"여호와여 우리가 주께 바라는 대로 주의 인자하심을 우리에게 베푸소서." 헤세드로 시작해(5절) 헤세드로 끝난다(22절).</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시에 히브리 신학의 가장 기본적인 주제들—<strong>창조, 역사, 언약, 그리고 인간의 예배 응답</strong>—이 통합되어 있으며, 그 통합 자체가 히브리 종교에서 이 주제들이 <em>분리 불가능</em>함을 보여 준다고 짚는다. 창조는 세계의 기원과 본질에 관한 인간의 지적 호기심에 답하는 추상적 교리가 아니다. 창조 교리는 <strong>세계가 하나님과, 인간 역사와, 개별 인간과 맺는 관계</strong>를 다룬다. 창조된 세계는 인간 역사의 드라마가 펼쳐지는 무대이며, 역사의 전개 속 하나님의 섭리와 능력에 관한 히브리적 개념은 하나님이 <em>창조 세계 자체를 주관하신다</em>는 것을 전제해야 한다. 하나님은 피조 세계 안에서 인간과 나란히 활동하는 또 하나의 배우가 아니라 <strong>창조주</strong>이시며, 따라서 역사가 움직이고 전개되는 영역 자체를 다스리신다. 그리고 히브리 종교의 심장인 언약은 창조주로서의 역할과 인간 역사의 주권자로서의 역할을 함께 전제한다. 그러므로 이 시에 스며 있는 깊은 신학은 철학적 신학의 차가운 추상과 <em>아주 멀리</em> 떨어져 있다—예배의 언어라는 자리가 그 신학에 인격적 기반을 준다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 다이앤 제이콥슨의 지적대로 이 시는 <strong>시편 전체에서 유일하게 말씀에 의한 창조를 말한다</strong>. 하나님의 신실하심은 자연의 질서와 일관성에서, 그리고 택하신 백성을 향한 섭리적 지키심에서 알려진다—혼돈과 무질서를 제한하시는 그 일관성이 곧 증거다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — <em>새 노래</em>는 시편(40:3; 96:1; 98:1; 144:9; 149:1)과 이사야 42:10, 요한계시록 5:9·14:3에서 모두 전쟁과 연결된 맥락에 나온다. 6절의 여호와의 말씀으로 하늘이 지어졌다는 선언이 요한복음 1:1–3과 만난다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>6절의 "여호와의 말씀으로 하늘이 지음이 되었으며"가 요한복음 1장에서 인격을 얻는다—"만물이 그로 말미암아 지은 바 되었으니"(요 1:3), 그리고 골로새서 1:16. 33편이 노래한 창조의 말씀이 <strong>육신이 되어 오셨다</strong>는 것이 복음의 선언이다. 3절의 "새 노래"도 종말론적 울림을 얻는다—요한계시록에서 새 노래는 <em>어린양의 구속</em>을 이유로 불린다(계 5:9). 곧 창조를 이유로 부르던 새 노래가 <strong>재창조를 이유로</strong> 다시 불린다. 그리고 5절의 "세상에는 여호와의 인자하심이 충만하도다"는 이 시의 우주론적 낙관을 규정하는데, 십자가는 그 헤세드가 <em>어디까지</em> 충만한지를 보여 준 사건이다. 16–17절의 "군마는 헛되며"는 세상 권력에 대한 교회의 자유를 지탱해 왔고, 20절의 "우리 영혼이 여호와를 바람이여"는 재림을 기다리는 교회의 자세다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>창세기 1장</strong>—말씀 창조. <strong>시편 96:1; 98:1; 149:1</strong>—"새 노래" 계열. <strong>시편 147편</strong>—같은 창조·섭리 찬양. <strong>잠언 19:21</strong>—"여호와의 뜻만이 완전히 서리라". <strong>요한복음 1:1–3</strong>, <strong>골로새서 1:16–17</strong>, <strong>히브리서 11:3</strong>, <strong>요한계시록 5:9</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="34" id="ps34">
+<h3><span class="chip-num">34편</span> 맛보아 알지어다 — 감사와 훈계의 이합체</h3>
+<p class="lead">평화는 오는 것이 아니라 쫓아가는 것이다.</p>
+<p><strong>배경과 상황.</strong> "다윗이 <strong>아비멜렉</strong> 앞에서 미친 체하다가 쫓겨나서 지은 시"—사무엘상 21:10–15의 가드 왕 아기스 앞 광인 연기 사건을 가리킨다. '아비멜렉'은 개인 이름이 아니라 블레셋 왕의 칭호로 이해된다(창 20·26장처럼). 형식은 <strong>알파벳 이합체</strong>(와우 행이 없고 마지막에 추가 '페' 행—25편과 동일한 변형으로, 두 시의 편집적 연관을 보여 준다). 전반(1–10절)은 개인 감사시의 특징을, 후반(11–22절)은 지혜 교훈시의 특징을 지닌다. <span class="c cd">D</span>는 이합체 형식상 실제 위기 직후의 즉흥 기도라기보다 감사시 양식을 빌린 <em>신학적·교육적 작품</em>으로 본다.</p>
+<div class="vs">
+<span class="ref">1–10절 — 맛보아 알지어다</span>
+<p>"내가 여호와께 간구하매 내게 응답하시고 내 모든 두려움에서 나를 건지셨도다"(4절). 6절이 자기를 3인칭으로 지칭한다—"이 곤고한 자가 부르짖으매." 7절 "여호와의 천사가 주를 경외하는 자를 둘러 <strong>진 치고</strong> 그들을 건지시는도다"는 군사 이미지를 보호로 뒤집는다. 그리고 8절—"너희는 여호와의 선하심을 <strong>맛보아 알지어다</strong>." <span class="hw">טָעַם</span>(타암)은 실제로 <em>맛보다</em>는 감각 동사다. 신앙은 논증으로 설득되기 전에 <strong>경험으로 확인</strong>된다는 초대다.</p>
+</div>
+<div class="vs">
+<span class="ref">11–22절 — 경외를 가르치리로다</span>
+<p>"너희 자녀들아 와서 내게 들으라 내가 여호와를 경외하는 법을 너희에게 가르치리로다"(11절). 교육 현장의 언어다. 12–14절이 그 교과 내용이다—"생명을 사모하고 연수를 사랑하여 복 받기를 원하는 사람이 누구뇨 네 <strong>혀</strong>를 악에서 금하며 네 입술을 거짓말에서 금할지어다 악을 버리고 선을 행하며 <strong>화평을 찾아 따를지어다</strong>." 18절이 이 시의 가장 사랑받는 문장이다—"여호와는 마음이 상한 자를 가까이 하시고 충심으로 통회하는 자를 구원하시는도다." 19절이 현실을 정직하게 인정한다: "의인은 고난이 많으나 여호와께서 그의 모든 고난에서 건지시는도다."</p>
+</div>
+<p><strong>신학적 해석.</strong> 이 시는 <strong>경험과 교육을 잇는다</strong>. 앞부분에서 구원을 경험한 사람이 뒷부분에서 교사가 된다—"맛보아 알지어다"(8절)에서 "내가 가르치리로다"(11절)로. 시편의 감사는 사적 감격에서 끝나지 않고 <em>다음 세대를 향한 교육</em>이 된다. 그리고 19절이 이 시의 정직함을 지킨다: 의인에게 고난이 <strong>없다</strong>가 아니라 <strong>많다</strong>고 말한 뒤에 건지심을 약속한다. 20절 "그의 모든 뼈를 보호하심이여 그 중에서 하나도 꺾이지 아니하도다"가 그 보호의 극단적 표현이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 눈·귀·얼굴·마음·호흡·뼈라는 몸의 심상과 분사형 서술이 겹치면서, 몸을 지닌 피조물인 우리는 <strong>우리가 행하는 바가 된다</strong>는 실재를 가리킨다. 한 번의 행동으로 시작된 것이 반복과 훈련을 거쳐 결국 정체성이 되는 것이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — <em>여호와를 경외함이 다른 모든 두려움을 몰아낸다</em>. 8절이 베드로전서 2:3의 배경이며, 흥미롭게도 베드로는 맛보라고 권하는 대신 이미 맛보았음을 전제하고 거룩하라 권면한다(벧전 1:15, 17).</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>수용사가 유난히 풍성한 시다. <strong>요한</strong>은 20절을 십자가에서 다리가 꺾이지 않으신 예수께 적용했다(요 19:36)—유월절 어린양 규정(출 12:46)과 겹치며 그리스도를 참 유월절 양으로 제시한다. <strong>베드로</strong>는 8절을 인용해 "너희가 주의 인자하심을 맛보았으면"(벧전 2:3)이라 했고, 12–16절 전체를 그리스도인의 삶의 규범으로 옮겼다(벧전 3:10–12). 초대교회는 "맛보아 알지어다"를 <strong>성찬의 시</strong>로 불렀다—성찬은 은혜를 문자적으로 맛보는 자리이기 때문이다. 18절 "마음이 상한 자를 가까이 하시고"는 예수의 사역 방식 그 자체이며(마 11:28), 나사렛 설교의 "마음이 상한 자를 고치며"(눅 4:18)로 이어진다. 그리고 <span class="c cc">C</span>가 현대를 위해 고른 구절이 14절이다—<strong>"화평을 찾아 따를지어다."</strong> 평화는 저절로 오는 것이 아니라 추격하듯 쫓아가야 하는 것임을 이 오래된 시가 가르쳐 왔으나 인류는 아직 배우지 못했다. 산상수훈의 "화평하게 하는 자는 복이 있나니"(마 5:9)가 그 배움의 다음 장이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>사무엘상 21:10–15</strong>—표제의 배경. <strong>시편 25편</strong>—짝을 이루는 이합체시. <strong>출애굽기 12:46</strong>·<strong>민수기 9:12</strong>—뼈가 꺾이지 않음. <strong>시편 51:17</strong>—"상한 심령". <strong>요한복음 19:36</strong>, <strong>베드로전서 2:3; 3:10–12</strong>, <strong>마태복음 5:9; 11:28</strong>, <strong>누가복음 4:18</strong>.</p>
+</div>
+</div>
+<hr class="wall"/>
+<h3 id="g-d">넷째 묶음 — 35–41편: 다시 짙어진 탄원, 그리고 복으로 닫음 (중심축 37편)</h3>
+<div class="chap" data-psalm-context="35" id="ps35">
+<h3><span class="chip-num">35편</span> 나와 다투는 자와 다투소서 — 배신당한 동맹의 기도</h3>
+<p class="lead">원수는 낯선 자가 아니다. 그들이 병들었을 때 내가 금식하며 울었던 사람들이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." 개인 탄원으로 통칭되나 <span class="c cc">C</span>는 이튼을 따라 <strong>국제 정세 속의 왕의 시</strong>로 해석한다. 군사 언어("방패와 손 방패를 잡으시고 … 창을 빼사", 1–3절)와 법정 언어("불의한 증인들" 11절, "나의 송사" 23절)의 결합은, <em>조약 위반 혐의를 구실로 전쟁을 걸어오는 옛 동맹국</em>이라는 상황에서 통합적으로 설명된다. 곧 28편(개인 계약 배경)의 국가적 확대판이다. <span class="c cd">D</span>는 전쟁 심상으로 시작하지만 실제 원수는 <strong>가까운 사람들</strong>(13–14절)이라는 데 주목한다.</p>
+<p><strong>구조.</strong> 3부가 각각 탄원 → 심판 요청 → 찬양 서원의 순환을 이룬다: (1) 1–10절, (2) 11–18절, (3) 19–28절.</p>
+<div class="vs">
+<span class="ref">1–10절 — 여호와여 방패를 잡으소서</span>
+<p>"여호와여 나와 다투는 자와 다투시고 나와 싸우는 자와 싸우소서." 하나님께 <strong>무장하고 나서 달라</strong>는 대담한 요청이다. 3절 "내 영혼에게 나는 네 구원이라 이르소서"—시인이 구하는 최종적인 것은 승리 이전에 <em>한마디 말씀</em>이다. 10절 "내 모든 뼈가 이르기를 여호와와 같은 이가 누구냐"는 온몸이 찬양의 기관이 되는 표현이다.</p>
+</div>
+<div class="vs">
+<span class="ref">11–18절 — 배신의 해부</span>
+<p>"그들이 병들었을 때에 내가 굵은 베 옷을 입으며 금식하여 내 영혼을 괴롭게 하였더니 내 기도가 내 품으로 돌아왔도다. 내가 그들을 나의 친구와 형제에게 행함 같이 하며 <strong>내가 몸을 굽히고 슬퍼하기를 어머니를 곡함 같이</strong> 하였도다"(13–14절). 시편 윤리의 뜻밖의 봉우리다—<em>원수를 위해 금식하며 울었던 과거</em>가 회고된다. 그런데 15절, "내가 넘어지매 그들이 기뻐하여 서로 모임이여." 배신의 아픔은 낯선 자의 공격이 아니라 <strong>사랑했던 자의 조롱</strong>에서 온다.</p>
+</div>
+<div class="vs">
+<span class="ref">19–28절 — 까닭 없이</span>
+<p>"부당하게 나의 원수 된 자가 나를 두고 기뻐하지 못하게 하시며 <strong>까닭 없이</strong> 나를 미워하는 자들이 서로 눈짓하지 못하게 하소서"(19절). '까닭 없이'(<span class="hw">חִנָּם</span> 힌남)가 7절과 19절에 반복되며 이 시의 핵심 억울함을 규정한다. 27–28절이 결말이다—"나의 의를 즐거워하는 자들이 기꺼이 노래 부르고 즐거워하게 하시며 … 나의 혀가 주의 의를 말하며 종일토록 주를 찬송하리이다."</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시를 28편에 상응하는 <strong>왕적·국가적 탄원</strong>으로 본다. 다만 무대가 더 크다—어려움을 겪는 것은 왕이지만 두 개인은 두 국가를 대표한다. 그래서 이 시는 이스라엘의 <em>국가적 생존</em>이 걸린 엄청난 규모의 위기에 대한 지도자의 응답을 보여 준다. 외세의 군사적 위협에서 살아남는 것만으로도 충분히 어려운데, 그 위협이 <strong>동맹국의 형태로</strong>—법적으로 모든 면에서 바르게 대해 온 상대에게서—왔다는 사실이 좌절을 더한다. 이런 위기를 정당화할 만한 어떤 악행도 저지르지 않았기에, 왕은 자기 나라의 최후 방어선인 <strong>하나님</strong>께로 물러선다. 조약의 증인이신 그분은 조약 규정을 어긴 잘못이 어디에 있는지 정확히 아신다. 그러므로 시인의 무죄 선언과 재판 요청은 거짓 경건이나 자기 의에 근거한 것이 아니라, <em>조약 조항을 신실하게 지켜 왔다는 자각</em>에만 근거한다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 이 기도는 <strong>용감하면서 동시에 위험하다</strong>. 하나님께 무장하고 싸우시라 청하기에 용감하고, 바로 같은 이유로 위험하다—그 말이 우리 자신의 행동으로 번역되어 우리가 하나님을 대신해 전쟁하고 남을 심판하는 자가 되기 쉽기 때문이다. 그 등식은 그렇게 작동하지 않는다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 법정 배경이 분명하다—<em>리브(다투다)</em>는 소송을 제기한다는 뜻의 법률 용어다. 요한복음 15:25이 19절의 까닭 없이 나를 미워하는 자를 인용해 예수께서 당하신 거짓 고발을 설명한다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>19절(과 69:4)의 "까닭 없이 나를 미워하는 자들"을 예수께서 자신에게 적용하셨다—"그러나 이는 그들의 율법에 기록된 바 <strong>그들이 이유 없이 나를 미워하였다</strong> 한 말을 응하게 하려 함이라"(요 15:25). 무고히 미움받는 의인의 원형이 그리스도에게서 절정에 이른다. 그런데 이 시에는 그보다 더 놀라운 복음의 씨앗이 있다. 13–14절—<strong>원수가 병들었을 때 그를 위해 금식하고 어머니를 곡하듯 슬퍼했다</strong>는 회고다. 시편의 탄원 한복판에서 이미 원수 사랑이 실천되고 있었던 것이다. 예수의 "너희 원수를 사랑하며 너희를 박해하는 자를 위하여 기도하라"(마 5:44)는 명령은 구약과 단절된 새 윤리가 아니라, 이 씨앗이 활짝 핀 것이다. 물론 이 시의 저주 간구를 그리스도인이 그대로 반복하지는 않는다. 그러나 그 <em>구조</em>—사적 보복을 포기하고 심판을 조약의 증인께 넘기는 것—는 십자가에서 완성된다: 그분은 "욕을 당하시되 맞대어 욕하지 아니하시고 … 오직 공의로 심판하시는 이에게 부탁하시며"(벧전 2:23).</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 28편</strong>—개인 계약 배경의 짝. <strong>시편 69편·109편</strong>—저주 시편 계열. <strong>욥기 30:25</strong>—"내가 곤고한 자를 위하여 울지 아니하였는가". <strong>요한복음 15:25</strong>, <strong>마태복음 5:44</strong>, <strong>로마서 12:19–21</strong>, <strong>베드로전서 2:23</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="36" id="ps36">
+<h3><span class="chip-num">36편</span> 악의 신탁과 생명의 샘 — 두 세계의 대조</h3>
+<p class="lead">하나님의 신탁 대신 죄의 신탁을 듣는 사람, 그것이 악인이다.</p>
+<p><strong>배경과 상황.</strong> "<strong>여호와의 종</strong> 다윗의 시, 인도자를 따라 부르는 노래"—'여호와의 종'이라는 존칭은 18편과 36편에만 붙는다. 세 부분(지혜적 악인 묘사 1–4절, 찬양 5–9절, 기도 10–12절)의 혼합이어서 다후드는 이 시가 양식비평의 한계를 보여 준다고 촌평했다. <span class="c cc">C</span>는 14편처럼 문학적·묵상적 창작으로 본다. 1절의 파격이 유명하다—"악인의 죄악이 <em>그의 마음속으로 이르기를</em>"에서 '이르기를'은 예언자의 <strong>신탁 정식</strong>(<span class="hw">נְאֻם</span> 네움)이다. 곧 죄가 예언자처럼 악인의 심중에서 <em>말한다</em>.</p>
+<p><strong>구조.</strong> A(1–4절 악인)–B(5–9절 헤세드 찬양)–B′(10절 헤세드의 기도)–A′(11–12절 보호 기도)의 이중 수미상관.</p>
+<div class="vs">
+<span class="ref">1–4절 — 두려움이 없는 눈</span>
+<p>"그의 눈에는 하나님을 두려워하는 빛이 없다 하니"(1절). 이어지는 초상—스스로 자랑하고, 죄악을 미워하지 않으며, 침상에서 죄악을 꾀하고, 악을 거절하지 않는다. 주목할 것은 악이 <strong>충동이 아니라 계획</strong>으로 그려진다는 점이다(4절 "그의 침상에서 죄악을 꾀하며"). 1편의 '앉는 자리'가 여기서 <em>눕는 자리</em>까지 침범한다.</p>
+</div>
+<div class="vs">
+<span class="ref">5–9절 — 헤세드로 가득 찬 우주</span>
+<p>시편에서 가장 빛나는 찬양 단락 중 하나다. "여호와여 주의 인자하심이 하늘에 있고 주의 진실하심이 공중에 사무쳤으며 주의 의는 하나님의 산들과 같고 주의 심판은 큰 바다와 같으니이다." <strong>하늘·궁창·산·바다</strong>—우주의 사방이 하나님의 성품으로 채워진다. 이어 7–9절이 성전 체험의 언어로 옮겨 간다: "사람들이 주의 날개 그늘 아래에 피하나이다 … 주의 복락의 강물을 마시게 하시리이다 진실로 <strong>생명의 원천이 주께 있사오니 주의 빛 안에서 우리가 빛을 보리이다</strong>." 에덴의 강(창 2:10)과 생명의 샘이 예배의 자리에서 되살아난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 요지가 이 시의 설계를 밝힌다—<strong>1편이 악인의 길과 의인의 길을 대조했다면, 36편은 악인의 길과 하나님의 헤세드를 대조한다.</strong> 그리고 악인의 어리석음은 그 길이 잘못되었다는 데서만 드러나는 것이 아니다. 하나님의 인자하심과 구원은 <em>사람과 짐승에게까지 두루</em> 미치므로(6절 "주여 주는 사람과 짐승을 구하여 주시나이다"), 그들을 하나님의 선하심에서 배제하는 것은 오직 <strong>그들 자신의 어리석음과 자초한 눈멂</strong>뿐이다. 은혜의 문은 닫혀 있지 않다. 다만 눈을 감은 자가 있을 뿐이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 1편이 악인의 길과 의인의 길을 대조한다면, 36편은 악인의 성품과 <strong>여호와의 성품</strong>을 대조한다. 인간의 지식과 지각조차 하나님과의 관계에 의존한다—우리 문화는 내가 보는 대로 판단한다고 가르치지만, 이 시는 <em>주의 빛 안에서 우리가 빛을 보나이다</em>라고 고백하게 한다. C. S. 루이스의 명언이 그 주석이다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 대다수가 탄원으로 분류하나 롱맨은 통설에서 벗어나 이 시를 <strong>확신의 시</strong>로 다룬다. 시인이 위협을 분명히 인식하면서도 하나님의 언약적 신실하심을 확언하고, 12절에서 악인의 파멸을 확신 있게 선언하며 닫기 때문이다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>바울이 1절을 인용하는 자리가 결정적이다—"그들의 눈앞에 하나님을 두려워함이 없느니라"(롬 3:18). 이는 로마서 3:10–18의 시편 연쇄 인용을 <strong>마무리하는</strong> 구절이며, <span class="c cc">C</span>가 짚듯 바울은 이로써 <em>하나님의 인자하심이 아니고서는 모든 인간이 이 범주에 든다</em>는 것을 논증한다. 그리고 곧바로 이어지는 로마서 3:21–31—믿음으로 말미암는 의—이 바로 이 옛 시의 찬양 부분(36:5–9)에 담긴 하나님의 인자하심에 복음이 부여하는 <strong>새 의미</strong>를 전개한다. 곧 36편의 구조(악인 → 헤세드)가 로마서의 구조(죄 → 은혜)와 같다. 9절은 요한복음에서 인격을 얻는다: "생명의 원천이 주께 있사오니"는 "내가 주는 물을 마시는 자는 영원히 목마르지 아니하리니"(요 4:14)로, "주의 빛 안에서 우리가 빛을 보리이다"는 "나는 세상의 빛이니 나를 따르는 자는 어둠에 다니지 아니하고 생명의 빛을 얻으리라"(요 8:12)로 이어진다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 1편</strong>—대조의 원형. <strong>창세기 2:10</strong>—에덴의 강. <strong>시편 46:4</strong>—"한 시내가 있어 나뉘어 흘러". <strong>예레미야 2:13</strong>—"생수의 근원". <strong>에스겔 47장</strong>·<strong>요한계시록 22:1</strong>. <strong>로마서 3:18, 21–31</strong>, <strong>요한복음 4:14; 8:12</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="37" id="ps37">
+<h3><span class="chip-num">37편</span> 불평하지 말라 — 알파벳으로 배우는 인내의 지혜</h3>
+<p class="lead">단기적으로는 악인이 형통해 보인다. 그러나 승부는 장기전이다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시." <strong>알파벳 이합체 지혜시</strong>로, 자모당 네 행(예외 두 곳)씩 이어지는 잠언 선집이다. <span class="c cc">C</span>는 이 시의 원 자리를 <strong>지혜 학교</strong>—고대 이스라엘의 도덕·종교 교육 과정—에서 찾으며, 자모 순서는 암송을 돕는 기억술이었다고 본다. 교사의 자전적 육성이 곳곳에 있다: "내가 어려서부터 늙기까지 의인이 버림을 당하거나 그의 자손이 걸식함을 보지 못하였도다"(25절), "악인이 큰 세력을 부리며 … 내가 지나갈 때에 그는 없어졌나니"(35–36절). 악인의 형통이라는 오래된 걸림돌 앞에서 젊은이들을 가르치는 <em>노교사의 강의록</em>이다.</p>
+<p><strong>구조.</strong> 주제가 순환한다: 불평하지 말고 의뢰·기뻐·맡기고 잠잠히 참으라(1–11절) / 악인의 무기가 자기를 찌름(12–15절) / 의인의 적은 소유가 나음(16–26절) / 선을 행하라(27–33절) / 여호와를 바라라와 목격담(34–40절).</p>
+<div class="vs">
+<span class="ref">1–11절 — 다섯 개의 명령</span>
+<p>"악을 행하는 자들 때문에 불평하지 말며." 이어지는 명령이 신앙 실천의 다섯 동사다—<strong>의뢰하라</strong>(3절), <strong>기뻐하라</strong>(4절), <strong>맡기라</strong>(5절, 문자적으로 "네 길을 여호와께 굴려 놓으라"), <strong>잠잠하고 참고 기다리라</strong>(7절), <strong>분을 그치고 노를 버리라</strong>(8절). 11절이 이 단락의 결론이다: "그러나 <strong>온유한 자들은 땅을 차지하며</strong> 풍성한 화평으로 즐거워하리로다."</p>
+</div>
+<div class="vs">
+<span class="ref">12–40절 — 적은 소유와 긴 시야</span>
+<p>16절이 이 시의 경제학이다—"의인의 적은 소유가 악인의 풍부함보다 낫도다." 23–24절은 넘어짐조차 끝이 아니라고 말한다: "그는 넘어지나 아주 엎드러지지 아니함은 여호와께서 그의 손으로 붙드심이로다." 그리고 34절이 결론적 권면이다—"여호와를 바라고 그의 도를 지키라." 이 시 전체가 '조급함'과 싸운다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 교육학적 통찰이 이 시의 핵심을 짚는다. 도덕 교육의 가장 큰 난제는 <strong>학생에게 그 가르침을 정당화하는 일</strong>이다. 충분한 시간만 있으면 누구나 무언가를 암송할 수 있고 이 시의 알파벳 구조가 그 암송을 돕는다. 그러나 문제는 남는다—<em>악인이 이 세상에서 잘만 살아가는 것이 명백한데, 왜 도덕을 택해야 하는가?</em> 교육이 깊이를 가지려면 "하나님이 그렇게 말씀하셨으니까"라는 답만으로는 부족하다. <strong>왜 하나님이 그렇게 말씀하실 만한지</strong>, 왜 그분이 도덕을 요구하시는지를 함께 밝혀 주는 것이 도덕과 의를 가르치는 교육 목표를 향한 상당한 진전이 된다. 37편은 그 추가 요소를 제공하되, 심오한 이론의 방식이 아니라 <em>실천적이고 기능적인</em> 방식으로 제공한다. 단기적으로는 악인이 형통하고 의인이 그 손에 고난받는 듯 보인다. 그러나 <strong>중요한 것은 장기전</strong>이며, 길게 볼 때 참된 만족은 오직 <em>살아 계신 하나님과의 관계 속에 사는 자의 표지인 의</em>에서만 발견된다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 시편보다 잠언에 더 가깝게 들리는 지혜 전통의 시다. 태너는 이 시가 <em>오늘날 거의 번역이 필요 없다</em>고 말한다—탐욕이 축복받고 선망되는 세상에서 의인의 삶은 초라하고 어리석어 보이기 때문이다. 이 시는 더 긴 시야의 안경, 곧 <strong>나라의 눈으로 세상을 보는 법</strong>을 건넨다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 쟁점은 생명을 지탱하는 <strong>땅의 소유</strong>다. 악인이 지금 땅을 장악하고 의인이 압제받는 것이 배경이며, 아합과 나봇 이야기(왕상 21장)가 개인 차원의 예시다. 11절의 온유한 자가 땅을 차지하리라는 선언이 산상수훈(마 5:5)으로 이어진다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>11절이 팔복이 되었다—"온유한 자는 복이 있나니 그들이 <strong>땅을 기업으로 받을 것임이요</strong>"(마 5:5). 예수께서 이 구절을 인용하시면서 '땅'의 의미가 가나안 땅에서 <em>새 창조</em>로 확장된다(롬 4:13; 계 21:1). 곧 37편의 인내가 종말론적 근거를 얻는다—기다림이 헛되지 않은 이유는 실제로 상속이 예비되어 있기 때문이다. 5절의 "네 길을 여호와께 맡기라"는 베드로전서 5:7("너희 염려를 다 주께 맡기라")로 이어지고, 4절의 "여호와를 기뻐하라 그가 네 마음의 소원을 네게 이루어 주시리로다"는 자기 욕망의 보증이 아니라 <em>기뻐하는 대상이 바뀔 때 소원도 바뀐다</em>는 뜻으로 읽어야 한다. 쿰란 공동체는 이 시의 주석(페샤르)을 남겨 '가난한 자들의 회중'인 자신들에게 적용했는데, 이는 초대교회가 스스로를 '가난한 자'로 이해한 방식과도 통한다(약 2:5). 즉효를 요구하는 시대에 <strong>"잠잠하고 참고 기다리라"</strong>는 이 오래된 명령이 더욱 필요하다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 73편</strong>—악인의 형통 문제의 실존적 확장판. <strong>욥기 21장</strong>·<strong>예레미야 12:1</strong>—같은 물음. <strong>잠언 3:5–6; 24:19–20</strong>. <strong>마태복음 5:5</strong>, <strong>로마서 4:13</strong>, <strong>야고보서 5:7–8</strong>, <strong>베드로전서 5:7</strong>, <strong>요한계시록 21:1</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="38" id="ps38">
+<h3><span class="chip-num">38편</span> 화살이 나를 찌르고 — 버려진 병자의 긴 탄식</h3>
+<p class="lead">전환도, 신탁도, 회복의 예감도 없다. 기도로 시작해 기도로 끝난다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 <strong>기념하는 시</strong>"—'레하즈키르'는 기념 제사(레 2:2의 아즈카라)와 관련된 예전 용어로 추정된다(70편과 공유). 세 번째 참회시이며, 33편처럼 22개 대구로 된 '알파벳화' 시다. <span class="c cd">D</span>(태너)는 상처와 고름의 언어가 문자적 질병일 수도, <em>죄책이 심신에 새긴 고통의 은유</em>일 수도 있다고 열어 둔다—교회가 이 시를 '질병'이 아니라 '죄'의 시로 읽어 온 것은 후자의 독법이다. 6편·22편과 결정적으로 다른 점은 <strong>어조의 전환이 없다</strong>는 것이다.</p>
+<p><strong>구조.</strong> 여는 기도(1–2절) → 몸의 참상(3–10절) → 사람들의 반응(11–20절) → 맺는 기도(21–22절).</p>
+<div class="vs">
+<span class="ref">1–10절 — 성한 곳이 없는 몸</span>
+<p>"주의 화살이 나를 찌르고 주의 손이 나를 심히 누르시나이다"(2절). 고통의 발신자가 <strong>하나님으로 지목된다</strong>—이것이 이 시의 무게다. 3–8절이 몸의 붕괴를 나열한다: 살에 성한 곳이 없고, 상처가 썩어 악취가 나며, 허리에 열기가 가득하고, 심장이 뛰며 기력이 쇠하고 눈빛도 나를 떠났다.</p>
+</div>
+<div class="vs">
+<span class="ref">11–20절 — 두 겹의 소외</span>
+<p>"내가 사랑하는 자와 내 친구들이 내 상처를 멀리하고 내 친척들도 멀리 섰나이다"(11절). 병이 관계를 잘라 낸다. 그런데 시인의 반응이 뜻밖이다—13–14절, "나는 못 듣는 자 같이 듣지 아니하고 말 못하는 자 같이 입을 열지 아니하오니." 변명하지 않는 <strong>침묵</strong>이다. 그 침묵의 근거가 15절이다: "여호와여 내가 주를 바랐사오니 내 주 하나님이 내게 응답하시리이다." 18절이 참회시 전통의 근거가 된다—"내 죄악을 아뢰고 내 죄를 슬퍼함이니이다."</p>
+</div>
+<div class="vs">
+<span class="ref">21–22절 — 끝나지 않은 기도</span>
+<p>"여호와여 나를 버리지 마소서 나의 하나님이여 나를 멀리하지 마소서 속히 나를 도우소서 <strong>주 나의 구원이시여</strong>." 응답의 보고 없이 시가 닫힌다. 그러나 마지막 호칭이 모든 것을 말한다—회복의 보증이 없는 자리에서도 그분을 '나의 구원'이라 부른다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>의 병리학적 관찰이 이 시를 설명한다. 질병의 경험은 사람마다 다르다. 다행히 많은 이에게 질병은 <em>일시적 상태</em>이며 건강으로의 회복이 뒤따른다. 다른 병상의 시들(6편, 22편)에서는 그 <strong>질병의 종료와 건강으로의 전환</strong>이 중심 초점이다. 그러나 때로는 그 전환이 없거나, 더 흔하게는 오래 앓는 사람에게 <em>전환이 있을 것 같아 보이지 않는다</em>. 치유가 없을 때 병자에게 질병은 영구적 조건처럼 느껴진다. 오랜 기간에 걸친 육체적 질병의 위험은, <strong>몸의 병으로 시작한 것이 서서히 마음과 영의 병이 된다</strong>는 데 있다. 녹과 부식처럼 질병은 삶이 세워진 토대 자체를 갉아먹는다. 히브리 신학에서 삶의 토대는 두 가지 근본 관계—하나님과의 관계, 그리고 이웃과의 관계—위에 있었다. 질병이 길어지면서 이 두 관계를 잠식하기 시작하는 것이 이 시에 뚜렷하다: 하나님은 멀어지고 그분의 진노만이 뚜렷해지며, 사람들의 사랑은 물러가고 원수는 실제보다 커 보인다. 이 시가 해답 없이 끝나는 것—바로 그 정직함이 이 시의 신앙이다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>태너</strong> — 상처와 고통이 반드시 육체적 원인을 가질 필요는 없다. 시편은 시(詩)이므로 그 심상은 <em>극심한 감정적 고통이 영혼과 몸에서 어떻게 느껴지는지</em>를 그린 것일 수 있다. 그렇게 읽으면 이 시는 죄책이 사람을 정신적·육체적으로 어떻게 무너뜨리는지에 대한 깊은 묘사가 된다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 경건한 자와 악인의 차이는 후자가 죄를 짓고 전자는 짓지 않는 데 있지 않다. <strong>경건한 자는 뉘우침을 느껴 회개하고 하나님께 더 가까이 가려 하는 반면, 악인은 무디어져 잘못했다고 느끼지 않는다</strong>(롬 7:7–25).</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>11절("내가 사랑하는 자와 내 친구들이 내 상처를 멀리하고")은 복음서에서 문자적 장면이 된다—"제자들이 다 예수를 버리고 도망하니라"(막 14:50). 그리고 13–14절의 침묵—고발 앞에서 못 듣는 자, 말 못하는 자처럼 입을 열지 않음—은 이사야 53:7("그가 곤욕을 당하여 괴로울 때에도 그의 입을 열지 아니하였음이여")을 거쳐 빌라도 앞에 서신 그리스도에게서 성취된다(마 27:12–14). 2절의 "주의 화살이 나를 찌르고"는 우리에게 임했어야 할 진노가 다른 분에게 옮겨졌다는 복음의 언어로 다시 읽힌다—"그가 찔림은 우리의 허물 때문이요"(사 53:5). 그리고 이 시가 <em>해결 없이</em> 끝난다는 사실 자체가 목회적 선물이다. 모든 기도가 응답의 보고로 끝나야 하는 것은 아니며, 낫지 않은 채로 드리는 "주 나의 구원이시여"도 온전한 믿음이다. 바울의 가시(고후 12:7–9)가 그 신약적 대응이다—치유 대신 은혜가 주어질 수 있다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 6편·41편</strong>—병상 기도의 계열. <strong>욥기 19:13–19</strong>—친척과 친구가 멀어짐. <strong>이사야 53:5, 7</strong>. <strong>마가복음 14:50</strong>, <strong>마태복음 27:12–14</strong>, <strong>고린도후서 12:7–9</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="39" id="ps39">
+<h3><span class="chip-num">39편</span> 한 뼘 인생 — 나그네의 기도</h3>
+<p class="lead">코헬렛이 믿음을 낼 수 있었다면 드렸을 법한 기도.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 <strong>여두둔</strong> 형식으로 부르는 노래"—여두둔은 다윗이 세운 세 악장 중 하나다(대상 16:41; 25:1). 개인 탄원이되 극히 사적·자전적이며 지혜적 성찰이 짙다. <span class="c cc">C</span>는 제의 밖의 문학적 작품 쪽으로 기울며, 이 시를 <em>"코헬렛(전도자)이 믿음을 낼 수 있었다면 드렸을 법한 기도"</em>라고 평한다. <span class="c cd">D</span>(야콥슨)는 하나님께 드리면서 <strong>동시에 하나님께 항의하는</strong> 격정적 신학 증언으로 읽는다. 중병(38편)보다는 <em>노년의 성찰적 의식</em>—죽음의 가까움과 불가피성—이 일차 배경으로 보인다.</p>
+<p><strong>구조.</strong> 침묵의 결심과 그 실패(1–3절) → 덧없음의 묵상(4–6절) → 기도(7–13절).</p>
+<div class="vs">
+<span class="ref">1–3절 — 재갈을 물렸으나</span>
+<p>"내가 말하기를 나의 행위를 조심하여 내 혀로 범죄하지 아니하리니 악인이 내 앞에 있을 때에 내가 내 입에 재갈을 먹이리라." 그런데 침묵이 실패한다—"내 마음이 내 속에서 뜨거워서 작은 소리로 읊조릴 때에 <strong>불이 붙으니</strong> 나의 혀로 말하기를"(3절). 억눌린 고통은 사라지지 않고 <em>안에서 탄다</em>. 예레미야가 같은 경험을 말했다(렘 20:9).</p>
+</div>
+<div class="vs">
+<span class="ref">4–6절 — 한 뼘</span>
+<p>"여호와여 나의 종말과 연한이 얼마나 되는지 알게 하사 내가 나의 연약함을 알게 하소서. 주께서 나의 날을 <strong>한 뼘 길이만큼</strong> 되게 하시매 나의 일생이 주 앞에는 없는 것 같사오니." 그리고 6절—"사람은 그림자 같이 다니고 헛된 일로 소란하며 재물을 쌓으나 누가 거둘는지 알지 못하나이다." <span class="hw">הֶבֶל</span>(헤벨, 헛됨)이 반복되는 이 대목은 전도서의 언어 그 자체다.</p>
+</div>
+<div class="vs">
+<span class="ref">7–13절 — 나는 나그네입니다</span>
+<p>"주여 이제 내가 무엇을 바라리요 <strong>나의 소망은 주께 있나이다</strong>"(7절). 덧없음의 묵상이 허무주의로 끝나지 않는 분기점이다. 12절이 그 자기 이해를 밝힌다—"나는 주와 함께 있는 <span class="hw">גֵּר</span>(게르, 나그네)이며 나의 모든 조상들처럼 <span class="hw">תּוֹשָׁב</span>(토샤브, 거류민)이니이다." 레위기 25:23의 바로 그 단어들이다: 땅의 참 주인은 하나님이시고 이스라엘은 그분과 함께 사는 거류민일 뿐이다. 그리고 13절의 대담한 결말—"주는 나를 용서하사(문자적으로 <em>내게서 눈을 돌이키사</em>) 내가 떠나 없어지기 전에 <strong>기력을 회복하게 하소서</strong>." 욥의 언어(욥 7:19; 14:6)와 닿아 있는, 시편에서 가장 어둡고 정직한 결말 중 하나다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시의 중심 관심을 <strong>관점(perspective)</strong>으로 규정한다. 사람은 저마다 단 한 번의 짧은 생을 받았고, 그 생을 살아 내려면 적절한 관점이 필요하다. 그런데 많은 사람에게 일상의 압박과 분주함은 미묘하게 부풀어 <em>인생의 의미 자체인 양</em> 자리를 차지한다—땅, 수입, 욕망, 원수, 친구. 이런 것들이 마치 영원히 계속될 것처럼 삶의 재료가 되어 버린다. 그러나 생명은 그 기간이 한정되어 있으며, 그 의미를 찾으려면 <strong>모든 생명을 주신 하나님의 목적 안에서</strong> 찾아야 한다. 시인은 일상의 소란과 매일의 악의 압박 속에서—그것이 시야를 흐리고 가치 감각을 어지럽히는 자리에서—출발한다. 그는 이 모든 것의 목적을 의심하기 시작하고, 함축적으로는 하나님의 공의까지 의심한다. 그러나 그 의심은 <em>믿음 안에 뿌리내린 의심</em>이다. 그래서 그는 산꼭대기에 올라 인생의 짧음을 내려다보듯 참 척도를 회복하고, "나의 소망은 주께 있나이다"에 도달한다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 게르스텐베르거는 <em>수수께끼 같은 작품</em>, 메이스는 <em>이상한 기도</em>라 불렀다. 시는 나그네의 은유로 닫히지만 그 고립이 마지막 말은 아니다—고립이 도리어 기도하게 만들기 때문이다. 다른 무리가 없는 자에게 여호와 자신이 가족이 되시며, 주의 이름을 지닌 백성은 흩어진 모든 이에게 가족이 되도록 부름받는다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 명확한 해결 없이 끝나는 드문 탄원이다. 시편 전체는 마음에 있는 바를 담대히 아뢰라 하지만, 욥기와 예레미야애가 3장은 하나님이 결국 <em>기대하며 침묵하는 것</em>을 원하신다고 시사한다(욥 42:1–6; 애 3:26).</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>12절의 '나그네와 거류민'이 신약에서 그리스도인의 정체성이 된다—"사랑하는 자들아 거류민과 나그네 같은 너희를 권하노니"(벧전 2:11), 그리고 히브리서 11:13("땅에서는 외국인과 나그네임을 증언하였으니"). 39편은 그 자기 이해가 <em>슬픔에서 나왔다가 소망으로 바뀌는</em> 과정을 보여 준다. 세상에 뿌리내리지 못했다는 자각이, 다른 본향이 있다는 소망으로 뒤집히는 것이다(히 11:16). 4절의 "나의 날을 알게 하소서"는 시편 90:12("우리에게 우리 날 계수함을 가르치사")로 이어지고, 예수의 어리석은 부자 비유(눅 12:16–21)—"재물을 쌓으나 누가 거둘는지 알지 못하나이다"(39:6)의 서사판—로 확장된다. 그리고 이 시가 어둡게 끝난다는 사실은 정경의 정직함을 보여 준다. 시편은 모든 기도가 밝게 끝나야 한다고 강요하지 않는다. 다만 <strong>그런 기도조차 하나님께 드려진다</strong>는 사실이 이미 믿음이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>전도서 1–2장</strong>—'헤벨'의 신학. <strong>욥기 7:16–19; 14:1–6</strong>—같은 항변. <strong>예레미야 20:9</strong>—뼛속에 붙은 불. <strong>레위기 25:23</strong>—나그네와 거류민. <strong>시편 90편</strong>—인생의 덧없음의 짝. <strong>누가복음 12:16–21</strong>, <strong>히브리서 11:13–16</strong>, <strong>베드로전서 2:11</strong>.</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="40" id="ps40">
+<h3><span class="chip-num">40편</span> 수렁에서 새 노래로, 다시 간구로</h3>
+<p class="lead">새 노래가 끝이 아니다. 찬양 뒤에 다시 수렁이 올 수 있다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." 감사(1–10절)와 탄원(11–17절)의 결합이다. 13–17절이 70편과 중복되므로 합성설(크라우스 등)이 우세하나, <span class="c cc">C</span>는 27편처럼 통일된 <strong>왕의 간구 예전</strong>으로 읽는다—감사가 먼저 와서 <em>전례(前例)와 토대</em>를 놓고 그 위에서 탄원이 올려지는 예배의 진행이라는 것이다. <span class="c cd">D</span>(거스텐버거)는 감사 찬양에 기도문(70편)이 부록처럼 결합된 예전적 재사용의 사례로 본다. 어느 쪽이든 <strong>'찬양 다음에 다시 탄원이 온다'는 순서 자체</strong>가 이 시의 증언이다.</p>
+<div class="vs">
+<span class="ref">1–5절 — 수렁에서 반석으로</span>
+<p>"나를 기가 막힐 웅덩이와 수렁에서 끌어올리시고 내 발을 반석 위에 두사 내 걸음을 견고하게 하셨도다. 새 노래 곧 우리 하나님께 올릴 찬송을 내 입에 두셨으니." 구원의 네 동작—끌어올리심, 세우심, 견고하게 하심, <strong>새 노래를 입에 두심</strong>. 찬양조차 시인이 만들어 낸 것이 아니라 <em>주어진</em> 것이다.</p>
+</div>
+<div class="vs">
+<span class="ref">6–10절 — 제사보다 순종</span>
+<p>"주께서 내 귀를 통하여 내게 들려 주시기를 제사와 예물을 기뻐하지 아니하시며 … 그 때에 내가 말하기를 <strong>내가 왔나이다</strong> 나를 가리켜 기록한 것이 두루마리 책에 있나이다. 나의 하나님이여 내가 주의 뜻 행하기를 즐기오니 주의 법이 나의 심중에 있나이다." 제사 제도의 부정이 아니라 <em>순종 없는 제사</em>의 무효 선언이다(삼상 15:22). 9–10절이 그 순종의 첫 내용을 밝힌다—"내가 많은 회중 가운데에서 의의 기쁜 소식을 전하였나이다 … 내 입술을 닫지 아니할 줄을 주께서 아시나이다."</p>
+</div>
+<div class="vs">
+<span class="ref">11–17절 — 다시 수렁</span>
+<p>"수많은 재앙이 나를 둘러싸고 나의 죄악이 나를 덮치므로 우러러볼 수도 없으며"(12절). 감사시 안에서 위기가 재발한다. 그리고 마지막 절—"나는 가난하고 궁핍하오나 주께서는 나를 생각하시오니 주는 나의 도움이시요 나를 건지시는 이시라 <strong>나의 하나님이여 지체하지 마소서</strong>"(17절). 감사시가 <em>재촉하는 기도</em>로 끝난다.</p>
+</div>
+<p><strong>신학적 해석.</strong> <span class="c cc">C</span>는 이 시가 이스라엘 사상에서 <strong>'한 사람'과 '여럿'의 관계</strong>를 놀랍게 펼쳐 보인다고 짚는다. 여기서 '한 사람'은 왕이며 시 전체가 1인칭이다—왕이 이 간구 예전의 주 참여자이기 때문이다. '여럿'은 왕국의 백성으로, "많은 회중"(9–10절)이라는 표현과 미래의 기뻐함에 대한 기대(16절)에 나타난다. 그 상호 관계는 <strong>왕의 대표성</strong>에 있다. 언약의 문맥에서 왕은 자기 백성에 대한 책임을 개인으로서 어깨에 졌고, 이 예전에서 표현된 그의 나라를 향한 소원은 곧 구원이었다(13절). 따라서 이 시에는 <em>하나님 나라 안의 대표 원리</em>가 함축되어 있다. 한편으로 개인 각자가 하나님과의 언약 관계에 참여했지만, 다른 한편 나라라는 틀 안에서 그 관계는 <strong>왕이라는 인격을 통해 흘렀다</strong>.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시는 신앙의 삶이 간구에서 찬양으로 이어지는 <strong>끊기지 않는 직선이 아님</strong>을 증언한다. 야곱의 사다리를 경건하게 한 칸씩 올라가는 일이 아닌 것이다—오늘 반석 위에 서서 찬양하는 이가 내일 깊은 물에서 부르짖을 수 있다. 마지막 절이 그 사실을 상기시킨다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 히브리서 10:5–7이 6–8절을 칠십인역 형태로 인용하는데, <em>내 귀를 통하여 내게 들려주시기를</em>이 <em>나를 위하여 한 몸을 예비하셨도다</em>로 되어 있다. 귀가 몸의 일부이므로 이 차이가 의미를 바꾸지는 않는다.</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>히브리서 10:5–10이 이 시의 6–8절을 <strong>그리스도의 입에</strong> 둔다. 칠십인역이 "주께서 내 귀를 뚫으셨나이다"를 "주께서 내 <em>몸</em>을 예비하셨도다"로 옮긴 것을 따라, 히브리서는 이 구절을 성육신하신 아들이 세상에 들어오시며 하신 말씀으로 읽는다: "하나님이여 보시옵소서 두루마리 책에 나를 가리켜 기록된 것과 같이 하나님의 뜻을 행하러 왔나이다." 그리고 결론을 내린다—"이 뜻을 따라 예수 그리스도의 <strong>몸을 단번에 드리심으로 말미암아</strong> 우리가 거룩함을 얻었노라"(히 10:10). 곧 40편의 "내가 왔나이다"가 반복되는 짐승 제사를 <em>영원히 대체하는</em> 순종의 선언이 된다. 왕의 대표성이라는 이 시의 구조도 여기서 완성된다—한 사람의 순종으로 많은 사람이 의인이 된다(롬 5:19). 그리고 이 시의 순서가 목회적으로 중요하다. 구원의 새 노래를 받은 뒤에도 다시 수렁이 올 수 있고, 그때 <strong>과거의 건지심이 새 간구의 토대가 된다</strong>. "지체하지 마소서"로 끝나는 감사시—그것이 신앙의 실제 지형이다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 70편</strong>—40:13–17의 중복. <strong>사무엘상 15:22</strong>—"순종이 제사보다 낫고". <strong>시편 51:16–17</strong>·<strong>호세아 6:6</strong>·<strong>미가 6:6–8</strong>—제사 비판 계열. <strong>히브리서 10:5–10</strong>, <strong>로마서 5:19</strong>, <strong>요한복음 4:34</strong>("나의 양식은 나를 보내신 이의 뜻을 행하며").</p>
+</div>
+</div>
+<div class="chap" data-psalm-context="41" id="ps41">
+<h3><span class="chip-num">41편</span> 가난한 자를 보살피는 자 — 제1권의 문을 닫는 시</h3>
+<p class="lead">말씀 앞의 경건으로 열린 제1권이, 이웃 앞의 자비로 닫힌다.</p>
+<p><strong>배경과 상황.</strong> "다윗의 시, 인도자를 따라 부르는 노래." <span class="c cc">C</span>는 리더보스를 따라 <strong>병자의 예전</strong>으로 분석한다: 제사장의 서두 교훈·축복(1–3절), 병자의 기도와 탄원(4–10절), [신탁 상정], 확신의 결어(11–12절). 6편·38편과 같은 계열이나 <em>예전적 짜임이 가장 뚜렷하다</em>. 13절("이스라엘의 하나님 여호와를 영원부터 영원까지 송축할지로다 아멘 아멘")은 이 시 자체의 일부가 아니라 <strong>제1권 전체를 닫는 송영</strong>이다.</p>
+<div class="vs">
+<span class="ref">1–3절 — 두 번째 '아쉬레'</span>
+<p>"<span class="hw">אַשְׁרֵי</span>(아쉬레) <strong>가난한 자를 보살피는 자</strong>에게 복이 있음이여 재앙의 날에 여호와께서 그를 건지시리로다." 제1권의 마지막 시가 1편의 첫 단어로 시작한다. 그러나 복의 내용이 바뀌었다—1편이 <em>토라를 묵상하는 자</em>의 복이라면 41편은 <em>약한 자를 돌보는 자</em>의 복이다. 3절이 그 보상을 병상의 언어로 말한다: "여호와께서 그를 병상에서 붙드시고 그가 누워 있을 때마다 그의 병을 고쳐 주시나이다." <strong>남을 돌본 자가 돌보심을 받는다.</strong></p>
+</div>
+<div class="vs">
+<span class="ref">4–10절 — 문병 온 자들</span>
+<p>"여호와여 내게 은혜를 베푸소서 내가 주께 범죄하였사오니 나를 고치소서"(4절). 질병과 죄가 연결되어 인식된다. 5–8절이 병문안의 위선을 폭로한다—찾아와서는 거짓을 말하고 나가서는 그것을 퍼뜨리며, 속으로 "그가 눕고 다시 일어나지 못하리라" 한다. 그리고 9절, 제1권에서 가장 아픈 문장: "내가 신뢰하여 <strong>내 떡을 나눠 먹던 나의 가까운 친구</strong>도 나를 대적하여 그의 발꿈치를 들었나이다."</p>
+</div>
+<div class="vs">
+<span class="ref">11–13절 — 영원히 주 앞에</span>
+<p>"내가 알거니와 내 원수가 나로 말미암아 개가를 부르지 못하리니 주께서 나를 기뻐하시는 줄을 이로써 아나이다"(11절). 12절이 결론이다—"주께서 나를 온전한 중에 붙드시고 <strong>영원히 주 앞에 세우시나이다</strong>." 그리고 13절의 송영이 제1권 41편 전체를 봉인한다.</p>
+</div>
+<p><strong>신학적 해석.</strong> 이 시의 편집적 의미가 각별하다. 제1권은 '아쉬레'로 시작해 '아쉬레'로 닫히지만, 그 사이에 41편의 여정이 놓여 있다—원수와 질병과 죄책과 배신을 통과한 여정이다. 그래서 41편의 복은 1편의 복을 반복하는 것이 아니라 <strong>시험을 통과한 뒤 재확인하는 것</strong>이다. 그리고 그 복의 내용이 이웃을 향한 자비로 옮겨 간 것이 결정적이다. 말씀 묵상(1편)과 약자 돌봄(41편)—<em>수직축과 수평축</em>이 제1권의 두 기둥으로 세워진다. <span class="c cd">D</span>가 짚듯 이 시는 고난 중에 <strong>공동체가 위로가 아니라 상처가 될 수 있다는 현실</strong>(5–9절)을 정직하게 담아 병상 목회의 영원한 교과서가 되었다.</p>
+<div class="note">
+<div class="tt">주석가별 초점</div>
+<p><span class="c cd">D</span> <strong>제이콥슨</strong> — 이 시의 심장에 깊은 아이러니가 있다. 한편으로 <em>회중이 공동체 노릇을 해 주지 않은 사람</em>의 탄식을 노래하고, 다른 한편으로 <strong>복의 길이 바로 연약한 자를 돌보는 데 있다</strong>고 가르치는 교훈시다. 곧 고난받는 이를 환대하고 함께 서는 법을 아는 공동체를 빚어내려는 시다.</p>
+<p><span class="c cl">L</span> <strong>롱맨</strong> — 골딩게이의 통찰이 예리하다—1편이 율법에 순종하여 환난을 면하는 자에게 복을 선언한다면, <strong>41편은 환난 중에 있는 약한 자에게 건지심을 확언하며 복을 선언한다</strong>. 예수께서 9절을 유다에게 적용하셨다(요 13:18).</p>
+</div>
+<div class="gold-box">
+<div class="tt">복음적 해석</div>
+<p>9절을 예수께서 가룟 유다의 배신에 적용하셨다—"내 떡을 먹는 자가 내게 발꿈치를 들었다 한 성경을 응하게 하려는 것이니라"(요 13:18). <span class="c cc">C</span>가 지적하듯 이는 <strong>본래 죽음 앞에 선 병자의 예전이었던 말이 예수의 생애에서 배신에 대한 예언적 예고로 변모한</strong> 사례이며, 복음서 기자들이 수난 내러티브를 사실상 '죽어 감의 예전'이라는 문맥 안에 배치했음을 보여 주는 또 하나의 증거다(22편 참조). 1절의 복도 복음서에서 확장된다—"내 형제 중에 지극히 작은 자 하나에게 한 것이 곧 내게 한 것이니라"(마 25:40). 41편이 약속한 "재앙의 날에 여호와께서 그를 건지시리로다"가 마지막 심판의 장면에서 결정적 기준이 되는 것이다. 그리고 12절의 "영원히 주 앞에 세우시나이다"—병상에서 나온 이 소망이 요한계시록 7:15("그러므로 그들이 하나님의 보좌 앞에 있고")에서 완성된다. 제1권은 병상에서 시작해 보좌 앞을 바라보며 닫힌다.</p>
+</div>
+<div class="link-box">
+<div class="tt">다른 성경과의 연결</div>
+<p><strong>시편 1편</strong>—'아쉬레' 수미상관. <strong>시편 6편·38편</strong>—병상 기도의 계열. <strong>시편 72:18–19; 89:52; 106:48; 150편</strong>—각 권말 송영. <strong>잠언 19:17</strong>—"가난한 자를 불쌍히 여기는 것은 여호와께 꾸어 드리는 것이니". <strong>욥기 19:19</strong>. <strong>요한복음 13:18</strong>, <strong>마태복음 25:31–46</strong>, <strong>요한계시록 7:15</strong>.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</div>
+</section>
+<!-- ═══════════ Ⅲ부 ═══════════ -->
+<section class="part" id="part3">
+<div class="part-head">
+<div class="heb">חֶסֶד</div>
+<div class="eyebrow">PART Ⅲ</div>
+<h2>제1권의 신학</h2>
+<div class="gloss">41편이 함께 증언하는 하나님과 인간</div>
+</div>
+<h3>1. 탄원이 다수인 책의 신학</h3>
+<p>제1권의 약 59%가 탄원시라는 사실은 통계 이전에 <strong>신학적 진술</strong>이다. 이 책은 신앙을 문제 없는 상태로 그리지 않는다. 오히려 하나님의 백성이 겪는 정상적 경험이 부르짖음이라고 전제한다. 그런데 결정적인 것은 <em>그 부르짖음이 향하는 방향</em>이다. 베스터만이 관찰했듯 시편에는 하나님 없는 절망의 독백이 없다. "어느 때까지니이까"(13:1)는 응답하실 분이 계시다는 전제 위에서만 발화될 수 있는 문장이다. 탄원은 불신앙의 증거가 아니라 <strong>관계가 살아 있다는 증거</strong>다.</p>
+<p>탄원시의 구조 자체가 신학을 담는다. 대부분의 탄원은 <em>탄식 → 간구 → 신뢰의 선언</em>으로 이동하며, 그 신뢰가 상황의 변화 <strong>이전에</strong> 선포된다(13:5; 22:22; 28:6; 31:5). 곧 시편이 가르치는 것은 문제 해결의 기술이 아니라 <strong>해결 이전에 신뢰를 결단하는 문법</strong>이다.</p>
+<h3>2. 헤세드 — 이 책을 관통하는 한 단어</h3>
+<p>제1권에서 <span class="hw">חֶסֶד</span>(헤세드)는 반복해서 결정적 자리에 선다. 무죄한 자가 성전에 들어갈 근거이고(5:7), 탄원 한복판에서 신뢰를 결단하는 이유이며(13:5), 언약 공동체의 기억이 응축된 단어이고(17:7), 왕이 흔들리지 않는 토대이며(21:7), 우주를 채운 실재다(33:5; 36:5). 헤세드는 감정이 아니라 <strong>언약에 매인 신실한 사랑</strong>—약속했기 때문에 계속되는 사랑이다. 제1권의 하나님은 능력으로 먼저 알려지지 않고 <em>약속을 지키시는 성품</em>으로 알려진다.</p>
+<h3>3. 세 개의 세계와 하나의 응답</h3>
+<table>
+<tr><th style="width:16%">위기</th><th>제1권의 대표 본문</th><th>신학적 응답</th></tr>
+<tr><td class="head">원수</td><td>3, 5, 7, 17, 35, 41편</td><td>심판을 하나님께 <strong>양도</strong>한다. 시편의 저주 기도는 폭력의 허가가 아니라 폭력의 이양이다. 악은 스스로 판 함정에 빠지고(7:15), 최종 판결은 마음을 감찰하시는 재판장의 몫이다(7:9).</td></tr>
+<tr><td class="head">질병·죽음</td><td>6, 13, 30, 38, 41편</td><td>죽음의 참혹함은 소멸이 아니라 <strong>찬양의 중단</strong>이다(6:5; 30:9). 그러므로 치유 요청은 찬양할 자리로의 복귀 요청이며, 회복의 목적은 생존이 아니라 증언이다(30:12).</td></tr>
+<tr><td class="head">죄책</td><td>25, 32, 38, 51(제2권)</td><td>은폐는 몸을 무너뜨리고 자백은 즉시 사죄를 받는다(32:3–5). 용서의 근거는 죄의 작음이 아니라 <strong>하나님의 이름</strong>이다(25:11).</td></tr>
+</table>
+<h3>4. 왕과 백성 — 대표성의 신학</h3>
+<p>제1권에는 제왕시가 밀집해 있다(2, 18, 20, 21, 40편, 그리고 27·35편의 왕적 독법). 이 시들이 보여 주는 것은 <strong>한 사람과 여럿의 관계</strong>다 <span class="c cc">C</span>. 왕은 언약의 책임을 개인으로서 어깨에 졌고, 그의 구원은 곧 백성의 구원이었으며 그의 실패는 곧 나라의 위기였다. 587년 왕조가 끊긴 뒤 이 시들은 폐기되지 않고 <em>대망의 언어</em>가 되었다—한 번도 실현된 적 없는 이상이 이제 오실 분에게 걸린 것이다. 개인 탄원조차 대개 공동체의 축복 기원으로 끝난다는 점(3:8; 28:9; 29:11)이 이 신학의 일상적 표현이다.</p>
+<h3>5. 창조와 토라 — 두 권의 책</h3>
+<p>8편·19편·24편·29편·33편이 창조 신학의 축을 이룬다. 그 요지는 일관된다—<strong>자연은 하나님의 영광을 선포하지만 인간의 자리는 계시하지 못한다</strong>(8편, 19편) <span class="c cc">C</span>. 인간의 존엄과 책임은 오직 특별 계시, 곧 토라를 통해 알려진다. 그리고 창조주이심이 역사 주권의 전제이며(33편), 질서의 창조자가 곧 혼돈을 제압하는 용사이시다(24편, 29편). 창조·역사·언약·예배는 히브리 신앙에서 분리되지 않는다.</p>
+<h3>6. 인간론 — 벌레와 관 쓴 자 사이</h3>
+<p>제1권은 인간을 두 극단으로 그린다. 한쪽에는 "나는 벌레요 사람이 아니라"(22:6)와 "깨진 그릇 같으니이다"(31:12)가 있고, 다른 쪽에는 "영화와 존귀로 관을 씌우셨나이다"(8:5)가 있다. 이 긴장은 해소되지 않는다. 오히려 <strong>같은 존재가 동시에 그 둘</strong>이라는 것이 시편의 인간 이해다. 그리고 그 둘을 잇는 것은 인간의 자질이 아니라 하나님의 시선이다—"주께서 그를 생각하시며"(8:4), "주께서는 보셨나이다"(10:14).</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════════ Ⅳ부 ═══════════ -->
+<section class="part" id="part4">
+<div class="part-head">
+<div class="heb">כָּתוּב</div>
+<div class="eyebrow">PART Ⅳ</div>
+<h2>다른 성경과의 연결</h2>
+<div class="gloss">제1권이 물려받은 전승과 제1권이 낳은 신약</div>
+</div>
+<h3>1. 제1권이 물려받은 것 — 구약 전승</h3>
+<table>
+<tr><th style="width:24%">전승</th><th>제1권에서</th></tr>
+<tr><td class="head">오경 — 출애굽</td><td>17:8(신 32:10–11 눈동자·독수리 날개), 18:7–15(출 15장·시내산 신현), 3:7·24:7–10(민 10:35–36 궤의 출정과 귀환). 개인의 기도가 <strong>민족의 기억</strong>을 입는다.</td></tr>
+<tr><td class="head">오경 — 창조</td><td>8편·19편·33편이 창세기 1장을 예배 언어로 재연한다. 33:6·9는 시편에서 유일하게 <em>말씀에 의한 창조</em>를 노래한다.</td></tr>
+<tr><td class="head">언약 — 다윗</td><td>2:7(삼하 7:14 "너는 내 아들"), 18:50, 21:4·7, 89편(제3권)에서 위기를 맞는 그 언약.</td></tr>
+<tr><td class="head">토라 경건</td><td>1:2(수 1:8), 19:7–10, 그리고 119편(제5권)으로 확장. 성전과 왕이 없는 시대에 <strong>말씀이 임재의 자리</strong>가 된다.</td></tr>
+<tr><td class="head">지혜 문학</td><td>1, 14, 25, 32, 34, 36, 37, 39편. 잠언의 두 길, 전도서의 헤벨, 욥기의 항변이 모두 시편의 기도 안으로 들어온다.</td></tr>
+<tr><td class="head">예언서</td><td>렘 17:5–8(시 1편), 렘 20:10(시 31:13), 사 38장(시 30편), 미 6:6–8·사 33:14–16(시 15·24편), 겔 34장(시 23편).</td></tr>
+<tr><td class="head">역사서</td><td>18편 = 삼하 22장(구약에서 가장 긴 병행 본문). 역사적 표제 다섯(3, 7, 18, 34편과 제2권의 51편)이 다윗 서사와 시를 잇는다.</td></tr>
+</table>
+<h3>2. 제1권이 낳은 것 — 신약의 사용</h3>
+<table>
+<tr><th style="width:16%">시편</th><th style="width:26%">신약</th><th>용도</th></tr>
+<tr><td class="head">2:7</td><td>마 3:17; 17:5 · 행 13:33 · 히 1:5; 5:5</td><td>아들 되심의 선포 — 세례·변화산·부활</td></tr>
+<tr><td class="head">2:1–2</td><td>행 4:25–26</td><td>박해받는 교회의 기도</td></tr>
+<tr><td class="head">5:9 / 14:1–3 / 36:1</td><td>롬 3:10–18</td><td>인류 보편의 죄 — 칭의 논증의 토대</td></tr>
+<tr><td class="head">8:2 / 8:4–6</td><td>마 21:16 · 고전 15:27 · 엡 1:22 · 히 2:6–9</td><td>어린이의 찬양 / 그리스도의 통치</td></tr>
+<tr><td class="head">16:8–11</td><td>행 2:25–31; 13:35</td><td>부활 — 오순절 설교의 핵심 본문</td></tr>
+<tr><td class="head">22:1, 7, 8, 18, 22</td><td>마 27:35–46 · 막 15:24–34 · 요 19:24 · 히 2:12</td><td>수난 내러티브의 언어 전체</td></tr>
+<tr><td class="head">31:5</td><td>눅 23:46 (행 7:59)</td><td>임종의 기도</td></tr>
+<tr><td class="head">32:1–2</td><td>롬 4:6–8</td><td>행위 없는 칭의의 구약적 증거</td></tr>
+<tr><td class="head">34:8, 12–16, 20</td><td>벧전 2:3; 3:10–12 · 요 19:36</td><td>맛보아 앎 / 삶의 규범 / 뼈가 꺾이지 않음</td></tr>
+<tr><td class="head">35:19</td><td>요 15:25</td><td>"까닭 없이 미워함"</td></tr>
+<tr><td class="head">37:11</td><td>마 5:5</td><td>팔복 — 온유한 자가 땅을 기업으로</td></tr>
+<tr><td class="head">40:6–8</td><td>히 10:5–10</td><td>단번의 순종이 제사를 대체함</td></tr>
+<tr><td class="head">41:9</td><td>요 13:18</td><td>가룟 유다의 배신</td></tr>
+</table>
+<div class="note">
+<div class="tt">눈여겨볼 패턴</div>
+<p>신약이 제1권에서 가장 많이 길어 올린 것은 <strong>제왕시(2, 8, 40편)와 고난·병상의 시(16, 22, 31, 41편)</strong>다. 두 계열이 십자가와 부활에서 만난다—왕이신 분이 고난받으셨고, 고난받은 분이 왕이 되셨다. 복음서 기자들이 수난 내러티브를 사실상 '죽어 감의 예전'이라는 문맥에 배치했다는 <span class="c cc">C</span>의 관찰이 이 패턴을 설명한다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════════ Ⅴ부 ═══════════ -->
+<section class="part" id="part5">
+<div class="part-head">
+<div class="heb">מָשִׁיחַ</div>
+<div class="eyebrow">PART Ⅴ</div>
+<h2>복음적 해석 종합</h2>
+<div class="gloss">시편에서 그리스도께 이르는 정직한 길</div>
+</div>
+<p>시편을 복음적으로 읽는 일에는 두 가지 실패의 길이 있다. 하나는 <strong>모든 구절에서 그리스도를 억지로 찾아내는 알레고리</strong>이고, 다른 하나는 시편을 고대 이스라엘의 종교 문서로만 남겨 두는 <strong>역사주의</strong>다. 이 연구본이 따르는 길은 <span class="c cc">C</span>가 정리한 <em>해석의 층위</em>다—본문의 최초 의미에서 출발해, 정경 안에서의 재배치와 신약의 성취를 거쳐 오늘에 이르는 성장의 궤적을 따라가는 것. "시의 말은 변하지 않지만 그 기능과 의미는 시간 속에서 발전한다. 후대의 의미는 새로운 신학이 아니라 최초의 핵으로부터의 성장이다."</p>
+<h3>1. 다섯 갈래의 길</h3>
+<table>
+<tr><th style="width:20%">경로</th><th>내용과 예</th></tr>
+<tr><td class="head">① 왕 → 메시아</td><td>다윗 왕에게 주어졌으나 <em>한 번도 실현되지 않은</em> 이상(세계 통치, 영원한 왕위)이 왕조의 종말 이후 대망으로 바뀌고, 그리스도에게서 성취된다. <strong>2, 18, 20, 21, 40편</strong>. 결정적 차이: 옛 왕은 폭력으로 반역을 진압하나, 새 왕은 폭력을 <em>받아들이심으로</em> 나라를 세우신다(행 4:25–28).</td></tr>
+<tr><td class="head">② 고난자 → 그리스도</td><td>무죄한 고난자의 기도를 예수께서 <em>친히 자기 기도로 삼으셨다</em>. <strong>22, 31, 41편</strong>. 특히 22편은 첫 행을 인용하심으로 시 전체의 궤적(버림받음→열방의 찬양)을 취하신 것이다.</td></tr>
+<tr><td class="head">③ 진전과 대조</td><td>같은 말이 그리스도에게서 <em>더 깊어지되 대조도 함께</em> 드러난다 <span class="c cc">C</span>. 16편—시인은 죽음의 위험 <em>앞에서</em> 일어섰고 예수는 죽음의 요새 <em>안에서</em> 일어나셨다. 31:5—시인은 죽음에서 건져 달라며, 예수는 죽으시면서 같은 말을 하셨다.</td></tr>
+<tr><td class="head">④ 요구 → 은혜</td><td>도덕적 요구가 우리를 정직하게 만들되 절망시킬 때, 복음이 그 문을 연다. <strong>15, 24, 26편</strong>—"누가 주의 장막에 머무르리이까"의 답은 결국 <em>우리 대신 그 조건을 채우신 분 안에서</em> 주어진다(히 10:19–22).</td></tr>
+<tr><td class="head">⑤ 인간의 초상 → 복음의 필요</td><td>시편의 '악인'이 특정 원수가 아니라 <em>하나님 없는 인류 전체</em>의 자화상으로 확장된다(롬 3:10–18). <strong>5, 14, 36편</strong>. 그렇다면 그들에게 필요한 것은 심판만이 아니라 복음이다 <span class="c cc">C</span>.</td></tr>
+</table>
+<h3>2. 제1권이 그리는 복음의 활</h3>
+<p>제1권을 처음부터 끝까지 읽으면 하나의 이야기가 보인다. <strong>1편</strong>은 시냇가에 심긴 나무 같은 사람을 그린다—그러나 우리는 그 사람이 아니다. <strong>14편</strong>이 그 사실을 확정한다: "선을 행하는 자가 없으니 하나도 없도다." <strong>22편</strong>에서 한 무죄한 자가 우리를 대신해 버림받고, <strong>32편</strong>에서 죄가 가려진 자의 복이 선포되며, <strong>40편</strong>에서 "내가 왔나이다"라는 순종이 제사를 대체한다. 그리고 <strong>41편</strong>에서 복이 다시 선언되는데, 이번에는 병상에서 배신당한 자리에서다. 곧 제1권의 활은 <em>이상 → 좌절 → 대속 → 용서 → 재확인</em>으로 이어지며, 이는 복음의 구조 그 자체다.</p>
+<div class="caveat">
+<div class="tt">읽는 이를 위한 세 가지 원칙</div>
+<p><strong>① 최초의 의미를 지우지 말라.</strong> 22편은 십자가의 예언이기 전에 실제로 죽어 가던 한 사람의 기도였다. 그 무게를 지우면 십자가의 무게도 가벼워진다. <strong>② 부활을 너무 빨리 덧씌우지 말라.</strong> <span class="c cc">C</span>의 경고대로, 병상의 시에 부활 신앙을 성급히 얹으면 죽음을 값싸게 이해하게 되고, 그런 안이한 믿음은 실제로 병이 닥칠 때 무너진다. 시인처럼 <em>이 생명을 온전히 소중히 여긴 뒤에야</em> 그 너머를 바라볼 수 있다. <strong>③ 원수의 자리에 자신을 세워 보라.</strong> 우리는 늘 압제당한 자와 자신을 동일시하지만, 바울은 시편의 '어리석은 자'가 곧 우리 모두라고 말한다(롬 3:10–12). 시편 읽기는 <em>어리석은 자의 자리에서 시작해 그 어리석음으로부터의 구원을 구하는 순례</em>다 <span class="c cc">C</span>.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════════ Ⅵ부 ═══════════ -->
+<section class="part" id="part6">
+<div class="part-head">
+<div class="heb">מַחֲלֹקֶת</div>
+<div class="eyebrow">PART Ⅵ</div>
+<h2>쟁점 대조표</h2>
+<div class="gloss">제1권 해석의 주요 갈림길과 각 주석의 입장</div>
+</div>
+<table>
+<tr><th style="width:20%">쟁점</th><th style="width:26%">Craigie <span class="c cc">C</span></th><th style="width:26%">NICOT <span class="c cd">D</span></th><th>비고 / 다른 견해</th></tr>
+<tr>
+<td class="head">'레다비드'의 뜻</td>
+<td>'다윗의/다윗을 위한/다윗에 관한' 모두 가능. 다윗의 음악적 역할(삼하 23:1; 대상 15–16장)을 근거로 저작 가능성을 배제하지 않되, <strong>"저작권 정보의 부재는 시편 이해에 심각한 장애가 아니다"</strong>라고 결론.</td>
+<td>시대착오적 요소를 근거로 <strong>'다윗 왕가에 속한'</strong>이라는 소속 표기로 보고 사실상 익명으로 다룸.</td>
+<td>양극단(전면적 다윗 저작 / 전면적 후대 창작) 사이의 스펙트럼. 이 연구본은 양쪽을 병기하고 본문 자체의 증언에 집중한다.</td>
+</tr>
+<tr>
+<td class="head">역사적 표제의 성격</td>
+<td>7편처럼 <em>알려지지 않은</em> 사건을 지목하는 표제는 오히려 고대성·진정성을 지지한다고 봄.</td>
+<td>후대의 해석적 부가로 보되 그 해석적 가치를 인정.</td>
+<td>차일즈: 초기 <strong>미드라쉬적 활동</strong>의 흔적—시를 다윗 생애에 정착시켜 독자가 자기 자리에서 읽게 하는 장치.</td>
+</tr>
+<tr>
+<td class="head">9–10편은 한 편인가</td>
+<td><strong>본래 하나</strong>. 이합체 연속, 10편 무표제, 어휘 공유가 근거. 알파벳당 4행의 원형이 손상되었거나 예전상 분할되었다고 봄.</td>
+<td>같은 결론(한 편으로 읽음).</td>
+<td>칠십인역·불가타는 한 편으로 셈해 이후 번호가 하나씩 밀린다. 마소라는 분리.</td>
+</tr>
+<tr>
+<td class="head">19편의 통일성</td>
+<td><strong>현재 형태의 통일성 확신.</strong> 한 시인이 옛 태양 찬양 단편을 취해 신학적 주석으로 확장. 6절의 "그 열기에서 피할 자가 없다"가 두 부분의 이음매.</td>
+<td>결합체로 보되 최종 형태의 신학적 의도를 중시.</td>
+<td>다수 학자는 19A(1–6절)와 19B(7–14절)의 별개 기원을 상정. 루이스는 이 시를 "세계 최고의 서정시 중 하나"로 평가.</td>
+</tr>
+<tr>
+<td class="head">27편·40편의 분리 여부</td>
+<td><strong>통일된 예전</strong>으로 읽음(비르켈란트). 공유 어휘와 예전 순서(고백→제사→기도→신탁)가 근거.</td>
+<td>결합 가능성을 인정하면서도 전승이 하나로 전해 준 현재 형태의 의미를 읽음.</td>
+<td>궁켈 이래 분리설이 우세했고, 40:13–17은 70편과 중복된다.</td>
+</tr>
+<tr>
+<td class="head">29편의 가나안 배경</td>
+<td><strong>중간 입장.</strong> 병행은 충분하나 '가나안 원본'을 상정할 필요는 없음. 이스라엘 시인의 <em>의도적 전유</em>.</td>
+<td>같은 방향. '이교의 나무를 성탄의 상징으로 세례 준' 교회 관행에 비유.</td>
+<td>긴즈버그·크로스: 페니키아 바알 찬송의 개작으로 봄(크로스는 '결정적'이라 평가).</td>
+</tr>
+<tr>
+<td class="head">15·24·26편의 장르</td>
+<td>입장 예전이되, 요건이 <strong>전적으로 도덕적</strong>(제의적 요소 전무)이라는 점에서 지혜시적 성격도 강함.</td>
+<td>두 독법의 신학적 결론이 사실상 같다고 봄.</td>
+<td>궁켈 이래 '입장 예전'이 다수설. 근동 신전의 병행 문서들과 대조하면 이스라엘의 특징이 도드라진다.</td>
+</tr>
+<tr>
+<td class="head">16:10, 22편의 부활 독법</td>
+<td>원 의미는 메시아적·종말론적이 <strong>아님</strong>. 그러나 신약의 의미는 정당한 성장이며 <em>진전이자 대조</em>. 루이스의 '이중 의미' 개념으로 설명.</td>
+<td>정경적 재해석의 정당성을 인정.</td>
+<td><span class="c cl">L</span> 등 그리스도 중심 독법은 더 적극적으로 메시아적 의미를 읽는다. 다후드는 16편에서 내세 신앙을 읽었으나 소수설.</td>
+</tr>
+<tr>
+<td class="head">저주·보응 기도</td>
+<td>사적 복수심이 아니라 <strong>계약(조약) 저주의 발효 요청</strong>으로 설명(28, 35편). 원수 자체가 아니라 그들이 행하는 악을 겨눈 기도로 변형되어 사용됨.</td>
+<td>공동체가 겪은 실제 폭력의 정직한 언어로 존중.</td>
+<td>신약 윤리(마 5:44)와의 긴장은 남는다. 공통 결론: 시편의 저주는 폭력의 <em>허가</em>가 아니라 <em>이양</em>이다.</td>
+</tr>
+<tr>
+<td class="head">'셀라'의 뜻</td>
+<td>어원 미상. 칠십인역의 διάψαλμα(간주·쉼)가 <strong>가장 개연성 높은</strong> 전통이라고 봄.</td>
+<td>음악·예전 지시로 봄.</td>
+<td>타르굼·제롬: '영원히'. 모빙켈: 회중이 엎드리는 지점. 어원 확정 불가.</td>
+</tr>
+<tr>
+<td class="head">18편과 삼하 22장</td>
+<td>공통 전승. 삼하 22장이 철자상 더 고형이나, <strong>예배에서 계속 사용된 시편 본문의 '현대화'는 자연스러운 과정</strong>. 구전 작법상 단일 '원본' 상정 자체가 부적절할 수 있음.</td>
+<td>두 본문의 상호 조명을 중시.</td>
+<td>크로스·프리드먼의 고전적 본문 연구가 출발점. 언어의 고태성은 왕정 초기 연대를 지지.</td>
+</tr>
+</table>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════════ Ⅶ부 ═══════════ -->
+<section class="part" id="part7">
+<div class="part-head">
+<div class="heb">סְפָרִים</div>
+<div class="eyebrow">PART Ⅶ</div>
+<h2>연구 서지</h2>
+<div class="gloss">이 연구본이 의지한 자료와 그 한계</div>
+</div>
+<h3>주 자료</h3>
+<ul>
+<li><strong>Peter C. Craigie</strong>, <em>Psalms 1–50</em>, Word Biblical Commentary 19, 2nd ed. (Nelson, 2004; Marvin E. Tate의 보충 포함) <span class="c cc">C</span> — 제1권 전체를 다루는 표준 주석. 각 편의 Form/Structure/Setting, Comment, Explanation 구조를 따라 본 연구본의 배경·구조·신학 서술의 뼈대를 이룬다.</li>
+<li><strong>Nancy deClaissé-Walford, Rolf A. Jacobson, Beth LaNeel Tanner</strong>, <em>The Book of Psalms</em>, NICOT (Eerdmans, 2014) <span class="c cd">D</span> — 정경적·양식비평적 종합. 구조 분석과 신학적 증언, 그리고 포로기 이후 공동체의 관점.</li>
+<li><strong>Tremper Longman III</strong>, <em>Psalms</em>, Tyndale OT Commentaries (IVP, 2014) <span class="c cl">L</span> — 장르 중심 입문과 명시적 그리스도 중심 독법.</li>
+</ul>
+<h3>본문 안에서 이름으로 인용된 학자들</h3>
+<p>궁켈(양식비평), 모빙켈(제의사), 베스터만(탄원과 찬양의 구조), 브루그만(정위–혼돈–재정위), 차일즈(정경비평), 윌슨·호스펠트-쳉어(편집비평과 소그룹), 크라우스, 거스텐버거, 이튼(제왕 독법), 크로스·프리드먼(본문·고대 시가), 다후드(우가릿), 델리치, 커크패트릭, C. S. 루이스(<em>시편 사색</em>) 등은 위 세 주석이 인용·논의하는 학자들이므로 <strong>칩 없이 이름으로</strong> 표기했다.</p>
+<div class="note">
+<div class="tt">주석 표기 안내</div>
+<p><span class="c cc">C</span> WBC(Craigie(WBC 19)) · <span class="c cd">D</span> NICOT(deClaissé-Walford·Jacobson·Tanner) · <span class="c cl">L</span> TOTC(Longman). 이 세 기호는 <strong>해당 주석서에서 직접 온 견해에만</strong> 붙였다.</p>
+<p>편마다 신학적 해석 뒤에 놓인 <strong>주석가별 초점</strong> 상자는 NICOT과 Longman이 그 시에 대해 내놓는 <em>고유한 해석 각도</em>를 옮긴 것이다. NICOT은 세 저자가 시편을 나누어 맡았으므로 각 편의 실제 집필자를 이름으로 밝혔다—제이콥슨이 대부분을 집필하고 태너가 22·25·26·31·32·35·37·38·41편을 맡았다.</p>
+<p>본문에 <strong>칩 없이 이름만</strong> 나오는 학자들(궁켈·모빙켈·베스터만·브루그만·크라우스·젱거·메이스·맥캔·골딩게이·클리퍼드·림버그·게르스텐베르거 등)은 위 세 주석서가 인용하거나 논의하는 학자이므로 칩을 붙이지 않았다.</p>
+</div>
+<div class="caveat">
+<div class="tt">이 문서의 한계</div>
+<p>① 제1권을 <strong>전편 다루는</strong> 주석은 크레이기(WBC 19)이며, NICOT·롱맨의 견해는 개별 편에서 확인 가능한 범위에서 인용했다. 따라서 칩 <span class="c cd">D</span>·<span class="c cl">L</span>의 밀도는 <span class="c cc">C</span>보다 낮다. ② 본문비평(마소라 대 칠십인역의 세부 이문)은 필요한 곳에서만 언급했고, 전면적으로 다루지 않았다. ③ 히브리어 음역은 통용 표기를 따랐으며 학술 음역 체계와 다를 수 있다. ④ 절 번호는 개역개정을 기준으로 했으므로, 표제를 1절로 세는 히브리 성경과 대조할 때 차이가 있다. ⑤ 연대·저작·원 배경에 관한 판단은 대부분 <strong>가설</strong>이며, 이 연구본은 확정 대신 주요 견해의 병기를 택했다.</p>
+</div>
+<div class="note">
+<div class="tt">이어지는 권</div>
+<p>이 문서는 시편 다섯 권 시리즈의 첫 권이다. 제2권(42–72편)부터는 고라 자손 시집과 엘로힘 시편, 아삽 시집이 등장하며, 주 자료도 Tate(WBC 20, 51–100편)와 Allen(WBC 21, 101–150편)으로 이어진다. 같은 여섯 층(배경 → 구조 → 절별 주석 → 신학 → 복음 → 성경 연결) 구성을 유지한다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<nav aria-label="시편 권 이동" class="booknav"><span></span><a class="nx" href="book2.html"><div class="dir">다음 →</div><div class="ttl">제2권</div><div class="rg">42–72편</div></a><a class="idx" href="index.html"><div class="dir">PSALMS LIBRARY</div><div class="ttl">시편 서재로</div><div class="rg">전체 개관 · 자료집 · 다섯 권 상세 연구</div></a></nav><footer>
+<p><strong>시편 제1권 상세 연구본</strong> — 시편 1–41편 · 배경 · 절별 주석 · 신학적 해석 · 복음적 해석 · 성경 연결</p>
+<p>주 자료: Craigie(WBC 19) · deClaissé-Walford 외(NICOT) · Longman(TOTC) · 성경 인용은 개역개정</p>
+</footer>
+</main>
+</div>
+<script data-psalms-suite-js="" defer="" src="psalms-suite.js"></script><script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script><script data-psalms-research-dock="" defer="" src="../../assets/js/research-dock-loader.js?v=20260724.2"></script></body>
+</html>

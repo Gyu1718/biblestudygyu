@@ -61,6 +61,16 @@ window.SITE_CATALOG = {
           volumes: 14
         },
         {
+          id: "psalms",
+          path: "ot/psalms/index.html",
+          title: "시편 상세 연구",
+          original: "תְּהִלִּים",
+          script: "heb",
+          meta: "전체 개관 1편 · 자료집 1편 · 권별 상세 연구 5편 · 시편 1–150편 · WBC·NICOT·TOTC·Goldingay 종합",
+          desc: "복 있는 사람에서 호흡이 있는 자마다까지 시편 전체를 다섯 권의 정경 구조로 읽는다. 전체 개관과 150편 자료집을 갖추고, 각 편의 배경·구조·절별 주석·신학·복음적 해석·성경 연결을 권별 상세 연구로 정리했다.",
+          volumes: 7
+        },
+        {
           id: "hosea",
           path: "ot/hosea/index.html",
           title: "호세아서 연구 노트",
@@ -133,7 +143,6 @@ window.SITE_CATALOG = {
   link.dataset.homeCompactCss = "";
   document.head.appendChild(link);
 })();
-
 
 /* 홈페이지 연구 도크 로더 */
 (function () {

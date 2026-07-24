@@ -8,7 +8,7 @@ span.commentator-chip[data-commentator-color],
 span[data-commentator-chip][data-commentator-color] {
   background: var(--cc-chip-bg-light) !important;
   background-color: var(--cc-chip-bg-light) !important;
-  color: var(--cc-chip-fg-light) !important;
+  color: #ffffff !important;
   border-color: transparent !important;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
@@ -19,7 +19,7 @@ span[data-commentator-chip][data-commentator-color] {
 :root[data-theme="dark"] span[data-commentator-chip][data-commentator-color] {
   background: var(--cc-chip-bg-dark) !important;
   background-color: var(--cc-chip-bg-dark) !important;
-  color: var(--cc-chip-fg-dark) !important;
+  color: #ffffff !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +28,7 @@ span[data-commentator-chip][data-commentator-color] {
   :root:not([data-theme="light"]):not([data-theme="dark"]) span[data-commentator-chip][data-commentator-color] {
     background: var(--cc-chip-bg-dark) !important;
     background-color: var(--cc-chip-bg-dark) !important;
-    color: var(--cc-chip-fg-dark) !important;
+    color: #ffffff !important;
   }
 }
 

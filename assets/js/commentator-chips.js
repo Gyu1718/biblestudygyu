@@ -16,23 +16,23 @@
 
   var script = document.currentScript;
   var CSS_URL = script && script.src
-    ? new URL("../css/commentator-chips.css?v=20260724.4", script.src).href
-    : "assets/css/commentator-chips.css?v=20260724.4";
+    ? new URL("../css/commentator-chips.css?v=20260724.5", script.src).href
+    : "assets/css/commentator-chips.css?v=20260724.5";
 
   var CHIP_SELECTOR = "span.c, span.commentator-chip, span[data-commentator-chip]";
   var LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  /* A–Z 각각에 고정된 라이트·다크 테마 색상 */
+  /* A–Z 각각에 고정된 배경색. 모든 칩 글자는 흰색으로 통일한다. */
   var PALETTE = {
-    A:["#792a2a","#da8b8b"], B:["#2d8f4a","#98e2ad"], C:["#59247f","#b98ed7"],
-    D:["#8c8031","#dfd79a"], E:["#276e7c","#88cfdd"], F:["#932a63","#dd9dbf"],
-    G:["#3e792a","#9fda8b"], H:["#312d8f","#9b98e2"], I:["#7f4224","#d7a68e"],
-    J:["#318c6a","#9adfc5"], K:["#75277c","#d688dd"], L:["#7d932a","#cfdd9d"],
-    M:["#2a5179","#8bb2da"], N:["#8f2d42","#e298a7"], O:["#247f2c","#8ed794"],
-    P:["#53318c","#b49adf"], Q:["#7c6027","#ddc188"], R:["#2a938f","#9dddda"],
-    S:["#792a65","#da8bc6"], T:["#5a8f2d","#b9e298"], U:["#24337f","#8e9ad7"],
-    V:["#8c3d31","#dfa39a"], W:["#277c4b","#88ddac"], X:["#752a93","#ca9ddd"],
-    Y:["#79792a","#dada8b"], Z:["#2d728f","#98cce2"]
+    A:["#792a2a","#792a2a"], B:["#287c40","#287c40"], C:["#59247f","#59247f"],
+    D:["#716726","#716726"], E:["#276e7c","#276e7c"], F:["#932a63","#932a63"],
+    G:["#3e792a","#3e792a"], H:["#312d8f","#312d8f"], I:["#7f4224","#7f4224"],
+    J:["#28775a","#28775a"], K:["#75277c","#75277c"], L:["#5f7420","#5f7420"],
+    M:["#2a5179","#2a5179"], N:["#8f2d42","#8f2d42"], O:["#247f2c","#247f2c"],
+    P:["#53318c","#53318c"], Q:["#7c6027","#7c6027"], R:["#20716e","#20716e"],
+    S:["#792a65","#792a65"], T:["#477321","#477321"], U:["#24337f","#24337f"],
+    V:["#8c3d31","#8c3d31"], W:["#277c4b","#277c4b"], X:["#752a93","#752a93"],
+    Y:["#79792a","#79792a"], Z:["#2d728f","#2d728f"]
   };
 
   function injectCss() {
@@ -62,25 +62,6 @@
     return LETTERS.charAt(hashKey(key) % LETTERS.length);
   }
 
-  function relativeLuminance(hex) {
-    var rgb = [1, 3, 5].map(function (start) {
-      var value = parseInt(hex.slice(start, start + 2), 16) / 255;
-      return value <= 0.04045 ? value / 12.92 : Math.pow((value + 0.055) / 1.055, 2.4);
-    });
-    return (0.2126 * rgb[0]) + (0.7152 * rgb[1]) + (0.0722 * rgb[2]);
-  }
-
-  function contrast(a, b) {
-    var high = Math.max(relativeLuminance(a), relativeLuminance(b));
-    var low = Math.min(relativeLuminance(a), relativeLuminance(b));
-    return (high + 0.05) / (low + 0.05);
-  }
-
-  function readableInk(background, darkCandidate) {
-    var white = "#ffffff";
-    var dark = darkCandidate || "#15171c";
-    return contrast(background, white) >= contrast(background, dark) ? white : dark;
-  }
 
   function paintChip(chip) {
     if (!chip || chip.nodeType !== 1 || !chip.matches(CHIP_SELECTOR)) return;
@@ -97,9 +78,9 @@
     chip.dataset.commentatorKey = key;
     chip.dataset.commentatorColor = letter;
     chip.style.setProperty("--cc-chip-bg-light", colors[0]);
-    chip.style.setProperty("--cc-chip-fg-light", readableInk(colors[0], "#15171c"));
+    chip.style.setProperty("--cc-chip-fg-light", "#ffffff");
     chip.style.setProperty("--cc-chip-bg-dark", colors[1]);
-    chip.style.setProperty("--cc-chip-fg-dark", readableInk(colors[1], "#15171c"));
+    chip.style.setProperty("--cc-chip-fg-dark", "#ffffff");
   }
 
   function scan(root) {

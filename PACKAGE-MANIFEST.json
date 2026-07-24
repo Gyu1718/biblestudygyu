@@ -1,142 +1,21 @@
 {
-  "package": "biblestudygyu-psalms-git-package-v1",
-  "created": "2026-07-24",
-  "source_priority": {
-    "latest_volume_studies": "files (3).zip",
-    "site_structure": "files (2).zip",
-    "overview_and_sourcebook": "psalms-study.zip"
-  },
-  "validation": {
-    "pages": {
-      "book1.html": {
-        "chapter_blocks": 40,
-        "data_book": "psa",
-        "data_kind": "volume",
-        "data_volume": "1",
-        "has_bible_reader": true,
-        "has_research_dock": true
-      },
-      "book2.html": {
-        "chapter_blocks": 30,
-        "data_book": "psa",
-        "data_kind": "volume",
-        "data_volume": "2",
-        "has_bible_reader": true,
-        "has_research_dock": true
-      },
-      "book3.html": {
-        "chapter_blocks": 17,
-        "data_book": "psa",
-        "data_kind": "volume",
-        "data_volume": "3",
-        "has_bible_reader": true,
-        "has_research_dock": true
-      },
-      "book4.html": {
-        "chapter_blocks": 17,
-        "data_book": "psa",
-        "data_kind": "volume",
-        "data_volume": "4",
-        "has_bible_reader": true,
-        "has_research_dock": true
-      },
-      "book5.html": {
-        "chapter_blocks": 44,
-        "data_book": "psa",
-        "data_kind": "volume",
-        "data_volume": "5",
-        "has_bible_reader": true,
-        "has_research_dock": true
-      }
-    },
-    "psalm_blocks": {
-      "covered": 150,
-      "missing": [],
-      "combined_blocks": [
-        "ps42-43",
-        "ps9-10"
-      ]
-    },
-    "broken_package_links": [],
-    "missing_anchors": [],
-    "repository_dependencies": [
-      "index.html",
-      "bible/original.html",
-      "assets/css/bible-reader.css",
-      "assets/js/bible-reader.js",
-      "assets/js/research-dock-loader.js"
-    ],
-    "javascript_syntax": {
-      "catalog.js": {
-        "ok": true,
-        "stderr": ""
-      },
-      "ot/psalms/psalms-suite.js": {
-        "ok": true,
-        "stderr": ""
-      }
-    }
-  },
+  "package": "biblestudygyu-psalms-floating-controls-hotfix-v1.1",
+  "base_required": "biblestudygyu-psalms-git-package-v1",
   "files": [
     {
-      "path": "catalog.js",
-      "bytes": 7249,
-      "sha256": "cf9bb1197161d4343909090ce291360d2ab2d1fa5876a76dd573953c5d27213d"
-    },
-    {
-      "path": "ot/psalms/README.md",
-      "bytes": 2219,
-      "sha256": "bbebf4cf7575461073912e937aa3e1b028d9f14c34da04d469e48886b3c2855d"
-    },
-    {
-      "path": "ot/psalms/book1.html",
-      "bytes": 346250,
-      "sha256": "4481ea83c63b13675832d03073679fb146acb11ce381f22f1ca0de9fdd4d6f5e"
-    },
-    {
-      "path": "ot/psalms/book2.html",
-      "bytes": 215120,
-      "sha256": "4c7128722c613477206407898211a215b9125188bfa60fb2b9cc74b869ec00e9"
-    },
-    {
-      "path": "ot/psalms/book3.html",
-      "bytes": 147339,
-      "sha256": "684e4b7a97c601063deea75daf370b34fa27a0eb0db759acba863f5eaefeb1a6"
-    },
-    {
-      "path": "ot/psalms/book4.html",
-      "bytes": 141274,
-      "sha256": "fd2b7b43d6f261469151f26b62440462e40e172cdf0e90aaf897d14919b99dac"
-    },
-    {
-      "path": "ot/psalms/book5.html",
-      "bytes": 279368,
-      "sha256": "14f2724140212f41000277395280bb2737a41bb2d4402cca6a2b9cada5563f0b"
-    },
-    {
-      "path": "ot/psalms/index.html",
-      "bytes": 22244,
-      "sha256": "9db2c9d2dadbb4380cb674a3bc24a2578f8e3cb4e07919693badacb96462e8a0"
-    },
-    {
-      "path": "ot/psalms/overview.html",
-      "bytes": 112875,
-      "sha256": "a87cb6bd16bb87a03d3c1dcb5cb9f97a90793be4fdcb4725d494099e30393d64"
+      "path": "README.md",
+      "bytes": 620,
+      "sha256": "05f0ad89cec986c92666ed2c393a0d9ce531d0aedfc74ac3a630e13bad3d3af8"
     },
     {
       "path": "ot/psalms/psalms-suite.css",
-      "bytes": 5383,
-      "sha256": "f37126a318c6f638846d174d1e6d0239f257c2ab33840ac2025fa3092ec20dab"
+      "bytes": 6191,
+      "sha256": "36336290f8ad7e781ebf89d8fd847b3b9b714bac3bcf5e962ba96e27abb1d63c"
     },
     {
       "path": "ot/psalms/psalms-suite.js",
-      "bytes": 5611,
-      "sha256": "b067bc96cbd4c4c779bb1aad0895507287d1bf9cc75da7e91833b9c910ecc363"
-    },
-    {
-      "path": "ot/psalms/sourcebook.html",
-      "bytes": 553690,
-      "sha256": "78534760779ef4fc255d826a13b702a1b2b42604d68345ab36f8a77c4976793b"
+      "bytes": 7868,
+      "sha256": "2b18e0e5ee6bde9ab52d3aa53ab6667eadc7a94578443e08db895945dfeb77e2"
     }
   ]
 }

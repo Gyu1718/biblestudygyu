@@ -139,10 +139,12 @@ nav.toc a.is-current{
   background:rgba(255,255,255,.08)!important;
 }
 .ps-jump-button{
+  --ps-jump-right:1rem;
+  --ps-jump-bottom:1rem;
   position:fixed;
-  right:1rem;
-  bottom:1rem;
-  z-index:9990;
+  right:var(--ps-jump-right);
+  bottom:var(--ps-jump-bottom);
+  z-index:1390;
   border:0;
   border-radius:999px;
   padding:.72rem 1rem;
@@ -150,12 +152,15 @@ nav.toc a.is-current{
   color:#fff;
   box-shadow:0 7px 20px rgba(0,0,0,.22);
   font:700 .76rem/1 var(--sans,"Noto Sans KR",sans-serif);
+  transition:opacity .16s ease,visibility .16s ease,transform .16s ease;
 }
 .ps-jump-popover{
+  --ps-jump-right:1rem;
+  --ps-popover-bottom:4.4rem;
   position:fixed;
-  right:1rem;
-  bottom:4.4rem;
-  z-index:9991;
+  right:var(--ps-jump-right);
+  bottom:var(--ps-popover-bottom);
+  z-index:1391;
   width:min(310px,calc(100vw - 2rem));
   padding:1rem;
   border:1px solid var(--line,#ddd7c8);
@@ -163,6 +168,15 @@ nav.toc a.is-current{
   background:var(--panel,#fff);
   color:var(--ink,#23252d);
   box-shadow:0 16px 42px rgba(0,0,0,.23);
+  transition:opacity .16s ease,visibility .16s ease,transform .16s ease;
+}
+/* 공통 연구 도크가 열리면 편 찾기를 숨겨 조작 영역을 비운다. */
+body.rd-dock-open .ps-jump-button,
+body.rd-dock-open .ps-jump-popover{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(8px);
 }
 .ps-jump-popover[hidden]{display:none}
 .ps-jump-popover label{
@@ -202,6 +216,19 @@ nav.toc a.is-current{
   .booknav .nx{text-align:left}
   .booknav .idx{grid-column:auto}
 }
+
+@media(max-width:767px),(pointer:coarse){
+  .ps-jump-button{
+    --ps-jump-right:12px;
+    --ps-jump-bottom:76px;
+  }
+  .ps-jump-popover{
+    --ps-jump-right:12px;
+    --ps-popover-bottom:132px;
+    width:min(310px,calc(100vw - 24px));
+  }
+}
+
 @media print{
   .ps-site-nav,.volume-jump,.booknav,.ps-jump-button,.ps-jump-popover{display:none!important}
 }

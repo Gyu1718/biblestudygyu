@@ -21,6 +21,53 @@
     return null;
   }
 
+  /*
+   * 공통 연구 도크와 시편 편 찾기의 충돌 방지.
+   * 도크 트리거의 실제 좌표를 읽어 편 찾기를 그 위에 자동 배치한다.
+   */
+  function syncFloatingControls() {
+    var jump = document.querySelector(".ps-jump-button");
+    var popover = document.querySelector(".ps-jump-popover");
+    if (!jump || !popover) return;
+
+    var trigger = document.querySelector(".research-dock .rd-trigger");
+    var right = window.innerWidth <= 767 ? 12 : 16;
+    var bottom = window.innerWidth <= 767 ? 12 : 16;
+
+    if (trigger && trigger.getClientRects().length) {
+      var dockRect = trigger.getBoundingClientRect();
+      right = Math.max(12, Math.round(window.innerWidth - dockRect.right));
+      /* 도크 버튼 윗면에서 10px 위에 편 찾기 버튼의 아랫면을 둔다. */
+      bottom = Math.max(12, Math.round(window.innerHeight - dockRect.top + 10));
+    }
+
+    jump.style.setProperty("--ps-jump-right", right + "px");
+    jump.style.setProperty("--ps-jump-bottom", bottom + "px");
+
+    requestAnimationFrame(function () {
+      var jumpRect = jump.getBoundingClientRect();
+      var popoverBottom = Math.max(bottom + 54, Math.round(window.innerHeight - jumpRect.top + 10));
+      popover.style.setProperty("--ps-jump-right", right + "px");
+      popover.style.setProperty("--ps-popover-bottom", popoverBottom + "px");
+    });
+  }
+
+  function watchResearchDock() {
+    syncFloatingControls();
+    if (document.querySelector(".research-dock .rd-trigger")) return;
+
+    var observer = new MutationObserver(function () {
+      if (!document.querySelector(".research-dock .rd-trigger")) return;
+      observer.disconnect();
+      syncFloatingControls();
+    });
+    observer.observe(document.body, { childList:true, subtree:true });
+    setTimeout(function () {
+      observer.disconnect();
+      syncFloatingControls();
+    }, 5000);
+  }
+
   function createDeclaredReference(documentRef, chapter, start, end, raw) {
     var span = documentRef.createElement("span");
     span.setAttribute("data-bible-ref", "PSA." + chapter + "." + start + (end && end !== start ? "-" + end : ""));
@@ -98,6 +145,8 @@
     button.addEventListener("click", function () {
       box.hidden = !box.hidden;
       button.setAttribute("aria-expanded", box.hidden ? "false" : "true");
+      document.body.classList.toggle("ps-jump-open", !box.hidden);
+      syncFloatingControls();
       if (!box.hidden) box.querySelector("input").focus();
     });
 
@@ -117,6 +166,7 @@
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && !box.hidden) {
         box.hidden = true;
+        document.body.classList.remove("ps-jump-open");
         button.setAttribute("aria-expanded", "false");
       }
     });
@@ -141,7 +191,12 @@
   function init() {
     preparePsalmContexts();
     mountJump();
+    watchResearchDock();
     trackCurrentPsalm();
+    window.addEventListener("resize", syncFloatingControls, { passive:true });
+    window.addEventListener("orientationchange", function () {
+      setTimeout(syncFloatingControls, 120);
+    });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);

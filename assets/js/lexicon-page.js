@@ -57,16 +57,16 @@
     core.loadEntry(id).then(function (entry) {
       var sup=entry.supplement || {};
       var meaning=entry.summaryKo || sup.glossEn || sup.definitionEn || "풀이가 없습니다.";
+      var sourceTitle=entry.language==='hebrew'?'히브리어 스트롱 사전':'헬라어 스트롱 사전';
       mount.innerHTML = [
         '<nav class="lx-entry-nav"><a href="index.html">← 사전 검색</a><button id="lx-copy" type="button">주소 복사</button></nav>',
         '<header class="lx-entry-head"><div><span class="lx-entry-id">'+esc(entry.id)+'</span><span class="lx-entry-lang">'+(entry.language==='hebrew'?'히브리어·아람어':'헬라어')+'</span></div>',
         '<h1 class="lx-entry-lemma '+(entry.language==='hebrew'?'is-hebrew':'is-greek')+'">'+esc(entry.lemma || entry.id)+'</h1>',
         '<p class="lx-entry-meta">'+[entry.transliteration,entry.pronunciationKo,entry.partOfSpeech,entry.occurrences?entry.occurrences.toLocaleString()+"회":null].filter(Boolean).map(esc).join(' · ')+'</p></header>',
         '<section class="lx-card"><h2>핵심 풀이</h2><p class="lx-lead">'+esc(meaning)+'</p></section>',
-        entry.rawKo ? '<section class="lx-card"><h2>한글 스트롱 사전 원문</h2><pre class="lx-raw"></pre></section>' : '<section class="lx-card lx-warning"><h2>한글 원문 미확인</h2><p>한글 PDF에서 이 항목을 추출하지 못해 보충 자료만 표시합니다.</p></section>',
+        entry.rawKo ? '<section class="lx-card"><h2>한글 스트롱 사전 원문</h2><pre class="lx-raw"></pre></section>' : '<section class="lx-card lx-warning"><h2>한글 원문 미확인</h2><p>한글 스트롱 사전에서 이 항목을 추출하지 못해 보충 자료만 표시합니다.</p></section>',
         sup.glossEn || sup.definitionEn ? '<section class="lx-card"><h2>보충 검증 정보 <small>STEP Bible</small></h2><p><b>'+esc(sup.glossEn || '')+'</b></p><p class="lx-en">'+esc(sup.definitionEn || '')+'</p><p class="lx-source">'+esc(sup.source || '')+'</p></section>' : '',
-        '<section class="lx-sourcebox"><b>주자료</b><span>'+esc((entry.source && entry.source.primary) || '보충 자료')+'</span>'+
-          (entry.source && entry.source.file ? '<small>'+esc(entry.source.file)+' · PDF '+esc(entry.source.page)+'쪽</small>' : '')+'</section>'
+        '<section class="lx-sourcebox"><b>주자료</b><span>'+esc(sourceTitle)+'</span></section>'
       ].join('');
       var pre=mount.querySelector('.lx-raw'); if(pre) pre.textContent=entry.rawKo;
       document.getElementById('lx-copy').addEventListener('click',function(){ navigator.clipboard.writeText(location.href).then(function(){ this.textContent='복사됨'; }.bind(this)); });

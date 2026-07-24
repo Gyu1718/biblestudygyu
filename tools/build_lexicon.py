@@ -231,7 +231,7 @@ def extract_fields(entry,lang,step):
         'lemmaNormalized':normalize_greek(lemma) if lang=='greek' else normalize_hebrew(lemma),
         'transliteration':translit,'pronunciationKo':pronunciation,'partOfSpeech':pos,
         'summaryKo':summary,'occurrences':occ,'rawKo':raw,
-        'source':{'primary':'사용자 제공 한글 스트롱 사전','file':entry['sourceFile'],'page':entry['page']},
+        'source':{'primary':('헬라어 스트롱 사전' if lang=='greek' else '히브리어 스트롱 사전'),'file':entry['sourceFile'],'page':entry['page']},
         'supplement':supplement or None,
         'forms':forms if lang=='greek' else None,
         'review':{'extracted':True,'needsReview':False}

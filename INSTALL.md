@@ -44,4 +44,4 @@ python3 -m http.server 8000
 
 ## 공개 전 확인
 
-한글 스트롱 사전 번역·편집본의 공개 재배포 권한을 확인해야 합니다. STEP 보충 데이터의 출처는 `assets/data/lexicon/ATTRIBUTION.md`에 기록했습니다.
+한글 스트롱 사전은 비영리 학술 목적으로 JSON·HTML 변환 및 공개 허락을 받은 자료입니다. 공개 화면에는 책 제목만 표시하며, 내부 검증용 파일명·쪽수는 사용자에게 노출하지 않습니다. STEP 보충 데이터의 출처는 `assets/data/lexicon/ATTRIBUTION.md`에 기록했습니다.

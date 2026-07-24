@@ -1,7 +1,11 @@
 {
   "package": "biblestudygyu-original-lexicon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "generated": "2026-07-24",
+  "changes": [
+    "Public source labels show book titles only",
+    "File names, extensions, and page numbers are retained only as internal provenance"
+  ],
   "entryCounts": {
     "greek": 5523,
     "hebrew": 8674,
@@ -12,8 +16,8 @@
   "files": [
     {
       "path": "INSTALL.md",
-      "bytes": 1840,
-      "sha256": "354666b6910f746ebace0b3d5ccdcf426f4de37c6f2233f9c2f2f7a41342bdd0"
+      "bytes": 1993,
+      "sha256": "5efc3df69b7bfa0d6a6501282c75fe8dcb77d88628799a989fa6d663b384f895"
     },
     {
       "path": "assets/css/lexicon-hover.css",
@@ -27,13 +31,13 @@
     },
     {
       "path": "assets/data/lexicon/ATTRIBUTION.md",
-      "bytes": 1235,
-      "sha256": "584c0c8209d4168b6c1ce3ea899d927a6fe843be42e8676d02891f19a565e7cb"
+      "bytes": 1278,
+      "sha256": "3f5d1ff094e99a066fa1a83042b581b16d16e31227a10981c758c3b6a561d786"
     },
     {
       "path": "assets/data/lexicon/README.md",
-      "bytes": 506,
-      "sha256": "cf1cd756669c190332d61cf206acd1ccaf0af2378e5d19b1034267444c9630e6"
+      "bytes": 747,
+      "sha256": "162b1087a678a807b696cdbf8cc558918717860c9fa698fbd2606cada2c6501d"
     },
     {
       "path": "assets/data/lexicon/build-report.json",
@@ -47,293 +51,293 @@
     },
     {
       "path": "assets/data/lexicon/greek/g0001-0250.json.gz",
-      "bytes": 162577,
-      "sha256": "65c20cbb91ff79e215502151641d0c74ca026b9340f31f95c6c7a3ccde650982"
+      "bytes": 162551,
+      "sha256": "235081f5114cae93c2c4d8e5ffc7a9051d6a59efe87b1fb8ae1807a4e011900c"
     },
     {
       "path": "assets/data/lexicon/greek/g0251-0500.json.gz",
-      "bytes": 138405,
-      "sha256": "b0a12f5c4899398f4331d73ddc7f99f87ad47f228644208359b87525a565342a"
+      "bytes": 138332,
+      "sha256": "a4f0fd28eee34b36dff3e4238bdef15a294712b9b2f9d9fd0cd0ff9d8a190481"
     },
     {
       "path": "assets/data/lexicon/greek/g0501-0750.json.gz",
-      "bytes": 143254,
-      "sha256": "a1322e31dce33c4cc2236fc2b9691bae0c68f0ae8b2d356d0bb3b5687ed6c3b2"
+      "bytes": 143235,
+      "sha256": "11a51f63bc237ae78a35de265955d52c33bb16ddf47878e92444e2ded823e60a"
     },
     {
       "path": "assets/data/lexicon/greek/g0751-1000.json.gz",
-      "bytes": 134885,
-      "sha256": "d4de2f3e6413150c580d25688ac994f0f9285a7277400a46be0154a0ebaed21e"
+      "bytes": 134847,
+      "sha256": "9082ea5215c527c960e141867e2b8daf3584578fccf2ea17b5c7e41c8f3d2af6"
     },
     {
       "path": "assets/data/lexicon/greek/g1001-1250.json.gz",
-      "bytes": 162681,
-      "sha256": "ae84f1ac52ad0f089406387e7f1b8575843dbbb852956be18c07a0e6526c599d"
+      "bytes": 162656,
+      "sha256": "20f62b5a1e6716552e124609736f7fc10c647e509ce4000d256fef620f6493e9"
     },
     {
       "path": "assets/data/lexicon/greek/g1251-1500.json.gz",
-      "bytes": 161249,
-      "sha256": "74ffa3964706820f3e39469fdec8a711874683dd6692dead6be5ccd10453b840"
+      "bytes": 161239,
+      "sha256": "dd5358dc9989b1060fdfcac2f24f562cfeaf805bd7ce483f95e81b7107d8205c"
     },
     {
       "path": "assets/data/lexicon/greek/g1501-1750.json.gz",
-      "bytes": 151959,
-      "sha256": "cb1f33989b895976083f633c5f2f500fbb763b8f0af00eb1969ceabe1e8269d2"
+      "bytes": 151949,
+      "sha256": "ecebc1a6bc0c883982d7513c08b1c4eecd6f1bceb70b6d7ef660e2739118e397"
     },
     {
       "path": "assets/data/lexicon/greek/g1751-2000.json.gz",
       "bytes": 144258,
-      "sha256": "ab3e3b61049ace8a3bf1a5ba649cf76f919c2ffb1cb3405a79f6cf20939537e8"
+      "sha256": "d6eb3b8528ec22f50abd150928295c1f419ca0784d172cf5cb3d26601adf781b"
     },
     {
       "path": "assets/data/lexicon/greek/g2001-2250.json.gz",
-      "bytes": 170983,
-      "sha256": "f6cfca00feebebab02fa458e4e94ec4543a90721b831c7787ea57733ecd4fc04"
+      "bytes": 170951,
+      "sha256": "f4ffd1422f9ea3347109a3d97da85ae6be199681acffe09c76137f5c82c74431"
     },
     {
       "path": "assets/data/lexicon/greek/g2251-2500.json.gz",
-      "bytes": 145812,
-      "sha256": "e74f94f7e16524424986c537e3783261aefdfbaac800941b2af7467f466f70fc"
+      "bytes": 145775,
+      "sha256": "ac0ede943359a8baf5209abfacb3d13eaddba215444538a39fb63311d76848cd"
     },
     {
       "path": "assets/data/lexicon/greek/g2501-2750.json.gz",
-      "bytes": 145257,
-      "sha256": "dbc849b8e51506d3c7d52d64bdb4b9b6b0db3a9a22ce0536710ff7ea0fbe28cb"
+      "bytes": 145255,
+      "sha256": "f59224c3d00621933474fc836c78625c2f331f9ba4fb7fa3eccbabbf6757bc70"
     },
     {
       "path": "assets/data/lexicon/greek/g2751-3000.json.gz",
-      "bytes": 146491,
-      "sha256": "df80dc886001e2726fdf5e49485db2b4abf6080d951e008b4d232aab8d0f0c84"
+      "bytes": 146497,
+      "sha256": "7a39f1da076f1829ddf84a84d8f9b87377de0160db34f31cffebb58548589187"
     },
     {
       "path": "assets/data/lexicon/greek/g3001-3250.json.gz",
-      "bytes": 119259,
-      "sha256": "395cdd6f0677cc5ae845619c71f9004d54b77c70bedf1c526dbd71d8844778fe"
+      "bytes": 119239,
+      "sha256": "8e59f163ffbdcacb5c20da84af5a0c830d0fdfd271133a0db24754010e265565"
     },
     {
       "path": "assets/data/lexicon/greek/g3251-3500.json.gz",
-      "bytes": 116181,
-      "sha256": "881e29753899477d9fb0d541350b5663afdeff79f84e80c081829f6c23784321"
+      "bytes": 116129,
+      "sha256": "7d787b6a3383e983ef54faf8c5b5266809676bc343dc9a817102b4ca2699f9de"
     },
     {
       "path": "assets/data/lexicon/greek/g3501-3750.json.gz",
-      "bytes": 157053,
-      "sha256": "d0fc70bfd3d6c7dd3747ebf65c0c25d08a000a46d93c4c12b8291284fd170d18"
+      "bytes": 157001,
+      "sha256": "d6cf2dae9ab15487cfa893e68f18f5bbfd5b31519f610405ebf71398500b660f"
     },
     {
       "path": "assets/data/lexicon/greek/g3751-4000.json.gz",
-      "bytes": 168453,
-      "sha256": "249050b2c76235d0b9ff618514e922a03785b686a4c7d4f14389c262129ccfc6"
+      "bytes": 168392,
+      "sha256": "f2cefd418b8fb11aefb61156b6e3bd700744a8ec0cebd9032b11a59e9c52fee5"
     },
     {
       "path": "assets/data/lexicon/greek/g4001-4250.json.gz",
-      "bytes": 155596,
-      "sha256": "144c65cafe31d882e8117ab25a72428a2e1bfe3ce7d7b38da8f0188b9ea22ce3"
+      "bytes": 155562,
+      "sha256": "5fcfeeca7b4ef59b3527b76677f1eef089e79026c7f4f0f1db472d5825cfc747"
     },
     {
       "path": "assets/data/lexicon/greek/g4251-4500.json.gz",
-      "bytes": 139631,
-      "sha256": "5c44ad4dc8f5aa870da32c873eeb36d6299afcbb9a9fbbe4d273bc94297d2ce5"
+      "bytes": 139571,
+      "sha256": "d10394a848babaf53fa1af2f10a1feda68b52519a7cea9bb14f6c70af6615e7f"
     },
     {
       "path": "assets/data/lexicon/greek/g4501-4750.json.gz",
-      "bytes": 147708,
-      "sha256": "8a05cb7d636a23578d21b531993ff458be6225d924cf8e334eed2f733bb8f378"
+      "bytes": 147642,
+      "sha256": "d10a27febbccb2ce6d4c15d0c30154ee3d1cdcd67cfbaaaade1466a744d55f3a"
     },
     {
       "path": "assets/data/lexicon/greek/g4751-5000.json.gz",
-      "bytes": 129847,
-      "sha256": "0a661a0a03b2b08e1452845708667c926cf1ead5c40643a793661c9fff91df38"
+      "bytes": 129788,
+      "sha256": "05fec904d6ab11cc52a0a7ca67e15bd23e0047b6b226d7113072c6d57796e173"
     },
     {
       "path": "assets/data/lexicon/greek/g5001-5250.json.gz",
-      "bytes": 137889,
-      "sha256": "21d57205662629d63c6e47e5b64b7b369a7bc53fde47e6b9b76eb96ef049d864"
+      "bytes": 137844,
+      "sha256": "993735cdd5666820f7337b4ec5be5be5513f2880e9faf7525dc93246356b37f8"
     },
     {
       "path": "assets/data/lexicon/greek/g5251-5500.json.gz",
-      "bytes": 150470,
-      "sha256": "d47ae52d55d45695c475fee7760df7b44dc33b072b48d5ef2c4864d27598a507"
+      "bytes": 150424,
+      "sha256": "ffe1042dd6364be666a7a0dc9db6e46d7b1d240028eff6bcf4a35629e4a5dd3d"
     },
     {
       "path": "assets/data/lexicon/greek/g5501-5624.json.gz",
-      "bytes": 78114,
-      "sha256": "f372a080b31bc9544a6dc0864ed9079143b8fbc6384870e3c665dec0b98e8c25"
+      "bytes": 78110,
+      "sha256": "bec5bc0c773181a319ffed4ab4a08ab39ad15f646cfaabcbe75c94263ef8e7af"
     },
     {
       "path": "assets/data/lexicon/hebrew/h0001-0250.json.gz",
-      "bytes": 126480,
-      "sha256": "aebb2b86980d080f478dea9a8e5e3502f96a00d4d0f6770941a6e450a2f8fc3a"
+      "bytes": 126454,
+      "sha256": "5e697201ea9e2c89817eaf7ec60ac0147e8a0dec4f52a5ec8695524a3c8e44f5"
     },
     {
       "path": "assets/data/lexicon/hebrew/h0251-0500.json.gz",
-      "bytes": 124454,
-      "sha256": "fc6d80c11745342d1fdf1309afdf890336854123a3300f4410430dc1e4426bb6"
+      "bytes": 124466,
+      "sha256": "e31c559c2db87e898c4f777ff19f7ac04c6d9768b636af289ec89d789528471a"
     },
     {
       "path": "assets/data/lexicon/hebrew/h0501-0750.json.gz",
-      "bytes": 124508,
-      "sha256": "f0ed4656d3e52ddbbab47b5127781eda3026b870469c461372e28335657708cf"
+      "bytes": 124466,
+      "sha256": "31c8cfb1f0390c0c01cf1a3050d7981c301eeac6744af5801a4a2d39e2f036e6"
     },
     {
       "path": "assets/data/lexicon/hebrew/h0751-1000.json.gz",
-      "bytes": 131977,
-      "sha256": "cc27ed462ff4f0ad784f00393c62ba13121c93d6a521dee0c891e595304bcdf5"
+      "bytes": 131983,
+      "sha256": "4488d2e068f61c548d36c4fed6b251a9a3a37ec2e9ffba2bea17ea0931a457b4"
     },
     {
       "path": "assets/data/lexicon/hebrew/h1001-1250.json.gz",
-      "bytes": 112655,
-      "sha256": "9317f74ca6ed7492f6f1685ca1dafbf207926f00d0712ef2a237087ae959d3a6"
+      "bytes": 112611,
+      "sha256": "15f039b6be87b52166df334aa2bfb18441481c81b552cf12c56a3c0fce21c741"
     },
     {
       "path": "assets/data/lexicon/hebrew/h1251-1500.json.gz",
-      "bytes": 115457,
-      "sha256": "3c1820c323759e649c1be97f7bd64fe00f78ebe1bf6b693211a4b4104dc0abc3"
+      "bytes": 115450,
+      "sha256": "490bdbebee20d8228cbd609effd77f3fca2a891125e0c31a18bf2df08a8d68f8"
     },
     {
       "path": "assets/data/lexicon/hebrew/h1501-1750.json.gz",
-      "bytes": 112406,
-      "sha256": "bb0c87de515aaf21db1642567490e6f2fb6bf9b7cf43803e39d7bc4db0aa6b09"
+      "bytes": 112410,
+      "sha256": "f72d9cb4a5caa0a06ed2ac0ca78ca1a6c86151560e030868b6c806fdb719ebd0"
     },
     {
       "path": "assets/data/lexicon/hebrew/h1751-2000.json.gz",
-      "bytes": 130528,
-      "sha256": "d76199687a3d69b4b6a440073cc5b95e1417c79a9a783b3d96d93e37ea427356"
+      "bytes": 130515,
+      "sha256": "f40a02d784ab53130b1d3e7ab138d823ebc8e49086aaa7835e05f9971caf582f"
     },
     {
       "path": "assets/data/lexicon/hebrew/h2001-2250.json.gz",
-      "bytes": 118147,
-      "sha256": "718dacf8f047bbcf4f7135ec364065e941c8819f67238cd54303e3f207b8bee5"
+      "bytes": 118103,
+      "sha256": "3f8f73382c475f84efd0f1cf003e257fa40fd0fe081205d546b594644530010a"
     },
     {
       "path": "assets/data/lexicon/hebrew/h2251-2500.json.gz",
-      "bytes": 126841,
-      "sha256": "a8d6bdf244c69f96145b263578f2928d29723e7c4b65c3cfe89e7069c58a93b4"
+      "bytes": 126824,
+      "sha256": "435df6dfce32904c8729f39ff2b74fde871244599b7f8f8b0291d4fcbcb9cfa8"
     },
     {
       "path": "assets/data/lexicon/hebrew/h2501-2750.json.gz",
-      "bytes": 122043,
-      "sha256": "682c969fbd97e9c2cac31f77c2ba490ca122bfcfe46c7f0498c9b4bed0c54dc8"
+      "bytes": 122037,
+      "sha256": "5f15bf0c040752dec345c534f8cc5c0318868ad8064dd6bab941a690626d3834"
     },
     {
       "path": "assets/data/lexicon/hebrew/h2751-3000.json.gz",
-      "bytes": 106745,
-      "sha256": "97b22ecea6b27108854671cc3aa425516699032b934ba473d83af68016bae5e8"
+      "bytes": 106709,
+      "sha256": "6ac24508ebe4becbd78e1a76ef9e5d14fa267eabb8d83d112e9836c13e891454"
     },
     {
       "path": "assets/data/lexicon/hebrew/h3001-3250.json.gz",
-      "bytes": 152221,
-      "sha256": "72db0062f6a73d615b178d33ef66eb13f99022dd184cf83b5db26dcfdf817366"
+      "bytes": 152177,
+      "sha256": "2e9757ae4594bea2efa108d8c598b318ff4b31b16890b244b590eb57845af476"
     },
     {
       "path": "assets/data/lexicon/hebrew/h3251-3500.json.gz",
-      "bytes": 166025,
-      "sha256": "2224b9ade089254327020cdfde150a636274ff46380d5a4e78d9b18904e86a5c"
+      "bytes": 166011,
+      "sha256": "9583d319cc3b66f1ad4963b73c571bed2845156bbbe0a1e63be18859084ecfbb"
     },
     {
       "path": "assets/data/lexicon/hebrew/h3501-3750.json.gz",
-      "bytes": 124007,
-      "sha256": "8d9b9183b7739d38d60b16c3d6e0e6670bd3015a0e114fb5442ce2e8038f51b4"
+      "bytes": 123980,
+      "sha256": "7ac43aef84b51365ef71b2b16a44acf6e4d6ac2def63e325ddeca56990b79fa1"
     },
     {
       "path": "assets/data/lexicon/hebrew/h3751-4000.json.gz",
-      "bytes": 131220,
-      "sha256": "3cda8bad881d82e650ef4e54ef3ed3cbf3c0d86b63e487b79328fb473fe15cca"
+      "bytes": 131221,
+      "sha256": "1143dac25aa3046a25b0ad6cc59d3ae068b92f5a49cab5f6b6e11a2530f6d47e"
     },
     {
       "path": "assets/data/lexicon/hebrew/h4001-4250.json.gz",
-      "bytes": 110724,
-      "sha256": "9417171d692a18d400ccb29efe52fee968b920c3462e6ef672e7ecf5f7c5d74a"
+      "bytes": 110712,
+      "sha256": "8dcece75b4784245ac68af8abf2efbfb590a0dfb9094bb93a6f77f288e8f4820"
     },
     {
       "path": "assets/data/lexicon/hebrew/h4251-4500.json.gz",
-      "bytes": 115239,
-      "sha256": "adf71f31eab2cb36308d7a17426839d9fac28d0c4097e2c1213ab62284d5b6df"
+      "bytes": 115163,
+      "sha256": "a3d8dbf86ff955c19e154fb1919798b8fc6027a67480762551c399ca0064ce78"
     },
     {
       "path": "assets/data/lexicon/hebrew/h4501-4750.json.gz",
-      "bytes": 113389,
-      "sha256": "3dbe672d7cc6406a040df2f5b0e51154104dad920a4ab1904c64850564a11f29"
+      "bytes": 113394,
+      "sha256": "c0503b11fc8970e11f66051506826c233aeee2516b87b35f8e901134c8d3c125"
     },
     {
       "path": "assets/data/lexicon/hebrew/h4751-5000.json.gz",
-      "bytes": 113898,
-      "sha256": "de8ef557d999deb6936350e1db6f76d00690a997ac50f8234a4be046990aba1b"
+      "bytes": 113879,
+      "sha256": "bd7ad290ea1abcc3e08c71d6130a665114ade005feb8d759f89c4cd59de4cdd4"
     },
     {
       "path": "assets/data/lexicon/hebrew/h5001-5250.json.gz",
-      "bytes": 132522,
-      "sha256": "c0f2f98604497d63a3c21b2078ddf104a70672afd10761545c902e6aa2c71800"
+      "bytes": 132502,
+      "sha256": "71703ce831d9e867460b4ce2331c62ee6876c4839480d3c0a595960da5232dd6"
     },
     {
       "path": "assets/data/lexicon/hebrew/h5251-5500.json.gz",
-      "bytes": 137957,
-      "sha256": "3e93bbbb403496265cd301faa5a30a57aaa16219caf19665e984b8f666509a86"
+      "bytes": 137921,
+      "sha256": "8070472d28f977cd57691c2cc22344b184f99392503a717f251ef4c0fa59e9aa"
     },
     {
       "path": "assets/data/lexicon/hebrew/h5501-5750.json.gz",
-      "bytes": 117423,
-      "sha256": "6a9da7a2b31c4960b4a667f2834186d590aaa4e28ca4a2f9027dca1270cf02b2"
+      "bytes": 117406,
+      "sha256": "f58cbee34faf58836f8a62e6805ef4cdac21d8d984c0362e5ec6fa01b6f5b161"
     },
     {
       "path": "assets/data/lexicon/hebrew/h5751-6000.json.gz",
-      "bytes": 129569,
-      "sha256": "1364a0e3d560076303eaaf4c9d864745b4220ba0711e21e7d927cce122e90215"
+      "bytes": 129578,
+      "sha256": "b606b8cd117c7f78cedcd389920ae6138ba7c394479b9177d0259e2617c9cb5b"
     },
     {
       "path": "assets/data/lexicon/hebrew/h6001-6250.json.gz",
-      "bytes": 115585,
-      "sha256": "d6ce73f96a0bcc2f253c7d6c5d6509e9045bf28173ea6fabc04e29757be2726a"
+      "bytes": 115477,
+      "sha256": "82d77528205658d843d0ab5484043be63e548597336852b8093b91717d62d747"
     },
     {
       "path": "assets/data/lexicon/hebrew/h6251-6500.json.gz",
-      "bytes": 114340,
-      "sha256": "c813609c7ed1ecfac99473212b3217f82943ad5b668fd2dc27f8cffb3572dceb"
+      "bytes": 114316,
+      "sha256": "984cc3c4eccf70ed3cb48ec34b1e267debb2566cbddb2fc0b859a1bb36e1667e"
     },
     {
       "path": "assets/data/lexicon/hebrew/h6501-6750.json.gz",
-      "bytes": 121302,
-      "sha256": "ff9debc0a740d9b74f03eced3a06e18fac076ea56e2ba9945060e4961612b8e7"
+      "bytes": 121283,
+      "sha256": "9592f2ff7cf05c35a6ac6b700b05e43cf3a22b0cbc42406cbf2931efa6f1ded4"
     },
     {
       "path": "assets/data/lexicon/hebrew/h6751-7000.json.gz",
-      "bytes": 125137,
-      "sha256": "1c96a7539d1fd4d8a4d0c956d64978f8fadac885ad71131fe9e815b09feae770"
+      "bytes": 125077,
+      "sha256": "f5df95b416fe80405b56a59664bc556637f5c5413d838e48daf7915ee97e6f92"
     },
     {
       "path": "assets/data/lexicon/hebrew/h7001-7250.json.gz",
-      "bytes": 125902,
-      "sha256": "44bc184efe1fb40ecd200b50261268aefb5af4aa2d79dae12f5fb73a188758b2"
+      "bytes": 125863,
+      "sha256": "651b235358146cfeb655a93a78d08b34908044f6e07a7ac781b5c1dda0434bf0"
     },
     {
       "path": "assets/data/lexicon/hebrew/h7251-7500.json.gz",
-      "bytes": 124962,
-      "sha256": "7bdcc78db2e87677f4fc757a6640d7a3a93b1ef94cbb65658ad496216f85685e"
+      "bytes": 124917,
+      "sha256": "e1e00b966dc00fd4c2fb535945561327706efa0cc88dca37377e3e587518939c"
     },
     {
       "path": "assets/data/lexicon/hebrew/h7501-7750.json.gz",
-      "bytes": 117400,
-      "sha256": "22250325f4ac55f2335ffd08cb31519889a6df98e416a83cfd99ccd4088a82ef"
+      "bytes": 117369,
+      "sha256": "5defa63bfe1f781f412f9c82500779a9c2bb90187bb9e711eec162e5fd39a25d"
     },
     {
       "path": "assets/data/lexicon/hebrew/h7751-8000.json.gz",
-      "bytes": 132088,
-      "sha256": "49da8363a32fca23b62d6234342d90b503c9bd965f277b7524a0ad64e4feefe8"
+      "bytes": 132093,
+      "sha256": "185a82ba6d1775243c8c0024d9a768ef48f15ba425cd9b32f920135299b8ba2b"
     },
     {
       "path": "assets/data/lexicon/hebrew/h8001-8250.json.gz",
-      "bytes": 134039,
-      "sha256": "39384390e07178f41d97ad6105e0bb132449609b0dea071ee053644c4ac82dd2"
+      "bytes": 134014,
+      "sha256": "d7920e4e19cbbab518faa971063b704584dc5b2182ec8cddf34a7e87e23b1eef"
     },
     {
       "path": "assets/data/lexicon/hebrew/h8251-8500.json.gz",
-      "bytes": 123979,
-      "sha256": "e71fdc35032c90d3fdbd75294d25367e9683e31e56b4e1346bbc38390423b87b"
+      "bytes": 123959,
+      "sha256": "4e78ba58a1e05a35c5853ac62b6988e2a9ae72a33fc1af0dd16054a9368def2e"
     },
     {
       "path": "assets/data/lexicon/hebrew/h8501-8674.json.gz",
-      "bytes": 89082,
-      "sha256": "c39cf7c1903dd983bb69252ac3af8cbd8f48a43981356bdd886f864b17e020fd"
+      "bytes": 89034,
+      "sha256": "38c50f39c4f7ad95d4e08960a6e1dbeeb0be17bf5a760298d33ae69b68479ed3"
     },
     {
       "path": "assets/data/lexicon/index.json.gz",
@@ -362,8 +366,8 @@
     },
     {
       "path": "assets/js/lexicon-page.js",
-      "bytes": 5523,
-      "sha256": "cf9e6da129c082639a276ae5d641411964b31bc9afbc946cf855982a33021b1e"
+      "bytes": 5462,
+      "sha256": "148ea8af94dcf68cd2bab3e152a8e7c87f6d8e9e0fad0173e732f2c51e9d5c24"
     },
     {
       "path": "assets/js/original-lexicon-bridge.js",
@@ -382,18 +386,18 @@
     },
     {
       "path": "lexicon/entry.html",
-      "bytes": 1178,
-      "sha256": "9e02e402fbfcfcb870a79314e99e80de13fbdae0cac4f3e6b5dea70e4e07f796"
+      "bytes": 1157,
+      "sha256": "728d59ed09b76b0cdbc29053d889051535f7a7e9edd87c439dd2af1c98fb4326"
     },
     {
       "path": "lexicon/index.html",
-      "bytes": 2155,
-      "sha256": "3edb9a277815991603018c2fba1a6398f0f4ecf5336b35865506a4bbad416c59"
+      "bytes": 2202,
+      "sha256": "f070f0ce17debeabc8bc55d10483c5cdcc27985df76dfa62f070edc4d050677a"
     },
     {
       "path": "tools/build_lexicon.py",
-      "bytes": 15880,
-      "sha256": "7c55f9ae35d0e1008c0c58a3abb7a449092bf8276fcf2c0d3bf3044c56d7076a"
+      "bytes": 15922,
+      "sha256": "7fcdb242dd25fff373017c2c7c756bc40f79adfc4a0ed08f995a65e12edd1f07"
     }
   ]
 }

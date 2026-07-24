@@ -6,7 +6,7 @@
 
   var script = document.currentScript;
   var siteRoot = script && script.src ? new URL("../../", script.src).href : new URL("./", location.href).href;
-  var cssUrl = script && script.src ? new URL("../css/research-dock.css", script.src).href : new URL("assets/css/research-dock.css", siteRoot).href;
+  var cssUrl = script && script.src ? new URL("../css/research-dock.css?v=20260724.2", script.src).href : new URL("assets/css/research-dock.css", siteRoot).href;
 
   var THEME_KEY = "scriptorium-theme";
   var FONT_KEY = "scriptorium-font-scale";

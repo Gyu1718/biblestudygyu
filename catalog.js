@@ -133,3 +133,17 @@ window.SITE_CATALOG = {
   link.dataset.homeCompactCss = "";
   document.head.appendChild(link);
 })();
+
+
+/* 홈페이지 연구 도크 로더 */
+(function () {
+  if (typeof document === "undefined" || document.querySelector("script[data-rd-loader]")) return;
+  var current = document.currentScript;
+  var src = current && current.src
+    ? new URL("assets/js/research-dock-loader.js?v=20260724.2", current.src).href
+    : "assets/js/research-dock-loader.js?v=20260724.2";
+  var node = document.createElement("script");
+  node.src = src;
+  node.dataset.rdLoader = "";
+  document.head.appendChild(node);
+})();

@@ -137,3 +137,17 @@
   document.getElementById("or-chapter").addEventListener("change", function () { setTimeout(process, 200); });
   setTimeout(process, 500);
 })();
+
+
+/* 연구 도크 공통 로더 */
+(function () {
+  if (typeof document === "undefined" || document.querySelector("script[data-rd-loader]")) return;
+  var current = document.currentScript;
+  var src = current && current.src
+    ? new URL("research-dock-loader.js?v=20260724.2", current.src).href
+    : "assets/js/research-dock-loader.js?v=20260724.2";
+  var node = document.createElement("script");
+  node.src = src;
+  node.dataset.rdLoader = "";
+  document.head.appendChild(node);
+})();

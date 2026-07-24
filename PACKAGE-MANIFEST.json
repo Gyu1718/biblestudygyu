@@ -1,33 +1,17 @@
 {
-  "package": "biblestudygyu-responsive-research-dock",
-  "version": "1.0.0",
-  "created": "2026-07-24",
-  "replaces": [
-    "assets/app.js"
-  ],
-  "adds": [
-    "assets/js/research-dock.js",
-    "assets/css/research-dock.css"
-  ],
-  "tested": {
-    "javascriptSyntax": true,
-    "desktopFloatingPanel": true,
-    "mobileBottomSheet": true,
-    "mobileLandscapeSideSheet": true,
-    "themeSelection": true,
-    "tableOfContents": true,
-    "originalReaderSingleColumn": true
-  },
+  "package": "biblestudygyu-responsive-research-dock-fix",
+  "version": "1.1.0",
+  "date": "2026-07-24",
   "files": [
     {
       "path": "PATCH-README.md",
-      "bytes": 2718,
-      "sha256": "59ca832064621db83685d4c1362c718c46173a32552d9b645aacef6e84cfead4"
+      "bytes": 2203,
+      "sha256": "dfb04bfda4d87bfb1f807ecb7573cd4ec754f928a46925abab521d8da59b3c25"
     },
     {
       "path": "assets/app.js",
-      "bytes": 9369,
-      "sha256": "a6247a222e26dbd59ebf632d101466450f59ce7102ca1aa3a4faaf09851666a6"
+      "bytes": 9037,
+      "sha256": "5bdf7d4b6bf793909e51e2f7e5e0c2db10e06c45fc044a4ee157a2a93cad44ad"
     },
     {
       "path": "assets/css/research-dock.css",
@@ -35,9 +19,44 @@
       "sha256": "a0fc521048544d9c33e46626b5e3eb145ccd912b59e9bc9b4d6dd693797e9dd1"
     },
     {
+      "path": "assets/js/lexicon-page.js",
+      "bytes": 5951,
+      "sha256": "3dd79beae65e96507d9fa90628b834bd668fcfcfb549e3aa8582e826315f118a"
+    },
+    {
+      "path": "assets/js/original-lexicon-bridge.js",
+      "bytes": 6913,
+      "sha256": "54b53c8a132cae1808bd74295090f1e2a2e0b112f99dc43e180e999ae20dda65"
+    },
+    {
+      "path": "assets/js/research-dock-loader.js",
+      "bytes": 1075,
+      "sha256": "e8287ad5262bc7df50f7b4850e65bcb34726e4324300e20ae37d7d66e37a2e97"
+    },
+    {
       "path": "assets/js/research-dock.js",
-      "bytes": 27222,
-      "sha256": "5a742512ae843526ae90c9e4ef368a8f3bde856ec46939be5f55fd8b48aec89e"
+      "bytes": 27235,
+      "sha256": "1a941645a74451b35253457aae09aab5dc123c6ee0785db592891bf177daa052"
+    },
+    {
+      "path": "bible/original.html",
+      "bytes": 2879,
+      "sha256": "8696bd1f3f4ef0987630f82ec0cc0b1a3ce6182aaf38e6f2f07bbe196c23e8ec"
+    },
+    {
+      "path": "catalog.js",
+      "bytes": 6584,
+      "sha256": "9d119c068b00c290ffa4b96745b962d5b2a017b51b14a4340a86bd478b5b70c8"
+    },
+    {
+      "path": "lexicon/entry.html",
+      "bytes": 1236,
+      "sha256": "097b92d93969c0ffa81cdfcce78be1e6e5c0b88645ca6a07e3f7e9d683bf89c1"
+    },
+    {
+      "path": "lexicon/index.html",
+      "bytes": 2281,
+      "sha256": "babfb5b49e4c07aa8ffe49325e46ae43e060818d1a38236931dca4b9facb04e4"
     }
   ]
 }

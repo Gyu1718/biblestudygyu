@@ -17,7 +17,39 @@
 - 새 원어 연구는 `parsing/`에 만든다.
 - 기존 느헤미야 `interlinear/`는 호환성을 위해 보존한다.
 - 에스더는 기준 사례로 보존한다.
-- 시편과 호세아는 예외형이므로 별도 지시 없이 구조를 바꾸지 않는다.
+- 시편과 호세아는 정보 구조 예외형이므로 별도 지시 없이 구조를 바꾸지 않는다.
+- 화면 설정·연구 도크와 성경 리더 공통 기능은 모든 연구 페이지에 적용한다.
+
+## 자동 적용 프로그램
+
+연구 HTML을 추가하거나 변경한 뒤 다음 명령을 실행한다.
+
+```bash
+python3 tools/apply_study_tools.py --write
+python3 tools/apply_bible_reader.py --write
+python3 tools/apply_study_tools.py --check
+python3 tools/apply_bible_reader.py --check
+```
+
+`tools/apply_study_tools.py`는 다음 경로를 검사한다.
+
+```text
+ot/**/*.html
+nt/**/*.html
+theology/**/*.html
+```
+
+누락된 다음 자산을 문서 깊이에 맞는 상대경로로 삽입한다.
+
+```text
+assets/theme.css
+assets/app.css
+assets/app.js
+```
+
+`app.js`가 연구 도크 로더를 실행하므로 화면 설정·연구 도구 버튼이 자동으로 생성된다. 특정 문서가 공통 도구를 사용하면 안 될 때만 `data-no-study-tools`를 둔다.
+
+GitHub Actions의 `.github/workflows/bible-reader.yml`도 같은 프로그램을 실행한다. 새 HTML을 저장소에 올릴 때 수동 삽입을 빼먹어도 워크플로가 수정해 자동 커밋한다.
 
 ## 수정 전 확인
 
@@ -33,6 +65,8 @@ catalog.js의 현재 설명
 ## 수정 후 확인
 
 ```text
+공통 도구 자산 누락 0
+성경 리더 자산 누락 0
 깨진 로컬 링크 0
 깨진 앵커 0
 중복 HTML id 0
@@ -41,6 +75,7 @@ catalog.js의 현재 설명
 모바일 레이아웃 확인
 다크 모드 확인
 성경 장절 호버와 패널 확인
+연구 도크 버튼 표시 확인
 ```
 
 ## GitHub 작업 규칙
@@ -51,6 +86,7 @@ catalog.js의 현재 설명
 - 루트 README는 프로젝트 전체 설명과 현재 상태만 담는다.
 - 바이너리와 폰트 파일을 커밋하지 않는다.
 - 파일 삭제는 대상 경로와 SHA를 확인한 뒤 실행한다.
+- 자동화가 만든 HTML 커밋이 있는지 확인한 뒤 같은 파일을 다시 수정한다.
 
 ## 자료와 저작권
 
@@ -69,6 +105,7 @@ catalog.js의 현재 설명
 적용한 책
 예외로 보존한 책
 실제 구현 상태
+자동 적용 결과
 검증 결과
 삭제 또는 마이그레이션 항목
 ```

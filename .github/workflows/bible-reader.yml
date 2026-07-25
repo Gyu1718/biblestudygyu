@@ -21,6 +21,8 @@ on:
       - "assets/css/study-navigation-policy.css"
       - "assets/data/bible/kor/**"
       - "assets/data/bible/original/na28/**"
+      - "tools/apply_romans_patch.py"
+      - "tools/romans-patches/**"
       - "tools/apply_study_tools.py"
       - "tools/apply_bible_reader.py"
       - "tools/extract_na28_epub.py"
@@ -39,6 +41,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+
+      - name: Apply Romans A-E supplement
+        run: python3 tools/apply_romans_patch.py --repo . --write
 
       - name: Apply screen settings and research dock
         run: python3 tools/apply_study_tools.py --write
@@ -117,6 +122,9 @@ jobs:
           print(f"NA28 27권 {chapters}장 {verses:,}개 장절 표지 검증 완료")
           PY
 
+      - name: Validate Romans A-E supplement
+        run: python3 tools/apply_romans_patch.py --repo . --check
+
       - name: Validate shared study tools
         run: python3 tools/apply_study_tools.py --check
 
@@ -142,5 +150,5 @@ jobs:
             echo "No generated HTML changes"
             exit 0
           fi
-          git commit -m "Apply shared tools to study pages"
+          git commit -m "Apply shared tools and Romans supplement"
           git push origin main

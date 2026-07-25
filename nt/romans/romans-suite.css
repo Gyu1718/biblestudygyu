@@ -1,0 +1,152 @@
+/* 로마서 연구 세트 — 느헤미야형 구조 v3 */
+
+/* 사이드바 상단 */
+nav.toc .site-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem .8rem;
+  margin-bottom:1.2rem;
+  font-size:.72rem;
+}
+nav.toc .site-nav a{
+  border-left:none!important;
+  padding:.1rem 0!important;
+  color:#9db6cc!important;
+}
+nav.toc .site-nav a:hover,
+nav.toc .site-nav a:focus-visible{
+  color:#fff!important;
+  background:none!important;
+}
+nav.toc .site-nav .future{
+  color:#829bb1;
+  cursor:default;
+}
+
+/* 느헤미야 장별 연구와 같은 실제 장 이동 버튼 */
+nav.toc .chapter-jump{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:.28rem!important;
+  width:100%;
+  max-height:none!important;
+  overflow:visible!important;
+  margin:0 0 1.5rem!important;
+}
+nav.toc .chapter-jump a{
+  display:block!important;
+  min-width:0;
+  padding:.34rem 0!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  border-radius:5px;
+  text-align:center;
+  font-family:var(--sans);
+  font-size:.76rem;
+  font-weight:700;
+  color:#c3d2e0!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+nav.toc .chapter-jump a:hover,
+nav.toc .chapter-jump a:focus-visible{
+  background:rgba(255,255,255,.08)!important;
+  border-color:var(--ochre)!important;
+  color:#fff!important;
+}
+nav.toc .chapter-jump a[aria-current="page"]{
+  background:var(--ochre)!important;
+  border-color:var(--ochre)!important;
+  color:#16354f!important;
+}
+
+/* 공란인 원어 인터라이너 안내 */
+.interlinear-empty{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:1.5rem;
+  align-items:center;
+  background:var(--panel,var(--card));
+  border:1px dashed var(--line);
+  border-left:5px solid var(--line);
+  border-radius:8px;
+  padding:1.45rem 1.65rem;
+  color:var(--ink-soft);
+  opacity:.78;
+}
+.interlinear-empty .gk{
+  font-family:var(--grk);
+  font-size:1.5rem;
+  color:var(--ochre);
+}
+.interlinear-empty h3{
+  margin:0;
+  color:var(--ink);
+  font-size:1.1rem;
+}
+.interlinear-empty p{
+  margin:.25rem 0 0;
+  font-size:.88rem;
+}
+.interlinear-empty .state{
+  font-family:var(--sans);
+  font-size:.72rem;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+/* 17권을 한 서가에 안정적으로 배치 */
+.shelf{
+  display:grid!important;
+  grid-template-columns:80px repeat(16,minmax(38px,1fr));
+  align-items:end;
+  gap:6px!important;
+  width:100%;
+}
+.shelf .spine{
+  width:100%!important;
+  min-width:0;
+}
+.shelf .spine.wide{
+  width:100%!important;
+}
+
+html[data-theme="dark"] .krv,
+html[data-theme="dark"] tr:nth-child(even) td,
+html[data-theme="dark"] td.head{
+  background:color-mix(in srgb,var(--card,var(--panel)) 82%,var(--band) 18%)!important;
+  color:var(--ink)!important;
+}
+
+@media(max-width:960px){
+  nav.toc .chapter-jump{
+    grid-template-columns:repeat(8,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:780px){
+  .shelf{
+    display:flex!important;
+    flex-wrap:wrap;
+  }
+  .shelf .spine{
+    width:calc(33.333% - 6px)!important;
+  }
+  .shelf .spine.wide{
+    width:100%!important;
+  }
+  .interlinear-empty{
+    grid-template-columns:1fr;
+    gap:.55rem;
+  }
+}
+@media(max-width:560px){
+  nav.toc .chapter-jump{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  }
+  .shelf .spine{
+    width:calc(50% - 4px)!important;
+  }
+}
+@media print{
+  nav.toc{display:none!important}
+  .research-dock{display:none!important}
+}

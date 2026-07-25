@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html data-theme="auto" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>로마서 10장 심층 연구 — 믿음의 말씀</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link data-site-theme="" href="../../assets/theme.css" rel="stylesheet"/><link data-site-app-css="" href="../../assets/app.css" rel="stylesheet"/><link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/><link data-romans-suite-css="" href="./romans-suite.css" rel="stylesheet"/></head>
+<body data-book="rom" data-chapter="10" data-kind="chapter-study" data-root="../../">
+<div class="frame">
+<nav aria-label="목차" class="toc">
+<div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><span class="future">인터라이너 준비 중</span></div>
+<div class="brand">로마서 10장 심층 연구</div>
+<div class="brand-sub">CHAPTER STUDY · ROMANS</div>
+<div class="toc-h">장 이동</div>
+<div aria-label="로마서 장별 심층연구 이동" class="chapter-jump"><a aria-label="로마서 1장 심층연구" href="ch01.html">1</a><a aria-label="로마서 2장 심층연구" href="ch02.html">2</a><a aria-label="로마서 3장 심층연구" href="ch03.html">3</a><a aria-label="로마서 4장 심층연구" href="ch04.html">4</a><a aria-label="로마서 5장 심층연구" href="ch05.html">5</a><a aria-label="로마서 6장 심층연구" href="ch06.html">6</a><a aria-label="로마서 7장 심층연구" href="ch07.html">7</a><a aria-label="로마서 8장 심층연구" href="ch08.html">8</a><a aria-label="로마서 9장 심층연구" href="ch09.html">9</a><a aria-current="page" aria-label="로마서 10장 심층연구" href="ch10.html">10</a><a aria-label="로마서 11장 심층연구" href="ch11.html">11</a><a aria-label="로마서 12장 심층연구" href="ch12.html">12</a><a aria-label="로마서 13장 심층연구" href="ch13.html">13</a><a aria-label="로마서 14장 심층연구" href="ch14.html">14</a><a aria-label="로마서 15장 심층연구" href="ch15.html">15</a><a aria-label="로마서 16장 심층연구" href="ch16.html">16</a></div>
+<a class="lv1" href="#s0">0. 단락의 짜임</a>
+<a class="lv1" href="#s1">1. 지식 없는 열심 (10:1–4)</a>
+<a class="lv1" href="#s2">2. 두 의의 목소리 (10:5–8)</a>
+<a class="lv1" href="#s3">3. 마음과 입 (10:9–13)</a>
+<a class="lv1" href="#s4">4. 어찌 들으리요 (10:14–21)</a>
+<a class="lv1" href="#s5">5. 상호 참조 총람</a>
+<a class="lv1" href="#s6">6. 신학 종합</a>
+</nav>
+<main id="top">
+<header class="hero">
+<div class="gk-title">τέλος γὰρ νόμου Χριστός</div>
+<h1>로마서 10장 · 믿음의 말씀</h1>
+<p class="sub">9장이 하나님의 선택을 말했다면, 10장은 이스라엘 자신의 책임을 말한다. 두 설명이 한 논증 안에 나란히 선다.</p>
+<p class="meta">10:1–4 열심과 무지 · 10:5–13 가까운 말씀 · 10:14–21 들음 · 아홉 주석 대조 · 개역개정 4판 · NA28</p>
+</header>
+<div class="legend">
+<span><b>주석 칩</b></span>
+<span><span class="c f">M</span> Moo NICNT²</span>
+<span><span class="c t">D</span> Dunn WBC</span>
+<span><span class="c b">J</span> Jewett Herm.</span>
+<span><span class="c h">G</span> Gaventa NTL</span>
+<span><span class="c k">B</span> Barth</span>
+<span><span class="c x">K</span> Kruse PNTC</span>
+<span><span class="c x">L</span> Longenecker NIGTC</span>
+<span><span class="c x">C</span> Cranfield</span>
+<span><span class="c x">S</span> Stott BST</span>
+</div>
+<section class="part" id="s0">
+<div class="part-head">
+<div class="eyebrow">STRUCTURE</div>
+<h2>0. 단락의 짜임</h2>
+<div class="gloss">책임을 말하는 장.</div>
+</div>
+<p><span class="c x">K</span> Kruse가 정리한 9–11장의 두 축 가운데 둘째가 여기서 본격화된다. 9:1–29가 어떤 이는 복음의 복을 누리고 어떤 이는 그렇지 못한 궁극적 이유를 <em>하나님의 선택</em>에서 찾았다면, 9:30–10:21은 이스라엘 자신이 그 실패에 <strong>책임이 있다</strong>고 논증한다. 그들이 자기 의를 세우려 하여 하나님의 의에 복종하지 않았다는 것이다(10:3). 문제는 복음이 그들에게 멀리 있었다는 데 있지 않다. 도리어 가까이 있었고 누구에게나 그렇듯 그들에게도 열려 있었다(10:6–13).</p>
+<p><span class="c x">K</span> Kruse는 이 장에 보론을 셋 붙인다. <em>이스라엘과 바울의 열심</em>, <em><span class="gw">τέλος νόμου</span></em>, 그리고 <em>10:6–8에서 바울의 구약 사용</em>이다. 세 보론이 각각 1–4절, 4절, 6–8절에 걸린다는 사실이 이 장의 난제 분포를 보여 준다.</p>
+<table>
+<caption>표 1. 10장의 흐름</caption>
+<thead><tr><th>단락</th><th>본문</th><th>내용</th><th>기능</th></tr></thead>
+<tbody>
+<tr><td class="head">진단</td><td>10:1–4</td><td>열심은 있으나 지식을 따른 것이 아니라</td><td>실패의 성격 규정</td></tr>
+<tr><td class="head">대비</td><td>10:5–8</td><td>율법의 의와 믿음의 의가 각각 말한다</td><td>레 18:5 대 신 30장</td></tr>
+<tr><td class="head">복음</td><td>10:9–13</td><td>마음으로 믿고 입으로 시인하여</td><td>차별이 없음</td></tr>
+<tr><td class="head">책임</td><td>10:14–21</td><td>보내심·전파·들음·믿음의 사슬</td><td>변명의 차단</td></tr>
+</tbody>
+</table>
+</section>
+<section class="part" id="s1">
+<div class="part-head">
+<div class="gk">ζῆλος</div>
+<div class="eyebrow">10:1–4</div>
+<h2>1. 지식 없는 열심</h2>
+<div class="gloss">젤로스 — 열심</div>
+</div>
+<div class="vs" data-verses="1-3" id="v14">
+<span class="ref" data-bible-ref="ROM 10:1-3">10:1–3 — 인정과 진단</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>형제들아 내 마음에 원하는 바와 하나님께 구하는 바는 이스라엘을 위함이니 곧 그들로 구원을 받게 함이라 <span class="vn">2</span>내가 증언하노니 그들이 하나님께 열심이 있으나 올바른 지식을 따른 것이 아니니라 <span class="vn">3</span>하나님의 의를 모르고 자기 의를 세우려고 힘써 하나님의 의에 복종하지 아니하였느니라</p>
+<p>9:1–3의 근심이 여기서 <em>기도</em>로 바뀐다. "내 마음에 원하는 바와 하나님께 구하는 바는 이스라엘을 위함이니 곧 그들로 구원을 받게 함이라." 논증의 냉정함 앞에 다시 한 번 애정을 세워 둔다.</p>
+<p>2절이 인정할 것을 먼저 인정한다. <strong>"하나님께 열심이 있으나"</strong>다. <span class="c x">K</span> Kruse는 이 대목에 "이스라엘과 바울의 열심"이라는 보론을 붙인다. <span class="gw">ζῆλος</span>는 비난의 낱말이 아니며, 바울 자신이 회심 전에 그 열심의 사람이었다(빌 3:6; 갈 1:14).</p>
+<p>3절이 진단을 낸다. <span class="c x">C</span> Cranfield의 번역이 두 동사의 관계를 드러낸다. "하나님의 의를 <b>알아보지 못하고</b> 자기 의를 <b>세우려 힘써</b>, 하나님의 의에 복종하지 아니하였느니라." 무지와 자기 확립이 함께 불복종을 낳는다.</p>
+</div>
+<div class="vs" data-verses="4" id="v4">
+<span class="ref" data-bible-ref="ROM 10:4">10:4 — 그리스도는 율법의 무엇인가</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">4</span>그리스도는 모든 믿는 자에게 의를 이루기 위하여 율법의 마침이 되시니라</p>
+<div class="caveat"><span class="tt">쟁점 — <span class="gw">τέλος νόμου</span></span>
+<span class="gw">τέλος</span>는 <em>끝</em>과 <em>목표</em>를 함께 뜻할 수 있어, 이 짧은 절이 로마서 해석의 분수령이 된다. <span class="c x">K</span> Kruse가 이 어구에 보론을 따로 두는 이유다.  
+      ① <b>종결</b> — "그리스도는 율법의 <b>마침</b>이 되시니라"(개역개정). <span class="c x">C</span> Cranfield의 번역도 "end"다. 율법의 시대가 그리스도에게서 끝났다는 읽기이며, 7:1–6의 "율법에서 벗어났으니"와 잇닿는다.  
+      ② <b>목표·완성</b> — "그리스도는 율법의 <b>정점</b>이시니"(Kruse). 율법이 처음부터 그리스도를 향해 있었으므로 그가 그 도달점이라는 읽기이며, 3:21의 "율법과 선지자들에게 증거를 받은"과 3:31의 "율법을 굳게 세우느니라"가 근거가 된다.  
+      ③ <b>한정된 종결</b> — <span class="c t">D</span> Dunn은 목적어를 보충해 <b>"그리스도는 <em>의에 이르는 수단으로서의</em> 율법의 끝이시니"</b>로 옮긴다. 율법 자체가 폐기된 것이 아니라 <em>의를 얻는 통로</em>로서의 기능이 끝났다는 것이며, 8:4의 "율법의 요구가 우리에게 이루어지게" 하려는 목적과 충돌하지 않는다.  
+      <span class="c x">S</span> Stott은 이 절이 현대 논쟁에서 어떻게 쓰이는지를 짚는다. 일부는 "그리스도는 율법의 마침"(10:4)과 "너희가 법 아래에 있지 아니하고"(6:14)를 인용해 <em>도덕법이 폐기되었다</em>고 주장한다. 그러나 부정 진술은 <b>무엇과 대비되는지를 분간하기 전에는 해석할 수 없다</b>는 것이 그의 원칙이다.</div>
+<p><span class="c t">D</span> Dunn은 3–4절의 사본 사정도 전한다. 일부 초기 필사자가 앞 어구에 맞추어 <span class="gw">νόμον</span>을 <span class="gw">νόμον δικαιοσύνης</span>로 자연스럽게 확장했으며, <span class="gw">νόμον</span>을 <span class="gw">δικαιοσύνην</span>으로 고치자는 제안은 전적으로 근대의 것이다. 4절 이하에도 <span class="gw">νόμου</span>를 덧붙이려는 경향이 나타나나 <b>짧은 본문이 원형일 개연성이 높다</b>(Metzger, Dunn 재인용).</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s2">
+<div class="part-head">
+<div class="gk">ἐγγύς σου τὸ ῥῆμά ἐστιν</div>
+<div class="eyebrow">10:5–8</div>
+<h2>2. 두 의의 목소리</h2>
+<div class="gloss">엥귀스 수 토 레마 에스틴 — 말씀이 네게 가까워</div>
+</div>
+<div class="vs" data-verses="5-8" id="v58">
+<span class="ref" data-bible-ref="ROM 10:5-8">10:5–8 — 모세와 믿음의 의</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">5</span>모세가 기록하되 율법으로 말미암는 의를 행하는 사람은 그 의로 살리라 하였거니와 <span class="vn">6</span>믿음으로 말미암는 의는 이같이 말하되 네 마음에 누가 하늘에 올라가겠느냐 하지 말라 하니 올라가겠느냐 함은 그리스도를 모셔 내리려는 것이요 <span class="vn">7</span>혹은 누가 무저갱에 내려가겠느냐 하지 말라 하니 내려가겠느냐 함은 그리스도를 죽은 자 가운데서 모셔 올리려는 것이라 <span class="vn">8</span>그러면 무엇을 말하느냐 말씀이 네게 가까워 네 입에 있으며 네 마음에 있다 하였으니 곧 우리가 전파하는 믿음의 말씀이라</p>
+<p>대비가 인격화된다. 모세가 <em>쓰고</em>, 믿음의 의가 <em>말한다</em>. 5절은 레위기 18:5("사람이 이를 행하면 그로 말미암아 살리라")를 인용하며, 7:10에서 이미 "생명에 이르게 할 그 계명"으로 언급된 그 원리다.</p>
+<div class="caveat"><span class="tt">쟁점 — 신명기 30장을 이렇게 읽어도 되는가</span>
+<span class="c x">K</span> Kruse가 "10:6–8에서 바울의 구약 사용"이라는 보론을 따로 두는 이유다. 신명기 30:12–14의 원래 문맥에서 가까이 있는 것은 <b>계명</b>인데, 바울은 그것을 <b>전파되는 믿음의 말씀</b>으로 읽는다.  
+      ① <b>유비적 적용</b> — 신명기가 말한 <em>접근 가능성</em>의 원리를 복음에 적용한 것이며, 대상이 바뀌어도 원리는 같다는 읽기.  
+      ② <b>페셰르 방식</b> — 쿰란 문헌처럼 본문에 해석구("곧 …이라")를 삽입해 현재에 적용하는 방식이라는 읽기. 실제로 바울은 "곧 그리스도를 모셔 내리려는 것이요"(6절), "곧 우리가 전파하는 믿음의 말씀이라"(8절)를 끼워 넣는다.  
+      ③ <b>율법과 복음의 연속</b> — 신명기 30장 자체가 마음의 할례(30:6)를 약속하는 문맥이므로, 바울의 읽기가 본문의 방향과 어긋나지 않는다는 읽기. 2:29의 "마음의 할례"가 같은 신명기 대목에 기댄다.  
+      어느 쪽이든 요점은 같다. 5절의 <em>레위기</em>와 6–8절의 <em>신명기</em>가 모두 모세의 글인데, 바울이 그 둘을 <b>대비되는 두 목소리</b>로 세운다는 사실이다.</div>
+<p>6–8절은 신명기 30:12–14를 끌어와 괄호 안에 그리스도를 넣어 읽는다. <span class="c x">K</span> Kruse는 이 대목에 "10:6–8에서 바울의 구약 사용"이라는 보론을 붙인다. 원래 문맥에서 신명기 30장은 <em>계명</em>이 멀지 않고 가깝다고 말하는데, 바울은 그 "말씀"을 <b>전파되는 믿음의 말씀</b>으로 읽는다.</p>
+<p><span class="c x">S</span> Stott은 6–7절의 두 물음이 어떤 성격인지 밝힌다. 신명기에서 인용한 대목이 <em>엄한 금지</em>로 시작하며 믿음의 의가 그 금지를 승인한다. 하늘에 올라갈 자가 누구냐 혹은 무저갱에 내려갈 자가 누구냐고 묻는 것은 <b>불필요한 만큼이나 터무니없는</b> 일이다. 그리스도를 찾으러 높은 곳을 오르거나 깊은 곳을 헤아릴 필요가 전혀 없으니, 그가 이미 오셨고 죽으셨고 살아나셔서 우리에게 <em>닿을 수 있는 분</em>이 되셨기 때문이다.</p>
+<p>8절이 그 적극적 내용을 낸다. "말씀이 네게 가까워 네 입에 있으며 네 마음에 있다." 그리고 바울이 곧바로 해석을 붙인다. "곧 우리가 전파하는 믿음의 말씀이라."</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s3">
+<div class="part-head">
+<div class="gk">κύριος Ἰησοῦς</div>
+<div class="eyebrow">10:9–13</div>
+<h2>3. 마음과 입</h2>
+<div class="gloss">퀴리오스 예수스 — 예수를 주로</div>
+</div>
+<div class="vs" data-verses="9-10" id="v910">
+<span class="ref" data-bible-ref="ROM 10:9-10">10:9–10 — 가장 이른 신조</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">9</span>네가 만일 네 입으로 예수를 주로 시인하며 또 하나님께서 그를 죽은 자 가운데서 살리신 것을 네 마음에 믿으면 구원을 받으리라 <span class="vn">10</span>사람이 마음으로 믿어 의에 이르고 입으로 시인하여 구원에 이르느니라</p>
+<p><span class="c x">S</span> Stott은 8절의 "입"과 "마음"을 바울이 그대로 이어받아 복음을 요약한다고 본다. <b>"예수는 주"</b>는 모든 그리스도교 신조 가운데 <em>가장 이르고 가장 단순한</em> 것이다. 그리하여 마음과 입, 내적 믿음과 외적 시인이 본질적으로 함께 간다. 그는 이렇게 인용한다. <b>"믿음 없는 시인은 헛될 것이다. … 그러나 마찬가지로 시인 없는 믿음은 거짓임이 드러날 것이다."</b></p>
+<p>10절의 교차 배열이 그 상호성을 형식으로 보인다. 마음으로 믿어 <em>의</em>에 이르고, 입으로 시인하여 <em>구원</em>에 이른다.</p>
+</div>
+<div class="vs" data-verses="11-13" id="v1113">
+<span class="ref" data-bible-ref="ROM 10:11-13">10:11–13 — 차별이 없느니라</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">11</span>성경에 이르되 누구든지 그를 믿는 자는 부끄러움을 당하지 아니하리라 하니 <span class="vn">12</span>유대인이나 헬라인이나 차별이 없음이라 한 분이신 주께서 모든 사람의 주가 되사 그를 부르는 모든 사람에게 부요하시도다 <span class="vn">13</span>누구든지 주의 이름을 부르는 자는 구원을 받으리라</p>
+<p>11절이 이사야 28:16을 다시 인용한다. 9:33에서 "부딪칠 돌"과 함께 인용된 그 구절이며, 같은 어구가 두 장을 잇는다. <strong>"그를 믿는 자는 부끄러움을 당하지 아니하리라."</strong> 1:16의 "내가 복음을 부끄러워하지 아니하노니"가 세 번째로 되울린다.</p>
+<p>12절의 <span class="gw">οὐ γάρ ἐστιν διαστολή</span>("차별이 없느니라")는 3:22에서 이미 쓰인 표현이다. 거기서는 <em>모두 죄를 범하였으므로</em> 차별이 없었고, 여기서는 <em>모두에게 주가 부요하시므로</em> 차별이 없다. 같은 어구가 심판과 구원 양쪽에서 쓰인다.</p>
+<div class="caveat"><span class="tt">10:9의 "주"는 누구를 가리키는가</span>
+      9절의 시인은 "예수를 주로 시인하며"이고, 13절의 인용은 요엘 2:32의 "누구든지 <b>주</b>의 이름을 부르는 자"다. 요엘의 "주"는 <span class="gw">יהוה</span>(야훼)를 옮긴 칠십인역의 <span class="gw">κύριος</span>다.  
+      <span class="c x">S</span> Stott이 짚듯 신약에서 주목할 것은 <b>"주"라는 칭호가 야훼에게서 예수께로 옮겨 간 방식</b>이다(1:4·7). 9절과 13절을 나란히 놓으면 그 이동이 한 단락 안에서 완성된다. 야훼의 이름을 부르는 자가 구원받는다는 예언이, 예수를 주로 시인하는 자가 구원받는다는 선포로 읽힌다.  
+      <span class="c x">K</span> Kruse가 로마서에서 그리스도가 <em>단순히 하나님과 동일시되지는 않는다</em>고 관찰한 점(15:8 논의)과 함께 보면, 이 대목의 기독론적 무게와 그 한계를 동시에 가늠할 수 있다.</div>
+<p>13절의 요엘 2:32 인용이 이 단락을 닫는다. <span class="c x">K</span> Kruse의 정리대로, 문제는 복음이 이스라엘에게서 멀었다는 데 있지 않았다. 가까이 있었고 <b>누구에게나 그렇듯 그들에게도 열려 있었다</b>. "누구든지 주의 이름을 부르는 자는 구원을 받으리라."</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s4">
+<div class="part-head">
+<div class="gk">πῶς οὖν</div>
+<div class="eyebrow">10:14–21</div>
+<h2>4. 어찌 들으리요</h2>
+<div class="gloss">포스 운 — 그런즉 어찌</div>
+</div>
+<div class="vs" data-verses="14-17" id="v1417">
+<span class="ref" data-bible-ref="ROM 10:14-17">10:14–17 — 거꾸로 오르는 사슬</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">14</span>그런즉 그들이 믿지 아니하는 이를 어찌 부르리요 듣지도 못한 이를 어찌 믿으리요 전파하는 자가 없이 어찌 들으리요 <span class="vn">15</span>보내심을 받지 아니하였으면 어찌 전파하리요 기록된 바 아름답도다 좋은 소식을 전하는 자들의 발이여 함과 같으니라 <span class="vn">16</span>그러나 그들이 다 복음을 순종하지 아니하였도다 이사야가 이르되 주여 우리가 전한 것을 누가 믿었나이까 하였으니 <span class="vn">17</span>그러므로 믿음은 들음에서 나며 들음은 그리스도의 말씀으로 말미암았느니라</p>
+<p>네 물음이 결과에서 원인으로 거슬러 오른다. 부름 ← 믿음 ← 들음 ← 전파 ← 보내심이다. 15절이 이사야 52:7을 인용해 그 사슬의 첫 고리를 성경으로 확증한다.</p>
+<p>16절이 사슬을 끊는다. "그러나 그들이 다 복음을 순종하지 아니하였도다." 이사야 53:1의 "우리가 전한 것을 누가 믿었느냐"가 인용되며, <em>전파되었으나 믿지 않은</em> 상황이 이미 예언되었음을 보인다. 사슬은 완비되었고 실패는 사슬의 결함이 아니다.</p>
+<p>17절이 결론을 낸다. "믿음은 들음에서 나며 들음은 그리스도의 말씀으로 말미암았느니라." 1:5와 16:26의 "믿어 순종하게"가 여기서 <em>과정</em>으로 분해된다.</p>
+</div>
+<div class="vs" data-verses="18-21" id="v1821">
+<span class="ref" data-bible-ref="ROM 10:18-21">10:18–21 — 두 개의 예상 반론</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">18</span>그러나 내가 말하노니 그들이 듣지 아니하였느냐 그렇지 아니하니 그 소리가 온 땅에 퍼졌고 그 말씀이 땅 끝까지 이르렀도다 하였느니라 <span class="vn">19</span>그러나 내가 말하노니 이스라엘이 알지 못하였느냐 먼저 모세가 이르되 내가 백성 아닌 자로써 너희를 시기하게 하며 미련한 백성으로써 너희를 노엽게 하리라 하였고 <span class="vn">20</span>이사야는 매우 담대하여 내가 나를 찾지 아니한 자들에게 찾은 바 되고 내게 묻지 아니한 자들에게 나타났노라 말하였고 <span class="vn">21</span>이스라엘에 대하여 이르되 순종하지 아니하고 거슬러 말하는 백성에게 내가 종일 내 손을 벌렸노라 하였느니라</p>
+<p>18절이 첫 반론을 처리한다. 듣지 못하였느냐. 시편 19:4를 인용해 "그 소리가 온 땅에 퍼졌다"고 답한다. 19절이 둘째 반론을 처리한다. 알지 못하였느냐. 신명기 32:21을 인용해 이스라엘의 시기를 유발하는 하나님의 방식을 든다. 이 "시기"가 11:11·14에서 다시 나온다.</p>
+<p>20–21절이 이사야 65:1–2를 인용해 장을 닫는다. 하나님은 찾지 아니한 자들에게 찾은 바 되고, 이스라엘에게는 종일 손을 벌리셨다. <span class="c x">K</span> Kruse의 정리대로 문제는 이사야가 말한 그대로였다. 하나님이 종일 손을 벌리셨음에도 이스라엘은 <b>순종하지 아니하고 거슬러 말하는 백성</b>으로 남았다.</p>
+<p>그러나 이것이 이야기의 끝이 아니다. <span class="c x">K</span> Kruse가 곧바로 덧붙이듯, 이스라엘이 복음을 거부했음에도 <em>하나님은 자기 백성을 버리지 않으셨다</em>. 11:1이 그 물음을 받는다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s5">
+<div class="part-head">
+<div class="eyebrow">CROSS-REFERENCES</div>
+<h2>5. 상호 참조 총람</h2>
+</div>
+<table>
+<caption>표 2. 10장의 주요 상호 참조</caption>
+<thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+<tbody>
+<tr><td class="head">10:1</td><td>롬 9:1–3</td><td>근심에서 기도로</td><td>본문</td></tr>
+<tr><td class="head">10:2</td><td>빌 3:6; 갈 1:14; 행 22:3</td><td>열심(<span class="gw">ζῆλος</span>)의 양가성</td><td><span class="c x">K</span></td></tr>
+<tr><td class="head">10:3</td><td>롬 1:17; 3:21–22; 빌 3:9</td><td>하나님의 의와 자기 의</td><td><span class="c x">C</span></td></tr>
+<tr><td class="head">10:4</td><td>롬 3:21·31; 7:1–6; 8:4</td><td><span class="gw">τέλος</span>의 두 방향</td><td><span class="c t">D</span> <span class="c x">K</span></td></tr>
+<tr><td class="head">10:5</td><td>레 18:5; 롬 7:10; 갈 3:12</td><td>"행하면 살리라"</td><td>NA28 난외</td></tr>
+<tr><td class="head">10:6–8</td><td>신 30:12–14</td><td>가까운 말씀 — 계명에서 복음으로</td><td><span class="c x">K</span> <span class="c x">S</span></td></tr>
+<tr><td class="head">10:9</td><td>고전 12:3; 빌 2:11</td><td>"예수는 주" — 초기 신조</td><td><span class="c x">S</span></td></tr>
+<tr><td class="head">10:11</td><td>사 28:16; 롬 9:33; 1:16</td><td>부끄러움을 당하지 아니하리라</td><td>본문</td></tr>
+<tr><td class="head">10:12</td><td>롬 3:22·29–30; 갈 3:28</td><td>"차별이 없느니라"의 두 용법</td><td>본문</td></tr>
+<tr><td class="head">10:13</td><td>욜 2:32; 행 2:21</td><td>주의 이름을 부르는 자</td><td>NA28 난외</td></tr>
+<tr><td class="head">10:15</td><td>사 52:7; 나 1:15</td><td>아름다운 발</td><td>NA28 난외</td></tr>
+<tr><td class="head">10:16</td><td>사 53:1; 요 12:38</td><td>"우리가 전한 것을 누가 믿었느냐"</td><td>NA28 난외</td></tr>
+<tr><td class="head">10:18</td><td>시 19:4</td><td>온 땅에 퍼진 소리</td><td>NA28 난외</td></tr>
+<tr><td class="head">10:19</td><td>신 32:21; 롬 11:11·14</td><td>시기하게 함</td><td>NA28 난외</td></tr>
+<tr><td class="head">10:20–21</td><td>사 65:1–2</td><td>찾지 아니한 자와 벌린 손</td><td><span class="c x">K</span></td></tr>
+</tbody>
+</table>
+</section>
+<section class="part" id="s6">
+<div class="part-head">
+<div class="eyebrow">SYNTHESIS</div>
+<h2>6. 신학 종합</h2>
+</div>
+<h3>① 두 설명은 경쟁하지 않는다</h3>
+<p><span class="c x">K</span> Kruse가 정리한 9–11장의 두 축이 9:30의 이음매에서 만나 10장 전체를 채운다. 9장이 하나님의 선택을 끝까지 밀고 갔다면 10장은 이스라엘의 책임을 끝까지 밀고 간다. 두 설명 가운데 하나를 지우면 이 세 장은 읽히지 않는다. 10:21의 "종일 내 손을 벌렸노라"가 그 긴장을 한 이미지에 담는다.</p>
+<h3>② 열심의 문제</h3>
+<p>10:2가 인정하는 것이 중요하다. 이스라엘에게 <em>열심이 있었다</em>. 실패의 원인은 무관심이 아니라 <b>지식을 따르지 않은 열심</b>이다. <span class="c x">C</span> Cranfield가 3절에서 짚은 두 동사—알아보지 못함과 세우려 힘씀—이 그 구조를 보인다. 자기 의를 세우려는 노력이 하나님의 의를 알아보지 못하게 만든다.</p>
+<h3>③ 마침인가 목표인가</h3>
+<p>10:4의 <span class="gw">τέλος</span> 논쟁이 로마서 전체의 율법 이해를 가른다. 종결로 읽으면 7:1–6이 무게를 얻고, 목표로 읽으면 3:21·31이 무게를 얻는다. <span class="c t">D</span> Dunn의 한정—<em>의에 이르는 수단으로서의</em> 끝—이 두 계열을 화해시키는 방식이다. 율법의 기능 하나가 끝났을 뿐 율법 자체가 폐기된 것이 아니라면, 8:4의 "율법의 요구가 우리에게 이루어지게"와 13:8–10의 "사랑은 율법의 완성"이 그대로 성립한다.</p>
+<h3>④ 가까운 말씀</h3>
+<p>10:6–8이 신명기 30장을 읽는 방식이 이 장의 신학을 압축한다. <span class="c x">S</span> Stott의 정리대로 하늘을 오르거나 깊은 곳을 헤아릴 필요가 없는 까닭은 <b>그가 이미 오셨기 때문</b>이다. 복음의 접근 불가능성이 아니라 <em>접근 가능성</em>이 이스라엘의 변명을 차단한다. 멀어서 못 들은 것이 아니다.</p>
+<h3>⑤ 마음과 입</h3>
+<p>10:9–10의 교차 배열이 믿음의 구조를 보인다. <span class="c x">S</span> Stott이 인용한 정식대로 <b>믿음 없는 시인은 헛되고 시인 없는 믿음은 거짓임이 드러난다</b>. 1:5의 "믿어 순종하게"가 여기서 내적 믿음과 외적 시인의 결합으로 구체화되며, "예수는 주"라는 가장 이른 신조가 그 시인의 내용이 된다.</p>
+<h3>⑥ 사슬은 완비되어 있다</h3>
+<p>10:14–17의 물음들은 변명의 여지를 하나씩 닫는다. 보내심이 있었고 전파가 있었고 들음이 있었다. 그런데 16절이 "그들이 다 복음을 순종하지 아니하였도다"로 사슬을 끊고, 그 끊김조차 이사야 53:1에 예언되어 있었음을 보인다. 실패는 전달 체계의 결함이 아니라 <em>응답의 거절</em>이다.</p>
+<h3>⑦ 11장으로 열린 문</h3>
+<p>10:21이 "순종하지 아니하고 거슬러 말하는 백성"으로 끝난다. 논증만 보면 여기서 이야기가 닫힐 수 있다. 그러나 <span class="c x">K</span> Kruse가 짚듯 이것은 끝이 아니다. 이스라엘이 복음을 거부했음에도 하나님은 자기 백성을 버리지 않으셨고, <b>엘리야 때처럼 언제나 신실한 남은 자를 두셨으며</b>, 바울 자신이 그중 하나다. 11:1이 그 물음을 정면으로 받는다.</p>
+<div class="back"><a href="./ch09.html">← 9장</a> · <a href="./ch11.html">11장 →</a> · <a href="./overview.html">종합 연구</a></div>
+</section>
+<footer>
+    성서 연구 서고 · 로마서 10장 심층 연구 — 3-문서 구조의 둘째 문서.<br/>
+    관찰 출처: Moo(NICNT² 2018)·Dunn(WBC 38B 1988)·Kruse(PNTC 2012)·Cranfield(<i>Shorter</i>)·Stott(BST) 직접 확인분. Metzger는 재인용으로 표기. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<script src="../../assets/app.js"></script><script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script></body>
+</html>

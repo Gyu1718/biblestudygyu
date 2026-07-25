@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html data-theme="auto" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>로마서 13장 심층 연구 — 권세와 사랑</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.74rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump a.off{opacity:.4}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.98rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+.krv{background:#f4f2ea;border-left:3px solid var(--ochre);border-radius:0 5px 5px 0;padding:.6rem .95rem;font-size:.93rem;color:#333c48;margin:.45rem 0 .85rem;line-height:1.8}
+.krv .lbl{font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;color:var(--ochre);font-weight:700;display:block;margin-bottom:.25rem}
+.krv .vn{font-family:var(--sans);font-size:.66rem;font-weight:700;color:var(--lapis);margin-right:.2rem;vertical-align:.1em}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link data-site-theme="" href="../../assets/theme.css" rel="stylesheet"/><link data-site-app-css="" href="../../assets/app.css" rel="stylesheet"/><link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/><link data-romans-suite-css="" href="./romans-suite.css" rel="stylesheet"/></head>
+<body data-book="rom" data-chapter="13" data-kind="chapter-study" data-root="../../">
+<div class="frame">
+<nav aria-label="목차" class="toc">
+<div class="site-nav"><a href="./index.html">← 로마서 서재</a><a href="../../index.html">서고 홈</a><span class="future">인터라이너 준비 중</span></div>
+<div class="brand">로마서 13장 심층 연구</div>
+<div class="brand-sub">CHAPTER STUDY · ROMANS</div>
+<div class="toc-h">장 이동</div>
+<div aria-label="로마서 장별 심층연구 이동" class="chapter-jump"><a aria-label="로마서 1장 심층연구" href="ch01.html">1</a><a aria-label="로마서 2장 심층연구" href="ch02.html">2</a><a aria-label="로마서 3장 심층연구" href="ch03.html">3</a><a aria-label="로마서 4장 심층연구" href="ch04.html">4</a><a aria-label="로마서 5장 심층연구" href="ch05.html">5</a><a aria-label="로마서 6장 심층연구" href="ch06.html">6</a><a aria-label="로마서 7장 심층연구" href="ch07.html">7</a><a aria-label="로마서 8장 심층연구" href="ch08.html">8</a><a aria-label="로마서 9장 심층연구" href="ch09.html">9</a><a aria-label="로마서 10장 심층연구" href="ch10.html">10</a><a aria-label="로마서 11장 심층연구" href="ch11.html">11</a><a aria-label="로마서 12장 심층연구" href="ch12.html">12</a><a aria-current="page" aria-label="로마서 13장 심층연구" href="ch13.html">13</a><a aria-label="로마서 14장 심층연구" href="ch14.html">14</a><a aria-label="로마서 15장 심층연구" href="ch15.html">15</a><a aria-label="로마서 16장 심층연구" href="ch16.html">16</a></div>
+<a class="lv1" href="#s0">0. 단락의 짜임</a>
+<a class="lv1" href="#s1">1. 위에 있는 권세들 (13:1–5)</a>
+<a class="lv1" href="#s2">2. 조세와 존경 (13:6–7)</a>
+<a class="lv1" href="#s3">3. 사랑의 빚 (13:8–10)</a>
+<a class="lv1" href="#s4">4. 때를 알거니와 (13:11–14)</a>
+<a class="lv1" href="#s5">5. 상호 참조 총람</a>
+<a class="lv1" href="#s6">6. 신학 종합</a>
+</nav>
+<main id="top">
+<header class="hero">
+<div class="gk-title">πλήρωμα οὖν νόμου ἡ ἀγάπη</div>
+<h1>로마서 13장 · 권세와 사랑</h1>
+<p class="sub">보복을 하나님께 맡기라는 권면 뒤에, 그 하나님이 쓰시는 한 통로가 온다. 그리고 모든 계명이 한 낱말로 모인다.</p>
+<p class="meta">13:1–7 국가 권세 · 13:8–10 사랑과 율법 · 13:11–14 종말의 시각 · 아홉 주석 대조</p>
+</header>
+<div class="legend">
+<span><b>주석 칩</b></span>
+<span><span class="c f">M</span> Moo NICNT²</span>
+<span><span class="c t">D</span> Dunn WBC</span>
+<span><span class="c b">J</span> Jewett Herm.</span>
+<span><span class="c h">G</span> Gaventa NTL</span>
+<span><span class="c k">B</span> Barth</span>
+<span><span class="c x">K</span> Kruse PNTC</span>
+<span><span class="c x">L</span> Longenecker NIGTC</span>
+<span><span class="c x">C</span> Cranfield</span>
+<span><span class="c x">S</span> Stott BST</span>
+</div>
+<section class="part" id="s0">
+<div class="part-head">
+<div class="eyebrow">STRUCTURE</div>
+<h2>0. 단락의 짜임</h2>
+<div class="gloss">세 단락, 세 지평.</div>
+</div>
+<p><span class="c x">K</span> Kruse는 13:1–7에 <strong>"그리스도인과 로마 당국"</strong>이라는 표제를 붙여, 이 단락이 추상적 국가론이 아니라 <em>로마에 사는 신자들의 실제 처지</em>를 겨눈 것임을 표시한다.</p>
+<p><span class="c x">S</span> Stott은 이 단락이 놓인 자리를 12:19에서 찾는다. 통치 권세에 관한 논의가 바울의 머릿속에 떠오른 계기가 <b>하나님의 진노</b> 언급이었을 수 있다는 것이다. 악을 벌하는 일이 하나님의 특권이라면 그분이 그 일을 행하시는 방식 가운데 하나가 국가의 사법 집행이며, 관원이 악을 행하는 자를 벌하는 하나님의 "일꾼"이기 때문이다. 국가는 또한 공동체 안에서 <em>선을 장려하고 상 주는</em> 적극적 역할도 맡는다. 그리고 그는 곧바로 한정을 단다. <b>권세에 대한 우리의 복종은 결코 무조건적이지 않다.</b></p>
+<table>
+<caption>표 1. 13장의 흐름</caption>
+<thead><tr><th>단락</th><th>본문</th><th>내용</th><th>지평</th></tr></thead>
+<tbody>
+<tr><td class="head">권세</td><td>13:1–5</td><td>복종의 근거와 두 이유</td><td>국가</td></tr>
+<tr><td class="head">의무</td><td>13:6–7</td><td>조세·관세·두려움·존경</td><td>구체적 실천</td></tr>
+<tr><td class="head">사랑</td><td>13:8–10</td><td>남에게 진 빚과 율법의 완성</td><td>이웃</td></tr>
+<tr><td class="head">시각</td><td>13:11–14</td><td>자다가 깰 때 · 빛의 갑옷</td><td>종말</td></tr>
+</tbody>
+</table>
+</section>
+<section class="part" id="s1">
+<div class="part-head">
+<div class="gk">ἐξουσίαις ὑπερεχούσαις</div>
+<div class="eyebrow">13:1–5</div>
+<h2>1. 위에 있는 권세들</h2>
+<div class="gloss">엑수시아이스 휘페레쿠사이스 — 위에 있는 권세들</div>
+</div>
+<div class="vs" data-verses="1-2" id="v12">
+<span class="ref" data-bible-ref="ROM 13:1-2">13:1–2 — 근거</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">1</span>각 사람은 위에 있는 권세들에게 복종하라 권세는 하나님으로부터 나지 않음이 없나니 모든 권세는 다 하나님께서 정하신 바라 <span class="vn">2</span>그러므로 권세를 거스르는 자는 하나님의 명을 거스름이니 거스르는 자들은 심판을 자취하리라</p>
+<p><span class="c x">C</span> Cranfield의 번역이 1절의 논리를 정확히 옮긴다. "각 사람은 위에 있는 권세들에게 복종하라. <b>하나님이 정하신 바가 아니고서는 그 자체로 존재하는 권세가 없고</b>, 지금 있는 권세들은 하나님께서 세우신 것이라." 권세의 존재 자체가 하나님의 임명에 근거한다는 진술이다.</p>
+<p>2절이 귀결을 낸다. 권세를 거스르는 자는 <strong>하나님의 정하심을 거스르는</strong> 것이며 심판을 자취한다. <span class="c x">C</span> Cranfield의 번역은 이를 "하나님의 질서 세우심을 거스르는" 것으로 옮긴다.</p>
+<p><span class="c x">C</span> Cranfield는 이 단락의 신학적 전제를 덧붙인다. 통치 권세들이 <b>이전과 같지 않은 방식으로</b>, 곧 하나님의 심판과 자비와 약속 아래에서 지금 그 기능을 수행한다는 것이다. 그리스도 사건이 국가의 지위 자체를 재규정했다는 뜻이며, 이 전제가 무조건적 복종론과 무정부론 양쪽을 함께 차단한다.</p>
+</div>
+<div class="vs" data-verses="3-5" id="v35">
+<span class="ref" data-bible-ref="ROM 13:3-5">13:3–5 — 두 이유</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">3</span>다스리는 자들은 선한 일에 대하여 두려움이 되지 않고 악한 일에 대하여 되나니 네가 권세를 두려워하지 아니하려느냐 선을 행하라 그리하면 그에게 칭찬을 받으리라 <span class="vn">4</span>그는 하나님의 사역자가 되어 네게 선을 베푸는 자니라 그러나 네가 악을 행하거든 두려워하라 그가 공연히 칼을 가지지 아니하였으니 곧 하나님의 사역자가 되어 악을 행하는 자에게 진노하심을 따라 보응하는 자니라 <span class="vn">5</span>그러므로 복종하지 아니할 수 없으니 진노 때문에 할 것이 아니라 양심을 따라 할 것이라</p>
+<p><span class="c x">C</span> Cranfield의 번역이 3절의 대상을 좁힌다. "통치하는 일에 종사하는 자들은 <em>선한 일</em>에 대하여 두려움이 되지 않고 <em>악한 일</em>에 대하여 그러하니라."</p>
+<p>4절이 관원을 <strong><span class="gw">θεοῦ διάκονος</span></strong>("하나님의 일꾼")로 두 번 부른다. 앞은 선을 위한 일꾼이고 뒤는 악을 행하는 자에게 진노를 집행하는 일꾼이다. 12:19에서 "하나님의 진노하심에 맡기라" 했던 그 진노가 여기서 <em>집행의 통로</em>를 얻는다.</p>
+<p>5절이 복종의 두 이유를 든다. <span class="gw">διὰ τὴν ὀργήν</span>(진노 때문에)과 <span class="gw">διὰ τὴν συνείδησιν</span>(양심 때문에)이다. 처벌에 대한 두려움만이 아니라 <em>양심</em>이 근거가 된다는 진술이 이 단락을 단순한 처세훈에서 구별한다. 2:15에서 이방인의 책임 근거로 제시된 그 <span class="gw">συνείδησις</span>다.</p>
+<div class="caveat"><span class="tt">쟁점 — 복종은 무조건적인가</span>
+      ① <b>무조건 복종</b> — 1–2절만 떼어 읽으면 모든 권세에 대한 무제한적 순종이 도출된다. 역사적으로 이 독법이 폭정의 정당화에 쓰였다.  
+      ② <b>조건부 복종</b> — <span class="c x">S</span> Stott은 <b>"권세에 대한 우리의 복종은 결코 무조건적이지 않다"</b>고 못 박는다. 본문 자체가 조건을 담고 있다는 것이 근거다. 권세는 <em>선을 장려하고 악을 벌하는</em> 기능으로 규정되며(3–4절), 그 기능을 뒤집는 권세는 자기 정의를 배반한다.  
+      ③ <b>신학적 재규정</b> — <span class="c x">C</span> Cranfield의 단서대로 권세들이 <em>하나님의 심판과 자비와 약속 아래에서</em> 기능한다면, 국가는 절대자가 아니라 <b>심판 아래 있는 봉사자</b>다. 4절이 관원을 "일꾼"(<span class="gw">διάκονος</span>)으로 두 번 부르는 것이 그 지위를 표시한다.  
+      본문이 다루지 <em>않는</em> 것도 함께 보아야 한다. 이 단락은 권세가 하나님의 뜻을 거스를 때 어떻게 할지를 논하지 않는다. 사도행전 5:29("사람보다 하나님께 순종하는 것이 마땅하니라")나 요한계시록 13장의 짐승 이미지가 그 공백을 다른 각도에서 채운다.</div>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s2">
+<div class="part-head">
+<div class="gk">φόρος · τέλος</div>
+<div class="eyebrow">13:6–7</div>
+<h2>2. 조세와 존경</h2>
+<div class="gloss">포로스·텔로스 — 조세와 관세</div>
+</div>
+<div class="vs" data-verses="6-7" id="v67">
+<span class="ref" data-bible-ref="ROM 13:6-7">13:6–7 — 네 가지를 갚으라</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">6</span>너희가 조세를 바치는 것도 이로 말미암음이라 그들이 하나님의 일꾼이 되어 바로 이 일에 항상 힘쓰느니라 <span class="vn">7</span>모든 자에게 줄 것을 주되 조세를 받을 자에게 조세를 바치고 관세를 받을 자에게 관세를 바치고 두려워할 자를 두려워하며 존경할 자를 존경하라</p>
+<p>6절이 관원을 <span class="gw">λειτουργοὶ θεοῦ</span>("하나님의 일꾼")로 부른다. 4절의 <span class="gw">διάκονος</span>와 다른 낱말이며, <span class="gw">λειτουργός</span>는 제의적·공적 봉사자를 가리키는 어휘다. 15:16에서 바울이 자기 사역을 같은 계열의 낱말로 표현한다.</p>
+<p>7절이 네 가지를 든다. 조세(<span class="gw">φόρος</span>), 관세(<span class="gw">τέλος</span>), 두려움, 존경이다. 앞의 둘은 재정적 의무이고 뒤의 둘은 태도의 의무다. 동사 <span class="gw">ἀπόδοτε</span>("주라")는 "마땅히 돌려주다"는 뜻으로, 빚을 갚는 어감을 띤다.</p>
+<p>이 어감이 곧바로 8절의 <strong>"피차 사랑의 빚 외에는 아무에게든지 아무 빚도 지지 말라"</strong>로 이어진다. 갚아야 할 것을 갚는 원리가 유지되면서 대상이 바뀐다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s3">
+<div class="part-head">
+<div class="gk">πλήρωμα νόμου</div>
+<div class="eyebrow">13:8–10</div>
+<h2>3. 사랑의 빚</h2>
+<div class="gloss">플레로마 노무 — 율법의 완성</div>
+</div>
+<div class="vs" data-verses="8-10" id="v810">
+<span class="ref" data-bible-ref="ROM 13:8-10">13:8–10 — 갚아도 남는 빚</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">8</span>피차 사랑의 빚 외에는 아무에게든지 아무 빚도 지지 말라 남을 사랑하는 자는 율법을 다 이루었느니라 <span class="vn">9</span>간음하지 말라, 살인하지 말라, 도둑질하지 말라, 탐내지 말라 한 것과 그 외에 다른 계명이 있을지라도 네 이웃을 네 자신과 같이 사랑하라 하신 그 말씀 가운데 다 들었느니라 <span class="vn">10</span>사랑은 이웃에게 악을 행하지 아니하나니 그러므로 사랑은 율법의 완성이니라</p>
+<p><span class="c x">S</span> Stott은 8절의 두 문장이 이루는 대조를 짚는다. 이웃을 사랑하면—적어도 해를 끼치지 않는다는 의미에서—<em>율법을 이루었다</em>고 말할 수 있으되, 그렇다고 <em>빚을 다 갚은</em> 것은 아니다. 그는 필립스 역의 표현을 빌려 이를 <b>"저 영구한 사랑의 빚"</b>이라 부른다. 성경이 명하는 사랑을 다하려 애쓰되 언제나 요구되는 사랑에 미치지 못하므로, 그 빚은 남는다.</p>
+<p>9절이 십계명의 후반부(간음·살인·도둑질·탐냄)를 열거한 뒤 레위기 19:18로 요약한다. <strong>"네 이웃을 네 자신과 같이 사랑하라."</strong> 열거된 계명이 모두 <em>이웃에게 해를 끼치는</em> 행위의 금지라는 점이 10절의 논거가 된다. "사랑은 이웃에게 악을 행하지 아니하나니."</p>
+<p><span class="c x">K</span> Kruse는 이 결론이 로마서의 율법 이해에서 갖는 자리를 정리한다. 모든 다른 계명이 "네 이웃을 네 자신과 같이 사랑하라"에 요약되고 따라서 <b>"사랑은 율법의 완성"</b>이라면, 신자들이 율법의 모든 요구를 지켜야 했던 것은 <em>아니다</em>. 이방인 신자가 율법을 따라 할례를 받아야 한다고 요구받지 않은 것이 그 예다. 그리고 그는 8:4가 "율법의 요구"가 성령을 따라 사는 자들 안에서 <b>이루어진다</b>고 <em>수동태</em>로 말한다는 점이 의미심장하다고 본다.</p>
+<p>이로써 7:1–6과 10:4에서 제기된 물음—율법의 시대가 끝났다면 율법의 요구는 어떻게 되는가—이 답을 얻는다. 요구는 폐기되지 않고 <em>사랑 안으로 모인다</em>.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s4">
+<div class="part-head">
+<div class="gk">ἡ νὺξ προέκοψεν</div>
+<div class="eyebrow">13:11–14</div>
+<h2>4. 때를 알거니와</h2>
+<div class="gloss">헤 뉙스 프로에콥센 — 밤이 깊었고</div>
+</div>
+<div class="vs" data-verses="11-14" id="v1114">
+<span class="ref" data-bible-ref="ROM 13:11-14">13:11–14 — 세 개의 시간 표지</span>
+<p class="krv"><span class="lbl">개역개정 4판</span><span class="vn">11</span>또한 너희가 이 시기를 알거니와 자다가 깰 때가 벌써 되었으니 이는 이제 우리의 구원이 처음 믿을 때보다 가까웠음이라 <span class="vn">12</span>밤이 깊고 낮이 가까웠으니 그러므로 우리가 어둠의 일을 벗고 빛의 갑옷을 입자 <span class="vn">13</span>낮에와 같이 단정히 행하고 방탕하거나 술 취하지 말며 음란하거나 호색하지 말며 다투거나 시기하지 말고 <span class="vn">14</span>오직 주 예수 그리스도로 옷 입고 정욕을 위하여 육신의 일을 도모하지 말라</p>
+<p><span class="c x">S</span> Stott은 바울이 <strong>세 가지 시간 언급</strong>을 하며 각각 두 시대의 배경 이해를 전제한다고 정리한다. 첫째, <b>때가 이르렀다</b>(직역하면 "이미 …이다"). 자다가 깰 때다. 잘 시간은 지났고 이제 깨어 일어날 시간이다. 둘째, <b>우리의 구원이 처음 믿을 때보다 가까웠다</b>. "구원"은 과거(칭의)와 현재(성화)와 미래(영화)를 아우르는 포괄적 낱말인데(1:16 참조), 이 절에서는 분명히 <em>미래</em>가 초점이다.</p>
+<p>12절의 대비가 그 시각을 이미지로 만든다. 밤이 깊고 낮이 가까웠으니 <strong>어둠의 일을 벗고 빛의 갑옷을 입자</strong>는 것이다.</p>
+<p><span class="c x">K</span> Kruse는 "입다"(<span class="gw">ἐνδύω</span>)라는 옷 은유가 바울에게 얼마나 넓게 쓰이는지 정리한다. 13:12의 <b>"빛의 갑옷"</b>, 13:14의 <b>"주 예수 그리스도"</b>, 그리고 다른 서신의 "새 사람"(엡 4:24; 골 3:10), "하나님의 전신 갑주"(엡 6:11), "의의 호심경"(엡 6:14), "긍휼과 자비와 겸손과 온유와 오래 참음"(골 3:12), "믿음과 사랑의 호심경과 구원의 소망의 투구"(살전 5:8)가 같은 계열이다.</p>
+<p>14절의 두 명령이 이 장을 닫는다. <em>주 예수 그리스도로 옷 입고</em>, <em>정욕을 위하여 육신의 일을 도모하지 말라</em>. 8:12–13의 "육신대로 살면 반드시 죽을 것이로되"가 여기서 실천의 명령으로 되돌아온다. 그리고 이 구절이 아우구스티누스의 회심 장면에서 읽힌 그 본문이라는 사실이 이 절의 수용사를 특별하게 만든다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<section class="part" id="s5">
+<div class="part-head">
+<div class="eyebrow">CROSS-REFERENCES</div>
+<h2>5. 상호 참조 총람</h2>
+</div>
+<table>
+<caption>표 2. 13장의 주요 상호 참조</caption>
+<thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+<tbody>
+<tr><td class="head">13:1</td><td>단 2:21; 요 19:11; 딛 3:1; 벧전 2:13–14</td><td>권세의 근거</td><td>NA28 난외</td></tr>
+<tr><td class="head">13:1–2</td><td>롬 12:19</td><td>진노의 관할과 그 통로</td><td><span class="c x">S</span></td></tr>
+<tr><td class="head">13:4</td><td>롬 12:19; 13:6</td><td>하나님의 일꾼(<span class="gw">διάκονος</span>·<span class="gw">λειτουργός</span>)</td><td>본문</td></tr>
+<tr><td class="head">13:5</td><td>롬 2:15; 9:1</td><td>양심(<span class="gw">συνείδησις</span>)</td><td>본문</td></tr>
+<tr><td class="head">13:5</td><td>행 5:29; 계 13장</td><td>복종의 한계를 다루는 다른 본문</td><td>본문</td></tr>
+<tr><td class="head">13:7</td><td>막 12:17; 마 22:21</td><td>가이사의 것은 가이사에게</td><td>NA28 난외</td></tr>
+<tr><td class="head">13:8</td><td>롬 1:14; 13:7</td><td>빚(<span class="gw">ὀφείλω</span>)의 어휘</td><td><span class="c x">S</span></td></tr>
+<tr><td class="head">13:9</td><td>출 20:13–17; 신 5:17–21; 레 19:18</td><td>십계명과 이웃 사랑</td><td>NA28 난외</td></tr>
+<tr><td class="head">13:9–10</td><td>갈 5:14; 약 2:8; 마 22:39</td><td>계명의 요약</td><td><span class="c x">K</span></td></tr>
+<tr><td class="head">13:10</td><td>롬 8:4; 3:31</td><td>율법의 요구가 이루어짐</td><td><span class="c x">K</span></td></tr>
+<tr><td class="head">13:11</td><td>롬 1:16; 5:9; 8:24</td><td>구원의 세 시제</td><td><span class="c x">S</span></td></tr>
+<tr><td class="head">13:12</td><td>엡 6:11·14; 살전 5:8; 골 3:12</td><td>옷 입기 은유의 계열</td><td><span class="c x">K</span></td></tr>
+<tr><td class="head">13:14</td><td>갈 3:27; 엡 4:24; 골 3:10; 롬 8:12–13</td><td>그리스도로 옷 입음</td><td><span class="c x">K</span></td></tr>
+</tbody>
+</table>
+</section>
+<section class="part" id="s6">
+<div class="part-head">
+<div class="eyebrow">SYNTHESIS</div>
+<h2>6. 신학 종합</h2>
+</div>
+<h3>① 12장이 13장을 부른다</h3>
+<p><span class="c x">S</span> Stott이 짚은 연결이 이 장을 읽는 첫 열쇠다. 12:19가 보복을 하나님께 맡기라 했고, 13:4가 그 진노를 집행하는 <b>하나님의 일꾼</b>을 지목한다. 개인이 내려놓은 것을 국가가 위임받는 구조이며, 두 장이 별개의 주제가 아니라 <em>같은 논리의 두 국면</em>이다.</p>
+<h3>② 권세의 신학적 지위</h3>
+<p>13:1이 권세의 존재를 하나님의 임명에 근거시키되, 4절과 6절이 그 권세를 <b>일꾼</b>으로 규정한다. <span class="c x">C</span> Cranfield의 단서—권세들이 <em>하나님의 심판과 자비와 약속 아래에서</em> 이전과 다른 방식으로 기능한다—가 결정적이다. 국가는 신적 기원을 갖되 신적 지위를 갖지 않는다.</p>
+<h3>③ 복종의 조건</h3>
+<p>본문 자체가 조건을 담는다. 권세는 선을 장려하고 악을 벌하는 <em>기능</em>으로 규정되며(3–4절), 복종의 이유에 <b>양심</b>이 포함된다(5절). <span class="c x">S</span> Stott의 정식—복종은 결코 무조건적이지 않다—이 여기서 나온다. 다만 이 단락이 권세가 그 기능을 배반할 때를 <em>다루지 않는다</em>는 사실도 함께 인정해야 하며, 그 공백은 다른 본문들이 채운다.</p>
+<h3>④ 갚음의 원리가 사랑으로</h3>
+<p>13:7의 "갚으라"가 13:8의 "빚지지 말라"로 이어지며 어휘가 유지된 채 대상이 바뀐다. <span class="c x">S</span> Stott이 인용한 <b>"저 영구한 사랑의 빚"</b>이 그 전환을 요약한다. 조세와 관세는 갚으면 끝나지만 사랑은 갚아도 남는다. 1:14에서 바울이 자기를 "빚진 자"라 부른 그 낱말이 여기서 모든 신자에게 확장된다.</p>
+<h3>⑤ 율법의 요구가 도착하는 곳</h3>
+<p>13:8–10이 로마서의 율법 논의를 마무리한다. 3:20이 율법으로는 의롭다 하심을 얻을 수 없다 했고, 3:31이 믿음으로 율법을 굳게 세운다 했으며, 8:4가 율법의 요구가 성령을 따라 사는 자들 안에서 이루어진다 했고, 10:4가 그리스도를 율법의 <span class="gw">τέλος</span>로 선언했다. <span class="c x">K</span> Kruse의 정리대로 이 모든 진술이 <b>"사랑은 율법의 완성"</b>에서 만난다. 요구는 폐기되지 않고 한 낱말 안으로 모인다.</p>
+<h3>⑥ 두 시대 사이의 시각</h3>
+<p><span class="c x">S</span> Stott이 센 세 개의 시간 표지가 그리스도인 윤리의 시제를 정한다. 때가 이르렀고, 구원이 가까웠고, 밤이 깊고 낮이 가깝다. 8:18–25의 "탄식하며 기다림"이 여기서 <em>깨어 있음</em>의 명령이 된다. 종말론이 사변이 아니라 <b>지금의 행동을 규정하는 시계</b>로 기능한다.</p>
+<h3>⑦ 옷 입는 그리스도</h3>
+<p>13:14의 "주 예수 그리스도로 옷 입고"가 <span class="c x">K</span> Kruse가 정리한 옷 은유 계열의 정점이다. 빛의 갑옷, 새 사람, 전신 갑주가 모두 같은 어휘로 묶이는데, 여기서는 옷이 <em>사물</em>이 아니라 <b>인격</b>이다. 6:3의 "그리스도 예수와 합하여 세례를 받은"과 갈라디아서 3:27의 "그리스도로 옷 입었느니라"가 같은 지점을 가리키며, 세례에서 선언된 연합이 일상의 명령으로 되돌아온다.</p>
+<div class="back"><a href="./ch12.html">← 12장</a> · <a href="./overview.html">종합 연구</a> · <a href="./index.html">로마서 서재</a></div>
+</section>
+<footer>
+    성서 연구 서고 · 로마서 13장 심층 연구 — 3-문서 구조의 둘째 문서.<br/>
+    관찰 출처: Moo(NICNT² 2018)·Kruse(PNTC 2012)·Cranfield(<i>Shorter</i>)·Stott(BST) 직접 확인분. 본문은 개역개정 4판과 NA28로 대조했다.
+  </footer>
+</main>
+</div>
+<script src="../../assets/app.js"></script><script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script></body>
+</html>

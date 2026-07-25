@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에스더 10장 심층 연구 — 백성의 이익을 도모하며</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump span.soon{display:block;text-align:center;padding:.34rem 0;border:1px dashed rgba(255,255,255,.14);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#6f8299}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">에스더 10장 심층 연구</div>
+  <div class="brand-sub">백성의 이익을 도모하며</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <span class="soon" aria-disabled="true" title="에스더 1장 준비 중">1</span>
+    <a href="./ch02.html" aria-label="에스더 2장으로 이동">2</a>
+    <a href="./ch03.html" aria-label="에스더 3장으로 이동">3</a>
+    <a href="./ch04.html" aria-label="에스더 4장으로 이동">4</a>
+    <a href="./ch05.html" aria-label="에스더 5장으로 이동">5</a>
+    <a href="./ch06.html" aria-label="에스더 6장으로 이동">6</a>
+    <a href="./ch07.html" aria-label="에스더 7장으로 이동">7</a>
+    <a href="./ch08.html" aria-label="에스더 8장으로 이동">8</a>
+    <a href="./ch09.html" aria-label="에스더 9장으로 이동">9</a>
+    <a href="./ch10.html" aria-current="page" aria-label="에스더 10장 현재 페이지">10</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 조공을 바치게 하였더라 (10:1)</a>
+  <a class="lv1" href="#s2">2. 일기에 기록되지 아니하였느냐 (10:2)</a>
+  <a class="lv1" href="#s3">3. 왕의 다음이 되고 (10:3)</a>
+  <a class="lv1" href="#s4">4. 상호 참조 총람</a>
+  <a class="lv1" href="#s5">5. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">דֹּרֵשׁ טוֹב לְעַמּוֹ</div>
+    <h1>에스더 10장 · 백성의 이익을 도모하며</h1>
+    <p class="sub">세 절로 닫히는 책. 왕의 판도가 다시 펼쳐지고, 그 아래 한 사람의 이름이 남는다.</p>
+    <p class="meta">10:1 조공 · 10:2 왕들의 일기 · 10:3 모르드개의 자리 · 다섯 주석 종합 · 책 전체의 마무리</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Macchi IECOT 2018</span>
+    <span><span class="c t">G</span> Grossman 2011</span>
+    <span><span class="c b">L</span> Llewellyn-Jones 2023</span>
+    <span><span class="c h">C</span> Carruthers 2008</span>
+    <span><span class="c x">E</span> Bechtel 2002</span>
+    <span><span class="c k">B</span> Baldwin <span style="color:#a99">(OCR 보류)</span></span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 서고 정본 데이터(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). Fox·Daube·Cohen 등은 다섯 주석의 재인용으로만 표기한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">왕의 위대함과 모르드개의 위대함, 세 절에 겹쳐 놓인 두 초상.</div>
+    </div>
+    <p><span class="c t">G</span> 세 절뿐인 이 마지막 장이 이 책의 "이중 서술"을 결정적이고 날카롭게 마무리한다. 여기서도 독자는 인물들을 높이는 표면의 메시지를 경계하고, 그 말들 아래에서 표면과 어긋나는 감춰진 메시지에 귀를 기울여야 한다.</p>
+    <p><span class="c t">G</span> 이 장의 언어는 9장의 에스더 편지 발송 장면을 축소판처럼 되울린다. 이 병행은 유대 백성의 두 지도자 — "왕후 에스더"와 "아하수에로 왕의 다음이 된 유다인 모르드개" — 를 각각 자기 백성 쪽으로 향한 얼굴로 세운다. 에스더는 자기 권한으로 축제의 날들을 세웠고, 모르드개는 자기 지위로 백성을 위해 중재한다.</p>
+    <table>
+      <caption>표 1. 9:29–32와 10:1–3의 병행</caption>
+      <thead><tr><th>에스더의 편지(9:29–32)</th><th>왕과 모르드개의 위대함(10:1–3)</th></tr></thead>
+      <tbody>
+        <tr><td>"전권으로 글을 쓰고"(<span class="hw">תֹּקֶף</span>)</td><td>"왕의 능력 있는 모든 행적"(<span class="hw">תָּקְפּוֹ</span>)</td></tr>
+        <tr><td>"아비하일의 딸 왕후 에스더가 … 글을 쓰고"</td><td>"메대와 바사 왕들의 일기에 기록되지 아니하였느냐"</td></tr>
+        <tr><td>"화평하고 진실한 말로 편지를 써서"</td><td>"유다인 중에 크게 존경받고 … 그의 모든 종족을 안위하였더라"</td></tr>
+        <tr><td>"에스더의 명령이 이 부림에 대한 일을 견고하게 하였고"</td><td>"유다인 모르드개가 아하수에로 왕의 다음이 되고"</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">מַס עַל־הָאָרֶץ</div>
+      <div class="eyebrow">10:1</div>
+      <h2>1. 조공을 바치게 하였더라</h2>
+      <div class="gloss">마스 알-하아레츠 — 뜻밖의 한 줄</div>
+    </div>
+
+    <div class="vs" id="v1">
+      <span class="ref">10:1 — 본토와 바다 섬들</span>
+      <p>"아하수에로 왕이 그의 본토와 바다 섬들로 하여금 조공을 바치게 하였더라"(10:1). <span class="c t">G</span> 많은 학자가 독자에게 아무 흥미도 주지 않을 듯한 이 기이한 정보의 기능을 물어 왔다. 세 갈래의 읽기가 있다.</p>
+      <table>
+        <caption>표 2. 10:1을 읽는 세 갈래</caption>
+        <thead><tr><th>읽기</th><th>내용</th><th>난점</th></tr></thead>
+        <tbody>
+          <tr><td class="head">① 보전(補塡)</td><td>Daube: 모르드개가 이 조세를 발의해, 하만의 계획이 무산되며 왕이 잃은 것을 메웠다. 은 일만 달란트가 끝내 국고에 들어오지 않았기 때문이다(3:9, 재인용).</td><td><span class="c t">G</span> 본문은 왕이 이미 그 수입을 포기한 것으로 읽히며, 그 뒤의 격변을 겪은 왕이 갑자기 그 특정한 손실을 떠올렸으리라 보기 어렵다.</td></tr>
+          <tr><td class="head">② 요셉 병행</td><td>Fox: 이 조세는 요셉과의 또 하나의 연결을 만든다. 높아진 뒤 애굽에서 경제 개혁을 일으킨 히브리 청년처럼(창 47장), 여기서도 모르드개가 왕의 다음이 되고 왕이 백성에게 조세를 부과한다(재인용).</td><td>연결이 성립하되, 그 자체로 이 절의 서사적 기능을 다 설명하지는 않는다.</td></tr>
+          <tr><td class="head">③ 주권의 표지<br><span style="font-weight:400">(Grossman)</span></td><td><span class="c t">G</span> 서술자는 이 정보로 아하수에로의 통치를 정당한 것으로 제시한다. 조공의 부과는 한 지역에 대한 주권의 으뜸가는 표현이며(수 16:10; 17:13; 왕상 9:20), 이를 통해 독자는 왕이 "본토와 바다 섬들"을 다스렸음을 이해한다. 뒤따르는 절이 이 의도를 뒷받침한다.</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <p><span class="c t">G</span> "조공"에 해당하는 낱말(<span class="hw">מַס</span>)은 성경 다른 곳에서 강제 노역을 뜻한다. 다만 에스더가 늦게 쓰인 책이므로, 랍비 시대에 익숙한 뜻인 조세나 공납으로 읽는 편이 개연성이 높다. 강제 노역으로 읽더라도 흥미로운 결이 생긴다. 애굽에서의 이스라엘의 예속과 연결이 생기기 때문이다. 그렇게 읽으면 이 책은 출애굽기 첫머리의 대척점에서 닫힌다. 여기서는 모르드개가 자기 백성의 이익을 구하는 반면, 왕은 나머지 신민을 부린다.</p>
+      <p><span class="c t">G</span> 눈여겨볼 대비가 하나 더 있다. 에스더의 대관 뒤에 왕은 "각 지방의 세금을 면제하고"(2:18) 하사를 베풀었는데, 모르드개의 등용 뒤에는 정반대의 일이 일어난다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">סֵפֶר דִּבְרֵי הַיָּמִים</div>
+      <div class="eyebrow">10:2</div>
+      <h2>2. 일기에 기록되지 아니하였느냐</h2>
+      <div class="gloss">세페르 디브레 하야밈 — 열왕기의 어법으로 닫다</div>
+    </div>
+
+    <div class="vs" id="v2">
+      <span class="ref">10:2 — 왕의 능력 있는 모든 행적</span>
+      <p>"왕의 능력 있는 모든 행적과 모르드개를 높여 존귀하게 한 사적이 메대와 바사 왕들의 일기에 기록되지 아니하였느냐"(10:2). <span class="c t">G</span> 앞 절과 나란히 놓으면 조세는 그 "능력 있는 행적"의 한 사례로 제시되는 셈이다. 이야기는 아하수에로의 왕국을 마지막으로 한 번 조망하며 닫히고, 그 영웅적 왕의 위업이 서사의 요체인 것처럼 보이게 만든다. 이 이야기 또한 아하수에로의 위대함과 부의 제시로 열렸다. 책 전체의 동심원 구조 역시 시작과 끝을 마주 세워 왕에게 무게를 실으며, 그를 이야기의 주인공으로 지목하는 듯 보인다.</p>
+      <p><span class="c t">G</span> 왕을 주인공으로, 전능한 인물로 그리는 이 그림은 착시다. 실상 이 왕은 사건의 흐름을 실제로 좌우하는 영웅보다 반영웅의 통상적 정의에 가깝다. 그가 부과하는 조세로 그 왕국의 장대함을 예시하는 일이, 적지 않은 조롱과 야유를 담아 온 서사의 문학적 결말이 된다. 이야기는 왕이 대신들과 수산 주민에게 잔치를 베풀고(1장) 세금을 면제하는(2:18) 관대함의 서술로 열렸다. 이야기의 끝에서 독자는 그 관대함의 재원을 누가 대는지 정확히 알게 된다.</p>
+      <p><span class="c f">M</span> "왕들의 일기"라는 어구는 열왕기의 정형 결어 형식을 그대로 쓴다. 2:23과 6:1의 궁중 일기가 이 책 안에서 이야기를 움직였다면, 여기서는 그 형식이 책 전체를 왕조 기록의 한 페이지처럼 닫는다.</p>
+      <div class="note"><span class="tt">개관과의 연결</span>개관 Ⅳ부에서 다룬 인클루지오(A–A′)가 여기서 완성된다. <span class="c t">G</span> 서사는 왕국의 판도로 열려(1:1) 왕국의 판도로 닫히며, 표면의 구조는 독자에게 왕을 계속 주시하라고 크게 말한다. 표면 아래에서 속삭이는 문학적 진실은 정반대다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">מִשְׁנֶה לַמֶּלֶךְ</div>
+      <div class="eyebrow">10:3</div>
+      <h2>3. 왕의 다음이 되고</h2>
+      <div class="gloss">미쉬네 람멜렉 — 마지막 절의 네 겹 진술</div>
+    </div>
+
+    <div class="vs" id="v3">
+      <span class="ref">10:3 — 그의 백성의 이익을 도모하며</span>
+      <p>"유다인 모르드개가 아하수에로 왕의 다음이 되고 유다인 중에 크게 존경받고 그의 허다한 형제에게 사랑을 받고 그의 백성의 이익을 도모하며 그의 모든 종족을 안위하였더라"(10:3). <span class="c f">M</span> 마지막 절은 네 겹으로 그의 자리를 진술한다. 제국에서의 지위(왕의 다음), 자기 백성 안에서의 존경, 형제들의 사랑, 그리고 그 백성을 위한 활동이다. 마지막 두 요소가 이 책의 결론을 이룬다. 이 이야기가 닿는 곳은 개인의 출세가 아니라 한 사람이 자기 백성에게 무엇이 되는가이다.</p>
+      <p><span class="c f">M</span> "안위하였더라"(<span class="hw">דֹּבֵר שָׁלוֹם</span>, 직역하면 "화평을 말하며")는 9:30의 "화평하고 진실한 말로"와 같은 낱말을 쓴다. 두 편지의 언어가 마지막 절에 다시 놓여, 문서로 백성을 살린 사람의 초상을 닫는다.</p>
+      <p><span class="c f">M</span> "왕의 다음"이라는 표현은 제국이 존속하되 유다인이 자기 일에 관한 권한을 위임받은 상태를 그린다. 개관 Ⅲ부에서 다뤘듯, 역사적으로 견줄 만한 상황은 빨라야 요나단 마카비 이후에 나타난다. 이 결말이 프로토마소라 편집의 연대를 마카비–하스몬기로 놓는 근거 가운데 하나다.</p>
+      <p><strong>요셉 서사와의 마지막 겹침.</strong> <span class="c t">G</span> 에스더와 요셉 서사의 폭넓은 병행은 널리 인정되어 왔고, 그 뜻은 다르게 읽혀 왔다. 짚어 둘 것은 모르드개와 에스더가 <em>둘 다</em> 요셉에 견주어진다는 점이다. 반지와 예복으로 그려지는 모르드개의 영예(8:2·15)가 창세기 41:42를 되울리고, 에스더의 선발 절차(2:3–4)가 요셉이 바로에게 올린 제안(창 41:34–35·37)을 되울린다. 요셉에 견주어지는 인물이 번갈아 바뀌는 것은, 서사의 중심 주인공이 옮겨 가는 흐름과 대응한다.</p>
+      <p><span class="c t">G</span> 이 연결의 의미에 관해서도 갈래가 있다. 순전한 예술적 장치로 보는 읽기, 옛 성경 서사의 결을 입히려는 문체적 선택으로 보는 읽기, 그리고 Cohen처럼 이 이야기가 일회적 사건이 아니라 초역사적 성격의 서사이며 유대 역사가 섭리의 손 아래 되풀이됨을 부각하려는 것으로 보는 읽기다(재인용). 이 방향을 넓히면, 에스더의 서술자는 요셉 이야기에서 명시된 요소 — 무엇보다 하나님의 섭리 — 를 그것이 나타나지 않는 에스더의 장면들에 독자가 옮겨 놓기를 바란 셈이 된다. "하나님이 큰 구원으로 당신들의 생명을 보존하고 당신들의 후손을 세상에 두시려고 나를 당신들보다 먼저 보내셨나니"(창 45:7)라는 요셉의 판단이 이중 인과 — 드러난 사람의 행동과 감춰진 하나님의 행동 — 의 본보기를 이룬다.</p>
+      <p><span class="c t">G</span> 다만 Grossman은 이 연결이 비판도 함께 실어 나른다고 본다. 두 서사 모두 낯선 땅에서의 구원을 그린다. 그런데 요셉 이야기의 뒷부분을 아는 독자는 그 성공이 오래가지 못하고 결국 바로의 압제로 이어졌음을 안다. "요셉을 알지 못하는 새 왕이 일어나서 애굽을 다스리더니"(출 1:8). 에스더는 창세기와 비슷한 음으로 닫힌다. 이방의 체제 안에 자기 백성을 위해 중재하는 유대인 대표가 있다는 그림이다. 그 뒷이야기를 아는 독자에게 이 결말은 안심의 자리로만 남지 않는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>4. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 3. 10장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">10:1</td><td>수 16:10; 17:13; 왕상 9:20</td><td>조공의 부과가 주권의 표지</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">10:1</td><td>에 2:18</td><td>세금 면제와 조공 부과 — 두 등용의 대비</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">10:1</td><td>창 47장</td><td>요셉의 경제 개혁 — 조세를 매기는 이인자</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">10:1</td><td>출 1:8–11; 에 7:4</td><td>강제 노역과 "노비로 팔림"의 어법</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">10:2</td><td>에 2:23; 6:1</td><td>궁중 일기 · 역대 일기 — 세 번째 등장</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">10:2</td><td>왕상 11:41; 14:19 등</td><td>열왕기의 정형 결어 형식</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">10:2</td><td>에 1:1–4</td><td>왕국의 판도로 여닫는 인클루지오</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">10:3</td><td>에 9:30</td><td>"화평"(<span class="hw">שָׁלוֹם</span>) — 편지와 마지막 절</td><td><span class="c f">M</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">10:3</td><td>창 41:42–43; 45:7; 에 8:2·15</td><td>요셉 병행 — 반지·예복·이인자·구원의 해석</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">10:3</td><td>느 2:10</td><td>"백성의 이익을 도모하며"와 같은 결의 어법</td><td><span class="c f">M</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>5. 신학 종합</h2>
+      <div class="gloss">이 장의 종합이자 열 장 전체의 마무리.</div>
+    </div>
+
+    <h3>① 왕의 판도로 닫히는 책</h3>
+    <p><span class="c t">G</span> 이야기는 왕국의 판도로 열려 왕국의 판도로 닫힌다. 표면의 구조는 이 책이 아하수에로의 이야기라고 크게 말하며, 그 조세와 위업을 왕들의 일기로 봉인한다. 표면 아래에서 속삭이는 진실은 정반대다. 이 왕은 사건을 좌우한 적이 없고, 그 관대함의 재원을 누가 대는지가 마지막에 밝혀진다. 겉 서사와 숨은 독법이 어긋나는 이 책의 문법이 마지막 세 절에서 가장 압축된 형태로 작동한다.</p>
+
+    <h3>② 이인자의 자리</h3>
+    <p><span class="c f">M</span> 모르드개는 왕이 되지 않는다. 그는 "왕의 다음"이 되고, 제국은 그대로 존속한다. 이 결말이 그리는 것은 독립이 아니라 디아스포라의 조건 안에서 확보된 자리다. 그 자리에서 그가 하는 일이 마지막 두 어구에 담긴다. 백성의 이익을 도모하고 종족을 안위하는 일이다. 개관에서 다룬 대로 이 상태는 요나단 마카비 이후에야 역사적으로 견줄 만한 것이 되며, 편집의 연대를 가늠하는 단서가 된다.</p>
+
+    <h3>③ 문서로 시작해 문서로 닫히다</h3>
+    <p><span class="c f">M</span> 이 책의 첫 조서가 남편의 권위를 명했고(1:22), 둘째 조서가 한 민족의 말살을 명했으며(3:12–15), 셋째 조서가 자위를 허락했고(8:9–14), 두 편지가 축제를 세웠다(9:20–32). 마지막 절에서 "화평"이라는 낱말이 편지의 언어와 겹치며, 문서로 백성을 살린 사람의 초상을 닫는다. 기록된 말의 권능이라는 이 책의 축이 여기서 마지막 한 번 울린다.</p>
+
+    <h3>④ 이름 없이 일한 손</h3>
+    <p><span class="c t">G</span> 요셉 서사와의 병행이 이 책의 신학을 가장 분명하게 가리키는 자리일 수 있다. 요셉은 "하나님이 나를 먼저 보내셨나니"라고 말했고, 에스더는 그런 문장을 결코 쓰지 않는다. 그럼에도 서술자는 두 이야기를 촘촘히 잇대어, 요셉 이야기에서 명시된 것을 독자가 이 이야기의 침묵 위에 옮겨 놓기를 청하는 듯하다. 사람의 행동과 감춰진 손이 함께 일한다는 이중 인과의 문법이 그렇게 전달된다.</p>
+
+    <h3>⑤ 안심하지 못하게 하는 결말</h3>
+    <p><span class="c t">G</span> 요셉 병행에는 가시도 있다. 낯선 땅에서 얻은 그 구원이 오래가지 못했음을 독자는 안다. "요셉을 알지 못하는 새 왕이 일어나서"(출 1:8). 9장에서 여호수아의 정복 요약이 인유되면서 "다 응하였더라"라는 어구만 빠졌던 것과 같은 결이다. 승리했으되 그들은 여전히 유배지에, 하만을 낳은 체제 아래 남아 있다. 이 결말은 온전한 개선가로 읽히기를 거부하며, 다음 세대의 물음을 열어 둔 채 닫힌다.</p>
+
+    <h3>⑥ 기억하라는 명령</h3>
+    <p><span class="c x">E</span> 이 책의 마지막 무게는 기억에 놓인다. 그리스도인은 교회가 부림절을 지키지 않으므로 이 명령이 자신에게 해당하는지 물을 수 있다. 그 축제의 중심 행위가 에스더서의 낭독이라는 사실을 기억하면 좋겠다. 그 정도는 감당할 수 있고, 감당하는 것 이상이어야 한다. 이 책이 정경 안에 들어온 것이 "이 때를 위함"일 수 있기 때문이다(4:14). 점점 신실하지 않은 문화 한복판에서 신실하게 살아 내려는 씨름에 관한 책이고, 용기와 믿음과 건짐의 이야기이며, 언제나 분명하지는 않되 언제나 은혜로우신 하나님과 함께 일하는 남녀의 이야기다. <span class="c x">E</span> 다만 왕의 불면의 밤이 상기시키듯, 살아 있는 말도 읽히지 않으면 죽은 문자일 뿐이다.</p>
+
+    <div class="back"><a href="./ch09.html">← 9장 심층연구</a> · <a href="./overview.html">종합 연구(개관) →</a> · <a href="./index.html">에스더 서재</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 에스더 10장 심층 연구 — 개관 + 장별 심층연구 구조의 마지막 문서.<br>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Daube·Cohen·Ehrlich 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# 이전 로마서 v2를 적용했다면 아래 파일을 삭제합니다.
+
+nt/romans/study/ch01.html
+nt/romans/study/ch02.html
+nt/romans/study/ch03.html
+nt/romans/study/ch04.html
+nt/romans/study/ch05.html
+nt/romans/study/ch06.html
+nt/romans/study/ch07.html
+nt/romans/study/ch08.html
+nt/romans/study/ch09.html
+nt/romans/study/ch10.html
+nt/romans/study/ch11.html
+nt/romans/study/ch12.html
+nt/romans/study/ch13.html
+nt/romans/study/ch14.html
+nt/romans/study/ch15.html
+nt/romans/study/ch16.html
+data/krv_rom.json
+data/links/rom.json

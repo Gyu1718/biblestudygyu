@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에스더 4장 심층 연구 — 누가 알겠느냐</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump span.soon{display:block;text-align:center;padding:.34rem 0;border:1px dashed rgba(255,255,255,.14);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#6f8299}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">에스더 4장 심층 연구</div>
+  <div class="brand-sub">누가 알겠느냐</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <span class="soon" aria-disabled="true" title="에스더 1장 준비 중">1</span>
+    <a href="./ch02.html" aria-label="에스더 2장으로 이동">2</a>
+    <a href="./ch03.html" aria-label="에스더 3장으로 이동">3</a>
+    <a href="./ch04.html" aria-current="page" aria-label="에스더 4장 현재 페이지">4</a>
+    <a href="./ch05.html" aria-label="에스더 5장으로 이동">5</a>
+    <a href="./ch06.html" aria-label="에스더 6장으로 이동">6</a>
+    <a href="./ch07.html" aria-label="에스더 7장으로 이동">7</a>
+    <a href="./ch08.html" aria-label="에스더 8장으로 이동">8</a>
+    <a href="./ch09.html" aria-label="에스더 9장으로 이동">9</a>
+    <a href="./ch10.html" aria-label="에스더 10장으로 이동">10</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 대성 통곡하며 (4:1–3)</a>
+  <a class="lv1" href="#s2">2. 하닥이 오가며 (4:4–9)</a>
+  <a class="lv1" href="#s3">3. 금 규와 삼십 일 (4:9–12)</a>
+  <a class="lv1" href="#s4">4. 다른 데로 말미암아 (4:13–14)</a>
+  <a class="lv1" href="#s5">5. 죽으면 죽으리이다 (4:15–17)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">וּמִי יוֹדֵעַ</div>
+    <h1>에스더 4장 · 누가 알겠느냐</h1>
+    <p class="sub">굵은 베 옷을 입은 사람은 대궐 문에 들어가지 못한다. 문 안과 문 밖 사이를 한 내시가 오가는 동안, 한 사람의 정체가 바뀐다.</p>
+    <p class="meta">4:1–3 애도 · 4:4–9 하닥의 왕래 · 4:10–12 규례와 삼십 일 · 4:13–14 모르드개의 답 · 4:15–17 금식과 결단 · 다섯 주석 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Macchi IECOT 2018</span>
+    <span><span class="c t">G</span> Grossman 2011</span>
+    <span><span class="c b">L</span> Llewellyn-Jones 2023</span>
+    <span><span class="c h">C</span> Carruthers 2008</span>
+    <span><span class="c x">E</span> Bechtel 2002</span>
+    <span><span class="c k">B</span> Baldwin <span style="color:#a99">(OCR 보류)</span></span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 서고 정본 데이터(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). Fox·Berlin·Levenson·Bush·Wiebe·Day 등은 다섯 주석의 재인용으로만 표기한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">중개자가 하나씩 사라지며 가까워지는 대화.</div>
+    </div>
+    <p><span class="c f">M</span> 4:1–3은 조서 반포에 대한 반응을 담는다. 모르드개 자신의 반응이 그를 궁에서 끊어 놓고(1–2절), 이어 제국 전역 유다인의 반응이 온다(3절). 4–16절은 에스더와 모르드개의 원거리 대화이며 네 부분으로 나뉜다. 두 사람의 관계가 궁정 관리를 통한 형식적 매개에서 아주 가깝고 사적인 주고받음으로 옮겨 가는 과정이 그 안에 담긴다.</p>
+    <p><span class="c t">G</span> Grossman은 이 대화가 세 단계로 진행된다고 본다. 첫 단계에서 둘은 아예 말을 나누지 않는다. 에스더가 옷을 보내고 모르드개가 설명 없이 거절할 뿐이다. 둘째 단계에서는 하닥이 오가며 대화가 성립하되, 양쪽 모두 "명령"의 어법을 쓴다. 셋째 단계에서 하닥의 이름이 사라지고, 서술자는 중개자를 아예 언급하지 않는다.</p>
+    <table>
+      <caption>표 1. 4장의 진행과 매개의 소멸</caption>
+      <thead><tr><th>단계</th><th>본문</th><th>내용</th><th>매개</th></tr></thead>
+      <tbody>
+        <tr><td class="head">반응</td><td>4:1–3</td><td>모르드개의 애도, 각 지방 유다인의 애통</td><td>—</td></tr>
+        <tr><td class="head">① 옷</td><td>4:4</td><td>의복을 보냄 · 받지 아니함</td><td>시녀와 내시</td></tr>
+        <tr><td class="head">② 정보</td><td>4:5–9</td><td>사정·액수·조서 초본과 지시</td><td>하닥(이름 명시)</td></tr>
+        <tr><td class="head">③ 이의</td><td>4:10–12</td><td>규례와 삼십 일</td><td>하닥에서 무명의 전달로</td></tr>
+        <tr><td class="head">④ 대면</td><td>4:13–16</td><td>"누가 알겠느냐" · 금식과 결단</td><td>매개 없음</td></tr>
+        <tr><td class="head">이행</td><td>4:17</td><td>"에스더가 명령한 대로 다 행하니라"</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c f">M</span> 이 장에서 에스더는 주변의 조언을 지혜롭게 따르며 실상을 모르던 인물(2:10·15·20; 4:4)이기를 그친다. 그는 자기 백성과 하나가 되고 자기 운명을 떠맡으며, 장의 끝에서 공동체에 금식을 명한다. 이후 그는 누구의 조언도 없이 홀로 전략을 세운다(5:1–8; 7:1–10).</p>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">זְעָקָה גְדוֹלָה וּמָרָה</div>
+      <div class="eyebrow">4:1–3</div>
+      <h2>1. 대성 통곡하며</h2>
+      <div class="gloss">제아카 게돌라 우마라 — 크고 쓴 부르짖음</div>
+    </div>
+
+    <div class="vs" id="v1">
+      <span class="ref">4:1 — 옷을 찢고</span>
+      <p>"모르드개가 이 모든 일을 알고 자기의 옷을 찢고 굵은 베 옷을 입고 재를 뒤집어쓰고 성중에 나가서 대성 통곡하며"(4:1). <span class="c x">E</span> 3장 끝의 혼란은 두루뭉술했다. 4장 첫머리에서 초점이 아프도록 좁아진다. 카메라가 한 사람에게 다가간다. 그는 애도의 몸짓으로 옷을 찢고 굵은 베와 재를 걸친 채 성중을 다니며 크고 쓰게 부르짖는다. 그 걸음은 대궐 문에서 멈춘다.</p>
+      <p><span class="c f">M</span> "이 모든 일을 알고"라는 표현은 그가 조서를 읽는 데 그치지 않았음을 시사한다. 소식에 밝은 궁정 관리로서(2:11·21–23) 그는 재정적 이면까지 안다(4:7). 애도의 세 요소 — 굵은 베와 재, 성중에서의 공개적 부르짖음, 그리고 4:3에 나오는 금식 — 는 성경에서 개인의 상(창 37:34; 삼하 3:31)과 집단의 재난(사 15:3; 렘 6:26; 겔 27:30–31)에 두루 쓰인다. 임박한 위기 앞에서 이런 의례가 하나님을 향한 호소가 되기도 한다(왕하 19:1–2; 욘 3:5–8). 본문에는 모호함이 남는다. 이 몸짓이 불안의 표현인지 도움의 요청인지 독자가 판단해야 하며, 어느 쪽이든 미래에 관한 깊은 불확실이 그 안에 있다.</p>
+      <p><span class="c b">L</span> Llewellyn-Jones는 이를 "청원의 애도"(petitionary mourning)로 읽는다. 아직 오지 않은 재난을 두고 벌이는 공개적 슬픔의 연행이며(욘 3:5 병행), 목적은 이목을 끌어 자신과 자기 백성의 처지를 알리는 데 있다. 근동 전역에서 큰 곡성은 고통과 불안을 알리는 의례적·상징적 장치였고, 애도에는 옷을 찢고 머리에 티끌을 얹고 땅에 가까이 웅크리는 동작이 따랐다. 옷을 찢는 일이 부분적 노출로 이어질 수 있었다는 점은 욥의 탄식("내가 모태에서 알몸으로 나왔사온즉", 욥 1:21)을 이해하게 한다. 굵은 베는 염소털이나 식물섬유로 성기게 짠 거친 옷감으로, 입은 이가 사회의 규범에서 등을 돌렸음을 알렸고, 재는 무(無)의 상징이었다.</p>
+      <p><strong>에서 인유.</strong> <span class="c t">G</span> "크고 쓴 부르짖음"(<span class="hw">זְעָקָה גְדוֹלָה וּמָרָה</span>)이라는 결합은 성경에서 한 곳에 더 있다. 에서가 축복을 빼앗긴 것을 알고 "소리 질러 심히 통곡하고"(창 27:34) 하는 대목이다. 두 서사 모두에서 옷이 정체를 결정하는 장치가 된다. 에서는 야곱이 그의 옷을 입고 그를 대신함으로써 축복을 잃었고, 모르드개는 옷을 찢음으로써 페르시아 사회에서의 지위와 체제 안의 자리를 내려놓고 자기 백성의 처지와 하나가 된다. 에서가 정체를 도둑맞고 울었다면, 모르드개는 하나의 민족적 정체를 벗고 본래의 유대적 정체로 돌아가며 운다.</p>
+    </div>
+
+    <div class="vs" id="v2">
+      <span class="ref">4:2 — 문 앞까지</span>
+      <p>"대궐 문 앞까지 이르렀으니 굵은 베 옷을 입은 자는 대궐 문에 들어가지 못함이라"(4:2). <span class="c f">M</span> 궁정의 관례가 이제 모르드개가 자기 일을 보던 대궐 문에 들어서는 것을 막는다(2:19). 이 규정은 애도의 복장이 금지된 사치스러운 궁정 생활과 일반 백성의 형편 사이의 간극을 드러낸다(3:15a; 4:3). 후궁 뜰을 거닐며 에스더에게 지시를 전하던 통로(2:11·20)가 닫힌 셈이다.</p>
+      <p><span class="c b">L</span> 왕궁은 예법이 엄격히 지켜지는 자리였고, 세상이 뒤집혔음을 알리는 애도의 무질서가 그 안에 들어설 여지는 없었다. 근동 전역에서 궁 안의 단정함이 요구되었고, 히타이트의 한 문서는 왕의 요리사와 식사 담당에게까지 씻고 머리와 손톱을 다듬고 깨끗한 옷을 입으라고 규정한다. 페르시아가 애도복을 금한 데에는 군주를 슬픔의 오염에서 떼어 놓으려는 의도도 있었을 것이다. 아닥사스다 1세의 총애를 받던 술 맡은 관원 느헤미야가 왕 앞에서 수심에 찬 얼굴을 보이며 두려워한 대목이 그 결을 보여 준다. "내가 왕 앞에서 수심이 없었더니"(느 2:1의 정황).</p>
+    </div>
+
+    <div class="vs" id="v3">
+      <span class="ref">4:3 — 각 지방의 애통</span>
+      <p>"왕의 명령과 조서가 각 지방에 이르매 유다인이 크게 애통하여 금식하며 울며 부르짖고 굵은 베 옷을 입고 재에 누운 자가 무수하더라"(4:3). <span class="c x">E</span> 3절이 다시 시야를 넓혀, 모르드개의 슬픔이 제국 전역 유다인을 사로잡은 큰 경련의 한 표본임을 보여 준다. 이것이 중요하다. 2:5–6의 유배 서술 이후로 모르드개의 운명과 그 백성의 운명이 이토록 뗄 수 없이 얽힌 적이 없었다. 이제 그 동일시가 정해진다. 이야기의 목적으로 보면 그것은 저 운명의 조서만큼이나 철회할 수 없다.</p>
+      <p><strong>예언서 인유.</strong> <span class="c t">G</span> "금식하며 울며 부르짖고"(<span class="hw">צוֹם וּבְכִי וּמִסְפֵּד</span>)라는 표현은 요엘의 예언에서 온다. "너희는 이제라도 금식하며 울며 애통하고 마음을 다하여 내게로 돌아오라 … 너희는 옷을 찢지 말고 마음을 찢고"(욜 2:12–13). "재에 누운 자"라는 표현은 이사야의 금식 비판을 되울린다. "이것이 어찌 금식이라 하겠으며 … 굵은 베를 펴고 재를 까는 것을 금식이라 하겠느냐"(사 58:5, Moore 재인용). 두 예언 모두 회개의 내면과 그 외적 표현 사이의 간극을 다룬다. 서술자는 에스더가 모르드개의 새 옷차림에 경악하는 장면 바로 앞에 이 두 인유를 놓는다.</p>
+      <div class="note"><span class="tt">되짚기</span><span class="c t">G</span> 요엘 2:14의 "주께서 혹시 마음과 뜻을 돌이키시고"는 "누가 알겠느냐"(<span class="hw">מִי יוֹדֵעַ</span>)라는 어구를 품고 있어, 4:14의 모르드개 말과 짝을 이룬다. 임박한 재난 앞에서 확실한 약속 대신 열린 물음을 두는 어법이 두 본문에 공통으로 흐른다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">הֲתָךְ</div>
+      <div class="eyebrow">4:4–9</div>
+      <h2>2. 하닥이 오가며</h2>
+      <div class="gloss">하타크 — 문 안과 문 밖을 잇는 사람</div>
+    </div>
+
+    <div class="vs" id="v4">
+      <span class="ref">4:4 — 의복을 보내어</span>
+      <p>"에스더의 시녀와 내시가 나아와 전하니 왕후가 매우 근심하여 입을 의복을 모르드개에게 보내어 그 굵은 베 옷을 벗기고자 하나 모르드개가 받지 아니하는지라"(4:4). <span class="c x">E</span> 이 절이 드러내는 것이 많다. 첫째, 궁 안과 궁 밖의 대비를 보여 준다. 3장 끝에서 왕과 하만이 술자리에 앉은 동안 온 수산이 공황에 빠졌다는 서술이 그 예고였다면, 여기서는 궁이 얼마나 고립되어 있는지가 드러난다. 정보는 통제되어 있고, 조서의 내용이 최신 파발로 제국 방방곡곡에 퍼지는 동안 궁 안에는 소식이 닿지 않는다.</p>
+      <p><span class="c x">E</span> 둘째, 에스더가 느끼는 위험 감각이 자란다. 그의 시녀와 내시가 모르드개와의 관계를 알고 있었기에 그 소식을 전했을 것이다. 그렇다면 그의 근심은 그 관계와 자신의 유대인 됨을 비밀로 지켜야 한다는 데에 놓인다. 모르드개는 처음에 정체를 감추라 했고(2:10), 이제 자신에게 시선을 모으는 일에 열심이다. 이 엇갈린 신호가 그의 혼란에 몫을 더한다.</p>
+      <p><span class="c t">G</span> Grossman은 여기서 서술자의 은근한 비판을 읽는다. 하만의 서신은 널리 퍼졌고 각 지방에서 유다인이 애통하는데(4:3), 사건의 한복판에 가장 가까이 있는 에스더는 시녀와 내시가 전하기까지 아무것도 모른다. 반응 또한 어긋나 보인다. 그는 조서를 모르는 채 모르드개의 옷차림에 경악하고 옷을 보낸다. 옷을 찢는 일이 회개와 관계 회복의 한 요소라는 상징의 문맥에서 그 요청은 자리를 잃는다. Levenson의 정리대로, 4–11절의 효과는 유다인 모르드개와 페르시아인 에스더 사이의 거리를 부각하는 데 있다(재인용).</p>
+      <p><strong>호칭의 변화.</strong> <span class="c t">G</span> 서술자는 이 대목에서 그를 "왕후"라고만 부른다. 이 책에서 그는 대개 "에스더" 또는 "왕후 에스더"로 불리며, 단순히 "왕후"로 불리는 경우는 두 곳뿐이다. 모르드개의 애도에 반응하는 이 장면과, 하만이 두려워하고 왕이 격노하는 둘째 잔치 장면(7:6·8)이다. 뒤의 두 곳에서 이 호칭은 하만과 왕의 시점을 담아 그의 왕실 지위만을 가리킨다. 이 장면에서도 같은 어법이 쓰였다는 것은 에스더의 정체가 유대인 됨을 밀어내고 왕후 역할에 동화되어 있음을 시사한다.</p>
+      <p><span class="c f">M</span> 프로토에스더에서는 옷을 보내는 일이 모르드개를 안으로 들이려는 시도로 명시되는데, 마소라 본문은 더 모호하다. 대화를 원한 것인가, 자신과의 관계가 알려진 사람의 곤란한 처지를 서둘러 정리하려 한 것인가. 모르드개의 거절은 옷 문제 뒤에 더 근본적인 사안이 있음을 드러낸다. 자신이 유다인임을 밝힌 뒤(3:4) 그는 그 정체를 좋은 옷 뒤에 감추기를 그친 셈이다.</p>
+    </div>
+
+    <div class="vs" id="v58">
+      <span class="ref">4:5–8 — 무슨 일이며 무엇 때문인가</span>
+      <p>"에스더가 왕의 어명으로 자기에게 가까이 있는 내시 하닥을 불러 명령하여 모르드개에게 가서 이것이 무슨 일이며 무엇 때문인가 알아보라 하매"(4:5). <span class="c f">M</span> 프로토마소라 편집자들은 상황의 무게를 강조한다. "왕의 어명으로 자기에게 가까이 있는" 내시라는 서술은, 왕후가 궁 밖의 누구와 접촉하려면 왕실 관리라는 제도적 여과를 거쳐야 한다는 점을 부각한다. 이름의 어원은 불확실하며, 고대 페르시아어 *ẖantaka("달리는 자")와 잇는 견해가 있다. <span class="c b">L</span> 이 어원이 옳다면 그의 직임과 잘 맞는다. 모르드개와 에스더 사이를 오가며 전갈을 나르는 일은 궁정 환관의 표준 업무였던 듯하다. <span class="c t">G</span> 히브리어 <span class="hw">הֲתָךְ</span>가 "가운데"(<span class="hw">תָּוֶךְ</span>)를 연상시킨다는 말놀이도 그의 역할과 겹친다.</p>
+      <p><span class="c x">E</span> 모르드개는 하닥에게 "자기가 당한 모든 일"(4:7a)을 말한다. 처음에는 자기중심적으로 들리는 표현인데, 순서상 첫머리에 놓였다는 점에서 그가 하만에게 절하기를 거부한 일부터 이야기를 시작했음을 시사한다. 흥미로운 것은 그가 이 일을 자신에게 "일어난"·"닥친" 것으로 서술한다는 점이다. 그의 생각에서 자신에게는 선택의 여지가 거의 없었고 따라서 책임도 크지 않은 셈이다.</p>
+      <p><span class="c x">E</span> 이어 그는 "하만이 유다인을 멸하려고 왕의 금고에 바치기로 한 은의 정확한 액수"(4:7b)를 전한다. 모르드개가 이것을 어떻게 아는가. 하만과 왕의 대화는 궁 안에서 오갔다(3:7–11). 정보는 궁 안으로 들어오기보다 궁 밖으로 새어 나가는 편이 나은 모양이다. 이 어구는 하만이 유다인 말살에 얼마를 걸었는지를 모르드개가 안다는 사실과 함께, 그가 정보망을 갖췄다는 사실도 알려 준다. 대궐 문에 귀를 대고 있으면 많은 것을 배우게 된다.</p>
+      <p><span class="c x">E</span> 끝으로 그는 "수산 궁에서 내린 조서 초본"(4:8a)을 실물로 건넨다. 앞서 본 동음이의의 문제에 비추면 이 문서 사본이 결정적이다. 내용을 말로만 전했다면 에스더는 "종삼음"만이 문제라고 여길 여지가 있었다. 문서로는 하만의 의도가 살인적으로 분명해진다.</p>
+      <p><span class="c f">M</span> "보여 알게 하고 또 그에게 부탁하여"라는 세 동사는 하닥이 전달할 세 층위를 가리킨다. 조서를 <em>보이고</em>, 7절의 구두 정보로 <em>알리고</em>, 8절 끝의 내용을 <em>명한다</em>. 조서가 "읽히는" 것이 아니라 "보여지는" 것(6:1의 역대 일기는 읽힌다)은, 이 대목이 편집되던 헬레니즘 시대에 상류층 여성이 글을 읽는 일이 놀랍지 않았음을 시사한다. 그리고 이것이 모르드개가 에스더에게 내리는 마지막 "명령"이다(2:10·20 이후). 이후로는 에스더가 그에게 지시하며(4:17), 순종하는 딸에서 자율적 주인공으로 넘어가는 표지가 된다.</p>
+      <p><span class="c x">E</span> 모르드개의 의도도 분명하다. 그는 에스더에게 익명성을 향한 모든 시도를 접고 "자기 민족을 위하여" 간구하라고 요구한다. 앞서 정체를 감추라던 자신의 지시를 사실상 뒤집는 셈이다. 그의 생각에서 에스더의 운명은 이제 자신의 운명만큼이나 유다인들과 얽혀 있다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">שַׁרְבִיט הַזָּהָב</div>
+      <div class="eyebrow">4:9–12</div>
+      <h2>3. 금 규와 삼십 일</h2>
+      <div class="gloss">샤르비트 하자하브 — 알현의 법과 그 예외</div>
+    </div>
+
+    <div class="vs" id="v1011">
+      <span class="ref">4:10–11 — 오직 죽이는 법이요</span>
+      <p>"왕의 신하들과 왕의 각 지방 백성이 다 알거니와 남녀를 막론하고 부름을 받지 아니하고 안뜰에 들어가서 왕에게 나가면 오직 죽이는 법이요 왕이 그 자에게 금 규를 내밀어야 살 것이라 이제 내가 부름을 입어 왕에게 나가지 못한 지가 이미 삼십 일이라 하라 하니라"(4:11). <span class="c x">E</span> 주석가들이 이 대목의 에스더에게 늘 관대하지는 않았다. 그의 망설임은 때로 비겁이나 이기심으로 읽혔다. 조심하는 것을 탓하기는 어렵다. 앞선 왕후 와스디의 운명이 그의 마음에 크게 자리했을 것이다(Levenson 재인용). 그의 말은 또한 그가 얼마나 또렷하게 생각하는지, 페르시아 궁정의 관례를 얼마나 익혔는지를 보여 준다. 무엇보다 이 말은 우리가 마지막으로 본 이후 그의 인물됨이 자란 방식을 드러낸다. 그는 스스로 생각하고 행동하기를 배웠고, 지시의 지혜를 먼저 헤아린다. 모르드개와 와스디가 인물로서 공유하는 것이 성급하고 완강한 행동이라면, 에스더의 신중한 접근이 그를 두 사람과 구별한다.</p>
+      <p><span class="c f">M</span> 놀랍게도 에스더는 유다인을 위해 나서면 자신에게도 말살 조서가 적용될 위험을 말하지 않고, 부름 없이 왕에게 나아가지 못한다는 규정을 든다. 그리스 문헌에 비추면 이는 낯설지 않다. 페르시아 왕은 접근하기 매우 어려운 존재로 그려지며, 헤로도토스는 다리오를 옹립한 공모자들만이 무제한 알현권을 지녔다고 전한다(3.84; 3.118). 왕과 백성 사이의 이 거리는 더 평등한 관행을 지닌 그리스 세계에서 부정적으로 비쳤고, 이 책은 그 주제로 페르시아 정치 조직의 기괴함을 놀린다.</p>
+      <p><strong>안뜰이라는 단서.</strong> <span class="c f">M</span> 프로토마소라 편집은 "안뜰에 들어가서"라는 단서를 붙인다. 그렇다면 접근이 문제되는 이는 에스더처럼 궁 안에 살며 안뜰로 나아가는 사람뿐이고, 궁 밖에 살며 바깥뜰로 오는 하만 같은 이에게는(6:4) 부름이 필요 없다. 이 단서가 4:11의 규정과 제국 의전을 함께 조롱한다. 게다가 "왕의 신하들과 왕의 각 지방 백성이 다 알거니와"라는 진술이 그 인상을 키운다. 궁 안 거주자에게만 적용되는 규정을 전 제국에 알리는 나라인 셈이다.</p>
+      <p><span class="c b">L</span> 이 이야기는 궁정 의전의 짜임이 경직되어 있고 정해진 절차를 밟지 않은 즉흥적 알현이 위험하다는 이해 위에서 움직인다. 아케메네스 알현 의례의 세부는 문헌보다 도상이 알려 준다. 페르세폴리스의 대형 부조에서 왕은 예복과 관을 갖추고 왕홀을 든 채 "정지된 순간"으로 그려지며, 왕세자와 고위 궁정인·군인이 배석하고 두 개의 향로와 단(壇), 아후라마즈다 상이 새겨진 천개가 왕의 공간을 구획한다. 신아시리아의 한 문서는 알현의 안무를 단계별로 적어 두어, 궁정 총관과 전령관과 대재상이 차례로 들어와 땅에 입 맞추고 보고하는 순서를 보여 준다.</p>
+      <p><span class="c f">M</span> "금 규를 내밀어야"라는 표현은 이 책의 후기 히브리어를 보여 주는 증거이기도 하다. "내밀다"에 <span class="hw">ישׁט</span>의 히필을 쓰고 "규"에 <span class="hw">שַׁרְבִיט</span>를 쓰는 것은 미쉬나 히브리어의 결이다(<span class="hw">שׁלח</span>·<span class="hw">נטה</span>와 <span class="hw">שֵׁבֶט</span>가 고전적 형태다).</p>
+      <p><strong>삼십 일의 무게.</strong> <span class="c f">M</span> 부름을 받지 못한 지 삼십 일이라는 말은 그의 처지를 어둡게 비춘다. 왕후이면서도 그는 이름을 불러야 나아갈 수 있는 후궁들과 같은 규칙 아래 있다(2:14). 마소라 본문의 연대기가 이 상황을 더 아프게 만든다. 왕후가 마지막으로 왕 앞에 선 것은 그를 구하려 음모를 고발한 때였고(2:22), 그 일은 아무런 은총도 얻어 내지 못했다. 4장의 사건이 니산월 십삼일에 일어나므로, 삼십 일 전의 마지막 부름은 아달월 십삼일 — 학살까지 꼭 한 해가 남은 그 날짜 — 가 된다. <span class="c t">G</span> 왕이 계속 다른 처녀들을 부르고 있었다는 2:19의 서술을 함께 놓으면, 이 삼십 일이 왕의 절제에서 온 것이 아님도 드러난다.</p>
+      <p><span class="c t">G</span> 에스더의 거절에는 모르드개를 향한 가시가 있을 수 있다. "왕의 신하들과 왕의 각 지방 백성이 다 알거니와"라는 서두가 그렇다. 이제껏 "왕의 신하들" 가운데 하나였던 모르드개라면, 부름 없이 왕에게 나아가라 권하는 일의 위험을 알았어야 한다는 뜻이 된다. 그리고 이것이 이 책에서 에스더가 처음 입을 여는 대목이다.</p>
+      <p><span class="c x">E</span> 이 궁정 규정의 경직성을 두고 의문이 제기되어 왔다. 헤로도토스는 부름 없는 알현의 금지를 전하면서도 알현을 청하는 전갈은 보낼 수 있었다고 적는다(1.99; 3.118, Levenson 재인용). 에스더는 조서 시행까지 한 해가 남았으니 그런 청을 넣을 수 없었겠느냐는 물음이다. 이런 물음은 이야기의 틀 밖으로 나간다. 이 책이 역사 소설, 더 좁게는 벌레스크라면 장르가 허용하는 자유가 있다. 더 온당한 물음은 이것이다. 이 규칙이 이야기에 무엇을 하는가. 그것은 5장과 8장의 전개를 안무하고, 무엇보다 모든 시선을 한 극적인 순간에 모은다. 왕이 금 규를 내밀 것인가에 이야기 전체가 걸린다.</p>
+      <p><span class="c f">M</span> 마소라 본문의 관점에서 답은 다른 데 있다. 자기 백성을 변호하려면 그는 자신이 유다인임을 힘주어 밝혀야 하고, 그러면 말살 조서가 자신에게도 적용될 위험을 지게 된다. 모세와 예레미야와 기드온이 그랬듯, 에스더도 부차적인 이유를 들어 자기 사명을 처음에는 사양한다(출 4:10; 렘 1:6; 삿 6:15).</p>
+    </div>
+
+    <div class="vs" id="v12">
+      <span class="ref">4:12 — 하닥의 소멸</span>
+      <p>"그가 에스더의 말을 모르드개에게 전하매"(4:12). <span class="c f">M</span> 4:10에서 에스더는 하닥에게 답을 전하라 명했는데, 정작 전달되는 12절에서 그토록 자주 불리던 이 내시가 사라지고 비인칭 구문이 들어선다. 이 구문이 5–9절의 간접 대화와 13–16절의 직접 대화 사이의 전환을 표시한다.</p>
+      <p><span class="c t">G</span> 하닥의 소멸은 설명을 요구한다. 랍비들은 이를 불편하게 여겨, 하만이 그가 궁을 드나드는 것을 보고 죽였기에 다시 언급되지 않는다고 풀었다(미드라쉬 아바 구리온 4). 서술자가 그를 "치운" 것은 사실이다. 그를 필수적 중개자로 세웠다가 서서히 지움으로써, 서술자는 그 지워짐 자체에 독자의 시선을 모은다.</p>
+      <p><span class="c t">G</span> 하닥은 "왕이 세워 준" 내시로 소개된다(4:5). 그는 수산 왕실의 규범을 대표한다. 대화의 첫 부분에서 모르드개와 에스더는 그를 매개로 수산-페르시아의 화법으로 말한다. 민족적 정체는 등장하지 않고, 에스더의 정치적 영향력과 그 영향력을 쓰는 데 따르는 두려움만이 오간다. 셋째 부분에서 대화는 다른 층위로 옮겨 간다. 모르드개가 하나님의 섭리를 에둘러 언급하고, 에스더가 금식을 선포하며 페르시아의 법을 어길 뜻을 밝힌다. 유대인 사이의 대화가 된 이 자리에서 왕의 내시는 더 이상 중개자일 수 없다. 은유로 말하자면, 그들의 언어가 페르시아어로 번역될 수 없게 된 것이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">מִמָּקוֹם אַחֵר</div>
+      <div class="eyebrow">4:13–14</div>
+      <h2>4. 다른 데로 말미암아</h2>
+      <div class="gloss">밈마콤 아헤르 — 이 책에서 가장 논쟁적인 두 절</div>
+    </div>
+
+    <div class="vs" id="v13">
+      <span class="ref">4:13 — 홀로 목숨을 건지리라 생각하지 말라</span>
+      <p>"모르드개가 그를 시켜 에스더에게 회답하되 너는 왕궁에 있으니 모든 유다인 중에 홀로 목숨을 건지리라 생각하지 말라"(4:13). <span class="c x">E</span> 모르드개는 에스더의 망설임을 비겁이나 이기심으로 읽은 듯하다. 그의 첫마디는 지금 죽든 나중에 죽든 목숨이 위태롭기는 마찬가지라는 날카로운 상기이며, 개인적 관점에서 그의 유일한 기회는 왕에게 나아가는 모험이라는 것이다.</p>
+      <p><span class="c x">E</span> 논리는 흠이 없되 전제가 어긋났을 수 있다. 에스더는 모르드개 자신의 명령으로 정체를 감춰 왔다. 그가 그 명령을 거두고 있다 해도(4:8), 그것이 자신과 유다인에게 최선의 길이라 확신할 근거는 없다. 정체를 밝히지 않는다면 침묵으로 벗어날 수도 있고, 모두를 위해 덜 무모한 다른 길이 있을 수도 있다. 에스더의 자리에서 보면 "왕궁에 있으니 홀로 목숨을 건지리라 생각하지 말라"는 말은 은근한 위협처럼 들렸을 수 있다. 그가 정체를 밝히지 않으면 모르드개가 밝히겠다는 뜻으로 말이다. 두 인물이 서로를 스쳐 지나가며 말하는 국면이 여기 있다.</p>
+      <p><span class="c f">M</span> 모르드개가 이 전망을 물리치는 이유는 본문에 명시되지 않는다. 유대 백성의 운명과 연대하지 않는 일이 도덕적으로 용납될 수 없다는 것인가. 에스더가 정말 살아남을 수 있는가. 그의 정체가 결국 알려지지 않겠는가. 섭리나 유다인들이 그에게 보복하지 않겠는가.</p>
+    </div>
+
+    <div class="vs" id="v14">
+      <span class="ref">4:14 — 세 갈래의 읽기</span>
+      <p>"이 때에 네가 만일 잠잠하여 말이 없으면 유다인은 다른 데로 말미암아 놓임과 구원을 얻으려니와 너와 네 아버지 집은 멸망하리라 네가 왕후의 자리를 얻은 것이 이 때를 위함이 아닌지 누가 알겠느냐 하니"(4:14). <span class="c f">M</span> Macchi는 이 절의 히브리어가 세 가지로 읽힐 수 있음을 짚고, 각 읽기가 편집자들이 이해한 모르드개의 논리를 어떻게 바꾸는지 검토한다.</p>
+      <table>
+        <caption>표 2. 4:14a의 세 가지 읽기</caption>
+        <thead><tr><th>읽기</th><th>번역</th><th>근거와 난점</th></tr></thead>
+        <tbody>
+          <tr><td class="head">① 확언<br><span style="font-weight:400">(다수설)</span></td><td>"구원이 다른 데로 말미암아 일어날 것이요, 너와 네 아버지 집은 멸망하리라"</td><td>LXX·AT·요세푸스·두 타르굼과 대다수 번역·주석이 취한다. 섭리를 에둘러 가리키는 읽기다. 난점: 구원이 다른 데서 온다면 에스더와 그 아버지 집(모르드개 자신을 포함한다)이 왜 멸망해야 하는지 설명하기 어렵다.</td></tr>
+          <tr><td class="head">② 기원과 저주</td><td>"구원이 다른 데로 말미암아 일어나기를! 그리고 너와 네 아버지 집은 멸망하기를!"</td><td>두 동사를 소망을 담은 접속법으로 읽는다. 에스더가 백성과의 연대를 저버리면 배신자로 간주된다는 이 책의 논리와 맞물린다.</td></tr>
+          <tr><td class="head">③ 수사의문<br><span style="font-weight:400">(이 주석의 선택)</span></td><td>"구원이 다른 데로 말미암아 일어나겠느냐? 너와 네 아버지 집은 멸망하리라"</td><td>Wiebe가 처음 제안하고 Bush·Harvey·Macchi가 따른다(재인용). 후기 히브리어에서 의문사 없는 의문문이 가능하다는 점에 근거한다. 에스더의 개입 없이는 다른 구원의 행위가 없으리라는 전제가 서고, 유다인인 그가 자기 백성의 운명에 삼켜지리라는 진술이 앞 절과 논리적으로 이어진다.</td></tr>
+        </tbody>
+      </table>
+      <p><span class="c f">M</span> ①을 물리치는 근거는 몇 가지 더 있다. 모르드개의 말이 유다인의 운명에 관해 긍정적이라면, 어찌하여 그는 "이 때를 위함이 아닌지 <em>누가 알겠느냐</em>"고 단언 대신 물음으로 말하는가. 4:16의 "죽으면 죽으리이다"라는 체념 섞인 수용도 확신과 어울리지 않는다. 무엇보다 신적 개입을 확실하고 예측 가능한 것으로 제시하지 않고 사건 뒤에서 알아보아야 할 것으로 두는 이 책 전체의 사유와 맞지 않는다.</p>
+      <p><span class="c x">E</span> Bechtel은 다른 결로 읽는다. "다른 데로 말미암아"가 정확히 무엇을 뜻하는지는 분명하지 않되, 이 책 전체에서 하나님의 임재와 개입 능력을 가장 가깝게 가리키는 표현이다. 부정적 방향으로 섭리를 말한 뒤 그는 긍정적 방향으로 돌린다. "누가 알겠느냐." 모르드개의 여러 논변 가운데 이것이 가장 강력하면서 가장 사적이다. 여기서 우리는 후궁 뜰 앞을 서성이던 근심하는 보호자를 다시 본다(2:11). 이 말은 에스더에게 일어난 모든 일을 요약하고 뜻을 부여하려는 시도이며, 그의 모든 아픔과 모든 가능성을 한숨에 함께 인정한다.</p>
+      <p><span class="c t">G</span> Grossman은 이 답에 에스더의 앞선 변명을 향한 감춰진 비판이 있다고 본다. 에스더는 "왕의 신하들과 왕의 각 지방 백성이 다 <em>알거니와</em>"로 회피했고, 모르드개는 "누가 <em>알겠느냐</em>"로 그 앎을 흔든다. 왕의 법보다 섭리에 마음을 쓰는 편이 낫다는 암시다. 그는 "<span class="hw">מָקוֹם</span>(마콤)이 하나님을 가리킨다"는 읽기에는 신중하다. 이 명칭이 하나님의 대칭으로 흔해진 것은 랍비 시대이며, 평이하게는 구원이 어떤 식으로든 다른 이를 통해 오리라는 뜻이다(Fox 재인용). 그럼에도 구원이 오리라는 모르드개의 확신 자체가 자기 백성을 향한 하나님의 섭리를 믿고 있음을 가리킨다.</p>
+      <p><span class="c f">M</span> "누가 알겠느냐"(<span class="hw">מִי יוֹדֵעַ</span>)라는 의문은 가설을 세우고 결과가 불확실한 행동으로 초청하는 어법이다(삼하 12:22; 욜 2:14; 욘 3:9; 시 90:11). 이어지는 서사는 에스더가 왕후가 된 것이 참으로 "이런 때"(<span class="hw">עֵת</span>)를 위함이었음을 시사한다. 모르드개는 므무간(1:13 이하)이나 하만(3:7–13)보다 지혜롭고 영리하게 "때"를 읽는 셈이다.</p>
+      <div class="note"><span class="tt">수용사</span><span class="c h">C</span> "다른 데로 말미암아"는 독자마다 다른 주어를 얻었다. 신가톨릭 주석은 그것이 "물론 하나님"이라고 전제했고, White는 명시적 언급이 없음에도 신적 행위가 전제된다고 보았다. 19세기 영국의 노리스 목사는 그 주어를 그리스도의 교회로 삼아 청중에게 행동을 촉구했고, 보웬 목사는 1863년 왕세자 혼인 예식 설교에서 이 절을 국가의 복에 하나님의 손이 있다는 표지로 읽었다. Fox는 하나님이 감춰져 있을 때에도 그 구원을 믿거나 적어도 확언하도록 이 절이 돕는다고 적으면서, 역사 속에서 그 감춰짐이 얼마나 자주 설명되지 않은 채였는지를 덧붙였다(재인용).</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">וְכַאֲשֶׁר אָבַדְתִּי אָבָדְתִּי</div>
+      <div class="eyebrow">4:15–17</div>
+      <h2>5. 죽으면 죽으리이다</h2>
+      <div class="gloss">베카아셰르 아바드티 아바드티 — 금식과 결단</div>
+    </div>
+
+    <div class="vs" id="v16">
+      <span class="ref">4:16 — 나를 위하여 금식하되</span>
+      <p>"당신은 가서 수산에 있는 유다인을 다 모으고 나를 위하여 금식하되 밤낮 삼 일을 먹지도 말고 마시지도 마소서 나도 나의 시녀와 더불어 이렇게 금식한 후에 규례를 어기고 왕에게 나아가리니 죽으면 죽으리이다 하니라"(4:16). <span class="c x">E</span> 그의 답이 드러내는 것이 여럿이다. 첫째, 겸손과 경건이 배어 있다. 그는 이 일을 혼자 해내리라 여기지 않는다. 3:7에서 왕에게 청하기도 전에 학살 날짜부터 정한 하만과 대비된다. 금식을 언급함으로써 그는 다른 이들에게, 그리고 에두른 방식이지만 하나님께 기대고 있음을 인정한다. 둘째, 보기 드문 용기를 보여 준다. "죽으면 죽으리이다"라는 짧은 말이 그 문제를 정리한다. 셋째, 그는 유대 백성과 온전히 자신을 동일시한다. 넷째, 참된 왕후의 결단과 자기 통제를 보여 준다. 16절은 작전 계획처럼 읽히고, 그 계획의 지휘관은 분명히 그다.</p>
+      <p><span class="c t">G</span> 페르시아 궁정의 화법에서 벗어난 자리가 여기다. 이 책 내내 이어지는 먹고 마시고 즐기는 결에 정면으로 맞서 그는 금식을 선포한다. 4장 첫머리부터 금식하던 유다인들과 자신을 잇는 행위이며, 먹는 일과 마시는 일을 함께 끊으라는 요구에서 후자는 수산의 생활 방식과 특히 어긋난다. 그리고 그는 페르시아의 법을 어길 뜻을 공공연히 말한다. 대화의 처음에 그는 부름 없이 왕 앞에 나가는 사형죄를 두려워했고, 끝에 이르러 자기 백성을 위해 목숨을 내놓을 준비를 말한다. "죽으면 죽으리이다"의 동사(<span class="hw">אבד</span>)는 하만이 유다인의 멸망을 청할 때 쓴 바로 그 동사다(3:9). 그는 그 백성이 당할 멸망을 막으려 자신의 멸망을 감수한다.</p>
+      <p><span class="c f">M</span> 마소라 편집자들은 프로토에스더에 있던 제의 행위와 기도 자리에 금식을 놓았다. 제국의 호의와 영광을 누리는 자들의 무수한 잔치(1:2–9; 2:18; 3:15; 8:17; 9:17–18)와 대비되는 이 금식은, 에스더가 자기 백성과 함께하는 의례를 조직하고 그 의례로 그들과 이어지는 장면이 된다.</p>
+      <p><strong>유월절의 전복.</strong> <span class="c f">M</span> 마소라 본문의 날짜 배치가 이 금식을 무겁게 만든다. 조서는 니산월 십삼일에 반포되고(3:12–13) 4장의 사건은 그 직후에 끊김 없이 이어지므로, 삼 일의 금식은 니산월 십삼일에서 십오일까지, 곧 유월절 기간에 걸친다. 유대인 독자에게 이 연대 표기는 곧바로 유월절을 가리킨다. 아하수에로 제십이년의 유월절을 금식의 기간으로 만듦으로써 편집자는 유대교의 존재 자체가 물음에 부쳐졌음을 알린다. 구원의 기념이 애도와 금식의 의례로 바뀐다.</p>
+      <p><span class="c h">C</span> 이 뒤집힘은 수용사에서도 다뤄졌다. 에스더 랍바는 유월절에 금식하는 문제를 두고 실용적인 답을 냈다. "이스라엘이 없다면 유월절이 무슨 소용인가"(VIII). 그리스어 본문은 이 장면 뒤에 모르드개와 에스더의 기도를 삽입해, 채소만 먹는 정결과 이방인과의 혼인에 대한 혐오, 왕관을 향한 경멸을 에스더의 입에 놓는다. 가톨릭 성무일도는 이 두 기도를 전례에 받아들였고, 오랫동안 모르드개의 기도가 에스더의 것으로 돌려졌는데, 이는 에스더를 그리스도의 예표로 뚜렷이 세우려는 배치였다.</p>
+      <div class="note"><span class="tt">"죽으면 죽으리이다"의 수용</span><span class="c h">C</span> 이 한마디는 자기희생의 표본이 되어 오래 인용되었다. 탈무드는 반복 어법에서 이중의 상실을 읽었다. "내가 내 아버지 집에서 잃어진 것같이 당신에게서도 잃어지리이다"(메길라 15a). 17세기 영국의 새뮤얼 켐은 이 절을 본문 삼아 하원에 설교하며 "결단을 입고, 준비로서 간절한 기도를 쓰고, 그렇게 왕에게 들어가라"고 촉구했다. 18세기 알렉산더 웹스터는 에스더가 성별을 이유로도 제도적 제약을 이유로도 핑계를 대지 않았다는 점을 들어 "모든 본받음에 합당한 고귀한 본"이라 불렀다. 티모시 드와이트의 서사시에서 에스더는 사사기의 야엘을 떠올리며 "여인의 힘으로 나를 온전히 무장시키소서"라고 기도한다.</div>
+    </div>
+
+    <div class="vs" id="v17">
+      <span class="ref">4:17 — 역할의 역전</span>
+      <p>"모르드개가 가서 에스더가 명령한 대로 다 행하니라"(4:17). <span class="c x">E</span> 모르드개가 이 역할의 뒤바뀜을 가장 먼저 알아본 듯하다. 17절의 간결한 결론이 그것을 증언한다. <span class="c f">M</span> "명령하다"(<span class="hw">צוה</span>)라는 동사가 4:8까지는 모르드개가 에스더에게 쓰던 것이었는데(2:10·20), 여기서 방향이 뒤집힌다. 순종하는 딸에서 자율적 주인공으로 넘어가는 지점이다.</p>
+      <p><span class="c t">G</span> Grossman이 개관에서 제시한 논지가 여기서 힘을 얻는다. 이 책의 동심원 구조는 6장(왕의 불면)을 축으로 보이게 만들지만, 서사의 참된 전환은 4장에서 이미 일어났다. 겉 구조와 숨은 전환점이 어긋나는 이 배치 자체가 이 책의 서술 전략이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 3. 4장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">4:1</td><td>창 27:34</td><td>"크고 쓴 부르짖음" — 에서의 통곡</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">4:1</td><td>창 37:34; 삼하 3:31; 사 15:3; 렘 6:26; 겔 27:30–31</td><td>굵은 베와 재 — 개인의 상과 집단의 재난</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:1</td><td>왕하 19:1–2; 욘 3:5–8</td><td>위기 앞의 애도가 호소가 되는 자리</td><td><span class="c f">M</span> <span class="c b">L</span></td></tr>
+        <tr><td class="head">4:1</td><td>욥 1:21</td><td>옷을 찢음과 벗음의 상징</td><td><span class="c b">L</span></td></tr>
+        <tr><td class="head">4:1–2</td><td>에 6:8–11; 8:15–16</td><td>옷의 교체가 표시하는 지위의 하강과 회복</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:3</td><td>욜 2:12–14</td><td>"금식하며 울며" · "누가 알겠느냐"</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">4:3</td><td>사 58:5</td><td>"재에 누운 자" — 형식과 마음의 간극</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">4:4</td><td>에 7:6·8</td><td>"왕후"라는 단독 호칭의 세 자리</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">4:5–9</td><td>에 6:9·11</td><td>성 중 광장 — 굴욕의 자리가 곧 영예의 자리</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:8</td><td>에 2:10·20; 4:17</td><td>"명령하다"(<span class="hw">צוה</span>)의 방향 전환</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:11</td><td>에 2:14; 5:2; 8:4</td><td>이름을 불러야 나아감 · 금 규의 예외</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:11</td><td>에 6:4</td><td>안뜰과 바깥뜰 — 규정의 비대칭</td><td><span class="c f">M</span> <span class="c b">L</span></td></tr>
+        <tr><td class="head">4:11</td><td>출 4:10; 렘 1:6; 삿 6:15</td><td>부차적 이유를 들어 사명을 사양함</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:14</td><td>삼하 12:22; 욜 2:14; 욘 3:9; 시 90:11</td><td>"누가 알겠느냐" — 불확실한 행동으로의 초청</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:16</td><td>에 3:9; 7:4</td><td><span class="hw">אבד</span> — 하만의 멸함과 에스더의 각오</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">4:16</td><td>에 1:2–9; 2:18; 3:15; 9:17–18</td><td>금식 — 잔치들의 대극</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">4:16</td><td>출 12장(니산 13–15일)</td><td>유월절 기간의 금식 — 기념의 전복</td><td><span class="c f">M</span> <span class="c h">C</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 옷이 정체를 말한다</h3>
+    <p><span class="c t">G</span> 4장은 옷으로 시작해 옷으로 갈린다. 모르드개는 옷을 찢음으로써 페르시아 사회의 자리를 내려놓고 자기 백성의 처지로 돌아가고, 에스더는 옷을 보냄으로써 그 변화를 되돌리려 한다. 요엘의 "옷을 찢지 말고 마음을 찢으라"는 부름이 이 장면 바로 앞에 놓인 것은 우연으로 보기 어렵다. 서술자는 형식과 마음의 간극이라는 예언서의 물음을 이 두 사람 사이에 놓는다. <span class="c f">M</span> 이 책 전체에서 옷의 교체는 사회적 지위의 이동을 표시하며(4:1–2의 하강, 6:8–11과 8:15–16의 회복), 모르드개가 "나가서" 부르짖은 그 광장이 뒤에 그의 영예가 선포되는 자리가 된다.</p>
+
+    <h3>② 문 안과 문 밖</h3>
+    <p><span class="c x">E</span> "굵은 베 옷을 입은 자는 대궐 문에 들어가지 못함이라"는 규정 하나가 이 장의 지형을 만든다. 조서는 제국 끝까지 파발로 퍼지는데 궁 안에는 닿지 않고, 왕후는 시녀가 전하기까지 아무것도 모른다. <span class="c b">L</span> 궁정 의전은 군주를 슬픔의 오염에서 떼어 놓는다. 권력의 중심이 자기가 서명한 재난의 소식으로부터 가장 잘 차단되어 있다는 이 배치가, 이 책의 정치적 관찰 가운데 가장 서늘한 대목이다.</p>
+
+    <h3>③ 중개자가 사라지는 대화</h3>
+    <p><span class="c t">G</span> 이 책에서 가장 가깝고 내밀한 대화가 중개자를 통해 이뤄진다는 사실 자체가 감춤의 기법이다. 그리고 그 중개자가 점차 지워진다. 옷만 오가던 단계, 하닥이 이름과 함께 오가던 단계, 이름이 사라진 단계, 그리고 두 사람이 마주 서서 말하는 단계다. 왕이 세워 준 내시가 더 이상 중개할 수 없게 되는 지점은 대화가 유대인 사이의 대화가 되는 지점과 정확히 겹친다. <span class="c f">M</span> 궁정의 형식이 물러나고 마음과 마음의 말이 들어선다.</p>
+
+    <h3>④ 확신 없이 내딛는 걸음</h3>
+    <p>4:14는 이 책에서 하나님께 가장 가까이 다가간 문장이면서, 확신을 주기를 가장 완강하게 거부하는 문장이기도 하다. <span class="c f">M</span> Macchi가 수사의문으로 읽는 근거의 핵심이 여기 있다. 모르드개는 단언하지 않고 묻는다. "이 때를 위함이 아닌지 누가 알겠느냐." <span class="c x">E</span> 그럼에도 이 물음은 에스더에게 일어난 모든 일을 한숨에 끌어안아, 그의 아픔과 그의 가능성을 함께 인정한다. 확실한 약속 없이 행동으로 초청하는 이 어법이 이 책의 신학적 문법이다.</p>
+
+    <h3>⑤ 금식이라는 반(反)잔치</h3>
+    <p><span class="c f">M</span> 잔치가 열 번 열리는 책에서 삼 일의 금식이 정확히 중간에 놓인다. 유다인 인물들이 바닥에 닿는 순간의 표지이며, 제국의 호의를 누리는 자들의 식탁과 정면으로 어긋난다. 그 사흘이 유월절에 걸친다는 사실이 무게를 더한다. 구원의 기념이 애도의 의례로 바뀌는 자리에서, 이 백성의 존재 자체가 물음에 부쳐졌음이 드러난다. <span class="c h">C</span> "이스라엘이 없다면 유월절이 무슨 소용인가"라는 미드라쉬의 답이 그 무게를 감당한다.</p>
+
+    <h3>⑥ 명령의 방향이 바뀌는 자리</h3>
+    <p><span class="c f">M</span> 2:10과 2:20에서 에스더는 모르드개가 "명령한 대로" 했다. 4:17에서 모르드개가 에스더가 "명령한 대로" 한다. 같은 동사의 방향이 뒤집히는 이 한 줄이 인물의 성장을 가장 간결하게 표시한다. <span class="c x">E</span> 16절은 작전 계획처럼 읽히고 그 지휘관은 분명히 그다. <span class="c t">G</span> 구조가 6장을 절정처럼 보이게 만들어도, 이야기의 무게 중심은 여기서 이미 옮겨졌다.</p>
+
+    <div class="back"><a href="./ch03.html">← 3장 심층연구</a> · <a href="./overview.html">종합 연구(개관) →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 에스더 4장 심층 연구 — 개관 + 장별 심층연구 구조.<br>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Berlin·Levenson·Bush·Wiebe·Harvey·Day·Moore 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

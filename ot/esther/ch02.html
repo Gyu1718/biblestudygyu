@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에스더 2장 심층 연구 — 하닷사 곧 에스더</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump span.soon{display:block;text-align:center;padding:.34rem 0;border:1px dashed rgba(255,255,255,.14);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#6f8299}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">에스더 2장 심층 연구</div>
+  <div class="brand-sub">하닷사 곧 에스더</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <span class="soon" aria-disabled="true" title="에스더 1장 준비 중">1</span>
+    <a href="./ch02.html" aria-current="page" aria-label="에스더 2장 현재 페이지">2</a>
+    <a href="./ch03.html" aria-label="에스더 3장으로 이동">3</a>
+    <a href="./ch04.html" aria-label="에스더 4장으로 이동">4</a>
+    <a href="./ch05.html" aria-label="에스더 5장으로 이동">5</a>
+    <a href="./ch06.html" aria-label="에스더 6장으로 이동">6</a>
+    <a href="./ch07.html" aria-label="에스더 7장으로 이동">7</a>
+    <a href="./ch08.html" aria-label="에스더 8장으로 이동">8</a>
+    <a href="./ch09.html" aria-label="에스더 9장으로 이동">9</a>
+    <a href="./ch10.html" aria-label="에스더 10장으로 이동">10</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 노가 그치매 (2:1–4)</a>
+  <a class="lv1" href="#s2">2. 두 유다인 (2:5–7)</a>
+  <a class="lv1" href="#s3">3. 이끌려 가서 (2:8–11)</a>
+  <a class="lv1" href="#s4">4. 여자에 대하여 정한 규례 (2:12–14)</a>
+  <a class="lv1" href="#s5">5. 에스더의 차례 (2:15–18)</a>
+  <a class="lv1" href="#s6">6. 대궐 문에 앉았더라 (2:19–23)</a>
+  <a class="lv1" href="#s7">7. 상호 참조 총람</a>
+  <a class="lv1" href="#s8">8. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">הֲדַסָּה הִיא אֶסְתֵּר</div>
+    <h1>에스더 2장 · 하닷사 곧 에스더</h1>
+    <p class="sub">술이 깬 왕이 와스디를 생각한다. 제국의 처녀를 다 모으는 절차 끝에, 포로의 딸이 관을 쓴다.</p>
+    <p class="meta">2:1–4 새 왕후 물색 · 2:5–7 두 유다인 · 2:8–18 후궁과 등극 · 2:19–23 궁정 음모 · 다섯 주석 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Macchi IECOT 2018</span>
+    <span><span class="c t">G</span> Grossman 2011</span>
+    <span><span class="c b">L</span> Llewellyn-Jones 2023</span>
+    <span><span class="c h">C</span> Carruthers 2008</span>
+    <span><span class="c x">E</span> Bechtel 2002</span>
+    <span><span class="c k">B</span> Baldwin <span style="color:#a99">(OCR 보류)</span></span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 서고 정본 데이터(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). Fox·Berlin·Levenson·Bush·Clines·Paton·White 등은 다섯 주석의 재인용으로만 표기한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">두 겹의 평행으로 짜인 등극 서사, 그리고 짧은 후기.</div>
+    </div>
+    <p><span class="c f">M</span> 왕이 진정된 뒤(2:1) 새 왕후를 뽑는 결정이 내려진다. 이 책에서 늘 그렇듯 결정은 조언자의 제안에서 나오고(2–4a), 왕이 승인하며(4b), 조서 반포로 실행된다(8a). 유다인 주인공의 소개(5–7)는 왕의 결정(4절)과 그 적용(8절 이하) 사이에 삽입된 괄호다. 처녀들이 모인 일을 짧게 전한 뒤(8a) 서사는 에스더의 후궁 생활, 그가 얻은 호의, 모르드개와의 유대에 초점을 맞춘다(8–11). 이어 선발 조건이 설명되고(12–14), 에스더의 차례와 승리(15–17), 즉위 잔치(18)로 닫힌다.</p>
+    <p><span class="c t">G</span> Grossman은 2:1–20이 두 절반의 병행으로 짜였다고 본다. 각 절반은 수산의 처녀들 일반에서 시작해(2:2–4 // 2:12–14) 에스더와 모르드개의 관계로 옮겨 가고(2:5–7 // 2:15), 에스더가 "이끌려" 가며(2:8 // 2:16), 그가 호의를 얻고(2:9 // 2:17–18), 정체를 감춘 채 모르드개의 명령을 따른다는 진술로 마무리된다(2:10–11 // 2:19–20). 앞 절반의 예고가 뒤 절반에서 실행되는 짜임이다.</p>
+    <table>
+      <caption>표 1. 2장의 두 절반과 후기</caption>
+      <thead><tr><th>단계</th><th>전반 2:1–11</th><th>후반 2:12–20</th></tr></thead>
+      <tbody>
+        <tr><td class="head">처녀 일반</td><td>2:2–4 제안 — 관리를 명령하여 다 모으라</td><td>2:12–14 실행 — 열두 달의 규례와 그 이후</td></tr>
+        <tr><td class="head">두 사람 소개</td><td>2:5–7 모르드개와 하닷사</td><td>2:15 "모르드개가 자기의 딸 같이 양육하는 에스더"</td></tr>
+        <tr><td class="head">이끌려 감</td><td>2:8 "에스더도 왕궁으로 이끌려 가서"</td><td>2:16 "에스더가 왕궁에 인도되어 들어가서"</td></tr>
+        <tr><td class="head">호의</td><td>2:9 헤개가 좋게 보고 은혜를 베풀어</td><td>2:17–18 왕이 더 사랑하므로 · 즉위 잔치</td></tr>
+        <tr><td class="head">감춤과 순종</td><td>2:10–11 말하지 아니하니 · 날마다 왕래하며</td><td>2:19–20 대궐 문에 앉았더라 · 말하지 아니하니</td></tr>
+        <tr><td class="head">후기</td><td colspan="2">2:21–23 빅단과 데레스의 음모, 궁중 일기의 기록</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">אַחַר הַדְּבָרִים</div>
+      <div class="eyebrow">2:1–4</div>
+      <h2>1. 노가 그치매</h2>
+      <div class="gloss">아하르 하드바림 — 술 깬 아침의 결정</div>
+    </div>
+
+    <div class="vs" id="v1">
+      <span class="ref">2:1 — 생각하거늘</span>
+      <p>"그 후에 아하수에로 왕의 노가 그치매 와스디와 그가 행한 일과 그에 대하여 내린 조서를 생각하거늘"(2:1). <span class="c x">E</span> 1장의 법률가와 서기관, 잔치와 손님이 모두 사라지고 왕의 분노도 가라앉은 자리에 "그 이튿날 아침"의 정황이 남는다. 잠깐 동안 우리는 왕이 아닌 한 사람을 본다. 외롭고 가라앉은 채, 뒷맛이 나쁜 결정을 곱씹는 사람이다.</p>
+      <p><span class="c x">E</span> "그가 행한 일"이라는 표현은 모호한 채로 남아 있다. 가장 뚜렷한 지시 대상은 그의 거역이지만, 그것이 명시되지 않아 다른 결의 회상이 들어설 여지가 생긴다. <span class="c x">E</span> 왕이 그 결말을 수동으로 기억한다는 점도 눈에 띈다. "그에 대하여 내린 조서"라는 표현이 그를 직접 책임에서 밀어내며, 남에게 휘둘리는 성향을 다시 드러낸다. <span class="c f">M</span> 이 수동 표현은 왕이 홀로 결정하지 않는다는 것과, 한번 조서로 내려진 결정이 법적 구속력을 갖는다는 것을 함께 보여 준다.</p>
+      <p><strong>어휘.</strong> <span class="c f">M</span> "그치매"의 어근 <span class="hw">שׁכך</span>(샤카크, 가라앉다)는 성경에 다섯 번 나오는데 그중 둘이 에스더의 마소라 본문에 있다(2:1; 7:10). 와스디의 징벌과 하만의 징벌을 잇는 표지이며, 두 경우 모두 왕은 진정되되 문제는 풀리지 않은 채 남는다.</p>
+      <p><span class="c b">L</span> 헤로도토스는 페르시아인들이 취한 상태에서 중대 결정을 논의하고 이튿날 맑은 정신으로 재검토했다고 전한다(1.133). 그리스인들이 페르시아의 음주를 두고 만든 상투적 서술이지만, 에스더와 공명하는 결이 있다. 남성들만의 술자리에서 서둘러 내린 결정은 파장을 남긴다. 다만 이 책에서는 재검토가 없다. 와스디의 폐위를 밀어붙인 므무간은 어디에도 보이지 않고, 제국의 심의 체계는 작동을 멈춘 채 왕만 홀로 남는다.</p>
+    </div>
+
+    <div class="vs" id="v24">
+      <span class="ref">2:2–4 — 측근 신하들의 기획</span>
+      <p>"왕의 측근 신하들이 아뢰되 왕은 왕을 위하여 아리따운 처녀들을 구하게 하시되"(2:2). <span class="c f">M</span> 제안은 1:13 이하의 법률 고문과 대신들에게서 오지 않고, 왕의 사생활을 관리하는 이들 — <span class="hw">נַעֲרֵי־הַמֶּלֶךְ מְשָׁרְתָיו</span>(왕의 소년들, 시종들) — 에게서 온다. 조언자의 교체는 페르시아 궁정 조직의 복잡성과 각자가 차지한 자리의 경직성을 함께 드러낸다.</p>
+      <p><span class="c x">E</span> 제안은 겸손과 거리가 멀되 이 궁정에서 익숙해진 과잉의 결에 부합한다. 신하들은 "왕이 좋게 여기시거든"이라는 상투적 서두조차 붙이지 않으며(1:19; 3:9; 5:4·8; 7:3; 8:5와 대조), 제우스의 머리에서 완전한 모습으로 나온 아테나처럼 이미 완성된 계획을 꺼내 놓는다. 왕이 세부를 고민할 일은 남지 않는다.</p>
+      <p><span class="c b">L</span> 이 "소년들"은 1장의 연회 참석자나 관료가 아니라 젊은 시종이거나 어린 환관으로, 히브리어 <span class="hw">נַעַר</span>·<span class="hw">מְשָׁרֵת</span>는 왕궁의 사적 공간, 특히 침전에 딸린 인력을 가리킨다(여성형은 2:9; 4:4·16의 왕후 시녀에 쓰인다). 이들처럼 하찮아 보이는 일을 맡은 자들이 왕의 몸에 가장 가까이 접근했고, 그 접근권 자체가 비공식적 권력이 되었다. 이 책 전체에서 "안뜰"과 "바깥뜰"의 구분이 거듭 중요해지는 배경이다(4:11; 5:1; 6:4).</p>
+      <p><strong>창세기 41장 인유.</strong> <span class="c f">M</span> 제국의 처녀를 다 모으라는 제안의 어법은 요셉이 바로에게 기근 대비를 위해 곡식을 거두라고 조언한 대목을 되울린다. "관리를 명령하여"(2:3)는 창 41:34의 <span class="hw">וְיַפְקֵד פְּקִדִים</span>와 같고, 두 경우 모두 관리들이 "좋은" 것을 "다 모으며"(창 41:35 // 에 2:3), 왕의 승인 형식도 같다(창 41:37 // 에 2:4). <span class="c t">G</span> Grossman은 이 병행이 만드는 인상을 짚는다. 왕은 처녀들을 곡식처럼 다룬다. 곳곳에서 모아 헤개의 손에 "맡기는" 일은 물건을 거두어 저장하는 그림을 부른다.</p>
+      <p><strong>열왕기상 1장 인유.</strong> <span class="c f">M</span> 왕상 1:2("왕의 신하들이 그에게 아뢰되 우리 주 왕을 위하여 젊은 처녀 하나를 구하여")의 어법이 2:2–4에 그대로 살아 있고, "아리따운 처녀"(왕상 1:3)라는 표현도 겹친다. <span class="c t">G</span> 다만 두 장면의 결정적 차이가 있다. 다윗의 신하들은 나라 안을 다니며 합당한 처녀를 찾아 데려오는데, 아하수에로의 관리들은 아름다운 처녀를 다 모아 후궁에 두고 왕이 하룻밤씩 겪은 뒤 고른다. 선택받지 못한 여인들은 가족에게 돌아가지도, 다른 이와 혼인하지도 못한 채 둘째 후궁에서 산다(2:14).</p>
+      <div class="note"><span class="tt">왕의 결정권</span><span class="c x">E</span> 4절은 직역하면 "왕의 눈에 좋게 보이는 처녀가 와스디 대신 왕후가 되게 하소서"이며, 그 제안이 다시 "왕의 눈에 좋게" 보인다. 1장 끝의 어법과 상황이 그대로 되풀이되어, 아하수에로가 누군가의 제안 없이 결정을 내린 적이 있는지 묻게 만든다. 이 물음은 이야기가 풀리는 내내 되돌아온다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">אִישׁ יְהוּדִי</div>
+      <div class="eyebrow">2:5–7</div>
+      <h2>2. 두 유다인</h2>
+      <div class="gloss">이쉬 예후디 — 사울의 그림자와 도금양</div>
+    </div>
+
+    <div class="vs" id="v5">
+      <span class="ref">2:5 — 모르드개의 계보</span>
+      <p>"도성 수산에 한 유다인이 있으니 이름은 모르드개라 그는 베냐민 자손이니 기스의 증손이요 시므이의 손자요 야일의 아들이라"(2:5). <span class="c f">M</span> "유다인"(<span class="hw">יְהוּדִי</span>)은 유다 지파 소속이 아니라 유다 땅 출신, 곧 그가 추방되어 나온 나라를 가리킨다. 그는 이제 유대 디아스포라의 일원이다. 모르드개가 "도성 수산"의 성채에 자리한다는 서술은 그가 궁정 관리임을 시사하며, 자유로운 이동(2:11)과 음모 청취(2:21–23)를 설명한다.</p>
+      <p><strong>사울 계보.</strong> <span class="c x">E</span> 저자는 이 족보에 공을 들여 베냐민 가지를 몇 대나 거슬러 오른다. 히브리어 구문은 모르드개 자신이 끌려간 것으로 읽힐 수도 있는데, 그럴 경우 그의 나이는 백십사 세에서 백이십 세에 이른다. 증조부 기스가 끌려간 것으로 읽는 편이 역사적으로 자연스럽다. 어느 쪽이든 저자는 모르드개와 사울 집안의 연결을 세우려 한다. 사울은 기스의 아들인 베냐민 사람이었다(삼상 9:1–2). <span class="c f">M</span> "시므이"는 다윗을 대적한 사울 씨족의 베냐민 사람이고(삼하 16:5–13), "기스"는 사울의 아버지 이름이다. 편집자들은 연대를 계산할 줄 알았으므로 이들을 실제 조부·증조부로 두려 한 것이 아니라, 사울이라는 인물을 불러내려 한 것이다.</p>
+      <div class="caveat"><span class="tt">본문비평</span><span class="c f">M</span> 사울 인유는 그리스어 역본에 없다. LXX에서 하만은 아각 사람이 아니며, 모르드개 조상들의 이름 철자도 마소라 본문의 두 사울계 인물과 대응하지 않는다(<span class="hw">שִׁמְעִי</span>가 Σεμεϊου, <span class="hw">קִישׁ</span>가 Κισαιου). 마소라 전승 과정에서 필사자가 모르드개와 사울의 유사성을 강조하며 철자를 바꾸었을 가능성이 크다.</div>
+    </div>
+
+    <div class="vs" id="v6">
+      <span class="ref">2:6 — 사로잡힘</span>
+      <p>"전에 바벨론 왕 느부갓네살이 예루살렘에서 유다 왕 여고냐와 백성을 사로잡아 갈 때에 모르드개도 함께 사로잡혔더라"(2:6). <span class="c f">M</span> 구문이 허용하는 대로, 느부갓네살에게 끌려간 이는 모르드개가 아니라 증조부 기스로 읽을 수 있다. <span class="c t">G</span> 이 한 절에 어근 <span class="hw">גלה</span>(갈라, 사로잡히다·유배되다)가 네 번 울려 강한 인상을 남긴다. <span class="c x">E</span> 히브리어의 이 반복은 놓치기 어렵다. 왕의 계획이 온 나라의 아리따운 처녀를 "끌어가는" 일이라는 것을 막 들은 참에, 독자는 두 포로 집단을 곧바로 잇는다. 집과 가족에서 "옮겨진" 처지라는 사실이 에스더가 곧 이중으로 유배될 수 있다는 가능성을 세운다. Levenson의 표현대로 사적인 것이 정치적인 것을 비춘다(재인용).</p>
+      <p><span class="c f">M</span> "여고냐"는 여호야긴의 이름 변형이다. 이 왕을 언급하는 것은 모르드개를 첫 세대 포로에 가까이 두는 일이며, 성경의 시각에서 그 세대가 가장 정통한 무리다(왕하 25:27–29; 렘 29:10; 겔 1:1–3).</p>
+    </div>
+
+    <div class="vs" id="v7">
+      <span class="ref">2:7 — 하닷사 곧 에스더</span>
+      <p>"그의 삼촌의 딸 하닷사 곧 에스더는 부모가 없었으나 용모가 곱고 아리따운 처녀라 그의 부모가 죽은 후에 모르드개가 자기 딸 같이 양육하더라"(2:7). <span class="c f">M</span> 이 절은 세 특징을 a-b-c // c′-b′-a′ 형태로 배열한다. 아름다움이 중앙에 놓이고 입양과 고아 됨이 그것을 감싸, 낮은 사회적 처지와 그 처지를 뒤집을 조건을 함께 제시한다.</p>
+      <p><strong>두 이름.</strong> <span class="c f">M</span> 고대 유대인이 히브리어 이름과 이방식 이름을 함께 쓰는 관행은 다니엘 1:7과 1마카 2:2–5에 잘 나타난다. "하닷사"(<span class="hw">הֲדַסָּה</span>)는 도금양을 뜻하는 <span class="hw">הֲדַס</span>의 여성형으로, 자연의 소생을 그리는 사 41:19과 55:13에 나오는 긍정적 상징이다. "에스더"는 성경 다른 곳에 없는 이름이며, 마르둑의 배우자이자 샛별과 이어진 여신 이슈타르를 암시하는 "인공적" 이름으로 보는 견해가 널리 받아들여진다. <span class="c f">M</span> 랍비 전승은 이 이름을 아람어 샛별(<span class="hw">אסתהר</span>)과 잇기도 하고(b. Meg. 13a), 히브리어 "숨기다"(<span class="hw">סתר</span>)와 잇기도 하는데, 후자는 정체를 감추는 서사(2:10·20)와 잘 맞는다.</p>
+      <p><span class="c x">E</span> 두 이름은 처음부터 이중 정체를 세운다. 에스더는 이방의 여신 이름을 지닌 왕후이면서 히브리의 소박한 꽃이고, 모르드개는 히브리 이름 없이 내내 "유다인"으로 불린다. 두 주인공이 각자의 방식으로 감당하는 이 이중성이 그들 백성의 처지를 비춘다.</p>
+      <p><strong>입양 형식.</strong> <span class="c f">M</span> "자기 딸 같이 양육하더라"(<span class="hw">לְקָחָהּ מָרְדֳּכַי לוֹ לְבַת</span>)는 입양 형식이며, 출 2:10에서 바로의 딸이 모세를 입양하는 대목이 병행이다. <span class="c t">G</span> 동사 <span class="hw">לקח</span>(라카흐, 취하다)는 곧 에스더가 "이끌려 가는" 대목(2:8·16)에서 되풀이되어, 두 "취함" 사이의 긴장을 드러낸다. 이 동사에는 물건을 손에 넣는다는 뜻과 아내로 맞는다는 뜻이 함께 있고, 두 뜻이 여기서 겹친다. LXX와 랍비 일부가 <span class="hw">לְבַת</span>(딸로)를 <span class="hw">לְבַיִת</span>(집으로, 곧 아내로)로 읽은 배경이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">וַתִּלָּקַח אֶסְתֵּר</div>
+      <div class="eyebrow">2:8–11</div>
+      <h2>3. 이끌려 가서</h2>
+      <div class="gloss">바틸라카흐 에스테르 — 수동의 동사들</div>
+    </div>
+
+    <div class="vs" id="v8">
+      <span class="ref">2:8 — 수동태의 무게</span>
+      <p>"왕의 조서와 명령이 반포되매 처녀들이 도성 수산에 많이 모여 헤개의 수하에 나아갈 때에 에스더도 왕궁으로 이끌려 가서"(2:8). <span class="c x">E</span> 에스더와 포로의 병행이 이 절에서 가장 뚜렷하다. 그도 사로잡힌다. 관련 동사들("모여", "이끌려")이 수동이라는 사실이 결정적이다. 처녀들에게도 유다인들에게도 그 사로잡힘에 관해 발언권이 없었다. 형편을 최대한 활용한다는 것이 그 형편을 좋게 만들지는 못한다. <span class="c f">M</span> 같은 동사 <span class="hw">לקח</span>가 2:7의 입양에도 쓰여, 에스더가 모르드개와의 부녀 관계를 떠나 왕후의 영역으로 들어가는 것처럼 보인다. 이어지는 서술이 그 부녀 관계의 지속을 보여 준다(2:10–11·20).</p>
+      <p><span class="c x">E</span> 이 장면을 순수한 미인 대회로 읽는 현대의 연상은 오해를 부른다. 현대의 참가자는 스스로 참가하고 끝나면 집으로 돌아간다. 아하수에로의 그물에 걸린 여인들에게는 돌아갈 집이 없다. 숙소가 아무리 호사스러워도 자유와 가족을 대신하지 못한다. 에스더에게는 이방 왕의 후궁으로 이방 궁정에 산다는 전망이 더해져, 여성으로서도 유다인으로서도 침해받을 처지에 놓인다.</p>
+      <p><span class="c b">L</span> 이 민담적 외피 아래에 역사적 실상이 있다. 페르시아를 비롯한 여러 사회에서 여성은 선물이나 조공, 전리품으로 군주에게 보내졌다. 헤로도토스는 이오니아 봉기 진압 후 "가장 아름다운 처녀들이 집에서 끌려 나와 다리오의 궁정으로 보내졌다"고 전하고(6.32), 바벨론 연대기는 주전 345년 시돈 함락 후 아르타크세르크세스 3세가 다수의 여성을 바벨론과 수산의 궁으로 옮긴 일을 기록한다. 사트라프와 지방관, 파견된 물색꾼이 제국 전역에서 사람을 "공물"로 징발하는 일은 실제 관행이었다.</p>
+    </div>
+
+    <div class="vs" id="v9">
+      <span class="ref">2:9 — 헤개의 호의</span>
+      <p>"헤개가 이 처녀를 좋게 보고 은혜를 베풀어 몸을 정결하게 할 물품과 일용품을 곧 주며 또 왕궁에서 으레 주는 일곱 궁녀를 주고 에스더와 그 궁녀들을 후궁 아름다운 처소로 옮기더라"(2:9). <span class="c f">M</span> 1장에서 왕이 측근에게 휘둘렸듯, 여기서도 같은 결이 이어진다. 왕후는 왕의 눈에 좋게 보여야 하는데(2:4), 정작 먼저 좋게 보인 상대는 헤개다. 그는 자기 총애를 왕의 총애로 만들려 서두르며 4절이 예정한 것 이상을 준다.</p>
+      <p><strong>일용품과 일곱 궁녀.</strong> <span class="c f">M</span> "일용품"(<span class="hw">מָנוֹת</span>, 마노트)은 다니엘 1장에서처럼 제국 행정이 신민에게 공급하는 음식을 가리킨다. 다니엘서나 유딧서, 그리고 첨가문 C,28과 달리 이 본문은 그 제국의 음식이 유대 식법과 충돌한다는 표시를 하지 않는다. "일곱 궁녀"는 왕의 속성이다. 일곱 시종을 거느리는 일은 이 책에서도(1:10·14) 헬레니즘 문학의 페르시아 표상에서도 왕의 표지이며, 헤개는 이미 에스더에게 왕후의 속성을 입히고 있다.</p>
+      <p><strong>동사의 전환.</strong> <span class="c f">M</span> 8절 후반에서 수동으로 후궁에 이르렀던 에스더가 9절부터는 성취의 주어가 된다. "은혜를 베풀어"에 해당하는 <span class="hw">וַתִּשָּׂא חֶסֶד</span>는 능동형(<span class="hw">נשׂא</span>, 들다·취하다)으로, 에스더가 주위를 사로잡는 행위를 담는다. 정형화된 어법이 단계적으로 이어진다. 헤개가 먼저 사로잡히고(2:9), 이어 궁정 전체가(2:15), 마침내 왕이(2:17; 5:2) 사로잡힌다. 이방 궁정에서 유대인이 권력자의 호의를 빨리 얻는 모티프는 요셉(창 39:4·21)과 다니엘(단 1:8–9)에도 있다.</p>
+    </div>
+
+    <div class="vs" id="v1011">
+      <span class="ref">2:10–11 — 감춤과 왕래</span>
+      <p>"에스더가 자기의 민족과 종족을 말하지 아니하니 이는 모르드개가 명령하여 말하지 말라 하였음이라"(2:10). <span class="c f">M</span> 마소라 본문의 관점에서 이 정보는 플롯의 핵심이다. 두 주인공은 각기 자신이 유다인임을 드러내야 하며(모르드개는 3:4, 에스더는 7:3 이하), 이 요소는 두 사람을 이방 궁정에서 정체가 가려진 요셉·모세와 잇는다. <span class="c f">M</span> 본문은 "유다인"이라는 말 대신 "민족"과 "종족"을 쓴다. 후자(<span class="hw">מוֹלֶדֶת</span>, 몰레데트)는 "고향"의 뜻도 지녀, 2:5–6처럼 이 백성과 그 땅의 연결을 짚는다. 아버지에게 충실함으로써 자기 혈통을 부인하게 되는 역설이 여기 있다.</p>
+      <p><strong>동기의 공백.</strong> <span class="c t">G</span> 중세 주석가들은 에스더가 왕후가 되기를 원했는지를 두고 갈렸다. 라쉬(2:10)는 사울 가문 출신임이 알려지면 붙잡힐 터이므로 낮은 가문으로 보여 돌려보내지게 하려 했다고 읽고, 이븐 에즈라(2:9)는 왕이 포로 출신을 아내로 삼지 않을까 염려했다는 설명과 예언·꿈으로 구원이 그를 통해 오리라 알았다는 설명을 함께 전한다. 현대 학계도 갈린다. Moore는 에스더가 왕후가 되기를 원했다고 보고, Berlin은 자기 뜻과 무관하게, 심지어 뜻에 반하여 끌려갔다고 본다(둘 다 재인용).</p>
+      <p><span class="c t">G</span> Grossman은 Bush의 단순한 설명을 지지한다. 낯선 땅의 이방인, 더구나 유대인 혐오자들 사이의 유대인이 자기 출신을 감추려는 것은 자연스러운 반응이며, 딸의 안전을 걱정한 모르드개가 현지인처럼 처신하기를 요구했다는 것이다. 서술자가 동기를 밝히지 않는다는 사실 자체가 중요하다. 정체를 감춘 인물을 만난 독자는 비밀의 공기 속으로 들어가, 페르시아 궁정의 화려한 외피 아래에서 속삭이는 유대적 실마리에 귀를 기울이게 된다. 에스더가 자기 정체를 감추듯 서술자도 자신의 신학적 세계를 감춘다.</p>
+      <p><span class="c f">M</span> 11절의 매일의 왕래는 두 주인공의 강한 유대를 드러낸다. "어떻게 될지를 알고자 하였더라"는 출 2:4에서 모세의 누이가 지녔던 관심과 같은 결이다. 모르드개는 후궁 뜰 "앞으로"(<span class="hw">לִפְנֵי</span>) 다닐 뿐 안으로 들어가지 못하며, 소통은 후궁 인력을 거쳐 이뤄진다. 이 매일의 왕래가 눈에 띄지 않았을 리 없으므로 두 사람의 친족 관계는 궁정에 알려진 셈이고, 2:10의 은폐 모티프는 이 단계에서 모르드개의 유대인 정체도 감춰져 있음을 전제해야 성립한다.</p>
+      <p><span class="c x">E</span> 모르드개가 이런 명령을 내렸다는 사실 자체가 그가 에스더의 유대인 됨을 위험으로 여겼음을 가리킨다. 그가 날마다 후궁 뜰 앞을 서성이는 것도 무리가 아니다. 그는 자랑과 절망 사이를 오간다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">כְּדָת הַנָּשִׁים</div>
+      <div class="eyebrow">2:12–14</div>
+      <h2>4. 여자에 대하여 정한 규례</h2>
+      <div class="gloss">케다트 한나쉼 — 열두 달의 준비</div>
+    </div>
+
+    <div class="vs" id="v12">
+      <span class="ref">2:12 — 열두 달</span>
+      <p>"처녀마다 차례대로 아하수에로 왕에게 나아가기 전에 여자에 대하여 정한 규례대로 열두 달 동안을 행하되 여섯 달은 몰약 기름을 쓰고 여섯 달은 향품과 여자에게 쓰는 다른 물품을 써서 몸을 정결하게 하는 기한을 마치며"(2:12). <span class="c x">E</span> 미용실에서 보내기에 열두 달은 긴 시간이다. "몸을 정결하게 하는 물품"에 해당하는 히브리어(<span class="hw">תַּמְרוּק</span>)는 문지른다는 뜻의 어근에서 나와 향유 마사지를 시사한다. 과장으로 보든 궁정의 과잉으로 보든, 효과는 여인들이 통과해야 했던 엄격한 미용 절차를 부각하는 데 있다.</p>
+      <p><strong>"규례"라는 낱말.</strong> <span class="c x">E</span> 기간보다 중요한 것은 이 과정이 "규례"(<span class="hw">דָּת</span>, 다트)로 불린다는 사실이다. 이 낱말은 이 책에서 관습(1:8·13)과 철회 불가의 조서(9:13)를 함께 가리키며, 모든 일이 규정대로 진행된다는 인상을 만든다. 에스더는 이 법과 관습에 복종하며 가능한 한 따른다. 뒤에 하만이 유다인들을 두고 왕의 법률을 지키지 않는다고 고발할 때(3:8), 에스더의 이 순응이 그와 그 백성을 위한 반증으로 되돌아온다.</p>
+      <p><strong>방부처리 인유.</strong> <span class="c t">G</span> "기한을 마치며"(<span class="hw">כִּי כֵּן יִמְלְאוּ יְמֵי</span>)라는 어구는 성경에서 오직 한 곳에 더 나온다. 애굽 의원들이 야곱의 시신을 향으로 처리한 대목이다(창 50:2–3, "사십 일이 걸렸으니 향 재료를 넣는 데는 이 날수가 걸림이며"). 정해진 관례에 따라 일정 기간 몸에 향유를 처리한다는 문맥과 내용이 겹친다. 페르시아의 처녀들과 그 화장을 향 처리된 시신에 견줌으로써, 저자는 왕이 여인들을 몸으로만 다룬다는 날카로운 비판을 심는다.</p>
+    </div>
+
+    <div class="vs" id="v1314">
+      <span class="ref">2:13–14 — 구하는 것과 둘째 후궁</span>
+      <p>"처녀가 왕에게 나아갈 때에는 그가 구하는 것을 다 주어 후궁에서 왕궁으로 가지고 가게 하고"(2:13). <span class="c t">G</span> 12절이 "처녀마다 차례대로 나아갈 때에는"으로 열고 13절이 그 문장을 잇는 구조인데, 그 사이에 준비 과정의 긴 서술이 끼어든다. 이 삽입이 만드는 대비가 크다. 겉으로 왕은 무엇이든 원하는 대로 주는 관대한 군주로 보이고, 안으로 그 자유는 왕의 명령이 규정한 열두 달에 묶여 있다.</p>
+      <p><span class="c x">E</span> 여기서 무엇을 가져갈 수 있는지 명시되지 않아 독자는 에스더가 무엇을 고를지 궁금해진다. 서술자는 그 궁금증을 그대로 둔 채, 여인들이 하룻밤 뒤 후궁의 다른 구역으로 "졸업"하는 과정을 서술한다.</p>
+      <p>"저녁이면 갔다가 아침에는 둘째 후궁으로 돌아와서 비빈을 주관하는 내시 사아스가스의 수하에 속하고 왕이 그를 기뻐하여 그의 이름을 부르지 아니하면 다시 왕에게 나아가지 못하더라"(2:14). <span class="c f">M</span> 화려함 너머에서 이 절차는 비극적이다. 왕 앞에 나가기 전 극진히 다뤄지던 여인들이 그 하룻밤 뒤에는 대개 왕의 면전에서 멀어지며, 불순종한 와스디와 같은 처지를 나눈다(2:14 "다시 왕에게 나아가지 못하더라" // 1:19 "다시는 왕 앞에 오지 못하게"). 이 운명을 벗어나는 이는 왕이 "기뻐하여" "이름을 부르는" 자뿐이다. 이 모티프가 뒤에 에스더가 부름을 받지 못해 나아갈 수 없다고 말하는 대목(4:11)의 무대를 놓는다. 왕후의 지위도 후궁과 같은 제약에서 그를 풀어 주지 못한다.</p>
+      <p><span class="c f">M</span> 두 환관의 이름과 직임이 각각 명시되는 방식은 이 궁정의 극도로 성문화된 조직을 드러낸다. 헤개는 처녀를, 사아스가스는 비빈을 맡는다. <span class="c b">L</span> 처녀들이 왕을 만나기 전 후궁에서 만 한 해를 보낸 데에는 궁정 예법과 몸단장 교육만이 아니라 임신 여부를 살피는 이유도 있었을 것이다. 왕가의 자손이 의심받지 않아야 했기 때문이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">וַיֶּאֱהַב הַמֶּלֶךְ</div>
+      <div class="eyebrow">2:15–18</div>
+      <h2>5. 에스더의 차례</h2>
+      <div class="gloss">바예에하브 함멜렉 — 왕이 사랑하므로</div>
+    </div>
+
+    <div class="vs" id="v15">
+      <span class="ref">2:15 — 구하지 아니하였으나</span>
+      <p>"모르드개의 삼촌 아비하일의 딸 곧 모르드개가 자기의 딸 같이 양육하는 에스더가 차례대로 왕에게 나아갈 때에 궁녀를 주관하는 내시 헤개가 정한 것 외에는 다른 것을 구하지 아니하였으나 모든 보는 자에게 사랑을 받더라"(2:15). <span class="c x">E</span> 에스더의 차례를 서술하는 대목은 그의 온전한 이름으로 시작한다. 남성 친족으로 무겁게 둘러싸인 호칭이되, 그럼에도 그의 이름이다. 이 호칭의 사용은 그가 이제부터 일정한 독립성을 발휘하는 인물로 떠오름을 알린다.</p>
+      <p><span class="c x">E</span> 그리고 곧바로 그가 행동한다. 이제껏 행해지는 쪽에 가까웠던 그가 처음으로 자기 뜻을 쓸 기회에서 지혜롭게 고른다. 왕의 내밀한 취향을 헤개보다 잘 아는 이가 있을 리 없다. 그가 무엇을 가져갔는지 독자에게 알려 주지 않는 것이 답답하되, 절의 끝에서 서술자는 담담하게 확인한다. 모든 보는 자가 그를 사랑했다.</p>
+      <p><span class="c f">M</span> 절제와 지혜라는 이 태도가 서사 내내 에스더를 특징짓는다. 그는 보석이나 의복을 챙길 기회를 쓰지 않고 여인들의 준비를 맡은 환관의 판단을 받아들이며, 그럼으로써 페르시아 궁정을 특징짓는 과시적 사치와 거리를 둔다. 절도와 삼감은 전형적인 지혜문학의 결이고(잠 22:17–24:22), 전문가의 지도를 따르는 태도 또한 그렇다.</p>
+      <p><span class="c f">M</span> 아엘리아누스가 전하는 아스파시아 이야기가 이 장면과 놀랍도록 닮았다. 페니키아 출신의 아름다운 고아 아스파시아가 페르시아인의 손에 들어가 세 처녀와 함께 소(小)키루스 앞에 나아가는데, 그는 절제와 품위와 소박함을 지켜 기생처럼 처신하기를 완강히 거부함으로써 도리어 키루스의 마음을 얻는다. 낯선 땅의 고아가 페르시아 궁정에서 높은 지위에 오르는 모티프, 꾸미지 않는 방식으로 왕의 마음을 얻는 결이 겹친다.</p>
+    </div>
+
+    <div class="vs" id="v1617">
+      <span class="ref">2:16–17 — 인도되어 들어가서</span>
+      <p>"아하수에로 왕의 제칠년 시월 곧 데벳월에 에스더가 왕궁에 인도되어 들어가서 왕 앞에 나가니"(2:16). <span class="c x">E</span> 이 절의 의례적 어법은 무언가 중대한 일이 일어나려 함을 알린다. 일어나는 순간에 이미 연대기에 새겨지는 듯한 서술이다. <span class="c f">M</span> 마소라 본문은 여기서 다시 수동형("<span class="hw">וַתִּלָּקַח</span>, 이끌려 갔다")을 쓴다. 12–15절의 처녀들에게 쓰인 "나아가다"(<span class="hw">בּוֹא אֶל</span>)와 대조되는 이 수동은 8절처럼 그에게 선택지가 없었음을 시사한다. 강요된 경기에서 이기려 애쓴다는 서술이 어색하지 않은 것은, 사람이 원하지도 고르지도 않은 형편을 그런대로 감당해 내는 일이 자연스럽기 때문이다.</p>
+      <p><span class="c f">M</span> "왕궁"(<span class="hw">בֵּית מַלְכוּתוֹ</span>)은 사적인 왕의 처소로, 와스디가 부름을 거절했을 때 있던 그 자리이고(1:9·11) 에스더가 뒤에 목숨을 걸고 나아가야 할 자리다(5:1). 날짜 표기는 왕후를 찾는 데 걸린 시간의 길이를 짚는다. 와스디의 폐위 이후 네 해 두 달 스무사흘이 지났다.</p>
+      <p>"왕이 모든 여자보다 에스더를 더 사랑하므로 그가 모든 처녀보다 왕 앞에 더 은총을 얻은지라 왕이 그의 머리에 관을 씌우고 와스디를 대신하여 왕후로 삼은 후에"(2:17). <span class="c t">G</span> 앞 절반에서 에스더는 헤개의 "눈에" 좋게 보였고(2:9), 15절에서 보는 자들에게 사랑을 받았다. 그 자리에 이제 수산의 맥락에서 뜻밖의 동사가 들어선다. 왕이 그를 <em>사랑했다</em>. 여자를 탐하던 왕이 한 사람에게 사로잡히는 전개는 독자를 놀라게 하며 에스더에게 점수를 준다. 화장과 향유를 과하게 쓰기를 마다한 그의 절제가 왕의 시선을 겉모습 너머로 돌렸다는 읽기가 가능해진다.</p>
+      <p><span class="c x">E</span> "사랑", "은총" 같은 낱말이 담은 다정함의 정도가 도리어 놀랍다. 다만 이 왕의 다른 면을 잊지 않도록, 저자는 첫 왕후의 운명을 상기시키는 어구를 덧붙인다. "와스디를 대신하여 왕후로 삼은 후에." 어떤 왕실 어법도 그 자리에 딸린 위험을 가리지 못한다.</p>
+    </div>
+
+    <div class="vs" id="v18">
+      <span class="ref">2:18 — 에스더를 위한 잔치</span>
+      <p>"왕이 크게 잔치를 베푸니 이는 에스더를 위한 잔치라 모든 지방관과 신하들을 위하여 잔치를 베풀고 또 각 지방의 세금을 면제하고 왕의 이름으로 큰 상을 주니라"(2:18). <span class="c f">M</span> 즉위 잔치는 와스디 위기가 끝났음을 알린다. 1:3의 첫 잔치와 같은 손님이 모임으로써, 와스디의 거부로 열린 에피소드가 닫힌다. "에스더를 위한 잔치"라는 표현은 이번에는 왕후가 자리에 있음을 시사한다.</p>
+      <p><strong>면제와 상.</strong> <span class="c f">M</span> "세금을 면제하고"에 해당하는 <span class="hw">הֲנָחָה</span>(하나하)는 성경 히브리어의 하팍스로 "쉬다"의 어근에서 나와 조세나 부역의 면제를 가리킬 것이다. "왕의 이름으로 큰 상"(<span class="hw">מַשְׂאֵת</span>)은 왕이 내리는 선물이며, 1:7의 "어주가 한이 없으며"와 같은 어법 결을 되울린다. "잔치"(<span class="hw">מִשְׁתֶּה</span>)와 "상"(<span class="hw">מַשְׂאֵת</span>)의 음이 겹쳐, 와스디의 거부로 중단되었던 왕실의 과잉이 되돌아왔음을 표시한다. <span class="c f">M</span> 조세 면제와 왕실 하사는 헬레니즘 군주들이 유대와의 관계를 관리하던 실제 수단이기도 했다(1마카 11:28–37; 2마카 3:1–3).</p>
+      <p><span class="c f">M</span> 왕과 에스더의 혼인은 명시되지 않은 채 전제된다. 마소라 본문은 이방인과의 혼인이 문제라는 표시를 하지 않는다. 그리스어 첨가문 C,26–27은 다른 길을 택해 에스더의 입에 이방인의 잠자리를 혐오한다는 기도를 놓는다. <span class="c h">C</span> 이 긴장은 수용사에서 오래 이어졌다. 랍비 문헌은 에스더가 강제로 취해졌음을 강조했고(타르굼 리숀), 아브라함 사바는 포르투갈 추방기의 강제 개종 경험에 비추어 이 대목을 읽으며 괴로워했다. 개신교 쪽에서는 첩의 지위가 문제였다. 알렉산더 카슨은 "에스더가 유다인을 구했으나, 그렇게 할 수 있는 자리에 서기까지 그는 하나님의 법을 어겼다"고 적었고, 조지 로슨은 "그가 다른 신앙을 가진 배우자와 혼인하는 본을 보였다고 여기지 말라. 그는 행위자가 아니라 당한 자였다"고 썼다.</p>
+      <p><span class="c x">E</span> 잔치의 세부는 1장만큼 자세하지 않되 왕이 비용을 아끼지 않았다는 인상이 남는다. 몇 절 사이에 에스더의 평판이 들불처럼 번진 셈이며, 왕이 사랑으로도 돈으로도 얻지 못한 것을 왕후가 수월히 얻은 대비가 남는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="heb">בְּשַׁעַר הַמֶּלֶךְ</div>
+      <div class="eyebrow">2:19–23</div>
+      <h2>6. 대궐 문에 앉았더라</h2>
+      <div class="gloss">베샤아르 함멜렉 — 둘째 소집과 궁정 음모</div>
+    </div>
+
+    <div class="vs" id="v1920">
+      <span class="ref">2:19–20 — 다시 모을 때에</span>
+      <p>"처녀들을 다시 모을 때에는 모르드개가 대궐 문에 앉았더라"(2:19). <span class="c x">E</span> 이 구절이 언제를 가리키는지가 오래 논의되었다. 독자가 아는 처녀들의 소집은 앞의 것뿐이라 동시 진행으로 읽고 싶어지지만, 22절에서 에스더는 이미 왕후이므로 다른 소집이 전제된다. 히브리어의 "다시"(둘째 번)라는 표현이 그래서 남았을 수 있고, Levenson은 2:19–20과 2:8–10의 유사성을 두고 본문 훼손의 사례일 수 있다고 본다(재인용). 18절에서 21절로 곧장 이어져도 이야기는 매끄럽다.</p>
+      <p><span class="c x">E</span> 해결이 어렵다면 물어야 할 것은 현재 형태의 본문이 만드는 효과다. 어느 본문을 따르든 소집에 관한 언급은 에스더와 모르드개의 "포로" 신분을 상기시킨다. 에스더가 왕후이고 모르드개가 책임 있는 자리에 앉았어도, 두 사람은 강제된 처지에 있다. 에스더의 유대인 됨과 그것을 감추라는 명령이 여기서 되풀이되는 것은 위험에 놓인 이가 왕만이 아님을 시사한다.</p>
+      <p><span class="c t">G</span> Grossman은 이 두 절의 초점을 다르게 읽는다. 에스더의 선발 장면이 끝나면 모르드개가 멀어지리라 예상되는 자리에서, 서술자는 양쪽 인상을 함께 눌러 준다. 한편으로 왕은 새 왕후를 두고도 다른 처녀들에게 마음을 쓰고, 다른 한편으로 모르드개는 대궐 문에 앉아 궁 안의 소식을 들을 만큼 가까이 머문다. "대궐 문에 앉았더라"는 제도화된 공적 역할을 시사하며(LXX는 "왕의 궁정에서 섬겼다"로 옮긴다), 그 자리 덕분에 그는 계속 에스더를 살필 수 있다. 왕이 에스더를 모르드개에게서 데려갔음에도 에스더는 양아버지를 자기 삶의 권위로 삼는다.</p>
+      <p><span class="c f">M</span> 20절의 되풀이("에스더는 모르드개가 명령한 대로 그 종족과 민족을 말하지 아니하니")는 두 사람의 관계가 지속됨을 확인한다. <span class="c t">G</span> 여기에 왕을 향한 은근한 찌름이 있다. 남편이 자기 집을 주관하게 하라는 왕의 조서(1:22)에도 불구하고, 에스더는 모르드개의 말에 따른다.</p>
+    </div>
+
+    <div class="vs" id="v2123">
+      <span class="ref">2:21–23 — 빅단과 데레스</span>
+      <p>"모르드개가 대궐 문에 앉았을 때에 문을 지키던 왕의 내시 빅단과 데레스 두 사람이 원한을 품고 아하수에로 왕을 암살하려는 음모를 꾸미는 것을"(2:21). <span class="c x">E</span> 앞 장면에서 겨우 마음을 놓으려는 참에, 왕의 침전 바로 밖에서 음모가 자란다. 동기는 밝혀지지 않되 기회는 분명하다. 문을 지키는 자로서 두 사람은 왕이 가장 무방비한 순간에 접근할 수 있다. 서술의 초점은 왕의 위험에 있으나 에스더도 위태롭다. 궁정 쿠데타의 한복판에서 왕후의 지위가 온전할 리 없다.</p>
+      <p><span class="c t">G</span> 세 절의 짧은 서술이 남기는 물음은 많다. 두 사람은 왜 왕을 죽이려 했는가. 모르드개는 어떻게 알았는가. 그는 왜 왕을 구하기로 했는가. 왜 에스더를 거쳐 알렸는가. 왕은 어찌하여 그에게 보상하지 않았는가. 서술자는 어느 것에도 답하지 않는다. 이 단락의 의의는 말해지지 않은 것에 있다. 남는 정보는 둘뿐이다. 모르드개가 왕을 구했고, 그 일이 궁중 일기에 기록되었다.</p>
+      <p><strong>수동형의 문체.</strong> <span class="c t">G</span> 짧은 장면에 수동형이 몰려 있다. "모르드개가 알고"(직역: 그에게 알려지고), "조사하여 실증을 얻었으므로", "두 사람을 나무에 달고", "기록하니라". 누가 무엇을 왜 했는지는 중요하지 않고 결과만 남는다는 신호이며, 인물들이 자기 행위의 의미를 얼마나 아는지에 관한 인상도 함께 남긴다. 이 장면의 가장 중요한 결과는 그들에게 감춰진 채 뒤에 극적으로 드러난다.</p>
+      <p><strong>1장과의 수미상관.</strong> <span class="c t">G</span> 이 종결 장면은 책의 개막을 되울린다. "아하수에로 왕이 수산 궁에서 즉위하고"(1:2)에 "모르드개가 대궐 문에 앉았을 때에"가 짝하고, "왕이 진노하여"(1:12)의 어근 <span class="hw">קצף</span>가 "원한을 품고"에 다시 나오며, 와스디에 관한 법이 기록되듯(1:19) 여기서도 궁중 일기에 기록된다. 궁정의 자리를 잃은 한 사람(와스디)에 두 사람(빅단과 데레스)이 짝한다. 1:10의 환관 "빅다"와 1:14의 대신 "다시스"가 이름에서 겹치는 것까지 의도라면, 와스디의 퇴장이 에스더의 자리를 열었듯 두 사람의 퇴장이 모르드개의 자리를 여는 셈이다.</p>
+      <p><strong>서사 전체의 축소판.</strong> <span class="c t">G</span> 이 작은 장면의 요소가 뒤에서 하나씩 확대된다. 대궐 문에 앉은 모르드개(3:2), 모의(3:6), 모르드개에게 알려짐(4:1), 왕후 에스더에게 알림(4:7–8), 에스더가 왕에게 아룀(7:1–6), 나무에 달림(7:9–10), 그리고 기록됨(9:32). "손을 들어 치려 한다"(<span class="hw">שְׁלֹחַ יָד</span>)는 표현이 하만의 시도(3:6; 8:7)와 이 음모를 잇는다.</p>
+      <p>"모르드개가 알고 왕후 에스더에게 알리니 에스더가 모르드개의 이름으로 왕에게 아뢴지라"(2:22). <span class="c x">E</span> 에스더는 신속히 왕에게 알리되 공을 모르드개에게 돌린다. 이 세부는 그의 성품에도 중요하고, 모르드개의 역할이 곧 잊힌다는 점에서도 중요하다. <span class="c t">G</span> 아이러니가 여기 있다. 모르드개를 향한 에스더의 은밀한 충성 — 왕의 법을 거스르는 그 충성 — 이 도리어 왕의 목숨을 구한다. 두 장면을 나란히 둠으로써 서술자는 이 책의 근본 문제 하나를 연다. 왕을 향한 충성은 무엇으로 재고 어떻게 갚아지는가.</p>
+      <p><span class="c x">E</span> 사건은 궁중 일기에 정식으로 기록된다. 처음에는 관청 용어의 나열로 보이는 이 기록이, 훨씬 큰 규모의 또 다른 구출에서 결정적 역할을 하게 된다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>7. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 2장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">2:1</td><td>에 7:10</td><td>어근 <span class="hw">שׁכך</span>(그치다) — 와스디와 하만 징벌의 짝</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:2–4</td><td>창 41:34–37</td><td>관리를 세워 "다 모으라" · 왕의 승인 형식</td><td><span class="c f">M</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">2:2–4</td><td>왕상 1:2–4</td><td>늙은 왕을 위한 처녀 물색 — 수넴 여인</td><td><span class="c f">M</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">2:5</td><td>삼상 9:1–2; 삼하 16:5–13; 삼상 15장</td><td>기스·시므이·베냐민 — 사울 계보와 아각의 예고</td><td><span class="c x">E</span> <span class="c f">M</span></td></tr>
+        <tr><td class="head">2:6</td><td>왕하 25:27–29; 렘 29:10; 겔 1:1–3</td><td>여고냐(여호야긴)와 첫 세대 포로</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:7</td><td>사 41:19; 55:13</td><td>도금양(<span class="hw">הֲדַס</span>) — 소생의 상징</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:7</td><td>출 2:10</td><td>"자기 딸 같이" — 입양 형식</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:8·16</td><td>렘 29:5–7</td><td>포로의 처지에서 살아가기</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">2:9</td><td>단 1:5·8–9; 창 39:4·21</td><td>제국의 "일용품" · 이방 궁정에서 얻은 호의</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:11</td><td>출 2:4</td><td>"어떻게 될지를 알고자" — 모세의 누이</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:12</td><td>창 50:2–3</td><td>"기한을 마치며" — 향 처리의 정해진 날수</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">2:14</td><td>에 1:19</td><td>"다시 나아가지 못하더라" — 와스디와 같은 처지</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:15</td><td>삼상 25:3·8·36·42</td><td>아비가일 — 지혜롭고 아름다운 여인, 시녀, 잔치</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:15</td><td>잠 23:1–5</td><td>궁정 지혜 — 부 앞에서의 절도</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:18</td><td>1마카 11:28–37; 2마카 3:1–3</td><td>조세 면제와 왕실 하사 — 헬레니즘 통치술</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">2:19–23</td><td>에 1:2·12·19</td><td>앉음 · 진노 · 기록 — 개막 장면의 되울림</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">2:21</td><td>에 3:6; 6:2; 8:7</td><td>"손을 들어 치려" — 두 음모의 병행</td><td><span class="c t">G</span> <span class="c f">M</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 8 ═══════ -->
+  <section class="part" id="s8">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>8. 신학 종합</h2>
+    </div>
+
+    <h3>① 수동태로 쓰인 등극</h3>
+    <p>2장은 한 여인이 왕후가 되는 이야기를 수동태로 쓴다. <span class="c x">E</span> 처녀들은 "모여" 왔고 에스더는 "이끌려" 갔으며(2:8), 다시 "인도되어" 들어갔다(2:16). <span class="c f">M</span> 그 사이사이에 능동의 동사가 끼어들어 그가 호의를 "얻는" 일을 전한다(2:9·15·17). 두 결이 함께 놓인 문장은 강요된 자리에서 최선을 감당해 내는 사람의 모습을 그린다. 성취를 다루면서도 그 성취가 놓인 자리의 강제성을 지우지 않는 서술이다.</p>
+
+    <h3>② 과잉의 궁정과 몸이 된 사람</h3>
+    <p><span class="c t">G</span> 열두 달의 향유와 화장을 서술하는 대목은 캐리커처처럼 한 부분을 늘여 그린다. 하룻밤을 위해 한 해를 향유에 담그는 절차가 그 자체로 균형의 상실을 드러내며, "기한을 마치며"라는 어구가 시신의 향 처리를 되울림으로써(창 50:2–3) 여인들을 몸으로만 다루는 시선을 폭로한다. <span class="c x">E</span> 이 과잉은 1장에서 시작해 3장의 하만에게서 절정에 이르는 이 책의 결을 잇는다. 비례를 잃은 세계에서 절도를 지키는 인물이 곧 에스더다.</p>
+
+    <h3>③ 감춤이라는 서술 전략</h3>
+    <p><span class="c t">G</span> 에스더가 정체를 감추는 이유를 본문은 밝히지 않는다. 그 공백이 독자를 표면 아래로 이끈다. 정체를 감춘 인물을 만난 독자는 비밀의 공기 속으로 들어가, 페르시아 궁정의 외피 아래에서 속삭이는 유대적 실마리에 귀를 기울인다. 에스더가 자기 정체를 감추듯 서술자도 자신의 신학을 감춘다. <span class="c f">M</span> 편집사의 관점에서 보면 은폐 모티프(2:10–11·19–20)는 알파 텍스트에 없는 프로토마소라 편집층에 속한다. 유대인임을 밝히는 일이 위험해진 시대의 감각이 이 장에 새겨져 있다.</p>
+
+    <h3>④ 두 이름, 두 세계</h3>
+    <p><span class="c x">E</span> 하닷사와 에스더, 이방의 여신 이름과 히브리의 꽃 이름이 한 사람에게 겹친다. 모르드개도 마르둑에서 온 이름을 지닌 채 내내 "유다인"으로 불린다. 두 주인공이 감당하는 이 이중성이 그들 백성의 처지를 비추며, 긴장 속에서 신실하게 사는 문제를 이 책의 중심으로 끌어올린다. <span class="c f">M</span> 유대 주인공에게 이방식 이름이 붙은 것은 그들이 페르시아 세계에 통합된 인물로 제시되기 때문이다.</p>
+
+    <h3>⑤ 충성의 회계</h3>
+    <p><span class="c t">G</span> 장의 마지막 세 절은 충성이 어떻게 측정되고 어떻게 갚아지는지를 묻는다. 모르드개는 왕의 목숨을 구하고, 그 일은 기록되며, 보상은 오지 않는다. 왕의 법을 거스르는 은밀한 충성(에스더가 모르드개에게 따르는 일)이 도리어 왕을 살렸다는 아이러니가 그 물음을 날카롭게 만든다. <span class="c x">E</span> 관청 용어로 보이던 이 기록이 훨씬 큰 구출에서 결정적 몫을 감당하게 된다.</p>
+
+    <h3>⑥ 우연이라 불리는 것</h3>
+    <p><span class="c x">E</span> 하나님의 이름이 없는 책에서 2장은 일련의 "우연"을 쌓는다. 왕후를 뽑는 절차가 마련되고, 포로의 딸이 그 절차에 들어가며, 환관이 그를 좋게 보고, 왕이 그를 사랑하고, 그가 왕후가 된 그 자리에서 궁중 일기에 한 줄이 기록된다. 이 우연들이 없다면 이야기는 다른 결말로 간다. 익명으로 일하는 하나님이라는 이 책의 신학이 2장에서 이미 형태를 갖춘다.</p>
+
+    <div class="back"><a href="./overview.html">← 종합 연구(개관)</a> · <a href="./ch03.html">3장 심층연구 →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 에스더 2장 심층 연구 — 개관 + 장별 심층연구 구조의 둘째 문서.<br>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Berlin·Levenson·Bush·Clines·Paton·Moore 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

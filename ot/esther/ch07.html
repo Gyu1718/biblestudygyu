@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에스더 7장 심층 연구 — 대적과 원수</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump span.soon{display:block;text-align:center;padding:.34rem 0;border:1px dashed rgba(255,255,255,.14);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#6f8299}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">에스더 7장 심층 연구</div>
+  <div class="brand-sub">대적과 원수</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <span class="soon" aria-disabled="true" title="에스더 1장 준비 중">1</span>
+    <a href="./ch02.html" aria-label="에스더 2장으로 이동">2</a>
+    <a href="./ch03.html" aria-label="에스더 3장으로 이동">3</a>
+    <a href="./ch04.html" aria-label="에스더 4장으로 이동">4</a>
+    <a href="./ch05.html" aria-label="에스더 5장으로 이동">5</a>
+    <a href="./ch06.html" aria-label="에스더 6장으로 이동">6</a>
+    <a href="./ch07.html" aria-current="page" aria-label="에스더 7장 현재 페이지">7</a>
+    <a href="./ch08.html" aria-label="에스더 8장으로 이동">8</a>
+    <a href="./ch09.html" aria-label="에스더 9장으로 이동">9</a>
+    <a href="./ch10.html" aria-label="에스더 10장으로 이동">10</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 술을 마실 때에 (7:1–2)</a>
+  <a class="lv1" href="#s2">2. 내 생명과 내 민족 (7:3–4)</a>
+  <a class="lv1" href="#s3">3. 누구며 어디 있느냐 (7:5–6)</a>
+  <a class="lv1" href="#s4">4. 걸상 위에 엎드렸거늘 (7:7–8)</a>
+  <a class="lv1" href="#s5">5. 왕의 노가 그치니라 (7:9–10)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">אִישׁ צַר וְאוֹיֵב</div>
+    <h1>에스더 7장 · 대적과 원수</h1>
+    <p class="sub">둘째 날의 술자리에서 왕후가 처음으로 자기 생명을 청한다. 이름이 불리자, 스스로 세운 나무의 주인이 바뀐다.</p>
+    <p class="meta">7:1–2 둘째 잔치 · 7:3–4 두 겹의 청 · 7:5–6 고발 · 7:7–8 후원과 걸상 · 7:9–10 나무 · 다섯 주석 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Macchi IECOT 2018</span>
+    <span><span class="c t">G</span> Grossman 2011</span>
+    <span><span class="c b">L</span> Llewellyn-Jones 2023</span>
+    <span><span class="c h">C</span> Carruthers 2008</span>
+    <span><span class="c x">E</span> Bechtel 2002</span>
+    <span><span class="c k">B</span> Baldwin <span style="color:#a99">(OCR 보류)</span></span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 서고 정본 데이터(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). Fox·Berlin·Levenson·Bush·Berg·Laniak 등은 다섯 주석의 재인용으로만 표기한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">세 단계로 닫히는 덫.</div>
+    </div>
+    <p><span class="c f">M</span> 이 장은 세 부분으로 짜인다. 왕과 하만이 잔치에 이른 뒤(1절), 왕과 에스더의 대화가 이어지고(2–6a절), 하만과 왕의 반응이 뒤따르며(6b–8a절), 하만의 처형으로 닫힌다(8b–10절). 5:3–8에서 미뤄 두었던 청이 여기서 나오고, 5절부터 하만의 처지가 뒤집히기 시작한다.</p>
+    <p><span class="c t">G</span> 두 잔치의 서술을 나란히 놓으면 미세한 차이가 인물들의 심리 변화를 담고 있음이 드러난다.</p>
+    <table>
+      <caption>표 1. 두 잔치의 서술 비교</caption>
+      <thead><tr><th>단계</th><th>첫 잔치(5장)</th><th>둘째 잔치(7장)</th></tr></thead>
+      <tbody>
+        <tr><td class="head">하만의 소환</td><td>"하만을 급히 부르라"(5:5)</td><td>"왕의 내시들이 이르러 하만을 데리고 … 빨리 나아가니라"(6:14)</td></tr>
+        <tr><td class="head">도착</td><td>"에스더가 베푼 잔치에 가니라"(5:5)</td><td>"또 왕후 에스더의 잔치에 가니라"(7:1)</td></tr>
+        <tr><td class="head">왕의 물음</td><td>"그대의 소청이 무엇이뇨"(5:6)</td><td>"왕후 에스더여 그대의 소청이 무엇이냐"(7:2)</td></tr>
+        <tr><td class="head">에스더의 답</td><td>"에스더가 대답하여 이르되"(5:7)</td><td>"왕후 에스더가 대답하여 이르되"(7:3)</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c t">G</span> 첫 잔치에서 왕과 하만은 에스더 앞에 한 편으로 섰고, 둘째 잔치에서 두 사람은 "왕후 에스더의 잔치에" 함께 마시러 온다. 힘의 균형이 옮겨 간 것이다. 왕이 그를 왕후의 호칭으로 부르는 빈도도 늘어난다. 첫 잔치 뒤에 왕은 모르드개의 충성을 기억해 냈고, 그 전언이 에스더를 거쳐 왔음도 함께 떠올렸을 것이다.</p>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">מִשְׁתֵּה הַיַּיִן</div>
+      <div class="eyebrow">7:1–2</div>
+      <h2>1. 술을 마실 때에</h2>
+      <div class="gloss">미쉬테 하야인 — 취기 속의 알현</div>
+    </div>
+
+    <div class="vs" id="v1">
+      <span class="ref">7:1 — 또 왕후 에스더의 잔치에</span>
+      <p>"왕이 하만과 함께 또 왕후 에스더의 잔치에 가니라"(7:1). <span class="c f">M</span> 두 사람이 "마시러" 왔다는 형식이 이 장면의 취기를 표시한다. 이 장에서 "잔치의 술"(<span class="hw">מִשְׁתֵּה הַיַּיִן</span>)이 세 번 나온다(7:2·7·8). 1장이 이미 보여 주었듯 취기가 도는 자리는 왕의 분노를 격하게 만들고(1:12), 분별 없는 행동을 부르며(1:10–12·16–20), 와스디 같은 높은 인물을 자리에서 끌어내린다. 왕후가 자기 손님들을 술로 다룰 조건을 모아 두었음이 이로써 이해된다.</p>
+      <p><span class="c x">E</span> 시점도 좋다. 왕의 마음에는 모르드개의 충성이 새롭게 남아 있고, 하만은 여섯 층 높이의 기둥을 세워 두었으며 — 잠시 뒤 이 정황 증거가 그에게 불리하게 작용한다 — 무엇보다 그는 흔들려 있다. 최대의 원수를 공개적으로 영예롭게 해야 했던 경험이 그의 평정을 흔들지 않았을 리 없다. 에스더의 자리에서 보면 지금이 적기다.</p>
+      <p><span class="c f">M</span> "왕후"라는 경칭이 이 장에서 거듭 붙는 것도 뜻이 있다. 하만은 "왕후"의 초청을 영예로 여겼고(5:12), 왕은 자신과 그의 관계가 그 지위에 잇대여 있음을 형식으로 표시하며, 결국 하만은 그가 "왕후"를 범하려 한 것처럼 보이는 순간에 목숨을 잃는다.</p>
+    </div>
+
+    <div class="vs" id="v2">
+      <span class="ref">7:2 — 세 번째 물음</span>
+      <p>"왕이 이 둘째 날 잔치에 술을 마실 때에 다시 에스더에게 물어 이르되 왕후 에스더여 그대의 소청이 무엇이냐 곧 허락하겠노라 그대의 요구가 무엇이냐 곧 나라의 절반이라 할지라도 시행하겠노라"(7:2). <span class="c f">M</span> 5:3과 5:6의 어법이 여기서 한 번 더, 가장 발달한 형태로 되풀이된다. 왕의 물음이 세 번 겹치는 동안 에스더의 답도 함께 자란다.</p>
+      <table>
+        <caption>표 2. 왕의 물음이 되풀이되는 세 자리</caption>
+        <thead><tr><th>5:3</th><th>5:6</th><th>7:2</th></tr></thead>
+        <tbody>
+          <tr><td>왕후 에스더여 그대의 소원이 무엇이며</td><td>그대의 소청이 무엇이뇨 곧 허락하겠노라</td><td>왕후 에스더여 그대의 소청이 무엇이냐 곧 허락하겠노라</td></tr>
+          <tr><td>요구가 무엇이냐</td><td>그대의 요구가 무엇이뇨</td><td>그대의 요구가 무엇이냐</td></tr>
+          <tr><td>나라의 절반이라도 그대에게 주겠노라</td><td>나라의 절반이라 할지라도 시행하겠노라</td><td>곧 나라의 절반이라 할지라도 시행하겠노라</td></tr>
+        </tbody>
+      </table>
+      <p><span class="c t">G</span> "소청과 요구"라는 짝도 발달한다. 첫 잔치에서 이 표현은 왕과 왕후 사이의 대화를 채우는 격식으로만 들렸다. 둘째 잔치에서 에스더가 "내 소청대로 내 생명을 … 내 요구대로 내 민족을"이라고 말하는 순간, 그 정형 어구 자체가 청의 내용이 된다. 외교적 수사가 실질로 바뀌는 지점이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">נַפְשִׁי וְעַמִּי</div>
+      <div class="eyebrow">7:3–4</div>
+      <h2>2. 내 생명과 내 민족</h2>
+      <div class="gloss">나프쉬 베암미 — 두 겹으로 묶인 청</div>
+    </div>
+
+    <div class="vs" id="v3">
+      <span class="ref">7:3 — 내 생명을 내게 주시고</span>
+      <p>"왕후 에스더가 대답하여 이르되 왕이여 내가 만일 왕의 목전에서 은혜를 입었으며 왕이 좋게 여기시면 내 소청대로 내 생명을 내게 주시고 내 요구대로 내 민족을 내게 주소서"(7:3). <span class="c x">E</span> 이번 서두는 더 간결하고 조금 더 친근하다. 그리고 그는 곧장 본론으로 들어간다. 이 첫 문장만으로도 짚을 것이 있다. 그는 왕의 두 겹 물음 — 거의 시적인 평행 — 을 활용해 자기 자신과 자기 백성 사이의 평행을 그어 놓는다. 이 연결이 결정적이며 최대한 분명해야 한다. 왕은 이제 왕후를 한 개인이나 자기 소유로 볼 수 없고 더 큰 전체의 일부로 보아야 한다.</p>
+      <p><span class="c x">E</span> 그가 핵심을 뒤로 미루지 않는다는 점도 눈에 띈다. 덜 다듬어진 진술이라면 하만이 모르드개에게 불쾌해했고 개인적 원한이 민족의 말살로 번졌다는 순서로 시작했을 것이다. 시간 순서로는 자연스러워도 효과는 훨씬 못했을 것이다. 이 두 줄로 그는 왕이 무엇보다 먼저 알아야 할 것을 알린다. 왕후의 목숨이 위협받고 있다는 사실이다. 이 말은 왕을 놀라게 하고 동시에 알린다. 아마 그를 얼마간 취기에서 깨우기도 했을 것이다.</p>
+      <p><span class="c f">M</span> 히브리어에서 청은 왕의 제안이 쓴 것과 같은 짝 구조(<span class="hw">שְׁאֵלָה</span>·<span class="hw">בַּקָּשָׁה</span>)로 두 가지를 구한다. "내 생명"과 "내 민족"이다. 자기 생명을 백성의 생명에 잇댐으로써 그는 4:13–14에서 모르드개가 말한 연대를 몸으로 보인다. 생명을 앞에 둔 것은, 왕이 유다인을 구한다면 그것이 한 백성에게 정의를 베풀기 위해서라기보다 자기 아내를 구하기 위해서일 것임을 짚는 배치일 수 있다. 이 책의 왕은 다스리는 백성보다 자기 안녕과 왕후와의 관계에 마음을 쓴다.</p>
+    </div>
+
+    <div class="vs" id="v4">
+      <span class="ref">7:4 — 팔려서</span>
+      <p>"나와 내 민족이 팔려서 죽임과 도륙함과 진멸함을 당하게 되었나이다 만일 우리가 노비로 팔렸더라면 내가 잠잠하였으리이다 그래도 대적이 왕의 손해를 보충하지 못하였으리이다 하니"(7:4). <span class="c x">E</span> 노예로 팔린다는 언급은 3장에서 다룬 말놀이를 모르면 문맥에서 튀어 보인다. 하만의 원래 제안은 "진멸"(<span class="hw">אבד</span>)의 조서였는데, 그 낱말이 "종삼다"(<span class="hw">עבד</span>)와 사실상 같게 들린다는 점을 Berg가 짚었다(재인용). 하만이 거액을 제안한 것도 왕을 그런 결론으로 이끌었을 수 있다. 기록된 조서에서는 모호함이 사라지고 "죽이고 도륙하고 진멸하고"가 명시된다(3:13).</p>
+      <p><span class="c x">E</span> 이 논의를 염두에 두면 에스더의 논변이 훨씬 잘 읽힌다. 그는 "팔려서"로 시작해 왕이 서 있는 자리에서 출발한다. 왕이 자기 백성의 일부를 "그저" 노예로 팔았다고 여긴다면, 이 시작이 그 결정과 지금의 사태를 잇게 도와준다. 이어 "죽임과 도륙함과 진멸함을 당하게"라는 어구 — 기록된 조서의 정확한 인용이다 — 로 그가 속았음을 정중히 짚는다. 그다음 문장은 이 일을 왕의 주의에 올린 것을 거의 사과하는 듯하다. "만일 우리가 노비로 팔렸더라면 내가 잠잠하였으리이다." 마지막으로 "대적이 왕의 손해를 보충하지 못하였으리이다"는 아직 이름 없는 "대적"에게 시선을 돌려, 왕이 속았다는 민감한 주제에서 속인 자에게로 초점을 옮기고, 세입 손실에 관한 왕의 반론을 미리 차단하며, 이 음모를 왕에 대한 모독으로 규정한다. 아하수에로의 허영을 생각하면 마지막 것이 어쩌면 가장 중요한 논점이다.</p>
+      <p><span class="c f">M</span> "팔려서"라는 수동 표현으로 그는 백성을 판 이가 왕이라는 말을 입에 올리지 않는다. 이 동사(<span class="hw">מכר</span>)가 대개 금전 거래를 가리킨다는 점에서 3:11의 왕이 은 일만 달란트를 받아들였다는 방향을 지지하되, 성경에서 하나님을 주어로 "넘겨주다"의 뜻으로도 쓰인다는 점을 함께 두어야 한다(삿 2:14; 3:8; 삼상 12:9). <span class="c t">G</span> Grossman은 에스더가 이 동사를 두 번 쓰면서 두 뜻을 나눠 쓴다고 본다. 앞의 것은 멸절을 위한 넘겨줌이고("나와 내 민족이 팔려서 죽임과…"), 뒤의 것은 금전적 매매다("만일 우리가 노비로 팔렸더라면"). 왕에게 이 말놀이는 그가 동의한 것(노예화)과 하만이 실제로 반포한 것(말살)의 근본적 차이를 드러낸다.</p>
+      <p><span class="c f">M</span> 요셉이 팔리는 이야기(창 37:27–28·36; 45:4–5)와 애굽에서 이스라엘이 종이 되는 이야기(출 1:8–14)를 향한 연결도 함께 읽힌다. 애굽 디아스포라의 그 영웅과 억눌린 이스라엘이, 수산의 왕후와 유다인에게 겹친다.</p>
+      <div class="caveat"><span class="tt">난해구 — "왕의 손해"</span><span class="c f">M</span> 마지막 절반의 히브리어(<span class="hw">כִּי אֵין הַצָּר שֹׁוֶה בְּנֵזֶק הַמֶּלֶךְ</span>)는 어렵다. <span class="hw">צָר</span>는 추상적으로 "곤경·재난"일 수도, 구체적으로 "대적"일 수도 있고, <span class="hw">נֵזֶק</span>는 미쉬나 히브리어의 물질적 "손해"일 수도, 성경 아람어의 "번거로움·괴로움"일 수도 있다(단 6:2). Macchi는 두 낱말을 모두 추상으로 읽어 "이 재난은 왕을 번거롭게 할 만한 것이 못 되었으리이다"로 옮기는 편을 택한다. 그러면 그 뜻은, 종으로 팔린 정도의 일이라면 왕의 평안을 흩뜨릴 값어치가 없었으리라는 극도로 공손한 마무리가 된다. 동시에 아이러니가 실린다. 이 궁정에서는 한 무리를 노예로 만드는 일 정도로는 왕을 방해하지 않는다는 것이다. 개역개정은 <span class="hw">נֵזֶק</span>를 물질적 손해로 읽어 옮겼다.</div>
+      <p><span class="c f">M</span> 7:3–4 전체가 그를 능란한 수사가로 보이게 한다. 하만의 조서에서 어휘와 내용을 끌어와 참상을 말하고, 자기 운명을 백성의 운명에 잇대며, 왕을 향한 공대를 잃지 않는다. 4절이 끝날 때 청의 요지는 완전히 분명해진다. 유다인을 죽음에서 구하는 일이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">מִי הוּא זֶה</div>
+      <div class="eyebrow">7:5–6</div>
+      <h2>3. 누구며 어디 있느냐</h2>
+      <div class="gloss">미 후 제 — 곁에 있는 자를 찾는 물음</div>
+    </div>
+
+    <div class="vs" id="v5">
+      <span class="ref">7:5 — 이중의 "이르되"</span>
+      <p>"아하수에로 왕이 왕후 에스더에게 말하여 이르되 감히 이런 일을 심중에 품은 자가 누구며 그가 어디 있느냐 하니"(7:5). <span class="c f">M</span> 히브리어에서 "말하여 이르되"는 "말하다"가 두 번 겹친 형태다. 성경의 다른 곳에도 있는 이 어법은(창 22:7; 스 10:2; 대하 31:10) 두 인물 사이 대화의 엄중함을 표시한다.</p>
+      <p><span class="c f">M</span> 물음은 두 겹이다. "누구며"의 뜻은 분명하고, "어디 있느냐"는 정체를 다시 묻는 것으로도 위치를 묻는 것으로도 읽힌다. 어느 쪽이든 희극적이다. 왕은 바로 곁에 있는 사람을 어디서 찾을지 묻고 있다.</p>
+      <p><span class="c f">M</span> 이어지는 어구도 정확하다. "이런 일을 심중에 품은 자". 왕은 누가 그 일을 <em>행했는지</em>가 아니라 누가 그것을 <em>꾀했는지</em>를 묻는다. 3장에 따르면 유다인을 정죄한 이는 왕 자신이다. 조서가 그의 이름으로 나갔기 때문이다. 그 기획자는 하만이다. 이 구분이 단순한 일화가 아니다.</p>
+      <p><span class="c f">M</span> 5절의 문체는 앞선 공손하고 정연한 대화(7:2–4)와 달리 짧고 급하다. 왕이 분노로 터져 나온다는 인상을 주며, 그 분노는 7:7에서 명시된다. 놀라움 또한 온전하다. 그는 3장의 자기 결정과 지금의 사태를 잇지 못한다. 취한 채 잔치의 끝에서 그는 충동적으로 반응하며, 책임을 물을 한 사람의 이름만을 원한다. 유능한 군주라면 그 백성이 누구인지, 왜 정죄되었는지, 어떤 절차가 왕후의 사형까지 낳았는지를 물었을 것이다. 그는 묻지 않는다.</p>
+    </div>
+
+    <div class="vs" id="v6">
+      <span class="ref">7:6 — 이 악한 하만이니이다</span>
+      <p>"에스더가 이르되 대적과 원수는 이 악한 하만이니이다 하니 하만이 왕과 왕후 앞에서 두려워하거늘"(7:6). <span class="c f">M</span> 왕의 물음과 같은 짜임으로, 두 개의 평행 어구 뒤에 짧은 결론이 붙는다. 하만이 처음으로 직접 고발된다. 이 책에서 언제나 유다인의 대적에게만 붙던 폄어들이 이제 그에게 붙는다. "대적"(<span class="hw">אִישׁ צַר</span>)은 7:4의 "재난"(<span class="hw">צָר</span>)과 이어지고, "원수"(<span class="hw">אוֹיֵב</span>)는 유다인의 반대편을 두루 가리키는 말이다(8:13; 9:1·5·16·22). 에스더는 왕의 책임과 페르시아 체계에 관해 아무 말도 하지 않고 한 사람만을 겨눈다. 서술자가 전한 사건과 인물들이 말하는 사건 사이의 이런 어긋남은 므무간(1장)과 하만(3장)의 발언, 그리고 모르드개가 낸 조서(9:24–25)에도 나타난다.</p>
+      <p><span class="c x">E</span> 그의 말은 하만이 두 사람 공통의 원수임을 확인한다. 3:10에서 그는 "유다인의 대적"으로만 불렸다. 이 새롭고 만만찮은 연합을 감지한 하만이 "왕과 왕후 앞에서" 두려워하는 것이 당연하다.</p>
+      <p><span class="c t">G</span> 히브리어의 소리도 함께 읽힌다. 짧은 음절이 잇달아 터지는 이 한 문장 — <span class="hw">אִישׁ צַר וְאוֹיֵב הָמָן הָרָע הַזֶּה</span> — 이 화려한 서두와 겸손한 사과 뒤에 놓여 날카롭게 튀어나온다(Fox 재인용). 어쩌면 그 박자를 위해 서술자는 여기서 그의 호칭을 빼고 "에스더가 이르되"라고만 적는다.</p>
+      <p><span class="c t">G</span> 이 대목의 아이러니 하나를 짚어 둘 만하다. 에스더는 독백 내내 자기 민족의 이름을 대지 않는다. 왕도 묻지 않는다. 하르보나가 하만이 모르드개를 매달려 했다고 말하는 순간까지도, 왕은 모르드개와 에스더의 연결을 모른다(8:1에서야 알게 된다). 왕의 시야에서 하만이라는 인물에게 두 개의 별개 음모가 수렴할 뿐이다. 왕후와 그 백성을 해하려는 계획, 그리고 충직한 신하 모르드개를 매달려는 계획이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">וְהָמָן נֹפֵל</div>
+      <div class="eyebrow">7:7–8</div>
+      <h2>4. 걸상 위에 엎드렸거늘</h2>
+      <div class="gloss">베하만 노펠 — 서려다 엎드러진 사람</div>
+    </div>
+
+    <div class="vs" id="v7">
+      <span class="ref">7:7 — 생명을 구하니</span>
+      <p>"왕이 노하여 일어나서 잔치 자리를 떠나 왕궁 후원으로 들어가니라 하만이 일어서서 왕후 에스더에게 생명을 구하니 이는 왕이 자기에게 벌을 내리기로 결심한 줄 앎이더라"(7:7). <span class="c x">E</span> 아하수에로는 이 결정적 순간에 후원으로 나가 버린다. 늘 그렇던 분노를 다스리려는 것일 수도, 자기 현실 인식을 다시 정렬할 시간이 필요했을 수도 있다. 하만은 이 새로운 현실의 함의를 정확히 알고 단호히 움직인다. 왕이 자신을 멸하기로 정한 것을 보고, 남아서 왕후에게 목숨을 구한다.</p>
+      <p><span class="c x">E</span> 여기에 대칭과 아이러니가 함께 있다. "구하니"로 옮겨진 낱말은 왕이 에스더에게 거듭 물은 "요구"의 어근과 같다(5:3·6; 7:2). 이제 하만이 자기 목숨을 요구할 차례다. 그가 에스더에게 그럴 힘이 있다고 여긴다는 점이 흥미롭고, 그럴 뜻도 있으리라 기대한다는 점이 놀랍다.</p>
+      <p><span class="c t">G</span> 대칭은 더 촘촘하다. 조금 전 에스더가 자기 생명을 구했고("내 요구대로", <span class="hw">בַּקָּשָׁתִי</span>, 7:3), 이제 하만이 자기 생명을 구한다(<span class="hw">לְבַקֵּשׁ</span>, 7:7). 유다인의 대적이 유다인 왕후에게 간구하며 그 앞에 "엎드러진다". 달리 보자면, 그가 그 앞에 꿇어 절하는 셈이다.</p>
+    </div>
+
+    <div class="vs" id="v8">
+      <span class="ref">7:8 — 왕후를 강간까지</span>
+      <p>"왕이 후원으로부터 잔치 자리에 돌아오니 하만이 에스더가 앉은 걸상 위에 엎드렸거늘 왕이 이르되 저가 궁중 내 앞에서 왕후를 강간까지 하고자 하는가 하니 이 말이 왕의 입에서 나오매 무리가 하만의 얼굴을 싸더라"(7:8). <span class="c x">E</span> 하만이 왕후가 기대어 있던 걸상에 몸을 던지는 바로 그때 왕이 방으로 돌아온다. 이 또한 섭리의 한 획일 수 있다. 우리는 그가 걸상만이 아니라 왕후의 자비에 몸을 던지고 있음을 안다. 왕은 다른 결론으로 건너뛴다. 왕이 오해하는 그 순간에도 하만은 이해한다. 서술자는 생생한 은유 하나를 남긴다. 말이 왕의 입에서 나오자 무리가 그의 얼굴을 쌌다.</p>
+      <p><span class="c b">L</span> 페르시아 귀족은 먹고 마실 때 늘 똑바로 앉지 않고 흔히 침상에 기댔다. 둘이 함께 쓰기도 했으나 대개는 한 사람이 하나를 차지했고, 그 장식과 품질이 지위를 표시했다. 이 소동은 에스더의 침상을 둘러싸고 벌어진다. 하만은 탄원자로서 침상에 몸을 던져 왕후의 발을 붙들거나 입 맞추려 했을 것이다. 이는 치명적 실수였다. 왕의 눈에 그것은 왕후를 향한 성적 접근이었고, 침상과의 근접이 뜻하는 바는 하나였다. 플루타르코스는 페르시아인들이 "아내들에 관해 극도로 질투했다"고 전하며(Them. 26.5), 왕의 후궁에게 다가가 손대는 일만으로 죽음이었다고 적는다(Art. 27.1). 왕비를 만지는 일은 반역과 다름없었을 것이다. 아시리아 왕실의 하렘 규정들도 왕실 여성과 궁정인 사이에 지켜야 할 물리적 거리를 엄격히 정하고 어길 때의 중벌을 규정한다.</p>
+      <p><span class="c x">E</span> 왕의 결론이 처음 보이는 만큼 터무니없지 않았을 수도 있다. 6장에서 하만이 왕의 옷과 말을 탐한 공상을 떠올려 보라. 그는 이미 왕의 반지를 지녔다(3:10). 후원에서 보낸 그 짧은 시간에 왕이 이 일들을 이었다면, 왕후를 범하려는 듯한 이 장면은 잘 짜인 정변의 다음 단계로 보였을 것이다(삼하 16:20–22에서 압살롬이 다윗의 후궁들을 "차지한" 대목과 견줄 만하다).</p>
+      <p><strong>속도의 문체.</strong> <span class="c t">G</span> 이 대목의 속도는 서술자가 인물 사이를 건너뛰는 방식에서 나온다. 주어가 술어 앞에 놓이는, 히브리어에서 비교적 드문 어순이 잇달아 쓰인다. "하만이 두려워하거늘 / 왕이 노하여 일어나서 / 하만이 일어서서 / 왕이 돌아오니 / 하만이 엎드렸거늘." 한 인물을 다 그릴 새 없이 다음 인물이 이미 무언가를 하고 있다. 이 교대가 긴장을 밀어 올린다.</p>
+      <p><span class="c t">G</span> 이 절들의 배치에는 동심원의 결이 있다. 두려워하는 하만으로 열려 걸상 위의 하만으로 닫히고, 그 사이를 왕의 나감과 돌아옴이 감싼다. 중앙에, 가장 긴 문장으로, 에스더 앞에 <em>선</em> 하만이 있다. "엎드러지다"(<span class="hw">נפל</span>)가 그의 몰락을 그리는 주도어인데, 정작 중앙의 이미지에서 서술자는 그 반대 동작을 쓴다. 하만이 "일어서서" 간구한다. 무너짐을 피하려 붙들고 선 그 마지막 안간힘의 자리가, 실은 그가 다시 일어서지 못할 자리다.</p>
+      <div class="note"><span class="tt">수용사</span><span class="c h">C</span> 하만의 "엎드러짐"을 두고 랍비 전승은 천사의 개입을 말한다. 메길라 16a는 이 어구를 "엎드러졌다"로 읽어 천사가 그를 밀어 넘어뜨렸다고 하고, 에스더 랍바는 미가엘을, 타르굼 리숀은 가브리엘을 든다. 근대 초 영국의 시몬 패트릭 주교는 문화적 관행으로 이 장면을 변호하려 했다. "페르시아인들 사이에 이런 관습이 있었다는 기록을 나는 어디서도 읽지 못했으나, 그리스인과 로마인 사이에서는 탄원하는 자가 상대의 무릎을 껴안는 일이 있었다." 익명의 시 『헤스터』(1693)는 왕이 자비 쪽으로 기울다가 그 장면을 보고 마음을 바꾸는 것으로 그린다. 헨델의 오라토리오에서 하만은 에스더를 마치 신처럼 부르며 애원하고("Turn not, O Queen"), 자기 목숨만을 구하는 그 자기중심이 자기 생명을 내놓은 에스더의 기도와 대비되어 울린다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">חֲרוֹן הַמֶּלֶךְ שָׁכָכָה</div>
+      <div class="eyebrow">7:9–10</div>
+      <h2>5. 왕의 노가 그치니라</h2>
+      <div class="gloss">하론 함멜렉 샤카카 — 자기가 세운 나무</div>
+    </div>
+
+    <div class="vs" id="v9">
+      <span class="ref">7:9 — 하르보나의 한마디</span>
+      <p>"왕을 모신 내시 중에 하르보나가 왕에게 아뢰되 왕을 위하여 충성된 말로 고발한 모르드개를 달고자 하여 하만이 높이가 오십 규빗 되는 나무를 준비하였는데 이제 그 나무가 하만의 집에 섰나이다 왕이 이르되 하만을 그 나무에 달라 하매"(7:9). <span class="c x">E</span> 결정이 필요한 순간이고, 앞서 여러 번 보았듯 이런 순간의 아하수에로는 늘 제안에 열려 있다. 이번에는 내시 하르보나가 왕에게 조언하고 하만에게 지극히 합당한 형을 선고하는 몫을 맡는다.</p>
+      <p><span class="c x">E</span> 하만이 자기 자아의 과잉으로 정죄되는 결이 여기 있다. 그의 뒤뜰에 선 그 터무니없이 높은 기둥은 궁에서도 보였다. 그 광경에 새로 자극받은 왕이 이 책 전체에서 처음으로 직접 명령을 내린다. "하만을 그 나무에 달라." 종들은 신속히 따른다.</p>
+      <p><span class="c f">M</span> 하르보나가 짚는 것은 두 가지다. 하만이 나무를 준비했다는 사실과, 그 대상이 "왕을 위하여 충성된 말로 고발한" 모르드개라는 사실이다. 하만의 계획이 왕 자신의 은인을 겨눴다는 진술이 앞의 고발과 겹쳐 그의 유죄를 완성한다.</p>
+    </div>
+
+    <div class="vs" id="v10">
+      <span class="ref">7:10 — 모르드개를 매달려고 한 나무에</span>
+      <p>"모르드개를 매달려고 한 나무에 하만을 다니 왕의 노가 그치니라"(7:10). <span class="c x">E</span> 이 절은 그가 "모르드개를 위하여 준비한" 그 나무에 달렸다는 사실을 굳이 짚는다. 스스로 놓은 폭약에 스스로 날아간 셈이며, 그 대칭에서 오는 만족을 독자는 함께 누린다.</p>
+      <p><span class="c f">M</span> 마지막 어구가 이 책의 어법 하나를 닫는다. "왕의 노가 그치니라"의 동사(<span class="hw">שׁכך</span>)는 2:1에서 와스디를 내친 뒤 왕의 노가 그쳤다고 말할 때 쓰인 낱말이다. 성경에 다섯 번 나오는 이 어근 가운데 둘이 에스더의 마소라 본문에 있다. 두 경우 모두 징벌이 왕을 진정시키되 문제를 해결하지 못한다. 와스디를 내친 뒤에도 왕후 자리를 채우는 데 네 해가 걸렸고, 하만을 매단 뒤에도 조서는 그대로 남는다.</p>
+      <p><span class="c x">E</span> 여기에 또 하나의 아이러니가 있다. 하만은 결국 자신이 저지르지 않은 죄로 처벌된다. 그는 왕후를 범하려 한 것이 아니었다. <span class="c h">C</span> 그의 최후를 두고 수용사는 오래 갈렸다. 로슨은 왕의 부적절한 분노를 두고 "분노는 짧은 광기"라 나무랐고, 브라운과 Levenson은 그 분노를 왕의 나약함의 표지로 읽었다(재인용). 무엇보다 오래 물어진 것은, 다른 많은 점에서 모범적인 여성이자 유다인인 에스더가 어찌하여 하만에게 자비를 베풀지 않았는가였다. 이 물음은 국가적 응집과 적대의 감각이 짙어지던 시기의 영국에서 특히 첨예해졌다.</p>
+      <p><span class="c x">E</span> 이 장에는 놓치지 말아야 할 더 중요한 대칭이 있다. 3장에서 하만이 왕에게 그 무엄한 제안을 올릴 때, 우리는 그가 단순히 악하기만 한 것이 아니라 명민하고 교활하며 지극히 효율적이라는 점을 짚었다. 그에게 맞설 자가 나타날지가 그때의 물음이었다. 5장과 7장에서 에스더의 인물됨이 그 자리에 선다. 계획을 실행하는 데 참을성이 있고, 원수의 방식을 분석하는 데 명민하며, 설득력에서 그와 대등하다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 3. 7장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">7:1</td><td>에 1:10–12; 5:6</td><td>취기의 자리 — 높은 자를 끌어내리는 무대</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:2</td><td>에 5:3·6</td><td>왕의 물음이 세 번 자라며 되풀이됨</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:3</td><td>에 4:13–14</td><td>생명과 민족을 잇는 연대</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:3</td><td>출 33장</td><td>백성을 위해 목숨을 걸고 간구하는 자리(Levenson 재인용)</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">7:4</td><td>에 3:9·13</td><td><span class="hw">אבד</span>/<span class="hw">עבד</span>의 동음이의 · 조서 어휘의 인용</td><td><span class="c x">E</span> <span class="c f">M</span></td></tr>
+        <tr><td class="head">7:4</td><td>삿 2:14; 3:8; 삼상 12:9</td><td><span class="hw">מכר</span> — "넘겨주다"의 용례</td><td><span class="c f">M</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">7:4</td><td>창 37:27–28; 출 1:8–14</td><td>팔린 요셉 · 종이 된 이스라엘</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:5</td><td>창 22:7; 스 10:2; 대하 31:10</td><td>"말하여 이르되" — 엄중한 발화의 형식</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:6</td><td>에 3:10; 8:13; 9:1·5·16·22</td><td>"대적"과 "원수" — 유다인의 반대편을 가리키던 낱말</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">7:7</td><td>에 5:3·6; 7:2–3</td><td>어근 <span class="hw">בקשׁ</span> — 왕후의 요구에서 하만의 애원으로</td><td><span class="c x">E</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">7:8</td><td>에 6:8; 3:10</td><td>왕의 옷·말·반지에 이어 왕후까지</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">7:8</td><td>삼하 16:20–22</td><td>압살롬과 다윗의 후궁 — 정변의 다음 수순</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">7:8</td><td>에 3:7; 6:10·13</td><td>어근 <span class="hw">נפל</span> — 제비·빠뜨림·엎드러짐</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">7:9</td><td>에 5:14; 2:21–23</td><td>오십 규빗의 나무 · 왕을 구한 고발</td><td><span class="c x">E</span> <span class="c f">M</span></td></tr>
+        <tr><td class="head">7:10</td><td>에 2:1</td><td>어근 <span class="hw">שׁכך</span> — 진정되되 풀리지 않는 문제</td><td><span class="c f">M</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 형식이 실질이 되는 순간</h3>
+    <p><span class="c t">G</span> "소청과 요구"는 두 장에 걸쳐 궁정의 상투로만 들렸다. 7:3에서 그 상투가 내용을 얻는다. "내 소청대로 내 생명을 … 내 요구대로 내 민족을." 예법의 껍데기가 그대로 청의 몸이 되는 이 전환이, 에스더가 궁정의 언어로 궁정을 움직이는 방식을 보여 준다. 그는 제국의 문법을 버리지 않고 그 문법 안에서 말한다.</p>
+
+    <h3>② 왕이 서 있는 자리에서 시작하기</h3>
+    <p><span class="c x">E</span> 에스더의 논변은 "팔려서"로 연다. 왕이 자신이 승인했다고 여기는 그 자리에서 출발해, 조서의 정확한 어휘를 인용함으로써 그가 속았음을 정중히 알린다. 세입 손실에 관한 반론을 미리 차단하고, 이 음모를 왕에 대한 모독으로 규정한다. 이 구성은 이 왕이 무엇에 반응하는지를 정확히 아는 사람의 것이다.</p>
+
+    <h3>③ 이름을 대지 않는 백성</h3>
+    <p><span class="c t">G</span> 에스더는 끝까지 자기 민족의 이름을 말하지 않고, 왕도 묻지 않는다. 이 침묵이 두 결을 낳는다. 하나는 청의 사적인 성격을 부각하는 것이다. 그 백성의 중요성은 에스더가 그들에게 속했다는 데 있고, 다른 것은 왕에게 무의미하다. 다른 하나는 왕을 향한 조롱이다. 하만이 계획을 올릴 때 대상을 감춘 채 승인했듯이, 이제 그를 매다는 순간에도 왕은 가장 기초적인 사실을 확인하지 않는다.</p>
+
+    <h3>④ 자기가 세운 것에 걸리다</h3>
+    <p><span class="c x">E</span> 하만은 자기 뒤뜰에 세운 기둥으로 정죄된다. <span class="c t">G</span> 말의 착상도, 나무의 착상도 그의 것이었다. 남을 끌어내리며 자기 영광을 얻으려던 계획이 정확히 뒤집혀 돌아오는 이 구조가, 이 책이 세계를 읽는 문법이다. "그가 웅덩이를 파 만듦이여 자기가 만든 함정에 빠졌도다"(시 7:15)는 지혜의 명제가 서사의 몸을 입는다.</p>
+
+    <h3>⑤ 오해가 처형이 되는 세계</h3>
+    <p><span class="c x">E</span> 하만은 짓지 않은 죄로 죽는다. 그가 왕후를 범하려 한 것은 아니었다. 이 아이러니를 이 책은 지우지 않는다. <span class="c f">M</span> 왕은 자기 결정과 눈앞의 사태를 잇지 못한 채 책임질 한 사람의 이름만을 원하고, 취기 속에서 충동적으로 판결한다. 정의가 이뤄지되 정의의 절차를 밟아 이뤄지지는 않는다는 이 서술이, 제국의 사법을 향한 이 책의 시선을 마지막으로 한 번 더 보여 준다.</p>
+
+    <h3>⑥ 진정되되 풀리지 않다</h3>
+    <p><span class="c f">M</span> "왕의 노가 그치니라"는 2:1의 어법을 되불러 온다. 두 경우 모두 징벌이 왕을 진정시키되 문제를 해결하지 못한다. 하만이 죽어도 조서는 살아 있다. 이 장의 승리가 완결이 아님을 마지막 한 절이 조용히 알리며, 8장의 물음을 연다. 사람은 매달 수 있어도 기록된 말은 어떻게 하는가.</p>
+
+    <div class="back"><a href="./ch06.html">← 6장 심층연구</a> · <a href="./ch08.html">8장 심층연구 →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 에스더 7장 심층 연구 — 개관 + 장별 심층연구 구조.<br>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Berlin·Levenson·Bush·Berg·Laniak 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

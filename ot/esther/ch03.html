@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에스더 3장 심층 연구 — 부르 곧 제비</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump span.soon{display:block;text-align:center;padding:.34rem 0;border:1px dashed rgba(255,255,255,.14);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#6f8299}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">에스더 3장 심층 연구</div>
+  <div class="brand-sub">부르 곧 제비</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <span class="soon" aria-disabled="true" title="에스더 1장 준비 중">1</span>
+    <a href="./ch02.html" aria-label="에스더 2장으로 이동">2</a>
+    <a href="./ch03.html" aria-current="page" aria-label="에스더 3장 현재 페이지">3</a>
+    <a href="./ch04.html" aria-label="에스더 4장으로 이동">4</a>
+    <a href="./ch05.html" aria-label="에스더 5장으로 이동">5</a>
+    <a href="./ch06.html" aria-label="에스더 6장으로 이동">6</a>
+    <a href="./ch07.html" aria-label="에스더 7장으로 이동">7</a>
+    <a href="./ch08.html" aria-label="에스더 8장으로 이동">8</a>
+    <a href="./ch09.html" aria-label="에스더 9장으로 이동">9</a>
+    <a href="./ch10.html" aria-label="에스더 10장으로 이동">10</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 하만의 승진 (3:1)</a>
+  <a class="lv1" href="#s2">2. 꿇지도 절하지도 (3:2–4)</a>
+  <a class="lv1" href="#s3">3. 매우 노하더니 (3:5–6)</a>
+  <a class="lv1" href="#s4">4. 부르 곧 제비 (3:7)</a>
+  <a class="lv1" href="#s5">5. 한 민족이 있는데 (3:8–11)</a>
+  <a class="lv1" href="#s6">6. 조서와 어지러운 성 (3:12–15)</a>
+  <a class="lv1" href="#s7">7. 상호 참조 총람</a>
+  <a class="lv1" href="#s8">8. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">הִפִּיל פּוּר הוּא הַגּוֹרָל</div>
+    <h1>에스더 3장 · 부르 곧 제비</h1>
+    <p class="sub">한 사람이 무릎을 꿇지 않자, 한 민족의 날짜가 제비로 정해진다. 개인의 모욕이 조서가 되어 제국의 파발에 실린다.</p>
+    <p class="meta">3:1–2a 하만의 승진 · 3:2b–4 부복 거부 · 3:5–6 분노 · 3:7 제비 · 3:8–11 연설과 반지 · 3:12–15 조서 · 다섯 주석 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Macchi IECOT 2018</span>
+    <span><span class="c t">G</span> Grossman 2011</span>
+    <span><span class="c b">L</span> Llewellyn-Jones 2023</span>
+    <span><span class="c h">C</span> Carruthers 2008</span>
+    <span><span class="c x">E</span> Bechtel 2002</span>
+    <span><span class="c k">B</span> Baldwin <span style="color:#a99">(OCR 보류)</span></span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 서고 정본 데이터(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). Fox·Berlin·Levenson·Bush·Berg 등은 다섯 주석의 재인용으로만 표기한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">1장의 골격을 그대로 되풀이하는 장.</div>
+    </div>
+    <p><span class="c f">M</span> 3장은 와스디의 몰락과 같은 방식으로 짜인다. 한 인물이 거의 왕에 준하는 지위로 올라가고(3:1–2a), 모르드개의 거부가 그 지위를 흔들며(3:2b–4), 분노가 일되 즉시 행동으로 옮겨지지 않고(3:5–6) 자문을 거친다(3:7, 이번에는 제비). 이어 굴욕을 씻기 위한 연설이 왕에게 올려지고(3:8–9), 왕이 비준하며(3:10–11), 조서가 반포되고(3:12–15a), 반응으로 닫힌다(3:15b).</p>
+    <table>
+      <caption>표 1. 1장과 3장의 병행</caption>
+      <thead><tr><th>단계</th><th>1장</th><th>3장</th></tr></thead>
+      <tbody>
+        <tr><td class="head">승격과 영예</td><td>1:1–9 왕의 과시</td><td>3:1–2a 하만의 승진</td></tr>
+        <tr><td class="head">충성의 거부</td><td>1:10–12a 와스디의 거부</td><td>3:2b–4 모르드개의 거부</td></tr>
+        <tr><td class="head">분노</td><td>1:12b 왕의 진노</td><td>3:5–6 하만의 진노</td></tr>
+        <tr><td class="head">자문</td><td>1:13–15 전문가 자문</td><td>3:7 제비 자문</td></tr>
+        <tr><td class="head">왕을 향한 연설</td><td>1:16–20 므무간</td><td>3:8–9 하만</td></tr>
+        <tr><td class="head">왕의 승인</td><td>1:21</td><td>3:10–11</td></tr>
+        <tr><td class="head">조서 반포</td><td>1:22</td><td>3:12–15a</td></tr>
+        <tr><td class="head">반응</td><td>—</td><td>3:15b 왕과 하만은 마시고, 수산은 어지럽고</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c f">M</span> 차이도 뚜렷하다. 1장에서 모욕당한 이는 왕이고 해법을 제안한 이는 신하였는데, 3장에서는 모욕당한 자가 곧 연설자다. 자문의 상대도 전문가에서 제비로 바뀐다.</p>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">הָאֲגָגִי</div>
+      <div class="eyebrow">3:1</div>
+      <h2>1. 하만의 승진</h2>
+      <div class="gloss">하아가기 — 아각 사람이라는 표지</div>
+    </div>
+
+    <div class="vs" id="v1">
+      <span class="ref">3:1 — 어긋난 기대</span>
+      <p>"그 후에 아하수에로 왕이 아각 사람 함므다다의 아들 하만의 지위를 높이 올려 함께 있는 모든 대신 위에 두니"(3:1). <span class="c x">E</span> 암살 음모를 밝힌 뒤이니 모르드개의 승진을 기대하는 것이 자연스럽다. 히브리어에서도 우리말에서도 "그 후에"라는 구문이 그 기대를 부추긴다. "아하수에로 왕이 … 지위를 높이 올려"까지 읽으면 다음에 올 이름을 확신하게 된다. 그런데 문장은 모르드개가 아니라 그때까지 알려지지 않은 하만을 세운다.</p>
+      <p><span class="c t">G</span> 서술자가 독자를 의도적으로 오도해 놀라움을 극대화한다. 이 놀라움은 이 책 특유의 아이러니 구조와 이어진다. 보상을 기대하게 만든 긴장이 6장에서 가장 뜻밖의 방식으로 풀리며, 하만은 자기 굴욕을 대가로 모르드개에게 상을 입히게 된다.</p>
+      <p><span class="c f">M</span> "그 후에"라는 표현은 이 책에서 2:1에도 쓰이는데, 두 경우 모두 앞 사건에서 뒷 사건이 나오는 자리에 놓인다. 왕을 죽이려는 음모를 밝힌 일은 누군가의 영예로 이어져야 마땅한데, 영예를 받는 이가 모르드개가 아니라는 사실이 제국 권력의 기이함과 부당함을 드러낸다.</p>
+      <p><strong>어휘의 결.</strong> <span class="c f">M</span> 세 표현이 겹쳐 이 승진의 성격을 짚는다. 왕이 하만을 "높이 올려"(<span class="hw">גִּדַּל</span>), "존귀하게 하여"(<span class="hw">וַיְנַשְּׂאֵהוּ</span>), 그의 "자리"(<span class="hw">כִּסֵּא</span>)를 대신들 위에 두었다. <span class="hw">כִּסֵּא</span>는 이 책에서 왕의 자리에만 쓰이는 낱말이라(1:2; 5:1) 그의 지위가 거의 왕에 준함을 알린다. 서사는 뒤에 이 인물의 오만을 놀리고(5:11; 6장), 반전 이후 같은 낱말들을 유다인과 모르드개에게 돌린다(9:3–4).</p>
+      <p><span class="c b">L</span> "하만"이라는 이름은 에스더서 밖의 아케메네스기 문헌에 나오지 않는다. 페르세폴리스 문서고에 자주 등장하는 엘람 신 훔반(하만반)과 이어질 가능성이 있다. 이 승진의 이유는 설명되지 않으며, "모든 대신 위에" 둔 자리는 물리적 옥좌라기보다 회의석의 상석으로 이해하는 편이 낫다. 크세노폰은 키루스가 함께 앉고 서는 자리로 총애를 공개적으로 표시하되 그 영예를 영구히 주지 않았고, 선행으로 상석에 오를 수 있듯 잘못으로 강등될 수도 있음을 분명히 했다고 전한다(Cyr. 8.4.5). 페르시아 궁정은 귀족을 실권에서 떼어 놓고 의전과 서열의 세목에 몰두하게 만드는 정치 장치였다.</p>
+    </div>
+
+    <div class="vs" id="v1b">
+      <span class="ref">3:1 — 아각 사람</span>
+      <p><span class="c x">E</span> 하만의 족보가 현대 독자에게는 흘려 읽히기 쉬우나 잠시 멈출 값어치가 있다. "아각 사람"이라는 지목은 이스라엘 왕정 초기의 쓰라린 기억을 불러온다. 사무엘상 15장은 사울이 아말렉 왕 아각을 처리하라는 명령을 어긴 일과, 그 때문에 왕위를 잃게 되는 신탁을 전한다. 모르드개가 사울과 같은 베냐민 사람으로 소개된 것(2:5)과 겹쳐 읽으면, 두 사람 사이에 집안의 내력에서 비롯한 앙금이 있을 이유가 충분해진다. 왕이 모르드개 대신 하만을 높인 일은 그 상처에 모욕을 더한다.</p>
+      <p><span class="c f">M</span> 마소라 본문에서 "아각 사람"은 하만과의 대결이 유다인 전체의 운명에 걸릴 때마다 등장하며 "유다인의 대적"(<span class="hw">צֹרֵר הַיְּהוּדִים</span>)과 나란히 놓인다(3:10; 8:1; 9:10·24). 아말렉과 그 왕 아각을 이스라엘의 원형적 대적으로 삼는 전승(출 17:8–16; 민 24:7·20; 삼상 15장)이 그 배경이다. 유다인들이 재산에 손을 대지 않는 9:10·15·16의 서술은 사울의 실책을 피하는 장면으로 읽힌다.</p>
+      <div class="caveat"><span class="tt">본문비평 — 아각 사람인가, 교만한 자인가</span><span class="c f">M</span> 두 그리스어 역본(LXX·AT)에는 아각 인유가 없고, 하만은 3:1에서만 βουγαῖος("부게오스")로 불린다. Macchi는 이 그리스어 낱말이 호메로스 등에서 "허풍선이·교만한 자"를 뜻한다는 점을 들어, 마소라 이전 히브리어 본문이 3:1에서 하만을 <span class="hw">הַגֵּאִי</span>("교만한 자")로 불렀고 후대 필사자가 <span class="hw">א</span>와 <span class="hw">ג</span>의 자리를 바꾸며 <span class="hw">הָאֲגָגִי</span>로 옮겨 갔다고 재구성한다. 3:1에서 한번 이 교체가 일어난 뒤, 3:10; 8:3·5; 9:24에 "아각 사람"이 확산되고 "유다인의 대적"과 짝지어졌다는 것이다. 이 재구성이 옳다면 아말렉 주제는 이 책의 원래 축이라기보다 후대 편집이 성경 전승과의 연결을 만들어 낸 결과가 된다. <span class="c b">L</span> Llewellyn-Jones도 9장 전체를 마카비기의 삽입으로 보아 이 결과 통한다.</div>
+      <p><strong>여호야긴 인유.</strong> <span class="c t">G</span> Grossman은 승진의 어법이 열왕기 결말을 되울린다고 본다. 바벨론 왕 에윌므로닥이 여호야긴을 옥에서 내어 "그의 지위를 바벨론에 그와 함께 있는 모든 왕의 지위보다 높이고" 그 죄수의 의복을 갈아입힌 대목이다(왕하 25:27–30). 그 장면은 예레미야가 예고한 칠십 년 한복판에서 회복의 첫 기미를 알리는 신호였다. 이 인유가 의도된 것이라면, 하만의 승진은 그 신호의 대척점에 놓인다. 수산의 유다인들이 귀환의 부름에 응하지 않은 자리에 "하만 같은 악한 왕"이 세워졌다는 읽기(b. Sanh. 97b)가 그 결을 잇는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">לֹא יִכְרַע וְלֹא יִשְׁתַּחֲוֶה</div>
+      <div class="eyebrow">3:2–4</div>
+      <h2>2. 꿇지도 절하지도</h2>
+      <div class="gloss">로 이크라 벨로 이쉬타하베 — 부복이라는 제도</div>
+    </div>
+
+    <div class="vs" id="v2">
+      <span class="ref">3:2 — 프로스퀴네시스</span>
+      <p>"대궐 문에 있는 왕의 모든 신하들이 다 왕의 명령대로 하만에게 꿇어 절하되 모르드개는 꿇지도 아니하고 절하지도 아니하니"(3:2). <span class="c f">M</span> 두 동사 <span class="hw">כרע</span>(카라, 꿇다)와 <span class="hw">חוה</span>(히쉬타펠, 엎드리다)는 프로스퀴네시스를 가리킨다. 성경에서 이 행위는 대개 이스라엘의 하나님 앞에서 이뤄지고 다른 신 앞에서는 거부되지만, 지체 높은 사람에게 하는 정당한 존경의 표시이기도 하다(창 23:7·12; 33:3; 삼상 24:8; 룻 2:10).</p>
+      <p><span class="c f">M</span> 프로토에스더와 달리 마소라 본문은 부복 의무를 모든 사람이 아니라 "대궐 문에 있는 왕의 신하들"에게 한정한다. 이 편집적 한정이 중요하다. 문제가 생기는 까닭은 모르드개가 제국 행정의 일원으로 "대궐 문에" 있기 때문이다.</p>
+      <p><span class="c b">L</span> 페르시아의 문화 체계에서 위계와 지위는 비언어적 소통, 특히 군주나 그 대리인을 향한 경의의 몸짓으로 표현되었다. 헤로도토스는 일상의 인사법을 전한다. 동등한 사이는 입을 맞추고, 지위 차가 작으면 뺨에 하며, 차가 크면 낮은 쪽이 몸을 굽혀 경배한다(1.134). 궁정에서는 이 일상의 몸짓이 부풀려져 의례가 되었다. 페르세폴리스 보물창고 부조 중앙의 신하는 몸을 굽히고 손을 입가에 올리는 동작을 취하는데, 근동 여러 궁정의 인사와 같은 계열이다.</p>
+      <p><span class="c b">L</span> 그리스인에게 이 몸짓은 신 앞에서나 합당한 것이었다. 사람 앞에 엎드리는 일은 <em>엘레우테리아</em>(자유) 관념 자체를 흔들었다. 헤로도토스는 스파르타인 불리스와 스페르키스가 수산의 알현에서 호위병이 머리를 눌러도 끝내 엎드리지 않은 일을 전한다(7.136). 주전 327년 알렉산드로스가 자기 궁정에 프로스퀴네시스를 도입하려다 마케도니아인들의 반발을 산 사건도 같은 오해의 계보에 있다.</p>
+    </div>
+
+    <div class="vs" id="v34">
+      <span class="ref">3:3–4 — 날마다 권하되</span>
+      <p>"대궐 문에 있는 왕의 신하들이 모르드개에게 이르되 너는 어찌하여 왕의 명령을 거역하느냐 하고 날마다 권하되 모르드개가 듣지 아니하고 자기는 유다인임을 알렸더니 그들이 모르드개의 일이 어찌 되나 보고자 하여 하만에게 전하였더라"(3:3–4). <span class="c x">E</span> 모르드개가 부복을 거부할 때 그는 실제로 법을 어기고 있다. 3절의 물음이 그 점을 짚는다. 동기가 무엇이든 그의 거부는 시민 불복종이며, 왕의 직접 명령을 어긴다는 사실이 판돈을 크게 올린다.</p>
+      <p><strong>요셉 인유.</strong> <span class="c f">M</span> "날마다 권하되 모르드개가 듣지 아니하고"라는 어법은 보디발의 아내가 요셉에게 동침을 요구하던 대목과 겹친다(창 39:10, "여인이 날마다 요셉에게 청하였으나 요셉이 듣지 아니하여"). <span class="c t">G</span> 이 인유는 모르드개의 거부를 요셉의 거부와 도덕적으로 나란히 놓아 서술자의 평가를 은근히 드러낸다. <span class="c f">M</span> 동시에 이 표현은 궁정 신하들이 가한 압력이 실제였음을 시사하며, 헬레니즘 제국 안에서 정치·사회 활동을 하던 당대 유대인들이 지배 문화의 관행에 맞추라는 압력을 받던 정황을 되비춘다.</p>
+      <p><strong>거부의 이유.</strong> 본문은 이유를 밝히지 않고 3:4에서야 유대인 됨과 연결한다. <span class="c x">E</span> Bechtel은 가능한 설명들을 점검한다. 집안 내력의 앙금은 본문 안의 유일한 단서다. 우상숭배 거부라는 종교적 설명은 두 겹으로 약하다. 본문이 우상을 언급하지 않으며, "꿇어 절하다"에 해당하는 낱말들이 언제나 예배를 뜻하지도 않는다(삼하 14:4; 룻 2:10). 단순한 고집이라는 설명도 남는다. 서술자는 독자를 궁금한 채로 둔다. 확실한 것은 둘뿐이다. 모르드개의 태도는 비타협적이고, 그 태도에는 심각한 결과가 따른다.</p>
+      <p><span class="c f">M</span> Macchi는 헬레니즘 문화 속 유대교라는 지적 맥락에서 이유를 찾는다. 그리스 문헌에서 페르시아 앞의 부복은 그리스인이 결코 하지 않는 일로 그려지며, 그 거부는 종교적 이유이자 자유와 독립이라는 정체성의 방어로 설명된다. 히다르네스에게 스파르타인들이 한 말이 그 결을 요약한다. 자유를 맛본 적이 없는 이는 그것이 단맛인지 쓴맛인지 모른다는 것이다(7.135). 모르드개는 그리스인처럼 처신하며, 편집자들은 이로써 유대인과 그리스인이 자유의 이상과 일부 종교적 가치를 공유함을 시사한다.</p>
+      <p><span class="c t">G</span> Grossman은 장면의 그림 자체를 다시 그린다. 중세 이래의 삽화들은 모두가 엎드린 가운데 모르드개만 꼿꼿이 선 모습을 그리지만, 본문은 하만이 신하들의 귀띔을 받기까지 이를 알아채지 못했다고 말한다(3:4–5). Fox는 이를 하만의 성격으로 읽지만(재인용), 모르드개의 처신에 관한 정보로 읽을 수도 있다. 그는 하만이 지날 때마다 자리를 피하는 식으로 공공연한 대결을 피했고, 신하들이 그 회피를 알아채고 나서야 사태가 드러났다는 읽기다.</p>
+      <p><span class="c f">M</span> "모르드개의 일이 어찌 되나 보고자 하여"는 그의 논변이 법적으로 유효하게 받아들여질지를 본다는 뜻이다(<span class="hw">דָּבָר</span>가 "서다"는 어법, 신 19:15; 렘 44:29). 구문상 "자기는 유다인임을 알렸더니"는 모르드개의 해명일 수도, 신하들이 하만에게 전한 내용일 수도 있다. 어느 쪽이든 그는 2:10·20에서 에스더에게 금한 바로 그 일을 한다. 제국 통치 체계에 참여하는 유대인이 자기 백성의 가치를 어기지 않고서는 정체를 감출 수 없음을 이 장면이 보여 준다.</p>
+      <div class="note"><span class="tt">수용사</span><span class="c h">C</span> 모르드개의 거부는 오랫동안 우상숭배 거부로 읽혔다. 그리스어 첨가문의 모르드개 기도와 에스더 랍바가 그 흐름을 열었고, 에스더 랍바는 하만이 옷에 형상을 달아 그에게 절하는 자가 곧 형상에게 절하게 했다고 전한다(VII). 근대 초 유럽에서 이 장면은 군주권과 신앙 사이의 긴장을 다루는 자리가 되었다. 독일의 브렌츠는 군주의 명예를 앞세워 모르드개가 교만으로 죄를 지은 듯 보인다고 적었다가, 그의 행위를 육의 일이 아니라 영의 일로 판단해야 한다고 고쳐 세웠다. 영국의 개신교 설교자들은 이 장면을 메리 여왕 시대 순교자들의 거부와 겹쳐 읽었고, 조너선 에드워즈는 교황과 성직자에게 경배하기를 거부한 "하나님의 참된 사역자들"과 이었다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">וַיִּמָּלֵא הָמָן חֵמָה</div>
+      <div class="eyebrow">3:5–6</div>
+      <h2>3. 매우 노하더니</h2>
+      <div class="gloss">바임말레 하만 헤마 — 분노가 민족으로 번지다</div>
+    </div>
+
+    <div class="vs" id="v5">
+      <span class="ref">3:5 — 헤마로 가득 찬 하만</span>
+      <p>"하만이 모르드개가 무릎을 꿇지도 아니하고 절하지도 아니함을 보고 매우 노하더니"(3:5). <span class="c f">M</span> "분노로 가득 찼다"는 표현은 페르시아 고관의 전형적 반응이다(1:12·18; 2:21; 7:7). 다만 왕이 징벌 조치 뒤에 진정되는 것과 달리(2:1; 7:10), 하만의 분노는 말살 조서로도 가라앉지 않는다. 5:9에서 그는 여전히 화가 나 있다.</p>
+      <p><span class="c x">E</span> 본문 자체가 비교를 부추긴다. "노"(<span class="hw">חֵמָה</span>, 헤마)라는 낱말이 마지막으로 나온 곳은 1:12, 와스디가 오기를 거부해 "왕이 진노하여 마음이 불 붙는 듯하더라"는 대목이다. 균형을 처음 무너뜨려 이 이야기를 움직인 그 격정이 여기 되돌아온다. 이름 자체가 소리와 격노로 가득 찬 인물이라는 말놀이도 함께 읽힌다.</p>
+    </div>
+
+    <div class="vs" id="v6">
+      <span class="ref">3:6 — 모르드개만 죽이는 것이 부족하다고</span>
+      <p>"그들이 모르드개의 민족을 하만에게 알리므로 하만이 모르드개만 죽이는 것이 부족하다고 생각하고 아하수에로의 온 나라에 있는 유다인 곧 모르드개의 민족을 다 멸하고자 하더라"(3:6). <span class="c x">E</span> 하만의 분노가 지닌 규모는 놀랍다. 한 개인의 무례에 대한 해법으로 집단 학살을 제안하는 일에 독자를 준비시킬 만한 것은 없다. 그럼에도 앞선 서사에 빵부스러기처럼 떨어진 단서들이 있다. 1·2장의 페르시아 궁정을 특징짓던 것이 곧 비례의 상실이었다. 이 궁정에서는 사람들이 마땅한 것보다 훨씬 적게 혹은 훨씬 많이 받는 일이 되풀이되었다. 이제 하만 앞에서 아하수에로는 절제의 화신처럼 보인다.</p>
+      <p><span class="c f">M</span> 6절은 A-B-A 구성으로 모르드개의 백성이 곧 유다인임을 못 박는다. "모르드개의 민족을 알리므로 — 모든 유다인을 멸하고자 — 모르드개의 민족." 1장의 조서가 와스디의 반역이 모든 아내에게 번지는 것을 막으려 했듯(1:17–18), 이 조서는 이 자유로운 백성의 다른 구성원이 모르드개의 거부를 되풀이하는 것을 막으려 한다. "손을 들어 치는 것"(<span class="hw">שְׁלֹחַ יָד</span>)이라는 표현은 환관들이 왕을 치려 한 일(2:21; 6:2)과 하만이 유다인을 치려 한 일(3:6; 8:7)을 잇고, "부족하다"(<span class="hw">בזה</span>, 경멸하다)는 1:17에서 여인들의 경멸을 말하던 낱말이라 하만의 명예 문제가 걸려 있음을 짚는다.</p>
+      <p><span class="c t">G</span> 남는 물음이 있다. 모르드개 개인의 처형을 <em>대신하여</em> 전 민족에 대한 조서가 오는 까닭은 무엇인가. 하만의 권세에도 불구하고 궁정에서 모르드개가 차지한 자리가 그를 직접 치기 어렵게 만들었을 수 있다. "부족하다고 생각하고"라는 어법은 정치적·실무적 난관을 함축하며, 유다인 전체의 말살이 대궐 문에서 이 유다인을 치우는 가장 확실한 길로 하만에게 보였다는 읽기가 가능해진다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">פּוּר הוּא הַגּוֹרָל</div>
+      <div class="eyebrow">3:7</div>
+      <h2>4. 부르 곧 제비</h2>
+      <div class="gloss">푸르 후 하고랄 — 니산월에 던져진 운명</div>
+    </div>
+
+    <div class="vs" id="v7">
+      <span class="ref">3:7 — 니산월의 제비</span>
+      <p>"아하수에로 왕 제십이년 첫째 달 곧 니산월에 무리가 하만 앞에서 날과 달에 대하여 부르 곧 제비를 뽑아 열두째 달 곧 아달월을 얻은지라"(3:7). <span class="c x">E</span> 하만은 격노하면서도 매우 체계적인 사람이다. 어쩌면 그 점이 그를 위험하게 만든다. 그는 이름 없는 점술가들을 불러 "대량 학살에 길한 날"을 정한다(Levenson 재인용). 왕에게 제안을 올릴 길일을 먼저 찾지 않는다는 점을 눈여겨볼 만하다. 그는 그 일의 성공을 이미 확신하고 있어, 제비는 학살 자체의 날짜를 정하는 데 던져진다.</p>
+      <p><span class="c f">M</span> 마소라 본문에서 제비의 목적은 명시되지 않고 3:12–13이 그것을 함축한다. 프로토에스더에서는 제비 던지기가 왕의 승인 뒤에 놓였는데, 프로토마소라 편집자들이 이를 앞으로 옮겨 1:13–15와 같은 "전문가 자문"의 자리를 만든 듯하다. 결정을 위해 제비를 던지는 관행 자체는 성경에도 흔하다(레 16:8–10; 민 26:56; 욜 3:3; 욘 1:7; 대상 25:8 이하). 마소라 본문은 이 행위의 점술적·신학적 성격을 말하지 않되, 결과가 유다인에게 열한 달의 여유를 남긴다는 점에서 하나님의 우호적 개입을 암시하는 듯하다.</p>
+      <p><span class="c b">L</span> "부르"라는 낱말은 아카드어 <em>푸루</em>("던지다")에서 온 것으로, 메소포타미아의 제비 점술 증거는 풍부하다. 살만에셀 3세 치세의 한 비문은 "내 삼십일년에 나는 아슈르와 아닷 앞에서 제비를 던졌다"고 적어 국사의 결정에도 제비가 쓰였음을 보여 주고, 이아할리라는 관리의 이름이 새겨진 점토 정육면체 제비가 실물로 남아 있다. Llewellyn-Jones는 마소라 본문의 "부르"라는 낱말 자체를 마카비기의 삽입으로 보아 9장(특히 9:24–26)의 삽입을 예고하는 표지로 읽는다. <span class="c f">M</span> Macchi도 이 낱말이 9:24–26 이후에 3:7에 들어와 축제 이름을 서사에 연결했다고 본다.</p>
+      <p><strong>아키투와 운명의 결정.</strong> <span class="c t">G</span> Grossman은 니산월이라는 날짜에 무게를 둔다. 바벨론에서 새해 축제 아키투는 첫째 달 니산의 열이틀에 걸쳐 열렸고, 마르둑 숭배와 결합된 이 축제에서 왕은 신전에서 왕권 표지를 벗고 땅에 엎드려 자신이 죄를 짓지 않았음을 고백했다. 그리고 고대 바벨론인에게 새해는 한 해의 운명이 결정되는 때였다. 마르둑 신상이 제자리로 돌아온 뒤 제사장들은 그해에 일어날 일을 알아보려 제비를 던졌다. 하만이 첫째 달에 제비를 던진 것은 이 의례의 일부였을 수 있으며, "하만 앞에서" 던졌다는 어법은 던진 이가 하만이 아닌 다른 사람(제사장)이었음을 함축한다.</p>
+      <p><span class="c t">G</span> 이교의 제비 관행이 전제하는 것은 신들이 한 해의 처음에 길한 날과 벌의 날을 정해 둔다는 관념이다. 아달월 십삼일이 나왔을 때 하만은 그날이 징벌의 날로 표시되었다고 믿었다. 실제로 그날은 징벌의 날이 되었으되, "도리어" 그 징벌은 이스라엘의 대적에게 돌아갔다(9:1). 겉으로 읽으면 제비는 사소한 사건이고 이 책은 세속의 이야기로 보인다. 제비와 그 결과를 깊이 들여다보면 두 세계관의 충돌이 드러난다. 축제의 이름을 하만의 제비에서 따온 것은 그래서 온당하다.</p>
+      <p><span class="c t">G</span> 서술자가 제비의 <em>결과 날짜</em>를 여기서 밝히지 않는다는 점도 짚어 둘 만하다. 아달월 십삼일이라는 정확한 날은 하만의 조서를 인용하는 3:13에서야 나온다. 독자의 시선이 정확한 날보다 "열두째 달", 곧 가능한 가장 먼 달에 머물게 하려는 배치일 수 있고, 결과를 비워 둠으로써 제비 던지기 자체에 초점을 모으는 배치일 수도 있다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">יֶשְׁנוֹ עַם־אֶחָד</div>
+      <div class="eyebrow">3:8–11</div>
+      <h2>5. 한 민족이 있는데</h2>
+      <div class="gloss">예쉬노 암-에하드 — 반쪽 진실로 짜인 연설</div>
+    </div>
+
+    <div class="vs" id="v8">
+      <span class="ref">3:8 — 흩어져 거하는 한 민족</span>
+      <p>"하만이 아하수에로 왕에게 아뢰되 한 민족이 왕의 나라 각 지방 백성 중에 흩어져 거하는데 그 법률이 만민의 것과 달라서 왕의 법률을 지키지 아니하오니 용납하는 것이 왕에게 무익하니이다"(3:8). <span class="c x">E</span> 왕 앞에서 펼치는 하만의 논변은 왜곡과 조작의 승리다. 첫마디부터 불안을 심는 계산이 들어 있다. "한 민족"이 온 지방에 "흩어져" 있다는 진술은 그 자체로는 해로울 것이 없다. 그다음의 정보가 그것을 해롭게 만든다. 법률이 다르고 왕의 법률을 지키지 않는다는 주장이 붙는 순간, "흩어져"는 왕국 전체에 침투했다는 뜻이 되고 "거하는데"에 담긴 구별은 스스로를 지배자보다 높이 여겨 동화를 거부한다는 암시가 된다.</p>
+      <p><span class="c f">M</span> 므무간이 그랬듯 하만도 한 개인의 거부라는 구체적 문제를 일반 원리와 전면적 조치로 옮긴다. 그는 자신을 향한 부복 거부도, 문제의 민족이 누구인지도 밝히지 않은 채 "한 민족"이라고만 부른다. 이로써 그는 왕의 가장 충직한 신하(2:21–23)이며 왕이 은혜를 입은 자(6:3)의 백성을 치도록 군주를 속인다. 아이러니는 되돌아온다. 6:6에서 왕이 영예를 받을 자가 누구인지 밝히지 않은 채 하만에게 방법을 묻고, 하만은 같은 방식에 속는다.</p>
+      <p><strong>반쪽 진실의 구조.</strong> <span class="c f">M</span> Fox 계열은 하만이 참인 진술("흩어져 거한다")에서 시작해 절반의 진실("법률이 다르다")을 거쳐 거짓("왕의 법률을 지키지 않는다")으로 나아간다고 정리한다(재인용). Macchi는 세 진술 모두가 반쪽 진실이라고 본다. 흩어짐과 구별은 유배의 두 결과이므로 2:5–7과 어긋나지 않되, 편집자들은 에스더와 모르드개가 정체를 감출 수 있었다는 서술로 동화가 일어나기도 했음을 함축하며, 페르시아기에 유대인이 고향에 재정착한 사실을 담은 성경 본문도 알고 있었다. 모르드개 한 사람이 왕명을 어겼다는 사실이 유다인이 늘 왕의 법을 어긴다는 뜻이 되지도 않는다. 제국법과 민족법의 공존은 페르시아기와 헬레니즘기에 흔한 일이었고, 그 충돌을 민족 말살로 푸는 것은 극단적인 해법이다.</p>
+      <p><span class="c f">M</span> 몇 문장 안에 편집자들은 고대에 이미 유통되던 특정 집단 낙인찍기의 언설을 압축해 놓았다. 반쪽 진실로 채우고, 피해자에게서 얼굴을 지우고, 다수와 다르다고 규정하고, 위험하다고 제시하는 방식이다. 유대 율법의 특수성을 겨눈 비판은 주전 2세기 후반 이후 그리스 문헌에 널리 나타나며, 마카비 문헌은 그런 정치적 의도를 안티오코스 4세에게 돌린다(1마카 1:41–64; 2마카 6:1–11).</p>
+      <div class="note"><span class="tt">수용사</span><span class="c h">C</span> 하만의 고발은 시대마다 유통되던 담론의 저장고가 되었다. 중세 유대 주석가들은 당대의 반유대 정서를 되비추었고, 게르소니데스는 흩어져 있으면서도 결속한 유대인이 당국의 손이 닿지 않는 곳에서 영향력을 쓸까 두려워한 것이 하만의 동기라고 읽었다. 16세기 영국의 존 스톡우드는 유대인을 향한 이 왜곡을 그리스도인 박해의 예표로 알레고리화하며 "우리도 그리스도의 신실한 종들을 향한 같은 중상을 듣는다 해도 놀랄 것이 없다"고 적었다. 18세기 이후에는 반대 방향의 독법도 나타나, 스티븐슨은 "그들 자신의 율법조차 사로잡혀 간 땅의 평안을 구하라 가르쳤다"며 불충성 고발을 정면으로 반박했고, 마크 윌크스는 같은 절을 본문으로 비국교도를 향한 반역 혐의를 논박하는 설교를 냈다.</div>
+    </div>
+
+    <div class="vs" id="v9">
+      <span class="ref">3:9 — 은 일만 달란트</span>
+      <p>"왕이 옳게 여기시거든 조서를 내려 그들을 진멸하소서 내가 은 일만 달란트를 왕의 일을 맡은 자의 손에 맡겨 왕의 금고에 드리리이다 하니"(3:9). <span class="c f">M</span> 여기 쓰인 <span class="hw">אבד</span>(피엘, 없애다)는 물리적 파괴를 반드시 함축하지 않고 지리적 이산을 뜻할 수도 있어(신 26:5; 렘 23:1; 사 27:13), 조서 본문의 노골적 어휘(3:13)보다 덜 잔혹하게 들린다. 왕을 설득하려 하만이 결과의 참혹함을 감추는 셈이다.</p>
+      <p><strong>동음이의의 문제.</strong> <span class="c x">E</span> Bechtel은 Berg의 관찰을 소개한다(재인용). "멸하다"(<span class="hw">אָבַד</span>)와 "종으로 삼다"(<span class="hw">עָבַד</span>)는 사실상 동음이의어다. 8절 끝의 "용납하는 것이"가 직역으로 "그들을 쉬게 두는 것이"라는 점을 함께 놓으면, 왕은 9절을 "그들을 <em>종으로 삼는</em> 조서를 내리소서"로 들었을 수 있다. 뒤이어 금전 제안이 붙는다는 점이 이 읽기를 더 그럴듯하게 만들고, 7:4에서 에스더가 "만일 우리가 노비로 팔렸더라면 내가 잠잠하였으리이다"라고 말하는 대목의 논리도 이 모호성으로 풀린다. 구두의 층위에는 모호함이 남지만 기록된 순간 그것은 사라진다. 이 책이 거듭 다루는 문서의 권능이라는 주제가 여기서 작동한다.</p>
+      <p><span class="c t">G</span> Grossman도 같은 자리를 짚되 결을 달리한다. 신명기 28:63–68에서 <span class="hw">אבד</span>는 땅에서 뽑히고 종으로 팔리는 일을 함께 담는다. 정복되어 노예가 된 백성은 백성으로 기능하기를 그치므로 그런 뜻에서 "멸망한" 것이다. 조서(3:13)의 명시적 어휘와 달리, 왕에게 올린 청원에는 이 흩어진 백성의 운명에 관한 모호한 한마디만 있다. 게다가 하만의 논변 전체가 왕에게 — 그리고 독자에게 — 경제적 손익 계산이라는 인상을 준다.</p>
+      <p><span class="c b">L</span> 하만이 제안한 액수의 규모는 놀랍다. 헤로도토스가 전하는 연간 조공은 메대가 은 사백오십 달란트, 수산이 삼백, 아르메니아가 사백, 리비아와 애굽이 각각 칠백, 바벨론이 최고액인 천 달란트였고, 제국 전체의 은·금·귀물 합계가 약 만 사천오백육십 달란트였다(3.95). 다리오 1세의 표준 도량으로 환산하면 하만의 뇌물은 은 삼백삼십여 톤, 제국 전체 세수에 육박하는 액수다. 아케메네스 행정에서 뇌물은 고질적 문제였고, 크세노폰은 가장 큰 뇌물이 고위직과 계약과 이권을 얻어 냈다고 적었다(Cyr. 8.8.13).</p>
+      <p><span class="c x">E</span> 학자들은 한 관리가 페르시아 연간 총생산의 삼분의 이에 해당하는 현금을 실제로 마련할 수 있었는지를 두고 다투었으나, 하만이 허세를 부렸을 가능성은 별로 다뤄지지 않았다. 왕이 그 돈을 물린 것으로 보이므로(3:11) 실제 보유 여부는 문제가 아니다. 분명한 것은 하나다. 이 과장된 액수는 하만이 모르드개를, 나아가 모든 유다인을 얼마나 미워하는지를 재는 눈금이다.</p>
+    </div>
+
+    <div class="vs" id="v1011">
+      <span class="ref">3:10–11 — 반지와 백지 위임</span>
+      <p>"왕이 반지를 손에서 빼어 유다인의 대적 곧 아각 사람 함므다다의 아들 하만에게 주며 이르되 그 은을 네게 주고 그 백성도 그리하노니 너의 소견에 좋을 대로 행하라 하더라"(3:10–11). <span class="c x">E</span> 이 지점에서 우리는 하만과 함께 왕의 결정을 기다리며, 하만과 함께 왕보다 많이 알고 있다. 하만은 여러 중요한 "세부"를 빼놓았고, 그중에는 그의 분노를 촉발한 사건의 서술이 있다. 지혜로운 왕이라면 사정을 물었을 것이고, 물었다면 형벌이 죄에 견주어 터무니없이 크다는 것을 알았을 것이다. 그는 묻지 않는다. 1장에서 와스디를 두고 그랬듯, 2장에서 후임을 찾을 때 그랬듯, 늘 남의 말을 따르는 왕이 잠깐의 숙고도 없이 조언을 받아들인다.</p>
+      <p><span class="c f">M</span> "그 은을 네게 주고"라는 답은 왕이 대금을 받아들인다는 뜻으로 읽을 수도 있고(7:4의 "팔려서"와 5:11의 하만의 부가 그 방향을 지지한다), 왕이 관대함으로 그 돈을 하만에게 돌려준다는 뜻으로 읽을 수도 있다. 헤로도토스가 전하는 뤼디아 사람 퓌티오스의 일화가 후자와 결이 같다. 크세르크세스는 거액의 헌납에 감사하며 그 돈을 돌려주었다(7.27–29).</p>
+      <p><strong>반지.</strong> <span class="c f">M</span> 반지를 빼어 줌으로써 왕은 왕권을 위임한다. 조서는 이 반지로 인쳐지며(3:12; 8:8·10), 하만의 몰락 뒤 이 반지는 새 통치자 모르드개에게 간다(8:2). 이 모티프는 요셉을 암시할 것이다. 창 41:42의 어법이 3:10 및 8:2와 거의 같다. 편집자들은 제국을 지혜롭게 다스릴 줄 아는 요셉·모르드개와, 해롭고 어리석은 결정만 내리는 하만을 나란히 놓는다.</p>
+      <p><span class="c x">E</span> 마지막 손질로 서술자는 하만의 이력을 다시 못 박는다. "유다인의 대적 곧 아각 사람 함므다다의 아들 하만에게." 그리고 11절 끝에서 왕은 백성 자체를 하만의 손에 넘긴다. "너의 소견에 좋을 대로 행하라." 하만의 관점에서는 모든 것이 갖춰진 셈이다. <span class="c f">M</span> 왕은 자기와 직접 관련된 일에서와 달리(1:21) 이 조서를 직접 챙기지 않고 총리에게 맡긴다. 나라의 일에 관여하지 않는 약한 인물의 상이 여기서 굳어진다.</p>
+      <p><span class="c b">L</span> 인장이 박힌 금·은·청동 반지는 아케메네스기 소아시아와 바벨로니아, 레반트 전역에서 출토된다. 소아시아 출토 인장 도상에는 그리스풍의 영향이 뚜렷하되 그 언어는 분명히 페르시아적이다. 페르시아인과 그리스인의 전투 장면에서 그리스인은 언제나 패배자로 그려진다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="heb">וְהָעִיר שׁוּשָׁן נָבוֹכָה</div>
+      <div class="eyebrow">3:12–15</div>
+      <h2>6. 조서와 어지러운 성</h2>
+      <div class="gloss">베하이르 슈샨 나보카 — 마시는 두 사람, 어지러운 도성</div>
+    </div>
+
+    <div class="vs" id="v12">
+      <span class="ref">3:12 — 각 지방의 문자와 각 민족의 언어로</span>
+      <p>"첫째 달 십삼일에 왕의 서기관이 소집되어 하만의 명령을 따라 왕의 대신과 각 지방의 관리와 각 민족의 관원에게 아하수에로 왕의 이름으로 조서를 쓰되 곧 각 지방의 문자와 각 민족의 언어로 쓰고 왕의 반지로 인치니라"(3:12). <span class="c x">E</span> 현대의 특급 우편에 견줄 속도와 효율로 조서가 필사되고 번역되어 발송된다. 이 서술은 1장을 정확히 되울린다. 그때의 조서는 남편이 자기 집을 주관하게 하라는 것이었다(1:22). 앞의 조서에 희극적 아이러니가 묻어 있었다면 이번 것은 죽음을 다룬다.</p>
+      <p><span class="c f">M</span> 12–15a는 잘 짜여 있다. 하만의 명령의 목적과 내용을 담은 13절을 그 유통 절차의 서술이 감싸고, 12–13aα와 14–15aα가 어휘와 뜻에서 짝을 이룬다. 수동형의 연쇄("소집되어", "쓰되", "맡겨")가 제국 기구의 비인격성을 부각한다. 책임의 소재는 두 겹으로 표시된다. 명령한 이는 하만이고("하만의 명령을 따라"), 제국의 책임도 깊이 걸려 있다("왕의 반지로 인치니라", "왕의 명령을 받들어").</p>
+      <p><span class="c b">L</span> 아케메네스 왕실은 행정 문서에 극도로 열심이었다. 고고학이 "보물창고"라 이름 붙인 대형 건물은 제국의 창고이자 수천 명의 관리가 일하던 사무 공간이었다. 애굽 아스완에서 아프가니스탄 박트라까지, 점토·파피루스·나무·뼈에 적힌 행정 문서가 남아 있다. 상 이집트에서 배 한 척을 수리하는 데 든 못의 수, 메뚜기 떼 탓에 흙벽돌 담을 쌓지 못한 사정까지 하나하나 기록되고 결재되어 중앙에 보고되었다. 수산은 그 행정의 심장으로, 사방의 도로가 이 도시의 관청에서 뻗어 나갔다.</p>
+      <p><span class="c f">M</span> 서기관이 각 지방의 문자로 사본을 쓰고, 사트라프와 각 지방의 총독, 각 민족의 관원에게 보내며, 역졸이 신속히 배포하는 이 그림은 그리스 사료가 전하는 제국 조직과 부합한다. 다언어 조서는 언어적으로 단일하지 않던 페르시아 세계에서 자연스럽고, 크세르크세스의 페르세폴리스 비문은 스스로를 "모든 언어를 쓰는 나라들의 왕"으로 부른다.</p>
+    </div>
+
+    <div class="vs" id="v1314">
+      <span class="ref">3:13–14 — 세 동사와 한 날</span>
+      <p>"이에 그 조서를 역졸에게 맡겨 왕의 각 지방에 보내니 열두째 달 곧 아달월 십삼일 하루 동안에 모든 유다인을 젊은이 늙은이 어린이 여인들을 막론하고 죽이고 도륙하고 진멸하고 또 그 재산을 탈취하라 하였고"(3:13). <span class="c x">E</span> 조서의 문서 형태에는 하만의 의도를 오해할 여지가 없다. 9절의 청원에서 "진멸"(<span class="hw">אבד</span>) 하나였던 것이 문서에서는 "죽이고 도륙하고"라는 겉보기에 잉여인 동사들을 앞세운다. 이것이 단순한 과잉인지 더 중요한 무엇인지 물을 만하며, 앞서 본 동음이의의 문제가 그 답을 준다. 구두의 층위에 남아 있던 모호함이 기록으로 사라진다.</p>
+      <p><strong>유월절 전야.</strong> <span class="c x">E</span> 유일하게 남은 아이러니는 비극적 아이러니다. 조서가 발송된 날은 "첫째 달 십삼일", 곧 유월절 전날이다(출 12:6; 레 23:5; Levenson 재인용). 본문은 이 아이러니를 강조하지 않되 날짜를 적는 것만으로 연결이 성립한다. 유다인 말살의 명령이 그들의 가장 큰 구원의 기념일 전야에 내려진 셈이다. 그 병치가 쓰라림을 낳는지 소망을 낳는지는 말하기 어렵다. <span class="c f">M</span> 마소라 본문이 이 날짜를 택한 것은 사건의 극적 성격을 부각한다. 유대인들이 유월절을 준비해야 할 시점에 멸절의 위협을 받는다.</p>
+      <p><strong>아달월 십삼일.</strong> <span class="c f">M</span> 이 날짜는 두 방향의 의미를 낳는다. 하나는 마카비 시대 유다인들이 주전 161년 아달월 십삼일 니가노르 장군의 군대와 맞선 위기를 되울린다는 것이고, 다른 하나는 명령과 시행 사이에 열한 달이라는 기이한 지연을 남긴다는 것이다. 이 지연은 소설적이면서 아이러니하다. 예고된 학살은 피해자에게 방어와 은신과 도피의 시간을 준다. 하만이 쓴 절차의 부조리와 그가 제국 체계에 걸었던 과신이 이로써 드러난다.</p>
+      <p><span class="c x">E</span> 조서의 철회 불가는 "아하수에로 왕의 이름으로 … 왕의 반지로 인치니라"로 강조되고, 다중 번역과 다중 문자가 오해의 여지를 없애며, 왕의 역졸이 닿지 못할 만큼 먼 지방도 없다. 벗어날 자가 없도록 젊은이와 늙은이, 어린이와 여인이 명시되고 재산 탈취까지 허락된다. 하만은 무엇보다 효율적이다.</p>
+    </div>
+
+    <div class="vs" id="v15">
+      <span class="ref">3:15 — 마시되, 어지럽더라</span>
+      <p>"역졸이 왕의 명령을 받들어 급히 나가매 그 조서가 도성 수산에도 반포되니 왕은 하만과 함께 앉아 마시되 수산 성은 어지럽더라"(3:15). <span class="c x">E</span> 장은 마지막 아이러니 한 획으로 닫힌다. 역졸들이 제국 각지를 도는 동안 조서는 가까운 곳에도 내려지고, 왕과 하만이 하루의 일과를 마치고 술자리에 앉는 동안 온 수산은 혼란에 빠진다.</p>
+      <p><span class="c f">M</span> 단락은 시작한 장소에서 닫힌다. 12절에서 서기관들이 수산에 소집되었고, 15절에서 조서가 그곳에 반포된다. 마지막 절반은 왕과 하만, 그리고 수산 백성의 반응을 나란히 놓아 궁정과 도성 사이의 간극을 드러낸다. 이 간극은 4:1 이하에서 모르드개의 통곡과 왕후의 무지로 이어진다.</p>
+      <p><span class="c t">G</span> "어지럽더라"(<span class="hw">נָבוֹכָה</span>)라는 낱말은 칠십인역에서 4:4의 왕후의 반응과 7:6의 하만의 반응에도 쓰인다. 하만이 유다인들에게, 그리고 에스더에게 준 충격이 끝내 그 자신에게 돌아온다는 "되갚음"의 감각을 번역이 만들어 낸다(Laniak 재인용).</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>7. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 2. 3장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">3:1</td><td>삼상 15장; 출 17:8–16; 민 24:7·20</td><td>아각과 아말렉 — 원형적 대적</td><td><span class="c x">E</span> <span class="c f">M</span></td></tr>
+        <tr><td class="head">3:1</td><td>왕하 25:27–30</td><td>"지위를 높이 올려" — 여호야긴의 승격</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">3:1</td><td>에 1:2; 5:1; 9:3–4</td><td><span class="hw">כִּסֵּא</span>·<span class="hw">גדל</span>·<span class="hw">נשׂא</span> — 승격 어휘의 반전</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">3:2</td><td>창 23:7·12; 33:3; 삼하 14:4; 룻 2:10</td><td>부복은 정당한 경의의 표시이기도 하다</td><td><span class="c f">M</span> <span class="c x">E</span></td></tr>
+        <tr><td class="head">3:4</td><td>창 39:10</td><td>"날마다 권하되 … 듣지 아니하고" — 요셉</td><td><span class="c f">M</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">3:5</td><td>에 1:12</td><td><span class="hw">חֵמָה</span>(노) — 이야기를 여는 격정의 되풀이</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">3:6</td><td>에 1:17–18; 2:21; 6:2; 8:7</td><td>"경멸" · "손을 들어 치려" — 두 음모의 병행</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">3:7</td><td>레 16:8–10; 민 26:56; 욜 3:3; 욘 1:7</td><td>결정 수단으로서의 제비</td><td><span class="c f">M</span> <span class="c x">E</span></td></tr>
+        <tr><td class="head">3:7</td><td>출 12:2–3</td><td>니산월 — 출애굽 서사와의 연결</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">3:8</td><td>1마카 1:41–64; 2마카 6:1–11</td><td>유대 관습을 겨눈 제국의 입법</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">3:9</td><td>신 28:63–68</td><td><span class="hw">אבד</span> — 뽑힘과 노예됨을 함께 담는 어휘</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">3:9</td><td>에 7:4</td><td>멸함/종삼음의 동음이의와 에스더의 논변</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">3:10</td><td>창 41:42; 에 8:2</td><td>반지의 수여 — 요셉과 모르드개</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">3:12</td><td>에 1:22; 8:9</td><td>"각 지방의 문자와 각 민족의 언어로"</td><td><span class="c x">E</span> <span class="c f">M</span></td></tr>
+        <tr><td class="head">3:13</td><td>출 12:6; 레 23:5</td><td>첫째 달 십삼일 — 유월절 전야</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">3:13</td><td>1마카 7:39–50; 2마카 15:17–36</td><td>아달월 십삼일 — 니가노르의 날</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">3:15</td><td>에 4:4; 7:6</td><td><span class="hw">נבך</span> — 충격의 되갚음(LXX)</td><td><span class="c t">G</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 8 ═══════ -->
+  <section class="part" id="s8">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>8. 신학 종합</h2>
+    </div>
+
+    <h3>① 한 사람의 모욕이 한 민족의 조서가 되는 경로</h3>
+    <p><span class="c f">M</span> 3장은 사적인 감정이 제국의 문서가 되는 과정을 단계별로 보여 준다. 승진, 거부, 분노, 자문, 연설, 승인, 반포. 1장의 골격이 그대로 반복되되 판돈이 달라진다. 앞에서는 한 왕후의 폐위와 남편 권위에 관한 조서였고, 여기서는 한 민족의 말살이다. 구조의 반복이 이 전개를 우연이 아닌 체계의 산물로 읽게 만든다.</p>
+
+    <h3>② 비례를 잃은 세계</h3>
+    <p><span class="c x">E</span> 백팔십 일의 잔치와 일곱 환관, 열두 달의 화장이 쌓아 온 과잉의 결이 이 장에서 학살로 넘어간다. 한 사람이 무릎을 꿇지 않은 일에 한 민족의 진멸로 답하는 계산법이 이 궁정에서 특별히 낯설지 않다는 것이 이 책의 서늘한 관찰이다. 하만 앞에서 아하수에로가 절제의 화신처럼 보이는 순간, 독자는 자신이 어디까지 익숙해졌는지를 깨닫는다.</p>
+
+    <h3>③ 낙인의 수사학</h3>
+    <p><span class="c f">M</span> 3:8–9의 짧은 연설은 배제의 언설을 압축한다. 이름을 지우고("한 민족"), 다름을 위협으로 옮기고, 반쪽 진실을 겹치고, 손익 계산을 덧붙인다. 왕은 묻지 않고 승인하며, 반지를 넘겨 절차를 완성한다. 이 대목의 힘은 하만의 악의보다 그 악의가 통과하는 제도의 매끄러움에 있다. 조서는 정해진 서식으로 쓰이고, 정해진 인장으로 봉해지고, 정해진 속도로 전달된다.</p>
+
+    <h3>④ 기록된 말의 권능</h3>
+    <p><span class="c x">E</span> 구두의 층위에는 모호함이 산다. "멸하다"와 "종으로 삼다"가 귀에는 거의 같게 들리고, 왕은 자신이 승인한 것이 무엇인지 알지 못한 채 반지를 건넸을 수 있다. 기록되는 순간 그 모호함이 사라진다. "죽이고 도륙하고 진멸하고"라는 세 동사가 못을 박는다. 이 책이 거듭 다루는 문서의 권능이 여기서 처음 본색을 드러내며, 8장에서 같은 권능이 반대 방향으로 쓰이는 장면의 근거가 된다.</p>
+
+    <h3>⑤ 제비와 그 뒤집힘</h3>
+    <p><span class="c t">G</span> 하만은 한 해의 운명이 처음에 정해진다는 세계에서 산다. 니산월의 제비는 그 세계의 문법이고, 아달월 십삼일은 그 문법이 내린 판결이다. 이 책의 표면에서 제비는 사소한 장치로 보이되, 결과가 뒤집히는 순간 두 세계관의 충돌이 드러난다. 운명은 하만이 믿은 만큼 확실하지도 권위 있지도 않다. 축제의 이름이 하만의 제비에서 온 것은 그래서 온당하다.</p>
+
+    <h3>⑥ 이름이 없는 자리에서 일하는 손</h3>
+    <p><span class="c x">E</span> 제비가 열두 달 뒤로 떨어졌다는 사실 자체가 이 장의 가장 조용한 신학적 진술이다. 하만의 신들이 아니라 모르드개의 하나님이 그 "길한 날"을 정했을 가능성이 열려 있고, 열한 달의 유예가 유다인에게 준비할 시간을, 이야기에는 전개될 시간을 준다. 4:14의 "다른 데로 말미암아"가 예고되는 자리다. 그 날짜는 하만보다 유다인에게 훨씬 유리한 날로 밝혀진다.</p>
+
+    <div class="back"><a href="./ch02.html">← 2장 심층연구</a> · <a href="./ch04.html">4장 심층연구 →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 에스더 3장 심층 연구 — 개관 + 장별 심층연구 구조.<br>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Berlin·Levenson·Bush·Berg·Paton 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

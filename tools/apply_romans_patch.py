@@ -27,6 +27,24 @@ def bundle(root: Path, out: Path) -> Path:
             q=(out/x.filename).resolve()
             if out.resolve() not in q.parents: raise RuntimeError("안전하지 않은 ZIP 경로")
         f.extractall(out)
+    # Python zipfile이 한글 파일명을 CP437로 해석하는 환경에서도
+    # 원본 패치 스크립트가 기대하는 고정 파일명으로 정규화한다.
+    names = {
+        "PATCH-A-*": "PATCH-A-스파인정합화.md",
+        "PATCH-B-*": "PATCH-B-바르트.html",
+        "PATCH-C-*": "PATCH-C-ch13-수용사.html",
+        "PATCH-D1-*": "PATCH-D1-주석별독법-ch02-04-06-10.html",
+        "PATCH-D2-*": "PATCH-D2-주석별독법-ch12-13-14-15-16.html",
+        "PATCH-E-*": "PATCH-E-후반부증량.html",
+        "README-*": "README-적용안내.md",
+    }
+    for pattern, wanted in names.items():
+        target=out/wanted
+        if target.exists(): continue
+        matches=list(out.glob(pattern))
+        if len(matches)!=1:
+            raise RuntimeError(f"패치 파일을 식별하지 못했습니다: {pattern} ({len(matches)}개)")
+        matches[0].rename(target)
     return out
 
 def block(text:str, mark:str)->str:

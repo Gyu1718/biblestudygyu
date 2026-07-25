@@ -1,4 +1,4 @@
-name: Validate and apply Bible reader
+name: Validate and apply shared study tools
 
 on:
   push:
@@ -8,12 +8,20 @@ on:
       - "nt/**/*.html"
       - "theology/**/*.html"
       - "bible/**"
+      - "assets/app.js"
+      - "assets/theme.css"
+      - "assets/app.css"
       - "assets/js/bible-reader.js"
       - "assets/js/original-reader.js"
+      - "assets/js/research-dock-loader.js"
+      - "assets/js/research-dock.js"
       - "assets/css/bible-reader.css"
       - "assets/css/original-reader.css"
+      - "assets/css/research-dock.css"
+      - "assets/css/study-navigation-policy.css"
       - "assets/data/bible/kor/**"
       - "assets/data/bible/original/na28/**"
+      - "tools/apply_study_tools.py"
       - "tools/apply_bible_reader.py"
       - "tools/extract_na28_epub.py"
       - ".github/workflows/bible-reader.yml"
@@ -32,7 +40,10 @@ jobs:
         with:
           ref: main
 
-      - name: Apply shared reader to study pages
+      - name: Apply screen settings and research dock
+        run: python3 tools/apply_study_tools.py --write
+
+      - name: Apply shared Bible reader
         run: python3 tools/apply_bible_reader.py --write
 
       - name: Validate Korean Bible corpus
@@ -106,7 +117,10 @@ jobs:
           print(f"NA28 27권 {chapters}장 {verses:,}개 장절 표지 검증 완료")
           PY
 
-      - name: Validate shared reader links
+      - name: Validate shared study tools
+        run: python3 tools/apply_study_tools.py --check
+
+      - name: Validate shared Bible reader
         run: python3 tools/apply_bible_reader.py --check
 
       - name: Commit generated HTML changes
@@ -128,5 +142,5 @@ jobs:
             echo "No generated HTML changes"
             exit 0
           fi
-          git commit -m "Apply shared Bible reader to study pages"
+          git commit -m "Apply shared tools to study pages"
           git push origin main

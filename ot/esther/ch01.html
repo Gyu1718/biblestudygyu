@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에스더 1장 심층 연구 — 잔치와 거부</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
+  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--line:#d9d5c9;
+  --k:#7a5a38;--f:#37665a;--h:#8a4658;--t:#3c5a83;--b:#655a8c;--x:#78736b;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.85;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2.2rem 1.4rem 3rem;font-family:var(--sans);font-size:.82rem}
+nav.toc .site-nav{display:flex;gap:.9rem;margin-bottom:1.3rem;font-size:.72rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.5rem}
+nav.toc a{display:block;color:#c3d2e0;text-decoration:none;padding:.28rem .5rem;border-left:2px solid transparent;line-height:1.5}
+nav.toc a:hover,nav.toc a:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+nav.toc .lv1{font-weight:700;color:#e8eef4;margin-top:.85rem}
+nav.toc .lv2{padding-left:1.05rem;font-size:.78rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.68rem;letter-spacing:.12em;color:#9db6cc;margin:.2rem 0 .55rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(4,1fr);gap:.28rem;margin:0 0 1.5rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+main{max-width:47.5rem;padding:3.2rem 3rem 6rem;margin:0 auto;width:100%}
+@media(max-width:960px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:2.4rem}
+.hero .heb-title{font-family:var(--heb);font-size:3rem;color:var(--ochre);line-height:1.1;direction:rtl}
+.hero h1{font-size:1.9rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.94rem}
+.hero .meta{font-family:var(--sans);font-size:.78rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.5rem}
+.part-head .heb{font-family:var(--heb);font-size:2.2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:var(--lapis-deep)}
+h3 .heb{font-family:var(--heb);font-size:1.05em;color:var(--ochre);direction:rtl;unicode-bidi:isolate;font-weight:700}
+h4{font-size:.96rem;font-weight:700;margin:1.4rem 0 .45rem}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}.c.x{background:var(--x)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.legend span.name{color:var(--ink-soft)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem}
+.note .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.92rem}
+.caveat .tt{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.35rem 0;padding-left:1.1rem;border-left:3px solid var(--line)}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.86rem;color:var(--lapis);display:block;margin-bottom:.25rem}
+.vs p{margin:.5rem 0;font-size:.97rem}
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:1.3rem 0;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.4rem;margin:.7rem 0}
+li{margin:.45rem 0}
+.back{font-family:var(--sans);font-size:.72rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+</head>
+<body>
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav"><a href="./index.html">← 에스더 서재</a><a href="../../index.html">서고 홈</a></div>
+  <div class="brand">에스더 1장 심층 연구</div>
+  <div class="brand-sub">잔치와 거부</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="./ch01.html" aria-current="page" aria-label="에스더 1장 현재 페이지">1</a>
+    <a href="./ch02.html" aria-label="에스더 2장으로 이동">2</a>
+    <a href="./ch03.html" aria-label="에스더 3장으로 이동">3</a>
+    <a href="./ch04.html" aria-label="에스더 4장으로 이동">4</a>
+    <a href="./ch05.html" aria-label="에스더 5장으로 이동">5</a>
+    <a href="./ch06.html" aria-label="에스더 6장으로 이동">6</a>
+    <a href="./ch07.html" aria-label="에스더 7장으로 이동">7</a>
+    <a href="./ch08.html" aria-label="에스더 8장으로 이동">8</a>
+    <a href="./ch09.html" aria-label="에스더 9장으로 이동">9</a>
+    <a href="./ch10.html" aria-label="에스더 10장으로 이동">10</a>
+  </div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 인도로부터 구스까지 (1:1–4)</a>
+  <a class="lv1" href="#s2">2. 마시는 것도 법도가 있어 (1:5–9)</a>
+  <a class="lv1" href="#s3">3. 오기를 싫어하니 (1:10–12)</a>
+  <a class="lv1" href="#s4">4. 므무간이 대답하여 (1:13–20)</a>
+  <a class="lv1" href="#s5">5. 남편이 자기의 집을 주관하게 (1:21–22)</a>
+  <a class="lv1" href="#s6">6. 상호 참조 총람</a>
+  <a class="lv1" href="#s7">7. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">מִשְׁתֵּה יַיִן</div>
+    <h1>에스더 1장 · 잔치와 거부</h1>
+    <p class="sub">백팔십 일 동안 부를 펼쳐 보인 왕이, 마지막 날 아내 하나를 불러오지 못한다. 그 굴욕이 제국의 조서가 되어 나간다.</p>
+    <p class="meta">1:1–4 판도와 첫 잔치 · 1:5–9 둘째 잔치 · 1:10–12 와스디의 거부 · 1:13–20 므무간 · 1:21–22 조서 · 다섯 주석 종합</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c f">M</span> Macchi IECOT 2018</span>
+    <span><span class="c t">G</span> Grossman 2011</span>
+    <span><span class="c b">L</span> Llewellyn-Jones 2023</span>
+    <span><span class="c h">C</span> Carruthers 2008</span>
+    <span><span class="c x">E</span> Bechtel 2002</span>
+    <span><span class="c k">B</span> Baldwin <span style="color:#a99">(OCR 보류)</span></span>
+  </div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 서고 정본 데이터(<code>assets/data/bible/kor</code>, EST)와 단어 단위로 대조했다. 히브리어 표기·모음은 STEP&nbsp;Bible·BHS 재확인 전제(강세 생략). Fox·Berlin·Levenson·Bush·Clines·Laniak·Moore 등은 다섯 주석의 재인용으로만 표기한다.</div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">세 잔치로 세운 무대, 한 번의 거부로 무너지는 자리.</div>
+    </div>
+    <p><span class="c f">M</span> 책의 첫 장은 플롯의 배경과 무대를 마련한다. 페르시아 궁정의 호화로운 세계와 왕을 기리는 성대한 잔치들을 묘사하고, 잔치 끝에 취한 왕이 아내를 전시하려 부르는 경솔한 결정을 내린다. 그가 거절하자 모든 것이 어그러지고, 페르시아 행정의 육중한 손이 작동한다. 전문가들이 불려 와 사태를 분석하고 처방을 낸다.</p>
+    <p><span class="c f">M</span> 1–2절이 서사의 일반 정황 — 다스리는 군주, 그 나라의 크기, 그가 앉은 자리이자 플롯이 펼쳐질 장소 — 을 제시한다. 이어 세 잔치가 서술된다. 백팔십 일의 귀족 잔치(3–4절), 이레의 수산 백성 잔치(5–8절), 그리고 여인들의 잔치(9절)다.</p>
+    <table>
+      <caption>표 1. 1장의 흐름</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="head">판도</td><td>1:1–2</td><td>인도에서 구스까지 백이십칠 지방 · 수산 궁의 왕좌</td></tr>
+        <tr><td class="head">첫 잔치</td><td>1:3–4</td><td>백팔십 일 · 부함과 위엄의 혁혁함을 나타냄</td></tr>
+        <tr><td class="head">둘째 잔치</td><td>1:5–8</td><td>이레 · 후원 뜰 · 사치의 목록 · 마시는 법도</td></tr>
+        <tr><td class="head">여인들의 잔치</td><td>1:9</td><td>와스디가 왕궁에서 · 남녀의 분리</td></tr>
+        <tr><td class="head">거부</td><td>1:10–12</td><td>일곱 내시 · 왕후의 관 · 오기를 싫어하니 · 진노</td></tr>
+        <tr><td class="head">자문과 연설</td><td>1:13–20</td><td>일곱 지방관 · 므무간의 논변</td></tr>
+        <tr><td class="head">조서</td><td>1:21–22</td><td>각 지방의 문자와 언어로 · 남편이 자기의 집을 주관하게</td></tr>
+      </tbody>
+    </table>
+    <p><span class="c f">M</span> 본문은 아이러니하다. 전능해 보이는 왕이 자기 아내 하나를 앞에 나오게 하지 못한다. 므무간은 취한 채 남성적 논변과 단순한 해법을 내놓는다. 다만 이 희극적 외피 아래에서 이 첫 장은 뒤에 올 복잡한 사태를 예고하고 그 무대를 놓는다. 왕후를 겨눈 조서는 3장에서 하만이 유다인을 겨눠 내릴 조서를 닮았고, 와스디가 부부 관계에서 맞닥뜨리는 곤경은 5장에서 에스더가 마주할 것과 닮되 에스더는 정반대의 태도를 취한다.</p>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">מֵהֹדּוּ וְעַד־כּוּשׁ</div>
+      <div class="eyebrow">1:1–4</div>
+      <h2>1. 인도로부터 구스까지</h2>
+      <div class="gloss">메호두 베아드-쿠쉬 — 과잉이라는 열쇠말</div>
+    </div>
+
+    <div class="vs" id="v1">
+      <span class="ref">1:1 — 그 아하수에로</span>
+      <p>"이 일은 아하수에로 왕 때에 있었던 일이니 아하수에로는 인도로부터 구스까지 백이십칠 지방을 다스리는 왕이라"(1:1). <span class="c x">E</span> 에스더 첫 장의 열쇠말은 과잉이다. 첫 절에서부터 그것이 짐작된다. 아하수에로("힘 있는 자")라는 이름의 왕이 인도에서 구스에 이르는 백이십칠 지방을 다스린다고 한다.</p>
+      <p><span class="c t">G</span> "이 일은 … 있었던 일이니"라는 서두는 성경 서사의 독자에게 익숙하다(창 14:1; 룻 1:1). 이 서두는 독자의 주의를 아하수에로와 그의 시대에 모은다. "아하수에로는 … 다스리는 왕이라"는 이례적 표현은 두 가지를 한다. 첫째, 서술자가 사건에서 일정한 거리를 두고 이야기하고 있음을 시사한다. 그의 시대에 아하수에로는 더 이상 "인도로부터 구스까지" 다스리지 않았고, 그래서 이 인물의 칭호와 그 영향권을 독자에게 설명해야 했던 것으로 보인다. 둘째, 이 어구는 널리 알려진 왕이라는 감각을 전한다.</p>
+      <p><span class="c f">M</span> 이 왕은 대개 크세르크세스 1세(주전 486–465)로 동정된다. 히브리어 <span class="hw">אֲחַשְׁוֵרוֹשׁ</span>는 페르시아어 Ḫšajāršā의 좋은 음역이며, 그리스어에서 Ξέρξης로 옮겨진다. 칠십인역은 그를 아닥사스다로 옮기는데, 히브리어 형태와 그리스어 Ἀρταξέρξης의 유사성 때문일 것이다. 어느 쪽이든 왕의 동정은 이 책의 해석에 중심적이지 않다. 이 책은 페르시아 세계의 표상을 능란하게 다루되 역사적 사건을 서술하지는 않는다.</p>
+      <p><strong>백이십칠이라는 수.</strong> <span class="c f">M</span> "백이십칠 지방"이라는 수가 상징적 기능을 지닌다 해도 과장은 아니다. 헤로도토스는 스무 개의 사트라피를 말하되(3.89–117) 페르시아 세계의 하위 구분이 그보다 훨씬 많음을 안다. 에스더서 자체가 "왕의 대신"이 다스리는 사트라피와 총독이 관리하는 "지방"을 분명히 구분한다(3:12).</p>
+      <p><span class="c t">G</span> Grossman은 다른 결을 짚는다. 이 수가 성경에서 단 한 곳에 더 나오는데, 사라의 죽음과 막벨라 굴 매장 이야기다. "사라가 백이십칠 세를 살았으니 이것이 곧 사라가 누린 햇수라"(창 23:1, Berlin·Levenson 재인용). 이 연결을 받아들인다면 서술자가 하필 이 어색한 수를 택한 까닭이 설명될 수 있다. 막벨라 굴 이야기에서 아브라함이 아내와 마지막 작별을 하듯, 영광과 화려함으로 여는 에스더의 첫 장면에서 왕은 아내와 갈라서려 하고 있다. 서술자는 매장굴을 화려한 궁 곁에 세워 놓는 셈이며, 잃은 아내를 두고 우는 남편을 원하는 자 누구에게나 술을 돌리는 취한 왕 곁에 놓는 셈이다.</p>
+      <p><span class="c x">E</span> 이것을 과잉으로 읽어야 하는가, 풍요로 읽어야 하는가. 서술의 누적 효과가 아니라면 풍요 쪽으로 읽을 여지도 있다. 저자는 기회가 있을 때마다 단순한 표현 대신 과장을 택한다. 지방의 수는 대체로 크게 부풀려진 것으로 보이며, 다른 모든 기록에 따르면 이 시기 페르시아의 사트라피는 서른을 넘지 않았다. 낱말에서도 저자는 후하다. 특히 위엄과 격식에 관계된 것이라면 명사와 형용사를 덧붙일 기회를 놓치지 않는다. 무엇보다 저자는 왕의 잔치가 지닌 명백히 터무니없는 규모를 완화하려 하지 않는다. Levenson이 제대로 묻듯, "반년에 걸친 이 술판 동안 나라는 누가 지켰는가"(재인용).</p>
+    </div>
+
+    <div class="vs" id="v234">
+      <span class="ref">1:2–4 — 수산 궁과 백팔십 일</span>
+      <p>"당시에 아하수에로 왕이 수산 궁에서 즉위하고 왕위에 있은 지 제삼년에 그의 모든 지방관과 신하들을 위하여 잔치를 베푸니"(1:2–3). <span class="c x">E</span> 그는 그냥 왕좌가 아니라 <em>왕의</em> 왕좌에 앉는다. 그 왕좌는 그냥 수산 성이 아니라 수산의 성채 곧 아크로폴리스에 있다.</p>
+      <p><span class="c f">M</span> "수산 궁"(<span class="hw">שׁוּשַׁן הַבִּירָה</span>)은 궁전이 자리한 복합 단지의 아크로폴리스를 가리킨다. 에스더서는 위쪽 성채와 아래쪽 도성을 구분하며, 후자는 "도성 수산"(<span class="hw">הָעִיר שׁוּשָׁן</span>)으로 불린다(3:15; 4:16; 6:11; 8:15; 9:13–18). 즉위 삼년이라는 표기를 두고 여러 주석가는 즉위 의례를 암시한다고 보며, 애굽과 바벨론의 반란 탓에 크세르크세스의 왕좌가 곧바로 안정되지 못했다는 설명을 붙인다. 다만 이 표기는 왕이 순행을 마치고 수산에 자기 자리를 다시 세우는 시점을 뜻할 수도 있다.</p>
+      <p><span class="c b">L</span> 수산(고대 페르시아어 Çūšā, 히브리어 Šušān)은 고대 엘람의 중심 도시이자 아케메네스 군주들의 큰 왕도 가운데 하나였다. 흔히 말하듯 아케메네스의 "수도"였던 것은 아니다. 그런 것은 존재하지 않았다. 아케메네스 왕들은 본질적으로 유목적이어서, 궁정은 해마다 제국을 순행했다. 여름에는 서늘한 에크바타나 산지에, 겨울에는 온화한 바벨론과 수산에, 봄에는 페르세폴리스와 파사르가다에에 머물렀다. 수산은 그러므로 아케메네스의 주된 겨울 거처였다. 여름의 더위가 오기 훨씬 전에 비웠는데, 스트라본은 정오에 길을 건너던 뱀이나 도마뱀이 그늘에 닿기도 전에 볕에 타 죽었다고 적는다(15.13.10–11). 다만 에스더서에서는 수산만이 모든 사건의 무대이며, 다른 왕도도 궁정의 순행도 언급되지 않는다.</p>
+      <p><span class="c f">M</span> 잔치의 손님 명단은 제국의 내로라하는 인물이 다 모였음을 함의한다. "장수"(<span class="hw">חַיִל</span>)는 8:11에서 분명히 군사적 뜻으로 쓰이므로 귀족보다 "군대"를 가리킬 것이고, "귀족"(<span class="hw">פַּרְתְּמִים</span>)은 페르시아어 fratama("첫째")에서 온 말로 일종의 페르시아 귀족을 가리킨다. <span class="c f">M</span> 페르시아 군대와 행정이 여섯 달 동안 수산에 머무는 데 명백한 조직상의 난점이 있으나, 이 이야기의 목적은 개연성이 아니라 페르시아 왕과 그 제국을 통치의 실무를 걱정할 필요가 없을 만큼 강대한 존재로 그려 내는 데 있다.</p>
+      <p><strong>보이는 것이 목적이다.</strong> <span class="c f">M</span> 4절에 따르면 잔치의 목적은 베푸는 자의 영광을 "나타내는" 데 있다. 두 평행 어구가 물질적 부의 의미 영역과 명예의 의미 영역을 겹쳐 놓는다. "부함"이 "영화로운 나라"와 이어지고, "위엄"과 "혁혁함"이라는 낱말은 물질적으로 값진 것과 명예 일반을 함께 가리키는 이중의 뜻을 담는다. 1장의 첫 잔치 장면에서 영광과 부는 페르시아 왕권의 본질적 속성이며, 그래서 모든 것이 "왕의" 것이다. 왕좌(1:2), 어주(1:7), 왕궁(1:9), 관(1:11)이 그렇다.</p>
+      <p><span class="c f">M</span> 4절 전반부의 표현은 뒤의 여러 장면을 예고한다. 전시하려는 이 의지가 왕후를 부르는 이유를 설명하고(1:11), 뒤에 주인공들이 영예를 입을 때 쓰이는 낱말들이 1장의 잔치에서 펼쳐진 지고의 왕실 영예를 되불러 온다. 하만이 "자기의 큰 영광"을 말하고(5:11), 모르드개의 영예에 "존귀"와 "관작"이 되풀이되며(6:3·6·7·9·11; 10:2), 유다인과 남편들에게 돌아가는 것도 "존귀"로 표현된다(8:16; 1:20).</p>
+      <p><strong>솔로몬 인유.</strong> <span class="c t">G</span> Grossman은 이 잔치가 솔로몬을 연상시킨다고 본다. 아하수에로는 즉위 제삼년에 "모든 지방관과 신하들을 위하여" 첫 잔치를 베푸는데, 솔로몬도 재위 삼년에 자기 신하들을 위해 잔치를 베풀었다(왕상 2:39·46; 3:15). 두 이야기 모두 "부함과 영광"을 중심 모티프로 쓴다는 점이 결정적이다. 아하수에로는 모든 지방관에게 "그의 영화로운 나라의 부함"을 보이려 잔치를 열고, 솔로몬은 하나님이 무엇을 구하겠느냐 물으실 때 바로 그것을 구하지 않는다. 그는 백성을 재판할 "듣는 마음"을 택하고(왕상 3:9), 하나님의 넘치는 복에 부와 영광이 덤으로 따라온다(왕상 3:13). 아하수에로의 잔치 배후에 어른거리는 이 다른 통치의 그림자가, 이 장의 주인공에게 무엇이 없는지를 가리킬 수 있다. 듣는 마음이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">וְהַשְּׁתִיָּה כַדָּת</div>
+      <div class="eyebrow">1:5–9</div>
+      <h2>2. 마시는 것도 법도가 있어</h2>
+      <div class="gloss">베하쉬티야 카다트 — 강제하지 않기 위한 법</div>
+    </div>
+
+    <div class="vs" id="v56">
+      <span class="ref">1:5–6 — 주어 없는 목록</span>
+      <p>"이 날이 지나매 왕이 또 도성 수산에 있는 귀천간의 백성을 위하여 왕궁 후원 뜰에서 칠 일 동안 잔치를 베풀새 백색, 녹색, 청색 휘장을 자색 가는 베 줄로 대리석 기둥 은고리에 매고 금과 은으로 만든 걸상을 화반석, 백석, 운모석, 흑석을 깐 땅에 진설하고"(1:5–6). <span class="c x">E</span> 백팔십 일이 지났으면 손님의 식욕도 왕의 허영도 채워졌으리라 예상할 만하다. 그런데 5절은 날수는 "찼으되" 손님들은 그렇지 않았음을 알린다. 첫 잔치의 강조가 양이었다면 둘째의 초점은 질이다. 손님 명단도 앞의 무리를 걸러 낸 형태로, 수산 성채의 거주자만 참석한다.</p>
+      <p><span class="c f">M</span> 6절은 휘장과 가구와 바닥을 그리는 두 개의 명사절로 되어 있다. 여러 낱말이 희귀어이고 뜻이 불확실하다. 이 절의 처음 두 낱말과 마지막 세 낱말이 하팍스이며, 이 어휘군은 뒤에 모르드개가 왕 앞에서 개선하여 나올 때 그의 조복을 그리는 데 다시 쓰인다(8:15).</p>
+      <p><span class="c t">G</span> Grossman은 이 대목의 구문 자체를 읽는다. Laniak이 짚듯 이 서술에는 술어가 없다. "왕궁 후원 뜰에 백색 휘장이 <em>있었고</em>"도 아니고 "왕이 백성에게 백색 휘장을 <em>보였고</em>"도 아니다. 독자는 문맥으로 이것이 잔치 때의 후원 모습이라고 이해하되, 구문이 그렇게 말해 주지는 않는다. Driver의 표현대로 "이 낱말들은 허공에 떠 있다"(둘 다 재인용).</p>
+      <p><span class="c t">G</span> 이 어색함은 의도된 것으로 보인다. 감탄부호로 끝나는 듯한 경이의 감각을 만든다는 읽기가 있는데, Grossman은 그 이상을 본다. 이 절의 쓰임새는 후원을 꾸민 온갖 재료의 화려함이야말로 요점이라는 것을 독자에게 알린다. 왕의 자기 값어치가 잔치의 목적 전부다. 손님들은 부의 전시 앞에 입을 벌리고 서 있고, 저자는 기둥을 장식한 재료와 걸상을 만든 금속을 낱낱이 열거하기만 하면 된다. 더 설명할 것이 없다. 아하수에로의 전시욕이 최상의 형태로 여기 있다.</p>
+      <p><strong>귀천간의.</strong> <span class="c t">G</span> 손님의 범위를 "귀천간"(직역하면 "큰 자에서 작은 자까지")으로 적은 어순도 눈여겨볼 만하다. 성경은 대개 이 어구를 반대 순서로 쓴다. "큰 자"가 앞서는 드문 곳 하나가 요나서의 니느웨 회개 장면이다. "니느웨 사람들이 하나님을 믿고 금식을 선포하고 높고 낮은 자를 막론하고 굵은 베 옷을 입은지라"(욘 3:5). 두 서사에서 왕이 직접 관여하고 신민에게 특별한 지시를 내린다는 결이 겹치되, 지시의 내용은 정반대다. 니느웨 왕은 "보좌에서 일어나 왕복을 벗고"(욘 3:6) 물도 마시지 말라 명했고(욘 3:7), 아하수에로는 왕좌에 앉은 채 거대한 술잔치를 연다. 니느웨 왕은 왕복을 벗고, 페르시아 왕은 자기 복색과 후원을 꾸민 천을 자랑한다.</p>
+    </div>
+
+    <div class="vs" id="v78">
+      <span class="ref">1:7–8 — 강제하지 않게 하는 법</span>
+      <p>"금 잔으로 마시게 하니 잔의 모양이 각기 다르고 왕이 풍부하였으므로 어주가 한이 없으며 마시는 것도 법도가 있어 사람으로 억지로 하지 않게 하니 이는 왕이 모든 궁내 관리에게 명령하여 각 사람이 마음대로 하게 함이더라"(1:7–8). <span class="c f">M</span> "왕이 풍부하였으므로"(직역하면 "왕의 손대로")는 페르시아 왕의 역량이 미치는 데까지, 곧 비상한 품질과 분량으로 술이 제공되었다는 뜻이다(왕상 10:13; 에 2:18에도 같은 어법이 있다).</p>
+      <p><span class="c t">G</span> 독자는 여기서 왕이 세운 법을 처음 듣는데, 다행히도 그 법은 음주에 관한 것이다. 아무에게도 마시기를 강요하지 말고 궁내 관리는 각 사람의 뜻을 따르라고 입법하는 왕보다 더 너그러운 왕을 상상할 수 있겠는가. 실제로 몇몇 학자는 이 잔치의 왕을 유별나게 관대한 인물로 본다(Laniak 재인용).</p>
+      <p><span class="c t">G</span> 그럼에도 Fox가 짚듯 이 법의 어법 자체가 이상하며 왕을 향한 조롱을 담고 있다(재인용). 왜 강요하지 말라는 법이 필요한가. 신민에게 무언가를 강제하고 싶지 않은 왕국이라면 그 행위를 법전에서 빼면 그만이고, 그러면 각자 원하는 대로 하게 된다. 예민한 독자는 아하수에로의 왕국에서 마시지 않는 자가 드물어, 마시지 않을 자유를 위해 특별법이 필요했음을 알아챈다.</p>
+      <p><span class="c f">M</span> "법도"(<span class="hw">דָּת</span>, 다트)는 공식 칙령을 가리키는 페르시아어 기원의 낱말로 에스더서에 스무 번 나오며 페르시아식 통치 방식을 특징짓는다. 1:8에서 이 법도가 놀랍게도 금지하지도 제한하지도 않는다. 오히려 손님들이 원하는 대로 하도록 허락하는데, 그것은 법도가 없을 때 어차피 합법인 바로 그것이다. 법도를 무제한과 결합함으로써 본문은 아이러니를 심는다. 페르시아 체제가 얼마나 억압적인지, 입법을 제한하려면 법도를 반포해야 할 정도라는 것이다. 이 법도의 자유가, 왕에게 순종하지 않을 자유를 취한 와스디를 향한 가혹한 제재와 대비된다.</p>
+      <p><strong>말놀이.</strong> <span class="c f">M</span> 재미있는 말놀이가 아이러니를 더한다. "마시는 것"에 해당하는 <span class="hw">וְהַשְּׁתִיָּה</span>(베하쉬티야)가 와스디(<span class="hw">וַשְׁתִּי</span>)라는 고유명과 놀랍도록 비슷하게 울린다. 그래서 1:8의 "마시는 것도 법도가 있어"가 1:15에서 왕이 던질 물음 — "규례대로 하면 와스디를 어떻게 처치할까" — 의 무대를 놓는다. <span class="c t">G</span> Jones의 관찰대로 이 소리 놀이는 지극히 아이러니하다. 마시는 일에는 "억지로 하지 않게" 했는데, 와스디는 시키는 대로 하도록 강요받는다. 저자는 이로써 취한 손님들의 욕구가 와스디가 원하는 것보다 아하수에로에게 더 중요함을 넌지시 알린다(재인용).</p>
+    </div>
+
+    <div class="vs" id="v9">
+      <span class="ref">1:9 — 왕후 와스디도</span>
+      <p>"왕후 와스디도 아하수에로 왕궁에서 여인들을 위하여 잔치를 베푸니라"(1:9). <span class="c f">M</span> 여인들의 잔치는 세 번째 잔치라기보다 남자들의 잔치에 붙은 부록처럼 보인다. 시간과 내용이 명시되지 않아 주된 잔치와의 동시성과 유사성을 함의한다. 바뀌는 것은 손님의 종류와 장소뿐이다. 남자들이 뜰에 있는 동안 여인들은 궁 안에 있다.</p>
+      <p><span class="c f">M</span> 여인들의 잔치가 열리는 "왕궁"(<span class="hw">בֵּית הַמַּלְכוּת</span>)은 왕의 사적 처소와 어전을 가리키며, 왕후조차 부름 없이는 들어갈 수 없는 곳이다(2:16; 5:1). 성별의 분리가 뚜렷하다. 남자들은 밖 후원 뜰에(5절), 여인들은 궁의 가장 안쪽에 있다. 헬레니즘 정황에서 잔치의 남녀 분리와 여성을 위한 병행 잔치는 드문 일이 아니다. 이 분리는 플롯에도 필요하다. 와스디가 부름을 받으려면 왕의 면전에서 떨어져 있어야 하고(1:10–12), 므무간의 논변이 성립하려면 그가 여인들에게 둘러싸여 있어야 한다(1:17).</p>
+      <p><span class="c x">E</span> 이 잔치에 관해 더 언급되는 것은 없되, 그 존재 자체가 왕의 잔치의 성격을 에둘러 말해 준다. 고대 페르시아에서 남녀가 함께 잔치하는 일이 드물지 않았음에도(5장과 7장의 예를 보라), 아하수에로의 이레짜리 후원 잔치는 남자들만의 자리인 듯하다. Levenson의 지적대로 "아하수에로의 잔치에 여인들이 없다는 사실이, 이것이 실은 도를 넘은 남자들만의 술판이었다는 인상을 키운다"(재인용).</p>
+      <p><span class="c f">M</span> "와스디"라는 이름의 페르시아 왕후는 성경 밖 어떤 자료에도 나오지 않는다. 그리스 문헌은 크세르크세스의 아내 아메스트리스의 이름과 생애를 상당히 안다. 아메스트리스를 와스디나 에스더와 동일시하려는 시도는 무익하다. 에스더서의 저자들은 저 유명한 아메스트리스를 무대에 올릴 만큼 역사 소설을 밀어붙이려 하지 않았다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">וַתְּמָאֵן הַמַּלְכָּה וַשְׁתִּי</div>
+      <div class="eyebrow">1:10–12</div>
+      <h2>3. 오기를 싫어하니</h2>
+      <div class="gloss">바테마엔 함말카 바쉬티 — 잘 돌아가던 기계에 들어간 모래알</div>
+    </div>
+
+    <div class="vs" id="v1011">
+      <span class="ref">1:10–11 — 일곱 내시와 왕후의 관</span>
+      <p>"제칠일에 왕이 주흥이 일어나서 어전 내시 므후만과 비스다와 하르보나와 빅다와 아박다와 세달과 가르가스 일곱 사람을 명령하여 왕후 와스디를 청하여 왕후의 관을 정제하고 왕 앞으로 나아오게 하여 그의 아리따움을 뭇 백성과 지방관들에게 보이게 하라 하니 이는 왕후의 용모가 보기에 좋음이라"(1:10–11). <span class="c x">E</span> 이레째에 왕의 마음이 "주흥이 일어"났다고 저자가 굳이 알릴 필요는 없어 보인다. 다만 히브리어에서 "마음"은 감정과 지성의 자리이자 의지의 샘이므로, 이 표현은 그의 상태를 짚는 셈이다. 저자는 왕의 동기를 감추지 않는다. 그는 아내를 내보이고 싶어 한다. 실은 가장 좋은 것을 마지막에 아껴 둔 것이다. 와스디는 백팔십칠 일의 전시를 "왕관처럼" 마무리할 으뜸가는 소장품이다. 이제 익숙해진 그 과잉의 방식대로, 그는 한 사람이 아니라 일곱 내시를 보내 그를 데려오게 한다.</p>
+      <p><span class="c t">G</span> 두 잔치가 나란히 놓이며 드러나는 사실 하나가 두드러진다. 두 잔치 모두에서 왕은 손님들에게 무언가를 "보이려" 한다. 첫 잔치에서 그는 "그의 영화로운 나라의 부함과 위엄의 혁혁함을 나타"냈고(4절), 둘째 잔치의 이레가 끝나 갈 때 그는 아내를 "보이"려 한다(11절). 아하수에로에게 왕후는 "뭇 백성과 지방관들"에게 전시하는 그 "부함"과 "위엄"의 목록에 든 또 하나의 항목인 셈이다. 이 장면 내내 아하수에로와 와스디 사이에 직접 대화가 없다는 것도 놀랍지 않다. 왕의 요구도, 와스디의 거절도, 그의 폐위도 모두 왕실 전령을 통해 이뤄진다. 서술자는 "일곱 내시"(10절)와 왕의 "현자들"(13절)의 이름을 일일이 적어, 왕과 왕후 사이의 직접 대화를 대신하는 그들의 개입을 부각한다. 왕은 지방관들과 신하들과 말하되 자기 아내와는 말하지 않는다.</p>
+      <p><span class="c f">M</span> 이름 목록의 성격도 짚어 둘 만하다. 에스더서에는 행정 역할을 맡은 페르시아인 이름 목록이 셋 있다. 1:10의 일곱 내시, 1:14의 일곱 조언자, 9:7–9의 하만의 열 아들이다. 이 "페르시아" 이름들의 어원은 논쟁적이다. 고대 페르시아어의 철자와 발음이 불확실하고, 외래어의 히브리어 음역도 일정하지 않으며, 고대 역본들이 복원한 형태가 워낙 갈려 마소라의 철자가 가장 이른 것인지도 확실하지 않다. 어떤 그리스 비극이 그렇듯 에스더의 저자들이 페르시아어처럼 들리는 이름을 지어냈을 가능성이 높다.</p>
+      <p><strong>관.</strong> <span class="c f">M</span> 왕후가 써야 할 "왕후의 관"(<span class="hw">כֶּתֶר</span>, 케테르)은 초청의 의례적 성격과 그가 왕실의 일원임을 알린다. 이 낱말은 에스더서 밖의 성경에 나오지 않으며 정확한 뜻이 불확실하다. 후기 히브리어의 용례와 같은 어원의 그리스어 κίταρις에 비추면 헬레니즘기에 군주권을 표시하던 머리띠 형태의 디아뎀을 그리는 편이 낫다. 같은 "관"이 에스더의 머리에도 씌워지고(2:17) 모르드개가 탈 말의 머리에도 놓인다(6:8).</p>
+    </div>
+
+    <div class="vs" id="v12">
+      <span class="ref">1:12 — 거부의 이유</span>
+      <p>"그러나 왕후 와스디는 내시가 전하는 왕명을 따르기를 싫어하니 왕이 진노하여 마음속이 불 붙는 듯하더라"(1:12). <span class="c x">E</span> 문제는 하나뿐이다. 그가 오지 않는다.</p>
+      <p><span class="c f">M</span> 성경 본문은 와스디의 불복종 이유를 설명하지 않는다. 이 "공백"이 여러 설명을 낳았다.</p>
+      <table>
+        <caption>표 2. 와스디의 거부를 읽는 갈래</caption>
+        <thead><tr><th>읽기</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td class="head">① 나체 소환</td><td><span class="c f">M</span> 유대 해석 전승은 취한 왕이 그에게 관만 쓰고 나오라 했다고 본다. 언급된 의복이 관뿐이기 때문이다(타르굼 에스더 Ⅰ). <span class="c x">E</span> 랍비들의 이 추정을 두고 Bechtel은, 그가 불려 간 잔치의 성격을 생각하면 뻔한 것 너머를 추정할 필요가 없어 보인다고 적는다.</td></tr>
+          <tr><td class="head">② 징벌·교만</td><td><span class="c f">M</span> 유대 전승은 와스디를 느부갓네살의 손녀 또는 증손녀로 그리며, 그의 폐위를 신적 징벌이나 교만의 결과로 제시한다.</td></tr>
+          <tr><td class="head">③ 플롯의 필요</td><td><span class="c f">M</span> 여러 주석가는 이 거부가 왕후 자리를 비워 플롯을 진행시키는 데만 목적이 있다고 본다.</td></tr>
+          <tr><td class="head">④ 헬레니즘 예법<br><span style="font-weight:400">(Macchi)</span></td><td><span class="c f">M</span> 헬레니즘 문화에 잠긴 독자에게 이유는 명시되지 않아도 자명했을 것이다. 그리스 세계에서 아내는 남편과 함께 식사하지 않는다. 게다가 취한 페르시아인들의 호색과 술의 탈억제 효과가 워낙 잘 알려져 있어, 술자리에 여인이 있다는 사실이 지니는 성적 함의만으로도 왕의 아내가 잔치 끝에 단정히 나설 수 없었음이 설명된다. 소환은 그에게 모순되는 두 의무 중 하나를 고르게 만든다. 예법은 나서지 못하게 하고 왕명은 가라고 강요한다.</td></tr>
+          <tr><td class="head">⑤ 저항</td><td><span class="c f">M</span> 현대 페미니즘 주석은 와스디를 긍정적으로 그리며, 그 거부를 남성 지배 사회의 억압에 맞선 저항 행위로 읽는다.</td></tr>
+        </tbody>
+      </table>
+      <p><span class="c f">M</span> Macchi는 와스디의 거부가 정당하고 이해할 만하며 그 인물이 부정적으로 그려지지 않았다는 여러 표지를 짚는다. 와스디의 인물됨은 3장의 모르드개와 병행한다. 와스디처럼 모르드개도 왕명을 어기고(3:3), 왕과 유사한 직능을 지닌 자에게 경의를 표하기를 거부하며(3:1–2), 그처럼 제국의 법에 맞서지 않고서는 존엄을 지킬 수 없다. 그리고 와스디의 거부처럼 모르드개의 거부도 위반자가 속한 집단 전체 — 여인들 또는 유다인 — 를 겨눈 조서를 낳는다.</p>
+      <p><span class="c f">M</span> 나아가 본문은 에스더와 그의 전략을 와스디의 거울상으로 제시한다. 두 여인 모두 왕의 아름다운 아내다. 와스디가 잔치에 나오라는 부름을 거절함으로써 왕과 페르시아 법에 맞선다면, 에스더는 정확히 반대로 부름 없이 왕 앞에 나아가(4:11) 그를 잔치에 초청한다.</p>
+      <p><span class="c x">E</span> 어느 쪽이든 저자는 그의 거절 이유에 특별히 관심이 없어 보인다. 독자가 와스디를 아무리 궁금해해도, 서사의 초점은 가차 없이 아하수에로에게 있다. 이야기 전체가 쌓아 올리는 지점은 이것이다. 막대한 부와 권력에도 불구하고 왕은 자기 아내를 통제하지 못한다. 한 여인이 세상에서 가장 강한 남자의 발밑에서 양탄자를 빼내며, 그것도 그의 온 세상이 지켜보는 앞에서 한다.</p>
+      <p><span class="c f">M</span> 본문은 왕의 분노를 크게 다룬다. "왕이 진노하여 마음속이 불 붙는 듯하더라." 에스더서에서 분노는 여러 페르시아 인물의 정서 상태를 특징짓고 그들의 무분별한 결정을 설명한다. 빅단과 데레스가 왕의 목숨을 노리기로 하는 것도 분노에서고(2:21), 하만이 유다인을 겨눈 조서를 내는 것도(3:5) 모르드개를 치기로 하는 것도(5:9) 그렇다. 그리고 에스더가 촉발한 왕의 격노 뒤에 하만이 사형에 처해진다(7:7). 이 분노 모티프는 아이러니와 함께, 지체 높은 페르시아인들을 감정에 휘둘리는 충동적 인물로 만든다.</p>
+      <div class="note"><span class="tt">수용사</span><span class="c h">C</span> 정경의 와스디는 침묵하는데, 타르굼과 에스더 랍바는 그에게 목소리와 논리를 준다. 타르굼 셰니에서 그의 첫 대답은 경멸이다. 그는 왕을 취한 바보라 부르고 자기 혈통을 들어 거절을 변호한다. 왕이 위협을 보내자 그의 답은 정연한 논리를 드러낸다. 자기가 나서면 관을 쓴 왕들이 왕을 죽이고 자신을 아내로 삼으리라는 것이다. 에스더 랍바에서 그는 다시 완벽한 논리로 왕에게 따진다. "그들이 나를 아름답다 여기면 스스로 즐기려 당신을 죽일 것이요, 평범하다 여기면 내가 당신에게 수치를 끼치리이다"(Ⅲ). 랍비들은 왕후의 논변에 무심한 아하수에로를 두고 그가 "그의 암시에 눈멀고 그의 찌름에 무감했다"고 나무란다. <span class="c h">C</span> 동시에 랍비 전승은 그를 정죄하기도 한다. 메길라 12b는 천사 가브리엘이 그의 몸에 나병 자국을 내거나 꼬리를 달았다고 전하며, 이 세부는 후대 도상에 이어져 알바 공작의 카스티야 성경은 그의 머리에서 짐승의 꼬리가 뻗은 모습으로 그를 그린다. Bronner의 지적대로 정숙함이라는 척도가 "랍비들의 여성 서술에서 압도적 집착"이 되었고, 와스디는 그 문화적 구성이 두려워하는 여성상 — 욕망의 대상이자 개탄스러운 존재, 보이지 않으면서 형상화된 존재 — 을 인격화한 까닭에 매혹적인 인물로 남았다(재인용).</div>
+      <div class="note"><span class="tt">19세기의 와스디</span><span class="c h">C</span> 19세기 후반 영미 문학에서 와스디는 주인공으로 폭발한다. 세기말을 전후해 그의 이름을 표제로 삼은 소설과 장시가 잇달아 나왔다. 샬럿 브론테의 『빌레트』에서 배우 "와스디"의 무대는 주인공 루시의 잠재된 정념을 비추는 장치가 되며, 그 불타는 연기 뒤에 극장에 실제로 불이 난다. 엘리자베스 캐디 스탠턴은 자기 『여성의 성경』 해설에서 이렇게 적었다. "와스디는 그에게 불순종했고, 와스디가 옳았다." 반대편에서 조지 로슨 같은 이들은 그의 거부를 남편이자 왕을 향한 공적 모욕으로 규정하고, 순종을 약속한 아내들에게 경고했다. 토머스 스콧은 남성의 통치 책임 쪽에 무게를 실어, 남편들이 경멸받을 만하게 행하거나 어리석고 부당한 명령을 내리지 않도록 조심했다면 이런 결과도 극단적 조치도 없었으리라고 적었다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">מְמוּכָן</div>
+      <div class="eyebrow">1:13–20</div>
+      <h2>4. 므무간이 대답하여</h2>
+      <div class="gloss">메무칸 — 사적 다툼이 국가 위기가 되는 자리</div>
+    </div>
+
+    <div class="vs" id="v1315">
+      <span class="ref">1:13–15 — 사례를 아는 현자들</span>
+      <p>"왕이 사례를 아는 현자들에게 묻되 (왕이 규례와 법률을 아는 자에게 묻는 전례가 있는데 그 때에 왕에게 가까이 하여 왕의 기색을 살피며 나라 첫 자리에 앉은 자는 바사와 메대의 일곱 지방관 곧 가르스나와 세달과 아드마다와 다시스와 메레스와 마르스나와 므무간이라)"(1:13–14). <span class="c x">E</span> 왕후의 거절은 공개적이면서 절대적인 굴욕이다. 아하수에로의 격노가 문자 그대로 "불타오른다". 일곱 현자가 이 비상사태를 다루도록 소집된다(앞서 나온 일곱 내시와의 병행을 눈여겨보라). 이 사람들이 법률가인지 점성가인지는 분명하지 않다. 현대의 통치자들도 양쪽에 의존해 왔으니 어쩌면 둘의 혼합이었을 것이다. 정확한 자격이 무엇이든 왕이 조언을 그들에게 의존한다는 것은 분명하다. 이름이 적힌다는 사실이 사태의 무게 — 어쩌면 짐짓 꾸민 무게 — 를 더한다. 이 책에서 여러 번 되풀이될 일 가운데 첫 번째로, 사적이고 가정적인 다툼이 정치적 위기로 부풀어 오른다. 반항하는 왕후를 기소하고 왕에게 피해 수습을 조언하는 데 특별 검사가 일곱이나 필요하다.</p>
+      <p>"왕후 와스디가 내시가 전하는 아하수에로 왕의 명령을 따르지 아니하니 규례대로 하면 어떻게 처치할까"(1:15). <span class="c x">E</span> 이 물음은 따로 언급할 값어치가 있다. 왕이 이 비교적 단순한 위반을 처리할 만큼 자기 제국의 법을 알지 못한다는 것이 이상하다. 게다가 "내시가 전하는"이라는 어구는 군더더기처럼 보인다. 다만 이 장의 주제가 권력과 무력함에 있으므로, 이 내시들은 아하수에로 자신의 정치적 무력함을 짚는 저자의 방식일 수 있다.</p>
+    </div>
+
+    <div class="vs" id="v1620">
+      <span class="ref">1:16–20 — 므무간의 논변</span>
+      <p>"므무간이 왕과 지방관 앞에서 대답하여 이르되 왕후 와스디가 왕에게만 잘못했을 뿐 아니라 아하수에로 왕의 각 지방의 관리들과 뭇 백성에게도 잘못하였나이다"(1:16). <span class="c x">E</span> 16–20절의 므무간의 조언은 이 장에서 가장 긴 직접 화법 덩어리이며, 이 책 전체에서도 손꼽힌다. 한편으로 이것은 심리의 명수가 둔 한 수다. 와스디의 항명을 제국의 모든 사람을 겨눈 범죄로 해석함으로써 그는 초점을 왕에게서 능란하게 돌려놓는다. 갑자기 아하수에로는 굴욕당한 유일한 남자가 아니게 되고, 나라 안의 모든 남자가 잠재적으로 취약해진다. 몇 문장 만에 므무간은 왕에게서 열기를 걷어 낸다.</p>
+      <p><span class="c x">E</span> 다른 한편, 므무간의 답변에 외교 이상의 무언가가 작동하고 있는지 묻게 된다. 집집마다 모방 범죄가 일어나리라는 그의 불안한 예언은 실제 남성의 불안을 반영하는 것일 수 있다. 왕과 다른 관리들이 그 제안을 받아 마시는 속도로 보면, 그들 모두가 진심으로 겁먹었다는 인상을 받는다.</p>
+      <p><span class="c f">M</span> 므무간이 하는 일은 3장에서 하만이 할 일의 전형을 미리 보여 준다. 한 개인의 거부라는 구체적 문제를 일반 원리로 옮기고 전면적 조치로 답한다. 두 연설 모두 진짜 동기 — 자신의 명예 — 를 감춘 채 전 제국의 문제를 들먹인다.</p>
+      <p>"왕이 만일 좋게 여기실진대 와스디가 다시는 왕 앞에 오지 못하게 하는 조서를 내리되 바사와 메대의 법률에 기록하여 변개함이 없게 하고 그 왕후의 자리를 그보다 나은 사람에게 주소서"(1:19). <span class="c f">M</span> "왕이 만일 좋게 여기실진대"(<span class="hw">אִם־עַל־הַמֶּלֶךְ טוֹב</span>)는 아하수에로에게 올리는 청원을 거의 언제나 여는 어구로, 므무간(1:19)과 하만(3:9)과 에스더(5:4; 9:13)의 입에 같은 형태로 나온다.</p>
+      <div class="caveat"><span class="tt">"변개함이 없게" — 8:8과의 관계</span><span class="c x">E</span> 이 어구가 뒤의 철회 불가 규정(8:8)의 근거로 읽히곤 하나, 자세히 보면 그렇게 직결되지 않는다. "변개함"으로 옮겨진 낱말은 어근 <span class="hw">עבר</span>에서 왔고 "지나가다·사라지다"에 가깝다. 이 책 뒤에서 같은 어근이 푸림의 두 날을 지키는 문맥에 쓰인다(9:27–28). 1:19의 뜻은 그 법이 사문화되지 않도록 기록해 두라는 것에 가깝다. 8:5과 8:8의 쟁점은 다른 낱말 — 왕의 반지로 인친 조서를 <em>철회할</em>(<span class="hw">שׁוב</span>) 수 있는가 — 이다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">שֹׂרֵר בְּבֵיתוֹ</div>
+      <div class="eyebrow">1:21–22</div>
+      <h2>5. 남편이 자기의 집을 주관하게</h2>
+      <div class="gloss">소레르 베베토 — 굴욕을 온 제국에 알리는 조서</div>
+    </div>
+
+    <div class="vs" id="v2122">
+      <span class="ref">1:21–22 — 반포된 아이러니</span>
+      <p>"왕과 지방관들이 그 말을 옳게 여긴지라 왕이 므무간의 말대로 행하여 각 지방 각 백성의 문자와 언어로 모든 지방에 조서를 내려 이르기를 남편이 자기의 집을 주관하게 하고 자기 민족의 언어로 말하게 하라 하였더라"(1:21–22). <span class="c x">E</span> 므무간의 제안 규모는 이 책에서 이미 확인한 과잉의 결과 일관된다. 이번의 과잉은 소유나 권력이 아니라 행동의 규모다. 한 여인이 남편에게 항명한다. 갑자기 국가적 위기가 되고 법이 입법부를 통과해 급히 나간다. 게다가 이 입법은 반항한 한 여인에게 한정되지 않고 제국의 모든 여인에게 확대된다. 이 포괄적 명령을 어떻게 집행할 작정이었는지는 상상하기 어렵다. 과잉이 곳곳에 넘친다.</p>
+      <p><span class="c x">E</span> 아이러니도 넉넉하다. 홍보 전략으로 보면 므무간의 접근법에는 아쉬운 점이 많다. 피해를 가두기는커녕 이 조서는 실제로 왕의 굴욕을 공표한다. 므무간은 바사와 메대의 귀부인들이 왕후의 행위를 들으면 "멸시와 분노가 많이 일어나리이다" 걱정하는데(18절), 조서의 통과와 반포가 그들이 그 소식을 듣게 되리라는 것을 사실상 보장한다. 그것도 각자의 언어로 말이다. Carey Moore는 이 아이러니를 인정하면서 설명을 붙인다. "그런 목적을 위해 온 페르시아 제국의 통신 체계를 총동원했다는 것은 우스꽝스럽다. 그렇기는 해도 취한 사람은 때때로 우스꽝스럽다"(재인용).</p>
+      <p><strong>본문비평.</strong> <span class="c x">E</span> 22절에는 본문 문제가 있다. 히브리어 본문은 절 끝에 "자기 민족의 언어로 말하게 하라"를 덧붙인다. 우스꽝스러움에 익숙해졌다 해도 이것은 아하수에로에게조차 지나쳐 보인다. 어떤 학자들은 이를 국제 혼인에서 생긴 소통의 복잡함에 대한 언급으로 설명한다(느 13:23 이하를 보라). 다만 이 마지막 어구를 앞서 나온 여러 언어의 서신 언급을 되울린 필사자의 오류로 보는 편이 가장 잘 풀린다. 이 어구가 칠십인역에 없다는 점이 중요하다. <span class="c f">M</span> 여러 교정 추정이 제안되었으나 어느 것도 결정적이지 않다.</p>
+      <p><strong>웃어야 하는가.</strong> <span class="c x">E</span> 얼마나 웃어야 하는가라는 물음이 이 지점에서 중요해진다. 이 책의 대체로 희극적인 형식을 받아들인다 해도, 이 조서에는 앞으로 올 더 심각한 조서들을 예고하는 어두운 면이 있다. 교만과 분노의 과잉이 억압적인 무언가를 낳는 일이 이번으로 끝나지 않는다. 이 첫 조서가 부조리 속에서 착상되었더라도 그것은 잔혹함 속에서 태어난다. 페르시아 제국 전역의 여인들이 아하수에로와 그 조언자들의 오만한 극단 때문에 고통을 겪을 것이다. 벌레스크라는 형식이 아픔을 무디게 할지 모르나, 이 책의 모든 유머는 때로 문자 그대로 교수대의 유머라는 감각이 남는다. 우리는 울 때까지 웃고, 울지 않으려고 웃는다.</p>
+      <p><span class="c x">E</span> 이 관찰은 아하수에로의 인물됨을 해석하는 데 특히 긴요하다. Berlin은 그가 그리스 희극의 정형 인물인 어릿광대와 놀랍도록 닮았다고 짚는다(재인용). 그의 익살이 희극적 요소를 더하는 것은 사실이되, 아하수에로가 위험한 인물이라는 것도 사실이다. 그 위험의 일부는 바로 그 부조리에서 나온다. 이 사람은 표면상 온 페르시아 제국을, 나아가 우리가 마음 쓰는 모든 인물의 운명을 관장하는 자다. 뒤에 그에게 나아가는 에스더의 두려움은 매우 실재하고, 하만을 신뢰한 결과도 그렇다. 아하수에로가 악하고 파괴적인 일을 하려고 의도하지는 않을지 모르나, 그럼에도 그는 그런 일을 한다. 요컨대 아하수에로는 어릿광대일 수 있으되, 위험한 어릿광대다.</p>
+      <p><span class="c f">M</span> 이 조서는 8:8이 말하는 철회 불가와 함께 이 책의 문서 주제를 연다. 첫 조서가 남편의 권위를 명하고, 둘째가 한 민족의 말살을 명하며(3:12–15), 셋째가 자위를 허락하고(8:9–14), 두 편지가 축제를 세운다(9:20–32). 1:22의 "각 지방 각 백성의 문자와 언어로"라는 어구가 3:12와 8:9에 그대로 되풀이되어, 같은 기구가 반대 방향으로도 돌아갈 수 있음을 예고한다.</p>
+      <p><span class="c x">E</span> 1장은 왕이 우체국 문 닫기 전에 서둘러 달려가는 장면으로 끝난다. 몇 절 사이에 지고하고 강대한 아하수에로는 항명당하고 조종당하고 철저히 굴욕을 겪었다. 그의 조언자들에게도, 그의 시민들에게도, 이제 독자에게도 이것이 분명한데, 정작 아하수에로는 현실 감각을 크게 잃은 듯 보인다. 이후의 장들에서 거듭 떠오를 특성이다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>6. 상호 참조 총람</h2>
+    </div>
+    <table>
+      <caption>표 3. 1장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:1</td><td>창 14:1; 룻 1:1</td><td>"이 일은 … 있었던 일이니" — 성경 서사의 서두</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">1:1</td><td>창 23:1</td><td>백이십칠 — 사라의 햇수 · 아내와의 작별</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">1:1</td><td>단 6:1; 에 3:12</td><td>사트라피와 지방의 구분</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:2</td><td>에 3:15; 4:16; 8:15; 9:13–18</td><td>수산 궁(성채)과 도성 수산의 구분</td><td><span class="c f">M</span> <span class="c b">L</span></td></tr>
+        <tr><td class="head">1:3–4</td><td>왕상 2:39–46; 3:9–15</td><td>솔로몬의 삼년 잔치 · 부와 영광 · 듣는 마음</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">1:4</td><td>에 5:11; 6:3·11; 8:16; 10:2</td><td>부함·위엄·존귀 — 뒤에 이동할 어휘군</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:5</td><td>욘 3:5–7</td><td>"귀천간" 어순 · 왕좌에서 일어난 왕과 앉은 왕</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">1:6</td><td>에 8:15</td><td>사치의 어휘군이 모르드개의 조복에 되쓰임</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:7</td><td>왕상 10:13; 에 2:18</td><td>"왕의 손대로" — 왕의 역량껏 베풂</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:8</td><td>에 1:15</td><td><span class="hw">וְהַשְּׁתִיָּה</span>와 와스디의 음 겹침</td><td><span class="c f">M</span> <span class="c t">G</span></td></tr>
+        <tr><td class="head">1:9</td><td>에 2:16; 5:1</td><td>왕궁(<span class="hw">בֵּית הַמַּלְכוּת</span>) — 부름 없이 못 드는 자리</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:11</td><td>에 2:17; 6:8</td><td>관(<span class="hw">כֶּתֶר</span>) — 에스더와 모르드개의 말에도</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:11</td><td>에 1:4</td><td>부를 "나타내고" 아내를 "보이는" 두 전시</td><td><span class="c t">G</span></td></tr>
+        <tr><td class="head">1:12</td><td>에 3:1–5</td><td>와스디와 모르드개 — 왕명 거부의 병행</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:12</td><td>에 4:11; 5:1–2</td><td>와스디와 에스더 — 정반대 방향의 위법</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:12</td><td>에 2:21; 3:5; 5:9; 7:7</td><td>분노(<span class="hw">חֵמָה</span>) 모티프의 연쇄</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:16–20</td><td>에 3:8–9</td><td>개인의 문제를 일반 원리로 옮기는 연설</td><td><span class="c f">M</span> <span class="c x">E</span></td></tr>
+        <tr><td class="head">1:19</td><td>에 8:8; 9:27–28</td><td><span class="hw">עבר</span>와 <span class="hw">שׁוב</span>의 구분 — 사문화와 철회</td><td><span class="c x">E</span></td></tr>
+        <tr><td class="head">1:22</td><td>에 3:12; 8:9</td><td>"각 지방 각 백성의 문자와 언어로"</td><td><span class="c f">M</span></td></tr>
+        <tr><td class="head">1:22</td><td>느 13:23</td><td>국제 혼인과 언어의 문제(마지막 어구 해석)</td><td><span class="c x">E</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>7. 신학 종합</h2>
+    </div>
+
+    <h3>① 과잉이라는 열쇠말</h3>
+    <p><span class="c x">E</span> 이 장을 읽는 열쇠는 과잉이다. 백이십칠 지방, 백팔십 일, 일곱 내시, 일곱 현자, 한이 없는 어주. 저자는 기회가 있을 때마다 단순한 표현 대신 과장을 택하고, 잔치의 터무니없는 규모를 완화하려 하지 않는다. 이 결이 2장의 열두 달 화장, 3장의 은 일만 달란트, 5장의 오십 규빗 나무로 이어진다. 비례를 잃은 세계가 이 책의 무대이며, 그 무대에서 절도를 지키는 인물이 곧 주인공이 된다.</p>
+
+    <h3>② 보이는 것이 목적인 통치</h3>
+    <p><span class="c t">G</span> 왕은 두 잔치에서 무언가를 "보이려" 한다. 첫 잔치에서 나라의 부함을 나타내고, 둘째 잔치의 마지막 날에 아내를 보이려 한다. 왕후는 그의 소장품 목록에 든 또 하나의 항목이다. 이 장면 내내 왕과 왕후 사이에 직접 대화가 없다는 사실이 그 관계의 성격을 말한다. 왕은 지방관들과 신하들과 말하되 자기 아내와는 말하지 않는다.</p>
+
+    <h3>③ 법이라는 이름의 아이러니</h3>
+    <p><span class="c f">M</span> 독자가 이 책에서 처음 만나는 법이 강요하지 말라는 법이다. 법도가 없을 때 어차피 합법인 것을 굳이 법으로 정하는 이 배치가, 이 제국의 법이 어떤 것인지를 미리 알려 준다. <span class="c t">G</span> 그리고 그 법의 자유는 술잔에만 미친다. 마시는 일에는 "억지로 하지 않게" 하면서, 와스디는 시키는 대로 하도록 강요받는다. 취한 손님들의 욕구가 왕후가 원하는 것보다 중요하다.</p>
+
+    <h3>④ 거부라는 이 책의 문법</h3>
+    <p><span class="c f">M</span> 와스디의 거부가 이 책의 첫 거부다. 모르드개가 절하기를 거부하고(3:2), 에스더가 부름 없이 들어가며(5:1), 이 세 거부가 모두 조서를 낳거나 조서를 뒤집는다. 와스디의 거부와 모르드개의 거부는 특히 촘촘히 병행한다. 둘 다 왕명을 어기고, 둘 다 제국의 법에 맞서지 않고서는 존엄을 지킬 수 없으며, 둘 다 위반자가 속한 집단 전체를 겨눈 조서를 부른다. 다른 것은 결말이다. 유다인에게는 도움이 오되 와스디에게는 오지 않는다. 이 에피소드는 누군가가, 아무리 높은 자리에 있어도, 왕에게 맞설 때 "보통" 무슨 일이 일어나는지를 보여 준다.</p>
+
+    <h3>⑤ 굴욕을 공표하는 조서</h3>
+    <p><span class="c x">E</span> 므무간의 처방은 피해를 가두기는커녕 왕의 굴욕을 온 제국에 각자의 언어로 알린다. 여인들이 들을까 두려워한 바로 그 소식을 조서가 실어 나른다. 이 자멸적 아이러니가 이 장의 웃음을 만들되, 그 웃음 아래에 어두운 결이 있다. 한 여인의 항명에 제국의 모든 여인을 겨눈 입법으로 답하는 논리가, 3장에서 한 사람의 무릎에 한 민족의 진멸로 답하는 논리와 같은 것이다.</p>
+
+    <h3>⑥ 위험한 어릿광대</h3>
+    <p><span class="c x">E</span> 아하수에로를 어떻게 읽을지가 이 책 전체의 해석을 좌우한다. 그는 그리스 희극의 어릿광대를 닮았고, 그 익살이 희극의 결을 만든다. 동시에 그는 위험하다. 그 위험의 일부가 바로 부조리에서 나온다. 악을 의도하지 않으면서도 악을 행하는 인물이며, 의도의 유무가 그를 하만과 갈라놓는다. 이 인물 이해가 흔들리면 에스더의 두려움도 하만의 위협도 무게를 잃는다.</p>
+
+    <h3>⑦ 부와 분별</h3>
+    <p><span class="c t">G</span> 솔로몬 인유가 이 장의 조용한 신학적 진술일 수 있다. 두 왕이 즉위 삼년에 신하들을 위해 잔치를 베풀되, 초청의 근거가 다르다. 아하수에로는 "그의 영화로운 나라의 부함"을 보이려 부르고, 솔로몬은 하나님이 주신 "듣는 마음" 덕분에 잔치를 연다. 이 장의 주인공에게 없는 것이 무엇인지를 그 그림자가 가리킨다. <span class="c x">E</span> 성경은 도덕적 분별 없는 부와 권력에 한결같이 조심스럽다. 이 서술이 겉치레에 워낙 집중한 나머지, 예민한 독자는 아하수에로의 내면이 어떤 것일지 궁금해하게 된다. 그에 관해서는 한마디도 없다.</p>
+
+    <div class="back"><a href="./index.html">← 에스더 서재</a> · <a href="./overview.html">종합 연구(개관)</a> · <a href="./ch02.html">2장 심층연구 →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 에스더 1장 심층 연구 — 개관 + 장별 심층연구 구조.<br>
+    관찰 출처: Macchi(IECOT 2018)·Grossman(2011)·Llewellyn-Jones(2023)·Carruthers(2008)·Bechtel(2002) 직접 확인분. Fox·Berlin·Levenson·Bush·Clines·Laniak·Moore·Driver·Bronner 등은 다섯 주석의 재인용으로 표기. Baldwin(djvu)은 OCR 후 반영. 개역개정 인용은 서고 정본 데이터(EST)와 대조 완료, 히브리어(BHS·STEP&nbsp;Bible) 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

@@ -27,8 +27,6 @@ on:
       - "tools/apply_bible_reader.py"
       - "tools/extract_na28_epub.py"
       - ".github/workflows/bible-reader.yml"
-  schedule:
-    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:

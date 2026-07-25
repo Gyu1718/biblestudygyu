@@ -1,280 +1,44 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="auto">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>느헤미야 심층 연구 — 성서 연구 서고</title>
-<meta name="description" content="다섯 주석으로 읽는 느헤미야. 종합 노트 한 편과 장별 연구 열세 편.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%A0%3C/text%3E%3C/svg%3E">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>느헤미야 연구 서가 — 성서 연구 서고</title>
+<meta name="description" content="느헤미야 성경읽기, 종합 개관, 장별 심층연구와 원어 연구를 연결하는 책별 서가.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
-  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--ochre-soft:#c9b27a;
-  --line:#d9d5c9;--board:#2b2119;
-  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
-  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
-  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.8;font-size:16.5px;word-break:keep-all}
-a{color:var(--lapis)}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.4rem}
-
-/* ── 상단 내비 ── */
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;font-family:var(--sans);font-size:.8rem}
-.topbar .mark{font-family:var(--serif);font-weight:900;color:var(--lapis-deep);text-decoration:none;letter-spacing:.02em}
-.topbar .mark .hb{font-family:var(--heb);color:var(--ochre);margin-right:.4rem}
-.topbar nav a{color:var(--ink-soft);text-decoration:none;margin-left:1.2rem}
-.topbar nav a:hover{color:var(--lapis)}
-
-/* ── 히어로 ── */
-header.hero{display:grid;grid-template-columns:1fr auto;gap:1rem 2.5rem;align-items:end;
-  border-bottom:3px double var(--line);padding:2.6rem 0 2.2rem}
-.hero .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.26em;color:var(--lapis);font-weight:700}
-.hero h1{font-size:2.15rem;font-weight:900;line-height:1.3;margin:.35rem 0 .5rem}
-.hero .sub{color:var(--ink-soft);font-size:.96rem;max-width:34rem}
-.hero .big-heb{font-family:var(--heb);font-size:4.4rem;line-height:1;color:var(--ochre);direction:rtl;text-align:right}
-.hero .big-heb small{display:block;font-family:var(--sans);font-size:.68rem;color:var(--ink-soft);letter-spacing:.08em;direction:ltr;text-align:right;margin-top:.55rem}
-
-/* ── 섹션 공통 ── */
-section{margin-top:3.4rem}
-.sec-head{margin-bottom:1.4rem}
-.sec-head .eyebrow{font-family:var(--sans);font-size:.68rem;letter-spacing:.24em;color:var(--lapis);font-weight:700}
-.sec-head h2{font-size:1.45rem;font-weight:900;margin-top:.2rem}
-.sec-head .hint{font-size:.88rem;color:var(--ink-soft);margin-top:.25rem}
-
-/* ── 종합 노트 카드 ── */
-.overview-card{display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;
-  background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--ochre);
-  border-radius:8px;padding:1.5rem 1.7rem;text-decoration:none;color:inherit;
-  transition:box-shadow .18s ease, transform .18s ease}
-.overview-card:hover{box-shadow:0 10px 26px rgba(22,53,79,.14);transform:translateY(-2px)}
-.overview-card .hb{font-family:var(--heb);font-size:1.9rem;color:var(--ochre);direction:rtl;white-space:nowrap}
-.overview-card h3{font-size:1.15rem;font-weight:900}
-.overview-card p{font-size:.9rem;color:var(--ink-soft);margin-top:.25rem}
-.overview-card .go{font-family:var(--sans);font-size:.8rem;font-weight:700;color:var(--lapis);white-space:nowrap}
-
-/* ── 서가 ── */
-.shelf-zone{background:linear-gradient(#f3f1ea,#eeeade);border:1px solid var(--line);border-radius:10px;
-  padding:2.4rem 1.6rem 0}
-.shelf{display:flex;justify-content:center;align-items:flex-end;gap:9px;flex-wrap:nowrap;
-  padding:0 .6rem;position:relative}
-.shelf::after{content:"";position:absolute;left:-1.6rem;right:-1.6rem;bottom:-16px;height:16px;
-  background:linear-gradient(#3a2d21,var(--board));border-radius:0 0 10px 10px;
-  box-shadow:0 10px 18px rgba(43,33,25,.35)}
-.spine{position:relative;display:flex;flex-direction:column;align-items:center;
-  width:52px;height:248px;padding:10px 0 12px;text-decoration:none;border-radius:3px 3px 0 0;
-  background:linear-gradient(100deg,#1d4368 0%,var(--lapis-deep) 55%,#122a40 100%);
-  box-shadow:inset -7px 0 11px rgba(0,0,0,.3),inset 2px 0 4px rgba(255,255,255,.07),0 2px 5px rgba(0,0,0,.18);
-  border-top:3px double var(--ochre);
-  transition:transform .18s ease, box-shadow .18s ease}
-.spine:hover,.spine:focus-visible{transform:translateY(-12px);box-shadow:inset -7px 0 11px rgba(0,0,0,.3),0 14px 22px rgba(22,53,79,.35);outline:none}
-.spine:focus-visible{border-top-color:#fff}
-.spine .num{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.06em;color:var(--ochre-soft)}
-.spine .ko{writing-mode:vertical-rl;flex:1;display:flex;align-items:center;justify-content:center;
-  font-size:.84rem;font-weight:600;letter-spacing:.3em;color:#e8eef4;margin:9px 0 7px}
-.spine .band{width:26px;border-top:3px double var(--ochre);opacity:.85}
-.spine.wide{width:84px;background:linear-gradient(100deg,#b8944e 0%,var(--ochre) 55%,#8d6c30 100%);border-top-color:var(--lapis-deep)}
-.spine.wide .num{color:#16354f}
-.spine.wide .ko{color:#1c1508;font-weight:700}
-.spine.wide .band{border-top-color:var(--lapis-deep)}
-@media (prefers-reduced-motion:no-preference){
-  .spine{animation:settle .5s cubic-bezier(.2,.7,.3,1) both}
-  @keyframes settle{from{opacity:0;transform:translateY(-26px)}to{opacity:1;transform:translateY(0)}}
-  .spine:nth-child(1){animation-delay:.02s}.spine:nth-child(2){animation-delay:.06s}
-  .spine:nth-child(3){animation-delay:.1s}.spine:nth-child(4){animation-delay:.14s}
-  .spine:nth-child(5){animation-delay:.18s}.spine:nth-child(6){animation-delay:.22s}
-  .spine:nth-child(7){animation-delay:.26s}.spine:nth-child(8){animation-delay:.3s}
-  .spine:nth-child(9){animation-delay:.34s}.spine:nth-child(10){animation-delay:.38s}
-  .spine:nth-child(11){animation-delay:.42s}.spine:nth-child(12){animation-delay:.46s}
-  .spine:nth-child(13){animation-delay:.5s}.spine:nth-child(14){animation-delay:.54s}
-}
-.shelf-note{font-family:var(--sans);font-size:.72rem;color:var(--ink-soft);text-align:center;padding:2rem 0 1.1rem}
-
-/* ── 장별 목록 ── */
-.chapter-list{border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:3.2rem minmax(9rem,auto) 1fr;gap:1.2rem;align-items:baseline;
-  padding:1rem .4rem;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;
-  transition:background .15s ease}
-.row:hover{background:#fbfaf4}
-.row .no{font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--ochre)}
-.row .hb{font-family:var(--heb);font-size:1.12rem;color:var(--lapis-deep);direction:rtl;text-align:left;white-space:nowrap}
-.row .body h3{display:inline;font-size:.98rem;font-weight:700;color:var(--lapis-deep)}
-.row .body p{font-size:.86rem;color:var(--ink-soft);margin-top:.15rem}
-.row:hover .body h3{text-decoration:underline;text-underline-offset:3px}
-
-/* ── 주석 범례 ── */
-.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.15rem;font-family:var(--sans);font-size:.78rem;
-  background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin-top:2rem}
-.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;
-  padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.18em;letter-spacing:.03em}
-.c.k{background:#7a5a38}.c.f{background:#37665a}.c.h{background:#8a4658}.c.t{background:#3c5a83}.c.b{background:#655a8c}
-
-footer{margin-top:4rem;border-top:3px double var(--line);padding:1.4rem 0 2.6rem;
-  font-family:var(--sans);font-size:.75rem;color:var(--ink-soft)}
-
-/* ── 모바일 ── */
-@media (max-width:780px){
-  header.hero{grid-template-columns:1fr}
-  .hero .big-heb{text-align:left;font-size:3rem;order:-1}
-  .hero .big-heb small{text-align:left}
-  .overview-card{grid-template-columns:1fr;gap:.7rem}
-  .shelf-zone{padding:1.4rem 1rem 0}
-  .shelf{flex-wrap:wrap;justify-content:flex-start;gap:8px}
-  .shelf::after{display:none}
-  .spine{width:calc(50% - 4px);height:auto;flex-direction:row;padding:.75rem .9rem;border-radius:6px;
-    border-top:none;border-left:3px double var(--ochre)}
-  .spine .ko{writing-mode:horizontal-tb;letter-spacing:.06em;margin:0 0 0 .7rem;flex:1;justify-content:flex-start;font-size:.88rem}
-  .spine .band{display:none}
-  .spine.wide{width:100%}
-  .shelf-note{padding:1.2rem 0 .9rem}
-  .row{grid-template-columns:2.4rem 1fr}
-  .row .hb{display:none}
-}
-</style>
-  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+<link rel="stylesheet" href="../../assets/theme.css"><link rel="stylesheet" href="../../assets/app.css"><link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css><link rel="stylesheet" href="../../assets/css/book-shelf.css">
+<style>:root{--original-font:"Noto Serif Hebrew","SBL Hebrew",serif}</style>
 </head>
-<body>
-
-<div class="wrap">
-
-<div class="topbar">
-  <a class="mark" href="../../index.html"><span class="hb">דָּרַשׁ</span>성서 연구 서고</a>
-  <nav><a href="../../index.html">서고 홈</a></nav>
-</div>
-
-<header class="hero">
-  <div>
-    <div class="eyebrow">STUDY SET · NEHEMIAH</div>
-    <h1>느헤미야 심층 연구</h1>
-    <div class="sub">다섯 주석으로 읽는 느헤미야. 종합 노트 한 편과 장별 연구 열세 편을 절 단위로 엮었다.</div>
-  </div>
-  <div class="big-heb">דִּבְרֵי נְחֶמְיָה<small>디브레 네헴야 — 느헤미야의 말들 (느 1:1)</small></div>
-</header>
-
-<!-- 종합 노트 -->
-<section>
-  <a class="overview-card" href="overview.html">
-    <span class="hb">דִּבְרֵי נְחֶמְיָה</span>
-    <span>
-      <h3>종합 노트</h3>
-      <p>연대 · 저작 · 구조 · 신학 대주제 · 상호 참조 · 복음적 해석을 한 문서로 정리했다. 열세 장 연구의 뼈대가 되는 문서.</p>
-    </span>
-    <span class="go">노트 열기 →</span>
-  </a>
-</section>
-
-<!-- 원어 파싱 세트 -->
-<section>
-  <a class="overview-card" href="parsing/ch01.html" style="border-left-color:var(--lapis)">
-    <span class="hb">שֹׁרֶשׁ</span>
-    <span>
-      <h3>원어 파싱</h3>
-      <p>장별로 히브리어를 발음·뜻·문법(품사·어간·인칭·성·수)·어근 계열로 파싱한 문서 열세 편. 개역개정 구절을 나란히 붙였다.</p>
-    </span>
-    <span class="go">파싱 열기 →</span>
-  </a>
-</section>
-
-<!-- 장 허브 (관주 + 세 연구 통합) -->
-<section>
-  <a class="overview-card" href="study/ch01.html" style="border-left-color:var(--ochre)">
-    <span class="hb">שַׁעַר</span>
-    <span>
-      <h3>장 허브 <span style="font-family:var(--sans);font-size:.62rem;font-weight:700;color:var(--ochre);background:#f3ecdd;padding:.1rem .4rem;border-radius:3px;vertical-align:middle">1장 · 관주</span></h3>
-      <p>한 절에서 세 연구(심층·파싱·인터라이너)와 관주(다른 성경 구절 연결)로 바로 건너간다. 다크/라이트 모드 지원. 관주는 OpenBible.info 기반.</p>
-    </span>
-    <span class="go">허브 열기 →</span>
-  </a>
-</section>
-
-<!-- 인터라이너 -->
-<section>
-  <a class="overview-card" href="interlinear/ch01.html" style="border-left-color:var(--ochre)">
-    <span class="hb">בֵּין־הַשִּׁיטִין</span>
-    <span>
-      <h3>인터라이너 <span style="font-family:var(--sans);font-size:.62rem;font-weight:700;color:var(--ochre);background:#f3ecdd;padding:.1rem .4rem;border-radius:3px;vertical-align:middle">1·2·4·5·6장</span></h3>
-      <p>한 절의 모든 낱말을 축자 대역하고, 품사·어간·인칭·성·수·상태·표제어·어근·문장 기능까지 남김없이 분석한다. 서사·기도 장을 순서대로 수록 중이며, 지금은 1·2·4·5·6장이 완성됐다.</p>
-      <span style="display:inline-flex;gap:.5rem;margin-top:.5rem;font-family:var(--sans);font-size:.7rem">
-        <span style="color:var(--ochre)">바로가기:</span>
-        <a href="interlinear/ch01.html" style="color:var(--lapis);text-decoration:underline">1장</a>
-        <a href="interlinear/ch02.html" style="color:var(--lapis);text-decoration:underline">2장</a>
-        <a href="interlinear/ch04.html" style="color:var(--lapis);text-decoration:underline">4장</a>
-        <a href="interlinear/ch05.html" style="color:var(--lapis);text-decoration:underline">5장</a>
-        <a href="interlinear/ch06.html" style="color:var(--lapis);text-decoration:underline">6장</a>
-      </span>
-    </span>
-    <span class="go">인터라이너 →</span>
-  </a>
-</section>
-
-<!-- 서가 -->
-<section>
-  <div class="sec-head">
-    <div class="eyebrow">THE SHELF</div>
-    <h2>서가</h2>
-    <div class="hint">책등을 눌러 각 장의 연구로 들어간다.</div>
-  </div>
-  <div class="shelf-zone">
-    <div class="shelf">
-      <a class="spine wide" href="overview.html"><span class="num">종합</span><span class="ko">느헤미야 · 종합 노트</span><span class="band"></span></a>
-      <a class="spine" href="ch01.html"><span class="num">01</span><span class="ko">기억하소서</span><span class="band"></span></a>
-      <a class="spine" href="ch02.html"><span class="num">02</span><span class="ko">왕 앞에서</span><span class="band"></span></a>
-      <a class="spine" href="ch03.html"><span class="num">03</span><span class="ko">일어나 건축하다</span><span class="band"></span></a>
-      <a class="spine" href="ch04.html"><span class="num">04</span><span class="ko">싸우시리라</span><span class="band"></span></a>
-      <a class="spine" href="ch05.html"><span class="num">05</span><span class="ko">경외함으로</span><span class="band"></span></a>
-      <a class="spine" href="ch06.html"><span class="num">06</span><span class="ko">쉰두 날</span><span class="band"></span></a>
-      <a class="spine" href="ch07.html"><span class="num">07</span><span class="ko">계수되다</span><span class="band"></span></a>
-      <a class="spine" href="ch08.html"><span class="num">08</span><span class="ko">여호와의 기쁨</span><span class="band"></span></a>
-      <a class="spine" href="ch09.html"><span class="num">09</span><span class="ko">주는 여호와시라</span><span class="band"></span></a>
-      <a class="spine" href="ch10.html"><span class="num">10</span><span class="ko">굳은 언약</span><span class="band"></span></a>
-      <a class="spine" href="ch11.html"><span class="num">11</span><span class="ko">거룩한 성</span><span class="band"></span></a>
-      <a class="spine" href="ch12.html"><span class="num">12</span><span class="ko">봉헌</span><span class="band"></span></a>
-      <a class="spine" href="ch13.html"><span class="num">13</span><span class="ko">나를 기억하옵소서</span><span class="band"></span></a>
-    </div>
-    <div class="shelf-note">전 14권 — 종합 노트 1편 · 장별 연구 13편</div>
-  </div>
-</section>
-
-<!-- 장별 목록 -->
-<section>
-  <div class="sec-head">
-    <div class="eyebrow">CHAPTERS</div>
-    <h2>장별 연구</h2>
-  </div>
-  <div class="chapter-list">
-    <a class="row" href="ch01.html"><span class="no">01</span><span class="hb">זְכָר־נָא</span><span class="body"><h3>제카르-나, "청컨대 기억하소서"</h3><p>소식 · 애도 · 기도 — 무너진 성의 소식 앞에서 드린 첫 기도의 절 단위 주해.</p></span></a>
-    <a class="row" href="ch02.html"><span class="no">02</span><span class="hb">וַיִּיטַב לִפְנֵי הַמֶּלֶךְ</span><span class="body"><h3>바이타브 리프네 함멜레크, "왕 앞에서 좋게 여겨진지라"</h3><p>알현 · 파견 · 밤 답사 · 설득 — 왕의 허락과 한밤의 성벽 정찰.</p></span></a>
-    <a class="row" href="ch03.html"><span class="no">03</span><span class="hb">וַיָּקָם … וַיִּבְנוּ</span><span class="body"><h3>바야콤 … 바이브누, "일어나 … 건축하니라"</h3><p>성벽을 나눠 맡은 사람들의 이름과 구간 — 건축자 명단의 절 단위 주해.</p></span></a>
-    <a class="row" href="ch04.html"><span class="no">04</span><span class="hb">אֱלֹהֵינוּ יִלָּחֶם לָנוּ</span><span class="body"><h3>엘로헤누 일라헴 라누, "우리 하나님이 우리를 위하여 싸우시리라"</h3><p>조롱과 위협 속의 축성 — 기도와 파수를 병행한 방어.</p></span></a>
-    <a class="row" href="ch05.html"><span class="no">05</span><span class="hb">בְּיִרְאַת אֱלֹהִים</span><span class="body"><h3>베이르아트 엘로힘, "하나님을 경외함으로"</h3><p>내부의 압제와 총독의 본 — 이자와 저당을 되돌린 개혁.</p></span></a>
-    <a class="row" href="ch06.html"><span class="no">06</span><span class="hb">מֵאֵת אֱלֹהֵינוּ</span><span class="body"><h3>메에트 엘로헤누, "이 역사는 우리 하나님께로 말미암은 것"</h3><p>세 갈래 음모를 이기고 쉰두 날 만에 완공하다 — 대적마저 인정한 역사.</p></span></a>
-    <a class="row" href="ch07.html"><span class="no">07</span><span class="hb">וַיִּפָּקְדוּ</span><span class="body"><h3>바이파케두, "그들이 세워졌다"</h3><p>성벽 완공에서 인구 재배치로 — 첫 귀환자 명단을 다시 펴다.</p></span></a>
-    <a class="row" href="ch08.html"><span class="no">08</span><span class="hb">חֶדְוַת יהוה</span><span class="body"><h3>헤드바트 야훼, "여호와로 인하여 기뻐하는 것"</h3><p>수문 앞 광장의 율법 낭독 — 말씀을 듣고 이해하고 기뻐하다.</p></span></a>
-    <a class="row" href="ch09.html"><span class="no">09</span><span class="hb">אַתָּה־הוּא יְהוָה</span><span class="body"><h3>앗타-후 아도나이, "주는 홀로 여호와시라"</h3><p>창조에서 포로까지 — 구약에서 가장 긴 역사 회고 기도.</p></span></a>
-    <a class="row" href="ch10.html"><span class="no">10</span><span class="hb">אֲמָנָה</span><span class="body"><h3>아마나, "굳은 언약"</h3><p>참회에서 서약으로 — 인장을 찍어 말씀을 삶의 규례로 삼다.</p></span></a>
-    <a class="row" href="ch11.html"><span class="no">11</span><span class="hb">עִיר הַקֹּדֶשׁ</span><span class="body"><h3>이르 하코데쉬, "거룩한 성"</h3><p>제비뽑아 십분의 일을 예루살렘에 채우다 — 자원과 축복의 재정착.</p></span></a>
-    <a class="row" href="ch12.html"><span class="no">12</span><span class="hb">חֲנֻכָּה</span><span class="body"><h3>하눅카, "봉헌"</h3><p>두 찬양대가 반대로 돌아 성전에서 만나다 — 성벽을 하나님께 드리는 날.</p></span></a>
-    <a class="row" href="ch13.html"><span class="no">13</span><span class="hb">זָכְרָה־לִּי</span><span class="body"><h3>조크라-리, "나를 기억하옵소서"</h3><p>굳은 언약이 깨어지고 다시 바로잡는 순환 — 마지막 개혁과 기억 기도.</p></span></a>
-  </div>
-
-  <div class="legend">
-    <div><span class="c k">K</span> Kidner, TOTC (1979)</div>
-    <div><span class="c f">F</span> Fensham, NICOT (1982)</div>
-    <div><span class="c t">T</span> Throntveit, Interpretation (1992)</div>
-    <div><span class="c b">B</span> Bolin, NCBC (2012)</div>
-    <div><span class="c h">H</span> Harrington, NICOT (2022)</div>
-  </div>
-</section>
-
-<footer>
-  <p><strong>느헤미야 심층 연구</strong> — 개인 연구 목적의 종합 자료. 다섯 주석의 논지를 요약·재구성했다. 인용·출판 시 각 주석 해당 면수를 확인해 출처를 명기할 것.</p>
-</footer>
-
-</div>
-  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
-</body>
-</html>
+<body class="book-shelf-page" data-book="nehemiah" data-kind="study-home" data-root="../../" data-script="heb">
+<div class="book-shelf-wrap">
+<header class="book-shelf-topbar"><a class="book-shelf-mark" href="../../index.html"><span class="original">דָּרַשׁ</span>성서 연구 서고</a><nav><a href="../../index.html">서고 홈</a><a href="../../bible/original.html?book=NEH&amp;chapter=1">성경읽기</a></nav></header>
+<section class="book-shelf-hero"><div><div class="book-shelf-eyebrow">STUDY SET · NEH</div><h1>느헤미야 연구 서가</h1><p class="sub">성벽 재건에서 공동체 개혁까지, 종합 개관과 열세 장의 심층연구·원어 연구를 하나의 서가에서 연결한다.</p></div><div class="big-original">דִּבְרֵי נְחֶמְיָה<small>느헤미야 원어 표제</small></div></section>
+<section class="book-shelf-section"><div class="book-shelf-head"><div class="book-shelf-eyebrow">READING &amp; RESEARCH</div><h2>읽기와 연구</h2><p>성경읽기, 종합 개관, 장별 심층연구, 원어 연구의 네 단계로 관리한다.</p></div><div class="book-paths">
+<a class="book-path reading" href="../../bible/original.html?book=NEH&amp;chapter=1"><span class="symbol">מִקְרָא</span><span><h3>① 성경 읽기<span class="book-badge">66권 리더</span></h3><p>히브리어 원문과 개역개정을 장·절 단위로 나란히 읽는다.</p></span><span class="go">1장부터 →</span></a>
+<a class="book-path" href="overview.html"><span class="symbol">דִּבְרֵי</span><span><h3>② 종합 개관<span class="book-badge">완성</span></h3><p>연대와 저작, 페르시아기 배경, 전체 구조, 공동체 신학과 정경적·복음적 해석을 조망한다.</p></span><span class="go">개관 열기 →</span></a>
+<a class="book-path study" href="ch01.html"><span class="symbol">פֵּרוּשׁ</span><span><h3>③ 장별 심층연구<span class="book-badge">1–13장 완성</span></h3><p>단락 구조, 절 범위 주해, 주석 쟁점, 상호 참조와 장별 신학 종합을 제공한다.</p></span><span class="go">연구 열기 →</span></a>
+<a class="book-path original-study" href="parsing/ch01.html"><span class="symbol">שֹׁרֶשׁ</span><span><h3>④ 원어 연구<span class="book-badge partial">파싱 13장 · 인터라이너 5장</span></h3><p>파싱 문서 열세 편을 기본 원어 연구로 사용한다. 기존 인터라이너 1·2·4·5·6장은 보조 자료로 유지한다.</p></span><span class="go">열기 →</span></a>
+</div></section>
+<section class="book-shelf-section"><div class="book-shelf-head"><div class="book-shelf-eyebrow">BIBLE READING · CHAPTERS 1–13</div><h2>느헤미야 본문 바로가기</h2><p>심층연구 진행 여부와 관계없이 모든 장의 성경 본문은 항상 활성화한다.</p></div><div class="book-chapter-grid">
+<a href="../../bible/original.html?book=NEH&amp;chapter=1"><span class="num">01</span><small>무너진 성을 듣다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=2"><span class="num">02</span><small>왕 앞에서 파송받다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=3"><span class="num">03</span><small>성벽을 나누어 세우다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=4"><span class="num">04</span><small>조롱과 위협에 맞서다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=5"><span class="num">05</span><small>내부 압제를 개혁하다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=6"><span class="num">06</span><small>쉰두 날 만에 완공하다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=7"><span class="num">07</span><small>공동체를 다시 세우다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=8"><span class="num">08</span><small>말씀을 듣고 기뻐하다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=9"><span class="num">09</span><small>언약의 역사를 고백하다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=10"><span class="num">10</span><small>굳은 언약에 인봉하다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=11"><span class="num">11</span><small>거룩한 성을 채우다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=12"><span class="num">12</span><small>성벽을 봉헌하다</small></a><a href="../../bible/original.html?book=NEH&amp;chapter=13"><span class="num">13</span><small>다시 개혁하다</small></a>
+</div></section>
+<section class="book-shelf-section"><div class="book-shelf-head"><div class="book-shelf-eyebrow">THE SHELF</div><h2>장별 연구 서가</h2><p>책등을 눌러 완성된 심층연구로 이동한다.</p></div><div class="book-shelf-zone"><div class="book-shelf">
+<a class="book-spine overview" href="overview.html"><span class="num">종합</span><span class="title">느헤미야 · 종합 개관</span><span class="band"></span></a><a class="book-spine" href="ch01.html"><span class="num">01</span><span class="title">기억하소서</span><span class="band"></span></a><a class="book-spine" href="ch02.html"><span class="num">02</span><span class="title">왕 앞에서</span><span class="band"></span></a><a class="book-spine" href="ch03.html"><span class="num">03</span><span class="title">일어나 건축하다</span><span class="band"></span></a><a class="book-spine" href="ch04.html"><span class="num">04</span><span class="title">싸우시리라</span><span class="band"></span></a><a class="book-spine" href="ch05.html"><span class="num">05</span><span class="title">경외함으로</span><span class="band"></span></a><a class="book-spine" href="ch06.html"><span class="num">06</span><span class="title">쉰두 날</span><span class="band"></span></a><a class="book-spine" href="ch07.html"><span class="num">07</span><span class="title">계수되다</span><span class="band"></span></a><a class="book-spine" href="ch08.html"><span class="num">08</span><span class="title">여호와의 기쁨</span><span class="band"></span></a><a class="book-spine" href="ch09.html"><span class="num">09</span><span class="title">주는 여호와시라</span><span class="band"></span></a><a class="book-spine" href="ch10.html"><span class="num">10</span><span class="title">굳은 언약</span><span class="band"></span></a><a class="book-spine" href="ch11.html"><span class="num">11</span><span class="title">거룩한 성</span><span class="band"></span></a><a class="book-spine" href="ch12.html"><span class="num">12</span><span class="title">봉헌</span><span class="band"></span></a><a class="book-spine" href="ch13.html"><span class="num">13</span><span class="title">나를 기억하옵소서</span><span class="band"></span></a>
+</div><div class="book-shelf-note">종합 개관 1편 · 장별 심층연구 13편 완성 · 원어 파싱 13편 · 기존 인터라이너 5편</div></div></section>
+<section class="book-shelf-section" id="chapters"><div class="book-shelf-head"><div class="book-shelf-eyebrow">CHAPTER STATUS</div><h2>장별 자료 현황</h2><p>성경읽기, 심층연구와 원어 연구를 장별로 연결한다.</p></div><div class="book-chapter-list">
+<article class="book-chapter-row"><span class="no">01</span><span class="original">זְכָר־נָא</span><span><h3>무너진 성을 듣다</h3><p>하나니의 보고를 듣고 애도하며 예루살렘을 위한 기도를 드린다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=1">성경읽기</a><a href="ch01.html">심층연구</a><a href="parsing/ch01.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">02</span><span class="original">וַיִּיטַב לִפְנֵי הַמֶּלֶךְ</span><span><h3>왕 앞에서 파송받다</h3><p>왕의 허락을 받아 예루살렘으로 파송되고 밤에 성벽을 답사한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=2">성경읽기</a><a href="ch02.html">심층연구</a><a href="parsing/ch02.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">03</span><span class="original">וַיָּקָם וַיִּבְנוּ</span><span><h3>성벽을 나누어 세우다</h3><p>백성과 가문이 성벽의 구간을 나누어 맡아 함께 건축한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=3">성경읽기</a><a href="ch03.html">심층연구</a><a href="parsing/ch03.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">04</span><span class="original">אֱלֹהֵינוּ יִלָּחֶם לָנוּ</span><span><h3>조롱과 위협에 맞서다</h3><p>대적의 조롱과 위협 속에서 기도와 파수를 병행한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=4">성경읽기</a><a href="ch04.html">심층연구</a><a href="parsing/ch04.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">05</span><span class="original">בְּיִרְאַת אֱלֹהִים</span><span><h3>내부의 압제를 개혁하다</h3><p>이자와 저당 문제를 바로잡고 총독의 본을 제시한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=5">성경읽기</a><a href="ch05.html">심층연구</a><a href="parsing/ch05.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">06</span><span class="original">מֵאֵת אֱלֹהֵינוּ</span><span><h3>쉰두 날 만에 완공하다</h3><p>세 갈래 음모를 이기고 성벽을 완공한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=6">성경읽기</a><a href="ch06.html">심층연구</a><a href="parsing/ch06.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">07</span><span class="original">וַיִּפָּקְדוּ</span><span><h3>공동체를 다시 세우다</h3><p>성문을 지키고 귀환자 명단으로 공동체를 재조직한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=7">성경읽기</a><a href="ch07.html">심층연구</a><a href="parsing/ch07.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">08</span><span class="original">חֶדְוַת יהוה</span><span><h3>말씀을 듣고 기뻐하다</h3><p>수문 앞 광장에서 율법을 낭독하고 깨달음과 기쁨으로 응답한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=8">성경읽기</a><a href="ch08.html">심층연구</a><a href="parsing/ch08.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">09</span><span class="original">אַתָּה־הוּא יְהוָה</span><span><h3>언약의 역사를 고백하다</h3><p>하나님의 신실하심과 백성의 반역을 역사 기도로 고백한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=9">성경읽기</a><a href="ch09.html">심층연구</a><a href="parsing/ch09.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">10</span><span class="original">אֲמָנָה</span><span><h3>굳은 언약에 인봉하다</h3><p>지도자와 백성이 말씀에 따른 삶을 서약한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=10">성경읽기</a><a href="ch10.html">심층연구</a><a href="parsing/ch10.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">11</span><span class="original">עִיר הַקֹּדֶשׁ</span><span><h3>거룩한 성을 채우다</h3><p>제비뽑기와 자원으로 예루살렘에 거주할 공동체를 세운다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=11">성경읽기</a><a href="ch11.html">심층연구</a><a href="parsing/ch11.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">12</span><span class="original">חֲנֻכָּה</span><span><h3>성벽을 봉헌하다</h3><p>두 찬양대가 성벽을 돌며 예루살렘 성벽을 하나님께 봉헌한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=12">성경읽기</a><a href="ch12.html">심층연구</a><a href="parsing/ch12.html">원어연구</a></span></article>
+<article class="book-chapter-row"><span class="no">13</span><span class="original">זָכְרָה־לִּי</span><span><h3>다시 개혁하다</h3><p>성전·안식일·혼인 문제를 다시 정비하며 책을 마무리한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=NEH&amp;chapter=13">성경읽기</a><a href="ch13.html">심층연구</a><a href="parsing/ch13.html">원어연구</a></span></article>
+</div></section>
+<footer class="book-shelf-footer">다섯 주석 대조 · 장별 심층연구 13편 · 원어 파싱 13편.<br>기존 study/ 장 허브와 interlinear/ 자료는 호환성을 위해 보존하되 기본 네 단계에는 별도 문서 유형으로 추가하지 않는다.</footer>
+</div><script src="../../assets/app.js"></script><script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script></body></html>

@@ -1,11 +1,11 @@
 /* ============================================================
    성서 연구 서고 — 카탈로그
-   새 연구 세트를 추가할 때 이 파일만 수정한다.
+   새 연구 세트를 추가하거나 상태를 변경할 때 실제 저장소 파일과 맞춘다.
    ============================================================ */
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-24"
+    updated: "2026-07-26"
   },
   sections: [
     {
@@ -20,7 +20,7 @@ window.SITE_CATALOG = {
           title: "성경읽기",
           original: "원어 · 개역개정",
           script: "lat",
-          meta: "성경 66권 — 장·절 선택 · 구약 히브리어 · 신약 헬라어 · 개역개정 병렬 대조",
+          meta: "성경 66권 — 장·절 선택 · 구약 WLC/OSHB · 신약 NA28 · 개역개정 병렬 대조",
           desc: "성경책과 장절을 선택해 원문과 개역개정을 절 단위로 나란히 읽는다. 원어 단어에 마우스를 올리거나 터치하면 한글 스트롱 사전 풀이를 확인할 수 있다.",
           volumes: 2
         }
@@ -39,7 +39,7 @@ window.SITE_CATALOG = {
           original: "Ἑλληνικά · עִבְרִית",
           script: "lat",
           meta: "히브리어·아람어 H1–H8674 · 헬라어 실제 Strong 항목 5,523개 · 한글 원문 보존 · 번호·표제어·발음·뜻 검색 · 원어성경 호버 연결",
-          desc: "사용자가 제공한 한글 스트롱 사전 PDF와 HWP를 주자료로 구조화했다. 상세 페이지에서는 사전 원문을 온전히 확인하고, 성경읽기 화면에서는 원어 단어 위에서 간략 풀이를 바로 볼 수 있다.",
+          desc: "사용자가 제공한 한글 스트롱 사전 자료를 구조화했다. 상세 페이지에서는 사전 원문을 확인하고, 성경읽기 화면에서는 원어 단어 위에서 간략 풀이를 바로 볼 수 있다.",
           volumes: 6
         }
       ]
@@ -53,12 +53,32 @@ window.SITE_CATALOG = {
         {
           id: "nehemiah",
           path: "ot/nehemiah/index.html",
-          title: "느헤미야 심층 연구",
+          title: "느헤미야 연구 서가",
           original: "דִּבְרֵי נְחֶמְיָה",
           script: "heb",
-          meta: "전 14권 — 종합 노트 1편 · 장별 연구 13편 · 다섯 주석 대조 · 절 단위 주해 · 원어 파싱 13편 · 인터라이너(1·2·4·5·6장) 별도 수록",
-          desc: "성벽 재건에서 마지막 개혁까지 열세 장 전체를 절 단위로 주해했다. 히브리어 표제와 원어 병기, 상호 참조 총람, 장별 신학 종합을 갖췄다. 서재 안에 장별 원어 파싱과 인터라이너 문서도 함께 둔다.",
+          meta: "표준형 서가 — 성경읽기 · 종합 개관 · 장별 심층연구 13편 · 원어 파싱 13편 · 기존 인터라이너 5편",
+          desc: "성벽 재건에서 공동체 개혁까지 열세 장 전체를 절 단위로 주해했다. 책별 서가에서 성경읽기, 종합 개관, 장별 심층연구와 원어 연구를 연결한다.",
           volumes: 14
+        },
+        {
+          id: "esther",
+          path: "ot/esther/index.html",
+          title: "에스더 연구 서가",
+          original: "אֶסְתֵּר",
+          script: "heb",
+          meta: "종합 개관 1편 · 장별 심층연구 10편 · Macchi·Grossman·Llewellyn-Jones·Carruthers·Bechtel 종합 · 개역개정 대조",
+          desc: "하나님의 이름 없이 하나님의 일을 이야기하는 책. 세 본문과 편집 과정, 페르시아 궁정 배경, 열 잔치와 교차구조, 수용사를 조망하고 열 장 전체를 절 단위로 주해한다.",
+          volumes: 11
+        },
+        {
+          id: "psalms",
+          path: "ot/psalms/index.html",
+          title: "시편 상세 연구",
+          original: "תְּהִלִּים",
+          script: "heb",
+          meta: "예외형 — 전체 개관 1편 · 자료집 1편 · 권별 상세 연구 5편 · 시편 1–150편",
+          desc: "시편은 150편을 다섯 권의 정경 구조로 읽는 예외형 연구 세트다. 전체 개관과 자료집, 다섯 권의 상세 연구 구조를 유지한다.",
+          volumes: 7
         },
         {
           id: "hosea",
@@ -66,29 +86,19 @@ window.SITE_CATALOG = {
           title: "호세아서 연구 노트",
           original: "הוֹשֵׁעַ",
           script: "heb",
-          meta: "일곱 주석 종합 — 종합 노트 1편 · 배경 연구 · 14장 절 단위 주해 · 신학 · 상호 참조 · 복음적 해석 · 쟁점 대조",
-          desc: "고멜과의 혼인 서사에서 심판과 소생까지, 호세아서 열네 장을 일곱 주석으로 종합했다. 히브리어 병기와 주석가 칩으로 문장 단위 출처를 표시한다.",
+          meta: "예외형 — 일곱 주석 종합 · 배경 연구 · 14장 절 단위 주해 · 신학 · 상호 참조 · 복음적 해석",
+          desc: "고멜과의 혼인 서사에서 심판과 소생까지 열네 장을 통합 연구 노트로 구성했다. 별도 지시가 있기 전까지 현재 구조를 유지한다.",
           volumes: 7
         },
         {
           id: "haggai",
           path: "ot/haggai/index.html",
-          title: "학개 심층 연구",
+          title: "학개 연구 서가",
           original: "חַגַּי",
           script: "heb",
-          meta: "3-문서 구조 — 개관 1편 · 장별 심층연구 2편 · 원어 융합 표본 · Jacobs·Hill 대조",
-          desc: "넉 달의 예언으로 멈춘 성전 공사를 다시 세운 책. 책의 신학과 전체 개관을 갖추고, 원어는 파싱과 인터라이너를 한 문서로 융합한다.",
+          meta: "표준형 서가 — 성경읽기 · 종합 개관 1편 · 장별 심층연구 2편 · 원어 연구 1:1–4 표본",
+          desc: "넉 달 동안 선포된 네 신탁을 성경읽기, 종합 개관, 두 장의 심층연구와 파싱·인터라이너 융합 원어 연구 표본으로 연결한다.",
           volumes: 4
-        },
-        {
-          id: "esther",
-          path: "ot/esther/index.html",
-          title: "에스더 심층 연구",
-          original: "אֶסְתֵּר",
-          script: "heb",
-          meta: "종합 개관 1편 · 장별 심층연구 10편(전 10장) · Macchi·Grossman·Llewellyn-Jones·Carruthers·Bechtel 종합 · 개역개정 대조",
-          desc: "하나님의 이름 없이 하나님의 일을 이야기하는 책. 세 본문(MT·LXX·AT)과 편집 과정, 페르시아 궁정 배경, 열 잔치와 교차구조, 수용사까지 조망하는 개관 위에, 와스디의 거부에서 모르드개의 자리까지 열 장 전체를 절 단위로 주해했다.",
-          volumes: 11
         }
       ]
     },
@@ -101,12 +111,12 @@ window.SITE_CATALOG = {
         {
           id: "romans",
           path: "nt/romans/index.html",
-          title: "로마서 심층 연구",
+          title: "로마서 연구 서가",
           original: "ΠΡΟΣ ΡΩΜΑΙΟΥΣ",
           script: "grk",
-          meta: "종합 연구 1편 · 장별 심층 연구 1–9장 · 절별 성경 연구 1–16장 · Moo·Dunn·Jewett·Gaventa·Barth 대조 · 개역개정 4판 · NA28",
-          desc: "로마서의 역사적 정황과 신학적 구조를 조망하고, 1–9장을 절 단위로 주해한다. 16장 전체에는 개역개정 본문, 원어 성경읽기, 심층 연구를 잇는 절별 성경 연구 허브를 마련했다.",
-          volumes: 10
+          meta: "표준형 서가 — 성경읽기 · 종합 개관 · 장별 심층연구 1–16장 · A–E 보완 · 원어 연구 미구현",
+          desc: "열여섯 장 전체의 심층연구에 자료 칩 정합화, 바르트 독법 보강, 로마서 13장 수용사, 누락 장의 주석별 독법, 12–16장 해설 박스를 추가했다. 직접 확인 일곱 종과 재인용 두 종을 구분한다.",
+          volumes: 17
         }
       ]
     },
@@ -131,12 +141,10 @@ window.SITE_CATALOG = {
   ]
 };
 
-/* 홈페이지 카드 밀도 조정용 스타일 로더.
-   index.html의 인라인 디자인은 유지하고 카드 크기와 배치만 조정한다. */
+/* 홈페이지 카드 밀도 조정용 스타일 로더 */
 (function () {
   if (typeof document === "undefined") return;
-  var existing = document.querySelector('link[data-home-compact-css]');
-  if (existing) return;
+  if (document.querySelector("link[data-home-compact-css]")) return;
   var link = document.createElement("link");
   link.rel = "stylesheet";
   link.href = "assets/css/home-compact.css";
@@ -144,14 +152,13 @@ window.SITE_CATALOG = {
   document.head.appendChild(link);
 })();
 
-
 /* 홈페이지 연구 도크 로더 */
 (function () {
   if (typeof document === "undefined" || document.querySelector("script[data-rd-loader]")) return;
   var current = document.currentScript;
   var src = current && current.src
-    ? new URL("assets/js/research-dock-loader.js?v=20260724.2", current.src).href
-    : "assets/js/research-dock-loader.js?v=20260724.2";
+    ? new URL("assets/js/research-dock-loader.js?v=20260726.1", current.src).href
+    : "assets/js/research-dock-loader.js?v=20260726.1";
   var node = document.createElement("script");
   node.src = src;
   node.dataset.rdLoader = "";

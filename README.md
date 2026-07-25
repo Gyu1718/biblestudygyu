@@ -15,7 +15,7 @@ https://gyu1718.github.io/biblestudygyu/
 - 성경 장절 자동 인식, 호버 미리보기와 우측 성경 탐색기
 - 히브리어·헬라어 스트롱 사전
 - 책별 종합 개관과 장별 심층연구
-- 주석가 칩, 다크 모드, 연구 도크
+- 주석가 칩, 다크 모드, 화면 설정·연구 도크
 - 모바일·인쇄 대응
 
 ## 책별 연구 구조
@@ -48,9 +48,38 @@ https://gyu1718.github.io/biblestudygyu/
 | 시편 | 예외형 | 전체 개관, 자료집, 5권 권별 상세 연구 |
 | 호세아 | 예외형 | 통합 연구 노트 구조 유지 |
 | 학개 | 표준형 | 종합 개관, 1–2장 심층연구, 원어 연구 1:1–4 표본 |
-| 로마서 | 표준형 | 종합 개관, 저장소 기준 1–9장 심층연구, 원어 연구 미구현 |
+| 로마서 | 표준형 | 종합 개관, 1–16장 심층연구, 원어 연구 미구현 |
 
 에스더는 표준 서가의 기준 사례로 보존합니다. 시편과 호세아는 자료 성격상 별도 지시가 있기 전까지 예외 구조를 유지합니다.
+
+## 공통 도구 버튼 자동 적용
+
+모든 연구 HTML에 화면 설정·연구 도크 버튼이 나타나도록 다음 프로그램이 자동 적용합니다.
+
+```bash
+python3 tools/apply_study_tools.py --write
+python3 tools/apply_study_tools.py --check
+```
+
+검사 대상:
+
+```text
+ot/**/*.html
+nt/**/*.html
+theology/**/*.html
+```
+
+프로그램은 누락된 다음 자산을 상대경로에 맞춰 삽입합니다.
+
+```text
+assets/theme.css
+assets/app.css
+assets/app.js
+```
+
+`app.js`가 연구 도크 로더를 불러오므로 화면 설정과 연구 도구 버튼이 자동으로 생성됩니다. GitHub Actions가 연구 HTML이나 관련 공통 자산이 변경될 때 프로그램을 실행하고, 필요한 HTML 수정 사항을 자동 커밋합니다.
+
+특정 문서에서 자동 적용을 피해야 할 경우 HTML에 `data-no-study-tools` 속성을 둡니다.
 
 ## 주요 경로
 
@@ -62,6 +91,8 @@ lexicon/                           원어 사전
 ot/<book>/index.html               구약 책별 서가
 nt/<book>/index.html               신약 책별 서가
 assets/css/book-shelf.css          표준형 책별 서가 공통 스타일
+tools/apply_study_tools.py         도구 버튼 자동 적용
+tools/apply_bible_reader.py        성경 리더 자동 적용
 docs/BOOK_STUDY_MANUAL.md          책 작업 매뉴얼
 docs/BIBLE_READER_HANDOFF.md       성경 리더 정책과 구조
 ```
@@ -78,6 +109,7 @@ docs/BIBLE_READER_HANDOFF.md       성경 리더 정책과 구조
 ## 기본 검증
 
 ```bash
+python3 tools/apply_study_tools.py --check
 python3 tools/apply_bible_reader.py --check
 ```
 

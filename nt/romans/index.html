@@ -1,212 +1,37 @@
 <!DOCTYPE html>
-<html data-theme="auto" lang="ko">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>로마서 심층 연구 — 성서 연구 서고</title>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A1%3C/text%3E%3C/svg%3E" rel="icon"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --ink:#202a35;--ink-soft:#4a5563;--paper:#f7f6f1;--panel:#ffffff;
-  --lapis:#1f4e78;--lapis-deep:#16354f;--ochre:#a8823c;--ochre-soft:#c9b27a;
-  --line:#d9d5c9;--board:#2b2119;
-  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
-  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
-  --grk:"Noto Serif","GFS Didot",serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.8;font-size:16.5px;word-break:keep-all}
-a{color:var(--lapis)}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.4rem}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;font-family:var(--sans);font-size:.8rem}
-.topbar .mark{font-family:var(--serif);font-weight:900;color:var(--lapis-deep);text-decoration:none;letter-spacing:.02em}
-.topbar .mark .gk{font-family:var(--grk);color:var(--ochre);margin-right:.4rem}
-.topbar nav a{color:var(--ink-soft);text-decoration:none;margin-left:1.2rem}
-.topbar nav a:hover{color:var(--lapis)}
-header.hero{display:grid;grid-template-columns:1fr auto;gap:1rem 2.5rem;align-items:end;border-bottom:3px double var(--line);padding:2.6rem 0 2.2rem}
-.hero .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.26em;color:var(--lapis);font-weight:700}
-.hero h1{font-size:2.15rem;font-weight:900;line-height:1.3;margin:.35rem 0 .5rem}
-.hero .sub{color:var(--ink-soft);font-size:.96rem;max-width:34rem}
-.hero .big-gk{font-family:var(--grk);font-size:2.7rem;line-height:1.15;color:var(--ochre);text-align:right}
-.hero .big-gk small{display:block;font-family:var(--sans);font-size:.66rem;color:var(--ink-soft);letter-spacing:.06em;text-align:right;margin-top:.55rem}
-section{margin-top:3.4rem}
-.sec-head{margin-bottom:1.4rem}
-.sec-head .eyebrow{font-family:var(--sans);font-size:.68rem;letter-spacing:.24em;color:var(--lapis);font-weight:700}
-.sec-head h2{font-size:1.45rem;font-weight:900;margin-top:.2rem}
-.sec-head .hint{font-size:.88rem;color:var(--ink-soft);margin-top:.25rem}
-.overview-card{display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--ochre);border-radius:8px;padding:1.5rem 1.7rem;text-decoration:none;color:inherit;transition:box-shadow .18s ease, transform .18s ease;margin-bottom:1rem}
-.overview-card:hover{box-shadow:0 10px 26px rgba(22,53,79,.14);transform:translateY(-2px)}
-.overview-card .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);white-space:nowrap}
-.overview-card h3{font-size:1.15rem;font-weight:900}
-.overview-card p{font-size:.9rem;color:var(--ink-soft);margin-top:.25rem}
-.overview-card .go{font-family:var(--sans);font-size:.8rem;font-weight:700;color:var(--lapis);white-space:nowrap}
-.overview-card.soon{border-left-color:var(--line);opacity:.72;cursor:default}
-.overview-card.soon:hover{box-shadow:none;transform:none}
-.overview-card.soon .go{color:var(--ink-soft)}
-.badge{display:inline-block;font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.08em;padding:.15em .5em;border-radius:3px;vertical-align:.15em;margin-left:.5rem}
-.badge.done{background:#e5efec;color:#37665a}
-.badge.spec{background:#fbebd2;color:#b06a17}
-.badge.soon{background:#eceae2;color:#7a746a}
-.shelf-zone{background:linear-gradient(#f3f1ea,#eeeade);border:1px solid var(--line);border-radius:10px;padding:2.4rem 1.6rem 0}
-.shelf{display:flex;justify-content:flex-start;align-items:flex-end;gap:7px;flex-wrap:wrap;padding:0 .6rem;position:relative}
-.spine{position:relative;display:flex;flex-direction:column;align-items:center;width:44px;height:210px;padding:9px 0 11px;text-decoration:none;border-radius:3px 3px 0 0;background:linear-gradient(100deg,#1d4368 0%,var(--lapis-deep) 55%,#122a40 100%);box-shadow:inset -6px 0 10px rgba(0,0,0,.3),inset 2px 0 4px rgba(255,255,255,.07),0 2px 5px rgba(0,0,0,.18);border-top:3px double var(--ochre);transition:transform .18s ease, box-shadow .18s ease}
-.spine:hover,.spine:focus-visible{transform:translateY(-10px);box-shadow:inset -6px 0 10px rgba(0,0,0,.3),0 14px 22px rgba(22,53,79,.35);outline:none}
-.spine .num{font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.05em;color:var(--ochre-soft)}
-.spine .ko{writing-mode:vertical-rl;flex:1;display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:600;letter-spacing:.22em;color:#e8eef4;margin:8px 0 6px}
-.spine .band{width:22px;border-top:3px double var(--ochre);opacity:.85}
-.spine.wide{width:80px;background:linear-gradient(100deg,#b8944e 0%,var(--ochre) 55%,#8d6c30 100%);border-top-color:var(--lapis-deep)}
-.spine.wide .num{color:#16354f}.spine.wide .ko{color:#1c1508;font-weight:700}.spine.wide .band{border-top-color:var(--lapis-deep)}
-.spine.soon{filter:grayscale(.6) brightness(.92);opacity:.6}
-.shelf-note{font-family:var(--sans);font-size:.72rem;color:var(--ink-soft);text-align:center;padding:2rem 0 1.1rem}
-.chapter-list{border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:3rem minmax(8.5rem,auto) 1fr auto;gap:1.1rem;align-items:baseline;padding:.9rem .4rem;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s ease}
-.row:hover{background:#fbfaf4}
-.row.soon{opacity:.6}
-.row.soon:hover{background:transparent}
-.row .no{font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--ochre)}
-.row .gk{font-family:var(--grk);font-size:.98rem;color:var(--lapis-deep);white-space:nowrap}
-.row .body h3{display:inline;font-size:.96rem;font-weight:700;color:var(--lapis-deep)}
-.row .body p{font-size:.85rem;color:var(--ink-soft);margin-top:.1rem}
-.row .st{font-family:var(--sans);font-size:.63rem;font-weight:700;color:var(--ink-soft);white-space:nowrap}
-.row:hover .body h3{text-decoration:underline;text-underline-offset:3px}
-.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.15rem;font-family:var(--sans);font-size:.78rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1.1rem;margin-top:2rem}
-.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.15em;letter-spacing:.03em}
-.c.k{background:#7a5a38}.c.f{background:#37665a}.c.h{background:#8a4658}.c.t{background:#3c5a83}.c.b{background:#655a8c}.c.x{background:#78736b}
-footer{margin-top:4rem;border-top:3px double var(--line);padding:1.4rem 0 2.6rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
-@media (max-width:780px){
-  header.hero{grid-template-columns:1fr}
-  .hero .big-gk{text-align:left;font-size:1.9rem;order:-1}
-  .hero .big-gk small{text-align:left}
-  .overview-card{grid-template-columns:1fr;gap:.7rem}
-  .shelf-zone{padding:1.4rem 1rem 0}
-  .spine{width:calc(33% - 5px);height:auto;flex-direction:row;padding:.7rem .85rem;border-radius:6px;border-top:none;border-left:3px double var(--ochre)}
-  .spine .ko{writing-mode:horizontal-tb;letter-spacing:.05em;margin:0 0 0 .6rem;flex:1;justify-content:flex-start;font-size:.82rem}
-  .spine .band{display:none}
-  .spine.wide{width:100%}
-  .shelf-note{padding:1.2rem 0 .9rem}
-  .row{grid-template-columns:2.3rem 1fr auto}
-  .row .gk{display:none}
-}
-</style>
-<link data-site-theme="" href="../../assets/theme.css" rel="stylesheet"/><link data-site-app-css="" href="../../assets/app.css" rel="stylesheet"/><link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/><link data-romans-suite-css="" href="./romans-suite.css" rel="stylesheet"/></head>
-<body data-book="rom" data-kind="study-home" data-root="../../">
-<div class="wrap">
-<div class="topbar">
-<a class="mark" href="../../index.html"><span class="gk">Γραφή</span>성서 연구 서고</a>
-<nav><a href="../../index.html">서고 홈</a></nav>
-</div>
-<header class="hero">
-<div>
-<div class="eyebrow">STUDY SET · ROMANS</div>
-<h1>로마서 심층 연구</h1>
-<div class="sub">로마서 전체를 조망하는 종합 개관과 열여섯 장의 장별 심층연구를 한 서가에 묶었다. 원어 인터라이너는 후속 작업을 위해 구조만 남겨 두었다.</div>
-</div>
-<div class="big-gk">Πρὸς Ῥωμαίους<small>프로스 로마이우스 — 로마인들에게</small></div>
-</header>
-<!-- 세 문서 -->
-<section>
-<div class="sec-head">
-<div class="eyebrow">STUDY SET</div>
-<h2>연구 구성</h2>
-<div class="hint">느헤미야 연구 서가와 같은 구조로 종합 개관, 장별 심층연구, 원어 인터라이너를 구분한다.</div>
-</div>
-
-
-<a class="overview-card" href="overview.html">
-<span class="gk">εὐαγγέλιον θεοῦ</span>
-<span>
-<h3>종합 개관 <span class="badge done">완성</span></h3>
-<p>저자·정황·연대·로마 교회의 구성·전체 구조·관통 주제·해석사와 주요 쟁점을 한 문서에서 조망한다.</p>
-</span>
-<span class="go">개관 열기 →</span>
-</a><a class="overview-card" href="ch01.html" style="border-left-color:var(--lapis)">
-<span class="gk">δικαιοσύνη θεοῦ</span>
-<span>
-<h3>장별 심층연구 <span class="badge done">1–16장 완성</span></h3>
-<p>각 장의 단락 구조, 절 범위 주해, 쟁점, 상호 참조와 신학 종합을 제공한다.</p>
-</span>
-<span class="go">1장부터 열기 →</span>
-</a><div aria-disabled="true" class="interlinear-empty">
-<span class="gk">λέξις</span>
-<span>
-<h3>원어 인터라이너</h3>
-<p>아직 구현하지 않았다. 장별 헬라어 원문·축자 대역·형태론 파싱·구문 분석을 수록할 공간으로 비워 둔다.</p>
-</span>
-<span class="state">준비 중 · 공란</span>
+<html lang="ko" data-theme="auto"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>로마서 연구 서가 — 성서 연구 서고</title><meta name="description" content="로마서 성경읽기, 종합 개관, 1–16장 심층연구와 원어 연구 준비 상태를 연결하는 책별 서가."><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../assets/theme.css"><link rel="stylesheet" href="../../assets/app.css"><link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css><link rel="stylesheet" href="../../assets/css/book-shelf.css"><style>:root{--original-font:"Noto Serif","GFS Didot",serif}</style></head>
+<body class="book-shelf-page" data-book="romans" data-kind="study-home" data-root="../../" data-script="grk"><div class="book-shelf-wrap">
+<header class="book-shelf-topbar"><a class="book-shelf-mark" href="../../index.html"><span class="original">Γραφή</span>성서 연구 서고</a><nav><a href="../../index.html">서고 홈</a><a href="../../bible/original.html?book=ROM&amp;chapter=1">성경읽기</a></nav></header>
+<section class="book-shelf-hero"><div><div class="book-shelf-eyebrow">STUDY SET · ROM</div><h1>로마서 연구 서가</h1><p class="sub">복음의 주제 선언에서 로마 교회의 문안과 송영까지, 종합 개관과 열여섯 장 심층연구를 하나의 서가에서 연결한다.</p></div><div class="big-original">Πρὸς Ῥωμαίους<small>로마인들에게</small></div></section>
+<section class="book-shelf-section"><div class="book-shelf-head"><div class="book-shelf-eyebrow">READING &amp; RESEARCH</div><h2>읽기와 연구</h2><p>성경읽기, 종합 개관, 장별 심층연구, 원어 연구의 네 단계로 관리한다.</p></div><div class="book-paths">
+<a class="book-path reading" href="../../bible/original.html?book=ROM&amp;chapter=1"><span class="symbol">ἀνάγνωσις</span><span><h3>① 성경 읽기<span class="book-badge">66권 리더</span></h3><p>NA28 헬라어 본문과 개역개정을 장·절 단위로 나란히 읽는다.</p></span><span class="go">1장부터 →</span></a>
+<a class="book-path" href="overview.html"><span class="symbol">εὐαγγέλιον</span><span><h3>② 종합 개관<span class="book-badge">완성</span></h3><p>저자와 정황, 로마 교회의 구성, 전체 논증 구조, 하나님의 의와 이스라엘 문제를 조망한다.</p></span><span class="go">개관 열기 →</span></a>
+<a class="book-path study" href="ch01.html"><span class="symbol">ἐξήγησις</span><span><h3>③ 장별 심층연구<span class="book-badge">1–16장 완성</span></h3><p>단락 구조, 절 범위 주해, 주석 쟁점, 상호 참조와 장별 신학 종합을 제공한다.</p></span><span class="go">연구 열기 →</span></a>
+<span class="book-path original-study disabled" role="note" aria-disabled="true"><span class="symbol">λέξις</span><span><h3>④ 원어 연구<span class="book-badge pending">미구현</span></h3><p>장별 헬라어 원문, 축자 대역, 형태론 파싱과 구문 분석을 수록할 후속 영역이다.</p></span><span class="go">준비 중</span></span>
 </div></section>
-<!-- 서가 -->
-<section>
-<div class="sec-head">
-<div class="eyebrow">THE SHELF</div>
-<h2>장별 연구 서가</h2>
-</div>
-<div class="shelf-zone">
-<div class="shelf"><a class="spine wide" href="overview.html">
-<span class="num">종합</span>
-<span class="ko">로마서 · 종합 개관</span>
-<span class="band"></span>
-</a><a class="spine" href="ch01.html"><span class="num">01</span><span class="ko">복음과 진노</span><span class="band"></span></a><a class="spine" href="ch02.html"><span class="num">02</span><span class="ko">의로운 심판</span><span class="band"></span></a><a class="spine" href="ch03.html"><span class="num">03</span><span class="ko">모두 죄 아래</span><span class="band"></span></a><a class="spine" href="ch04.html"><span class="num">04</span><span class="ko">아브라함의 믿음</span><span class="band"></span></a><a class="spine" href="ch05.html"><span class="num">05</span><span class="ko">화평과 두 사람</span><span class="band"></span></a><a class="spine" href="ch06.html"><span class="num">06</span><span class="ko">죄에 죽은 자</span><span class="band"></span></a><a class="spine" href="ch07.html"><span class="num">07</span><span class="ko">율법과 나</span><span class="band"></span></a><a class="spine" href="ch08.html"><span class="num">08</span><span class="ko">성령 안의 생명</span><span class="band"></span></a><a class="spine" href="ch09.html"><span class="num">09</span><span class="ko">이스라엘과 선택</span><span class="band"></span></a><a class="spine" href="ch10.html"><span class="num">10</span><span class="ko">믿음에서 난 의</span><span class="band"></span></a><a class="spine" href="ch11.html"><span class="num">11</span><span class="ko">남은 자와 긍휼</span><span class="band"></span></a><a class="spine" href="ch12.html"><span class="num">12</span><span class="ko">산 제사</span><span class="band"></span></a><a class="spine" href="ch13.html"><span class="num">13</span><span class="ko">권세와 사랑</span><span class="band"></span></a><a class="spine" href="ch14.html"><span class="num">14</span><span class="ko">서로 받으라</span><span class="band"></span></a><a class="spine" href="ch15.html"><span class="num">15</span><span class="ko">복음의 사명</span><span class="band"></span></a><a class="spine" href="ch16.html"><span class="num">16</span><span class="ko">문안과 공동체</span><span class="band"></span></a></div>
-<div class="shelf-note">전 17권 — 종합 개관 1편 · 장별 심층연구 16편 · 원어 인터라이너는 후속 구현</div>
-</div>
-</section>
-<!-- 장별 목록 -->
-<section id="ch">
-<div class="sec-head">
-<div class="eyebrow">CHAPTERS</div>
-<h2>장별</h2>
-<div class="hint">전 16장. 종합 연구와 장별 심층연구가 모두 완결되었다.</div>
-</div>
-<div class="chapter-list">
-<a class="row" href="ch01.html">
-<span class="no">01</span><span class="gk">εὐαγγέλιον θεοῦ</span>
-<span class="body"><h3>복음과 진노</h3><p>인사와 주제 선언, 그리고 감춰진 진리를 막는 인간(1:1–32).</p></span>
-<span class="st">심층연구</span>
-</a>
-<a class="row" href="ch02.html"><span class="no">02</span><span class="gk">κρίμα τοῦ θεοῦ</span>
-<span class="body"><h3>하나님의 심판</h3><p>남을 판단하는 자와 율법을 가진 자(2:1–29).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch03.html"><span class="no">03</span><span class="gk">πάντες ἥμαρτον</span>
-<span class="body"><h3>모든 사람이 죄 아래</h3><p>유대인의 나음과 속죄소이신 그리스도(3:1–31).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch04.html"><span class="no">04</span><span class="gk">ἐπίστευσεν Ἀβραάμ</span>
-<span class="body"><h3>아브라함의 믿음</h3><p>할례 이전의 의, 약속의 상속자(4:1–25).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch05.html"><span class="no">05</span><span class="gk">εἰρήνην ἔχομεν</span>
-<span class="body"><h3>화평과 아담·그리스도</h3><p>환난 중의 소망, 한 사람으로 말미암아(5:1–21).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch06.html"><span class="no">06</span><span class="gk">ἀπεθάνομεν τῇ ἁμαρτίᾳ</span>
-<span class="body"><h3>죄에 대하여 죽고</h3><p>세례와 연합, 의의 종(6:1–23).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch07.html"><span class="no">07</span><span class="gk">ὁ νόμος ἅγιος</span>
-<span class="body"><h3>율법과 나</h3><p>율법에서 놓임과 곤고한 사람(7:1–25).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch08.html"><span class="no">08</span><span class="gk">οὐδὲν κατάκριμα</span>
-<span class="body"><h3>성령 안의 생명</h3><p>정죄 없음에서 끊을 수 없는 사랑까지(8:1–39).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch09.html"><span class="no">09</span><span class="gk">ἐκλογή</span>
-<span class="body"><h3>이스라엘과 택하심</h3><p>큰 근심, 토기장이의 권한(9:1–33).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch10.html"><span class="no">10</span><span class="gk">ῥῆμα τῆς πίστεως</span>
-<span class="body"><h3>믿음의 말씀</h3><p>마음으로 믿어 의에 이르고(10:1–21).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch11.html"><span class="no">11</span><span class="gk">λεῖμμα</span>
-<span class="body"><h3>남은 자와 감람나무</h3><p>접붙임과 온 이스라엘의 구원(11:1–36).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch12.html"><span class="no">12</span><span class="gk">θυσίαν ζῶσαν</span>
-<span class="body"><h3>산 제물</h3><p>몸을 드리는 예배와 한 몸의 지체(12:1–21).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch13.html"><span class="no">13</span><span class="gk">πλήρωμα νόμου</span>
-<span class="body"><h3>권세와 사랑</h3><p>위에 있는 권세들, 사랑은 율법의 완성(13:1–14).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch14.html"><span class="no">14</span><span class="gk">μὴ κρίνετε</span>
-<span class="body"><h3>약한 자와 강한 자</h3><p>먹는 문제와 형제를 넘어뜨리지 않음(14:1–23).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch15.html"><span class="no">15</span><span class="gk">προσλαμβάνεσθε</span>
-<span class="body"><h3>서로 받으라</h3><p>이방인의 찬송, 예루살렘과 서바나 계획(15:1–33).</p></span><span class="st">심층연구</span></a>
-<a class="row" href="ch16.html"><span class="no">16</span><span class="gk">ἀσπάσασθε</span>
-<span class="body"><h3>문안과 송영</h3><p>뵈뵈와 스물여섯 이름, 마지막 송영(16:1–27).</p></span><span class="st">심층연구</span></a>
-</div>
-<div class="legend">
-<span><b>주석 스파인</b></span>
-<span><span class="c f">M</span> Moo NICNT²</span>
-<span><span class="c t">D</span> Dunn WBC</span>
-<span><span class="c b">J</span> Jewett Hermeneia</span>
-<span><span class="c h">G</span> Gaventa NTL</span>
-<span><span class="c k">B</span> Barth 로마서</span>
-<span><span class="c x">보조</span> Longenecker · Kruse · Cranfield · Stott</span>
-</div>
-</section>
-<footer>로마서 연구 서가 — 종합 개관 1편 · 장별 심층연구 16편 완성.<br/>원어 인터라이너는 아직 구현하지 않았으며 폴더 구조만 비워 두었다.</footer>
-</div>
-<script src="../../assets/app.js"></script><script data-bible-reader-js="" defer="" src="../../assets/js/bible-reader.js"></script></body>
-</html>
+<section class="book-shelf-section"><div class="book-shelf-head"><div class="book-shelf-eyebrow">BIBLE READING · CHAPTERS 1–16</div><h2>로마서 본문 바로가기</h2><p>모든 장을 NA28·개역개정 병렬 성경읽기로 바로 연다.</p></div><div class="book-chapter-grid">
+<a href="../../bible/original.html?book=ROM&amp;chapter=1"><span class="num">01</span><small>복음과 진노</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=2"><span class="num">02</span><small>하나님의 심판</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=3"><span class="num">03</span><small>모두 죄 아래</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=4"><span class="num">04</span><small>아브라함의 믿음</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=5"><span class="num">05</span><small>화평과 두 사람</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=6"><span class="num">06</span><small>죄에 대하여 죽다</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=7"><span class="num">07</span><small>율법과 나</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=8"><span class="num">08</span><small>성령 안의 생명</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=9"><span class="num">09</span><small>이스라엘과 택하심</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=10"><span class="num">10</span><small>믿음의 말씀</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=11"><span class="num">11</span><small>남은 자와 감람나무</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=12"><span class="num">12</span><small>산 제물</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=13"><span class="num">13</span><small>권세와 사랑</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=14"><span class="num">14</span><small>약한 자와 강한 자</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=15"><span class="num">15</span><small>서로 받으라</small></a><a href="../../bible/original.html?book=ROM&amp;chapter=16"><span class="num">16</span><small>문안과 송영</small></a>
+</div></section>
+<section class="book-shelf-section"><div class="book-shelf-head"><div class="book-shelf-eyebrow">THE SHELF</div><h2>장별 연구 서가</h2><p>책등을 눌러 각 장의 심층연구로 들어간다.</p></div><div class="book-shelf-zone"><div class="book-shelf">
+<a class="book-spine overview" href="overview.html"><span class="num">종합</span><span class="title">로마서 · 종합 개관</span><span class="band"></span></a><a class="book-spine" href="ch01.html"><span class="num">01</span><span class="title">복음과 진노</span><span class="band"></span></a><a class="book-spine" href="ch02.html"><span class="num">02</span><span class="title">의로운 심판</span><span class="band"></span></a><a class="book-spine" href="ch03.html"><span class="num">03</span><span class="title">모두 죄 아래</span><span class="band"></span></a><a class="book-spine" href="ch04.html"><span class="num">04</span><span class="title">아브라함의 믿음</span><span class="band"></span></a><a class="book-spine" href="ch05.html"><span class="num">05</span><span class="title">화평과 두 사람</span><span class="band"></span></a><a class="book-spine" href="ch06.html"><span class="num">06</span><span class="title">죄에 죽은 자</span><span class="band"></span></a><a class="book-spine" href="ch07.html"><span class="num">07</span><span class="title">율법과 나</span><span class="band"></span></a><a class="book-spine" href="ch08.html"><span class="num">08</span><span class="title">성령 안의 생명</span><span class="band"></span></a><a class="book-spine" href="ch09.html"><span class="num">09</span><span class="title">이스라엘과 선택</span><span class="band"></span></a><a class="book-spine" href="ch10.html"><span class="num">10</span><span class="title">믿음에서 난 의</span><span class="band"></span></a><a class="book-spine" href="ch11.html"><span class="num">11</span><span class="title">남은 자와 긍휼</span><span class="band"></span></a><a class="book-spine" href="ch12.html"><span class="num">12</span><span class="title">산 제사</span><span class="band"></span></a><a class="book-spine" href="ch13.html"><span class="num">13</span><span class="title">권세와 사랑</span><span class="band"></span></a><a class="book-spine" href="ch14.html"><span class="num">14</span><span class="title">서로 받으라</span><span class="band"></span></a><a class="book-spine" href="ch15.html"><span class="num">15</span><span class="title">복음의 사명</span><span class="band"></span></a><a class="book-spine" href="ch16.html"><span class="num">16</span><span class="title">문안과 공동체</span><span class="band"></span></a>
+</div><div class="book-shelf-note">종합 개관 1편 · 장별 심층연구 16편 완성 · 원어 연구 미구현</div></div></section>
+<section class="book-shelf-section" id="chapters"><div class="book-shelf-head"><div class="book-shelf-eyebrow">CHAPTER STATUS</div><h2>장별 자료 현황</h2><p>성경읽기와 심층연구를 연결하며 원어 연구는 아직 준비 중으로 표시한다.</p></div><div class="book-chapter-list">
+<article class="book-chapter-row"><span class="no">01</span><span class="original">εὐαγγέλιον θεοῦ</span><span><h3>복음과 진노</h3><p>인사와 주제 선언, 감춰진 진리를 막는 인간의 불의를 다룬다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=1">성경읽기</a><a href="ch01.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">02</span><span class="original">κρίμα τοῦ θεοῦ</span><span><h3>하나님의 심판</h3><p>남을 판단하는 자와 율법을 가진 자도 공평한 심판 앞에 선다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=2">성경읽기</a><a href="ch02.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">03</span><span class="original">πάντες ἥμαρτον</span><span><h3>모든 사람이 죄 아래</h3><p>모든 입이 막힌 자리에서 믿음을 통한 하나님의 의가 나타난다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=3">성경읽기</a><a href="ch03.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">04</span><span class="original">ἐπίστευσεν Ἀβραάμ</span><span><h3>아브라함의 믿음</h3><p>할례 이전의 믿음과 약속에 근거한 의롭다 하심을 논증한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=4">성경읽기</a><a href="ch04.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">05</span><span class="original">εἰρήνην ἔχομεν</span><span><h3>화평과 아담·그리스도</h3><p>의롭다 하심의 결과와 두 대표 안에서의 죄와 은혜를 설명한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=5">성경읽기</a><a href="ch05.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">06</span><span class="original">ἀπεθάνομεν τῇ ἁμαρτίᾳ</span><span><h3>죄에 대하여 죽고</h3><p>세례와 그리스도와의 연합, 죄에서 의의 종으로 옮겨진 삶을 다룬다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=6">성경읽기</a><a href="ch06.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">07</span><span class="original">ὁ νόμος ἅγιος</span><span><h3>율법과 나</h3><p>율법의 선함과 죄의 권세 사이에서 갈라진 인간의 실존을 살핀다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=7">성경읽기</a><a href="ch07.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">08</span><span class="original">οὐδὲν κατάκριμα</span><span><h3>성령 안의 생명</h3><p>정죄 없음에서 영화와 끊을 수 없는 하나님의 사랑까지 이어진다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=8">성경읽기</a><a href="ch08.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">09</span><span class="original">ἐκλογή</span><span><h3>이스라엘과 택하심</h3><p>하나님의 말씀, 긍휼과 선택, 이스라엘의 불신 문제를 논증한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=9">성경읽기</a><a href="ch09.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">10</span><span class="original">ῥῆμα τῆς πίστεως</span><span><h3>믿음의 말씀</h3><p>마음으로 믿고 입으로 시인하며 들음에서 오는 믿음을 설명한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=10">성경읽기</a><a href="ch10.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">11</span><span class="original">λεῖμμα</span><span><h3>남은 자와 감람나무</h3><p>이스라엘의 넘어짐과 이방인의 접붙임을 하나님의 긍휼 안에서 해석한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=11">성경읽기</a><a href="ch11.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">12</span><span class="original">θυσίαν ζῶσαν</span><span><h3>산 제물</h3><p>몸을 드리는 예배와 한 몸의 은사, 선으로 악을 이기는 삶을 권한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=12">성경읽기</a><a href="ch12.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">13</span><span class="original">πλήρωμα νόμου</span><span><h3>권세와 사랑</h3><p>공적 질서, 이웃 사랑, 임박한 구원을 의식하는 깨어 있는 삶을 다룬다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=13">성경읽기</a><a href="ch13.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">14</span><span class="original">μὴ κρίνετε</span><span><h3>약한 자와 강한 자</h3><p>음식과 날의 차이 속에서 판단하지 않고 서로를 세우는 길을 제시한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=14">성경읽기</a><a href="ch14.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">15</span><span class="original">προσλαμβάνεσθε</span><span><h3>서로 받으라</h3><p>그리스도를 본받아 서로를 받고 바울의 이방 선교 계획을 나눈다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=15">성경읽기</a><a href="ch15.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+<article class="book-chapter-row"><span class="no">16</span><span class="original">ἀσπάσασθε</span><span><h3>문안과 송영</h3><p>뵈뵈와 로마 교회의 사람들을 문안하고 복음의 하나님께 송영한다.</p></span><span class="book-actions"><a href="../../bible/original.html?book=ROM&amp;chapter=16">성경읽기</a><a href="ch16.html">심층연구</a><span class="disabled">원어연구 준비 중</span></span></article>
+</div></section>
+<footer class="book-shelf-footer">Moo·Dunn·Jewett·Gaventa·Barth와 보조 주석 대조 · 장별 심층연구 16편 완성.<br>원어 연구는 아직 구현하지 않았으며 실제 파일이 생길 때 장별 링크를 활성화한다.</footer>
+</div><script src="../../assets/app.js"></script><script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script></body></html>

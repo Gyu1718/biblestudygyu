@@ -1,0 +1,5 @@
+/* 표준형 연구 페이지에서는 성경 리더가 자동 생성하는 옛 사이드바 버튼을 숨긴다.
+   페이지가 명시적으로 data-auto-original-link="true"를 선언한 경우만 표시한다. */
+body:not([data-auto-original-link="true"]) .original-bible-nav{
+  display:none!important;
+}

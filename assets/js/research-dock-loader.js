@@ -27,5 +27,6 @@
 
   addStyle("assets/theme.css?v=20260724.2", "data-rd-theme-css");
   addStyle("assets/app.css?v=20260724.2", "data-rd-app-css");
+  addStyle("assets/css/study-navigation-policy.css?v=20260725.1", "data-study-navigation-policy-css");
   addScript("assets/js/research-dock.js?v=20260724.2", "data-research-dock-js");
 })();

@@ -27,16 +27,26 @@ jobs:
           python-version: "3.12"
       - name: Compile Python tools
         run: python3 -m py_compile tools/interlinear/*.py
-      - name: Smoke-test transliteration and morphology
+      - name: Smoke-test Hebrew and Greek conversions
         run: |
           python3 - <<'PY'
           import sys
           sys.path.insert(0, "tools/interlinear")
-          from translit_ko import to_hangul
-          from morph_ko import to_korean
-          assert to_hangul("ne.chem.Yah") == "네헴야"
-          assert to_hangul("va/y.Hi") == "바이히"
-          expansion = "Function=Verb ; Stem=Qal ; Form=Consecutive Imperfect ; Person=Third ; Gender=Masculine ; Number=Singular"
-          assert to_korean(expansion) == "동사 · 칼 · 바브연속 미완료 · 3인칭 남성 단수"
-          print("interlinear smoke tests passed")
+          from translit_ko import to_hangul as hebrew
+          from morph_ko import to_korean as hebrew_morph
+          from translit_gk_ko import to_hangul as greek
+          from morph_ko_gk import to_korean as greek_morph
+
+          assert hebrew("ne.chem.Yah") == "네헴야"
+          assert hebrew("va/y.Hi") == "바이히"
+          h = "Function=Verb ; Stem=Qal ; Form=Consecutive Imperfect ; Person=Third ; Gender=Masculine ; Number=Singular"
+          assert hebrew_morph(h) == "동사 · 칼 · 바브연속 미완료 · 3인칭 남성 단수"
+
+          assert greek("katakrima") == "카타크리마"
+          assert greek("Iēsou") == "이에수"
+          assert greek("euangelion") == "유앙겔리온"
+          assert greek("ekklēsia") == "에클레시아"
+          g = "Function=Verb ; Tense=Aorist ; Voice=Active ; Mood=Indicative ; Person=3rd ; Number=Singular"
+          assert greek_morph(g) == "동사 · 부정과거 능동 직설법 · 3인칭 단수"
+          print("Hebrew and Greek interlinear smoke tests passed")
           PY

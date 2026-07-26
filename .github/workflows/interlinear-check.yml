@@ -1,0 +1,42 @@
+name: Check interlinear pipeline
+
+on:
+  pull_request:
+    paths:
+      - "tools/interlinear/**"
+      - "assets/css/interlinear.css"
+      - "docs/INTERLINEAR_PIPELINE.md"
+      - ".github/workflows/interlinear*.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tools/interlinear/**"
+      - "assets/css/interlinear.css"
+      - "docs/INTERLINEAR_PIPELINE.md"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Python tools
+        run: python3 -m py_compile tools/interlinear/*.py
+      - name: Smoke-test transliteration and morphology
+        run: |
+          python3 - <<'PY'
+          import sys
+          sys.path.insert(0, "tools/interlinear")
+          from translit_ko import to_hangul
+          from morph_ko import to_korean
+          assert to_hangul("ne.chem.Yah") == "네헴야"
+          assert to_hangul("va/y.Hi") == "바이히"
+          expansion = "Function=Verb ; Stem=Qal ; Form=Consecutive Imperfect ; Person=Third ; Gender=Masculine ; Number=Singular"
+          assert to_korean(expansion) == "동사 · 칼 · 바브연속 미완료 · 3인칭 남성 단수"
+          print("interlinear smoke tests passed")
+          PY

@@ -1,0 +1,68 @@
+name: Build interlinear artifact
+
+on:
+  workflow_dispatch:
+    inputs:
+      book_code:
+        description: "STEPBible book code, e.g. Neh or Gen"
+        required: true
+        default: "Neh"
+      book_slug:
+        description: "Repository book slug, e.g. nehemiah"
+        required: true
+        default: "nehemiah"
+      book_title:
+        description: "Korean book title"
+        required: true
+        default: "느헤미야"
+      chapter:
+        description: "Chapter number"
+        required: true
+        default: "1"
+      testament:
+        description: "Output testament folder"
+        type: choice
+        options: [ot]
+        default: ot
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch STEPBible sources
+        run: python3 tools/interlinear/fetch_sources.py
+      - name: Build chapter JSON
+        run: |
+          python3 tools/interlinear/build_interlinear.py \
+            --book "${{ inputs.book_code }}" \
+            --slug "${{ inputs.book_slug }}" \
+            --chapter "${{ inputs.chapter }}" \
+            --verify-morphology
+      - name: Render HTML
+        run: |
+          CH=$(printf "%02d" "${{ inputs.chapter }}")
+          python3 tools/interlinear/render_interlinear.py \
+            --input "data/interlinear/${{ inputs.book_slug }}/$CH.json" \
+            --output "${{ inputs.testament }}/${{ inputs.book_slug }}/parsing/ch$CH.html" \
+            --book-slug "${{ inputs.book_slug }}" \
+            --book-title "${{ inputs.book_title }}"
+      - name: Validate output
+        run: |
+          CH=$(printf "%02d" "${{ inputs.chapter }}")
+          python3 tools/interlinear/validate_interlinear.py \
+            "data/interlinear/${{ inputs.book_slug }}/$CH.json" \
+            "${{ inputs.testament }}/${{ inputs.book_slug }}/parsing/ch$CH.html"
+      - name: Upload generated files
+        uses: actions/upload-artifact@v4
+        with:
+          name: interlinear-${{ inputs.book_slug }}-${{ inputs.chapter }}
+          path: |
+            data/interlinear/${{ inputs.book_slug }}/
+            ${{ inputs.testament }}/${{ inputs.book_slug }}/parsing/

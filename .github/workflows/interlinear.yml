@@ -3,12 +3,17 @@ name: Build interlinear artifact
 on:
   workflow_dispatch:
     inputs:
+      testament:
+        description: "Testament and source pipeline"
+        type: choice
+        options: [ot, nt]
+        default: ot
       book_code:
-        description: "STEPBible book code, e.g. Neh or Gen"
+        description: "STEPBible book code, e.g. Gen, Neh, Rom"
         required: true
         default: "Neh"
       book_slug:
-        description: "Repository book slug, e.g. nehemiah"
+        description: "Repository book slug, e.g. genesis, nehemiah, romans"
         required: true
         default: "nehemiah"
       book_title:
@@ -19,11 +24,11 @@ on:
         description: "Chapter number"
         required: true
         default: "1"
-      testament:
-        description: "Output testament folder"
+      greek_text:
+        description: "NT only: N=critical text, K=TR/Byz, all=include variants"
         type: choice
-        options: [ot]
-        default: ot
+        options: [N, K, all]
+        default: N
 
 permissions:
   contents: read
@@ -39,12 +44,22 @@ jobs:
       - name: Fetch STEPBible sources
         run: python3 tools/interlinear/fetch_sources.py
       - name: Build chapter JSON
+        shell: bash
         run: |
-          python3 tools/interlinear/build_interlinear.py \
-            --book "${{ inputs.book_code }}" \
-            --slug "${{ inputs.book_slug }}" \
-            --chapter "${{ inputs.chapter }}" \
-            --verify-morphology
+          if [ "${{ inputs.testament }}" = "nt" ]; then
+            python3 tools/interlinear/build_interlinear_gk.py \
+              --book "${{ inputs.book_code }}" \
+              --slug "${{ inputs.book_slug }}" \
+              --chapter "${{ inputs.chapter }}" \
+              --text "${{ inputs.greek_text }}" \
+              --verify-morphology
+          else
+            python3 tools/interlinear/build_interlinear.py \
+              --book "${{ inputs.book_code }}" \
+              --slug "${{ inputs.book_slug }}" \
+              --chapter "${{ inputs.chapter }}" \
+              --verify-morphology
+          fi
       - name: Render HTML
         run: |
           CH=$(printf "%02d" "${{ inputs.chapter }}")
@@ -52,7 +67,8 @@ jobs:
             --input "data/interlinear/${{ inputs.book_slug }}/$CH.json" \
             --output "${{ inputs.testament }}/${{ inputs.book_slug }}/parsing/ch$CH.html" \
             --book-slug "${{ inputs.book_slug }}" \
-            --book-title "${{ inputs.book_title }}"
+            --book-title "${{ inputs.book_title }}" \
+            --testament "${{ inputs.testament }}"
       - name: Validate output
         run: |
           CH=$(printf "%02d" "${{ inputs.chapter }}")
@@ -62,7 +78,7 @@ jobs:
       - name: Upload generated files
         uses: actions/upload-artifact@v4
         with:
-          name: interlinear-${{ inputs.book_slug }}-${{ inputs.chapter }}
+          name: interlinear-${{ inputs.testament }}-${{ inputs.book_slug }}-${{ inputs.chapter }}
           path: |
             data/interlinear/${{ inputs.book_slug }}/
             ${{ inputs.testament }}/${{ inputs.book_slug }}/parsing/

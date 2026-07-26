@@ -1,0 +1,10 @@
+# 인터라이너 원자료 — tools/interlinear/fetch_sources.py 로 내려받는다.
+sources/
+
+# 로컬 Python 캐시
+__pycache__/
+*.pyc
+
+# 임시·펼친 인터라이너 데이터
+*.fat.json
+data/interlinear/**/*.tmp

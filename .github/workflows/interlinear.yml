@@ -24,6 +24,10 @@ on:
         description: "Chapter number"
         required: true
         default: "1"
+      chapter_count:
+        description: "Total chapter count for the left chapter navigation"
+        required: true
+        default: "13"
       greek_text:
         description: "NT only: N=critical text, K=TR/Byz, all=include variants"
         type: choice
@@ -68,7 +72,8 @@ jobs:
             --output "${{ inputs.testament }}/${{ inputs.book_slug }}/parsing/ch$CH.html" \
             --book-slug "${{ inputs.book_slug }}" \
             --book-title "${{ inputs.book_title }}" \
-            --testament "${{ inputs.testament }}"
+            --testament "${{ inputs.testament }}" \
+            --chapter-count "${{ inputs.chapter_count }}"
       - name: Validate output
         run: |
           CH=$(printf "%02d" "${{ inputs.chapter }}")

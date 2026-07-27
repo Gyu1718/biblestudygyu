@@ -1,0 +1,46 @@
+{
+  "INSTALL.md": {
+    "bytes": 795,
+    "sha256": "d27247d7e58493f41d0354deae48b011bfde3e886fad954c68ac9459180f2290"
+  },
+  "README.md": {
+    "bytes": 4875,
+    "sha256": "5bdc0793296810357ea237802fc02082dc2534bb3337a4e8b85da081263d3837"
+  },
+  "VALIDATION.txt": {
+    "bytes": 933,
+    "sha256": "2b31aeb7ca1d1c155a3721f43e16610c5d8908b31794e9718af6861b19070489"
+  },
+  "catalog.js": {
+    "bytes": 6631,
+    "sha256": "fae2a9e04c704ff3f636cb8912dca8594f1d22bc992c7bf45da1cf37f91e7f11"
+  },
+  "docs/BOOK_STUDY_MANUAL_JOEL_PATCH.md": {
+    "bytes": 958,
+    "sha256": "5a85c8d429116a61083841c9d28e63381fd3732a3f8c725176b9f5e8fc15263b"
+  },
+  "ot/joel/README.md": {
+    "bytes": 1229,
+    "sha256": "24caffe3ed618da8407ea471abb410d00687a58549297274c64a9eb334742d8e"
+  },
+  "ot/joel/ch01.html": {
+    "bytes": 40592,
+    "sha256": "b38cb6e223784fa737c48f9c4cc6df5062e2bf304e1bfce67518f2a5470e9326"
+  },
+  "ot/joel/ch02.html": {
+    "bytes": 44220,
+    "sha256": "178fd2d2c8f9d5f1ab5df45a5ffddb035909c9108dbca80c7f7e322ec28ff1e8"
+  },
+  "ot/joel/ch03.html": {
+    "bytes": 37124,
+    "sha256": "c6f5fef3ca71904957e26558d8614b1e62135601d2a9bc68b72692170669ccbf"
+  },
+  "ot/joel/index.html": {
+    "bytes": 7700,
+    "sha256": "3ced3294d784c27c5ed647096bb59b96fb7bcf210f9de056896325b3630fb608"
+  },
+  "ot/joel/overview.html": {
+    "bytes": 55466,
+    "sha256": "a9906e88f4371d30f3934f9c3e47126b37bcc5868093ab9eac52ecc99e0f149a"
+  }
+}

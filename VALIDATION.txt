@@ -1,0 +1,41 @@
+PASS
+{
+  "status": "PASS",
+  "pages": {
+    "overview.html": {
+      "bytes": 55466,
+      "text_chars": 12448,
+      "source_chips": 155,
+      "substantive_claim_blocks": 63,
+      "missing_attribution": [],
+      "duplicate_ids": []
+    },
+    "ch01.html": {
+      "bytes": 40592,
+      "text_chars": 7891,
+      "source_chips": 107,
+      "substantive_claim_blocks": 50,
+      "missing_attribution": [],
+      "duplicate_ids": [],
+      "aria_current_count": 1
+    },
+    "ch02.html": {
+      "bytes": 44220,
+      "text_chars": 8796,
+      "source_chips": 126,
+      "substantive_claim_blocks": 57,
+      "missing_attribution": [],
+      "duplicate_ids": [],
+      "aria_current_count": 1
+    },
+    "ch03.html": {
+      "bytes": 37124,
+      "text_chars": 7128,
+      "source_chips": 92,
+      "substantive_claim_blocks": 42,
+      "missing_attribution": [],
+      "duplicate_ids": [],
+      "aria_current_count": 1
+    }
+  }
+}

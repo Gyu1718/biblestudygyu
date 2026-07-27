@@ -1,0 +1,70 @@
+{
+  "version": "v4-ch01",
+  "files": [
+    {
+      "path": "CHANGELOG_V4_CH01.md",
+      "bytes": 431,
+      "sha256": "44db090bb7eb68bf03ec5795f30e91ab89b97f96431a7aee9b781e6b16bcce02"
+    },
+    {
+      "path": "INSTALL.md",
+      "bytes": 1061,
+      "sha256": "5f2cc5a125ee483b6fc0043298403dd18d9ff2e95424037bc8ecdc254ae992e5"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 1432,
+      "sha256": "270555cdc9bb9718a5456ac0144d0d36043061781c2061c1f1feb08bd1120afc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4873,
+      "sha256": "8594c5cec130f3b80ecab5dbc7d6f5d3b35dcaee795c664f6ba548fc260c21b3"
+    },
+    {
+      "path": "VALIDATION.txt",
+      "bytes": 933,
+      "sha256": "2b31aeb7ca1d1c155a3721f43e16610c5d8908b31794e9718af6861b19070489"
+    },
+    {
+      "path": "catalog.js",
+      "bytes": 6631,
+      "sha256": "1c89bc75443e2e1307f559de982e2b31d02f5d607fed6c2bffd73698b6ed539e"
+    },
+    {
+      "path": "docs/BOOK_STUDY_MANUAL_JOEL_PATCH.md",
+      "bytes": 982,
+      "sha256": "705910ae23c98c32e8e80008d3c04ea212b18d7a91e938b88d94ac81c447f440"
+    },
+    {
+      "path": "ot/joel/README.md",
+      "bytes": 583,
+      "sha256": "33b933d0388a3ef49bffb5d44990539a68676316b59fc033980436b0116e00b2"
+    },
+    {
+      "path": "ot/joel/ch01.html",
+      "bytes": 68364,
+      "sha256": "cb95963c06536471a85e2c04a30e86c9ebf7b1e62a01055c218c6aef571d0441"
+    },
+    {
+      "path": "ot/joel/ch02.html",
+      "bytes": 44220,
+      "sha256": "178fd2d2c8f9d5f1ab5df45a5ffddb035909c9108dbca80c7f7e322ec28ff1e8"
+    },
+    {
+      "path": "ot/joel/ch03.html",
+      "bytes": 37124,
+      "sha256": "c6f5fef3ca71904957e26558d8614b1e62135601d2a9bc68b72692170669ccbf"
+    },
+    {
+      "path": "ot/joel/index.html",
+      "bytes": 7727,
+      "sha256": "7abf989cf844857f1f1086fb496ef74ce5405f1325e750c25b9afba2c6bc3951"
+    },
+    {
+      "path": "ot/joel/overview.html",
+      "bytes": 38477,
+      "sha256": "8c7c833054efaedfb4c7c28e8f0b61ecb39c3b11e467aed8377abf06e683da72"
+    }
+  ]
+}

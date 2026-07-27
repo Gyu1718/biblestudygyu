@@ -16,7 +16,7 @@ window.SITE_CATALOG = {
       { id: "esther", path: "ot/esther/index.html", title: "에스더 연구 서가", original: "אֶסְתֵּר", script: "heb", meta: "종합 개관 1편 · 장별 심층연구 10편 · Macchi·Grossman·Llewellyn-Jones·Carruthers·Bechtel 종합 · 개역개정 대조", desc: "하나님의 이름 없이 하나님의 일을 이야기하는 책. 세 본문과 편집 과정, 페르시아 궁정 배경, 열 잔치와 교차구조, 수용사를 조망하고 열 장 전체를 절 단위로 주해한다.", volumes: 11 },
       { id: "psalms", path: "ot/psalms/index.html", title: "시편 상세 연구", original: "תְּהִלִּים", script: "heb", meta: "예외형 — 전체 개관 1편 · 자료집 1편 · 권별 상세 연구 5편 · 시편 1–150편", desc: "시편은 150편을 다섯 권의 정경 구조로 읽는 예외형 연구 세트다. 전체 개관과 자료집, 다섯 권의 상세 연구 구조를 유지한다.", volumes: 7 },
       { id: "hosea", path: "ot/hosea/index.html", title: "호세아서 연구 노트", original: "הוֹשֵׁעַ", script: "heb", meta: "예외형 — 일곱 주석 종합 · 배경 연구 · 14장 절 단위 주해 · 신학 · 상호 참조 · 복음적 해석", desc: "고멜과의 혼인 서사에서 심판과 소생까지 열네 장을 통합 연구 노트로 구성했다. 별도 지시가 있기 전까지 현재 구조를 유지한다.", volumes: 7 },
-      { id: "joel", path: "ot/joel/index.html", title: "요엘 연구 서가", original: "יוֹאֵל", script: "heb", meta: "표준형 서가 — 성경읽기 · 종합 연구 1편 · 장별 심층연구 3편 · 원어 연구 미구현", desc: "메뚜기 재앙, 공동체 회개, 땅의 회복, 모든 육체 위의 영과 열방 심판을 한국어 3장·히브리어 4장 체계로 병기하여 연구한다.", volumes: 4 },
+      { id: "joel", path: "ot/joel/index.html", title: "요엘 연구 서가", original: "יוֹאֵל", script: "heb", meta: "표준형 서가 — 성경읽기 · 종합 연구 v4 · 1장 구절별 개정 완료 · 2–3장 1차본 · 원어 연구 미구현", desc: "1장은 구절별로 여섯 주석의 논증과 독법을 확장했고, 종합연구에도 이를 반영했다. 2–3장은 순차 개정한다.", volumes: 4 },
       { id: "haggai", path: "ot/haggai/index.html", title: "학개 연구 서가", original: "חַגַּי", script: "heb", meta: "표준형 서가 — 성경읽기 · 종합 개관 1편 · 장별 심층연구 2편 · 원어 연구 1:1–4 표본", desc: "넉 달 동안 선포된 네 신탁을 성경읽기, 종합 개관, 두 장의 심층연구와 파싱·인터라이너 융합 원어 연구 표본으로 연결한다.", volumes: 4 }
     ]},
     { id: "nt", label: "신약 연구", original: "Καινὴ Διαθήκη", script: "grk", studies: [

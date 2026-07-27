@@ -1,87 +1,46 @@
 {
-  "version": "2.0",
-  "metrics": {
-    "ch01.html": {
-      "bytes": 28986,
-      "text_chars": 7526,
-      "sections": 11,
-      "tables": 2
-    },
-    "ch02.html": {
-      "bytes": 30796,
-      "text_chars": 8459,
-      "sections": 11,
-      "tables": 2
-    },
-    "ch03.html": {
-      "bytes": 26615,
-      "text_chars": 6744,
-      "sections": 10,
-      "tables": 2
-    },
-    "index.html": {
-      "bytes": 7708,
-      "text_chars": 1379,
-      "sections": 5,
-      "tables": 0
-    },
-    "overview.html": {
-      "bytes": 39841,
-      "text_chars": 12221,
-      "sections": 9,
-      "tables": 3
-    }
+  "INSTALL.md": {
+    "bytes": 795,
+    "sha256": "d27247d7e58493f41d0354deae48b011bfde3e886fad954c68ac9459180f2290"
   },
-  "files": [
-    {
-      "path": "INSTALL.md",
-      "size": 756,
-      "sha256": "53d3771e7ff984172f5b8547637497d32173ac3f0f9111e447912a61cca63a1c"
-    },
-    {
-      "path": "README.md",
-      "size": 4831,
-      "sha256": "a78c4e4959b21b5d27212cacd2c59bca53d1c8df0f209ba4808dae5bcaa44f3e"
-    },
-    {
-      "path": "catalog.js",
-      "size": 6631,
-      "sha256": "fae2a9e04c704ff3f636cb8912dca8594f1d22bc992c7bf45da1cf37f91e7f11"
-    },
-    {
-      "path": "docs/BOOK_STUDY_MANUAL_JOEL_PATCH.md",
-      "size": 958,
-      "sha256": "5a85c8d429116a61083841c9d28e63381fd3732a3f8c725176b9f5e8fc15263b"
-    },
-    {
-      "path": "ot/joel/README.md",
-      "size": 963,
-      "sha256": "495b61c3af29aa665b492b62e70ba56b9a08fd0fe9c32627c8d6d747a90b4ad8"
-    },
-    {
-      "path": "ot/joel/ch01.html",
-      "size": 28986,
-      "sha256": "b1a159eb899bbd25c580d418407e8cd587bb693a545de057d2aff48d4b68f5d9"
-    },
-    {
-      "path": "ot/joel/ch02.html",
-      "size": 30796,
-      "sha256": "03b1b3fa495ab6a74e422b7147ec49d5afa122a3e0bc84f770781365e773fb78"
-    },
-    {
-      "path": "ot/joel/ch03.html",
-      "size": 26615,
-      "sha256": "4807e1861e4cf9294d6d428803fdce57e93a47ea1f06d52c6e92a7b7d2263905"
-    },
-    {
-      "path": "ot/joel/index.html",
-      "size": 7708,
-      "sha256": "5d667754165b3d420bc8162cf2a2604abe6a9445207ec8eaaf4ddf2b7d92aefc"
-    },
-    {
-      "path": "ot/joel/overview.html",
-      "size": 39841,
-      "sha256": "b12acdbd0042b164d7b9974d55554447b6c614a216f280384391a607dfb816c3"
-    }
-  ]
+  "README.md": {
+    "bytes": 4875,
+    "sha256": "5bdc0793296810357ea237802fc02082dc2534bb3337a4e8b85da081263d3837"
+  },
+  "VALIDATION.txt": {
+    "bytes": 933,
+    "sha256": "2b31aeb7ca1d1c155a3721f43e16610c5d8908b31794e9718af6861b19070489"
+  },
+  "catalog.js": {
+    "bytes": 6631,
+    "sha256": "fae2a9e04c704ff3f636cb8912dca8594f1d22bc992c7bf45da1cf37f91e7f11"
+  },
+  "docs/BOOK_STUDY_MANUAL_JOEL_PATCH.md": {
+    "bytes": 958,
+    "sha256": "5a85c8d429116a61083841c9d28e63381fd3732a3f8c725176b9f5e8fc15263b"
+  },
+  "ot/joel/README.md": {
+    "bytes": 1229,
+    "sha256": "24caffe3ed618da8407ea471abb410d00687a58549297274c64a9eb334742d8e"
+  },
+  "ot/joel/ch01.html": {
+    "bytes": 40592,
+    "sha256": "b38cb6e223784fa737c48f9c4cc6df5062e2bf304e1bfce67518f2a5470e9326"
+  },
+  "ot/joel/ch02.html": {
+    "bytes": 44220,
+    "sha256": "178fd2d2c8f9d5f1ab5df45a5ffddb035909c9108dbca80c7f7e322ec28ff1e8"
+  },
+  "ot/joel/ch03.html": {
+    "bytes": 37124,
+    "sha256": "c6f5fef3ca71904957e26558d8614b1e62135601d2a9bc68b72692170669ccbf"
+  },
+  "ot/joel/index.html": {
+    "bytes": 7700,
+    "sha256": "3ced3294d784c27c5ed647096bb59b96fb7bcf210f9de056896325b3630fb608"
+  },
+  "ot/joel/overview.html": {
+    "bytes": 55466,
+    "sha256": "a9906e88f4371d30f3934f9c3e47126b37bcc5868093ab9eac52ecc99e0f149a"
+  }
 }

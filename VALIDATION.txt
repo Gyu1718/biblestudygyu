@@ -1,1 +1,33 @@
 PASS
+{
+  "ch01.html": {
+    "bytes": 28986,
+    "text_chars": 7526,
+    "sections": 11,
+    "tables": 2
+  },
+  "ch02.html": {
+    "bytes": 30796,
+    "text_chars": 8459,
+    "sections": 11,
+    "tables": 2
+  },
+  "ch03.html": {
+    "bytes": 26615,
+    "text_chars": 6744,
+    "sections": 10,
+    "tables": 2
+  },
+  "index.html": {
+    "bytes": 7708,
+    "text_chars": 1379,
+    "sections": 5,
+    "tables": 0
+  },
+  "overview.html": {
+    "bytes": 39841,
+    "text_chars": 12221,
+    "sections": 9,
+    "tables": 3
+  }
+}

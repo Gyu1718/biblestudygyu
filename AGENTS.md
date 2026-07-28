@@ -32,6 +32,7 @@
 
 - `ot/nehemiah/`
 - `ot/haggai/`
+- `ot/joel/`
 - `nt/romans/`
 
 ## 기준 사례와 예외

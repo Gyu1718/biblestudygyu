@@ -1,0 +1,51 @@
+name: Install Joel study package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/install-joel.yml"
+      - "integrate_joel.py"
+      - "repo_files/ot/joel/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-joel:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Install Joel study set
+        run: python3 integrate_joel.py --repo . --write
+
+      - name: Apply shared study tools
+        run: python3 tools/apply_study_tools.py --write
+
+      - name: Apply shared Bible reader
+        run: python3 tools/apply_bible_reader.py --write
+
+      - name: Validate Joel integration
+        run: |
+          python3 integrate_joel.py --repo . --check
+          python3 tools/apply_study_tools.py --check
+          python3 tools/apply_bible_reader.py --check
+
+      - name: Commit installed files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ot/joel catalog.js README.md AGENTS.md docs/BOOK_STUDY_MANUAL.md
+          if git diff --cached --quiet; then
+            echo "Joel study set is already installed"
+            exit 0
+          fi
+          git commit -m "Add Joel study set"
+          git push origin main

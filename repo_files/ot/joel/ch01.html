@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>요엘 1장 심층 연구 — 메뚜기와 애곡</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%D7%99%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --k:#7a5a38; --f:#37665a; --h:#8a4658; --t:#3c5a83; --b:#655a8c;
+  --n:#0f5b6b; --s:#5c6b2f;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --heb:"Noto Serif Hebrew","SBL Hebrew",serif;
+}
+:root[data-theme="dark"]{ --n:#5aa8b8; --s:#a3b46a; }
+:root[data-theme="dark"] .c{ color:#15171c }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){ --n:#5aa8b8; --s:#a3b46a; }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .c{ color:#15171c }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.1rem;font-size:.71rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .site-nav span.off,nav.toc .chapter-jump span{color:#6f8296;cursor:default}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.2rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;color:#9db6cc;margin:1rem 0 .5rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem;margin:0 0 1.1rem}
+nav.toc .chapter-jump a{display:block;text-align:center;padding:.34rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.76rem;font-weight:700;color:#c3d2e0;text-decoration:none}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.34rem .5rem .34rem .55rem;border-left:2px solid transparent;margin-top:.28rem;line-height:1.5}
+nav.toc a.lv1:hover,nav.toc a.lv1:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:48rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:1.5rem}
+.hero .heb-title{font-family:var(--heb);font-size:2.6rem;color:var(--ochre);line-height:1.2;direction:rtl}
+.hero h1{font-size:1.95rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.96rem;line-height:1.8}
+.hero .meta{font-family:var(--sans);font-size:.77rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.8rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.4rem}
+.part-head .heb{font-family:var(--heb);font-size:2rem;color:var(--ochre);line-height:1;direction:rtl;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h4{font-size:.97rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.hw{font-family:var(--heb);font-size:1.06em;direction:rtl;unicode-bidi:isolate}
+.krv{background:#f1efe8;border-left:3px solid var(--ochre);padding:.55rem .85rem;margin:.85rem 0;font-size:.93rem;line-height:1.75}
+.krv b{font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;color:var(--ochre);margin-right:.45rem}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.k{background:var(--k)}.c.f{background:var(--f)}.c.h{background:var(--h)}.c.t{background:var(--t)}.c.b{background:var(--b)}
+.c.n{background:var(--n)}.c.s{background:var(--s)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.05rem;font-family:var(--sans);font-size:.77rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.15rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.15rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.4rem 0;padding-left:1.05rem;border-left:3px solid var(--line);scroll-margin-top:1rem}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.85rem;color:var(--lapis);display:block;margin-bottom:.3rem}
+.vs p{margin:.5rem 0;font-size:.96rem}
+.tbl-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.back{font-family:var(--sans);font-size:.73rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table,.krv{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+  <link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+  <link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+</head>
+<body data-book="joel" data-chapter="1" data-kind="study" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="목차">
+  <div class="site-nav">
+    <a href="./index.html">← 요엘 서가</a>
+    <a href="../../index.html">서고 홈</a>
+    <a href="../../bible/original.html?book=JOL&amp;chapter=1">성경읽기</a>
+    <span class="off" role="note" aria-disabled="true">원어 연구 준비 중</span>
+    <a href="./overview.html">종합 개관</a>
+  </div>
+  <div class="brand">요엘 1장 심층 연구</div>
+  <div class="brand-sub">메뚜기와 애곡</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="./ch01.html" aria-current="page" aria-label="요엘 1장 현재 페이지">1</a>
+    <a href="./ch02.html" aria-label="요엘 2장으로 이동">2</a>
+    <a href="./ch03.html" aria-label="요엘 3장으로 이동">3</a>
+  </div>
+  <div class="toc-h">현재 문서 목차</div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 표제 (1:1)</a>
+  <a class="lv1" href="#s2">2. 들으라, 대대로 전하라 (1:2–3)</a>
+  <a class="lv1" href="#s3">3. 네 메뚜기 (1:4)</a>
+  <a class="lv1" href="#s4">4. 깨어 울지어다 (1:5–7)</a>
+  <a class="lv1" href="#s5">5. 애곡함 같이 할지어다 (1:8–10)</a>
+  <a class="lv1" href="#s6">6. 부끄러워할지어다 (1:11–12)</a>
+  <a class="lv1" href="#s7">7. 슬피 울지어다 (1:13–14)</a>
+  <a class="lv1" href="#s8">8. 여호와의 날과 애가 (1:15–18)</a>
+  <a class="lv1" href="#s9">9. 예언자의 기도 (1:19–20)</a>
+  <a class="lv1" href="#s10">10. 핵심 원어와 문법</a>
+  <a class="lv1" href="#s11">11. 주석가별 독법과 쟁점</a>
+  <a class="lv1" href="#s12">12. 역사·문화 배경</a>
+  <a class="lv1" href="#s13">13. 상호 참조 총람</a>
+  <a class="lv1" href="#s14">14. 정경적 연결</a>
+  <a class="lv1" href="#s15">15. 신학 종합</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="heb-title" dir="rtl">יֶתֶר הַגָּזָם אָכַל הָאַרְבֶּה</div>
+    <h1>요엘 1장 · 메뚜기와 애곡</h1>
+    <p class="sub">먹힌 것을 또 먹고, 남은 것을 또 먹는다. 네 겹으로 훑고 지나간 땅에서 포도주가 끊기고 소제와 전제가 끊기고 즐거움이 마른다. 예언자는 다섯 무리를 차례로 불러 곡하게 하고, 마지막에 자기가 여호와께 부르짖는다.</p>
+    <p class="meta">1:1 표제 · 1:2–14 다섯 겹의 애곡 부름 · 1:15–20 여호와의 날과 기도 · Nogalski(NICOT) 주축 일곱 주석 종합 · 개역개정 4판 전수 대조</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c n">N</span> Nogalski NICOT 2023</span>
+    <span><span class="c t">B</span> Barton OTL 2001</span>
+    <span><span class="c h">C</span> Crenshaw AB 1995</span>
+    <span><span class="c b">A</span> Assis LHBOTS 2013</span>
+    <span><span class="c f">H</span> Hadjiev TOTC 2020</span>
+    <span><span class="c s">S</span> Seitz ITC 2016</span>
+    <span><span class="c k">K</span> Keil–Delitzsch 1868</span>
+  </div>
+
+  <div class="caveat">
+    <span class="tt">확인 전제</span>
+    개역개정 인용은 4판 본문 파일과 <b>단어 단위 전수 대조</b>했다. 히브리어 표기는 마소라 본문 지식에 근거하며 모음·강세와 형태 분석은 STEP&nbsp;Bible·Accordance·Logos로 <b>재확인 전제</b>다(강세 기호 생략). 칩이 붙은 관찰은 일곱 주석에서 직접 확인한 것에 한하고, Wolff·Rudolph·Bergler·Simkins·Jeremias·Credner·Bochart 등은 <b>재인용</b>으로 표기했다.
+  </div>
+
+  <!-- ═══════ 0 ═══════ -->
+  <section class="part" id="s0">
+    <div class="part-head">
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>0. 단락의 짜임</h2>
+      <div class="gloss">명령형 다섯 번, 그리고 기도 하나.</div>
+    </div>
+
+    <p><span class="c n">N</span> 요엘 1장은 언약 저주의 결과를 겪고 있음을 함의하는 파괴 앞에서 야훼의 백성에게 자기와 야훼의 관계를 점검하라고 부른다. 이 부름은 사회의 모든 층을 흔든다. 이어지는 재앙의 연쇄가 온 땅과 제의와 짐승의 존립을 위협하기 때문이다. 재난의 목록은 여러 차례의 메뚜기 재앙(1:4), 적군의 공격(1:6–8), 심한 가뭄(1:9–20)으로 겹쳐 있고, 예언자는 이 재난들을 언약을 저버린 데 따른 저주로 전제하며 임박한 심판의 날에 있을 신적 개입의 전조로 해석한다(1:15).</p>
+
+    <p><span class="c n">N</span> 1:2–14에서 화자는 <strong>여섯 번</strong> 무리를 지목해 주목하고 애곡하라고 명한다(1:2, 5, 8, 11, 13, 14). 다섯 소단락이 명령형과 호격으로 열리며 짧은 부름의 연속을 이룬다(1:2–4, 5–7, 8–10, 11–12, 13–14). <span class="c n">N</span> 첫인상은 매끄러운 통일체이나, 각 단락을 자세히 보면 서로 다른 위협을 예상한다는 점에서 사정이 복잡해진다. 메뚜기 재앙(1:2–4), 군사적 침공(1:5–7), 성전에 제물을 가져오지 못하게 되는 사태(1:13–14), 가뭄(1:8–10, 11–12, 15–18)이다.</p>
+
+    <p><span class="c f">H</span> Hadjiev는 다섯 연이 <b>A-B-A-B 교차 배열</b>을 이룬다고 읽는다. 첫째 연(1:2–4)은 듣고 후세에 전하라는 초청으로 1:2–2:27 전체를 열고 2:18–27의 구원을 예고한다. 나머지 넷은 애곡의 부름을 변주하며 열리는데, 둘째(1:5–7)와 넷째(1:11–12)가 같은 얼개를 가지고, 셋째(1:8–10)와 다섯째(1:13–14)가 흉작이 제의에 미친 영향을 다루며 어휘를 많이 공유한다. <span class="c f">H</span> 이 문학 패턴이 농업과 성전 예배의 연결을 부각한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 1. 1장의 흐름과 수신자</caption>
+      <thead><tr><th>단락</th><th>본문</th><th>명령형</th><th>수신자</th><th>드러나는 재난</th></tr></thead>
+      <tbody>
+        <tr><td class="head">표제</td><td>1:1</td><td>—</td><td>독자</td><td>—</td></tr>
+        <tr><td class="head">부름 ①</td><td>1:2–4</td><td>들을지어다 · 귀를 기울일지어다 · 말하라</td><td>늙은 자(장로)·모든 주민</td><td>네 겹의 메뚜기</td></tr>
+        <tr><td class="head">부름 ②</td><td>1:5–7</td><td>깨어 울지어다 · 울지어다</td><td>취하는 자·포도주 마시는 자</td><td>한 민족의 침입</td></tr>
+        <tr><td class="head">부름 ③</td><td>1:8–10</td><td>애곡함 같이 할지어다</td><td>여성 단수(땅 또는 시온)</td><td>제사 중단·토지의 마름</td></tr>
+        <tr><td class="head">부름 ④</td><td>1:11–12</td><td>부끄러워할지어다 · 곡할지어다</td><td>농부·포도원 가꾸는 자</td><td>곡식과 과수의 마름</td></tr>
+        <tr><td class="head">부름 ⑤</td><td>1:13–14</td><td>동이고 울지어다 · 정하고 소집하고 모으고 부르짖을지어다</td><td>제사장·제단에 수종드는 자</td><td>소제와 전제의 중단</td></tr>
+        <tr><td class="head">애가</td><td>1:15–18</td><td>—</td><td>회중("우리")</td><td>여호와의 날·기근</td></tr>
+        <tr><td class="head">기도</td><td>1:19–20</td><td>—</td><td>여호와</td><td>불·마른 시내</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>단락 구획의 세 안</h3>
+    <p>주석마다 구획이 다르다. 세 안을 나란히 둔다.</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 2. 1장 구획 대조</caption>
+      <thead><tr><th>주석</th><th>구획</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head"><span class="c n">N</span> Nogalski</td><td>1:1 표제 / 1:2–14 공동체를 향한 부름 / 1:15–20 여호와의 날과 예언자의 기도</td><td>명령형·호격으로 열리는 다섯 소단락과, 그 뒤에 오는 위협 고조 단위의 구분.</td></tr>
+        <tr><td class="head"><span class="c t">B</span> Barton</td><td>1:1 표제 / 1:2–4 재난 / 1:5–14 애곡의 부름 / 1:15–20 애가</td><td>2:1–17과의 대칭. 재난 서술 → 애곡의 부름 → 애가라는 같은 삼분 구조가 두 번 반복된다.</td></tr>
+        <tr><td class="head"><span class="c b">A</span> Assis</td><td>제1신탁 1:2–12 / 제2신탁 1:13–20</td><td>각 신탁이 <b>청중을 향한 부름</b>으로 열린다는 형식 표지. 1:13의 새 부름이 새 신탁을 연다.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><span class="c b">A</span> Assis는 Barton의 대칭 구획을 세부에서 부정확하다고 평가한다. Barton은 1:2–4를 재난 서술로, 1:5–14를 애곡의 부름으로 나누는데, 재난의 세부는 뒷부분에도 6–7절·9–10절·12절에 이어진다. 셋째 단락을 애가로 규정하지만 16–18절에도 재난 서술이 들어 있다. <span class="c b">A</span> 형식 표지를 쓰면 1:2–12과 1:13–20이 각각 부름으로 열리는 두 신탁이 된다.</p>
+    <p><span class="c k">K</span> Keil의 구획은 수신자 중심이다. 메뚜기의 파괴를 마음에 두라는 부름(1:2–4)에 이어, 예언자가 애곡할 이들을 차례로 소집한다. 먼저 깨어나야 할 취한 자들(1:5–7), 다음으로 참회하며 애통할 회중 전체(1:8–12), 다음으로 회개의 예배를 소집할 제사장들(1:13–18)이다. <span class="c k">K</span> 각 부름마다 그에 상응하는 재난 서술을 이유로 붙이고, 마지막에 땅의 구원을 구하는 기도로 애곡을 모은다(1:19–20).</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="heb">דְּבַר־יְהוָה</div>
+      <div class="eyebrow">1:1</div>
+      <h2>1. 표제</h2>
+      <div class="gloss">데바르-여호와 — 여호와의 말씀</div>
+    </div>
+
+    <div class="krv"><b>욜 1:1</b>브두엘의 아들 요엘에게 임한 여호와의 말씀이라</div>
+
+    <div class="vs" id="v1">
+      <span class="ref">1:1 — 정보가 가장 적은 표제</span>
+      <p><span class="hw">דְּבַר־יְהוָה אֲשֶׁר הָיָה אֶל־יוֹאֵל בֶּן־פְּתוּאֵל</span>. <span class="c n">N</span> 이 절은 요엘의 표제이며 예언 문학의 표제가 대개 그렇듯 여러 기능을 겸한다. 새 예언서의 시작을 표시하고, 뒤따르는 것이 <strong>여호와의 말씀</strong>이라는 선언을 담는다. 학개·스가랴에서는 표제가 책 안의 새 단락을 표시하기도 하나, 요엘에는 표제가 이 하나뿐이므로 1:1은 최종 형태에서 책 전체의 제목으로 여겨졌다.</p>
+      <p><span class="c n">N</span> 요나 1:1이 같은 어구로 시작하되 곧바로 1:2의 서사로 이어지는 데 비해, 요엘 1:1은 1:2에서 시작되는 담화와 <em>통사적으로 독립</em>해 있어 참된 제목으로 기능한다.</p>
+      <p><span class="c n">N</span> "여호와의 말씀"이라는 어구는 오경에서 여섯 번, 성문서에서 열아홉 번 나오며 모두 예언자나 예언 활동과 관련된다. 예언서에서는 205회에 이른다. 이 통계는 이 어구가 예언자를 통해 전달된 신적 메시지로서의 예언 활동을 함의함을 보여 준다. <span class="c f">H</span> Hadjiev도 같은 형식이 호세아·미가·스바냐의 첫머리와 동일하다는 점을 들되, 문학적 상호 의존의 결과로 읽지 않는다. 요엘은 예언 신탁의 신적 기원과 성격을 강조하기 위해 널리 알려진 표현을 쓴다.</p>
+    </div>
+
+    <div class="vs" id="v1b">
+      <span class="ref">1:1 — 왕이 없는 표제</span>
+      <p><span class="c n">N</span> 열둘 안에서 요엘 1:1은 호세아 1:1, 미가 1:1, 스바냐 1:1과 형식이 비슷하되 유다·이스라엘 왕에 대한 언급이 빠져 있다. 이 부재 때문에 많은 현대 학자가 요엘을 후기 예언서로 추론하며, 예루살렘 함락과 마지막 유다 왕 이후를 상정한다. 동시에 호세아와 아모스라는 두 8세기 예언서 사이라는 정경 위치는 다른 해석자들에게 요엘을 이른 예언자로 읽게 만든다.</p>
+      <p><span class="c s">S</span> Seitz는 이 침묵을 <strong>의도</strong>로 읽는다. 열둘 가운데 일부 책에 왕들과 연결된 상세 표제를 붙이기로 한 결정은, 다른 경우에 그렇게 하지 <em>않기로</em> 한 결정을 동반한다. 요엘이 지금 위치에 있는 것은 주제 때문이며 역사 때문이 아니다. 역사적 배경을 표시하지 않은 목적은 요엘서가 해석학적으로 의미 있게 기능하도록 하는 데 있다.</p>
+      <p><span class="c s">S</span> Seitz는 칼뱅의 신중함을 오늘에도 유효한 것으로 인용한다. 요엘이 예언한 때는 불확실하며, 어떤 이는 요람 때로, 어떤 이는 므낫세 때로 두지만 근거를 내놓지 못한다. 호세아의 경우 역사를 모르면 설명할 수 없는 대목이 많으나, 요엘은 시대가 모호해도 그 교훈의 취지가 분명하다. 예언자가 예루살렘에서, 적어도 유다 왕국에서 가르쳤다는 결론은 세울 수 있다.</p>
+      <p><span class="c f">H</span> Hadjiev는 여기에 수용의 함의를 붙인다. 사역 연대에 관한 정보가 없다는 점이 본문에 <em>시대를 넘는 성질</em>을 주며 서로 다른 상황에 적용되도록 초청한다.</p>
+    </div>
+
+    <div class="note"><div class="tt">이름의 뜻</div><span class="c n">N</span> <span class="hw">יוֹאֵל</span>(요엘)은 "야훼가 하나님이시다"라는 뜻이며 거의 전적으로 계보 자료에 나온다. 오경에 없고, 예언서에서는 요엘 1:1 외에 사무엘상 8:2 한 곳뿐이며, 나머지 열아홉 번은 모두 역대기·에스라·느헤미야의 계보에 있다. <span class="c t">B</span> 같은 두 요소를 순서만 바꾸면 엘리야가 된다. <span class="c h">C</span> Crenshaw는 1:1을 "요엘에게 맡겨진 여호와의 말씀"으로 옮기며 위임의 뉘앙스를 읽는다. <span class="c f">H</span> 그에 따르면 계시 사건은 최초의 말씀이나 환상만이 아니라 그 말씀에 대한 예언자의 숙고와 선포까지 포함한다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="heb">שִׁמְעוּ־זֹאת</div>
+      <div class="eyebrow">1:2–3</div>
+      <h2>2. 들으라, 대대로 전하라</h2>
+      <div class="gloss">쉬므우-조트 — 이것을 들을지어다</div>
+    </div>
+
+    <div class="krv"><b>욜 1:2</b>늙은 자들아 너희는 이것을 들을지어다 땅의 모든 주민들아 너희는 귀를 기울일지어다 너희의 날에나 너희 조상들의 날에 이런 일이 있었느냐<br><b>욜 1:3</b>너희는 이 일을 너희 자녀에게 말하고 너희 자녀는 자기 자녀에게 말하고 그 자녀는 후세에 말할 것이니라</div>
+
+    <div class="vs" id="v2">
+      <span class="ref">1:2a — 두 명령과 두 수신자</span>
+      <p><span class="c n">N</span> 첫 절은 두 명령과 이중 질문으로 이루어진 주목의 부름이다. 두 동사(<span class="hw">שִׁמְעוּ</span> 들으라, <span class="hw">הַאֲזִינוּ</span> 귀를 기울이라)가 고전적 동의 평행을 이루고, 곧바로 호격 주어(<span class="hw">הַזְּקֵנִים</span> 장로들, <span class="hw">יוֹשְׁבֵי הָאָרֶץ</span> 땅의 주민들)가 따른다. <span class="c n">N</span> 동의 평행이 두 부분의 동일함을 뜻하지는 않는다. 동사는 사실상 동의어로 기능하되, 두 주어는 <strong>메리즘</strong>을 이룬다. 곧 지도층과 일반 백성이라는 양극이 함께 전체를 표현한다.</p>
+      <p><strong>장로인가 노인인가.</strong> <span class="hw">זְקֵנִים</span>(제케님)의 뜻이 갈린다. <span class="c n">N</span> Nogalski는 다수 견해를 따라 지도층을 가리키는 제한된 집단으로 본다. 출애굽기 24:14, 민수기 11:25, 신명기 22:16, 여호수아 24:31, 열왕기상 12:6, 에스라 3:12 등이 이 용례를 지지한다. <span class="c b">A</span> Assis도 지도자로 읽으며 문맥 논거를 든다. 절의 뒷부분이 "땅의 모든 주민"을 말하므로 <span class="hw">זְקֵנִים</span>은 그 집단에 포함되지 <em>않는</em> 무리여야 하고, 노인을 뜻하려 했다면 2:16의 "장로들을 모으며 어린이와 젖 먹는 자를 모으며"처럼 노소 대비가 더 적절했을 것이다.</p>
+      <p><span class="c t">B</span> Barton은 반대 방향으로 기운다. Wellhausen과 Crenshaw를 따라 단순히 "늙은이"로 읽으며, <span class="c h">C</span> Crenshaw의 판단을 인용한다. 요엘의 관심은 누적된 연수에 있고 특별한 지위나 특권에 있지 않으며, 사회에서 <em>가장 긴 기억</em>을 가진 이들에게 호소한다. <span class="c t">B</span> 이어지는 질문 "너희의 날에나 너희 조상들의 날에 이런 일이 있었느냐"가 이 독법과 어울린다. 두 세대의 기억을 묻는 것이 뒤이어 두세 세대에게 전하라는 명령과 균형을 이룬다.</p>
+      <p><span class="c f">H</span> Hadjiev는 절충한다. 장로는 공동체의 지도자였으되 여기서 초점은 나이에 있다. 공동체 기억의 수호자로서 그들이 이 질문에 답하기에 가장 적합하다. <span class="c b">A</span> Assis는 여기에 연대 논거를 더한다. 왕정 이전에 장로는 백성의 지도자였고 왕정 수립 이후 지위가 크게 낮아졌으며, 파괴 이후 왕국이 사라지자 다시 부상했다(스 5:9; 6:7, 8, 14; 10:14). 이 제도적 흐름이 요엘을 성전 파괴 이후로 보는 주장과 맞물린다.</p>
+    </div>
+
+    <div class="vs" id="v2b">
+      <span class="ref">1:2b — "이것"은 무엇인가</span>
+      <p>세 개의 여성 단수 대명사가 문제를 만든다. 1:2에 <span class="hw">זֹאת</span>(조트, 이것)가 두 번, 1:3에 <span class="hw">עָלֶיהָ</span>(알레하, 그것에 관하여)가 한 번 나오며 선행사가 명시되지 않는다.</p>
+      <p><span class="c n">N</span> 대다수 주석가는 이 대명사들이 <em>뒤따르는</em> 것을 예견한다고 본다. 여성 단수 대명사가 추상을 가리킬 수 있고 성경 히브리어에 선행 예견 용법이 실재하므로 문법적으로 방어 가능하다. 요엘 1장을 구두 담화의 문서 요약으로 이해하면, 예언자가 군중을 향해 손짓하며 "너희 앞의 <em>이 사태</em> 전부가 먼 과거에도 내다볼 수 있는 미래에도 병행이 없다"고 말하는 장면을 그릴 수 있다.</p>
+      <p><span class="c n">N</span> Nogalski는 여기에 유보를 붙인다. "이것을 들으라"(<span class="hw">שִׁמְעוּ־זֹאת</span>)라는 형식은 구약에 열네 번 나오며, 요엘 1:2과 시편 49:1을 빼면 <strong>주변 문맥과 무관한 독립 단위를 여는 경우가 없다</strong>. 욥기 34:16과 37:14에서는 담화 안의 전환점을 표시하고, 아모스 3:1·4:1·5:1에서는 새 수신자를 향한 새 담화 묶음이 시작됨을 알리는 편집 신호로 기능한다. <span class="c n">N</span> 이 관찰에 따라 Nogalski는 1:2–3을 호세아 14장의 회개 촉구와 유다·예루살렘을 향한 요엘의 병행 촉구 사이의 <em>전환 서론</em>으로 읽는다.</p>
+      <p><span class="c s">S</span> Seitz는 이 독법에 반대한다. 첫째 "이것"이 장로들에게 호세아 마지막 장을 읽으라는 부름이 되기는 어렵다. 형식비평으로 보면 명령형은 그들이 자기 현실 안에서 지금 행할 무언가를 서술한다. 세대에서 세대로 <em>실패</em>를 전하라는 발상도 구약의 교육 모티프 용례와 어긋난다. <span class="c s">S</span> 그래서 고대와 현대를 통틀어 사실상 모든 해석자가 1:2의 <span class="hw">זֹאת</span>와 1:3의 <span class="hw">עָלֶיהָ</span>를 같은 것으로 본다. 장로와 땅에 사는 이들은 그들 앞에서 벌어지는 일에 주목하라고 불린다.</p>
+      <p><span class="c s">S</span> Seitz는 1:2–3을 요엘의 <strong>모토</strong>로 규정한다. 아모스에서 1:2 한 절이 책 전체의 메시지를 압축하듯, 요엘에서는 1:2–3이 그 몫을 하며 뒤따르는 모든 것을 읽는 열쇠가 된다. 그래서 이 두 절을 1:5–7에 서둘러 붙이는 독법을 피한다.</p>
+      <p><span class="c n">N</span> Nogalski는 번역상의 문제 하나를 짚는다. "너희의 날에 이런 일이 있었느냐"라는 질문은 부정의 답을 전제하는데, 대명사가 1:4의 메뚜기 연쇄를 예견한다면 이 부정이 성립하지 않는다. 그래서 대다수 번역이 비교 전치사를 삽입해 "이<em>와 같은</em> 일이 있었느냐"로 옮긴다. 마소라 본문에는 <span class="hw">כְּ</span>가 없고, 1:4는 잇달아 오는 네 번의 공격을 전제하므로 단수 대명사가 네 공격의 연쇄를 가리키게 된다.</p>
+    </div>
+
+    <div class="vs" id="v3">
+      <span class="ref">1:3 — 네 세대의 사슬</span>
+      <p><span class="c n">N</span> 3절은 2절과 시간 방향을 뒤집되 같은 요점을 만든다. 2절이 현재 상황의 유례없음을 과거와 견주었다면, 3절은 미래의 사건들과 견준다. 평행행은 동사를 한 번만 쓰고 한 행의 간접목적어(<span class="hw">לִבְנֵיכֶם</span> 너희 자녀에게)를 다음 행의 주어로 삼아, 세대 간 전달을 빠르고 단절적인 리듬으로 전한다. <span class="c n">N</span> 그 결과 1:3은 이 일이 <strong>네 세대</strong>에 걸쳐 회자될 사건임을 전한다.</p>
+      <p><span class="c b">A</span> Assis는 리듬 자체를 근거로 삼는다. 2절 후반이 과거를 두 콜론으로 말하고("너희의 날에나 / 너희 조상들의 날에"), 3절은 미래를 세 콜론으로 말한다("너희 자녀에게 말하고 / 너희 자녀는 자기 자녀에게 말하고 / 그 자녀는 후세에 말할 것이니라"). 두 콜론의 리듬에서 벗어난 세 번째 콜론이 먼 미래를 가리키며 강화되고, 규칙적 율동이 예언자의 확신을 전한다.</p>
+      <p><span class="c f">H</span> Hadjiev는 전달 대상을 다르게 본다. "이 일을 너희 자녀에게 말하고"는 처음에는 곧 서술될 재난을 가리키는 듯 보이고, 3절의 네 세대가 4절의 네 메뚜기와 상응한다. Jeremias의 관찰대로 <em>여호와의 큰 일을 후세에 전하라</em>는 모티프가 구약에 흔하고(시 22:30–31; 44:1; 48:13; 78:1–4), 출애굽 전승, 특히 메뚜기 재앙 서사에서 중요한 역할을 한다(출 10:2). <span class="c f">H</span> 과거의 행하심을 기억하는 목적은 신뢰와 순종과 경배의 태도를 기르는 데 있으므로(신 6:20–25), 자녀에게 전할 것은 큰 고난 가운데(1:4–2:11) 공동체가 울며 여호와께 돌아섰고(2:12–17) 하나님이 건지시고 복 주신(2:18–27) 이야기다.</p>
+      <p><span class="c b">A</span> Assis는 이 첫 부름이 다른 신탁들과 다르다는 점에 주목한다. 뒤의 담화들은 금식과 기도(1:13–14), 성전 집결(2:1), 예루살렘에서의 통곡(2:16–17a)을 부른다. 첫 부름은 예언자가 아직 기도나 성전을 말할 수 없어 더 중립적이다. 자녀에게 전하는 일은 사회에 흔한 행위이고 신학적 입장을 요구하지 않는다. <span class="c b">A</span> 이 신탁이 다른 신탁과 달리 기도나 돌아섬의 부름으로 닫히지 않는 이유가 여기 있다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="heb">גָּזָם · אַרְבֶּה · יֶלֶק · חָסִיל</div>
+      <div class="eyebrow">1:4</div>
+      <h2>3. 네 메뚜기</h2>
+      <div class="gloss">가잠·아르베·옐레크·하실 — 남긴 것을 또 먹는다</div>
+    </div>
+
+    <div class="krv"><b>욜 1:4</b>팥중이가 남긴 것을 메뚜기가 먹고 메뚜기가 남긴 것을 느치가 먹고 느치가 남긴 것을 황충이 먹었도다</div>
+
+    <div class="vs" id="v4">
+      <span class="ref">1:4 — 세 행의 사슬</span>
+      <p><span class="hw">יֶתֶר הַגָּזָם אָכַל הָאַרְבֶּה וְיֶתֶר הָאַרְבֶּה אָכַל הַיָּלֶק וְיֶתֶר הַיֶּלֶק אָכַל הֶחָסִיל</span>.</p>
+      <p><span class="c f">H</span> 재난은 땅의 초목 전체를 없앤 메뚜기 침입이며, 촘촘히 짜인 세 행으로 서술된다. 히브리어로 각 행이 정확히 네 낱말이고 그 첫째가 <span class="hw">יֶתֶר</span>(예테르, 남긴 것), 셋째가 <span class="hw">אָכַל</span>(아칼, 먹었다)이다. <span class="c b">A</span> 구조는 네 단계를 이루어 재난의 총체성을 드러낸다. 한 단계에서 없어지지 않은 것이 둘째 단계에서 없어지고, 셋째에 남은 것이 넷째에서 없어진다. 누적되는 파괴의 서술이 극적 긴장을 높이며, 더 파괴할 것이 남지 않는 지점까지 인상이 강화된다.</p>
+      <p><strong>네 이름의 뜻.</strong> <span class="c b">A</span> Assis는 각 이름이 메뚜기의 성질이나 행위와 이어진다고 정리한다.</p>
+      <div class="tbl-wrap">
+      <table>
+        <caption>표 3. 네 낱말의 어원 제안 <span class="c b">A</span><span class="c k">K</span></caption>
+        <thead><tr><th>히브리어</th><th>음역</th><th>개역개정</th><th>어원과 뜻</th></tr></thead>
+        <tbody>
+          <tr><td><span class="hw">גָּזָם</span></td><td>가잠</td><td>팥중이</td><td><span class="c b">A</span> 성경 히브리어에 이 형태가 달리 없고 아람어에서 "잘라내다"의 뜻으로 알려져 있어 "자르는 것"이 적절하다. <span class="c k">K</span> Keil도 <span class="hw">גזם</span>(자르다)에서 온 것으로 보며, 요엘 1:4·2:25과 아모스 4:9에만 나온다고 적는다.</td></tr>
+          <tr><td><span class="hw">אַרְבֶּה</span></td><td>아르베</td><td>메뚜기</td><td><span class="c b">A</span> 어근 <span class="hw">רבה</span>(많다·크다)에서 온 것으로 보이며, 엄청난 수로 몰려오는 특성을 표현한다. <span class="c k">K</span> 메뚜기의 통상 명칭이며 아마도 이동성 메뚜기를 가리킨다.</td></tr>
+          <tr><td><span class="hw">יֶלֶק</span></td><td>옐레크</td><td>느치</td><td><span class="c b">A</span> 어근 <span class="hw">לקק</span>(핥다)에서 왔을 수 있고, 메뚜기가 내는 핥는 듯한 소리를 표현할 수도 있다. 아랍어 <i>wlq</i>(서두르다)와 연결해 곤충의 민첩함으로 보는 제안도 있다. <span class="c k">K</span> 시편 105:34에서 <span class="hw">אַרְבֶּה</span>와 동의어로 쓰인다.</td></tr>
+          <tr><td><span class="hw">חָסִיל</span></td><td>하실</td><td>황충</td><td><span class="c b">A</span> 아무것도 남기지 않는 파괴 행위를 함의한다(신 28:38 "메뚜기가 그것을 먹을 것임이니라"). <span class="c k">K</span> <span class="hw">חסל</span>(먹어 없애다)에서 오며 열왕기상 8:37, 역대하 6:28, 시편 78:46에서 <span class="hw">אַרְבֶּה</span>와 동의로 쓰인다.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><span class="c b">A</span> 네 이름 모두 히브리 성경 다른 곳에서 알려져 있으되, 넷이 <strong>한자리에 모이는 곳은 요엘뿐</strong>이다. 나훔 3:15과 시편 105:34에 둘(옐레크·아르베)이, 시편 78:46에 둘(하실·아르베)이 나온다.</p>
+    </div>
+
+    <div class="vs" id="v4b">
+      <span class="ref">1:4 — 네 종인가 네 단계인가</span>
+      <p><span class="c t">B</span> 이 절은 매우 상세한 연구의 대상이었고, 네 낱말이 네 종을 가리키는지 크레드너(1831)가 처음 제안한 대로 곤충 발달의 네 단계를 가리키는지가 논점이다.</p>
+      <p><span class="c k">K</span> Keil은 단계설을 명확히 반대한다. 이 설명은 2:25에서 <span class="hw">גָּזָם</span>이 <span class="hw">חָסִיל</span> 뒤 마지막에 오는 사실과 어긋나고, 나훔 3:15–16과 예레미야 51:27의 잘못된 해석에 근거한다. <span class="hw">גָּזָם</span>·<span class="hw">חָסִיל</span>·<span class="hw">אַרְבֶּה</span> 사이의 용례 차이를 지적할 길이 없다. <span class="c k">K</span> 세 낱말은 <span class="hw">אַרְבֶּה</span>에 붙인 <strong>시적 별칭</strong>이며 평이한 산문에는 결코 나오지 않고 고양된 문체에 국한된다.</p>
+      <p><span class="c k">K</span> Keil은 이년 연속의 메뚜기 떼로 보는 독법도 물리친다. <span class="hw">אַרְבֶּה</span>가 <span class="hw">גָּזָם</span>이 남긴 것을 먹고 <span class="hw">יֶלֶק</span>가 <span class="hw">אַרְבֶּה</span>가 남긴 것을 먹는다면, 두 해의 밭과 과수의 열매를 생각할 수 없다. 이듬해의 열매는 지난해의 <em>남은 것</em>이 아니고 그해에 새로 자란 것이기 때문이다. <span class="c k">K</span> Keil은 보하르트의 같은 논증을 인용한다. 여러 무리가 잇달아 들어와 앞 무리가 남긴 것을 먹었고, 사람과 짐승을 먹일 것이 하나도 남지 않을 때까지 그 일이 되풀이되었다.</p>
+      <p><span class="c k">K</span> Keil에게 실질적 의미를 갖는 것은 <strong>넷이라는 수</strong>다. 예레미야 15:3의 네 종류 형벌과 에스겔 14:21의 네 파괴적 심판이 그 점을 보여 준다. 넷은 온 유다에 사방으로 퍼진 심판의 범위를 가리킨다.</p>
+      <p><span class="c t">B</span> Barton도 같은 결론에 이른다. 어느 이론을 따르든 네 겹 명명의 실질적 효과는 곤충학적 기술이 아니라 <strong>수사</strong>다. 이름을 쌓아 올려 파괴의 총체성을 강조한다. <span class="c f">H</span> Hadjiev는 자르는·떼 지은·뛰는·파괴하는 메뚜기라는 번역이 각 낱말의 가능한 어원에 근거하므로 선호되며, Simkins가 단계설을 반박했다고 정리한다. <span class="c f">H</span> 유의어를 쌓고 반복을 능숙하게 쓴 결과가 숨 막히는 규모의 재난이라는 전체 인상을 만든다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 네 제국 알레고리</span><span class="c f">H</span> 메뚜기를 일차적으로 상징으로 이해하면 네 종류가 유다를 지배한 네 제국을 가리킬 수 있다는 독법이 있다(Nogalski 2011 참조). <span class="c f">H</span> Hadjiev는 이 지점에서 문자적 층위에 머물러 자연재해를 먼저 생각하는 편이 낫다고 판단한다. <span class="c t">B</span> Barton은 비유적 해석이 비평 이전 시대의 표준이었음을 기록한다. 타르굼은 "백성들과 방언들과 통치자들과 왕국들"로, 칠십인역 일부 사본은 "애굽인·바벨론인·앗수르인·헬라인"으로 옮겼고, 이 독법은 이미 제롬에게 있다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="heb">הָקִיצוּ שִׁכּוֹרִים</div>
+      <div class="eyebrow">1:5–7</div>
+      <h2>4. 깨어 울지어다</h2>
+      <div class="gloss">하키추 쉬코림 — 취하는 자들아 깨어라</div>
+    </div>
+
+    <div class="krv"><b>욜 1:5</b>취하는 자들아 너희는 깨어 울지어다 포도주를 마시는 자들아 너희는 울지어다 이는 단 포도주가 너희 입에서 끊어졌음이니<br><b>욜 1:6</b>다른 한 민족이 내 땅에 올라왔음이로다 그들은 강하고 수가 많으며 그 이빨은 사자의 이빨 같고 그 어금니는 암사자의 어금니 같도다<br><b>욜 1:7</b>그들이 내 포도나무를 멸하며 내 무화과나무를 긁어 말갛게 벗겨서 버리니 그 모든 가지가 하얗게 되었도다</div>
+
+    <div class="vs" id="v5">
+      <span class="ref">1:5 — 왜 취한 자가 먼저인가</span>
+      <p><span class="c n">N</span> 1:5–7은 두 무리를 더 불러낸다(취하는 자, 포도주 마시는 자). 1:2의 메리즘과 달리 여기 두 집단은 사실상 동의어로 이해된다. 세 개의 명령형이 긴박함의 상승을 만든다(<span class="hw">הָקִיצוּ</span> 깨어라, <span class="hw">בְכוּ</span> 울라, <span class="hw">הֵילִלוּ</span> 통곡하라). <span class="c n">N</span> 예언자의 수사에는 경멸의 결이 섞인다. 술에 취해 곤경의 심각함을 알아채려면 깨워야 하는 사람들에게 말하고 있기 때문이다.</p>
+      <p><strong>두 낱말의 층위.</strong> <span class="c n">N</span> 둘째 행의 <span class="hw">יַיִן</span>(야인)은 포도주의 일반 명사이고, 셋째 행의 <span class="hw">עָסִיס</span>(아시스)는 아직 즙에 가까우면서 발효가 시작된 새 포도주를 가리킨다. 더 새로운 포도주가 끊겼다는 사실이 위협의 함의를 앞당긴다. 새 포도주가 없으면 완성된 포도주도 없다. <span class="c n">N</span> 1:5b의 논리에는 아이러니가 있다. 취해 있다고 전제된 수신자에게 자기 상황에서 결과를 추론하라고 간청하는데, 그 행위는 어느 정도의 각성과 맑은 정신을 요구한다.</p>
+      <p><span class="c t">B</span> Barton은 <span class="hw">שִׁכּוֹרִים</span>(쉬코림)을 "주정뱅이"로 옮기는 것이 부당할 수 있다고 본다. 평행어 "포도주를 마시는 자들"에서 보면 그저 마시는 이들을 뜻할 수 있고(Crenshaw의 "음주자"), 아모스 6:6과 이사야 5:11–13에 이어지는 취함에 대한 예언자적 정죄의 전통에 이 대목이 속하지 않는다. <span class="c t">B</span> 이 절은 취함에 대한 형벌이 아니라 삶의 즐거움 하나가 박탈된 것이며, 포도주의 상실이 재난의 규모를 청중에게 알린다.</p>
+      <p><span class="c b">A</span> Assis는 이 완화에 반대한다. 첫째, 성경의 평행법은 짝을 이루는 낱말이 동의어일 것을 요구하지 않는다. 둘째, "포도주 마시는 자"를 "주정뱅이"로 읽을 수는 있어도 그 역은 성립하지 않는다. 성경 어디에서도 <span class="hw">שִׁכּוֹרִים</span>이 취하지 않고 포도주만 마시는 사람을 가리키지 않는다. <span class="c b">A</span> 이 절에 취함에 대한 책망이 없다는 Crenshaw·Barton의 관찰은 옳으나, 책망의 부재가 주정뱅이를 가리키지 않는다는 증거가 되지는 않는다.</p>
+      <p><span class="c b">A</span> Assis가 제기하는 물음이 이 단락의 핵심이다. 왜 신탁이 하필 주정뱅이의 입에서 술이 끊긴 이야기로 열리는가. 뒤따르는 절들은 더 기본적이고 중대한 것을 다룬다. 곡식과 새 포도주와 기름(1:10), 밀과 보리(1:11), 그리고 성전 예배의 훼손(1:9)이다. <span class="c b">A</span> Assis의 답은 수사 전략이다. 예언자는 긴장이 덜한 일상의 영역에서 먼저 말을 걸고, 신학적 요구를 담은 부름은 뒤로 미룬다.</p>
+      <p><span class="c k">K</span> Keil은 목적을 이렇게 정리한다. 유다가 이 유례없는 재난에서 하나님의 심판과 회개를 부르는 하나님의 경고하는 음성을 분별하도록, 예언자는 먼저 술꾼들을 깨워 하나님의 방문을 관찰하게 한다. <span class="hw">הָקִיצוּ</span>는 잠언 23:35처럼 취기의 비틀거림에서 깨어나는 것이다.</p>
+    </div>
+
+    <div class="vs" id="v6">
+      <span class="ref">1:6 — "다른 한 민족" (גּוֹי)</span>
+      <p><span class="c n">N</span> 1:6에서 독자는 둘째 이유를 만난다. 사태가 취하게 할 것의 부족보다 심각하다는 사실이다. 많은 주석가가 1:5–7의 공격을 1:4와 연결해 이미 일어난 메뚜기 공격으로 전제하나, 이 손쉬운 동화는 두 문제를 지나친다. 첫째, 1:4는 단일 사건이 아니라 공격의 <em>연쇄</em>를 가리킨다. 둘째, Barton의 지적대로 1:6의 사건이 이미 일어났는데 예언자가 누군가의 파괴 감각을 깨워야 하는 상황은 상상하기 어렵다.</p>
+      <p><span class="c t">B</span> Barton은 그래서 1:5–7을 <strong>다가올 메뚜기 재앙의 예고</strong>로 읽는다. 예언 신탁에 흔한 완료형으로 표현되었을 뿐이며, 아모스 5:2의 "처녀 이스라엘이 엎드러졌음이여"가 청중이 아직 죽음을 알아채지 못한 이를 두고 부른 장례 애가인 것과 같다. <span class="c n">N</span> Nogalski는 이 해석의 문제를 지적한다. 이 독법은 1:4를 1:6의 진술보다 우선시하는데, 1:6은 한 민족이 땅을 침공했다고 말한다.</p>
+      <p><strong>화자의 전환.</strong> <span class="c n">N</span> 1:6에서 문체가 신적 1인칭 논평으로 바뀌어 1:7까지 이어진다. 화자가 <strong>"내 땅"</strong>을 말하므로 야훼이며, 더 정확히는 예언자가 야훼로서 말하는 것이다. <span class="c t">B</span> Barton은 세 가능성을 열어 둔다. 야훼가 화자일 수 있고, 1:5의 "취하는 자들"이 곡하며 말하도록 지시받은 내용일 수 있으며, 예언자가 고난받는 백성과 자신을 강하게 동일시하는 것일 수도 있다(렘 14:17의 "내 백성" 참조).</p>
+      <p><strong><span class="hw">גּוֹי</span>의 무게.</strong> <span class="c n">N</span> 1:6a의 심상은 통일된 단일 저작을 전제하는 공시적 독법에 상당한 난제를 던진다. 1:6은 문자 그대로 유다가 마주한 파괴가 야훼의 땅을 친 "한 민족"의 군사적 공격에서 온다고 주장한다. 1:6b는 그 민족에 사자 은유를 쓰며 두 종류 사자의 이빨과 어금니라는 평행 심상으로 표현한다. <span class="c n">N</span> "이빨"과 "어금니"에 붙은 3인칭 남성 단수 접미사의 선행사는 <em>메뚜기가 아니라 민족</em>이다. 실제 민족이 사나운 평판 때문에 사자에 견주어진다.</p>
+      <p><span class="c n">N</span> 대다수 주석가는 침공한 "민족"을 1:4의 메뚜기의 연장으로 전제한다. 그렇게 읽을 수는 있으되, 여러 차례의 메뚜기 재앙을 하나의 민족이라 부르는 것은 무리한 은유이며, 민족에 대한 언급이 메뚜기의 은유임을 요구하지 않는다. <span class="c n">N</span> 요엘을 계속 읽으면 땅을 향한 위협이 늘어난다. 네 번의 메뚜기 재앙에 군사적 공격(1:6–7)이 더해지고, 들불의 조건을 만드는 가뭄(1:9–18)이 더해지고, 여호와의 날에 야훼가 이끄실 하늘 군대의 공격(2:1–11)이 더해진다.</p>
+      <p><span class="c k">K</span> Keil은 <span class="hw">גּוֹי</span>가 알레고리를 지지하지 않는다고 본다. 잠언 30:25–26은 개미와 메뚜기를 모두 <span class="hw">עַם</span>(백성)이라 부른다. <span class="hw">גּוֹי</span>는 <span class="hw">עַם</span>과 동의어이며, 적대의 관념을 자주 띠되 반드시 이방 나라를 뜻하지 않는다(스바냐 2:9에서 <span class="hw">עַם</span>과 나란히 하나님의 백성에게 쓰인다). <span class="c k">K</span> 이 군대의 무기는 이빨이며, 사자의 이빨이나 암사자의 물어뜯음처럼 갈아 부순다. <span class="c k">K</span> <span class="hw">אַרְצִי</span>(내 땅)의 접미사는 여호와가 아니라 백성의 이름으로 말하는 예언자를 가리키며, 1:7의 <span class="hw">גַּפְנִי</span>(내 포도나무)와 <span class="hw">תְאֵנָתִי</span>(내 무화과나무)도 그렇다.</p>
+    </div>
+
+    <div class="vs" id="v7">
+      <span class="ref">1:7 — 하얗게 된 가지</span>
+      <p><span class="c n">N</span> 1:7은 1:6의 1인칭 문체를 이으며, 통사적으로도 1:6에 의존한다. 1:7의 첫 동사 <span class="hw">שָׂם</span>(삼, 만들었다)은 남성 단수이며 그 주어로 1:6의 "민족"을 전제한다.</p>
+      <p><span class="c t">B</span> 포도나무와 무화과나무의 병치는 구약에서 관용적이며 대개 평화와 번영을 나타낸다(미 4:4). 예언자는 이 연상을 이용해 포도나무와 무화과나무의 파괴를 신적 복의 의도적 역전으로 제시한다. <span class="c t">B</span> 여기서 "구원의 때의 특별한 표징"을 읽을 필요는 없다. 포도나무와 무화과나무 아래 평안히 앉는 것은 구약 서사에서 과거나 현재의 복됨을 두고도 말해진다(왕상 4:25; 왕하 18:31).</p>
+      <p><span class="c k">K</span> <span class="hw">לִקְצָפָה</span>는 문자적으로 "부러뜨림에 이르도록"이며, <span class="hw">חָשַׂף</span>(하사프, 벗기다)는 포도나무 잎만이 아니라 껍질을 갉아먹는 것까지 포함한다. <span class="hw">הִשְׁלִיךְ</span>(던지다)는 먹을 수 없는 부분만이 아니라 잎과 껍질을 먹혀 부러진 포도나무 자체를 던지는 것이다. 가지가 <strong>하얗게 된</strong> 것은 껍질이 벗겨졌기 때문이다. <span class="c k">K</span> Keil은 루돌프의 에티오피아 관찰을 인용한다. 풀도 관목도 나무도 다치지 않은 것이 없고, 잎으로 덮인 것은 불에 탄 듯 상하며, 나무의 껍질까지 이빨로 갉아 먹어 손상이 한 해에 그치지 않는다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="heb">אֱלִי כִּבְתוּלָה</div>
+      <div class="eyebrow">1:8–10</div>
+      <h2>5. 애곡함 같이 할지어다</h2>
+      <div class="gloss">엘리 키브툴라 — 처녀같이 애곡하라</div>
+    </div>
+
+    <div class="krv"><b>욜 1:8</b>너희는 처녀가 어렸을 때에 약혼한 남자로 말미암아 굵은 베로 동이고 애곡함 같이 할지어다<br><b>욜 1:9</b>소제와 전제가 여호와의 성전에서 끊어졌고 여호와께 수종드는 제사장은 슬퍼하도다<br><b>욜 1:10</b>밭이 황무하고 토지가 마르니 곡식이 떨어지며 새 포도주가 말랐고 기름이 다하였도다</div>
+
+    <div class="vs" id="v8">
+      <span class="ref">1:8 — 요엘에서 가장 수수께끼 같은 절</span>
+      <p><span class="c n">N</span> 8절은 요엘에서 가장 난해한 절 가운데 하나이며, 난점이 통사와 개념 양쪽에 있다. 통사의 문제는 영어보다 히브리어에서 뚜렷하다. 첫 명령형이 1:5의 남성 복수에서 <strong>여성 단수 명령형</strong>(<span class="hw">אֱלִי</span>)으로 바뀌는데 여성 수신자가 명시되지 않는다.</p>
+      <p><span class="c n">N</span> 이 여성 존재를 밝히려는 시도는 폭이 넓다. 동사를 남성 복수 명령형으로 고쳐 문제를 "교정"하는 본문 수정, 성과 수의 변화를 무의미한 것으로 설명하는 길, 직접 문맥에서 여성 단수 주어를 찾는 길이다. 제안된 정체는 "백성", 시온 여인, "땅"(1:6 참조), 또는 집합적 존재다. <span class="c n">N</span> Nogalski 자신은 1:8의 여성 단수 명령형이 땅, 또는 예루살렘으로 의인화된 시온 여인을 수신자로 삼는다고 본다.</p>
+      <p><span class="c t">B</span> Barton은 본문 수정의 유혹을 기록하되 물리친다. <span class="hw">אֱלִי</span>는 이 단락에서 유일한 여성 단수 명령형이며 뒤따르는 직유("처녀 같이")에 어울린다. 칠십인역은 <i>pros me</i>로 옮겨 <span class="hw">אֵלַי</span>(내게로)로 읽은 듯하되, 같은 자음 본문을 가지고 있었음을 확인해 준다. Wolff는 <span class="hw">אֵלַי הֵילִילִי</span>("내게 통곡하라")를 제안하나, 본문이나 역본의 지지가 없고 뜻의 전체 취지도 크게 달라지지 않는다.</p>
+      <p><span class="c k">K</span> Keil은 이 절이 여호와의 회중으로서의 유다를 향한다고 본다. <span class="hw">אֱלִי</span>는 시리아어 <i>ʾelā</i>(애곡하다)에 상응하는 <span class="hw">אלה</span>의 명령형이며 이곳에만 나온다. <span class="c n">N</span> Nogalski는 하팍스로 분류되면서도 어근 <span class="hw">אלה</span>에서 온 것으로 볼 수 있다고 덧붙인다.</p>
+    </div>
+
+    <div class="vs" id="v8b">
+      <span class="ref">1:8 — 처녀가 어떻게 남편을 애곡하는가</span>
+      <p><span class="c n">N</span> 개념의 난점은 이렇다. 젊은 여인이 어떻게 "남편"을 애곡하면서 여전히 "처녀"일 수 있는가. Nogalski는 세 갈래의 설명을 정리하고 각각의 한계를 짚는다.</p>
+      <div class="tbl-wrap">
+      <table>
+        <caption>표 4. <span class="hw">בְּתוּלָה</span>와 <span class="hw">בַּעַל נְעוּרֶיהָ</span> 해석 세 갈래 <span class="c n">N</span></caption>
+        <thead><tr><th>독법</th><th>논거</th><th>한계</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="head">법적 독법</td>
+            <td>출애굽기 22:15–16, 신명기 20:7, 22:23–24를 누적하면 혼인 계약이 두 단계임이 함의된다. 첫 단계에서 가족 간 협상과 신부값 지불이 끝나면 여인은 법적으로 혼인한 것으로 여겨지며 한동안 아버지 집에 머문다. 둘째 단계에서 남편에게로 옮겨 혼인을 완성한다. 신명기 22:19·23–24는 같은 여인을 "약혼한 처녀"이면서 "아내"로 부른다.</td>
+            <td>첫 단계가 끝난 뒤 남자가 죽어 처녀-아내가 혼인을 완성하지 못한 채 애곡하는 상황을 독자가 채워 넣어야 한다. 이런 상황이 잠언처럼 기능할 만큼 흔했을지 의문이 남는다.</td>
+          </tr>
+          <tr>
+            <td class="head">칭호 독법</td>
+            <td><span class="hw">בְּתוּלָה</span>는 구약에서 의인화된 지역과 도시를, 고대근동 문헌 일반에서 여신을 가리킬 수 있다. "처녀 딸 시온"(왕하 19:29; 애 2:13), "처녀 딸 바벨론"(사 47:1), "처녀 딸 애굽"(렘 46:11), "처녀 딸 유다"(애 1:15), "처녀 이스라엘"(렘 18:13; 31:4·21; 암 5:2), "처녀 예루살렘"(애 2:10).</td>
+            <td>애곡하는 처녀가 의인화된 도시나 지역이 된다. 직접 문맥에서 이 인물이 <em>왜</em> 애곡하는지가 분명하지 않다.</td>
+          </tr>
+          <tr>
+            <td class="head">가나안 제의 독법</td>
+            <td>1:8이 "남편"의 낱말로 실제 <span class="hw">בַּעַל</span>(바알)을 쓴다. 처녀·애곡·바알이라는 어휘 묶음이 바알 신화의 인유로 읽히며, 아낫이 이 이야기에서 성적 관계를 갖는데도 통상 "처녀"라는 칭호를 받는다.</td>
+            <td>종교사와 저작 연대의 문제가 크다. 요엘이 후기 포로기 이후 편찬물이라면 6세기 이전만큼 바알 신화가 널리 알려져 있었다고 주장하기 어렵다. <span class="c t">B</span> Barton도 Kapelrud의 아낫 논거를 물리친다.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <p><span class="c t">B</span> Barton은 이 대목을 난해하게 보지 않는다. <span class="hw">בְּתוּלָה</span>를 혼인 적령의 여인으로 읽으면 문제가 사라지고, 약혼 기간의 여인이 이미 아내로 여겨졌다는 설명도 신명기 22:23–24의 지지를 받는다. 어느 쪽이든 백성은 그 문화에서 가장 극한의 슬픔 하나로 애곡하도록 불린다. 약혼했거나 갓 혼인한 여인이 남편을 잃은 슬픔이다. <span class="c t">B</span> 굵은 베(<span class="hw">שַׂק</span>)를 허리에 두르는 것은 슬픔·참회·금식의 표지다.</p>
+      <p><span class="c b">A</span> Assis는 여기에 자신의 이중 독법을 적용한다. 절의 드러난 뜻은 백성이 남편을 갓 잃은 젊은 여인의 통곡처럼 애곡하라는 명령이다. 이 해석은 저자가 의도적으로 심어 둔 난점을 해소하지 못하는데, 그 난점이 둘째 해석을 허용한다. <span class="c b">A</span> 둘째 독법에서 백성은 <span class="hw">אֵלַי</span>—"내게로"—하나님을 부르며 언약 관계를 표현한다.</p>
+      <p><span class="c b">A</span> Assis는 이 독법의 시대적 근거로 이사야 54:6을 든다. "여호와께서 너를 부르시되 마치 버림을 받아 마음에 근심하는 아내 곧 어릴 때에 아내가 되었다가 버림을 받은 자에게 함 같이 하실 것임이라." 포로기에 예언한 제2이사야는 이 논지에서 요엘과 동시대다. 굵은 베를 두른 여인이 어릴 때의 남편 때문에 슬퍼하는 모티프는 예레미야애가 1장의 예루살렘 딸의 애곡 서술에 어울린다. <span class="c b">A</span> 요엘 1:8은 같은 시기, 같은 분위기를 반영하며 어릴 때의 남편을 그리워하는 젊은 여인의 은유로 이스라엘과 하나님 사이의 관계 회복을 말한다.</p>
+      <p><span class="c b">A</span> 이 독법은 앞의 물음 하나를 푼다. 이 신탁이 왜 하나님을 향한 호소를 담지 않는가. 저자는 그런 호소가 청중에게 받아들여지지 않으리라 판단했고, 반발을 막기 위해 메시지를 즉시 드러내지 않았다. 대신 메뚜기 재앙 서술 한가운데 8절에 이차적 의미를 심었으며, 그 심어진 뜻 하나가 하나님을 향한 호소다. <span class="c b">A</span> 이 절은 신탁의 중심이며 초점이다.</p>
+    </div>
+
+    <div class="vs" id="v910">
+      <span class="ref">1:9–10 — 끊어진 제사, 슬퍼하는 땅</span>
+      <p><span class="c t">B</span> 소제(<span class="hw">מִנְחָה</span>)와 전제(<span class="hw">נֶסֶךְ</span>)가 "끊어졌다"고 하는데, 1:5의 포도주와 같은 동사(<span class="hw">כרת</span>)다. 이것이 상번제를 가리킨다고 단정할 수는 없으나, 두 낱말이 짝으로 나오는 것은 포로기 이후 본문에 한정된다(출 29:38–42; 레 23:13·18; 민 6:15; 15:24; 28:39; 29:11, 16–39). 이 본문들은 모두 오경의 제사장 자료다.</p>
+      <p><span class="c t">B</span> 제사장이 애곡하는 이유는 두 겹이다. 그들은 매일의 제물을 책임졌고 동시에 그 제물에서 양식을 얻었다. 애곡은 자기 자신을 위한 것이면서 여호와 제의가 훼손된 데 대한 것이다. 곡식과 포도주와 기름이 함께 끊기면 제물을 만들 재료가 없어지고 신적 진노가 예상된다. <span class="c t">B</span> 제의적 경건이 반드시 형식적이지는 않았음을 이 대목이 상기시킨다. 제사장에게 올바른 제의를 유지하는 일은 삶의 방식이며 존재 이유였다.</p>
+      <p><strong>"토지가 마르니"의 어근.</strong> <span class="c t">B</span> <span class="hw">אָבְלָה אֲדָמָה</span>를 두고 Driver 등은 "슬퍼하다"가 아니라 "마르다"를 뜻하는 제2어근 <span class="hw">אבל</span> Ⅱ를 상정했고, NEB·REB가 이를 따랐다. <span class="c t">B</span> Clines는 <span class="hw">אבל</span> Ⅱ의 증거가 빈약하다고 논증했으며 Barton은 그 논증을 설득력 있게 본다. 타르굼이 <span class="hw">חרב</span>(마르다)로 옮긴 것은 해석적 번역일 수 있다. 땅이 "슬퍼한다"는 표현은 그 자체로 온전한 뜻을 이루며, 무생물이 슬퍼하는 사례가 이사야 3:26, 예레미야 12:10–11, 예레미야애가 1:4과 2:8에 있다.</p>
+      <p><span class="c b">A</span> Assis는 같은 어근이 두 절을 잇는 <strong>말놀이</strong>로 읽는다. 9절에서 제사장의 애곡을 서술하고("제사장은 슬퍼하도다"), 10절에서 황폐와 메마름의 뜻으로 나타난다("토지가 마르니"). 하나의 어근에서 두 의미가 함께 솟는다.</p>
+      <div class="note"><div class="tt">개역개정의 선택</div>개역개정 1:10은 <span class="hw">אָבְלָה</span>를 "마르니"로 옮겨 <span class="hw">אבל</span> Ⅱ 계열의 독법을 따랐다. 9절의 같은 어근은 "슬퍼하도다"로 옮겼으므로, 히브리어 본문이 만드는 말놀이가 번역에서는 드러나지 않는다. 원어 연구 문서에서 이 지점을 다시 짚는다.</div>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="heb">הֹבִישׁוּ אִכָּרִים</div>
+      <div class="eyebrow">1:11–12</div>
+      <h2>6. 부끄러워할지어다</h2>
+      <div class="gloss">호비슈 익카림 — 농부들아 부끄러워하라</div>
+    </div>
+
+    <div class="krv"><b>욜 1:11</b>농부들아 너희는 부끄러워할지어다 포도원을 가꾸는 자들아 곡할지어다 이는 밀과 보리 때문이라 밭의 소산이 다 없어졌음이로다<br><b>욜 1:12</b>포도나무가 시들었고 무화과나무가 말랐으며 석류나무와 대추나무와 사과나무와 밭의 모든 나무가 다 시들었으니 이러므로 사람의 즐거움이 말랐도다</div>
+
+    <div class="vs" id="v11">
+      <span class="ref">1:11–12 — 두 어근의 말놀이</span>
+      <p><span class="c t">B</span> 11절은 확실한 말놀이로 열린다. "부끄러워할지어다"는 <span class="hw">הֹבִישׁוּ</span>로 어근 <span class="hw">בושׁ</span>(부끄럽다)에서 오고, 10절의 "말랐고"는 <span class="hw">הוֹבִישׁ</span>로 어근 <span class="hw">יבשׁ</span>(마르다)에서 온다. 두 형태가 사실상 같은 소리를 낸다. 농부들은 포도나무가 시들어 포도주가 <em>말랐기</em> 때문에 <em>부끄러워</em> 해야 한다. 12절이 다시 <span class="hw">יבשׁ</span>로 돌아간다. 이 말놀이는 우리말로 옮겨지지 않는다.</p>
+      <p><span class="c f">H</span> Hadjiev는 이 사슬을 다섯 고리로 펼친다. <span class="hw">הוֹבִישׁ תִּירוֹשׁ</span>(새 포도주가 말랐고, 10절) → <span class="hw">הֹבִישׁוּ אִכָּרִים</span>(농부들아 부끄러워할지어다) → <span class="hw">הַגֶּפֶן הוֹבִישָׁה</span>(포도나무가 시들었고) → <span class="hw">כָּל־עֲצֵי הַשָּׂדֶה יָבֵשׁוּ</span>(밭의 모든 나무가 다 시들었으니) → <span class="hw">הֹבִישׁ שָׂשׂוֹן</span>(즐거움이 말랐도다). <span class="c f">H</span> <span class="hw">יבשׁ</span>는 장 끝의 17절과 20절에도 다시 나타나며 그곳에서는 가뭄이 시야에 들어온다.</p>
+      <p><strong>부끄러움의 뜻.</strong> <span class="c t">B</span> "부끄러워하다"가 농부의 죄를 함의할 수 있으나, 잘못이 없는데도 노력이 무산될 때 사람이 느끼는 수치를 반영할 가능성이 크다. <span class="c f">H</span> Hadjiev는 이 방향을 더 밀고 간다. 농부의 수치는 풍성한 수확을 확보하려던 노력의 실패다. 예레미야 14:1–6에서도 가뭄이 고난과 애곡을 부르면서 동시에 강한 굴욕을 낳는다. 명예와 영광이 승리와 성공에서 오듯, 수치는 흔히 약함이나 무능이 공개적으로 드러난 결과다. <span class="c f">H</span> 농부의 수치는 그 실패가 하나님께 버림받았음을 함의한다는 사실로 가중된다.</p>
+    </div>
+
+    <div class="vs" id="v12">
+      <span class="ref">1:12 — 일곱 작물과 마른 즐거움</span>
+      <p><span class="c t">B</span> 농부(<span class="hw">אִכָּרִים</span>)와 포도원 가꾸는 자(<span class="hw">כֹּרְמִים</span>)라는 짝은 역대하 26:10과 이사야 61:5에도 함께 나오며, 그곳에서 이들은 독립 자영농보다 고용된 일꾼에 가깝다. 이들이 돌보는 작물은 토지의 가장 중요한 소출을 모두 나열한 목록으로 보인다. 밀, 보리, 포도나무, 무화과, 석류, 대추야자, 사과다. <span class="hw">תַּפּוּחַ</span>(타푸아흐)의 뜻은 논쟁되며 살구일 수도 있다.</p>
+      <p><span class="c b">A</span> Assis는 4절과 12절을 신탁의 <strong>틀</strong>로 읽는다. 4절이 메뚜기를 서술하고 12절이 그 결과를 서술하며, 두 절이 관련된 문체 특징으로 이어진다. 4절에 네 종류의 메뚜기가, 12절에 손상된 다섯 종류의 열매가 나온다. 4절은 "먹다"라는 동사를 세 번 되풀이해 메뚜기의 활동에 초점을 두고, 12절은 "마르다"라는 어근을 역시 세 번 써서 열매의 농업적 손상을 서술한다.</p>
+      <p><span class="c t">B</span> 마지막 행 "이러므로 사람의 즐거움이 말랐도다"는 <span class="hw">כִּי</span>로 열린다. 이 소사는 흔히 "때문에"를 뜻하되 강한 단언 "참으로, 반드시"를 도입할 수도 있다. Frankfort는 인과 독법을 옹호하며 농부의 열의가 그쳐 작물이 실패했다고 읽으나, <span class="hw">שָׂשׂוֹן</span>(사손, 즐거움)을 "열의"로 해석할 수 있는지가 의문이다.</p>
+      <p><span class="c f">H</span> Hadjiev는 Simkins의 관찰 하나를 덧붙인다. 1958년 에티오피아의 메뚜기 재앙에서 메뚜기가 곡식 16만 7천 톤을 먹어 치웠고 자연 식생을 파괴했다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="heb">קַדְּשׁוּ־צוֹם</div>
+      <div class="eyebrow">1:13–14</div>
+      <h2>7. 슬피 울지어다</h2>
+      <div class="gloss">카드슈-촘 — 금식일을 정하라</div>
+    </div>
+
+    <div class="krv"><b>욜 1:13</b>제사장들아 너희는 굵은 베로 동이고 슬피 울지어다 제단에 수종드는 자들아 너희는 울지어다 내 하나님께 수종드는 자들아 너희는 와서 굵은 베 옷을 입고 밤이 새도록 누울지어다 이는 소제와 전제를 너희 하나님의 성전에 드리지 못함이로다<br><b>욜 1:14</b>너희는 금식일을 정하고 성회를 소집하여 장로들과 이 땅의 모든 주민들을 너희 하나님 여호와의 성전으로 모으고 여호와께 부르짖을지어다</div>
+
+    <div class="vs" id="v13">
+      <span class="ref">1:13 — 네 콜론의 상승</span>
+      <p><span class="c b">A</span> Assis는 13절이 네 콜론의 점층 구조를 이룬다고 읽는다. ① 굵은 베로 동이고 슬피 울지어다, 제사장들아 ② 울지어다, 제단에 수종드는 자들아 ③ 와서 굵은 베 옷을 입고 밤이 새도록 누울지어다, 내 하나님께 수종드는 자들아 ④ 이유. 13절의 명령은 애곡의 행위이며 제사장 자신의 행동이다. <span class="hw">חִגְרוּ</span>(하그루)는 "동이다"이고 그 목적어 "굵은 베"는 표기되지 않았다(생략의 사례로 사 32:11 참조). <span class="hw">סִפְדוּ</span>(시프두)는 죽은 자를 두고 애곡하는 것이며(창 23:2), <span class="hw">הֵילִילוּ</span>(헤일릴루)는 애곡의 표현인 통곡이다.</p>
+      <p><span class="c b">A</span> "밤이 새도록 누울지어다"라는 명령은 첫 명령 "동이고"를 잇는다. 굵은 베를 입은 채 밤을 지내는 것은 애곡의 지속과 그 기간을 가리킨다. 하루의 의례가 끝난다고 끝나지 않고 밤까지 이어지는 애곡이다. 사무엘하 12:16에서 다윗이 아들을 두고 밤을 새워 금식하고 기도한 것도 같은 뜻이다.</p>
+      <p><span class="c t">B</span> Barton은 애곡 의례를 세 요소로 정리한다. 굵은 베를 두르는 것(본문은 목적어를 생략하고 "동이라"만 쓴다), <span class="hw">ספד</span>가 함의하는 가슴을 치거나 긁는 애곡, 그리고 통곡이다(삼하 3:31; 렘 4:8의 유사한 결합 참조). <span class="c t">B</span> 밤을 지낸다는 것이 성전에서 밤을 보내라는 뜻일 수 있으나, 하루가 끝날 때 굵은 베를 벗지 말고 계속 애곡의 상태로 머물라는 뜻일 가능성이 크다.</p>
+      <p><span class="c n">N</span> 1:13에서 <span class="hw">מִנְחָה</span>와 <span class="hw">נֶסֶךְ</span>는 <strong>드리지 못함</strong>(<span class="hw">מנע</span>, 마나)으로 표현되고, 1:9에서는 <strong>끊어짐</strong>(<span class="hw">כרת</span>)으로 표현되었다. 이 요소들이 보류된 것은 가뭄으로 땅이 실패했기 때문이며, 백성이 성전에 가져오기를 그만두기로 선택했기 때문이 아니다.</p>
+      <p><span class="c t">B</span> 개역개정 "내 하나님께 수종드는 자들아"의 "내 하나님"이 눈에 띈다. 여기서 화자가 여호와가 아니라 예언자임을 함의한다. 그리스어 역본은 단순히 "하나님"으로 읽는데, 마소라 본문이 <span class="hw">אֱלֹהַי</span>로 모음을 붙인 것이 원래 <span class="hw">אֱלֹהִים</span>의 마지막 멤이 탈락한 결과일 가능성을 남긴다. 불가타는 <i>ministri dei mei</i>로 마소라를 따른다. <span class="c t">B</span> 예언자가 여기서 여호와를 "내 하나님"이라 부르고 다음 행에서 "너희 하나님"이라 부르지 못할 이유는 없다.</p>
+    </div>
+
+    <div class="vs" id="v14">
+      <span class="ref">1:14 — 금식과 성회, 그리고 인클루지오</span>
+      <p><span class="c n">N</span> 14절은 13절에서 곧바로 이어지며 제사장에게 <strong>금식일을 정하고</strong>(<span class="hw">קַדְּשׁוּ־צוֹם</span>) <strong>성회를 소집하라</strong>(<span class="hw">קִרְאוּ עֲצָרָה</span>)고 명한 뒤, 장로들에게 땅의 모든 주민을 성전에 모아 여호와께 부르짖으라고 명한다. <span class="c n">N</span> 1:14의 "장로들"과 "이 땅의 모든 주민들"은 확장된 단위의 첫머리(1:2)와 <strong>인클루지오</strong>를 이룬다. 성회는 1:13의 제의 행위의 연장으로 이해할 수 있다. 성전 인력이 거룩한 과정으로 애곡을 시작해 전날 밤 자신을 구별하고, 이튿날 공동체 전체가 금식하며 여호와께 부르짖기 위해 모인다.</p>
+      <p><span class="c f">H</span> Hadjiev도 같은 구조를 읽는다. 마지막 연이 단락 전체를 결론이자 절정으로 이끈다. "울지어다"라는 부름이 둘째 연(1:5)과 넷째 연(1:11)을 되짚고, "장로들"과 "이 땅의 모든 주민들"이 1:2와 인클루지오를 이루며 앞서 지목된 모든 무리를 한데 모은다. <span class="c f">H</span> 가장 강한 연결은 셋째 단위와의 연결이며, 거기서 핵심어가 거의 전부 되풀이된다. 굵은 베(13·8절), 소제와 전제(13·9절), 제사장과 수종드는 자(13·9절), 여호와의 성전(14·9절)이다. <span class="c f">H</span> 단락의 중심과 결론이 모두 독자의 주의를 제의로 모은다. 재난의 규모는 성전 예배에 미친 영향으로 측정되고, 벗어나는 길은 제의 행위의 수행에 있다.</p>
+      <p><span class="c t">B</span> Barton은 1:2와의 대응에서 <span class="hw">זְקֵנִים</span>의 뜻을 재조정한다. 앞 절에서는 긴 기억을 가진 이들을 가리키므로 "늙은이"가 적절할 수 있으나, 여기서는 지도층을 가리킬 가능성이 크다. 예언자는 공동체 전체가 지도자와 함께 성전으로 올라오기를 원한다. <span class="c t">B</span> <span class="hw">עֲצָרָה</span>(아차라, 성회)는 본래 일에서 놓인 날을 뜻했던 것으로 보이며, 이 시기에는 백성의 회집을 수반하는 종교 행사를 함의했다.</p>
+      <p><span class="c n">N</span> Nogalski는 <strong>금식</strong>의 용례를 넓게 정리한다. 구약에서 금식은 제의 의례이면서 가혹한 상황에 대한 개인의 반응으로도 나타난다(삼상 1:6–8). 종교 의례로서의 동기는 친족(삼상 12:20–23)·친구(삼하 3:31–35)·지도자(삼하 1:12)의 상실을 애도함, 뉘우침을 나타냄(신 9:18; 삼상 7:6), 회개를 표현함(욘 3:4–9), 전쟁의 패배를 겪음(삿 20:24–28), 장차 올 상실이나 임박한 전투나 여행의 안전에 대한 선제적 반응(삼하 12:16–23; 대하 20:3; 스 8:21) 따위다.</p>
+      <p><span class="c n">N</span> 여기에 Nogalski는 경계 하나를 붙인다. 고대와 현대를 막론하고 금식 같은 의례 행위를 보장된 결과를 얻는 수단으로 이해할 수 없다. 이사야 58:1–8은 사회 전체의 유익을 위해 일하지 않으면서 의례적 금식을 하나님을 조종하는 기계적 수단으로 여기는 이들을 정면으로 논박한다. <span class="c n">N</span> 요엘은 하나님만이 뉘우침의 행위에 응답할지와 어떻게 응답할지를 택하신다는 점을 은근히 상기시키며 이 위험을 의식한다(2:14의 "혹시" 참조).</p>
+      <p><span class="c t">B</span> Barton은 요엘에게 없는 두 요소를 짚는다. 조직된 제의에 대한 반대와, 민족을 덮친 재난의 경감을 기대하기에 이미 늦었다는 확신이다. 요엘은 제의 활동을 당연한 것으로 여기고 애곡하며 하나님께 나라의 형편을 회복해 달라고 부르짖는 데 의미가 있다고 여긴다. <span class="c t">B</span> 그 밑에는 성전 제의의 표준 신학이 있다. 사람이 이해할 수 있는 이유로도, 때로는 헤아릴 수 없이도 벌하시는 하나님, 그러면서 자비로우시며 간구에 움직이실 수 있는 하나님이다.</p>
+      <p><span class="c b">A</span> Assis는 여기서 예언자의 목표가 처음 드러난다고 본다. 두 절 끝에서 예언자는 의도적으로 백성에게 몸을 돌려 처음으로 말한다. "여호와께 부르짖을지어다." 백성이 하나님께 호소하게 하는 것이 예언자의 목적이며, 여기서 그것을 명시적으로 드러낸다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 8 ═══════ -->
+  <section class="part" id="s8">
+    <div class="part-head">
+      <div class="heb">אֲהָהּ לַיּוֹם</div>
+      <div class="eyebrow">1:15–18</div>
+      <h2>8. 여호와의 날과 애가</h2>
+      <div class="gloss">아하 라욤 — 슬프다 그 날이여</div>
+    </div>
+
+    <div class="krv"><b>욜 1:15</b>슬프다 그 날이여 여호와의 날이 가까웠나니 곧 멸망 같이 전능자에게로부터 이르리로다<br><b>욜 1:16</b>먹을 것이 우리 눈 앞에 끊어지지 아니하였느냐 기쁨과 즐거움이 우리 하나님의 성전에서 끊어지지 아니하였느냐<br><b>욜 1:17</b>씨가 흙덩이 아래에서 썩어졌고 창고가 비었고 곳간이 무너졌으니 이는 곡식이 시들었음이로다<br><b>욜 1:18</b>가축이 울부짖고 소 떼가 소란하니 이는 꼴이 없음이라 양 떼도 피곤하도다</div>
+
+    <div class="vs" id="v15">
+      <span class="ref">1:15 — 샷다이의 말놀이</span>
+      <p><span class="hw">אֲהָהּ לַיּוֹם כִּי קָרוֹב יוֹם יְהוָה וּכְשֹׁד מִשַּׁדַּי יָבוֹא</span>.</p>
+      <p><span class="c f">H</span> 이 절의 실질은 이사야 13:6과 같다. "여호와의 날이 가까웠나니"라는 어구는 예언 문학에 흔하되, 이어지는 "멸망 같이 전능자에게로부터 이르리로다"(<span class="hw">כְשֹׁד מִשַּׁדַּי</span>)는 그 특유의 말놀이와 함께 이사야와 요엘에만 있다. 여는 부르짖음 "슬프다 그 날이여"는 공포와 낙담과 절망을 전한다(삿 11:35; 왕하 3:10). 여호와의 날의 임박에 관한 비슷한 진술과 함께 에스겔 30:2–3에도 나오며, 그곳에서 여호와의 날은 애굽에 심판을 가져온다.</p>
+      <p><strong>말놀이.</strong> <span class="c t">B</span> <span class="hw">שַׁדַּי</span>(샷다이)는 전통적으로 "전능자"로 옮겼고 그리스어 <i>pantokratōr</i>와 라틴어 <i>omnipotens</i>를 따른 것이다. 이는 <span class="hw">שֶׁדַּי</span>("충분하신 이")라는 랍비 어원 추정을 따른 것이며, 현대 학자들은 대체로 "산들"을 뜻하는 낱말에서 온 것으로 본다. <span class="c t">B</span> 여기서 이 이름이 효과를 내는 이유는 "멸망"을 뜻하는 낱말이 <span class="hw">שֹׁד</span>(쇼드)이기 때문이다. <span class="c h">C</span> Crenshaw는 영어 번역에서 이 소리를 흉내 내어 "the Devastator에게서 오는 devastation"으로 옮겼다. 칠십인역은 <span class="hw">שַׁדַּי</span>를 신명으로 다루지 않으면서도 말놀이는 보존했다.</p>
+      <p><span class="c n">N</span> Nogalski는 1:15–20 전체를 세 목적을 지닌 수사 단위로 규정한다. 여호와의 날 주제를 도입하고, 땅의 파괴를 서술하며, 그 파괴에 대한 반응을 보고한다. 예언자는 백성을 대신해 곤경의 기도를 올리고, 가축은 물이 없어 헐떡인다.</p>
+      <p><span class="c n">N</span> 이 날을 시간·대상·양식·촉발이라는 네 항목으로 기술하면 이렇다. <strong>시간</strong>은 임박한 미래이고, <strong>양식</strong>은 자연재해다. <strong>대상</strong>은 문맥에서 도출되는데, 요엘 1장이 "땅의 모든 주민"(1:2, 14)과 특정 무리를 향해 말했고 애곡의 부름이 성전과 밀접하므로 예루살렘이 전제된 배경이다. 2:1이 시온과 "나의 거룩한 산"과 "이 땅 주민"을 잇달아 언급하며 이 전제를 확인한다. <span class="c n">N</span> <strong>촉발</strong>의 이유는 1장에 명시되지 않으며, 요엘은 유다 독자가 호세아의 이스라엘 고발을 알고 있고 자기들도 같은 잘못으로 유죄임을 안다고 전제한다.</p>
+      <p><strong>이 날은 언제의 날인가.</strong> <span class="c f">H</span> Hadjiev가 이 단락의 핵심 물음을 정식화한다. 여호와의 날이 1:4–14에서 애곡된 농업 재난을 가리키는가, 별개의 미래 사건을 가리키는가. 날이 "가까웠다"고 선포하므로 현재 위기와 구별해 볼 여지가 있고, 그러면 메뚜기 재앙이 임박한 종말론적 심판의 전조가 된다(Cook, Barker). <span class="c f">H</span> Hadjiev의 판단은 다르다. "여호와의 날"을 1장이 다루는 재난에 대한 언급으로 보는 편이 낫다(Barton, Seitz와 같은 방향).</p>
+      <p><span class="c f">H</span> 근거는 세 가지다. 날의 가까움은 그 즉각성과 목전성을 전한다(시 22:11; 85:9). 요엘 3:14 [4:14]의 "여호와의 날이 가까움이로다"는 본문의 시점에서 명백히 미래가 아닌 <em>현재</em>의 실재를 서술한다. 아모스(5:18–20)가 북이스라엘의 앗수르 함락을, 스바냐(1:14–18)가 예루살렘의 바벨론 함락을 여호와의 날의 발현으로 보았듯, 요엘은 메뚜기 재앙을 또 하나의 여호와의 날로 규정한다. <span class="c f">H</span> 오늘이 여호와의 날임을 깨닫는 데서 "슬프다 오늘이여"라는 경악의 외침이 나온다.</p>
+      <p><span class="c t">B</span> Barton은 같은 결론에 이르되 Everson의 논증을 지렛대로 쓴다. 구약에 단일한 여호와의 날 개념은 성립하지 않으며, 여호와에게는 여러 "날들", 곧 파괴나 축복 가운데 특별히 임재하시는 여러 계기가 있다. <span class="c t">B</span> 그래서 Barton은 <span class="hw">קָרוֹב יוֹם יְהוָה</span>를 "<em>한</em> 여호와의 날이 가까이 왔다"로 옮기고, Wolff와 Crenshaw가 메뚜기 침입을 더 파괴적인 힘이 가까웠다는 표지로 읽는 데 반대한다. 예언자는 사방의 파괴에서 여호와의 날이 <em>이미</em> 백성에게 임한 증거를 본다.</p>
+      <div class="caveat"><span class="tt">쟁점 — 정경적 겹침</span><span class="c f">H</span> 1:15의 애굽을 향한 여호와의 날 인유(겔 30:2–3)가 1:2–4의 애굽을 향한 메뚜기 재앙 인유(출 10장)와 맞물린다. 정경 문맥은 유다의 처지를 바벨론·애굽과 견주도록 초청한다. 하나님의 백성이 신적 심판 아래 섰던 세계 제국들과 같은 위치에 놓인다(Strazicich). <span class="c f">H</span> 요엘이 이사야와 에스겔을 의도적으로 인용했는지, 구전 전승과 성전 예배에서 익숙한 전통 언어에 기댔을 뿐인지는 판정하기 어렵다.</div>
+    </div>
+
+    <div class="vs" id="v16">
+      <span class="ref">1:16 — 경첩 구조의 수사 질문</span>
+      <p><span class="c n">N</span> 1:15의 임박한 여호와의 날이 1:16으로 이어지고, 예언자는 두 부분이 단 하나의 동사로 이어진 수사 질문을 던진다. 평행 어구가 그 동사를 가운데 두고 둘러싸며, 동사가 두 부분 사이의 경첩으로 기능한다.</p>
+      <div class="tbl-wrap">
+      <table>
+        <caption>표 5. 1:16의 경첩 구조 <span class="c n">N</span></caption>
+        <thead><tr><th>위치</th><th>요소</th></tr></thead>
+        <tbody>
+          <tr><td class="head">A</td><td>우리 눈 앞에서</td></tr>
+          <tr><td class="head">B</td><td>먹을 것이</td></tr>
+          <tr><td class="head">C</td><td><b>끊어지지 아니하였느냐</b></td></tr>
+          <tr><td class="head">A′</td><td>우리 하나님의 성전에서</td></tr>
+          <tr><td class="head">B′</td><td>기쁨과 즐거움이</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><span class="c f">H</span> 1인칭 복수("우리 눈")는 이제 회중이 말하고 있음을 함의한다. 이 단락은 앞선 부름들의 언어를 되받아, 그 부름에 대한 응답임을 분명히 한다. 먹을 것이 <em>끊어지고</em>(1:5 참조) 기쁨과 즐거움도 끊어진다(1:12의 "즐거움이 말랐도다" 참조). "우리 하나님의 성전"이 네 번째로 언급되며(1:9, 13–14), 1:13의 "소제와 전제를 너희 하나님의 성전에 드리지 못함"과 이 절의 "기쁨과 즐거움이 우리 하나님의 성전에서 끊어지지 아니하였느냐"가 나란히 선다. <span class="c f">H</span> 청중의 귀(1:2)와 입(1:5)에 이어 이제 <strong>눈</strong>이 재난의 경험에 동원된다.</p>
+      <p><span class="c t">B</span> Barton은 이 절에서 애가 문학의 익숙한 특징 하나를 읽는다. 하나님의 이해관계에 대한 얇게 가려진 호소다. 기근을 허용하시는 동안 여호와는 받으실 제물을 잃으신다. 백성에게는 성전 예배의 기쁨에 참여하지 못하는 비참이면서, 기근이 계속되는 동안 여호와도 그것을 함께 겪으신다는 사실을 상기시킬 만한 것이 된다. 이사야 38:18–19에서 죽은 자가 여호와를 찬양할 수 없으므로 예배자를 살려 두셔야 한다고 상기시키는 것과 같은 어법이다.</p>
+    </div>
+
+    <div class="vs" id="v17">
+      <span class="ref">1:17 — 책에서 가장 어려운 절</span>
+      <p><span class="hw">עָבְשׁוּ פְרֻדוֹת תַּחַת מֶגְרְפֹתֵיהֶם נָשַׁמּוּ אֹצָרוֹת נֶהֶרְסוּ מַמְּגֻרוֹת</span>.</p>
+      <p><span class="c t">B</span> 17절은 언어적으로 책에서 가장 어려운 절이다. 17절 전반부에서 <span class="hw">תַּחַת</span>(아래)을 제외한 모든 낱말이 하팍스 레고메논이며, 뜻은 추정에 머문다.</p>
+      <ul>
+        <li><span class="hw">פְּרֻדוֹת</span> — <span class="c t">B</span> 시리아어·아람어 동족어를 따라 대개 "씨"로 본다. 성경 히브리어의 통상 규칙으로는 "분리된 것들"을 뜻하는 수동 분사가 된다. 4Q78과 칠십인역(<i>damaleis</i>)은 <span class="hw">פָּרוֹת</span>(암소)로 읽는다.</li>
+        <li><span class="hw">עָבְשׁוּ</span> — <span class="c t">B</span> 아랍어 <i>ʿabisa</i>(찡그리다)에 근거해 "시들다·쪼그라들다"로 옮기는 것이 통상이다. 4Q78은 <span class="hw">עָפְשׁוּ</span>("썩다")로 읽으며 라틴어 <i>computruerunt</i>가 이에 상응한다. <span class="c n">N</span> HALOT은 아랍어("쪼그라들다")와 미쉬나 히브리어("곰팡이가 슬다")의 두 결을 제안한다.</li>
+        <li><span class="hw">מֶגְרְפֹתֵיהֶם</span> — <span class="c t">B</span> 후기 히브리어 <span class="hw">מַגְרֵפָה</span>와 아람어 <i>magrēpîtāʾ</i>(삽·흙손)를 따라 "그들의 삽"으로 옮기는 이들이 있고, 랍비 주석가들은 <span class="hw">גרף</span>(쓸어내다)에서 와 "그들의 빗자루"로 본다. BHS는 <span class="hw">חַתּוּ גָרְנֹתֵיהֶם</span>("그들의 타작 마당이 낙담하였다")로의 수정을 제안한다.</li>
+        <li><span class="hw">מַמְּגֻרוֹת</span> — <span class="c t">B</span> "곳간"을 뜻하는 <span class="hw">מְגֻרוֹת</span>가 기대되는 자리에 멤이 하나 더 붙어 있다. BHS는 이 여분의 멤을 중복 필사로 설명한다.</li>
+      </ul>
+      <p><span class="c n">N</span> Nogalski는 사본 증거를 정밀하게 정리한다. 칠십인역이 <span class="hw">פרה</span>를 옮길 때 쓰는 그리스어 낱말을 사용하므로 마소라 본문의 자음에 가까운 것을 번역한 것으로 보이며, <span class="hw">פָּרוֹת</span>는 달렛이 탈락한 중복 생략으로 설명될 수 있다. 4Q78은 <span class="hw">פורות</span>에 <span class="hw">עָפְשׁוּ</span>를 결합해 읽으므로, 칠십인역이 번역 시점에 바꾼 것이 아니라 <span class="hw">פָּרוֹת</span>를 가진 대본에서 작업했을 가능성이 크다. <span class="c n">N</span> 암소가 곰팡이 슬 수는 없으므로 이 어구는 "암소가 쪼그라든다" 정도를 뜻하게 된다.</p>
+      <p><span class="c t">B</span> Barton의 결론은 단호하다. 이 절이 무엇을 뜻하는지 결코 알 수 없으며, 원래 히브리어를 복원하거나 마소라 본문이 옳다면 그것을 해독할 현실적 전망도 없다.</p>
+      <div class="note"><div class="tt">개역개정의 선택</div>"씨가 흙덩이 아래에서 썩어졌고"는 <span class="hw">פְּרֻדוֹת</span>를 씨로, <span class="hw">מֶגְרְפֹת</span>를 흙덩이로, <span class="hw">עָבְשׁוּ</span>를 썩음으로 읽은 것이다. 하팍스 넷이 겹친 자리이므로, 번역이 확정된 뜻을 전한다고 읽지 않는다.</div>
+    </div>
+
+    <div class="vs" id="v18">
+      <span class="ref">1:18 — 짐승도 벌을 받는가</span>
+      <p><span class="c t">B</span> 사람만 굶주린 것이 아니며 짐승도 먹이의 부족을 겪는다. 18절이 그 곤경을 강조하는데, 소보다 훨씬 덜 무성한 목초로도 사는 양까지 "피곤하다"고 말한다.</p>
+      <p><strong>본문 문제.</strong> <span class="c t">B</span> 마소라 본문의 동사는 <span class="hw">נֶאְשָׁמוּ</span>로 통상 "죄를 지다"를 뜻하며, BHS를 따라 <span class="hw">נָשַׁמּוּ</span>로 수정해 "황폐하다·멸망하다"로 해석하는 편이 낫다(칠십인역 <i>ēphanisthēsan</i> 참조). <span class="c f">H</span> Hadjiev도 같은 문제를 다룬다. <span class="hw">נֶאְשָׁמוּ</span>는 단순형에서 "죄가 있다" 또는 "자기 죄값을 치르다"를 뜻하며, 그렇게 읽으면 짐승이 회중의 죄 때문에 고난받는다는 관념이 된다. <span class="c f">H</span> 요엘에서 백성의 죄가 결코 언급되지 않는다는 사실이 이 독법을 어렵게 만든다.</p>
+      <p><span class="c n">N</span> Nogalski는 니팔 어간이 형벌의 관념을 시사하되 그 고난이 양 자신이 초래한 것이 아님을 짚는다. 짐승과 소와 양이 모두 가뭄 때문에 고난받으며, 더 큰 문맥은 그 가뭄이 백성이 언약의 기대에 부응하지 못한 데서 온다는 것을 함의한다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 9 ═══════ -->
+  <section class="part" id="s9">
+    <div class="part-head">
+      <div class="heb">אֵלֶיךָ יְהוָה אֶקְרָא</div>
+      <div class="eyebrow">1:19–20</div>
+      <h2>9. 예언자의 기도</h2>
+      <div class="gloss">엘레카 아도나이 에크라 — 여호와여 내가 주께 부르짖으오니</div>
+    </div>
+
+    <div class="krv"><b>욜 1:19</b>여호와여 내가 주께 부르짖으오니 불이 목장의 풀을 살랐고 불꽃이 들의 모든 나무를 살랐음이니이다<br><b>욜 1:20</b>들짐승도 주를 향하여 헐떡거리오니 시내가 다 말랐고 들의 풀이 불에 탔음이니이다</div>
+
+    <div class="vs" id="v19">
+      <span class="ref">1:19–20 — 책에서 두 번뿐인 직접 호칭</span>
+      <p><span class="c n">N</span> 요엘 1장의 마지막 두 절은 백성이 아니라 여호와를 향하며, 땅과 짐승의 운명을 두고 드리는 예언자의 기도를 이룬다. 기도는 여호와의 이름을 불러 그분의 주의를 청한다. <span class="c n">N</span> 예언자가 책 안에서 하나님께 직접 말을 거는 곳은 <strong>여기와 요엘 3:11b [4:11b]</strong> 두 곳뿐이며, 그곳에서도 예언자는 여호와의 군대의 도움을 구하는 기도를 올린다. 두 호칭이 모두 여호와의 행동을 간구하는 기도에 나타난다.</p>
+      <p><span class="c n">N</span> 1:19–20의 기도는 두 부분으로 짜인다. 예언자의 부르짖음(1:19)과 짐승의 갈망에 대한 예언자의 보고(1:20)다. 두 부분을 잇는 <strong>인클루지오</strong>가 기도의 처음과 끝에 놓인다. "불이 목장의 풀을 살랐고"라는 어구다.</p>
+      <p><span class="c n">N</span> 예언자의 부르짖음은 선포 하나를 앞세우고 두 평행행으로 기도를 표현한다. 시편에 나오는 탄원가의 전통을 따라, 예언자는 여호와의 이름을 직접 불러 자기 관심사를 표현한다.</p>
+      <p><span class="c t">B</span> Barton은 화자를 다르게 본다. 이 단락 전체를 백성의 애가로 읽는 해석에 맞추어, "내가 주께 부르짖으오니"의 화자를 예언자가 아니라 예레미야애가 3:1의 개인처럼 공동체를 대표해 서는 애가의 화자로 본다. 예언자 자신이 그 역할을 맡았을 가능성도 배제하지 않는다.</p>
+      <p><span class="c f">H</span> Hadjiev도 같은 방향으로 기운다. 19절의 1인칭 단수 "내가 부르짖으오니"는 16절의 복수와 대비되어 공동체의 대표를 함의하며, 예언자 자신이거나 제사장일 수 있다. 직접 호칭 "여호와여"가 이 단락 전체를 14절의 소집에 대한 응답으로 만든다.</p>
+    </div>
+
+    <div class="vs" id="v20">
+      <span class="ref">1:20 — 헐떡이는 들짐승</span>
+      <p><span class="c f">H</span> "들짐승도 주를 향하여 헐떡거리오니"의 동사 <span class="hw">תַּעֲרוֹג</span>(타아로그)가 시편 42:1을 되울린다. 그곳에서 시인의 하나님을 향한 갈망이 사슴이 시냇물을 <em>찾아 헐떡임</em>에 견주어지며, "시내"에 해당하는 히브리어 표현(<span class="hw">אֲפִיקֵי מָיִם</span>)이 요엘 1:20의 것과 같다. <span class="c f">H</span> 들짐승의 부르짖음이 회중의 부르짖음을 모방한다.</p>
+      <p><span class="c t">B</span> <span class="hw">אֲפִיקֵי מָיִם</span>는 여름에 마르는 개울이며, 여기서는 짐승이 물이 차 있기를 기대할 때에 말라 있다. 부르짖음의 이유는 들의 나무와 광야의 목초까지 불에 파괴된 데 있다. <span class="c h">C</span> Crenshaw가 짚듯 광야의 목초는 사막 언저리의 경작되지 않은 지역으로, 결실이 나쁜 때에도 작은 짐승에게 풀을 대어 주던 곳이다.</p>
+      <p><span class="c f">H</span> Hadjiev는 이 단락의 신학적 무게를 두 겹으로 정리한다. 회중과 그 대표와 들짐승의 소리가 함께 14절의 명령에 응답해 하나님께 부르짖는다. 사람과 짐승이 함께 땅에 사는 모든 피조물을 대표하며 재난의 총체성을 떠받친다. 창조 전체가 성전에 모인 백성과 함께 신음하며 그들의 곤경에 참여한다(롬 8:19–22).</p>
+      <p><span class="c f">H</span> 더 중요한 것은 부르짖음이 재난을 <strong>여호와의 날로 해석한다</strong>는 사실이다. 문학의 층위에서 이 해석은 사건의 무게를 키운다. 신학의 층위에서 그것은 사건을 눈먼 우연의 산물이 아닌 하나님의 행위로 규정한다. <span class="c f">H</span> 여호와가 왜 이 날을 유다에 가져오셨는지에 대한 표시는, 18절의 짐승의 "죄"에 대한 비스듬하고 불확실한 언급을 빼면 없다. 불과 기근 속에서 백성이 하나님의 파괴하시는 임재가 일하고 계심을 알아보고, 자신을 비슷한 신적 마주침을 겪은 애굽과 바벨론으로 여긴다는 사실이 요점이다.</p>
+      <p><span class="c f">H</span> 이런 위험 앞에서 고난을 세밀하게 서술하는 것은 자기 연민의 탐닉과 다르다. 그것은 하나님을 긍휼로 움직여 고난을 덜고자 하는 애곡 의례의 일부다.</p>
+      <p><span class="c t">B</span> Barton은 1장의 서술이 어느 정도 양식화된 재난 기술일 가능성을 남겨 둔다. 요엘이 예견한 것은 메뚜기와 가뭄과 불을 통한 모든 자연 자원의 총체적 파괴이며, 1:4의 어법을 그대로 옮기면 <em>메뚜기가 남긴 것을 가뭄이 삼키고, 가뭄이 남긴 것을 불이 삼켰다</em>가 된다. <span class="c t">B</span> "최악이 지났다고 여길 때 새 재앙이 닥쳤다"는 주제는 이미 아모스 5:19에 있고, 아모스 4:6–11에는 요엘이 언급한 재난의 일부가 이미 나온다.</p>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 10 ═══════ -->
+  <section class="part" id="s10">
+    <div class="part-head">
+      <div class="eyebrow">LEXICON</div>
+      <h2>10. 핵심 원어와 문법</h2>
+      <div class="gloss">1장의 어휘 열둘.</div>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 6. 요엘 1장 핵심어</caption>
+      <thead><tr><th>낱말</th><th>절</th><th>문법·어근</th><th>관찰</th></tr></thead>
+      <tbody>
+        <tr><td><span class="hw">זְקֵנִים</span><br><small>제케님</small></td><td>1:2, 14</td><td>형용사의 명사적 용법 · 남성 복수 / <span class="hw">זקן</span>(늙다·수염)</td><td>"늙은이"와 "장로" 사이에서 갈린다. <span class="c n">N</span><span class="c b">A</span> 지도층, <span class="c t">B</span><span class="c h">C</span> 긴 기억을 가진 노인. <span class="c t">B</span> 같은 낱말이 1:2와 1:14에서 다른 무게를 가질 수 있다.</td></tr>
+        <tr><td><span class="hw">זֹאת</span><br><small>조트</small></td><td>1:2 (2회)</td><td>지시대명사 · 여성 단수</td><td><span class="c n">N</span> 선행사가 명시되지 않는다. 뒤따르는 것을 예견하는 용법으로 대개 읽되, "이것을 들으라" 형식의 구약 열네 용례 가운데 독립 단위를 여는 사례가 시편 49:1과 이곳뿐이라는 점이 문제를 남긴다.</td></tr>
+        <tr><td><span class="hw">יֶתֶר</span><br><small>예테르</small></td><td>1:4 (3회)</td><td>명사·남성 단수·연계형 / <span class="hw">יתר</span>(남다)</td><td><span class="c f">H</span> 각 행의 첫 낱말이며 세 행이 정확히 네 낱말로 짜인다. 남은 것을 다시 먹는 사슬 구조의 축.</td></tr>
+        <tr><td><span class="hw">אֱלִי</span><br><small>엘리</small></td><td>1:8</td><td>동사 · 칼 · 명령 · 2인칭 <b>여성 단수</b> / <span class="hw">אלה</span></td><td><span class="c n">N</span> 단락에서 유일한 여성 단수 명령형이며 여성 수신자가 명시되지 않는다. <span class="c b">A</span> 자음 <span class="hw">אלי</span>가 "내게로"(<span class="hw">אֵלַי</span>)로도 읽히는 이중성이 의도된 모호함일 수 있다.</td></tr>
+        <tr><td><span class="hw">בְּתוּלָה</span><br><small>베툴라</small></td><td>1:8</td><td>명사·여성 단수</td><td><span class="c n">N</span> 처녀, 혼인 적령의 여인, 의인화된 도시의 칭호라는 세 층위. 구약에서 "처녀 딸 시온"·"처녀 이스라엘" 등 칭호 용법이 널리 쓰인다.</td></tr>
+        <tr><td><span class="hw">בַּעַל</span><br><small>바알</small></td><td>1:8</td><td>명사·남성 단수·연계형</td><td>"남편"과 신명 "바알"이 같은 낱말이다. <span class="c n">N</span> 가나안 제의 독법의 출발점이며 동시에 그 독법의 연대 문제를 낳는다.</td></tr>
+        <tr><td><span class="hw">מִנְחָה · נֶסֶךְ</span><br><small>민하 · 네세크</small></td><td>1:9, 13</td><td>명사·여성/남성 단수 / <span class="hw">נסך</span>(붓다)</td><td><span class="c t">B</span> 두 낱말이 짝으로 등장하는 것은 포로기 이후 제사장 자료에 한정된다. <span class="c n">N</span> 1:9에서 <span class="hw">כרת</span>(끊어지다), 1:13에서 <span class="hw">מנע</span>(드리지 못하다)로 표현이 달라진다.</td></tr>
+        <tr><td><span class="hw">אָבַל</span><br><small>아발</small></td><td>1:9, 10</td><td>동사 · 칼 · 완료</td><td><span class="c t">B</span> "슬퍼하다"의 어근이며 Driver 등이 상정한 <span class="hw">אבל</span> Ⅱ("마르다")는 Clines의 논증으로 약화되었다. <span class="c b">A</span> 두 절을 잇는 말놀이의 축.</td></tr>
+        <tr><td><span class="hw">בּוֹשׁ / יָבֵשׁ</span><br><small>보쉬 / 야베쉬</small></td><td>1:10–12, 17, 20</td><td>동사 · 히필/칼</td><td><span class="c t">B</span> 소리가 겹치는 두 어근의 말놀이. <span class="c f">H</span> 10절에서 12절까지 다섯 고리로 이어지고 17절과 20절에 다시 나타난다.</td></tr>
+        <tr><td><span class="hw">שֹׁד מִשַּׁדַּי</span><br><small>쇼드 미샷다이</small></td><td>1:15</td><td>명사 + 전치사 <span class="hw">מִן</span> + 신명</td><td><span class="c t">B</span> "전능자에게로부터 오는 멸망". 이사야 13:6과 요엘에만 있는 말놀이. <span class="c h">C</span> "the Devastator에게서 오는 devastation"으로 옮겨 소리를 재현했다.</td></tr>
+        <tr><td><span class="hw">פְּרֻדוֹת</span> 등<br><small>페루도트</small></td><td>1:17</td><td>하팍스 레고메논 4개</td><td><span class="c t">B</span> <span class="hw">תַּחַת</span>을 제외한 전반부 전부가 하팍스다. 4Q78·칠십인역은 <span class="hw">פָּרוֹת</span>(암소)로 읽는다.</td></tr>
+        <tr><td><span class="hw">תַּעֲרוֹג</span><br><small>타아로그</small></td><td>1:20</td><td>동사 · 칼 · 미완료 · 3인칭 여성 단수 / <span class="hw">ערג</span></td><td><span class="c f">H</span> 시편 42:1의 사슴이 시냇물을 찾아 헐떡이는 동사와 같다. 목적어 <span class="hw">אֲפִיקֵי מָיִם</span>도 같은 표현이다.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="caveat"><span class="tt">재확인 권고</span>위 형태 분석은 마소라 본문 지식에 근거한 정리다. 정밀 인용이나 논문 작업에서는 실제 BHS 및 형태분석 도구(Accordance·Logos·STEP&nbsp;Bible)로 <b>재확인할 것</b>. 특히 1:17의 하팍스 넷과 1:18의 <span class="hw">נֶאְשָׁמוּ</span>는 사본 이문이 걸려 있으므로 비평 장치를 직접 볼 것.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 11 ═══════ -->
+  <section class="part" id="s11">
+    <div class="part-head">
+      <div class="eyebrow">DEBATE</div>
+      <h2>11. 주석가별 독법과 쟁점</h2>
+      <div class="gloss">1장에서 갈리는 여섯 지점.</div>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 7. 1장의 주요 쟁점</caption>
+      <thead><tr><th>쟁점</th><th>입장</th><th>본 서가의 처리</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="head">1:2의 "이것"</td>
+          <td><span class="c n">N</span> 호세아 14장에서 요엘의 부름으로 넘어가는 전환 서론일 수 있다 / <span class="c s">S</span> 장로들이 지금 자기 앞의 일에 주목하라는 부름이며, 고대와 현대의 사실상 모든 해석자가 1:2와 1:3의 대명사를 같은 것으로 본다 / <span class="c t">B</span><span class="c f">H</span><span class="c b">A</span> 뒤따르는 재난을 예견한다</td>
+          <td>Seitz의 반론이 형식비평의 무게를 가지므로 예견 독법을 기준선으로 삼고, Nogalski의 "이것을 들으라" 용례 통계를 함께 기록한다.</td>
+        </tr>
+        <tr>
+          <td class="head">1:2의 <span class="hw">זְקֵנִים</span></td>
+          <td><span class="c n">N</span><span class="c b">A</span> 지도층 / <span class="c t">B</span><span class="c h">C</span> 노인 / <span class="c f">H</span> 지도자이되 여기서는 나이가 초점</td>
+          <td>1:2는 나이, 1:14는 지도층으로 무게가 옮겨간다는 <span class="c t">B</span>의 조정을 따르되, Assis의 제도사 논거(포로기 이후 장로의 부상)를 병기한다.</td>
+        </tr>
+        <tr>
+          <td class="head">1:4–7 재난의 정체</td>
+          <td><span class="c t">B</span> 문자적 메뚜기의 <em>예고</em>이며 1:5–7도 같은 사건 / <span class="c n">N</span> 1:4의 메뚜기와 1:6의 민족은 <b>서로 다른 위협</b>이며 겹겹이 쌓인다 / <span class="c b">A</span> 문자와 비유의 이중 독법 / <span class="c k">K</span> 문자적 메뚜기이되 <span class="hw">גּוֹי</span>는 군대 비유</td>
+          <td>Nogalski의 중첩 독법을 기준선으로 삼는다. 1:6의 접미사 선행사가 메뚜기가 아니라 "민족"이라는 문법 관찰이 결정적이다. Barton의 2:4–9 논거는 2장 심층연구에서 다룬다.</td>
+        </tr>
+        <tr>
+          <td class="head">1:8의 여성 단수</td>
+          <td><span class="c n">N</span> 땅 또는 의인화된 시온 여인 / <span class="c k">K</span> 여호와의 회중으로서의 유다 / <span class="c t">B</span> 백성 전체를 향한 직유이며 난해하지 않다 / <span class="c b">A</span> 표층은 애곡의 직유, 심층은 <span class="hw">אֵלַי</span>(내게로)의 이중 독법</td>
+          <td>세 층위(법적·칭호·제의)를 표 4로 정리하고, Assis의 이중 독법을 별도 관찰로 표시한다. 가나안 제의 독법은 연대 문제를 명시하고 보류한다.</td>
+        </tr>
+        <tr>
+          <td class="head">1:15 여호와의 날</td>
+          <td><span class="c t">B</span><span class="c f">H</span><span class="c s">S</span> 1장의 재난 자체가 <em>한</em> 여호와의 날이다 / Wolff·Crenshaw <span class="c t">B</span> 재인용: 메뚜기는 더 파괴적인 힘이 가까웠다는 표지 / <span class="c n">N</span> 임박한 미래의 자연재해이며 2:1–11에서 이어진다</td>
+          <td>Barton–Hadjiev–Seitz의 독법을 기준선으로 삼는다. 요엘 3:14 [4:14]이 현재의 실재를 "가까움"으로 말한다는 <span class="c f">H</span>의 논거가 결정적이다. 2장과의 관계는 2장 심층연구에서 다시 다룬다.</td>
+        </tr>
+        <tr>
+          <td class="head">1:18 <span class="hw">נֶאְשָׁמוּ</span></td>
+          <td>마소라 유지: "죄값을 치르다" / BHS·칠십인역 계열 수정: <span class="hw">נָשַׁמּוּ</span> "황폐하다"</td>
+          <td><span class="c f">H</span>의 지적대로 요엘에서 백성의 죄가 언급되지 않는다는 사실이 마소라 독법을 어렵게 한다. 개역개정 "피곤하도다"는 수정 계열에 가깝다. 두 독법을 모두 기록한다.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <h3>주석별 1장 요약 독법</h3>
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 8. 일곱 주석의 1장 이해</caption>
+      <thead><tr><th>칩</th><th>1장을 무엇으로 읽는가</th></tr></thead>
+      <tbody>
+        <tr><td class="head"><span class="c n">N</span></td><td><b>예언적 콜라주.</b> 요엘 나머지의 토대를 놓는 신학적 구성이며, 서기관적 인유의 기술이 기존 자료를 정경 위치에 맞게 적응시켰다. 신명기 28–30장의 언약 저주를 불러내어, 이 구성이 저주의 거울상으로 기능한다. 신명기에서 저주가 예기적이라면 요엘에서 저주는 <em>일어나고 있다</em>.</td></tr>
+        <tr><td class="head"><span class="c t">B</span></td><td><b>통일되고 일관된 그림.</b> 예언자가 역사에 남을 유례없는 재난을 선포한다. 먼저 메뚜기 침입, 이어 가뭄과 아마도 맹렬한 불이다. 제의적 관점에서 무엇보다 성전 봉사에 미친 영향을 강조하며, 애가로 첫 순환을 열린 물음으로 닫는다. 하나님이 들으실 것인가 요지부동하실 것인가.</td></tr>
+        <tr><td class="head"><span class="c h">C</span></td><td><b>총체적 파괴의 이야기.</b> 예언자는 메뚜기의 이름을 바꾸어 가며 그 활동에 누적적 성격을 부여한다. 식량의 부족이 공동체를 이중으로 위태롭게 하는데, 제사장이 통상의 소제와 전제를 여호와께 가져가지 못하기 때문이다.</td></tr>
+        <tr><td class="head"><span class="c b">A</span></td><td><b>단계적 설득의 첫걸음.</b> 두 신탁(1:2–12, 1:13–20)이 각각 부름으로 열린다. 첫 신탁은 신학적 요구를 담지 않고 청중의 반발을 피하며, 1:8에 이차적 의미를 심어 하나님을 향한 호소를 예비한다. 둘째 신탁에 이르러 "여호와께 부르짖을지어다"가 명시된다.</td></tr>
+        <tr><td class="head"><span class="c f">H</span></td><td><b>제의로 수렴하는 다섯 연.</b> A-B-A-B 교차 배열이 농업과 성전 예배의 연결을 부각한다. 재난의 비극성은 재산의 손실보다 예배에 미친 악영향에서 온다. 가난이 온전한 제의를 불가능하게 할 때 백성에게 열린 마지막 길은 굵은 베와 눈물만을 요구하는 슬픔의 예전이다.</td></tr>
+        <tr><td class="head"><span class="c s">S</span></td><td><b>모토로서의 1:2–3.</b> 표제가 연대를 표시하지 않은 것은 의도이며, 요엘서가 해석학적으로 기능하도록 하기 위함이다. 1:2–3은 아모스 1:2에 견줄 만한 책의 모토이며, 뒤따르는 모든 것을 읽는 열쇠다.</td></tr>
+        <tr><td class="head"><span class="c k">K</span></td><td><b>회개로 이끄는 세 겹의 소집.</b> 취한 자, 회중 전체, 제사장을 차례로 부르고 각 부름에 상응하는 재난 서술을 이유로 붙인다. 넷이라는 수가 온 유다에 사방으로 퍼진 심판의 범위를 가리킨다.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 12 ═══════ -->
+  <section class="part" id="s12">
+    <div class="part-head">
+      <div class="eyebrow">BACKGROUND</div>
+      <h2>12. 역사·문화 배경</h2>
+    </div>
+
+    <h3>메뚜기 재앙의 실제</h3>
+    <p><span class="c k">K</span> Keil이 인용한 루돌프의 에티오피아 기록은 메뚜기가 지나간 땅을 이렇게 전한다. 풀도 관목도 나무도 다치지 않은 것이 없고, 잎으로 덮인 것은 불에 탄 듯 상하며, 나무의 껍질까지 이빨로 갉아 먹혀 손상이 한 해에 그치지 않는다. <span class="c f">H</span> Simkins가 든 1958년 에티오피아의 사례에서는 메뚜기가 곡식 16만 7천 톤을 먹었고 자연 식생을 파괴했다. 요엘 1:7의 "그 모든 가지가 하얗게 되었도다"는 껍질까지 벗겨진 상태를 가리킨다.</p>
+
+    <h3>군대를 메뚜기에 견주는 관습</h3>
+    <p><span class="c t">B</span> 고대근동에서 군대의 진군을 메뚜기 떼에 견주는 것은 드물지 않았다. 우가릿 <i>키르타 서사시</i>(CTA 14:103–11)는 초원의 메뚜기와 사막 언저리의 풀무치에 군대를 견준다. 산헤립의 비문은 전사들이 배에서 강둑으로 메뚜기처럼 쏟아졌다고 적는다. 히브리 성경에서도 미디안과 아말렉이 메뚜기같이 많았다고 하고(삿 6:5; 7:12), 예레미야 51:14는 바벨론을 메뚜기 떼 같은 군대로 채우겠다고 위협한다. <span class="c t">B</span> 요엘의 독창성은 이미지를 <strong>뒤집어</strong> 메뚜기가 침공하는 군대처럼 보이게 한 데 있다.</p>
+    <p><span class="c t">B</span> Hurowitz가 지적한 사르곤 2세의 <i>나나야 찬가</i>는 특히 가까운 병행이다. 두 종류의 메뚜기 <i>erebu</i>와 <i>zirziru</i>가 등장하며, 여러 종을 가리키기 위해 두 이름을 든 방식은 요엘이 신탁의 처음과 끝에서 네 종을 열거한 것과 같은 기능을 한다. 이 찬가의 메뚜기는 신들과 여신들의 정규 제물을 <em>끊고</em>(참조 욜 1:9, 13), 곡식을 파괴하며 과수원을 말린다.</p>
+
+    <h3>신명기 28–30장의 저주 목록</h3>
+    <p><span class="c n">N</span> Nogalski는 요엘 1장의 정황을 신명기 28장의 복과 저주 표징이 형성했을 가능성을 제시하고, 대응을 목록으로 제시한다.</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 9. 신명기 28장의 저주와 요엘 1–2장 <span class="c n">N</span></caption>
+      <thead><tr><th>신명기 28장의 저주</th><th>요엘의 대응</th></tr></thead>
+      <tbody>
+        <tr><td>가뭄·마름병·깜부기(28:22–24)</td><td>1:10, 17, 19–20</td></tr>
+        <tr><td>원수에게 패함(28:25–26)</td><td>1:6; 2:1–11</td></tr>
+        <tr><td>메뚜기의 침입(28:38, 42)</td><td>1:4; 2:25</td></tr>
+        <tr><td>포도원의 황폐(28:39)</td><td>1:7, 10</td></tr>
+        <tr><td>감람나무의 시듦(28:40)</td><td>1:10 "기름이 다하였도다"</td></tr>
+        <tr><td>땅의 소산을 잃음(28:42)</td><td>1:10–12</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><span class="c n">N</span> 복의 표징 쪽은 요엘 1장에서 하나도 추론되지 않는다. 땅의 열매(신 28:4, 11), 원수의 패배(28:7), 가득한 곳간(28:8)과 창고(28:12), 식사를 준비할 것을 얻는 능력(28:5), 자유로운 이동(28:6)이 그 목록이다. <span class="c n">N</span> 신명기 30:1–3이 언약 관계를 회복하는 길을 규정한다. 마음에 되새기고 여호와께 돌아와 마음을 다하여 순종하면 여호와가 형편을 회복하시고 긍휼히 여기신다. 바로 이 전제가 요엘 2:12–14의 명령을 이끈다.</p>
+
+    <h3>제2성전기 예후드의 규모</h3>
+    <p><span class="c t">B</span> 1:14b의 소집이 온 백성을 성전에 모을 수 있는 매우 작은 공동체를 함의한다는 지적이 종종 제기된다. 히브리어에는 전치사가 없어(이동 동사 뒤에 흔한 용법) "성전으로" 모이는 것이지 "성전 안으로" 모이는 것이 아니라는 점은 짚어 둘 만하다. <span class="c f">H</span> Hadjiev는 이 추론이 지나치게 문자적이라고 본다. <span class="c n">N</span> Nogalski는 반대로 성벽(2:9)·창이 있는 집(2:9)·창고와 곳간(1:17)의 전제를 후기 페르시아기의 물리적 정황으로 읽는다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 13 ═══════ -->
+  <section class="part" id="s13">
+    <div class="part-head">
+      <div class="eyebrow">CROSS-REFERENCES</div>
+      <h2>13. 상호 참조 총람</h2>
+      <div class="gloss">주석 근거가 붙은 엄선 관주.</div>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 10. 요엘 1장의 주요 상호 참조</caption>
+      <thead><tr><th>본문</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:1</td><td>호 1:1; 미 1:1; 습 1:1; 욘 1:1; 말 1:1</td><td>"여호와의 말씀이 …에게 임하니라" 표제 형식. 왕 언급의 유무가 갈린다.</td><td><span class="c n">N</span><span class="c f">H</span><span class="c s">S</span></td></tr>
+        <tr><td class="head">1:2</td><td>사 1:2; 미 1:2; 신 32:1; 시 49:1; 호 5:1; 암 3:1; 4:1; 5:1; 욥 34:16; 37:14</td><td>"들으라·귀를 기울이라" 부름의 용례. 아모스에서는 새 수신자를 여는 편집 신호.</td><td><span class="c n">N</span><span class="c b">A</span><span class="c f">H</span></td></tr>
+        <tr><td class="head">1:2–3</td><td>출 10:2, 6, 14; 12:26–27; 13:8, 14</td><td>애굽의 메뚜기 재앙 — 유례없음의 선언과 자녀에게 전하라는 명령.</td><td><span class="c f">H</span><span class="c b">A</span></td></tr>
+        <tr><td class="head">1:3</td><td>시 22:30–31; 44:1; 48:13; 78:1–4; 신 6:20–25</td><td>후세에 여호와의 큰 일을 전하는 전승 모티프.</td><td><span class="c f">H</span></td></tr>
+        <tr><td class="head">1:4</td><td>욜 2:25; 나 3:15; 시 78:46; 105:34; 신 28:38, 42; 암 4:9</td><td>네 메뚜기 낱말의 다른 용례. 넷이 한자리에 모이는 곳은 요엘뿐.</td><td><span class="c b">A</span><span class="c k">K</span><span class="c n">N</span></td></tr>
+        <tr><td class="head">1:4</td><td>렘 15:3; 겔 14:21</td><td>넷이라는 수 — 심판의 총체적 범위를 나타내는 표지.</td><td><span class="c k">K</span></td></tr>
+        <tr><td class="head">1:5</td><td>잠 23:35; 암 6:6; 사 5:11–13; 28:1–8</td><td>취기에서 깨어남 · 취함을 정죄하는 예언 전통(요엘은 이 전통에 속하지 않는다).</td><td><span class="c k">K</span><span class="c t">B</span></td></tr>
+        <tr><td class="head">1:6</td><td>잠 30:25–27; 삿 6:5; 7:12; 렘 51:14; 습 2:9</td><td><span class="hw">גּוֹי</span>·<span class="hw">עַם</span>이 곤충 무리에 쓰인 용례 · 군대를 메뚜기에 견주는 관습.</td><td><span class="c k">K</span><span class="c t">B</span></td></tr>
+        <tr><td class="head">1:7</td><td>미 4:4; 왕상 4:25; 왕하 18:31; 호 2:14</td><td>포도나무와 무화과나무 — 평화와 번영의 관용 표현. 그 파괴는 복의 역전.</td><td><span class="c t">B</span><span class="c k">K</span></td></tr>
+        <tr><td class="head">1:8</td><td>출 22:15–16; 신 20:7; 22:19, 23–24</td><td>혼인 계약의 두 단계 — "약혼한 처녀"가 동시에 "아내"로 불리는 법적 배경.</td><td><span class="c n">N</span><span class="c t">B</span></td></tr>
+        <tr><td class="head">1:8</td><td>왕하 19:29; 사 47:1; 렘 18:13; 31:4, 21; 46:11; 애 1:15; 2:10, 13; 암 5:2</td><td><span class="hw">בְּתוּלָה</span>의 칭호 용법 — 의인화된 도시·지역.</td><td><span class="c n">N</span></td></tr>
+        <tr><td class="head">1:8</td><td>사 54:4–6; 애 1장</td><td>어릴 때의 남편을 잃은 여인의 애곡 — 포로기의 버림받음과 수치.</td><td><span class="c b">A</span></td></tr>
+        <tr><td class="head">1:9, 13</td><td>출 29:38–42; 레 23:13, 18; 민 6:15; 15:24; 28:39; 29:11, 16–39</td><td>소제와 전제의 짝 — 제사장 자료에 한정된 용례.</td><td><span class="c t">B</span><span class="c f">H</span></td></tr>
+        <tr><td class="head">1:10</td><td>사 3:26; 렘 12:10–11; 애 1:4; 2:8</td><td>무생물이 "슬퍼하는" 용례 — <span class="hw">אבל</span> Ⅱ 상정 없이 뜻이 성립한다.</td><td><span class="c t">B</span></td></tr>
+        <tr><td class="head">1:11</td><td>대하 26:10; 사 61:5; 암 5:16; 렘 14:1–6</td><td>농부와 포도원 가꾸는 자의 짝 · 가뭄이 부르는 굴욕.</td><td><span class="c t">B</span><span class="c f">H</span></td></tr>
+        <tr><td class="head">1:13</td><td>삼하 3:31; 12:16; 렘 4:8; 창 23:2; 사 32:11; 왕상 21:27; 시 35:13</td><td>애곡 의례 — 굵은 베·가슴 침·통곡·밤을 지냄.</td><td><span class="c t">B</span><span class="c b">A</span><span class="c f">H</span></td></tr>
+        <tr><td class="head">1:14</td><td>슥 7:3–5; 8:18–19; 렘 36:6, 9; 14:1–12; 삿 20:25–26; 사 1:13; 암 5:21</td><td>공적 금식과 성회 — 포로기 이후의 정례 금식일과 성회의 용례.</td><td><span class="c t">B</span><span class="c b">A</span><span class="c f">H</span></td></tr>
+        <tr><td class="head">1:14</td><td>사 58:1–8</td><td>의례적 금식을 기계적 수단으로 삼는 데 대한 예언적 논박.</td><td><span class="c n">N</span></td></tr>
+        <tr><td class="head">1:15</td><td>사 13:6; 겔 30:2–3; 습 1:14–18; 암 5:18–20; 옵 15</td><td>여호와의 날 — "가까웠나니"와 <span class="hw">שֹׁד מִשַּׁדַּי</span> 말놀이의 병행.</td><td><span class="c f">H</span><span class="c t">B</span><span class="c n">N</span></td></tr>
+        <tr><td class="head">1:15</td><td>사 22:1–14; 렘 46:2–12; 겔 13:1–9; 애 1–2장</td><td>과거를 가리키는 여호와의 "날" 용례 — 복수의 날들 논증.</td><td><span class="c t">B</span></td></tr>
+        <tr><td class="head">1:16</td><td>사 38:18–19</td><td>하나님의 이해관계에 호소하는 애가의 어법.</td><td><span class="c t">B</span></td></tr>
+        <tr><td class="head">1:19–20</td><td>시 42:1; 욜 3:11 [4:11]; 롬 8:19–22</td><td>사슴이 시냇물을 찾아 헐떡임 · 책 안 두 번뿐인 직접 호칭 · 신음하는 피조물.</td><td><span class="c f">H</span><span class="c n">N</span></td></tr>
+        <tr><td class="head">1:19–20</td><td>암 4:6–11; 5:19; 신 28:20–44</td><td>재난의 연쇄 — 언약 저주와 "최악이 지난 줄 알았을 때" 주제.</td><td><span class="c t">B</span><span class="c n">N</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="meta" style="font-family:var(--sans);font-size:.78rem;color:var(--ink-soft)">이 표는 주석 근거가 붙은 <b>질적 관주</b>다. OpenBible.info 기반의 방대한 대중 관주는 절별 자동 표시로 따로 제공된다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 14 ═══════ -->
+  <section class="part" id="s14">
+    <div class="part-head">
+      <div class="eyebrow">CANON</div>
+      <h2>14. 정경적 연결</h2>
+    </div>
+
+    <h3>출애굽의 메아리</h3>
+    <p><span class="c f">H</span> 출애굽 전승이 1:2–14 배후에 서 있다. 여덟째 애굽 재앙이 메뚜기 침입이었고(출 10:1–20), 출애굽기 서사와 요엘 본문 사이에 여러 연결이 있다. 두 사건이 모두 비교 불가능한 것으로 서술되고(1:2; 출 10:6, 14), 두 경우 모두 자녀와 손자에게 가르치라는 명령이 있으며(1:3; 출 10:2), 두 재앙 모두 결국 여호와를 아는 것으로 이어진다고 말해진다(2:27; 출 10:2; 참조 8:22). <span class="c f">H</span> 바로의 마음이 완악해지는 것으로 끝나는 재앙 서사(출 10:20)가, 요엘 뒷부분에서 백성에게 <em>마음을 찢으라</em>고 하는 부름(2:13)을 독자에게 예비시킨다.</p>
+    <p><span class="c f">H</span> 이 인유의 함의는 무겁다. 어떤 밝혀지지 않은 이유로 <strong>유다가 애굽의 자리를 차지했다</strong>. Bergler의 출애굽 유형론(<span class="c n">N</span><span class="c f">H</span> 재인용)이 이 관찰을 요엘 전체의 구성 원리로 확장한다.</p>
+
+    <h3>이사야 13장과 세계 제국</h3>
+    <p><span class="c f">H</span> 1:2–4의 상호텍스트가 유다에게 일어나는 일을 출애굽의 애굽 재앙의 반복으로 시사하듯, 1:15는 현재의 재난을 이사야 13장의 바벨론을 향한 여호와의 전쟁과 견주도록 초청한다. <span class="c f">H</span> 정경 문맥은 유다의 처지를 바벨론·애굽의 처지와 나란히 놓으며, 하나님의 백성이 신적 심판 아래 섰던 세계 제국들과 같은 위치에 놓인다.</p>
+
+    <h3>열두 예언서 안에서</h3>
+    <p><span class="c n">N</span> Nogalski는 1:2–3을 호세아 14장의 회개 촉구와 유다·예루살렘을 향한 요엘의 병행 촉구를 잇는 전환으로 읽는다. 유다를 향한 요엘의 회개 부름은 열둘 안에서 중요한 주제적 역할을 하며, 남유다를 향한 예언적 경고인 동시에 여호와의 날에 자기 백성을 건지시는 야훼의 역사 활동의 패러다임을 제공한다. <span class="c n">N</span> 요엘이 없으면 미가(마소라 순서의 여섯째 책) 이전에 유다의 운명이 열둘에서 거의 다루어지지 않는다.</p>
+    <p><span class="c n">N</span> 1장의 어휘가 열둘 곳곳에서 되울린다. 나훔 3:15–17이 앗수르의 전복을 서술하며 <span class="hw">יֶלֶק</span>가 <span class="hw">אַרְבֶּה</span>를 파괴한다고 말하는데, 요엘 1:4에 나오는 두 메뚜기의 순서 그대로다. 하박국 3:16–17은 오는 "날"에 대한 예언자의 반응을 서술하며, 땅이 요엘 1장을 떠올리게 하는 방식으로 고난을 겪을 것을 안다.</p>
+    <p><span class="c s">S</span> Seitz는 이 관계를 이중 영향으로 규정한다. 아모스와 스바냐가 요엘에게 강한 영향을 주었고, 요엘은 현재의 위치를 통해 아모스·오바댜·요나·스바냐를 읽는 방식에 영향을 준다.</p>
+
+    <h3>탄식이라는 신약의 자리</h3>
+    <p><span class="c f">H</span> 사람과 짐승이 함께 부르짖는 1:19–20의 장면을 Hadjiev는 로마서 8:19–22과 겹쳐 읽는다. 창조 전체가 성전에 모인 백성과 함께 신음하며 그들의 곤경에 참여한다. 요엘 1장에서 재난의 총체성은 인간의 영역을 넘어 짐승과 땅과 시내에까지 미치고, 그 총체성이 부르짖음의 총체성으로 응답된다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 15 ═══════ -->
+  <section class="part" id="s15">
+    <div class="part-head">
+      <div class="eyebrow">SYNTHESIS</div>
+      <h2>15. 신학 종합</h2>
+    </div>
+
+    <h3>① 이름이 붙지 않은 재난</h3>
+    <p>1장은 재난의 이유를 말하지 않는다. <span class="c f">H</span> 요엘은 신적 진노도, 유다의 범죄도, 생활 방식의 변화 요구도 말하지 않는다. 백성이 무죄하다는 뜻이 아니며, 죄책의 문제가 논의되지 않고 예언자가 하나님의 행위에 대한 설명을 제공하지 않는다는 뜻이다. <span class="c n">N</span> Nogalski는 그 침묵을 다르게 메운다. 요엘은 유다 독자가 호세아의 이스라엘 고발을 알고 있으며 자기들도 같은 잘못으로 유죄임을 안다고 전제한다.</p>
+    <p>두 독법의 차이가 1장의 신학적 무게를 결정한다. <span class="c f">H</span>의 독법에서 침묵은 <em>본문의 열림</em>이 되어 후세대가 자기 상황을 겹쳐 놓게 만든다. <span class="c n">N</span>의 독법에서 침묵은 <em>정경의 전제</em>가 되어 호세아를 읽은 독자에게만 채워진다. 어느 쪽이든 요엘 자신은 이유를 말하지 않으며, 그 말하지 않음이 본문의 성격을 규정한다.</p>
+
+    <h3>② 재난의 겹침</h3>
+    <p><span class="c n">N</span> 요엘 해석자들은 1:2–2:11의 위협이 지닌 다양성을 서둘러 지나치며 파괴의 여러 이미지를 하나로 조화시키려 한다. 이 유례없는 파괴의 그림이 바로 요점이다. 파괴의 이미지가 사회의 모든 층위를 폭격하며, 땅이 야훼의 백성과 그 짐승과 도시와 성전을 지탱하는 능력을 위협한다. 이 모든 이미지가 무언가 잘못되었음을 독자가 이해한다고 전제하며, 신명기 28–30장의 저주를 겪고 있다는 사실을 함의한다.</p>
+    <p>1장의 위협 목록은 실제로 네 겹이다. 메뚜기의 연쇄(1:4), 한 민족의 침입(1:6–7), 가뭄(1:9–18), 불(1:19–20)이다. <span class="c t">B</span> Barton의 요약이 이 겹침의 리듬을 포착한다. 메뚜기가 남긴 것을 가뭄이 삼키고, 가뭄이 남긴 것을 불이 삼켰다.</p>
+
+    <h3>③ 성전을 잣대로 삼는 신학</h3>
+    <p><span class="c f">H</span> 재난의 규모는 성전 예배에 미친 영향으로 측정되고, 벗어나는 길은 제의 행위의 수행에 있다. 이 예언에서 제의 의례의 중요성을 놓칠 길이 없다. 백성은 자기 존립에 대한 위협만이 아니라 성전에서 하나님을 섬기지 못하게 된 사태를 애곡하도록 불린다.</p>
+    <p><span class="c f">H</span> 여기에 역설이 있다. 가난이 온전한 제의 예배를 불가능하게 할 때 백성에게 열린 마지막 길이 하나 남는데, 그것은 굵은 베와 눈물만을 요구하는 슬픔의 예전이다. 드릴 소제와 전제가 없어진 성전에서, 드릴 것 없는 상태 자체가 드려진다.</p>
+    <p><span class="c t">B</span> Barton은 이 대목이 제의적 경건에 대한 개신교적 유보를 시험한다고 본다. 제사장에게 올바른 제의를 유지하는 일은 삶의 방식이며 존재 이유였다. 오늘의 유대인이나 그리스도인의 전례적 경건과 같이, 그것은 고도로 발달한 영성의 형태일 수 있다.</p>
+
+    <h3>④ 언약 저주의 거울상</h3>
+    <p><span class="c n">N</span> 요엘 1:1–2:17은 신명기 28–30장의 복의 결여와 저주의 다중성처럼 보이는 재난에 어떻게 응답할지를 다루는, 요엘이라는 서기관 예언자의 신학 논고로 읽는 것이 최선이다. 언약 저주의 이미지를 불러냄으로써 이 예언적 구성은 공동체가 마주한 위험을 인식하도록 부르며, <strong>신명기 28–29장의 거울상</strong>으로 기능한다.</p>
+    <p><span class="c n">N</span> 두 본문의 시제가 다르다. 신명기 28–30장은 요단 저편의 백성에게 말하며 땅에 들어갈 때 언약 순종의 중요성을 훈계한다. 요엘은 <em>땅 안에서 일어나고 있는</em> 저주를 보고 여호와께 돌아오라고 공동체를 부른다. 신명기에서 저주가 예기적이라면 요엘에서 저주는 일어나고 있다.</p>
+
+    <h3>⑤ 부르짖음이라는 목적</h3>
+    <p><span class="c b">A</span> Assis는 1장의 수사 전체를 하나의 목적으로 수렴시킨다. 예언자는 백성을 하나님께 호소하게 하려 한다. 그 목적이 첫 신탁에서는 감추어져 있고 1:8의 이중 의미에 심겨 있다가, 둘째 신탁 끝에서 "여호와께 부르짖을지어다"(1:14)로 명시된다. 그리고 1:19–20에서 예언자 자신이 먼저 부르짖는다.</p>
+    <p><span class="c n">N</span> Nogalski가 짚듯 예언자가 책 안에서 하나님께 직접 말을 거는 곳은 여기와 3:11b [4:11b] 두 곳뿐이며, 둘 다 여호와의 행동을 간구하는 기도다. 1장은 다섯 번의 명령형으로 백성을 부르고, 마지막에 화자 자신이 명령형 대신 청원으로 돌아선다.</p>
+    <p><span class="c t">B</span> 첫 애곡 순환은 열린 물음으로 닫힌다. 하나님이 들으실 것인가, 요지부동하실 것인가. 이 물음에 대한 응답은 2:18에 가서야 온다.</p>
+
+    <h3>⑥ 대대로 전할 이야기</h3>
+    <p><span class="c f">H</span> 자녀에게 전할 것은 재난 자체보다 큰 이야기다. 공동체가 큰 고난 가운데(1:4–2:11) 울며 여호와께 돌아섰고(2:12–17) 하나님이 건지시고 복 주신(2:18–27) 이야기다. 1:3의 명령이 2:18–27의 구원을 미리 겨눈다.</p>
+    <p><span class="c s">S</span> Seitz에게 1:2–3은 책의 모토이며 뒤따르는 모든 것을 읽는 열쇠다. 요엘서는 처음부터 <em>장차 올 세대</em>를 향해 말하도록 설계된 책이며, 표제에 연대가 없는 것도 같은 설계의 일부다. <span class="c f">H</span> 사역 연대에 관한 정보가 없다는 점이 본문에 시대를 넘는 성질을 주며 서로 다른 상황에 적용되도록 초청한다.</p>
+    <p>1장은 그래서 두 겹의 청중을 동시에 갖는다. 지금 메뚜기가 지나간 밭을 보고 있는 이들과, 그 이야기를 전해 들을 네 세대다. 앞의 청중에게 이 장은 애곡의 소집이고, 뒤의 청중에게는 위기를 읽는 문법이 된다.</p>
+
+    <div class="back"><a href="./overview.html">← 종합 개관</a> · <a href="../../bible/original.html?book=JOL&amp;chapter=1">성경읽기</a> · <a href="./ch02.html">2장 심층연구 →</a></div>
+  </section>
+
+  <footer>
+    성서 연구 서고 · 요엘 1장 심층 연구 — 표준형 서가의 셋째 문서.<br>
+    주 주석 Nogalski(NICOT 2023). Barton(OTL 2001)·Crenshaw(AB 1995)·Assis(LHBOTS 2013)·Hadjiev(TOTC 2020)·Seitz(ITC 2016)·Keil–Delitzsch(1868) 직접 확인분을 칩으로 표시했고, Wolff·Rudolph·Bergler·Simkins·Jeremias·Credner·Bochart·Everson·Clines·Driver·Hurowitz는 재인용으로 명시했다.<br>
+    개역개정 4판 전수 대조 완료. 히브리어는 BHS 및 형태분석 도구 재확인 전제.
+  </footer>
+</main>
+</div>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+  <script src="../../assets/app.js" data-study-tools-js></script>
+</body>
+</html>

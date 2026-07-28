@@ -1,0 +1,56 @@
+{
+  "package": "biblestudygyu_joel_git_package_v1",
+  "target_repository": "Gyu1718/biblestudygyu",
+  "repository_default_branch": "main",
+  "repository_commit_inspected": "87bc5ee60a150da45b6d77cae6594773327e756c",
+  "integration_date": "2026-07-28",
+  "book": {
+    "name_ko": "요엘",
+    "folder": "ot/joel",
+    "code": "JOL",
+    "chapters": 3
+  },
+  "payload_files": [
+    {
+      "path": "repo_files/ot/joel/ch01.html",
+      "bytes": 132718,
+      "sha256": "f71835d42e2e3161d101af88d9a0eaea6e72b67192af010f52a93c5619127dbb"
+    },
+    {
+      "path": "repo_files/ot/joel/ch02.html",
+      "bytes": 136177,
+      "sha256": "414ea8f38d08a40ff9f353bee5b10f2f4c170c936f65219a426f6709441ef55b"
+    },
+    {
+      "path": "repo_files/ot/joel/ch03.html",
+      "bytes": 103533,
+      "sha256": "ab4fe8ddd0fcdc95058e52e965ea180d6c92f2c2af22d47b9ef72dd9858966a6"
+    },
+    {
+      "path": "repo_files/ot/joel/index.html",
+      "bytes": 10293,
+      "sha256": "cccadfc7b3a210caa6da050c9feda9b8c62432b0f7b6c64369ac39f685770c69"
+    },
+    {
+      "path": "repo_files/ot/joel/overview.html",
+      "bytes": 109690,
+      "sha256": "971f1c6b0ca7663c5f1c5244ae5f23836f2d85007c3f38ae6c1d431b313dd0f9"
+    }
+  ],
+  "integration_files_patched": [
+    "catalog.js",
+    "README.md",
+    "AGENTS.md",
+    "docs/BOOK_STUDY_MANUAL.md"
+  ],
+  "original_language_study_status": "미구현/준비 중",
+  "validation": [
+    "payload HTML duplicate id check",
+    "fragment anchor check",
+    "internal Joel link check",
+    "required shared asset reference check",
+    "data-book/data-root check",
+    "chapter aria-current check",
+    "idempotent installer fixture test"
+  ]
+}

@@ -24,7 +24,6 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re
 
           dock_path = Path("assets/js/research-dock.js")
           loader_path = Path("assets/js/research-dock-loader.js")
@@ -57,7 +56,7 @@ jobs:
           sourcebook = sourcebook.replace(old_loader_url, new_loader_url)
           sourcebook_path.write_text(sourcebook, encoding="utf-8")
 
-          heading_count = len(re.findall(r"<h[23]\\b", sourcebook, flags=re.I))
+          heading_count = sourcebook.lower().count("<h2") + sourcebook.lower().count("<h3")
           if heading_count <= 80:
               raise SystemExit(f"Expected more than 80 sourcebook h2/h3 headings, found {heading_count}")
           if heading_count > 240:

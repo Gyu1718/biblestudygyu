@@ -1,0 +1,46 @@
+name: Apply Joel 2 spirit expansion
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/apply_joel_ch02_spirit_expansion.py"
+      - ".github/workflows/joel-ch02-spirit-expansion.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Apply expansion
+        run: python3 tools/apply_joel_ch02_spirit_expansion.py --repo . --write
+
+      - name: Validate shared tools
+        run: |
+          python3 tools/apply_study_tools.py --write
+          python3 tools/apply_bible_reader.py --write
+          python3 tools/apply_joel_ch02_spirit_expansion.py --repo . --check
+          python3 tools/apply_study_tools.py --check
+          python3 tools/apply_bible_reader.py --check
+
+      - name: Commit Joel 2 expansion
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- ot/joel/ch02.html)" ]; then
+            echo "No Joel 2 changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ot/joel/ch02.html
+          git commit -m "Expand Joel 2 spirit study"
+          git push origin main

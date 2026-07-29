@@ -258,7 +258,8 @@
         candidates.push({ node:target, id:target.id, label:label, href:"#" + target.id, index:index });
       });
     }
-    return candidates.slice(0, 80);
+    // Long sourcebooks can contain well over 80 authored sections.
+    return candidates.slice(0, 240);
   }
 
   function actionList() {

@@ -33,5 +33,5 @@
     addScript("assets/js/romans-supplement.js?v=20260726.1", "data-romans-supplement-js");
   }
 
-  addScript("assets/js/research-dock.js?v=20260724.2", "data-research-dock-js");
+  addScript("assets/js/research-dock.js?v=20260729.1", "data-research-dock-js");
 })();

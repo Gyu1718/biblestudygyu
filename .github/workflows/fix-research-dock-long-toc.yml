@@ -1,0 +1,85 @@
+name: Fix long research dock TOC
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/fix-research-dock-long-toc.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-long-toc:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Raise TOC limit and bust cache
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          dock_path = Path("assets/js/research-dock.js")
+          loader_path = Path("assets/js/research-dock-loader.js")
+          sourcebook_path = Path("ot/psalms/sourcebook.html")
+
+          dock = dock_path.read_text(encoding="utf-8")
+          old_limit = "    return candidates.slice(0, 80);"
+          new_limit = (
+              "    // Long sourcebooks can contain well over 80 authored sections.\n"
+              "    return candidates.slice(0, 240);"
+          )
+          if dock.count(old_limit) != 1:
+              raise SystemExit("research-dock.js TOC limit anchor not found exactly once")
+          dock = dock.replace(old_limit, new_limit)
+          dock_path.write_text(dock, encoding="utf-8")
+
+          loader = loader_path.read_text(encoding="utf-8")
+          old_dock_url = 'addScript("assets/js/research-dock.js?v=20260724.2", "data-research-dock-js");'
+          new_dock_url = 'addScript("assets/js/research-dock.js?v=20260729.1", "data-research-dock-js");'
+          if loader.count(old_dock_url) != 1:
+              raise SystemExit("research-dock-loader.js cache anchor not found exactly once")
+          loader = loader.replace(old_dock_url, new_dock_url)
+          loader_path.write_text(loader, encoding="utf-8")
+
+          sourcebook = sourcebook_path.read_text(encoding="utf-8")
+          old_loader_url = 'src="../../assets/js/research-dock-loader.js?v=20260724.2"'
+          new_loader_url = 'src="../../assets/js/research-dock-loader.js?v=20260729.1"'
+          if sourcebook.count(old_loader_url) != 1:
+              raise SystemExit("Psalms sourcebook loader cache anchor not found exactly once")
+          sourcebook = sourcebook.replace(old_loader_url, new_loader_url)
+          sourcebook_path.write_text(sourcebook, encoding="utf-8")
+
+          heading_count = len(re.findall(r"<h[23]\\b", sourcebook, flags=re.I))
+          if heading_count <= 80:
+              raise SystemExit(f"Expected more than 80 sourcebook h2/h3 headings, found {heading_count}")
+          if heading_count > 240:
+              raise SystemExit(f"New TOC limit is still too small: {heading_count} headings")
+          print(f"Psalms sourcebook h2/h3 headings: {heading_count}; TOC limit: 240")
+          PY
+
+      - name: Validate JavaScript
+        run: |
+          node --check assets/js/research-dock.js
+          node --check assets/js/research-dock-loader.js
+          grep -F 'return candidates.slice(0, 240);' assets/js/research-dock.js
+          grep -F 'research-dock-loader.js?v=20260729.1' ot/psalms/sourcebook.html
+
+      - name: Commit fix
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/research-dock.js assets/js/research-dock-loader.js ot/psalms/sourcebook.html
+          git commit -m "Show complete TOC in long study documents"
+          git push origin main

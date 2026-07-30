@@ -5,7 +5,7 @@
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-28"
+    updated: "2026-07-30"
   },
   sections: [
     {
@@ -27,20 +27,20 @@ window.SITE_CATALOG = {
       ]
     },
     {
-      id: "lexicon",
-      label: "원어 사전",
-      original: "Λεξικόν · מִלּוֹן",
+      id: "dictionary",
+      label: "사전 서가",
+      original: "Lexica · מִלּוֹנִים",
       script: "lat",
       studies: [
         {
-          id: "strongs-lexicon",
-          path: "lexicon/index.html",
-          title: "히브리어·헬라어 스트롱 사전",
-          original: "Ἑλληνικά · עִבְרִית",
+          id: "dictionary-library",
+          path: "dictionary/index.html",
+          title: "성서 사전 서가",
+          original: "Word · World",
           script: "lat",
-          meta: "히브리어·아람어 H1–H8674 · 헬라어 실제 Strong 항목 5,523개 · 한글 원문 보존 · 번호·표제어·발음·뜻 검색 · 원어성경 호버 연결",
-          desc: "사용자가 제공한 한글 스트롱 사전 자료를 구조화했다. 상세 페이지에서는 사전 원문을 확인하고, 성경읽기 화면에서는 원어 단어 위에서 간략 풀이를 바로 볼 수 있다.",
-          volumes: 6
+          meta: "원어 스트롱 사전 · 성서 지식사전 · 연구 문서 호버 연결 · 범주별 표제어 탐색",
+          desc: "히브리어·아람어·헬라어 단어를 찾는 원어 사전과 인물·지명·사건·제도·신학 개념을 찾는 성서 지식사전을 하나의 참고 서가로 묶었다.",
+          volumes: 2
         }
       ]
     },

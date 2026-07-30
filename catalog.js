@@ -31,16 +31,27 @@ window.SITE_CATALOG = {
       label: "사전 서가",
       original: "Lexica · מִלּוֹנִים",
       script: "lat",
+      hub: "dictionary/index.html",
       studies: [
         {
-          id: "dictionary-library",
-          path: "dictionary/index.html",
-          title: "성서 사전 서가",
-          original: "Word · World",
+          id: "strongs-lexicon",
+          path: "lexicon/index.html",
+          title: "히브리어·헬라어 스트롱 사전",
+          original: "Ἑλληνικά · עִבְרִית",
           script: "lat",
-          meta: "원어 스트롱 사전 · 성서 지식사전 · 연구 문서 호버 연결 · 범주별 표제어 탐색",
-          desc: "히브리어·아람어·헬라어 단어를 찾는 원어 사전과 인물·지명·사건·제도·신학 개념을 찾는 성서 지식사전을 하나의 참고 서가로 묶었다.",
-          volumes: 2
+          meta: "히브리어·아람어 H1–H8674 · 헬라어 실제 Strong 항목 5,523개 · 한글 원문 보존 · 번호·표제어·발음·뜻 검색 · 원어성경 호버 연결",
+          desc: "사용자가 제공한 한글 스트롱 사전 자료를 구조화했다. 상세 페이지에서는 사전 원문과 형태·발음·품사·뜻을 확인하고, 성경읽기 화면에서는 원어 단어 위에서 간략 풀이를 바로 볼 수 있다.",
+          volumes: 6
+        },
+        {
+          id: "biblical-encyclopedia",
+          path: "encyclopedia/index.html",
+          title: "성서 지식사전",
+          original: "BIBLICAL ENCYCLOPEDIA",
+          script: "lat",
+          meta: "인물 · 지명 · 민족 · 집단 · 사건 · 제도·직분 · 사물·건축 · 신학 개념 · 성경 문헌 · 연구 문서 호버 연결",
+          desc: "성경 연구 문서에 등장하는 인물과 장소, 역사적 사건과 제도, 사물과 신학 개념을 본문 근거와 관계망으로 연결한다. 현재 느헤미야·에스라·고레스·스룹바벨·산발랏·도비야·게셈 항목을 제공하며 계속 확장한다.",
+          volumes: 7
         }
       ]
     },
@@ -157,9 +168,30 @@ window.SITE_CATALOG = {
   if (document.querySelector("link[data-home-compact-css]")) return;
   var link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "assets/css/home-compact.css";
+  link.href = "assets/css/home-compact.css?v=20260730.2";
   link.dataset.homeCompactCss = "";
   document.head.appendChild(link);
+})();
+
+/* 사전 섹션은 두 상세 카드와 별도의 전체 서가 진입점을 함께 제공한다. */
+(function () {
+  if (typeof document === "undefined") return;
+  function addDictionaryHubLink() {
+    var section = document.getElementById("dictionary");
+    if (!section) return;
+    var head = section.querySelector(".sec-head");
+    if (!head || head.querySelector(".shelf-hub-link")) return;
+    var link = document.createElement("a");
+    link.className = "shelf-hub-link";
+    link.href = "dictionary/index.html";
+    link.textContent = "사전 서가 전체 보기 →";
+    head.appendChild(link);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", addDictionaryHubLink, { once: true });
+  } else {
+    setTimeout(addDictionaryHubLink, 0);
+  }
 })();
 
 /* 홈페이지 연구 도크 로더 */

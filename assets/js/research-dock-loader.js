@@ -33,5 +33,9 @@
     addScript("assets/js/romans-supplement.js?v=20260726.1", "data-romans-supplement-js");
   }
 
+  if (/\/ot\/nehemiah\//i.test(location.pathname) || document.querySelector("[data-encyclopedia-scan],.encyclopedia-scan,.dict-scan,[data-entity]")) {
+    addScript("assets/js/encyclopedia-loader.js?v=20260730.1", "data-encyclopedia-loader-js");
+  }
+
   addScript("assets/js/research-dock.js?v=20260729.1", "data-research-dock-js");
 })();

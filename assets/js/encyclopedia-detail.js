@@ -39,8 +39,8 @@
       .then(function (response) { if (!response.ok) throw new Error(); return response.text(); })
       .then(function (markdown) {
         var body = document.getElementById("encyclopedia-body");
-        body.innerHTML = renderBody(stripFrontmatter(markdown));
-        window.Encyclopedia.scan(body);
+        body.innerHTML = '<div class="enc-body-content">' + renderBody(stripFrontmatter(markdown)) + '</div>';
+        window.Encyclopedia.scan(body.firstElementChild);
       })
       .catch(function () { document.getElementById("encyclopedia-body").innerHTML = '<p class="enc-error">본문을 불러오지 못했습니다.</p>'; });
   });

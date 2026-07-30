@@ -16,7 +16,7 @@ section.shelf-sec > .sec-head {
   margin-bottom: .15rem;
 }
 
-/* 카드가 하나뿐인 도구·신학 섹션은 폭을 온전히 사용한다. */
+/* 카드가 하나뿐인 도구·사전·신학 섹션은 폭을 온전히 사용한다. */
 section.shelf-sec > .set-card:nth-child(2):last-child {
   grid-column: 1 / -1;
 }
@@ -102,34 +102,6 @@ section.shelf-sec > .set-card:nth-child(2):last-child {
   overflow: hidden;
 }
 
-/* 사전 서가는 데이터 범위와 기능 설명을 잘라내지 않는다. */
-#dictionary .set-card .meta,
-#dictionary .set-card .desc {
-  display: block;
-  overflow: visible;
-  -webkit-line-clamp: unset;
-}
-
-#dictionary .set-card .meta {
-  font-size: .72rem;
-}
-
-#dictionary .shelf-hub-link {
-  margin-left: auto;
-  color: var(--lapis);
-  font-family: var(--sans);
-  font-size: .76rem;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-#dictionary .shelf-hub-link:hover {
-  color: var(--lapis-deep);
-  text-decoration: underline;
-  text-underline-offset: .2em;
-}
-
 /* CTA를 큰 버튼 대신 가벼운 텍스트 링크로 바꾼다. */
 .set-card .cta {
   display: inline-flex;
@@ -189,15 +161,6 @@ section.shelf-sec > .set-card:nth-child(2):last-child {
 
   .set-card .desc {
     -webkit-line-clamp: 3;
-  }
-
-  #dictionary .sec-head {
-    align-items: flex-start;
-  }
-
-  #dictionary .shelf-hub-link {
-    width: 100%;
-    margin-left: 0;
   }
 }
 

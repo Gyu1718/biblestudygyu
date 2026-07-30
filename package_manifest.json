@@ -1,0 +1,60 @@
+{
+  "package": "biblical-encyclopedia-round1",
+  "target_repository": "Gyu1718/biblestudygyu",
+  "entry_count": 8,
+  "entries": [
+    {
+      "id": "jerusalem-wall-rebuilding",
+      "type": "event",
+      "path": "content/encyclopedia/event/jerusalem-wall-rebuilding.md",
+      "sha256": "ae11e7fe6576c04417c24a5eba85e7f9d887a2919f5b8878c21af26dc2d05412"
+    },
+    {
+      "id": "levites",
+      "type": "group",
+      "path": "content/encyclopedia/group/levites.md",
+      "sha256": "cbf7e9099fdbad30994bf86cb3cefea65601a2f8fc69dab2d5b7327d49a40dcc"
+    },
+    {
+      "id": "high-priesthood",
+      "type": "institution",
+      "path": "content/encyclopedia/institution/high-priesthood.md",
+      "sha256": "fe21c7d3f5b54c55b0694c55531ced11418034f8ba630de6b28465f6047fe131"
+    },
+    {
+      "id": "second-temple",
+      "type": "object",
+      "path": "content/encyclopedia/object/second-temple.md",
+      "sha256": "9a3e3c3552654f378e9becfdc1f7af2a55992ece3ef654b68dea129d7c7b52c8"
+    },
+    {
+      "id": "judeans",
+      "type": "people",
+      "path": "content/encyclopedia/people/judeans.md",
+      "sha256": "7c41bcaf07f6409028c0ef76a0e7a16d0d2ea708f1e2bff052709b98e60991c0"
+    },
+    {
+      "id": "sheshbazzar",
+      "type": "person",
+      "path": "content/encyclopedia/person/sheshbazzar.md",
+      "sha256": "d2ce74fca20cbfb3b828f1b03a666f3aba3f86301915b74e3edf2a6938eecfbf"
+    },
+    {
+      "id": "susa",
+      "type": "place",
+      "path": "content/encyclopedia/place/susa.md",
+      "sha256": "9f1e43b886ec05ed558b3c408a4665c080ada880f6221ea24a0a6039fdbe1a7c"
+    },
+    {
+      "id": "yehud",
+      "type": "place",
+      "path": "content/encyclopedia/place/yehud.md",
+      "sha256": "187240e03934280538d7fa137e0773b143eb7894a393b8bfae5013a4efe52ae8"
+    }
+  ],
+  "validation": {
+    "yaml": "passed",
+    "relation_ids": "passed against 2026-07-30 repository index",
+    "primary_match_collision_within_package": "passed"
+  }
+}

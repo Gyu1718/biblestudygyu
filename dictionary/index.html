@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>성서 사전 서가 — 성서 연구 서고</title>
+<meta name="description" content="원어 스트롱 사전과 성서 지식사전을 한곳에서 탐색하는 성서 사전 서가.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/dictionary.css?v=20260730.1">
+</head>
+<body>
+<div class="dictionary-wrap">
+  <div class="dictionary-topbar">
+    <a href="../index.html">← 성서 연구 서고</a>
+    <nav aria-label="사전 바로가기">
+      <a href="../lexicon/index.html">원어 사전</a>
+      <a href="../encyclopedia/index.html">지식사전</a>
+    </nav>
+  </div>
+
+  <header class="dictionary-hero">
+    <div>
+      <div class="dictionary-eyebrow">LIBRARY OF BIBLICAL REFERENCE</div>
+      <h1>성서 사전 서가</h1>
+      <p>성경의 언어와 세계를 탐색하는 참고 서가입니다. 원어의 형태와 뜻은 원어 스트롱 사전에서, 본문에 등장하는 인물·지명·사건·제도와 신학 개념은 성서 지식사전에서 살펴봅니다.</p>
+    </div>
+    <div class="dictionary-symbol" aria-hidden="true">א · Ω<small>WORD · WORLD</small></div>
+  </header>
+
+  <main>
+    <section class="dictionary-section" aria-labelledby="main-dictionaries">
+      <div class="dictionary-section-head">
+        <div><div class="dictionary-eyebrow">REFERENCE SHELVES</div><h2 id="main-dictionaries">두 개의 사전 서가</h2></div>
+        <p>단어를 찾는 사전과 성경 세계를 찾는 사전을 분리해 운영합니다.</p>
+      </div>
+      <div class="dictionary-grid">
+        <a class="dictionary-card lexicon" href="../lexicon/index.html">
+          <span class="dictionary-books" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>
+            <span class="original heb">עִבְרִית · Ἑλληνικά</span>
+            <h3>원어 스트롱 사전</h3>
+            <div class="meta">히브리어·아람어 H1–H8674 · 헬라어 Strong 항목 · 번호·표제어·발음·뜻 검색</div>
+            <div class="desc">성경 원어의 표제어와 본문 형태, 발음, 품사와 한글 풀이를 확인합니다. 원어성경의 단어 호버와 상세 사전 페이지가 연결됩니다.</div>
+            <span class="enter">원어 사전 열기 →</span>
+          </span>
+        </a>
+
+        <a class="dictionary-card encyclopedia" href="../encyclopedia/index.html">
+          <span class="dictionary-books" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>
+            <span class="original">BIBLICAL ENCYCLOPEDIA</span>
+            <h3>성서 지식사전</h3>
+            <div class="meta">인물 · 지명 · 민족 · 사건 · 제도 · 사물 · 신학 개념 · 성경 문헌</div>
+            <div class="desc">연구 문서에서 만나는 성경의 인물과 장소, 역사적 사건과 제도, 신학 개념을 본문 근거와 관계망으로 연결합니다.</div>
+            <div class="dictionary-stats" id="encyclopedia-stats"><span class="dictionary-stat">목록 불러오는 중</span></div>
+            <span class="enter">지식사전 열기 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="dictionary-section" aria-labelledby="quick-lookup">
+      <div class="dictionary-section-head">
+        <div><div class="dictionary-eyebrow">QUICK LOOKUP</div><h2 id="quick-lookup">성서 지식사전 바로 찾기</h2></div>
+        <p id="dictionary-status" aria-live="polite">표제어를 불러오는 중입니다.</p>
+      </div>
+      <div class="dictionary-lookup">
+        <form class="dictionary-search" id="dictionary-search">
+          <input id="dictionary-query" type="search" placeholder="예: 느헤미야, 총독, 페르시아" aria-label="성서 지식사전 검색">
+          <button type="submit">표제어 찾기</button>
+        </form>
+        <div class="dictionary-filter" id="dictionary-filter" aria-label="사전 범주"></div>
+        <div class="dictionary-results" id="dictionary-results"><p class="dictionary-empty">표제어 목록을 불러오는 중입니다.</p></div>
+      </div>
+    </section>
+
+    <section class="dictionary-section" aria-labelledby="dictionary-flow">
+      <div class="dictionary-section-head">
+        <div><div class="dictionary-eyebrow">CONNECTED READING</div><h2 id="dictionary-flow">연구 문서와 사전의 연결</h2></div>
+      </div>
+      <div class="dictionary-flow">
+        <article><h3>연구 문서에서 발견</h3><p>원어 단어, 성경 인물과 지명, 사건과 개념이 필요한 영역에서만 사전 표제어로 표시됩니다.</p></article>
+        <article><h3>호버 카드로 확인</h3><p>마우스나 키보드 초점으로 간략 풀이를 읽습니다. 성경 구절 호버와 원어 호버는 서로 중첩되지 않습니다.</p></article>
+        <article><h3>상세 항목으로 이동</h3><p>본문 근거와 관련 인물·사건·개념, 연구용 참고 자료를 상세 사전 페이지에서 이어서 확인합니다.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dictionary-foot">성서 사전 서가는 원어 데이터와 성경 세계의 개체·개념 데이터를 분리해 관리하면서 하나의 탐색 입구로 연결합니다.</footer>
+</div>
+<script src="../assets/js/dictionary-page.js?v=20260730.1" defer></script>
+<script src="../assets/js/research-dock-loader.js?v=20260729.1" defer></script>
+</body>
+</html>

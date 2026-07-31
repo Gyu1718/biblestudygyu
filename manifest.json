@@ -1,0 +1,32 @@
+{
+  "package": "acts-shelf-v1",
+  "target": "Gyu1718/biblestudygyu",
+  "files": [
+    {
+      "path": "README_ACTS_PACKAGE.md",
+      "bytes": 1075,
+      "sha256": "2bd7e850c5716d621f11bde9fbd5e4d56e85d0e3dc57874d2b346ef7618dc9ae"
+    },
+    {
+      "path": "catalog.js",
+      "bytes": 8732,
+      "sha256": "b0ba5eb629fd9f6550c09bde524a31a389e6b12c8d7083d98cc24346adf4d41b"
+    },
+    {
+      "path": "nt/acts/ch01.html",
+      "bytes": 66326,
+      "sha256": "7cf72e4bf48601e7150b6765c933aea91fc38590dfca4d178eed2ad423ed8402"
+    },
+    {
+      "path": "nt/acts/index.html",
+      "bytes": 16770,
+      "sha256": "5a39b5423b43f44368a5589baf16af282aa77a8b441229e07c3ea7b1422f7684"
+    },
+    {
+      "path": "nt/acts/overview.html",
+      "bytes": 55502,
+      "sha256": "07cd6f9fca08e692c08f88ee6c0b0e281d39efacd129a389a412daef265cdba1"
+    }
+  ],
+  "validation_errors": []
+}

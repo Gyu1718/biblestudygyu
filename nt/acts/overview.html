@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="누가–행전의 통일성, 저자와 연대, 장르와 본문, 구조와 신학을 Bruce·Peterson·Schnabel 세 주석으로 종합한 사도행전 개관.">
+<title>사도행전 종합 개관 — 예루살렘에서 로마까지</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='34' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --bruce:#3c5a83; --pet:#37665a; --sch:#8a4658; --sec:#857f70;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.1rem;font-size:.71rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.2rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;color:#9db6cc;margin:1rem 0 .5rem}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.32rem .5rem .32rem .55rem;border-left:2px solid transparent;margin-top:.2rem;line-height:1.5}
+nav.toc a.lv1:hover,nav.toc a.lv1:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:1.5rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.3rem;color:var(--ochre);line-height:1.25}
+.hero h1{font-size:1.95rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.82}
+.hero .meta{font-family:var(--sans);font-size:.77rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.6rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.4rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.97rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.krv{background:#f1efe8;border-left:3px solid var(--ochre);padding:.55rem .85rem;margin:.85rem 0;font-size:.93rem;line-height:1.75}
+.krv b{font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;color:var(--ochre);margin-right:.45rem}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.bruce{background:var(--bruce)}.c.pet{background:var(--pet)}.c.sch{background:var(--sch)}.c.sec{background:var(--sec)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.05rem;font-family:var(--sans);font-size:.77rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.15rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.15rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.tbl-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.back{font-family:var(--sans);font-size:.73rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,table,.krv{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+  <link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+  <link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+</head>
+<body data-book="acts" data-chapter="0" data-kind="overview" data-root="../../">
+<div class="frame">
+
+<nav class="toc" aria-label="사도행전 종합 개관 목차">
+  <div class="site-nav">
+    <a href="./index.html">← 사도행전 서가</a>
+    <a href="../../index.html">서고 홈</a>
+    <a href="../../bible/original.html?book=ACT&amp;chapter=1">성경읽기</a>
+  </div>
+  <div class="brand">사도행전 종합 개관</div>
+  <div class="brand-sub">예루살렘에서 로마까지</div>
+  <div class="toc-h">문서 목차</div>
+  <a class="lv1" href="#s1">1. 두 권으로 된 한 역사</a>
+  <a class="lv1" href="#s2">2. 제목과 정경의 요석</a>
+  <a class="lv1" href="#s3">3. 저자 — 누가와 '우리' 단락</a>
+  <a class="lv1" href="#s4">4. 저작 연대 세 갈래</a>
+  <a class="lv1" href="#s5">5. 장르 — 어떤 역사인가</a>
+  <a class="lv1" href="#s6">6. 자료·수사·역사적 신뢰성</a>
+  <a class="lv1" href="#s7">7. 연설 — 책의 뼈대</a>
+  <a class="lv1" href="#s8">8. 구조 — 두 개의 독법</a>
+  <a class="lv1" href="#s9">9. 목적 — 첫 변증가 누가</a>
+  <a class="lv1" href="#s10">10. 신학의 열 갈래</a>
+  <a class="lv1" href="#s11">11. 이스라엘의 회복</a>
+  <a class="lv1" href="#s12">12. 본문 — 서방 본문 문제</a>
+  <a class="lv1" href="#s13">13. 연대기와 지리의 진행</a>
+  <a class="lv1" href="#s14">14. 장별 안내</a>
+  <a class="lv1" href="#s15">15. 주석 스파인</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">ΠΡΑΞΕΙΣ ΑΠΟΣΤΟΛΩΝ</div>
+    <h1>사도행전 종합 개관 · 예루살렘에서 로마까지</h1>
+    <p class="sub">한 권의 복음서가 예수께서 행하시고 가르치기 <em>시작하신</em> 일을 적었다면, 그 둘째 권은 승천하신 주께서 성령과 말씀으로 <em>계속</em> 행하시는 일을 적는다. 오순절 성령 강림에서 로마의 셋집까지, 스물여덟 장이 한 증언을 예루살렘에서 땅 끝으로 밀고 나간다. Bruce·Peterson·Schnabel 세 주석을 절 범위 단위로 종합하고 개역개정 4판과 NA28로 대조한다.</p>
+    <p class="meta">누가–행전 통일체 · 저자·연대·장르·본문 쟁점 · 여덟 성장 요약과 두 구조 독법 · 열 갈래 신학 · 개역개정 4판 전수 대조 · NA28 병기</p>
+  </header>
+
+  <div class="legend">
+    <span><b>주석 칩</b></span>
+    <span><span class="c bruce">B</span> Bruce NICNT 1988</span>
+    <span><span class="c pet">P</span> Peterson PNTC 2009</span>
+    <span><span class="c sch">S</span> Schnabel ZECNT 2012</span>
+    <span><span class="c sec">재</span> 재인용(2차)</span>
+  </div>
+
+  <div class="caveat">
+    <span class="tt">확인 전제</span>
+    개역개정 인용은 사이트의 4판 본문 데이터와 <b>단어 단위 전수 대조</b>했다. 그리스어 표기는 NA28 본문에 근거한다. 칩이 붙은 관찰은 세 주석에서 직접 확인한 것에 한하고, Barrett(ICC)·Fitzmyer(AB)·Haenchen·Conzelmann·Witherington·Keener·Marguerat·Dodd·Cadbury·Ramsay 등은 세 주석이 인용·평가한 범위에서 <span class="c sec">재</span>로 표기했다. 정밀 인용·논문 작업 시 각 주석의 해당 면수를 직접 확인할 것.
+  </div>
+
+  <!-- ═══════ 1 ═══════ -->
+  <section class="part" id="s1">
+    <div class="part-head">
+      <div class="gk">λόγος πρῶτος</div>
+      <div class="eyebrow">LUKE–ACTS</div>
+      <h2>1. 두 권으로 된 한 역사</h2>
+      <div class="gloss">로고스 프로토스 — 먼저 쓴 글</div>
+    </div>
+
+    <div class="krv"><b>행 1:1</b>데오빌로여 내가 먼저 쓴 글에는 무릇 예수께서 행하시며 가르치시기를 시작하심부터</div>
+
+    <p><span class="c bruce">B</span> Bruce는 사도행전을 한 사람이 데오빌로에게 헌정한 <strong>기독교 기원사</strong>의 둘째 권으로 규정한다. 그 앞 권은 신약 스물일곱 문서 안에 함께 남았으며 우리가 누가복음이라 부르는 책이다. 두 권은 하나의 연속된 기획으로 쓰였지만, 정경 형성 과정에서 누가복음은 다른 세 복음서와 함께 복음서 묶음에 놓였고 사도행전은 독자적인 위치를 얻었다. 이 배열은 두 책의 문학적 연속성을 없애지 않으면서, 사도행전이 복음서와 서신을 잇는 교량 역할을 하게 했다.</p>
+
+    <p><span class="c pet">P</span> Peterson은 두 권을 하나의 기획으로 읽는 근거를 여럿 든다. 누가복음 1:1–4의 서문이 사도행전 1:1의 재개(再開)와 맞물리고, 두 책은 문체 차이에도 하나의 목적을 공유한다. 두 권을 함께 놓느냐 따로 놓느냐는 해석에 실제 차이를 만든다. <span class="c sch">S</span> Schnabel도 사도행전의 중심 주제가 누가복음의 그것과 같다고 정리한다. 하나님이 자기 아들 예수의 삶과 사역을 통해, 그리고 그 제자들의 삶과 사역을 통해 <strong>모든 사람에게 구원을 가져오시려는 계획</strong>이 두 권을 관통한다(눅 4:17–21; 24:44–46; 행 3:18; 13:27–33).</p>
+
+    <p><span class="c bruce">B</span> 앞 권을 여는 서문(눅 1:1–4)이 두 권 전체의 서문 노릇을 한다. 저자는 자신이 앞선 사건들의 목격자는 아니되, 목격자들이 전한 정보에 접근할 수 있었고, 마가복음처럼 자기보다 이른 기록을 알았을 것이며, 자기 기록이 철저하고 정확한 조사에 근거하고 순서에 맞게 배열되었다고 주장한다. <span class="c bruce">B</span> 사도행전은 예수의 부활 이후로 이야기를 이어받아 약 삼십 년을 밀고 나가며, 유대에서 안디옥을 거쳐 로마에 이르는 복음의 진행을 추적하고, 복음의 으뜸 전령이 제국의 심장에서 그것을 선포하는 장면으로 끝난다.</p>
+
+    <div class="note"><div class="tt">두 권의 대칭</div><span class="c pet">P</span> "행하시며 가르치시기를 <em>시작하심</em>"(행 1:1)이라는 표현은 누가복음이 예수께서 행하고 가르치기 시작하신 일을, 사도행전이 승천하신 주께서 성령을 통해 계속하시는 일을 다룬다는 함의를 담는다. <span class="c bruce">B</span> 그래서 어떤 이들은 둘째 권에 <em>성령행전</em>이라는 제목이 신학적으로 더 어울린다고 제안했다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 2 ═══════ -->
+  <section class="part" id="s2">
+    <div class="part-head">
+      <div class="gk">Πράξεις</div>
+      <div class="eyebrow">TITLE &amp; CANON</div>
+      <h2>2. 제목과 정경의 요석</h2>
+      <div class="gloss">프락세이스 — 행전(行傳)</div>
+    </div>
+
+    <p><span class="c bruce">B</span> "사도행전"(<span class="gw">Πράξεις Ἀποστόλων</span>)이라는 제목은 2세기부터 이 책에 붙었다. 이 제목은 2세기 후반의 전승에서 확인되며, 반(反)마르키온 누가복음 서문도 누가–행전의 저작을 의사 누가에게 돌린다. 다만 해당 서문의 정확한 연대와 전승 형성 과정은 별도로 검토할 필요가 있다. <span class="c bruce">B</span> 제목 자체가 다소 과장된 인상을 준다. 바울을 빼면 어느 정도라도 상세히 다뤄지는 사도는 베드로뿐이기 때문이다. 무라토리 단편은 이를 더 부풀려 <em>모든 사도의 행전</em>이라 부르지만, 1장 끝에서 맛디아를 세운 뒤 대다수 사도에 관해서는 아무 말이 없다.</p>
+
+    <h3>마르키온 논쟁과 요석(要石)</h3>
+    <p><span class="c bruce">B</span> 사도행전의 중요성은 2세기 중엽 마르키온 논쟁으로 한층 도드라졌다. 시노페의 마르키온은 바울을 극진히 따르면서도 오해했으며, 약 주후 144년 로마에서 자기가 참 정경이라 여긴 목록을 내놓았다. 그 정경은 편집된 누가복음(<em>복음</em>)과 편집된 바울 열 서신(<em>사도</em>) 두 부분으로 이루어졌고, 구약을 배제했다. <span class="c bruce">B</span> 이 도전은 로마 교회와 여러 '보편(catholic)' 교회의 지도자들에게 정경을 <em>창조</em>하도록 강요하지는 않았으나, 정경을 더 정밀히 <em>규정</em>하도록 압박했다.</p>
+
+    <p><span class="c bruce">B</span> 이 국면에서 사도행전은 그 어느 때보다 큰 무게를 얻었다. 사도행전은 바울의 주장을 입증하는 동시에, 마르키온이 거짓 사도로 배격한 본래 사도들의 권위까지 입증했다. Bruce는 이를 <strong>기독교 정경이라는 아치의 요석</strong>으로 표현한다. 복음서 묶음과 바울 서신 묶음 사이에 사도행전이 놓여 둘을 잇는다. 복음서 묶음에 대해서는 그 일반적 속편이 되고, 바울 서신 묶음에 대해서는 여러 서신을 이해할 서사적 배경을 제공한다.</p>
+
+    <div class="note"><div class="tt">'사도'라는 말의 용법</div><span class="c bruce">B</span> 저자는 대개 '사도'라는 호칭을 예수께서 택하신 열두 사람에 한정하며(눅 6:13–16), 유다 대신 맛디아가 들어온다. 바울에게는 그가 자기 서신에서 주장한 그 의미로 '사도'를 거의 붙이지 않는다. <span class="c pet">P</span> 그럼에도 사도행전은 바울을 부활하신 그리스도의 '택한 그릇'(행 9:15)으로 그려, 누구도 그 소명의 정당성을 의심할 수 없게 만든다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 3 ═══════ -->
+  <section class="part" id="s3">
+    <div class="part-head">
+      <div class="gk">ἡμεῖς</div>
+      <div class="eyebrow">AUTHORSHIP</div>
+      <h2>3. 저자 — 누가와 '우리' 단락</h2>
+      <div class="gloss">헤메이스 — 우리</div>
+    </div>
+
+    <p><span class="c pet">P</span> 초기 기독교 전승은 누가복음과 사도행전의 저자를 골로새서 4:14의 '사랑을 받는 의사' 누가로 지목한다. 파피루스 75(주후 175–225)는 복음서 끝에 '누가에 따른 복음'이라는 표제를 달았고, 무라토리 단편(통상 2세기 후반으로 분류)은 저자를 '의사 누가', 바울의 동반자로 서술한다. 이레나이우스(『이단 반박』 3.1.1; 3.14.1)도 '바울을 따른 누가'를 두 책의 저자로 든다. <span class="c pet">P</span> Witherington이 관찰하듯, 누가가 사도이거나 자기가 기록한 일의 목격자였다고 아무도 주장하지 않았음을 감안하면 이 외적 증거의 일치는 인상적이다.</p>
+
+    <h3>'우리' 단락이라는 내적 증거</h3>
+    <p><span class="c pet">P</span> 가장 중요한 내적 증거는 사도행전 서사의 결정적 지점에서 일인칭 복수가 쓰인다는 사실이다(16:10–17; 20:5–15; 21:1–18; 27:1–28:16). '우리' 단락의 문체·문법·어휘는 누가–행전의 나머지와 매우 흡사하며, 가장 자연스러운 설명은 저자 자신이 그 국면에 함께 있었다는 것이다. <span class="c bruce">B</span> Bruce도 서술자가 그 기간에 바울의 동반자였다는 추론을 합리적이라 보되, 이 추론이 보편적으로 받아들여지지는 않는다고 명기한다.</p>
+
+    <p><span class="c pet">P</span> 본문은 바울의 여러 동행자를 이름으로 밝힌다(실라·디모데·소바더·아리스다고·세군도·가이오·두기고·드로비모). 그런데 서신이 바울의 옥중 시기에 함께 있었다고 지목하는 누가는 사도행전 본문에서 <em>이름이 나오지 않는다</em>(골 4:14; 몬 24; 딤후 4:11 참조). Peterson은 유력 후보의 이름이 본문에 없다는 이 사실 자체가 도리어 누가를 강하게 가리킨다고 읽는다. <span class="c sch">S</span> Schnabel은 여기에 문학적 배경을 더한다. 복음서와 사도행전의 익명성은 1세기적 익명이 아니라, 저자를 앞세우지 않는 구약 역사서(창세기–열왕기)의 관습을 따른 것이며, 저자들이 자신을 예수 그리스도라는 유일한 권위 앞의 하찮은 매개자로 여겼음을 반영한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 1. 저작 문제의 세 축</caption>
+      <thead><tr><th>쟁점</th><th>주석의 판단</th><th>근거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">외적 전승</td><td><span class="c pet">P</span><span class="c bruce">B</span><span class="c sch">S</span> 누가 저작을 수용</td><td>p75·무라토리 단편·반마르키온 서문·이레나이우스의 이른 일치된 증언</td></tr>
+        <tr><td class="head">'우리' 단락</td><td>저자가 바울의 동반자였다는 함의</td><td>16·20·21·27–28장의 일인칭 복수, 나머지 본문과 동일한 문체</td></tr>
+        <tr><td class="head">의학 언어</td><td><span class="c pet">P</span> 결정적 증거 아님(<span class="c sec">재</span> Cadbury)</td><td>의학적 어휘가 교육받은 1세기 헬라 저자 일반의 수준을 넘지 않음</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><span class="c pet">P</span> 어떤 주석가들은 사도행전과 바울 서신의 차이가 커서 저자가 바울의 상시 동행자였기 어렵다고 본다. <span class="c bruce">B</span> Bruce는 이 차이를 저자의 관점에서 설명한다. 바울은 자기 서신에서 결코 영웅이 아니지만, 사도행전에서 바울은 안디옥을 떠나 본격 선교에 나선 뒤로 늘 자신하며 언제나 승리하는 인물로 그려진다. Bruce는 그럼에도 누가가 준 그림이 지워지지 않는다고 본다. 서신이 없었다면 짐작조차 못 할 바울의 여러 면이 있으나, 누가의 초상은 초기 기독교 확장의 기록에 유일무이한 기여를 남긴다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 4 ═══════ -->
+  <section class="part" id="s4">
+    <div class="part-head">
+      <div class="gk">χρόνος</div>
+      <div class="eyebrow">DATE</div>
+      <h2>4. 저작 연대 세 갈래</h2>
+      <div class="gloss">크로노스 — 때</div>
+    </div>
+
+    <p>사도행전의 연대는 세 갈래로 갈린다. 세 주석은 각기 다른 지점에 무게를 싣되 논거를 나란히 편다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 2. 연대 논쟁의 세 위치</caption>
+      <thead><tr><th>연대</th><th>대표</th><th>핵심 논거</th></tr></thead>
+      <tbody>
+        <tr><td class="head">62–64년<br>(이른 연대)</td><td><span class="c pet">P</span> 가능한 안으로 인정</td><td>바울 서신에 대한 무지, 유대교를 합법 종교로 묘사, 네로 박해 언급 없음, 바울의 로마 감금 결말 미상. 사도행전이 바울에 관해 더 말하지 않는 이유는 <em>더 말할 것이 없어서</em>라는 가장 단순한 설명.</td></tr>
+        <tr><td class="head">70년대</td><td><span class="c pet">P</span> 지지</td><td>마가복음(약 70년)을 자료로 쓰고 누가복음 21:20–24가 예루살렘 함락을 함의한다는 전제를 받아들여도, 마가 출간과 누가–행전 사이에 십 년 이상이 필요하지 않다. 70년대 중반 출간이 충분히 합리적.</td></tr>
+        <tr><td class="head">80–96년<br>(플라비우스기)</td><td><span class="c bruce">B</span> 지지 · <span class="c sec">재</span> Barrett(80년대 말–90년대 초)</td><td>내외의 평화기, 로마 속주 행정 묘사가 1세기를 전제. Bruce는 베드로·바울·야고보의 관계를 서신보다 완화해 묘사한 관점이 세 사람 사후에 더 자연스럽다고 본다.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><span class="c pet">P</span> Peterson은 늦은 연대의 두 난점을 짚는다. 첫째, '우리' 단락을 바울의 동행자가 썼다면 누가가 바울을 처음 만났을 때 아주 젊지 않은 한 80년대 초보다 훨씬 뒤로 내려가기 어렵다. 둘째, 사도행전이 바울의 이 년 로마 감금과 사역만 서술하고 끝나는 결말(28:30–31)을 늦은 연대로는 설명하기 힘들다. 시간 간격이 멀수록 다음 세대를 위해 결말을 채울 필요가 커지기 때문이다.</p>
+
+    <p><span class="c bruce">B</span> Bruce는 이른 연대 논거들에 답하되 플라비우스기(주후 69–96) 어느 지점, 아마 그 중간쯤으로 본다. 네로 박해가 한 사람의 악의였을 뿐 공적 정책이 아니었다는 타키투스의 인정, 바울 처형의 미언급이 연대를 결정짓지 못한다는 점을 든다. Bruce에게 누가의 목표는 바울을 로마로 데려와 거기서 자유로이 복음을 전하게 하는 데서 이미 이루어졌다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 5 ═══════ -->
+  <section class="part" id="s5">
+    <div class="part-head">
+      <div class="gk">ἱστορία</div>
+      <div class="eyebrow">GENRE</div>
+      <h2>5. 장르 — 어떤 역사인가</h2>
+      <div class="gloss">히스토리아 — 역사·탐구</div>
+    </div>
+
+    <p><span class="c pet">P</span> 장르는 내용·형식·기능으로 규정되며 해석의 예비 작업이다. Peterson은 먼저 사도행전과 누가복음의 관계를 다루고, 그다음 사도행전 자체의 성격을 고대 문학의 여러 양식과 견준다. 후보로 역사 단행본(historical monograph), 전기, 역사 소설이 오르며, Peterson은 사도행전을 무엇보다 <strong>성경적 역사서</strong>의 계보에 놓는다. 곧 하나님의 구원 계획이 인물과 사건을 통해 성취되는 신학적 역사다.</p>
+
+    <p><span class="c pet">P</span> Peterson은 사도행전의 성격을 세 겹으로 묶는다. 첫째, <em>신학적 역사</em>다. 사건의 배후에서 하나님의 계획이 작동한다. 둘째, <em>연설이 지배하는 서사</em>다. 서사의 결정적 순간마다 설교와 변론이 놓인다. 셋째, <em>성취의 서사</em>다. 일어나는 일이 성경의 예언과 하나님의 뜻을 이룬다. <span class="c sch">S</span> Schnabel은 헬라·로마 역사서와의 비교에서 한 대비를 든다. 세속 저자가 자기 문학적 성취로 칭송과 영광을 얻으려 한 데 견주어, 복음서와 사도행전의 저자는 자신을 낮추고 주제 자체가 독자의 온전한 주목을 받게 하는 익명의 관습을 택했다.</p>
+
+    <div class="note"><div class="tt">투키디데스 전통</div><span class="c bruce">B</span> Bruce는 사도행전의 연설을 최고의 투키디데스 전통으로 읽는다. 누가는 실제 발언의 <em>대의</em>를 전하려 하면서, 동시에 그 연설을 자기 서술과 논증의 필수적 일부로 삼는다. 이 이중성이 사도행전 연설의 성격을 규정한다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 6 ═══════ -->
+  <section class="part" id="s6">
+    <div class="part-head">
+      <div class="gk">πηγαί</div>
+      <div class="eyebrow">SOURCES</div>
+      <h2>6. 자료·수사·역사적 신뢰성</h2>
+      <div class="gloss">페가이 — 자료·원천</div>
+    </div>
+
+    <p><span class="c pet">P</span> Peterson은 자료·수사·역사적 신뢰성을 한 묶음으로 다룬다. 누가복음 1:1–4의 서문이 이미 저자의 방법을 밝힌다. 자료의 철저한 추적(<span class="gw">παρακολουθέω</span>), 재료의 정연한 배열, 객관적 신뢰성을 목표로 삼는다. '우리' 단락은 저자가 직접 목격한 국면을 반영하고, 나머지는 목격자와 전승에 의존한다.</p>
+
+    <p><span class="c bruce">B</span> Bruce는 바울이 자기 서신에서 필요할 때마다 자신의 신적 소명을 변호해야 했으며 '사도의 표'를 증거로 들었다고 정리한다(고후 12:12). 이 표를 직접 겪지 못한 독자에게는 누가의 기록이 그 호소의 정당성을 확증한다. <span class="c bruce">B</span> Bruce는 사도행전이 바울 서신의 존재를 분명하게 드러내지 않는다는 점을 주목한다. 그는 이 침묵이 바울 서신 모음이 널리 알려지기 전의 저작일 가능성을 높인다고 보지만, 이 논거만으로 연대를 확정할 수는 없다.</p>
+
+    <p><span class="c bruce">B</span> Bruce는 사도행전이 문명사의 최고 가치를 지닌 사료라고 평가한다. 아시아에서 일어난 신앙이 아시아가 아니라 유럽 문명에 통합된 까닭을 그는 섭리 안에서 설명한다. 그 신앙의 으뜸 전령이 로마 시민이었고, 제국의 전략적 중심과 통신선을 그리스도의 나라에 이바지하도록 돌려세워, 그 중심들과 노선을 따라 신앙을 심었다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 7 ═══════ -->
+  <section class="part" id="s7">
+    <div class="part-head">
+      <div class="gk">οἱ λόγοι</div>
+      <div class="eyebrow">SPEECHES</div>
+      <h2>7. 연설 — 책의 뼈대</h2>
+      <div class="gloss">호이 로고이 — 연설들</div>
+    </div>
+
+    <p><span class="c pet">P</span> 사도행전은 연설이 지배하는 서사다. 전도 연설이 상황마다 다른 인물의 입으로 메시지의 내용을 전한다. 연설은 사도행전 분량의 상당 부분을 차지하며, 서사의 진행을 멈추고 그 사건의 의미를 해석한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 3. 사도행전의 주요 연설</caption>
+      <thead><tr><th>연설자</th><th>본문</th><th>청중·장면</th><th>변증 유형</th></tr></thead>
+      <tbody>
+        <tr><td class="head">베드로</td><td>2:14–41</td><td>오순절, 예루살렘 순례자</td><td>부활·성령 강림의 요엘·시편 해석</td></tr>
+        <tr><td class="head">베드로</td><td>3:12–26</td><td>솔로몬 행각</td><td>고난받는 종 기독론(사 52–53)</td></tr>
+        <tr><td class="head">스데반</td><td>7:2–53</td><td>산헤드린</td><td>대유대 변증의 원형 — 성전·율법사</td></tr>
+        <tr><td class="head">베드로</td><td>10:34–43</td><td>고넬료의 집</td><td>이방인을 향한 케리그마</td></tr>
+        <tr><td class="head">바울</td><td>13:16–41</td><td>비시디아 안디옥 회당</td><td>구원사 개관, 칭의 선포</td></tr>
+        <tr><td class="head">바울</td><td>17:22–31</td><td>아레오바고</td><td>대이교 변증의 원형</td></tr>
+        <tr><td class="head">바울</td><td>20:18–35</td><td>밀레도, 에베소 장로</td><td>고별 담화·목양</td></tr>
+        <tr><td class="head">바울</td><td>22·24·26장</td><td>예루살렘·가이사랴</td><td>자기 변호, 부활 신앙 쟁점</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><span class="c bruce">B</span> Bruce는 스데반의 변론을 대유대 변증의 원형으로, 아레오바고 연설을 이교를 향한 초기 기독교 변증의 가장 이른 예로, 밀레도 고별사를 공동체 안의 비판에 답하는 부분 변증으로, 가이사랴에서 아그립바 앞의 연설을 바울의 선교 생애를 위한 절정의 <span class="gw">ἀπολογία</span>로 읽는다. <span class="c bruce">B</span> 바울의 변호 연설들에서 그와 고소자 사이의 유일한 쟁점은 부활 신앙이다. 예수께서 죽은 자 가운데서 살아나셨다는 신앙이 바울에게는 유대 민족의 소망을 확증하는 것이다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 8 ═══════ -->
+  <section class="part" id="s8">
+    <div class="part-head">
+      <div class="gk">δομή</div>
+      <div class="eyebrow">STRUCTURE</div>
+      <h2>8. 구조 — 두 개의 독법</h2>
+      <div class="gloss">도메 — 구조</div>
+    </div>
+
+    <h3>독법 ① 지리의 도식 (1:8)</h3>
+    <div class="krv"><b>행 1:8</b>오직 성령이 너희에게 임하시면 너희가 권능을 받고 예루살렘과 온 유대와 사마리아와 땅 끝까지 이르러 내 증인이 되리라 하시니라</div>
+    <p><span class="c bruce">B</span> Bruce는 1:8의 지리 용어가 사도행전의 '목차'를 이룬다는 점을 든다. "내 증인이 되리라"가 책의 주제를 선포하고, "예루살렘"이 처음 일곱 장을, "온 유대와 사마리아"가 8:1–11:18을, 나머지가 복음이 성지 밖으로 나아가 마침내 로마에 이르는 진행을 담는다.</p>
+
+    <h3>독법 ② 말씀의 전진 — 여섯 패널</h3>
+    <p><span class="c pet">P</span> Peterson은 <span class="gw">λόγος</span>(말씀)의 성장을 사도행전 구조의 축으로 삼는다. 누가는 여덟 개의 성장 요약(2:47; 5:14; 6:7; 11:21,24; 12:24; 16:5; 19:20)으로 교회의 확장을 표시한다. 그중 세 편집 표지(6:7; 12:24; 19:20)가 갈등의 해소나 박해의 그침을 넘어선 뒤에 놓여 큰 단락을 구획한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 4. 말씀의 전진 — 네 패널과 두 하위 표지</caption>
+      <thead><tr><th>단락</th><th>표지</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1:1–6:7</td><td>6:7</td><td>열두 사도의 지도 아래 예루살렘 교회의 발전. 일곱을 세워 갈등을 해소한 뒤 말씀이 자란다.</td></tr>
+        <tr><td class="head">6:8–12:24</td><td>9:31 · 12:24</td><td>유대·사마리아·이방 지역으로의 자발적 확장. 사울의 회심으로 박해가 그치고(9:31), 베드로의 석방과 헤롯의 죽음 뒤 말씀이 자란다(12:24).</td></tr>
+        <tr><td class="head">12:25–19:20</td><td>16:5 · 19:20</td><td>안디옥을 발원지로, 바울의 지도 아래 소아시아와 유럽으로의 계획적 확장. 예루살렘 공회 결정을 전한 뒤(16:5), 에베소에서 마술의 세력을 이긴 뒤 말씀이 자란다(19:20).</td></tr>
+        <tr><td class="head">19:21–28:31</td><td>28:30–31</td><td>바울이 박해받고 체포되어도 주의 말씀은 계속 자라고 이긴다. 로마의 셋집에서 자유로이 전하는 장면으로 닫힌다.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><span class="c pet">P</span> Peterson은 에베소 사역(18:23–20:38)의 특별한 무게를 인정해 네 패널을 여섯으로 세분하는 해설 개요를 제시한다. 각 편집 표지가 갈등의 해소나 박해의 그침 뒤에 놓인다는 관찰은 하나의 신학을 함축한다. 복음은 고난에도, 심지어 고난을 통해 번성한다. Marguerat이 사도행전의 참 주인공을 <span class="gw">λόγος</span>라 부른 데 대해, <span class="c pet">P</span> Peterson은 승천하신 주 예수가 중심 인물이며 그가 말씀과 성령을 써서 인간 대리자를 통해 자기 목적을 세상에서 이룬다고 정리한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 5. Peterson의 해설 개요(여섯 패널)</caption>
+      <thead><tr><th>부</th><th>본문</th><th>제목</th></tr></thead>
+      <tbody>
+        <tr><td class="head">I</td><td>1:1–14</td><td>서론과 재개 — 부활하신 주의 선교 계획</td></tr>
+        <tr><td class="head">II</td><td>1:15–6:7</td><td>예루살렘의 말씀</td></tr>
+        <tr><td class="head">III</td><td>6:8–9:31</td><td>말씀이 예루살렘 밖으로 나가다</td></tr>
+        <tr><td class="head">IV</td><td>9:32–12:25</td><td>말씀이 유대와 수리아에서 전진하다</td></tr>
+        <tr><td class="head">V</td><td>13:1–16:5</td><td>말씀이 구브로와 소아시아로</td></tr>
+        <tr><td class="head">VI</td><td>16:6–18:22</td><td>말씀이 유럽으로</td></tr>
+        <tr><td class="head">VII</td><td>18:23–20:38</td><td>에베소의 말씀 — 자유인 바울 선교의 절정</td></tr>
+        <tr><td class="head">VIII</td><td>21:1–28:31</td><td>바울의 마지막 여정 — 예루살렘과 로마로</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 9 ═══════ -->
+  <section class="part" id="s9">
+    <div class="part-head">
+      <div class="gk">ἀπολογία</div>
+      <div class="eyebrow">PURPOSE</div>
+      <h2>9. 목적 — 첫 변증가 누가</h2>
+      <div class="gloss">아폴로기아 — 변호</div>
+    </div>
+
+    <p><span class="c bruce">B</span> Bruce는 사도행전이 정보 전달을 넘어 변증의 음조를 낸다고 본다. 누가가 글을 쓸 때 기독교는 "어디서든지 반대를 받는" 운동이었다(28:22). 로마의 법과 질서를 중시하는 이들의 눈에 그 창시자가 총독의 판결로 처형되었다는 사실은 심각한 부담이었다. 누가는 이 부담에 정면으로 답한다. 복음서에서 예수의 처형을 명백한 오심(誤審)으로 제시하고, 사도행전에서는 여러 관리가 바울과 선교사들에게 호의를 보이거나 적어도 고소에 근거가 없음을 인정하는 장면을 잇는다. 구브로의 총독, 빌립보의 상급 정무관, 고린도의 갈리오, 에베소의 아시아 관리들, 벨릭스와 베스도, 아그립바 2세가 그 명단이다.</p>
+
+    <p><span class="c pet">P</span> Peterson은 Bruce의 유명한 규정을 인용한다. 누가는 '첫 기독교 변증가'라 불릴 만하며, 2세기 세 변증 유형의 1세기 원형을 제공한다. 이교를 향한 변증(기독교는 참, 이교는 거짓), 유대교를 향한 변증(기독교가 참 유대교의 성취), 정치적 고발을 향한 변증(기독교는 로마 법에 무해)이다.</p>
+
+    <div class="note"><div class="tt">변증과 신앙 강화의 결합</div><span class="c bruce">B</span> Bruce는 누가가 유대 당국을 소요의 주된 책임자로 지목하되 원칙적으로 반(反)유대는 아니라고 본다. 누가에게 기독교는 이스라엘 종교의 정당한 성취다. <span class="c pet">P</span> O'Neill의 독법처럼 누가–행전이 교육받은 독자를 그리스도인이 되도록 설득하려는 변증이라는 견해도 있다. 두 목적, 곧 밖을 향한 변호와 안을 향한 확신 강화가 겹친다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 10 ═══════ -->
+  <section class="part" id="s10">
+    <div class="part-head">
+      <div class="gk">θεολογία</div>
+      <div class="eyebrow">THEOLOGY</div>
+      <h2>10. 신학의 열 갈래</h2>
+      <div class="gloss">테올로기아 — 신학</div>
+    </div>
+
+    <p><span class="c pet">P</span> Peterson은 사도행전 신학을 열 갈래로 정리한다. 아래 표는 각 주제의 축과 대표 본문을 요약한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 6. 사도행전 신학 열 주제(<span class="c pet">P</span> Peterson 정리)</caption>
+      <thead><tr><th>주제</th><th>축</th><th>대표 본문</th></tr></thead>
+      <tbody>
+        <tr><td class="head">하나님과 그 계획</td><td>사건 배후의 신적 주권, 구원사의 성취</td><td>2:23; 4:28; 13:27–33</td></tr>
+        <tr><td class="head">메시아·주 예수</td><td>승천하신 주가 서사의 중심, 다윗의 자손·주</td><td>2:36; 3:13–15; 13:32–37</td></tr>
+        <tr><td class="head">성령</td><td>확장의 동력, 권능·증거·인도</td><td>1:8; 2:1–4; 10:44–47</td></tr>
+        <tr><td class="head">구원</td><td>회개·믿음으로 들어가는 종말론적 구원</td><td>2:38; 4:12; 16:31</td></tr>
+        <tr><td class="head">복음</td><td>하나님 나라와 그리스도의 일에 관한 케리그마</td><td>8:12; 28:31</td></tr>
+        <tr><td class="head">그리스도의 속죄</td><td>피로 사신 교회, 새 언약</td><td>20:28; 13:38–39</td></tr>
+        <tr><td class="head">증인과 선교</td><td>목격 증언의 계승, 땅 끝을 향한 파송</td><td>1:8; 1:21–22; 26:16–18</td></tr>
+        <tr><td class="head">기적</td><td>말씀을 확증하는 표적과 능한 일</td><td>3:1–10; 9:32–42</td></tr>
+        <tr><td class="head">마술과 귀신</td><td>복음이 이기는 어둠의 세력</td><td>8:9–24; 19:11–20</td></tr>
+        <tr><td class="head">교회</td><td>말씀의 성장과 함께 자라는 공동체</td><td>2:41–47; 9:31</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="note"><div class="tt">성령 강조</div><span class="c bruce">B</span> Bruce는 성령의 주도적 역할이 누가의 으뜸 신학 주제라고 본다. 사도행전 어디에서도 교회적 의미의 사도 계승이나 정통 전승의 계승은 나타나지 않으며, 나타나는 것은 '그리스도를 향한 증언의 계승'이다. <span class="c pet">P</span> 증언 술어는 둘째 권에서 첫째 권보다 훨씬 자주 쓰인다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 11 ═══════ -->
+  <section class="part" id="s11">
+    <div class="part-head">
+      <div class="gk">ἀποκατάστασις</div>
+      <div class="eyebrow">RESTORATION</div>
+      <h2>11. 이스라엘의 회복</h2>
+      <div class="gloss">아포카타스타시스 — 회복</div>
+    </div>
+
+    <div class="krv"><b>행 1:6</b>그들이 모였을 때에 예수께 여쭈어 이르되 주께서 이스라엘 나라를 회복하심이 이 때니이까 하니</div>
+
+    <p><span class="c sch">S</span> Schnabel은 1:6의 물음을 사도행전 전체를 여는 신학적 열쇠로 읽는다. 예수는 회복 자체를 부정하지도, 무기한 유보로 밀어내지도 않는다. 7–8절이 한 문장이라는 점과 사도행전 전체의 강조를 근거로, Schnabel은 예수의 답을 이렇게 정리한다. 예수를 믿는 유대인 신자 공동체의 발흥이 <strong>이스라엘 회복이라는 전통적 소망이 성취되는 자리</strong>다.</p>
+
+    <p><span class="c sch">S</span> 답의 앞부분(7절)은 회복의 연대적 세부를 아버지의 주권에 맡긴다. 복수형 "때(<span class="gw">χρόνοι</span>)와 시기(<span class="gw">καιροί</span>)"는 회복의 시작만이 아니라 그 전개의 구체적 국면을 가리킨다. 답의 뒷부분(8절)은 회복의 시작과 실체를 설명한다. 이스라엘 안에서 하나님 통치의 회복이 성령의 도래로 시작되고, 예루살렘에서 시작해 땅 끝에 이르는 그들의 선포 활동으로 이어진다. Schnabel은 이 답의 무게 중심이 이스라엘의 왕권에서 <em>열방에 하나님의 구원의 빛을 가져가는 종으로서의 과업</em>으로 옮겨진다고 본다.</p>
+
+    <p><span class="c sch">S</span> 베드로의 설교(3:19–25)와 초기 여러 장이 이스라엘의 회복을 미래로 바라보는 한편, 예루살렘과 그 너머에서 많은 유대인이 예수를 메시아로 믿고 신자 공동체가 성장하는 사태는, 예루살렘 공회에서 야고보가 아모스 9:11–12를 인용하며 회복이 <em>원리상</em> 완성되었다고 선언하는 데(15:13–21)로 이어진다. 이 독법은 맛디아 선출(1:15–26)의 신학적 의의도 밝힌다. 예수께서 열둘을 이스라엘의 재편·회복의 표지로 부르셨으므로(눅 22:29–30), 열둘의 수를 채우는 일이 증인 사역의 개시 전에 요구된다.</p>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 12 ═══════ -->
+  <section class="part" id="s12">
+    <div class="part-head">
+      <div class="gk">κείμενον</div>
+      <div class="eyebrow">TEXT</div>
+      <h2>12. 본문 — 서방 본문 문제</h2>
+      <div class="gloss">케이메논 — 본문</div>
+    </div>
+
+    <p>사도행전은 신약 어느 책보다 본문 전승의 폭이 크다. 두 큰 흐름이 나란히 전해진다. 알렉산드리아 본문(비교적 짧은 형)과 <strong>서방 본문</strong>(더 길고 부연이 많은 형)이다. 서방 본문의 대표 증인은 5–6세기 이중언어 사본 코덱스 베자(Codex Bezae, D)이며, 사도행전에서 알렉산드리아 본문보다 약 8~10% 길다.</p>
+
+    <p><span class="c bruce">B</span> Bruce는 서방 본문이 신학적 판단에 영향을 주는 여러 지점을 짚는다. 11:28의 서방 본문은 안디옥에서의 사건을 '우리가 함께 모였을 때'라는 '우리' 단락 형태로 전해 서술자가 안디옥 사람이라는 함의를 낳고, 또 다른 이른 교정본은 20:13의 '우리' 서사에 누가라는 이름을 끌어들인다. 1:2의 서방 본문은 예수께서 '성령으로 사도들에게 복음을 전하라 명하셨다'로 읽어 위임의 내용을 부연한다.</p>
+
+    <div class="note"><div class="tt">본문과 해석의 경계</div>본 서가의 심층연구는 NA28의 본문을 기준으로 삼고, 서방 본문의 이독(異讀)이 해석에 영향을 줄 때 절 범위 주해에서 별도로 짚는다. 개역개정은 알렉산드리아 계열을 반영한 표준 본문을 옮기므로, 서방 본문의 부연은 개역개정 본문에는 나타나지 않는다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 13 ═══════ -->
+  <section class="part" id="s13">
+    <div class="part-head">
+      <div class="gk">ὁδός</div>
+      <div class="eyebrow">CHRONOLOGY</div>
+      <h2>13. 연대기와 지리의 진행</h2>
+      <div class="gloss">호도스 — 길</div>
+    </div>
+
+    <p>사도행전은 한 증언이 예루살렘에서 로마로 옮겨 가는 약 삼십 년의 이동을 담는다. 아래 표는 사건의 큰 흐름과 지리의 이동을 요약한다. 연대 수치는 세 주석과 표준 신약 연대기가 대체로 수렴하는 범위를 적되, 개별 사건의 정밀 연도는 논쟁이 남아 있음을 전제한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 7. 예루살렘에서 로마까지 — 사건과 지리</caption>
+      <thead><tr><th>대략 연대</th><th>본문</th><th>사건</th><th>지리</th></tr></thead>
+      <tbody>
+        <tr><td class="head">주후 30년경</td><td>1–2장</td><td>승천, 오순절 성령 강림, 예루살렘 교회의 탄생</td><td>예루살렘</td></tr>
+        <tr><td class="head">30–34년</td><td>3–7장</td><td>사도의 표적, 산헤드린과의 충돌, 스데반의 순교</td><td>예루살렘</td></tr>
+        <tr><td class="head">34–35년경</td><td>8–9장</td><td>흩어짐, 사마리아와 에디오피아 내시, 사울의 회심</td><td>유대·사마리아·다메섹</td></tr>
+        <tr><td class="head">40년경</td><td>10–11장</td><td>고넬료, 이방인 성령 강림, 안디옥 교회</td><td>가이사랴·안디옥</td></tr>
+        <tr><td class="head">44년</td><td>12장</td><td>야고보의 순교, 베드로의 석방, 헤롯의 죽음</td><td>예루살렘</td></tr>
+        <tr><td class="head">46–48년경</td><td>13–14장</td><td>1차 선교 여행 — 구브로와 남갈라디아</td><td>구브로·소아시아</td></tr>
+        <tr><td class="head">48–49년경</td><td>15장</td><td>예루살렘 공회 — 이방인의 조건</td><td>예루살렘</td></tr>
+        <tr><td class="head">49–52년경</td><td>16–18장</td><td>2차 선교 여행 — 마게도냐·아덴·고린도</td><td>유럽</td></tr>
+        <tr><td class="head">53–57년경</td><td>18–20장</td><td>3차 선교 여행 — 에베소 사역과 밀레도 고별</td><td>에베소·에게해</td></tr>
+        <tr><td class="head">57년경</td><td>21–23장</td><td>예루살렘 체포, 산헤드린 앞의 변론</td><td>예루살렘</td></tr>
+        <tr><td class="head">57–59년경</td><td>24–26장</td><td>벨릭스·베스도·아그립바 앞의 변론, 가이사에 상소</td><td>가이사랴</td></tr>
+        <tr><td class="head">59–60년경</td><td>27장</td><td>지중해 항해와 파선</td><td>지중해·멜리데</td></tr>
+        <tr><td class="head">60–62년경</td><td>28장</td><td>로마 도착, 이 년간 자유로운 선포</td><td>로마</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="caveat"><span class="tt">연대 유보</span> 위 연도는 갈리오 비문(약 51–52년)과 헤롯 아그립바 1세의 죽음(44년) 같은 고정점에 맞춘 표준 범위다. 세부 연도는 주석마다 한두 해 차이가 있으며, 개별 장의 주해에서 필요할 때 재확인한다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 14 ═══════ -->
+  <section class="part" id="s14">
+    <div class="part-head">
+      <div class="gk">κεφάλαια</div>
+      <div class="eyebrow">CHAPTERS</div>
+      <h2>14. 장별 안내</h2>
+      <div class="gloss">케팔라이아 — 장(章)</div>
+    </div>
+
+    <p>스물여덟 장을 여덟 패널의 흐름에 맞춰 요약한다. 각 장의 심층연구가 완성되는 대로 서가에서 연결한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 8. 스물여덟 장 개요</caption>
+      <thead><tr><th>장</th><th>표제</th><th>요지</th></tr></thead>
+      <tbody>
+        <tr><td class="head">1</td><td>승천과 맛디아</td><td>부활 후 사십 일, 증인 파송의 예언(1:8), 승천, 유다의 자리를 채움</td></tr>
+        <tr><td class="head">2</td><td>오순절</td><td>성령 강림, 방언, 베드로의 요엘·시편 설교, 삼천 명, 첫 공동체</td></tr>
+        <tr><td class="head">3</td><td>미문의 표적</td><td>못 걷는 이의 치유, 솔로몬 행각의 종 기독론 설교</td></tr>
+        <tr><td class="head">4</td><td>첫 심문</td><td>공회 앞 베드로와 요한, "다른 이로써는 구원을 받을 수 없나니"(4:12)</td></tr>
+        <tr><td class="head">5</td><td>아나니아와 삽비라</td><td>공동체 안의 기만과 심판, 사도의 표적, 가말리엘의 충고</td></tr>
+        <tr><td class="head">6</td><td>일곱을 세움</td><td>과부 배급 갈등의 해소, 스데반의 등장</td></tr>
+        <tr><td class="head">7</td><td>스데반의 변론</td><td>구원사 개관과 성전 비판, 첫 순교</td></tr>
+        <tr><td class="head">8</td><td>흩어짐과 확장</td><td>사마리아의 빌립, 시몬, 에디오피아 내시</td></tr>
+        <tr><td class="head">9</td><td>사울의 회심</td><td>다메섹 도상, 아나니아, 예루살렘과 다소</td></tr>
+        <tr><td class="head">10</td><td>고넬료</td><td>이방인에게 부어진 성령, 정결의 재정의</td></tr>
+        <tr><td class="head">11</td><td>안디옥 교회</td><td>베드로의 해명, '그리스도인'이라는 이름</td></tr>
+        <tr><td class="head">12</td><td>헤롯과 베드로</td><td>야고보의 순교, 베드로의 석방, 헤롯의 죽음</td></tr>
+        <tr><td class="head">13</td><td>1차 여행 개시</td><td>안디옥의 파송, 구브로, 비시디아 안디옥 설교</td></tr>
+        <tr><td class="head">14</td><td>이고니온과 루스드라</td><td>표적과 오해, 돌에 맞음, 교회의 조직</td></tr>
+        <tr><td class="head">15</td><td>예루살렘 공회</td><td>이방인의 조건, 야고보의 판결, 편지</td></tr>
+        <tr><td class="head">16</td><td>유럽 진입</td><td>마게도냐 환상, 루디아, 빌립보 옥중 찬송</td></tr>
+        <tr><td class="head">17</td><td>데살로니가에서 아덴까지</td><td>베뢰아의 상고, 아레오바고 연설</td></tr>
+        <tr><td class="head">18</td><td>고린도</td><td>브리스길라와 아굴라, 갈리오의 판결, 아볼로</td></tr>
+        <tr><td class="head">19</td><td>에베소</td><td>두란노 강론, 마술서를 태움, 은장색의 소요</td></tr>
+        <tr><td class="head">20</td><td>밀레도 고별</td><td>유두고, 에베소 장로에게 남긴 고별 담화</td></tr>
+        <tr><td class="head">21</td><td>예루살렘 도착과 체포</td><td>경고, 서원, 성전에서의 소요와 체포</td></tr>
+        <tr><td class="head">22</td><td>층대 위의 변론</td><td>회심 간증, 로마 시민권</td></tr>
+        <tr><td class="head">23</td><td>공회와 음모</td><td>바리새·사두개의 분열, 가이사랴 이송</td></tr>
+        <tr><td class="head">24</td><td>벨릭스 앞에서</td><td>더둘로의 고소, 부활 신앙의 변호</td></tr>
+        <tr><td class="head">25</td><td>베스도와 상소</td><td>"가이사께 상소하노라", 아그립바의 등장</td></tr>
+        <tr><td class="head">26</td><td>아그립바 앞에서</td><td>선교 생애의 절정적 변론</td></tr>
+        <tr><td class="head">27</td><td>항해와 파선</td><td>지중해 폭풍, 멜리데 상륙</td></tr>
+        <tr><td class="head">28</td><td>로마</td><td>독사 사건, 유대 지도자와의 대화, 이 년의 자유로운 선포</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <!-- ═══════ 15 ═══════ -->
+  <section class="part" id="s15">
+    <div class="part-head">
+      <div class="gk">ὑπομνήματα</div>
+      <div class="eyebrow">SOURCES</div>
+      <h2>15. 주석 스파인</h2>
+      <div class="gloss">휘폼네마타 — 주석·비망록</div>
+    </div>
+
+    <p>사도행전 서가의 주석 스파인은 세 종이며, 셋을 대등한 축으로 삼아 절 범위마다 대조한다.</p>
+
+    <div class="tbl-wrap">
+    <table>
+      <caption>표 9. 세 주석의 성격</caption>
+      <thead><tr><th>칩</th><th>주석</th><th>판본</th><th>해석 축</th></tr></thead>
+      <tbody>
+        <tr><td class="head"><span class="c bruce">B</span> Bruce</td><td><i>The Book of Acts</i></td><td>NICNT, 개정판 1988</td><td>역사·문헌학·정경사. 변증적 틀, 로마 세계의 지리와 제도, 서방 본문 문제.</td></tr>
+        <tr><td class="head"><span class="c pet">P</span> Peterson</td><td><i>The Acts of the Apostles</i></td><td>PNTC 2009</td><td>신학·목회·서사. 누가–행전 통일성, 말씀의 전진 구조, 열 갈래 신학.</td></tr>
+        <tr><td class="head"><span class="c sch">S</span> Schnabel</td><td><i>Acts</i></td><td>ZECNT 2012</td><td>문법·주해·적용. 구문 도해, 이스라엘 회복 논지, 역사·지리 심층 정보와 적용.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><span class="c sec">재</span>로 표기하는 2차 인용은 세 주석이 인용·평가한 범위에서만 쓴다. Barrett(ICC), Fitzmyer(AB), Haenchen, Conzelmann, Witherington, Keener, Marguerat, Dodd, Cadbury, Ramsay 등이 여기 든다. 직접 확인은 세 주석에 한한다.</p>
+
+    <div class="caveat"><span class="tt">개역개정 표기</span> 본 서가의 모든 성경 인용은 개역개정 4판을 기준으로 하며, 사이트 본문 데이터와 단어 단위로 대조했다. 그리스어는 NA28을 병기한다. 다른 번역을 인용할 경우 괄호로 판본을 밝힌다.</div>
+    <div class="back"><a href="#top">↑ 처음으로</a></div>
+  </section>
+
+  <footer>
+    사도행전 종합 개관 · 성서 연구 서고<br>
+    주 자료 — Bruce, <i>The Book of Acts</i>(NICNT, 1988) · Peterson, <i>The Acts of the Apostles</i>(PNTC, 2009) · Schnabel, <i>Acts</i>(ZECNT, 2012). 성경 본문은 개역개정 4판, 그리스어는 NA28. 2차 인용은 세 주석의 인용 범위에 한한다.
+  </footer>
+</main>
+</div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

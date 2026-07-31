@@ -1,26 +1,47 @@
 {
-  "package": "acts-shelf-v1",
+  "package": "acts-shelf-v2",
   "target": "Gyu1718/biblestudygyu",
+  "created": "2026-07-31",
   "files": [
     {
       "path": "README_ACTS_PACKAGE.md",
-      "bytes": 1075,
-      "sha256": "2bd7e850c5716d621f11bde9fbd5e4d56e85d0e3dc57874d2b346ef7618dc9ae"
+      "bytes": 1565,
+      "sha256": "96ce687a155e5c042aa520c559d603fa9663f4c1c22def4bcb3c84d7cbe76ffe"
     },
     {
       "path": "catalog.js",
-      "bytes": 8732,
-      "sha256": "b0ba5eb629fd9f6550c09bde524a31a389e6b12c8d7083d98cc24346adf4d41b"
+      "bytes": 8736,
+      "sha256": "c3e70aee2d3fc313c84ff70df9d69a392bf69f43eb080f0384fe7004fe548919"
     },
     {
       "path": "nt/acts/ch01.html",
-      "bytes": 66326,
-      "sha256": "7cf72e4bf48601e7150b6765c933aea91fc38590dfca4d178eed2ad423ed8402"
+      "bytes": 66554,
+      "sha256": "55a86951dacc17c8699724a9d44f8aa261c3e51076c28b15a0f576811fab5221"
+    },
+    {
+      "path": "nt/acts/ch02.html",
+      "bytes": 46093,
+      "sha256": "9a9c706c246d84de189e71c63b8e901d4b4ca369c5a8434ac180df2c65b73221"
+    },
+    {
+      "path": "nt/acts/ch03.html",
+      "bytes": 34815,
+      "sha256": "e784df347dae4e28c196e1c337fb8a482532aabe6fa6916d3638191afd35b3ca"
+    },
+    {
+      "path": "nt/acts/ch04.html",
+      "bytes": 37283,
+      "sha256": "54856da23a126f2018667d8a31fc3c958d13c0ddbb3abd85eba73d0aecdc1a01"
+    },
+    {
+      "path": "nt/acts/ch05.html",
+      "bytes": 38410,
+      "sha256": "31150ffe588d846275dc6e820c28389f8d4a9da310cac9981a0781ffc7681754"
     },
     {
       "path": "nt/acts/index.html",
-      "bytes": 16770,
-      "sha256": "5a39b5423b43f44368a5589baf16af282aa77a8b441229e07c3ea7b1422f7684"
+      "bytes": 17690,
+      "sha256": "3eeb0771dd836f866fae6974293d2716d3223cc0343dab9c54efc7dc4792b244"
     },
     {
       "path": "nt/acts/overview.html",

@@ -51,6 +51,16 @@ window.SITE_CATALOG = {
       script: "heb",
       studies: [
         {
+          id: "genesis",
+          path: "ot/genesis/index.html",
+          title: "창세기 연구 서가",
+          original: "בְּרֵאשִׁית",
+          script: "heb",
+          meta: "표준형 서가 — 성경읽기 50장 · 종합 개관 1편 · 장별 심층연구 15/50편 · 원어 연구 준비 중",
+          desc: "우주의 시작에서 요셉의 관까지, 톨레도트 열 단락을 뼈대로 쉰 장을 배열한다. Hamilton·Wenham·Kidner·Longman·Brueggemann·Keil–Delitzsch 여섯 주석을 대조하며 현재 종합 개관과 1–15장 심층연구를 제공한다.",
+          volumes: 16
+        },
+        {
           id: "nehemiah",
           path: "ot/nehemiah/index.html",
           title: "느헤미야 연구 서가",

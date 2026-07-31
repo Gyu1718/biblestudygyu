@@ -1,24 +1,33 @@
 #!/usr/bin/env python3
-"""content/encyclopedia/**/*.md frontmatter를 assets/data/encyclopedia/index.json으로 변환한다."""
+"""content/encyclopedia/**/*.md frontmatter를 assets/data/encyclopedia/index.json으로 변환한다.
+
+인물(person) 유형은 현재 사전 범위에서 제외한다. 다른 항목에 남아 있는
+미게시 관계 ID는 경고 후 생성 인덱스에서 제외한다.
+"""
 from __future__ import annotations
+
 import json
 import pathlib
 import sys
+
 import frontmatter
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SRC = ROOT / "content" / "encyclopedia"
 OUT = ROOT / "assets" / "data" / "encyclopedia" / "index.json"
-TYPES = {"person", "place", "people", "group", "institution", "object", "event", "concept", "text"}
+TYPES = {"place", "people", "group", "institution", "object", "event", "concept", "text"}
 
 
 def main() -> None:
-    entries, errors, primary_map, seen = [], [], {}, set()
+    entries, errors, warnings, primary_map, seen = [], [], [], {}, set()
     for path in sorted(SRC.rglob("*.md")):
         post = frontmatter.load(path)
         meta = dict(post.metadata)
         meta["_path"] = str(path.relative_to(ROOT))
         if meta.get("status", "draft") != "published":
+            continue
+        if meta.get("type") == "person":
+            warnings.append(f"[{meta['_path']}] person 유형 제외")
             continue
         entries.append(meta)
 
@@ -39,7 +48,7 @@ def main() -> None:
             primary_map[term] = eid
         for relation in entry.get("relations", []) or []:
             if relation not in ids:
-                errors.append(f"[{eid}] relations 미존재 id: {relation}")
+                warnings.append(f"[{eid}] 미게시 관계 제외: {relation}")
 
     if errors:
         print("빌드 실패:")
@@ -60,13 +69,17 @@ def main() -> None:
             "line": entry["summary"]["line"],
             "hover": entry["summary"]["hover"],
             "refs": {key: (entry.get("refs") or {}).get(key, []) for key in ("primary", "key")},
-            "relations": entry.get("relations", []) or [],
+            "relations": [relation for relation in (entry.get("relations", []) or []) if relation in ids],
             "sources": entry.get("sources", []) or [],
             "url": f"entry.html?id={entry['id']}",
         })
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    if warnings:
+        print("빌드 경고:")
+        for warning in warnings:
+            print("  -", warning)
     print(f"성서 지식사전 인덱스 생성: {len(output)}개")
 
 

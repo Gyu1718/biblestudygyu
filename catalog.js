@@ -5,7 +5,7 @@
 window.SITE_CATALOG = {
   site: {
     name: "성서 연구 서고",
-    updated: "2026-07-28"
+    updated: "2026-07-31"
   },
   sections: [
     {
@@ -118,6 +118,16 @@ window.SITE_CATALOG = {
       original: "Καινὴ Διαθήκη",
       script: "grk",
       studies: [
+        {
+          id: "acts",
+          path: "nt/acts/index.html",
+          title: "사도행전 연구 서가",
+          original: "ΠΡΑΞΕΙΣ ΑΠΟΣΤΟΛΩΝ",
+          script: "grk",
+          meta: "표준형 서가 — 성경읽기 · 종합 개관 1편 · 장별 심층연구 1편 완성(28장 예정) · 원어 연구 준비 중",
+          desc: "오순절 성령 강림에서 로마의 셋집까지, 한 증언이 예루살렘에서 땅 끝으로 나아간다. Bruce(NICNT)·Peterson(PNTC)·Schnabel(ZECNT) 세 주석을 절 범위 단위로 종합하고 개역개정 4판과 NA28로 대조한다. 종합 개관과 1장 심층연구를 완성했고 2–28장을 같은 규격으로 이어간다.",
+          volumes: 2
+        },
         {
           id: "romans",
           path: "nt/romans/index.html",

@@ -3,7 +3,7 @@
 
 A corrupt chapter must not prevent healthy chapters or the encyclopedia index
 from being repaired and committed. Strict validation remains a separate step.
-This file is also the explicit pull-request trigger for a repair batch.
+This file is also the explicit pull-request trigger for an idempotent repair batch.
 """
 from __future__ import annotations
 

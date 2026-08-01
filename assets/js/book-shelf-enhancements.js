@@ -34,6 +34,38 @@
   function textOf(node){return (node.textContent||"").toLowerCase().replace(/\s+/g," ").trim()}
   function isComplete(n){return n>=1 && n<=cfg.completed}
   function studyHref(n){return "ch"+String(n).padStart(2,"0")+".html"}
+  function replaceText(root,from,to){
+    if(!root) return;
+    var walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    var nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(function(node){if(node.nodeValue.indexOf(from)>-1)node.nodeValue=node.nodeValue.split(from).join(to)});
+  }
+  function normalizeShelf(){
+    var grid=q(".book-chapter-grid");
+    var readingSection=grid&&grid.closest(".book-shelf-section");
+    if(readingSection&&!readingSection.id)readingSection.id="reading-chapters";
+
+    qa(".chapter-tools").forEach(function(node){node.remove()});
+    qa(".chapter-empty").forEach(function(node){node.remove()});
+
+    if(book==="genesis"){
+      qa(".book-shelf-note,.book-shelf-footer").forEach(function(node){
+        replaceText(node,"15/50편","20/50편");
+        replaceText(node,"15/50","20/50");
+        replaceText(node,"장별 심층연구 15편","장별 심층연구 20편");
+      });
+      qa(".book-spine").forEach(function(spine){
+        var n=chapterOf(spine);
+        if(n>=16&&n<=20&&!q(".band",spine)){
+          var loose=spine.nextElementSibling;
+          if(loose&&loose.classList.contains("band"))spine.appendChild(loose);
+          else{var band=document.createElement("span");band.className="band";spine.appendChild(band)}
+        }
+      });
+    }
+  }
+  normalizeShelf();
+
   function storeLast(n,title){
     if(!n || !isComplete(n)) return;
     try{localStorage.setItem("scriptorium-last-study-"+book,JSON.stringify({chapter:n,title:title||("제 "+n+"장"),href:studyHref(n),savedAt:Date.now()}))}catch(e){}
@@ -75,9 +107,7 @@
   var readingJump=document.createElement("a");readingJump.className="shelf-tool-link";readingJump.href="#reading-chapters";readingJump.textContent="본문 장 목록";quick.appendChild(readingJump);
   var copy=document.createElement("button");copy.type="button";copy.className="shelf-tool-button";copy.textContent="주소 복사";copy.addEventListener("click",copyLink);quick.appendChild(copy);
 
-  var statusLine=q("[data-status-line]",panel);[
-    ["전체","all"],["심층연구 완성","complete"],["준비 중","pending"]
-  ].forEach(function(x){statusLine.appendChild(makeButton(x[0],x[1],"status"))});
+  var statusLine=q("[data-status-line]",panel);[["전체","all"],["심층연구 완성","complete"],["준비 중","pending"]].forEach(function(x){statusLine.appendChild(makeButton(x[0],x[1],"status"))});
   var rangeLine=q("[data-range-line]",panel);cfg.ranges.forEach(function(r){rangeLine.appendChild(makeButton(r.label,r.id,"range"))});
 
   var state={query:"",status:"all",range:"all"};
@@ -86,13 +116,15 @@
   var spines=qa(".book-spine").filter(function(n){return chapterOf(n)!==null});
   var rows=qa("#chapters .book-chapter-row").filter(function(n){return chapterOf(n)!==null});
   var targets=readings.concat(spines,rows);
+  var chapterText={};
+  targets.forEach(function(node){var n=chapterOf(node);if(!n)return;node.dataset.shelfChapter=String(n);chapterText[n]=(chapterText[n]||"")+" "+textOf(node)});
 
   function rangeMatch(n){var r=cfg.ranges.filter(function(x){return x.id===state.range})[0]||cfg.ranges[0];return n>=r.min&&n<=r.max}
   function statusMatch(n){return state.status==="all"||(state.status==="complete"?isComplete(n):!isComplete(n))}
-  function queryMatch(node,n){if(!state.query)return true;var qx=state.query.toLowerCase().trim();var numeric=parseInt(qx.replace(/[^0-9]/g,""),10);if(/\d/.test(qx)&&numeric===n)return true;return textOf(node).indexOf(qx)>-1}
+  function queryMatch(n){if(!state.query)return true;var qx=state.query.toLowerCase().trim();var numeric=parseInt(qx.replace(/[^0-9]/g,""),10);if(/\d/.test(qx)&&numeric===n)return true;return (chapterText[n]||"").indexOf(qx)>-1}
   function apply(){
     var visibleChapters={};
-    targets.forEach(function(node){var n=chapterOf(node);var show=!!n&&rangeMatch(n)&&statusMatch(n)&&queryMatch(node,n);node.dataset.shelfFilterHidden=show?"false":"true";if(show)visibleChapters[n]=true});
+    targets.forEach(function(node){var n=chapterOf(node);var show=!!n&&rangeMatch(n)&&statusMatch(n)&&queryMatch(n);node.dataset.shelfFilterHidden=show?"false":"true";if(show)visibleChapters[n]=true});
     var count=Object.keys(visibleChapters).length;
     result.textContent=count+"개 장 표시 · 완성 "+cfg.completed+"장 · 준비 중 "+(cfg.total-cfg.completed)+"장";
     empty.classList.toggle("show",count===0);

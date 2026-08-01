@@ -140,5 +140,33 @@
 
   var top=document.createElement("button");top.type="button";top.className="shelf-top-button";top.setAttribute("aria-label","맨 위로");top.textContent="↑";top.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});document.body.appendChild(top);
   window.addEventListener("scroll",function(){top.classList.toggle("show",window.scrollY>650)},{passive:true});
+
+  if(book==="acts"){
+    var addendaHref="commentary-addenda.html#ch01";
+    var addendaQuick=document.createElement("a");addendaQuick.className="shelf-tool-link";addendaQuick.href=addendaHref;addendaQuick.textContent="주석·신학 보완 · 1–15장";quick.insertBefore(addendaQuick,copy);
+
+    var topnav=q(".book-shelf-topbar nav");
+    if(topnav&&!q('a[href^="commentary-addenda.html"]',topnav)){
+      var navLink=document.createElement("a");navLink.href=addendaHref;navLink.textContent="주석·신학 보완";topnav.appendChild(navLink);
+    }
+
+    var studyPath=q(".book-path.study");
+    if(studyPath&&!q('.book-path[href^="commentary-addenda.html"]')){
+      var path=document.createElement("a");path.className="book-path";path.href=addendaHref;
+      path.innerHTML='<span class="symbol">ζήτημα</span><span><h3>④ 주석·신학 보완<span class="book-badge">1–15장</span></h3><p>Bruce·Peterson·Schnabel의 해석 차이, 장별 신학 연구 성과, 본문비평·역사성·구원론·교회론의 난제와 쟁점을 보완한다.</p></span><span class="go">보완 연구 →</span>';
+      studyPath.insertAdjacentElement("afterend",path);
+    }
+
+    rows.forEach(function(row){
+      var n=chapterOf(row),actions=q(".book-actions",row);if(!n||n>15||!actions||q('a[href^="commentary-addenda.html"]',actions))return;
+      var a=document.createElement("a");a.href="commentary-addenda.html#ch"+String(n).padStart(2,"0");a.textContent="주석·신학 보완";actions.insertBefore(a,actions.lastElementChild);
+    });
+
+    var latestActions=q("#latest-update .book-actions");
+    if(latestActions&&!q('a[href^="commentary-addenda.html"]',latestActions)){
+      var all=document.createElement("a");all.href=addendaHref;all.textContent="1–15장 보완 연구 전체";latestActions.appendChild(all);
+    }
+  }
+
   apply();
 })();

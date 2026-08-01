@@ -16,6 +16,7 @@
   if (/\/nt\/acts\//i.test(location.pathname) || (document.body && document.body.getAttribute("data-book")==="acts")) {
     if (document.body && document.body.getAttribute("data-kind")==="study") {
       addStyle("assets/css/acts-study-normalize.css?v=20260801.5", "data-acts-study-normalize-css");
+      addStyle("assets/css/acts-study-polish.css?v=20260801.6", "data-acts-study-polish-css");
       addScript("assets/js/acts-layout-normalizer.js?v=20260801.5", "data-acts-layout-normalizer-js");
     }
     addScript("assets/js/acts-chapter-links.js?v=20260801.5", "data-acts-chapter-links-js");

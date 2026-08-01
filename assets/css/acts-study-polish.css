@@ -1,0 +1,76 @@
+/* Acts study visual polish — tighter desktop composition after template normalization */
+@media (min-width:981px){
+  body[data-book="acts"][data-kind="study"] .frame{
+    grid-template-columns:288px minmax(0,1fr)!important;
+  }
+  body[data-book="acts"][data-kind="study"] main{
+    width:min(100%,60rem)!important;
+    max-width:60rem!important;
+    margin:0!important;
+    padding:2.6rem clamp(2.8rem,4.4vw,4.8rem) 6rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] header.hero{
+    padding-bottom:1.55rem!important;
+    margin-bottom:1rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] .hero .gk-title{
+    max-width:52rem!important;
+    font-size:clamp(1.7rem,1.85vw,2rem)!important;
+    line-height:1.2!important;
+    letter-spacing:-.015em!important;
+  }
+  body[data-book="acts"][data-kind="study"] .hero h1{
+    font-size:1.86rem!important;
+    margin:.45rem 0 .5rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] .hero .sub{
+    max-width:50rem!important;
+    font-size:.96rem!important;
+    line-height:1.76!important;
+  }
+  body[data-book="acts"][data-kind="study"] .hero .meta{
+    margin-top:.75rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] .source-panel{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    gap:1.25rem!important;
+    margin:.85rem 0 0!important;
+    padding:.85rem 1rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] .source-panel p{
+    min-width:0!important;
+  }
+  body[data-book="acts"][data-kind="study"] .acts-content>h2,
+  body[data-book="acts"][data-kind="study"] section.part{
+    margin-top:2.7rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] .acts-content>h2,
+  body[data-book="acts"][data-kind="study"] .part-head{
+    padding-top:.95rem!important;
+    margin-bottom:1rem!important;
+  }
+  body[data-book="acts"][data-kind="study"] nav.toc{
+    padding:2rem 1.15rem 3rem!important;
+  }
+}
+@media (min-width:1500px){
+  body[data-book="acts"][data-kind="study"] main{
+    width:62rem!important;
+    max-width:62rem!important;
+    padding-left:5rem!important;
+    padding-right:4.2rem!important;
+  }
+}
+@media (max-width:720px){
+  body[data-book="acts"][data-kind="study"] .hero .gk-title{
+    font-size:1.55rem!important;
+    line-height:1.28!important;
+  }
+  body[data-book="acts"][data-kind="study"] .source-panel{
+    display:block!important;
+  }
+  body[data-book="acts"][data-kind="study"] .source-panel p+p{
+    margin-top:.75rem!important;
+  }
+}

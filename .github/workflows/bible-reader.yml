@@ -29,6 +29,7 @@ on:
       - "tools/apply_bible_reader.py"
       - "tools/build_encyclopedia_index.py"
       - "tools/repair_site_integrity.py"
+      - "tools/run_site_integrity_batch.py"
       - "tools/requirements-encyclopedia.txt"
       - "tools/extract_na28_epub.py"
       - ".github/workflows/bible-reader.yml"
@@ -36,6 +37,7 @@ on:
     branches: [main]
     paths:
       - "tools/repair_site_integrity.py"
+      - "tools/run_site_integrity_batch.py"
       - ".github/workflows/bible-reader.yml"
   workflow_dispatch:
 
@@ -61,8 +63,8 @@ jobs:
       - name: Install encyclopedia build dependencies
         run: python -m pip install -r tools/requirements-encyclopedia.txt
 
-      - name: Repair static-site integrity
-        run: python tools/repair_site_integrity.py --write
+      - name: Repair independent site assets
+        run: python tools/run_site_integrity_batch.py
 
       - name: Apply Romans A-E supplement
         run: python3 tools/apply_romans_patch.py --repo . --write
@@ -72,6 +74,29 @@ jobs:
 
       - name: Apply shared Bible reader
         run: python3 tools/apply_bible_reader.py --write
+
+      - name: Commit generated site changes
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No generated changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for directory in ot nt theology; do
+            if [ -d "$directory" ]; then
+              git add -A "$directory"
+            fi
+          done
+          git add -A assets/data/encyclopedia/index.json tools/site-integrity-report.json
+          if git diff --cached --quiet; then
+            echo "No generated site changes"
+            exit 0
+          fi
+          git commit -m "Apply independent site integrity repairs"
+          git push origin main
 
       - name: Validate Korean Bible corpus
         run: |
@@ -155,26 +180,3 @@ jobs:
 
       - name: Validate shared Bible reader
         run: python3 tools/apply_bible_reader.py --check
-
-      - name: Commit generated site changes
-        shell: bash
-        run: |
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No generated changes"
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for directory in ot nt theology; do
-            if [ -d "$directory" ]; then
-              git add -A "$directory"
-            fi
-          done
-          git add -A assets/data/encyclopedia/index.json
-          if git diff --cached --quiet; then
-            echo "No generated site changes"
-            exit 0
-          fi
-          git commit -m "Apply shared tools and site integrity repairs"
-          git push origin main

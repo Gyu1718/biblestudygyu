@@ -1,0 +1,50 @@
+/* Acts chapter supplemental research */
+body[data-book="acts"][data-kind="study"] .acts-supplement{
+  margin:2.1rem 0 2.5rem;
+  padding:1.15rem 1.25rem 1.2rem;
+  border:1px solid var(--line,#d9d5c9);
+  border-left:5px solid var(--ochre,#a8823c);
+  border-radius:8px;
+  background:linear-gradient(135deg,#fffdf7 0%,var(--panel,#fff) 72%);
+  box-shadow:0 8px 24px rgba(22,53,79,.055);
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-kicker{
+  font:700 .66rem/1.4 var(--sans,sans-serif);
+  letter-spacing:.16em;color:var(--ochre,#a8823c);margin-bottom:.25rem;
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-location{
+  font:500 .72rem/1.55 var(--sans,sans-serif);
+  color:var(--ink-soft,#4a5563);padding-bottom:.7rem;margin-bottom:.85rem;
+  border-bottom:1px solid var(--line,#d9d5c9);
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-body>h3:first-child,
+body[data-book="acts"][data-kind="study"] .acts-supplement-body>h4:first-child{
+  margin-top:.2rem!important;color:var(--lapis-deep,#16354f)!important;
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-body h3{
+  font-size:1.08rem!important;margin:1.45rem 0 .6rem!important;
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-body h4{
+  font-size:.96rem!important;margin:1.25rem 0 .45rem!important;
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-body p{font-size:.95rem;line-height:1.82}
+body[data-book="acts"][data-kind="study"] .acts-supplement-body table{font-size:.82rem!important}
+body[data-book="acts"][data-kind="study"] nav.toc a.supplement-link{
+  color:#f0d79d!important;border-left-color:rgba(168,130,60,.5)!important;
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-fallback{
+  border-left-color:var(--lapis,#1f4e78);
+}
+@media(max-width:720px){
+ body[data-book="acts"][data-kind="study"] .acts-supplement{padding:1rem;margin:1.7rem 0 2rem}
+}
+@media print{
+ body[data-book="acts"][data-kind="study"] .acts-supplement{box-shadow:none;break-inside:avoid}
+}
+
+body[data-book="acts"][data-kind="study"] .acts-supplement-source{
+  margin-top:1rem;padding-top:.65rem;border-top:1px dashed var(--line,#d9d5c9);
+  font:500 .7rem/1.5 var(--sans,sans-serif);text-align:right;
+}
+body[data-book="acts"][data-kind="study"] .acts-supplement-source a{color:var(--lapis,#1f4e78);text-decoration:none}
+body[data-book="acts"][data-kind="study"] .acts-supplement-source a:hover{text-decoration:underline}

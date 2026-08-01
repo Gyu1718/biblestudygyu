@@ -4,6 +4,7 @@ var chapter=parseInt(body.getAttribute("data-chapter")||"0",10);if(!chapter)retu
 var FILES=[];
 if(chapter<=7)FILES.push("sources/supp_ch01-07.md");
 if(chapter===4||chapter===5||(chapter>=8&&chapter<=15))FILES.push("sources/supp_ch08-15.md");
+if(chapter===8||chapter===9)FILES.push("sources/supp_ch08-09.md");
 if(chapter>=10&&chapter<=19)FILES.push("sources/supp_ch10-19.md");
 if(chapter>=20&&chapter<=28)FILES.push("sources/supp_ch20-28.md");
 if(!FILES.length)return;
@@ -79,15 +80,17 @@ function mount(item,index){
   var id="acts-supp-"+String(chapter).padStart(2,"0")+"-"+String(index+1).padStart(2,"0");if(document.getElementById(id))return;
   var box=document.createElement("aside");box.id=id;box.className="acts-supplement";box.setAttribute("aria-label","사도행전 "+chapter+"장 추가 보완 연구");
   box.innerHTML='<div class="acts-supplement-kicker">ADDITIONAL RESEARCH · 추가 보완</div><div class="acts-supplement-location">'+esc(item.marker)+'</div><div class="acts-supplement-body">'+item.html+'</div><div class="acts-supplement-source"><a href="'+esc(item.source)+'">원고 Markdown 보기</a></div>';
-  var h=findHeading(item),part=h&&h.closest?h.closest("section.part"):null,boundary=sectionEnd(h);
-  if(part){var tail=[].slice.call(part.children).find(function(x){return x.classList&&x.classList.contains("back")});part.insertBefore(box,tail||null)}
+  var h=findHeading(item),part=h&&h.closest?h.closest("section.part"):null,boundary=sectionEnd(h),before=/앞에|이전에/.test(item.marker);
+  if(before&&part&&part.parentNode)part.parentNode.insertBefore(box,part);
+  else if(before&&h&&h.parentNode)h.parentNode.insertBefore(box,h);
+  else if(part){var tail=[].slice.call(part.children).find(function(x){return x.classList&&x.classList.contains("back")});part.insertBefore(box,tail||null)}
   else if(boundary)boundary.parentNode.insertBefore(box,boundary);
   else{var pager=document.querySelector("main .chapter-pager,main .chapter-footer-nav");if(pager)pager.parentNode.insertBefore(box,pager);else(document.querySelector("main")||document.body).appendChild(box);box.classList.add("acts-supplement-fallback")}
   var title=box.querySelector("h2,h3,h4");if(!title){title=document.createElement("h3");title.textContent="추가 보완 연구";box.querySelector(".acts-supplement-body").prepend(title)}
   title.id=id+"-title";
   var toc=document.querySelector("nav.toc .toc-links,nav.toc .acts-toc,nav.toc");if(toc){var a=document.createElement("a");a.href="#"+title.id;a.className="lv1 supplement-link";a.textContent="보완 · "+title.textContent.replace(/^쟁점\s*\d+\s*/,"").trim();toc.appendChild(a)}
 }
-Promise.all(FILES.map(function(file){return fetch(file+"?v=20260801.7").then(function(r){if(!r.ok)throw new Error(file+" "+r.status);return r.text()}).then(function(t){return parseFile(t,file)})}))
+Promise.all(FILES.map(function(file){return fetch(file+"?v=20260802.1").then(function(r){if(!r.ok)throw new Error(file+" "+r.status);return r.text()}).then(function(t){return parseFile(t,file)})}))
 .then(function(groups){var all=[];groups.forEach(function(g){all=all.concat(g)});all.forEach(mount)})
 .catch(function(err){console.warn("Acts supplements unavailable",err)});
 })();

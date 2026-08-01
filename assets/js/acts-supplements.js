@@ -75,8 +75,10 @@ function mount(item,index){
   var id="acts-supp-"+String(chapter).padStart(2,"0")+"-"+String(index+1).padStart(2,"0");if(document.getElementById(id))return;
   var box=document.createElement("aside");box.id=id;box.className="acts-supplement";box.setAttribute("aria-label","사도행전 "+chapter+"장 추가 보완 연구");
   box.innerHTML='<div class="acts-supplement-kicker">ADDITIONAL RESEARCH · 추가 보완</div><div class="acts-supplement-location">'+esc(item.marker)+'</div><div class="acts-supplement-body">'+item.html+'</div><div class="acts-supplement-source"><a href="'+esc(item.source)+'">원고 Markdown 보기</a></div>';
-  var h=findHeading(item),boundary=sectionEnd(h);
-  if(boundary)boundary.parentNode.insertBefore(box,boundary);else{var pager=document.querySelector("main .chapter-pager,main .chapter-footer-nav");if(pager)pager.parentNode.insertBefore(box,pager);else(document.querySelector("main")||document.body).appendChild(box);box.classList.add("acts-supplement-fallback")}
+  var h=findHeading(item),part=h&&h.closest?h.closest("section.part"):null,boundary=sectionEnd(h);
+  if(part){var tail=[].slice.call(part.children).find(function(x){return x.classList&&x.classList.contains("back")});part.insertBefore(box,tail||null)}
+  else if(boundary)boundary.parentNode.insertBefore(box,boundary);
+  else{var pager=document.querySelector("main .chapter-pager,main .chapter-footer-nav");if(pager)pager.parentNode.insertBefore(box,pager);else(document.querySelector("main")||document.body).appendChild(box);box.classList.add("acts-supplement-fallback")}
   var title=box.querySelector("h2,h3,h4");if(!title){title=document.createElement("h3");title.textContent="추가 보완 연구";box.querySelector(".acts-supplement-body").prepend(title)}
   title.id=id+"-title";
   var toc=document.querySelector("nav.toc .toc-links,nav.toc .acts-toc,nav.toc");if(toc){var a=document.createElement("a");a.href="#"+title.id;a.className="lv1 supplement-link";a.textContent="보완 · "+title.textContent.replace(/^쟁점\s*\d+\s*/,"").trim();toc.appendChild(a)}

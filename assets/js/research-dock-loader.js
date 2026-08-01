@@ -29,6 +29,11 @@
   addStyle("assets/app.css?v=20260724.2", "data-rd-app-css");
   addStyle("assets/css/study-navigation-policy.css?v=20260725.1", "data-study-navigation-policy-css");
 
+  if (document.body && document.body.classList.contains("book-shelf-page")) {
+    addStyle("assets/css/book-shelf-enhancements.css?v=20260801.2", "data-book-shelf-enhancements-css");
+    addScript("assets/js/book-shelf-enhancements.js?v=20260801.2", "data-book-shelf-enhancements-js");
+  }
+
   if (/\/nt\/romans\//i.test(location.pathname)) {
     addScript("assets/js/romans-supplement.js?v=20260726.1", "data-romans-supplement-js");
   }

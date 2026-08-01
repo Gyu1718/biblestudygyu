@@ -1,1 +1,791 @@
-[{"id":"babylon","type":"place","subtype":"제국 수도","level":"standard","name":{"ko":"바벨론","en":"Babylon","original":"בָּבֶל (bāḇel); Akk. bāb-ilim","translit":""},"match":{"primary":["바벨론"],"contextual":[],"ignore":["바벨탑"],"search":["Babylon","Babel"]},"line":"유프라테스 강가의 대도시, 유다를 멸망시키고 포로를 끌어간 신바벨론 제국의 수도.","hover":"바벨론은 유프라테스 강가의 고대 대도시로, 신바벨론 제국의 수도였다. 느부갓네살 2세가 주전 587년 예루살렘을 멸망시키고 유다 주민을 이곳으로 사로잡아 갔다. 성경에서 바벨론은 뒤에 악과 교만의 상징이 된다.","refs":{"primary":["왕하 24–25","렘 25:1–11","단 1–5"],"key":["대하 36:17–20","창 11:1–9","계 17–18"]},"relations":["babylonian-exile","persia","jerusalem"],"sources":["Eerdmans Dictionary of the Bible, 'Babylon' (David Vanderhooft)"],"url":"entry.html?id=babylon"},{"id":"babylonian-exile","type":"event","subtype":"포로·이산","level":"major","name":{"ko":"바벨론 포로","en":"Babylonian Exile","original":"","translit":""},"match":{"primary":["바벨론 포로","바벨론 유수"],"contextual":[],"ignore":["포로"],"search":["Babylonian Exile","Babylonian Captivity"]},"line":"주전 587년 전후, 유다 주민 상당수가 바벨론으로 사로잡혀 간 시기.","hover":"바벨론 포로는 주전 587/586년경 유다 주민 상당수가 바벨로니아로 끌려간 시기를 가리킨다(대략 587–515년). 예루살렘과 성전이 무너지고 지도층이 이주하면서, 이스라엘 신앙과 구약 전승의 큰 부분이 이 공동체에서 형성되었다.","refs":{"primary":["왕하 24–25","렘 52","겔 1:1–3"],"key":["대하 36:17–21","렘 29:1–14","시 137","스 2"]},"relations":["babylon","jerusalem","return-from-exile","cyrus-decree","persia"],"sources":["Eerdmans Dictionary of the Bible, 'Exile' (D. L. Smith-Christopher)","Dictionary of the OT: Historical Books, 'Exile'"],"url":"entry.html?id=babylonian-exile"},{"id":"cyrus-decree","type":"event","subtype":"칙령·정책","level":"standard","name":{"ko":"고레스 칙령","en":"Edict of Cyrus","original":"","translit":""},"match":{"primary":["고레스 칙령"],"contextual":["고레스의 칙령","고레스의 조서"],"ignore":[],"search":["Edict of Cyrus","Cyrus Decree","Cyrus Cylinder","고레스 원통"]},"line":"유대인의 귀환과 성전 재건을 허락한 고레스의 명령, 두 형태로 전해진다.","hover":"고레스 칙령은 유대인의 귀환과 예루살렘 성전 재건을 허락한 페르시아 왕 고레스의 명령이다. 에스라서에 히브리어 포고문과 아람어 각서 두 형태로 전해지며, 그 진정성과 고레스 원통과의 관계가 학계의 쟁점이다.","refs":{"primary":["스 1:1–4","스 6:3–5","대하 36:22–23"],"key":["스 5:13–17","스 6:14","사 44:28"]},"relations":["return-from-exile","persia","jerusalem"],"sources":["Eerdmans Dictionary of the Bible, 'Cyrus' (Kenneth G. Hoglund)","Dictionary of the OT: Historical Books, 'Cyrus Decree'"],"url":"entry.html?id=cyrus-decree"},{"id":"jerusalem","type":"place","subtype":"수도·성전 도시","level":"major","name":{"ko":"예루살렘","en":"Jerusalem","original":"יְרוּשָׁלַיִם (yĕrûšālayim)","translit":""},"match":{"primary":["예루살렘"],"contextual":["예루살렘 성"],"ignore":["새 예루살렘"],"search":["Jerusalem","Zion","시온"]},"line":"유다의 수도이자 성전이 선 도시, 포로기 이후 예후드 속주의 중심.","hover":"예루살렘은 중앙 산지에 자리한 고대 이스라엘의 으뜸 도시다. 다윗이 도읍으로 삼고 솔로몬이 성전을 세운 뒤 유다의 정치·종교 중심이 되었고, 포로기 이후에는 예후드 속주의 중심으로 재건되었다.","refs":{"primary":["삼하 5:6–10","왕상 6–8","느 1–13"],"key":["대하 36:19","스 1:1–4","슥 8:3","시 137"]},"relations":["babylonian-exile","return-from-exile","babylon"],"sources":["Eerdmans Dictionary of the Bible, 'Jerusalem'","Zondervan Atlas of the Bible (Rasmussen)"],"url":"entry.html?id=jerusalem"},{"id":"persia","type":"people","subtype":"제국·왕조","level":"standard","name":{"ko":"페르시아","en":"Persia","original":"פָּרַס (pāras); O.Pers. Pārsa","translit":""},"match":{"primary":["페르시아","바사"],"contextual":[],"ignore":[],"search":["Persia","Achaemenid","아케메네스"]},"line":"고레스가 세운 근동의 대제국, 유대인의 귀환과 성전 재건을 후원했다.","hover":"페르시아(개역개정 '바사')는 고레스 2세가 세운 아케메네스 왕조의 대제국이다. 인더스에서 이오니아에 이르는 근동을 200년간 지배했고, 피정복민의 성소 복원과 귀환을 허용한 정책으로 유다의 회복을 후원했다.","refs":{"primary":["대하 36:20–23","스 1:1–4","에 1:1–3"],"key":["스 4–6","단 5:28","단 6:28"]},"relations":["cyrus-decree","return-from-exile","babylonian-exile"],"sources":["Eerdmans Dictionary of the Bible, 'Persia'","Dictionary of the OT: Historical Books, 'Persia, Persians'"],"url":"entry.html?id=persia"},{"id":"return-from-exile","type":"event","subtype":"귀환·회복","level":"standard","name":{"ko":"포로 귀환","en":"Return from Exile","original":"","translit":""},"match":{"primary":["포로 귀환"],"contextual":["귀환"],"ignore":[],"search":["Return from Exile","Restoration"]},"line":"고레스 칙령(주전 539) 이후 유대인이 바벨론에서 유다로 돌아온 일련의 흐름.","hover":"포로 귀환은 주전 539년 고레스의 칙령 이후 유대인이 바벨론에서 유다로 돌아온 일련의 흐름이다. 세스바살·스룹바벨의 1차 귀환과 성전 재건, 뒤이은 에스라·느헤미야의 활동으로 예후드 공동체가 재건되었다.","refs":{"primary":["스 1–2","스 7–8","느 2"],"key":["대하 36:22–23","스 3:1–13","슥 8:1–8"]},"relations":["cyrus-decree","jerusalem","babylonian-exile"],"sources":["Eerdmans Dictionary of the Bible, 'Exile'","Dictionary of the OT: Historical Books, 'Ezra', 'Zerubbabel'"],"url":"entry.html?id=return-from-exile"},{"id":"samaria","type":"place","subtype":"지역·수도","level":"standard","name":{"ko":"사마리아","en":"Samaria","original":"שֹׁמְרוֹן (šōmrôn)","translit":""},"match":{"primary":["사마리아"],"contextual":[],"ignore":[],"search":["Samaria","Shomron"]},"line":"북이스라엘의 수도이자 그 일대 지역, 포로기 이후 유다의 이웃 속주.","hover":"사마리아는 북이스라엘 왕국의 수도이며 그 일대 산지 지역의 이름이다. 오므리가 도읍으로 세웠고 주전 722년 앗수르에 함락되었다. 포로기 이후에는 유다 북쪽의 페르시아 속주로, 총독 산발랏의 근거지였다.","refs":{"primary":["왕상 16:24","왕하 17:5–6","느 3:33–34"],"key":["왕하 17:24","스 4:1–3","느 4:1–2"]},"relations":["jerusalem","babylonian-exile"],"sources":["Eerdmans Dictionary of the Bible, 'Samaria'","Ancient Israel's History (Arnold & Hess)"],"url":"entry.html?id=samaria"}]
+[
+  {
+    "id": "babylon",
+    "type": "place",
+    "subtype": "제국 수도",
+    "level": "standard",
+    "name": {
+      "ko": "바벨론",
+      "en": "Babylon",
+      "original": "בָּבֶל (bāḇel); Akk. bāb-ilim",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "바벨론"
+      ],
+      "contextual": [],
+      "ignore": [
+        "바벨탑"
+      ],
+      "search": [
+        "Babylon",
+        "Babel"
+      ]
+    },
+    "line": "유프라테스 강가의 대도시, 유다를 멸망시키고 포로를 끌어간 신바벨론 제국의 수도.",
+    "hover": "바벨론은 유프라테스 강가의 고대 대도시로, 신바벨론 제국의 수도였다. 느부갓네살 2세가 주전 587년 예루살렘을 멸망시키고 유다 주민을 이곳으로 사로잡아 갔다. 성경에서 바벨론은 뒤에 악과 교만의 상징이 된다.",
+    "refs": {
+      "primary": [
+        "왕하 24–25",
+        "렘 25:1–11",
+        "단 1–5"
+      ],
+      "key": [
+        "대하 36:17–20",
+        "창 11:1–9",
+        "계 17–18"
+      ]
+    },
+    "relations": [
+      "babylonian-exile",
+      "persia",
+      "jerusalem"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Babylon' (David Vanderhooft)"
+    ],
+    "url": "entry.html?id=babylon"
+  },
+  {
+    "id": "babylonian-exile",
+    "type": "event",
+    "subtype": "포로·이산",
+    "level": "major",
+    "name": {
+      "ko": "바벨론 포로",
+      "en": "Babylonian Exile",
+      "original": "",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "바벨론 포로",
+        "바벨론 유수"
+      ],
+      "contextual": [],
+      "ignore": [
+        "포로"
+      ],
+      "search": [
+        "Babylonian Exile",
+        "Babylonian Captivity"
+      ]
+    },
+    "line": "주전 587년 전후, 유다 주민 상당수가 바벨론으로 사로잡혀 간 시기.",
+    "hover": "바벨론 포로는 주전 587/586년경 유다 주민 상당수가 바벨로니아로 끌려간 시기를 가리킨다(대략 587–515년). 예루살렘과 성전이 무너지고 지도층이 이주하면서, 이스라엘 신앙과 구약 전승의 큰 부분이 이 공동체에서 형성되었다.",
+    "refs": {
+      "primary": [
+        "왕하 24–25",
+        "렘 52",
+        "겔 1:1–3"
+      ],
+      "key": [
+        "대하 36:17–21",
+        "렘 29:1–14",
+        "시 137",
+        "스 2"
+      ]
+    },
+    "relations": [
+      "babylon",
+      "jerusalem",
+      "return-from-exile",
+      "cyrus-decree",
+      "persia"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Exile' (D. L. Smith-Christopher)",
+      "Dictionary of the OT: Historical Books, 'Exile'"
+    ],
+    "url": "entry.html?id=babylonian-exile"
+  },
+  {
+    "id": "cyrus-decree",
+    "type": "event",
+    "subtype": "칙령·정책",
+    "level": "standard",
+    "name": {
+      "ko": "고레스 칙령",
+      "en": "Edict of Cyrus",
+      "original": "",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "고레스 칙령"
+      ],
+      "contextual": [
+        "고레스의 칙령",
+        "고레스의 조서"
+      ],
+      "ignore": [],
+      "search": [
+        "Edict of Cyrus",
+        "Cyrus Decree",
+        "Cyrus Cylinder",
+        "고레스 원통"
+      ]
+    },
+    "line": "유대인의 귀환과 성전 재건을 허락한 고레스의 명령, 두 형태로 전해진다.",
+    "hover": "고레스 칙령은 유대인의 귀환과 예루살렘 성전 재건을 허락한 페르시아 왕 고레스의 명령이다. 에스라서에 히브리어 포고문과 아람어 각서 두 형태로 전해지며, 그 진정성과 고레스 원통과의 관계가 학계의 쟁점이다.",
+    "refs": {
+      "primary": [
+        "스 1:1–4",
+        "스 6:3–5",
+        "대하 36:22–23"
+      ],
+      "key": [
+        "스 5:13–17",
+        "스 6:14",
+        "사 44:28"
+      ]
+    },
+    "relations": [
+      "return-from-exile",
+      "persia",
+      "jerusalem"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Cyrus' (Kenneth G. Hoglund)",
+      "Dictionary of the OT: Historical Books, 'Cyrus Decree'"
+    ],
+    "url": "entry.html?id=cyrus-decree"
+  },
+  {
+    "id": "high-priesthood",
+    "type": "institution",
+    "subtype": "성전 최고 직분",
+    "level": "major",
+    "name": {
+      "ko": "대제사장직",
+      "en": "High Priesthood",
+      "original": "הַכֹּהֵן הַגָּדוֹל (hakkōhēn haggādôl)",
+      "translit": "hakkōhēn haggādôl"
+    },
+    "match": {
+      "primary": [
+        "대제사장직",
+        "대제사장 제도"
+      ],
+      "contextual": [
+        "대제사장"
+      ],
+      "ignore": [
+        "대제사장 예수아"
+      ],
+      "search": [
+        "High Priesthood",
+        "High Priest",
+        "Chief Priest"
+      ]
+    },
+    "line": "성소와 성전 제의를 대표하고 포로기 이후 공동체의 지도권까지 맡은 최고 제사장 직분.",
+    "hover": "대제사장직은 성소 제의의 최고 책임자에게 부여된 직분이다. 레위기에서는 속죄일 의식을 수행하고 특별한 정결 규정을 지키며, 포로기 이후에는 왕이 없는 예후드 공동체를 대표하는 정치·사회적 역할도 커졌다. 직분의 권한과 계승 방식은 시대마다 변했다.",
+    "refs": {
+      "primary": [
+        "레 16",
+        "레 21:10–15",
+        "민 35:25–28",
+        "학 1:1–14",
+        "슥 3",
+        "느 12:10–26"
+      ],
+      "key": [
+        "레 16:2–34",
+        "레 21:10",
+        "학 1:1",
+        "슥 3:1–10",
+        "느 13:28"
+      ]
+    },
+    "relations": [
+      "levites",
+      "second-temple",
+      "jerusalem",
+      "yehud",
+      "persia"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'High Priest'",
+      {
+        "Dictionary of the OT": "Historical Books, 'Priests and Levites' 및 'Postexilic Temple'"
+      },
+      "Ancient Israel's History (Arnold & Hess), 제사장직과 포로 후기 유다"
+    ],
+    "url": "entry.html?id=high-priesthood"
+  },
+  {
+    "id": "jerusalem",
+    "type": "place",
+    "subtype": "수도·성전 도시",
+    "level": "major",
+    "name": {
+      "ko": "예루살렘",
+      "en": "Jerusalem",
+      "original": "יְרוּשָׁלַיִם (yĕrûšālayim)",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "예루살렘"
+      ],
+      "contextual": [
+        "예루살렘 성"
+      ],
+      "ignore": [
+        "새 예루살렘"
+      ],
+      "search": [
+        "Jerusalem",
+        "Zion",
+        "시온"
+      ]
+    },
+    "line": "유다의 수도이자 성전이 선 도시, 포로기 이후 예후드 속주의 중심.",
+    "hover": "예루살렘은 중앙 산지에 자리한 고대 이스라엘의 으뜸 도시다. 다윗이 도읍으로 삼고 솔로몬이 성전을 세운 뒤 유다의 정치·종교 중심이 되었고, 포로기 이후에는 예후드 속주의 중심으로 재건되었다.",
+    "refs": {
+      "primary": [
+        "삼하 5:6–10",
+        "왕상 6–8",
+        "느 1–13"
+      ],
+      "key": [
+        "대하 36:19",
+        "스 1:1–4",
+        "슥 8:3",
+        "시 137"
+      ]
+    },
+    "relations": [
+      "babylonian-exile",
+      "return-from-exile",
+      "babylon"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Jerusalem'",
+      "Zondervan Atlas of the Bible (Rasmussen)"
+    ],
+    "url": "entry.html?id=jerusalem"
+  },
+  {
+    "id": "jerusalem-wall-rebuilding",
+    "type": "event",
+    "subtype": "도시 방어시설 재건",
+    "level": "major",
+    "name": {
+      "ko": "예루살렘 성벽 재건",
+      "en": "Rebuilding of Jerusalem's Wall",
+      "original": "חוֹמַת יְרוּשָׁלַיִם",
+      "translit": "ḥômat yĕrûšālayim"
+    },
+    "match": {
+      "primary": [
+        "예루살렘 성벽 재건"
+      ],
+      "contextual": [
+        "성벽 재건",
+        "예루살렘 성벽 보수",
+        "느헤미야의 성벽 재건"
+      ],
+      "ignore": [
+        "성벽"
+      ],
+      "search": [
+        "Rebuilding of Jerusalem's Wall",
+        "Jerusalem Wall Rebuilding",
+        "Nehemiah's Wall"
+      ]
+    },
+    "line": "느헤미야가 페르시아의 허가 아래 추진해 52일 만에 완공했다고 기록된 예루살렘 재건 사업.",
+    "hover": "예루살렘 성벽 재건은 아닥사스다의 허가를 받은 느헤미야가 주전 445년경 추진한 도시 방어시설 복구 사업이다. 산발랏·도비야·게셈의 방해 속에서도 본문은 52일 만에 공사가 끝났다고 전한다. 성벽은 방어뿐 아니라 예루살렘 공동체의 자치와 정체성을 재구성하는 경계가 되었다.",
+    "refs": {
+      "primary": [
+        "느 1–6",
+        "느 12:27–43"
+      ],
+      "key": [
+        "느 2:1–20",
+        "느 3:1–32",
+        "느 4:1–23",
+        "느 5:1–19",
+        "느 6:1–16",
+        "느 12:27–43"
+      ]
+    },
+    "relations": [
+      "jerusalem",
+      "yehud",
+      "levites",
+      "second-temple"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Nehemiah'",
+      {
+        "Dictionary of the OT": "Historical Books, 'Nehemiah' 및 예루살렘 재건 관련 항목"
+      },
+      "Ancient Israel's History (Arnold & Hess), 페르시아 시대",
+      "Zondervan Atlas of the Bible, 느헤미야 시대 예루살렘",
+      "김영호, '에스라-느헤미야서의 성전과 성벽 완공에 대한 상관관계 고찰'"
+    ],
+    "url": "entry.html?id=jerusalem-wall-rebuilding"
+  },
+  {
+    "id": "judeans",
+    "type": "people",
+    "subtype": "민족·종교 공동체",
+    "level": "major",
+    "name": {
+      "ko": "유다인",
+      "en": "Judeans",
+      "original": "יְהוּדִים (yĕhûdîm)",
+      "translit": "yĕhûdîm"
+    },
+    "match": {
+      "primary": [
+        "유다인"
+      ],
+      "contextual": [
+        "유대인",
+        "유다 사람들"
+      ],
+      "ignore": [
+        "유다 지파"
+      ],
+      "search": [
+        "Judeans",
+        "Jews",
+        "Yehudim",
+        "유대 민족"
+      ]
+    },
+    "line": "유다 왕국과 예후드에 뿌리를 두고 디아스포라로 확장된 민족·종교 공동체.",
+    "hover": "유다인은 본래 유다 지역의 주민과 유다 왕국에 속한 사람을 가리켰으며, 포로기 이후에는 예후드와 여러 디아스포라에 흩어진 공동체의 민족·종교 정체성을 나타냈다. 성전, 율법, 계보, 관습이 결속의 핵심이 되었지만 지역과 시대에 따라 정체성의 모습은 다양했다.",
+    "refs": {
+      "primary": [
+        "왕하 25",
+        "스 4–10",
+        "느 1–13",
+        "에 2–10",
+        "단 3:8–12"
+      ],
+      "key": [
+        "스 4:12",
+        "느 1:2",
+        "에 2:5",
+        "에 3:4–8",
+        "에 8:17",
+        "렘 29:1–14"
+      ]
+    },
+    "relations": [
+      "yehud",
+      "jerusalem",
+      "babylonian-exile",
+      "return-from-exile",
+      "babylon",
+      "susa",
+      "persia"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Jew' 및 'Judah'",
+      {
+        "Dictionary of the OT": "Historical Books, 포로기와 포로 후기 공동체 관련 항목"
+      },
+      "Ancient Israel's History (Arnold & Hess), 포로기와 페르시아 시대",
+      "The World around the Old Testament, 바벨로니아와 페르시아의 유다인 공동체"
+    ],
+    "url": "entry.html?id=judeans"
+  },
+  {
+    "id": "levites",
+    "type": "group",
+    "subtype": "성전 봉사·교육 집단",
+    "level": "major",
+    "name": {
+      "ko": "레위인",
+      "en": "Levites",
+      "original": "לְוִיִּם (lĕwiyyim)",
+      "translit": "lĕwiyyim"
+    },
+    "match": {
+      "primary": [
+        "레위인"
+      ],
+      "contextual": [
+        "레위 사람",
+        "레위 자손"
+      ],
+      "ignore": [
+        "레위 지파"
+      ],
+      "search": [
+        "Levites",
+        "Levitical",
+        "Levi"
+      ]
+    },
+    "line": "레위 계통으로 이해되며 성막·성전 봉사, 찬양, 교육과 행정을 맡은 종교 집단.",
+    "hover": "레위인은 성경에서 레위의 후손으로 제시되는 종교 봉사 집단이다. 본문 전승에 따라 제사장과의 관계가 다르게 묘사되며, 포로기 이후에는 성전의 찬양·문지기·창고 관리와 율법 교육을 맡는다. 하나의 고정된 직무 집단으로만 설명하기 어렵다.",
+    "refs": {
+      "primary": [
+        "민 3–4",
+        "신 10:8–9",
+        "신 18:1–8",
+        "대상 23–26",
+        "스 2:40–42",
+        "느 8:7–9",
+        "느 12:27–47"
+      ],
+      "key": [
+        "민 3:5–13",
+        "신 18:6–8",
+        "대상 23:24–32",
+        "스 8:15–20",
+        "느 8:7–8",
+        "느 12:44–47"
+      ]
+    },
+    "relations": [
+      "high-priesthood",
+      "second-temple",
+      "jerusalem",
+      "yehud"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Levite'",
+      {
+        "Dictionary of the OT": "Historical Books, 'Priests and Levites'"
+      },
+      "Ancient Israel's History (Arnold & Hess), 성전과 포로 후기 공동체",
+      "The Hebrew and Aramaic Lexicon of the Old Testament, לוי 관련 항목"
+    ],
+    "url": "entry.html?id=levites"
+  },
+  {
+    "id": "persia",
+    "type": "people",
+    "subtype": "제국·왕조",
+    "level": "standard",
+    "name": {
+      "ko": "페르시아",
+      "en": "Persia",
+      "original": "פָּרַס (pāras); O.Pers. Pārsa",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "페르시아",
+        "바사"
+      ],
+      "contextual": [],
+      "ignore": [],
+      "search": [
+        "Persia",
+        "Achaemenid",
+        "아케메네스"
+      ]
+    },
+    "line": "고레스가 세운 근동의 대제국, 유대인의 귀환과 성전 재건을 후원했다.",
+    "hover": "페르시아(개역개정 '바사')는 고레스 2세가 세운 아케메네스 왕조의 대제국이다. 인더스에서 이오니아에 이르는 근동을 200년간 지배했고, 피정복민의 성소 복원과 귀환을 허용한 정책으로 유다의 회복을 후원했다.",
+    "refs": {
+      "primary": [
+        "대하 36:20–23",
+        "스 1:1–4",
+        "에 1:1–3"
+      ],
+      "key": [
+        "스 4–6",
+        "단 5:28",
+        "단 6:28"
+      ]
+    },
+    "relations": [
+      "cyrus-decree",
+      "return-from-exile",
+      "babylonian-exile"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Persia'",
+      "Dictionary of the OT: Historical Books, 'Persia, Persians'"
+    ],
+    "url": "entry.html?id=persia"
+  },
+  {
+    "id": "return-from-exile",
+    "type": "event",
+    "subtype": "귀환·회복",
+    "level": "standard",
+    "name": {
+      "ko": "포로 귀환",
+      "en": "Return from Exile",
+      "original": "",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "포로 귀환"
+      ],
+      "contextual": [
+        "귀환"
+      ],
+      "ignore": [],
+      "search": [
+        "Return from Exile",
+        "Restoration"
+      ]
+    },
+    "line": "고레스 칙령(주전 539) 이후 유대인이 바벨론에서 유다로 돌아온 일련의 흐름.",
+    "hover": "포로 귀환은 주전 539년 고레스의 칙령 이후 유대인이 바벨론에서 유다로 돌아온 일련의 흐름이다. 세스바살·스룹바벨의 1차 귀환과 성전 재건, 뒤이은 에스라·느헤미야의 활동으로 예후드 공동체가 재건되었다.",
+    "refs": {
+      "primary": [
+        "스 1–2",
+        "스 7–8",
+        "느 2"
+      ],
+      "key": [
+        "대하 36:22–23",
+        "스 3:1–13",
+        "슥 8:1–8"
+      ]
+    },
+    "relations": [
+      "cyrus-decree",
+      "jerusalem",
+      "babylonian-exile"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Exile'",
+      "Dictionary of the OT: Historical Books, 'Ezra', 'Zerubbabel'"
+    ],
+    "url": "entry.html?id=return-from-exile"
+  },
+  {
+    "id": "samaria",
+    "type": "place",
+    "subtype": "지역·수도",
+    "level": "standard",
+    "name": {
+      "ko": "사마리아",
+      "en": "Samaria",
+      "original": "שֹׁמְרוֹן (šōmrôn)",
+      "translit": ""
+    },
+    "match": {
+      "primary": [
+        "사마리아"
+      ],
+      "contextual": [],
+      "ignore": [],
+      "search": [
+        "Samaria",
+        "Shomron"
+      ]
+    },
+    "line": "북이스라엘의 수도이자 그 일대 지역, 포로기 이후 유다의 이웃 속주.",
+    "hover": "사마리아는 북이스라엘 왕국의 수도이며 그 일대 산지 지역의 이름이다. 오므리가 도읍으로 세웠고 주전 722년 앗수르에 함락되었다. 포로기 이후에는 유다 북쪽의 페르시아 속주로, 총독 산발랏의 근거지였다.",
+    "refs": {
+      "primary": [
+        "왕상 16:24",
+        "왕하 17:5–6",
+        "느 3:33–34"
+      ],
+      "key": [
+        "왕하 17:24",
+        "스 4:1–3",
+        "느 4:1–2"
+      ]
+    },
+    "relations": [
+      "jerusalem",
+      "babylonian-exile"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Samaria'",
+      "Ancient Israel's History (Arnold & Hess)"
+    ],
+    "url": "entry.html?id=samaria"
+  },
+  {
+    "id": "second-temple",
+    "type": "object",
+    "subtype": "성전 건축물",
+    "level": "major",
+    "name": {
+      "ko": "제2성전",
+      "en": "Second Temple",
+      "original": "בֵּית אֱלָהָא דִּי בִירוּשְׁלֶם",
+      "translit": "bêt ʾĕlāhāʾ dî bîrûšlem"
+    },
+    "match": {
+      "primary": [
+        "제2성전"
+      ],
+      "contextual": [
+        "스룹바벨 성전",
+        "두 번째 성전",
+        "포로 귀환기 성전"
+      ],
+      "ignore": [
+        "성전"
+      ],
+      "search": [
+        "Second Temple",
+        "Zerubbabel's Temple",
+        "Postexilic Temple"
+      ]
+    },
+    "line": "포로 귀환 뒤 예루살렘에 재건되어 주후 70년까지 유다교의 중심이 된 성전.",
+    "hover": "제2성전은 바벨론에 의해 파괴된 솔로몬 성전 자리에 귀환 공동체가 다시 세운 예루살렘 성전이다. 스룹바벨과 대제사장 예수아의 지도 아래 다리오 1세 제6년인 주전 515년경 봉헌되었고, 뒤에 헤롯의 대규모 확장을 거쳐 주후 70년 로마군에게 파괴되었다.",
+    "refs": {
+      "primary": [
+        "스 1–6",
+        "학 1–2",
+        "슥 1–8"
+      ],
+      "key": [
+        "스 3:1–13",
+        "스 5:1–17",
+        "스 6:13–18",
+        "학 1:2–15",
+        "학 2:3–9",
+        "슥 4:6–10"
+      ]
+    },
+    "relations": [
+      "jerusalem",
+      "cyrus-decree",
+      "return-from-exile",
+      "high-priesthood",
+      "levites",
+      "yehud"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Temple' 및 'Second Temple'",
+      {
+        "Dictionary of the OT": "Historical Books, 'Postexilic Temple'"
+      },
+      "Ancient Israel's History (Arnold & Hess), 포로 후기 성전 재건",
+      "Zondervan Atlas of the Bible, 포로 후기 예루살렘"
+    ],
+    "url": "entry.html?id=second-temple"
+  },
+  {
+    "id": "susa",
+    "type": "place",
+    "subtype": "왕궁 도시·엘람 중심지",
+    "level": "major",
+    "name": {
+      "ko": "수산",
+      "en": "Susa",
+      "original": "שׁוּשַׁן (šûšan); O.Pers. Çūšā",
+      "translit": "šûšan"
+    },
+    "match": {
+      "primary": [
+        "수산"
+      ],
+      "contextual": [
+        "수산 궁",
+        "수산 성",
+        "수산 도성"
+      ],
+      "ignore": [],
+      "search": [
+        "Susa",
+        "Shushan",
+        "Shush",
+        "수사"
+      ]
+    },
+    "line": "엘람의 고도이자 페르시아 왕실의 주요 궁정 도시, 느헤미야와 에스더 이야기의 무대.",
+    "hover": "수산은 오늘날 이란 남서부에 있던 엘람의 고도이자 아케메네스 페르시아의 주요 왕궁 도시다. 느헤미야는 이곳에서 예루살렘의 소식을 들었고, 에스더서는 왕궁 구역을 중심 무대로 삼는다. 페르시아의 단일 수도라기보다 왕실이 계절에 따라 머물던 여러 중심지 가운데 하나였다.",
+    "refs": {
+      "primary": [
+        "느 1:1–4",
+        "에 1–10",
+        "단 8:1–2"
+      ],
+      "key": [
+        "에 1:2–9",
+        "에 2:5–8",
+        "에 3:15",
+        "느 1:1",
+        "단 8:2"
+      ]
+    },
+    "relations": [
+      "persia",
+      "judeans",
+      "babylon"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Susa'",
+      "Zondervan Atlas of the Bible, 페르시아 제국과 수산",
+      "Lloyd Llewellyn-Jones, Ancient Persia and the Book of Esther, 'The Citadel of Susa'"
+    ],
+    "url": "entry.html?id=susa"
+  },
+  {
+    "id": "yehud",
+    "type": "place",
+    "subtype": "페르시아 속주",
+    "level": "major",
+    "name": {
+      "ko": "예후드",
+      "en": "Yehud",
+      "original": "יְהוּד (yĕhûd)",
+      "translit": "yĕhûd"
+    },
+    "match": {
+      "primary": [
+        "예후드"
+      ],
+      "contextual": [
+        "예후드 속주",
+        "유다 속주"
+      ],
+      "ignore": [
+        "유다 왕국"
+      ],
+      "search": [
+        "Yehud",
+        "Yehud Medinata",
+        "Persian Judah"
+      ]
+    },
+    "line": "페르시아 시대 예루살렘을 중심으로 형성된 유다 지역의 속주 공동체.",
+    "hover": "예후드는 바벨론 제국 멸망 뒤 페르시아가 유다 지역에 설치한 속주를 가리킨다. 예루살렘과 제2성전을 중심으로 귀환자와 잔류민이 공동체를 이루었고, 스룹바벨과 느헤미야 같은 총독이 제국 통치 아래 활동했다. 경계와 행정적 독립 시점은 논쟁 중이다.",
+    "refs": {
+      "primary": [
+        "스 5:1–17",
+        "스 7:11–26",
+        "느 5:14–18",
+        "학 1:1–15"
+      ],
+      "key": [
+        "스 5:8",
+        "스 6:7",
+        "느 2:7–9",
+        "느 5:14",
+        "학 1:1"
+      ]
+    },
+    "relations": [
+      "persia",
+      "jerusalem",
+      "judeans",
+      "second-temple",
+      "jerusalem-wall-rebuilding"
+    ],
+    "sources": [
+      "Eerdmans Dictionary of the Bible, 'Judah' 및 페르시아 시대 관련 항목",
+      {
+        "Dictionary of the OT": "Historical Books, 'Postexilic Community' 및 'Persia, Persians'"
+      },
+      "Ancient Israel's History (Arnold & Hess), 페르시아 시대 유다",
+      "Zondervan Atlas of the Bible, 페르시아 시대 유다 지도"
+    ],
+    "url": "entry.html?id=yehud"
+  }
+]

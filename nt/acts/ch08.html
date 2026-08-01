@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="스데반의 죽음이 일으킨 박해가 예루살렘 교회를 흩어 놓지만, 흩어진 이들이 도리어 복음을 유대와 사마리아로 실어 나른다. 빌립이 사마리아 성에서 그리스도를 전해 큰 기쁨을 낳고, 마술사 시몬조차 세례를 받으나 성령의 능력을 돈으로 사려다 책망을 듣는다. 이어 빌립은 광야 …">
+<title>사도행전 8장 심층 연구 — 흩어짐과 확장</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='34' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%A0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --bruce:#3c5a83; --pet:#37665a; --sch:#8a4658; --sec:#857f70;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.1rem;font-size:.71rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .site-nav span.off{color:#6f8296;cursor:default}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.2rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;color:#9db6cc;margin:1rem 0 .5rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(7,1fr);gap:.28rem;margin:0 0 1.1rem}
+nav.toc .chapter-jump a,nav.toc .chapter-jump span{display:block;text-align:center;padding:.3rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.72rem;font-weight:700;text-decoration:none}
+nav.toc .chapter-jump a{color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump span{color:#5f7086;border-color:rgba(255,255,255,.08);cursor:default}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.32rem .5rem .32rem .55rem;border-left:2px solid transparent;margin-top:.2rem;line-height:1.5}
+nav.toc a.lv1:hover,nav.toc a.lv1:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:1.5rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.15rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.95rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.82}
+.hero .meta{font-family:var(--sans);font-size:.77rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.6rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.4rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.97rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.krv{background:#f1efe8;border-left:3px solid var(--ochre);padding:.55rem .85rem;margin:.85rem 0;font-size:.93rem;line-height:1.75}
+.krv b{font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;color:var(--ochre);margin-right:.45rem}
+.range{font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);background:#f1efe8;border-left:3px solid var(--ochre);padding:.4rem .8rem;margin:.7rem 0 .3rem;border-radius:0 4px 4px 0}
+.range b{color:var(--lapis);font-weight:700}
+.range a{color:var(--lapis);text-decoration:none;font-weight:700}
+.range a:hover{text-decoration:underline}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.bruce{background:var(--bruce)}.c.pet{background:var(--pet)}.c.sch{background:var(--sch)}.c.sec{background:var(--sec)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.05rem;font-family:var(--sans);font-size:.77rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.15rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.15rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.4rem 0;padding-left:1.05rem;border-left:3px solid var(--line);scroll-margin-top:1rem}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.85rem;color:var(--lapis);display:block;margin-bottom:.3rem}
+.vs p{margin:.5rem 0;font-size:.96rem}
+.tbl-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.back{font-family:var(--sans);font-size:.73rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table,.krv{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+  <link rel="stylesheet" href="../../assets/css/bible-reader.css" data-bible-reader-css>
+  <link rel="stylesheet" href="../../assets/theme.css" data-site-theme>
+  <link rel="stylesheet" href="../../assets/app.css" data-site-app-css>
+
+<style>
+.part > h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+.part > h4{font-size:.97rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+.part blockquote,.part .note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.15rem 0;font-size:.92rem}
+.chapter-footer-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:center;margin-top:4rem;padding-top:1.3rem;border-top:3px double var(--line);font-family:var(--sans);font-size:.82rem}
+.chapter-footer-nav a{color:var(--lapis);text-decoration:none;padding:.65rem .75rem;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+.chapter-footer-nav a:last-child{text-align:right}
+.chapter-footer-nav .shelf{text-align:center}
+@media(max-width:560px){.chapter-footer-nav{grid-template-columns:1fr}.chapter-footer-nav a,.chapter-footer-nav a:last-child{text-align:center}}
+</style>
+</head>
+<body data-book="acts" data-chapter="8" data-kind="study" data-root="../../">
+<div class="frame">
+<nav class="toc" aria-label="사도행전 8장 심층 연구 목차">
+  <div class="site-nav">
+    <a href="./index.html">← 사도행전 서가</a>
+    <a href="../../index.html">서고 홈</a>
+    <a href="../../bible/original.html?book=ACT&amp;chapter=8">성경읽기</a>
+    <a href="./overview.html">종합 개관</a>
+    <span class="off" role="note" aria-disabled="true">원어 연구 준비 중</span>
+  </div>
+  <div class="brand">사도행전 8장 심층 연구</div>
+  <div class="brand-sub">흩어짐과 확장</div>
+  <div class="toc-h">장 이동</div>
+  <div class="chapter-jump">
+    <a href="./ch01.html" aria-label="사도행전 1장으로 이동">1</a><a href="./ch02.html" aria-label="사도행전 2장으로 이동">2</a><a href="./ch03.html" aria-label="사도행전 3장으로 이동">3</a><a href="./ch04.html" aria-label="사도행전 4장으로 이동">4</a><a href="./ch05.html" aria-label="사도행전 5장으로 이동">5</a><a href="./ch06.html" aria-label="사도행전 6장으로 이동">6</a><a href="./ch07.html" aria-label="사도행전 7장으로 이동">7</a>
+    <a href="./ch08.html" aria-current="page" aria-label="사도행전 8장 현재 페이지">8</a><a href="./ch09.html" aria-label="사도행전 9장으로 이동">9</a><a href="./ch10.html" aria-label="사도행전 10장으로 이동">10</a><span aria-label="사도행전 11장 준비 중">11</span><span aria-label="사도행전 12장 준비 중">12</span><span aria-label="사도행전 13장 준비 중">13</span><span aria-label="사도행전 14장 준비 중">14</span>
+    <span aria-label="사도행전 15장 준비 중">15</span><span aria-label="사도행전 16장 준비 중">16</span><span aria-label="사도행전 17장 준비 중">17</span><span aria-label="사도행전 18장 준비 중">18</span><span aria-label="사도행전 19장 준비 중">19</span><span aria-label="사도행전 20장 준비 중">20</span><span aria-label="사도행전 21장 준비 중">21</span>
+    <span aria-label="사도행전 22장 준비 중">22</span><span aria-label="사도행전 23장 준비 중">23</span><span aria-label="사도행전 24장 준비 중">24</span><span aria-label="사도행전 25장 준비 중">25</span><span aria-label="사도행전 26장 준비 중">26</span><span aria-label="사도행전 27장 준비 중">27</span><span aria-label="사도행전 28장 준비 중">28</span>
+  </div>
+  <div class="toc-h">현재 문서 목차</div>
+  <a class="lv1" href="#s0">0. 단락의 짜임</a>
+  <a class="lv1" href="#s1">1. 박해와 흩어짐</a>
+  <a class="lv1" href="#s2">2. 빌립의 사마리아</a>
+  <a class="lv1" href="#s3">3. 성령의 임함</a>
+  <a class="lv1" href="#s4">4. 돈으로 살 수 없는 선물</a>
+  <a class="lv1" href="#s5">5. 에티오피아 내시</a>
+  <a class="lv1" href="#s7">7. 핵심 원어와 문법</a>
+  <a class="lv1" href="#s8">8. 주석가별 독법과 쟁점</a>
+  <a class="lv1" href="#s9">9. 역사·문화 배경</a>
+  <a class="lv1" href="#s10">10. 상호 참조 총람</a>
+  <a class="lv1" href="#s11">11. 신학 종합</a>
+</nav>
+<main id="top">
+  <header class="hero">
+    <div class="gk-title">οἱ μὲν οὖν διασπαρέντες διῆλθον εὐαγγελιζόμενοι</div>
+    <h1>사도행전 8장 · 흩어짐과 확장</h1>
+    <p class="sub">스데반의 죽음이 일으킨 박해가 예루살렘 교회를 흩어 놓지만, 흩어진 이들이 도리어 복음을 유대와 사마리아로 실어 나른다. 빌립이 사마리아 성에서 그리스도를 전해 큰 기쁨을 낳고, 마술사 시몬조차 세례를 받으나 성령의 능력을 돈으로 사려다 책망을 듣는다. 이어 빌립은 광야 길에서 이사야 53장을 읽던 에티오피아 내시를 만나 그 종의 수난을 강해하고, 세례를 베푼다. 1장 8절의 &#x27;사마리아&#x27;가 여기서 성취되기 시작한다.</p>
+    <p class="meta">8장 절 단위 주해 · Bruce·Peterson·Schnabel 종합 · 개역개정 4판 대조 · NA28 병기</p>
+  </header>
+  <div class="legend"><span><b>주석 칩</b></span><span class="c bruce">B</span> Bruce NICNT 1988 · <span class="c pet">P</span> Peterson PNTC 2009 · <span class="c sch">S</span> Schnabel ZECNT 2012 · <span class="c sec">재</span> 재인용(2차)
+</div>
+  <div class="caveat"><span class="tt">확인 전제</span>개역개정 인용은 4판 본문 데이터와 단어 단위로 대조했다. 그리스어는 NA28에 근거한다. 소제목 아래에는 본문 범위만 표기한다.
+</div>
+  <section class="part" id="s0">
+<div class="part-head"><div class="gk">διάταξις</div><div class="eyebrow">STRUCTURE</div><h2>0. 단락의 짜임</h2><div class="gloss">디아탁시스 — 구조</div></div>
+<p><span class="c bruce">B</span> Bruce는 8장을 스데반 순교의 직접 여파로 읽는다. 박해가 신자들을 흩고(8:1–4), 흩어진 빌립이 사마리아에서 복음을 전하며(8:5–25), 이어 광야 길에서 에티오피아 내시를 만난다(8:26–40). <span class="c sch">S</span> Schnabel의 거시 구조에서 8장은 '예루살렘'(1–7장)을 지나 '사마리아·다메섹·가이사랴·안디옥'(8–12장) 단락을 여는 첫 장이며, 8:4–40을 빌립의 사마리아 선교와 내시 회심으로 묶는다.</p>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>단락</th>
+<th>본문</th>
+<th>장면</th>
+<th>핵심어</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>흩어짐</td>
+<td>8:1–4</td>
+<td>큰 박해, 사도 외에 흩어짐, 사울의 잔멸</td>
+<td>두루 다니며 전함</td>
+</tr>
+<tr>
+<td>사마리아</td>
+<td>8:5–13</td>
+<td>빌립의 전파와 표적, 마술사 시몬의 세례</td>
+<td>큰 기쁨</td>
+</tr>
+<tr>
+<td>성령</td>
+<td>8:14–17</td>
+<td>베드로·요한이 안수하니 성령 받음</td>
+<td>안수</td>
+</tr>
+<tr>
+<td>돈</td>
+<td>8:18–24</td>
+<td>시몬이 능력을 돈으로 사려 함</td>
+<td>하나님의 선물</td>
+</tr>
+<tr>
+<td>내시</td>
+<td>8:26–40</td>
+<td>이사야 53장을 읽던 에티오피아 내시의 세례</td>
+<td>무슨 거리낌이</td>
+</tr>
+</tbody>
+</table></div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s1">
+<div class="part-head"><div class="gk">ἐξήγησις</div><div class="eyebrow">EXEGESIS</div><h2>1. 박해와 흩어짐</h2><div class="gloss">엑세게시스 — 본문 주해</div></div>
+<p class="range"><strong>본문 8:1–4</strong> · <a href="../../bible/original.html?book=ACT&amp;chapter=8">성경읽기 →</a></p>
+<p><span class="c bruce">B</span> 개역개정은 "사울은 그가 죽임 당함을 마땅히 여기더라 그 날에 예루살렘에 있는 교회에 큰 박해가 있어 사도 외에는 다 유대와 사마리아 모든 땅으로 흩어지니라"(8:1)로 전한다. Bruce는 사울이 다소 사람으로, 스데반이 논쟁한 자유민 회당(6:9)에 다녔을 수 있다고 본다. 그 역시 스데반처럼 옛 질서와 새 질서의 근본적 양립 불가를 예리하게 통찰했고, 그래서 새 운동을 뿌리 뽑으려 집집이 들어가 남녀를 끌어다 옥에 넘겼다. Bruce는 이 박해가 뜻밖의 결과를 낳았음을 짚는다. 흩어진 이들이 가는 곳마다 복음을 전해, 예루살렘에 갇혀 있던 말씀이 도리어 밖으로 퍼졌다. 박해가 선교의 도구가 된 셈이다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s2">
+<div class="part-head"><div class="gk">ἐξήγησις</div><div class="eyebrow">EXEGESIS</div><h2>2. 빌립의 사마리아</h2><div class="gloss">엑세게시스 — 본문 주해</div></div>
+<p class="range"><strong>본문 8:5–13</strong> · <a href="../../bible/original.html?book=ACT&amp;chapter=8">성경읽기 →</a></p>
+<p><span class="c bruce">B</span> 일곱 중 하나인 빌립이 사마리아 성으로 내려가 그리스도를 전파했다. 귀신이 나가고 중풍병자와 못 걷는 이가 나으니, 그 성에 큰 기쁨이 있었다. Bruce는 오래 반목하던 유대인과 사마리아인 사이에 복음이 다리를 놓기 시작함을 주목한다.</p>
+<p><span class="c bruce">B</span> 그 성에는 시몬이라는 마술사가 있어 '큰 자'로 자처하며 사마리아인을 놀라게 했고, 사람들은 그를 '하나님의 큰 능력'으로 여겼다. 빌립의 표적 앞에서 시몬 자신이 압도되어 '믿고' 세례를 받았다. Bruce는 그 믿음의 성격이 불확실하다고 본다. 진실하되 피상적이고 불충분한 믿음, 곧 요한복음 2:23–25가 말하는 표적에만 근거한 믿음의 한 유형이었다. 그는 참 능력의 원천이 자기 마술을 능가함을 알아보되, 그 능력을 자기 것으로 삼으려는 옛 욕망을 버리지 못했다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s3">
+<div class="part-head"><div class="gk">ἐξήγησις</div><div class="eyebrow">EXEGESIS</div><h2>3. 성령의 임함</h2><div class="gloss">엑세게시스 — 본문 주해</div></div>
+<p class="range"><strong>본문 8:14–17</strong> · <a href="../../bible/original.html?book=ACT&amp;chapter=8">성경읽기 →</a></p>
+<p><span class="c bruce">B</span> 예루살렘 사도들이 사마리아가 하나님의 말씀을 받았다는 소식을 듣고 베드로와 요한을 보냈다. 두 사도가 안수하니 사마리아 신자들이 성령을 받았다. Bruce는 이 대목을 두고 오해를 경계한다. 이 사건은 안수를 통한 성령 수여를 정규 절차로 세우려는 것이 아니라 예외적 사례다. 신약은 일반적으로 믿고 세례받은 자가 이미 하나님의 영을 가진다고 전제한다. Bruce는 오순절의 신자들(2:38–42)에게도, 뒤의 고넬료 집(10:44–48)에도 사도의 안수가 성령을 앞선 언급이 없음을 든다. 바울도 성령을 나눠 주는 능력을 은사 목록에 넣지 않으며(고전 12:4–11), 자기가 세례 준 이가 적음을 감사한다(고전 1:14–16). 유일하게 견줄 사례는 에베소의 제자들(19:1–7)뿐이다.</p>
+<p><span class="c bruce">B</span> Bruce는 사마리아의 성령 지연을 상징적 이유로 설명한다. 오래된 유대-사마리아 분열을 넘어 두 공동체가 한 교회로 묶이려면, 예루살렘 사도들의 손을 통해 성령이 임함으로 그 하나됨이 가시적으로 확인될 필요가 있었다. 예외가 규범이 아니라 화해의 표징이 된 것이다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s4">
+<div class="part-head"><div class="gk">ἐξήγησις</div><div class="eyebrow">EXEGESIS</div><h2>4. 돈으로 살 수 없는 선물</h2><div class="gloss">엑세게시스 — 본문 주해</div></div>
+<p class="range"><strong>본문 8:18–24</strong> · <a href="../../bible/original.html?book=ACT&amp;chapter=8">성경읽기 →</a></p>
+<p><span class="c bruce">B</span> 시몬은 사도의 안수로 성령이 임하는 것을 보고, 그 능력을 자기도 행하도록 돈으로 사려 했다. Bruce는 이 요구가 그의 믿음의 한계를 드러낸다고 본다. 그는 최신 현상이 안수와 결부된 것을 보고, 그 열쇠를 손에 넣으려 했다. 베드로의 답이 준엄하다. 개역개정은 "베드로가 이르되 네가 하나님의 선물을 돈 주고 살 줄로 생각하였으니 네 은과 네가 함께 망할지어다"(8:20)로 전한다. Bruce는 이 이름에서 '성직매매(simony)'라는 말이 나왔음을 짚는다. 하나님의 선물은 사고팔 수 없다.</p>
+<p><span class="c bruce">B</span> 베드로가 회개하고 기도하라 명하자, 시몬은 공포에 사로잡혀 사도들에게 자기를 위해 기도해 달라 간구한다. Bruce는 서방 본문이 시몬이 내내 울었다고 덧붙인 것을 두고, 그가 정서가 불안정한 유형이라면 사실에 가까울 수 있다고 본다. <span class="c sec">재</span> Ehrhardt는 시몬의 겸손한 응답을 높이 사, 격정적인 베드로보다 이 대면에서 시몬이 오히려 낫게 나온다고 평한다. Bruce는 이 판단을 소개하되, 시몬의 믿음이 끝내 온전했는지는 본문이 열어 둔다고 본다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s5">
+<div class="part-head"><div class="gk">ἐξήγησις</div><div class="eyebrow">EXEGESIS</div><h2>5. 에티오피아 내시</h2><div class="gloss">엑세게시스 — 본문 주해</div></div>
+<p class="range"><strong>본문 8:26–40</strong> · <a href="../../bible/original.html?book=ACT&amp;chapter=8">성경읽기 →</a></p>
+<h3>이사야를 읽는 내시 (8:26–35)</h3>
+<p><span class="c bruce">B</span> 주의 사자가 빌립을 예루살렘에서 가사로 내려가는 광야 길로 보낸다. 거기서 그는 에티오피아 여왕 간다게의 국고를 맡은 고관, 곧 예루살렘에 예배하러 왔던 내시를 만난다. Bruce는 이 인물이 이스라엘의 하나님을 경외하는 이방인이었을 것으로 보며, '내시'로도 '고관'으로도 옮길 수 있는 말이 쓰였음을 짚는다. 그가 수레에서 이사야를 소리 내어 읽고 있었다(고대의 독서는 거의 언제나 소리 내어 했다). 마침 그 대목이 이사야 53장, 곧 도수장으로 끌려가는 양처럼 침묵한 종의 노래였다. 빌립이 "읽는 것을 깨닫느냐" 묻자, 내시는 이 예언이 누구를 가리키는지 물었다. 선지자 자신인지, 다른 이인지. Bruce는 이 물음이 오늘까지 학자들의 숙제로 남았음을 짚되, 빌립은 그 종의 수난에서 시작해 예수를 전했다.</p>
+<h3>무슨 거리낌이 있느냐 (8:36–40)</h3>
+<p><span class="c bruce">B</span> 빌립의 강해가 내시의 마음에 이르렀다. 길을 가다 물 있는 곳에 이르자, 개역개정은 "보라 물이 있으니 내가 세례를 받음에 무슨 거리낌이 있느냐"(8:36)로 그의 말을 전한다. Bruce는 이것이 원본문의 서술이며, 서방 본문이 뒷날 빌립의 신앙 확인과 내시의 고백("예수 그리스도가 하나님의 아들이심을 믿노라")을 덧붙였음을 짚는다. 그 첨가는 초기 교회의 세례 관행을 반영한다. 세례 후 내시는 기쁨으로 길을 갔고, Bruce는 그 기쁨이 로마서 14:17의 '성령 안의 기쁨'이라고 본다. 내시가 시야에서 사라지며 누가는 이방 복음화를 건드리기 시작한다. 헬라인은 호메로스 이래 에티오피아인을 세상 끝에 사는 이들로 여겼으니, '땅 끝까지'(1:8)의 예표가 여기 어른거린다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s7">
+<div class="part-head"><div class="gk">λέξεις</div><div class="eyebrow">LANGUAGE</div><h2>7. 핵심 원어와 문법</h2><div class="gloss">렉세이스 — 핵심 원어</div></div>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>그리스어</th>
+<th>음역</th>
+<th>뜻</th>
+<th>절</th>
+<th>관찰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>διασπείρω</td>
+<td>디아스페이로</td>
+<td>흩다</td>
+<td>8:1,4</td>
+<td>박해로 흩어짐이 곧 복음의 파종이 됨.</td>
+</tr>
+<tr>
+<td>εὐαγγελίζομαι</td>
+<td>유앙겔리조마이</td>
+<td>복음을 전하다</td>
+<td>8:4,12,35</td>
+<td>흩어진 이들과 빌립의 사역을 잇는 낱말.</td>
+</tr>
+<tr>
+<td>μαγεύω</td>
+<td>마규오</td>
+<td>마술을 행하다</td>
+<td>8:9</td>
+<td>시몬의 옛 정체. 참 능력과 대조.</td>
+</tr>
+<tr>
+<td>ἡ δωρεὰ τοῦ θεοῦ</td>
+<td>헤 도레아 투 테우</td>
+<td>하나님의 선물</td>
+<td>8:20</td>
+<td>돈으로 살 수 없음. '성직매매'의 어원.</td>
+</tr>
+<tr>
+<td>εὐνοῦχος</td>
+<td>유누코스</td>
+<td>내시·고관</td>
+<td>8:27</td>
+<td>이방 하나님 경외자. 땅 끝의 예표.</td>
+</tr>
+<tr>
+<td>ὁ ἄγγελος κυρίου</td>
+<td>호 앙겔로스 퀴리우</td>
+<td>주의 사자</td>
+<td>8:26</td>
+<td>빌립을 광야 길로 인도함(뒤에 '성령' 8:29).</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>그리스어 표기는 NA28에 근거하되, 정밀 작업 시 형태분석 도구로 재확인할 것.</em></p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s8">
+<div class="part-head"><div class="gk">ἑρμηνεία</div><div class="eyebrow">COMMENTARY</div><h2>8. 주석가별 독법과 쟁점</h2><div class="gloss">헤르메네이아 — 해석</div></div>
+<h3>쟁점 ① 사마리아의 성령 지연은 '견신례'의 근거인가</h3>
+<p><span class="c bruce">B</span> Bruce는 8:14–17을 안수에 의한 성령 수여의 규범으로 읽는 데 반대한다. 신약은 대체로 믿고 세례받은 자가 이미 성령을 가진다고 전제하며(2:38; 10:44–48; 고전 12), 유일한 near-parallel은 에베소 제자(19:1–7)뿐이다. Bruce는 사마리아의 지연을 유대-사마리아 분열을 넘어 한 교회로 묶는 화해의 표징으로 본다. 예외적 상황이 예외적 순서를 낳았다는 것이다.</p>
+<h3>쟁점 ② 시몬의 믿음</h3>
+<p><span class="c bruce">B</span> 시몬이 '믿고' 세례받았다는 서술(8:13)과 그 뒤의 돈 요구(8:18–19) 사이의 긴장을 두고, Bruce는 그의 믿음이 진실하되 표적에만 근거한 피상적 믿음(요 2:23–25 유형)이었다고 본다. <span class="c sec">재</span> Ehrhardt는 시몬의 마지막 응답의 겸손을 높이 평가한다. 본문은 그의 최종 상태를 단정하지 않고 열어 둔다.</p>
+<h3>쟁점 ③ 흩어짐과 1:8의 성취</h3>
+<p><span class="c bruce">B</span> Bruce는 박해로 인한 흩어짐이 1:8의 '온 유대와 사마리아'를 여는 통로가 됨을 짚는다. 사도가 아니라 흩어진 평신도와 빌립 같은 헬라파가 그 선교를 이끌었다. 내시의 회심으로 '땅 끝'의 이방 복음화가 어른거린다. 박해가 하나님의 계획을 꺾기는커녕 그 계획의 도구가 된다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s9">
+<div class="part-head"><div class="gk">ἱστορία</div><div class="eyebrow">CONTEXT</div><h2>9. 역사·문화 배경</h2><div class="gloss">히스토리아 — 역사와 문화</div></div>
+<h3>자유민 회당과 사울</h3>
+<p><span class="c bruce">B</span> 사울은 다소 사람으로, 스데반이 논쟁한 자유민(구레네·알렉산드리아·길리기아·아시아 계) 회당(6:9)에 다녔을 수 있다. 스데반처럼 그도 옛 질서와 새 질서의 양립 불가를 통찰했고, 그래서 더 격렬히 박해했다.</p>
+<h3>사마리아인</h3>
+<p><span class="c bruce">B</span> 사마리아인과 유대인은 오래 반목했다(요 4:9). 사마리아인은 그리심산 예배와 오경만을 지켜, 예루살렘 성전 중심의 유대교와 갈라섰다. 빌립의 사마리아 선교와 예루살렘 사도의 안수가 그 옛 분열을 넘는 첫 다리를 놓는다.</p>
+<h3>에티오피아와 땅 끝</h3>
+<p><span class="c bruce">B</span> 여기서 '에티오피아'는 나일강 상류의 쿠시(누비아) 왕국을 가리키며, '간다게'는 그 여왕의 세습 칭호였다. 헬라인은 호메로스 이래 에티오피아인을 세상 끝에 사는 민족으로 여겼다. 이방 하나님 경외자였던 내시의 회심이, 뒤에 각 도시 교회의 핵이 될 God-fearer 선교의 이른 예다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s10">
+<div class="part-head"><div class="gk">παραπομπαί</div><div class="eyebrow">CROSS-REFERENCES</div><h2>10. 상호 참조 총람</h2><div class="gloss">파라폼파이 — 상호 참조</div></div>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>절</th>
+<th>참조</th>
+<th>관계</th>
+<th>근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:1</td>
+<td>행 1:8; 11:19</td>
+<td>흩어짐이 유대·사마리아 선교를 엶</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+<tr>
+<td>8:4</td>
+<td>행 8:12,35</td>
+<td>흩어진 이들이 복음을 전함</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+<tr>
+<td>8:13</td>
+<td>요 2:23–25</td>
+<td>표적에 근거한 피상적 믿음</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+<tr>
+<td>8:14–17</td>
+<td>행 2:38; 10:44–48; 19:1–7</td>
+<td>믿음·세례와 성령의 관계</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+<tr>
+<td>8:20</td>
+<td>왕하 5:15–16</td>
+<td>하나님의 선물은 돈으로 못 삼</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+<tr>
+<td>8:32–33</td>
+<td>사 53:7–8</td>
+<td>도수장에 끌려가는 종</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+<tr>
+<td>8:39</td>
+<td>롬 14:17</td>
+<td>성령 안의 기쁨</td>
+<td><span class="c bruce">B</span></td>
+</tr>
+</tbody>
+</table></div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section><section class="part" id="s11">
+<div class="part-head"><div class="gk">σύνθεσις</div><div class="eyebrow">SYNTHESIS</div><h2>11. 신학 종합</h2><div class="gloss">쉰테시스 — 종합</div></div>
+<p>8장은 박해가 도리어 복음을 확장하는 역설을 그린다. 세 매듭으로 종합한다.</p>
+<h3>흩어짐이 파종이 되다</h3>
+<p><span class="c bruce">B</span> 스데반의 죽음이 일으킨 박해가 신자들을 흩었으나, 흩어진 이들이 가는 곳마다 복음을 전했다(8:4). 예루살렘에 갇혔던 말씀이 유대와 사마리아로 퍼진다. 1:8의 예언이 사도의 전략이 아니라 박해의 산물로 성취되기 시작한다. 하나님은 대적의 손을 자기 계획의 도구로 쓰신다.</p>
+<h3>능력은 살 수 없다</h3>
+<p><span class="c bruce">B</span> 마술사 시몬의 이야기는 참 능력과 거짓 능력의 대조다. 그는 표적에 압도되어 믿고 세례받았으나, 하나님의 선물을 돈으로 사려다 "네 은과 네가 함께 망할지어다"(8:20)라는 책망을 듣는다. 성령은 조종할 대상이 아니라 값없이 받는 선물이다. 사마리아의 성령 임함(8:17)도 사람의 절차가 아니라 하나님의 주도로, 갈라진 두 공동체를 한 교회로 묶는 화해의 표징이다.</p>
+<h3>땅 끝을 향한 첫걸음</h3>
+<p><span class="c bruce">B</span> 빌립이 이사야 53장을 강해해 에티오피아 내시에게 그 종의 수난을 전하고 세례를 베푼다(8:35–38). 세상 끝에 산다고 여겨진 이방 하나님 경외자의 회심이, '땅 끝까지'(1:8)를 향한 이른 예표가 된다. 내시가 기쁨으로 돌아가고, 다음 장에서 그 이방 선교의 최대 도구가 될 박해자 자신이 무대에 오른다.</p>
+<div class="note">
+<p><strong>9장으로</strong> — 스데반 순교를 지켜보고(7:58) 교회를 잔멸하던 사울(8:3)이, 다메섹 도상에서 자기가 박해하던 그 예수를 만난다. 8장이 그린 확장의 역설이 9장에서 박해자의 회심이라는 더 큰 역설로 이어진다.</p>
+</div>
+
+<p><em>사도행전 8장 심층 연구 · 주 자료 — Bruce(NICNT 1988) · Peterson(PNTC 2009) · Schnabel(ZECNT 2012). 성경 본문은 개역개정 4판(전수 대조), 그리스어는 NA28.</em></p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+  <nav class="chapter-footer-nav" aria-label="장별 연구 이동"><a href="ch07.html">← 7장 스데반의 변론과 순교</a><a class="shelf" href="index.html">사도행전 서가</a><a href="ch09.html">9장 사울의 회심 →</a></nav>
+</main>
+</div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

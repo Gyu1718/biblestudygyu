@@ -1,17 +1,29 @@
 {
-  "package": "genesis-shelf-v2",
+  "package": "acts-shelf-v3",
+  "target": "Gyu1718/biblestudygyu",
   "created": "2026-07-31",
-  "validation_errors": [],
+  "completed_chapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
   "files": [
     {
-      "path": "README_GENESIS_PACKAGE_V2.md",
-      "bytes": 760,
-      "sha256": "51a39794ad90d22c594e46fe62e32a23d06dd1cd49f541de696ced255f3ddffc"
+      "path": "README_ACTS_PACKAGE.md",
+      "bytes": 1473,
+      "sha256": "9f5c467f99ec459b8d58cc349c29171dd30e7a743baaaf84947d631394cb34c8"
     },
     {
       "path": "catalog.js",
-      "bytes": 6729,
-      "sha256": "b257c99fc077ba9346807df3969d25f0a67951820b26aad96f9cf6d5353d5ee5"
+      "bytes": 9388,
+      "sha256": "7d289a7fd87f8613c44bfc662997d0155bc7eac5f84ac6dc08b1483b85709b34"
     },
     {
       "path": "index.html",
@@ -19,134 +31,70 @@
       "sha256": "69634517eb1b6ec983e2f972b16946316c9335f9deb9077939f48059e6dff294"
     },
     {
-      "path": "ot/genesis/ch01.html",
-      "bytes": 72936,
-      "sha256": "a5cb2a8f8e31f489ae73b9dc9031640cb6b12f24b38c08a742903f67695b8432"
+      "path": "nt/acts/ch01.html",
+      "bytes": 68420,
+      "sha256": "fd8c75e5185f6bc813c17089d2b4a338c04e09de670837b01a73bab5f3d4cc71"
     },
     {
-      "path": "ot/genesis/ch02.html",
-      "bytes": 57236,
-      "sha256": "851b73a31d46da9988a13ab51d34baac85155df3c79ea18ff616ff746404ef49"
+      "path": "nt/acts/ch02.html",
+      "bytes": 48022,
+      "sha256": "16ad856cda39f888937d05883efc3c17d561604173b9f47a1407312a2d623edc"
     },
     {
-      "path": "ot/genesis/ch03.html",
-      "bytes": 67977,
-      "sha256": "bef7ebeed89ed96c60d575ca025cb7de31a558106b713ac4871894c814702934"
+      "path": "nt/acts/ch03.html",
+      "bytes": 36728,
+      "sha256": "e4b50aa6a3d780326c7719f093112c55b1a7991854ec471437940e6e62b7ca49"
     },
     {
-      "path": "ot/genesis/ch04.html",
-      "bytes": 60200,
-      "sha256": "b39d75391ec0f580180bd2f796f80675163fc9daecc1aff71b7b91dbed97b8af"
+      "path": "nt/acts/ch04.html",
+      "bytes": 39218,
+      "sha256": "52cd1b48c6163ed5b94c4a3b83fc7640923885c85ee7c2667ca48d79521751a0"
     },
     {
-      "path": "ot/genesis/ch05.html",
-      "bytes": 57212,
-      "sha256": "57f280f2e769e1b7c4e8bfe4fb9b9ffd65a47b88008394db05ee690297d57620"
+      "path": "nt/acts/ch05.html",
+      "bytes": 40330,
+      "sha256": "240555c5ed141e9698cd310e41e80a62c4213891a14dccbc745dff8bd7b2bb72"
     },
     {
-      "path": "ot/genesis/ch06.html",
-      "bytes": 57099,
-      "sha256": "9d1b91bfc68d2a0d369dc0baa9223f44d4268158c948a4e8c34b2c4dd8bb3e23"
+      "path": "nt/acts/ch06.html",
+      "bytes": 35525,
+      "sha256": "777f163a0b9bc86effe9b07b83e972f253a43120850ef1fd731e7214389b1ffb"
     },
     {
-      "path": "ot/genesis/ch07.html",
-      "bytes": 46659,
-      "sha256": "92fe354a3c4f217369d7178924ac2ac21478d96229facd49a73b4da13b6c1c24"
+      "path": "nt/acts/ch07.html",
+      "bytes": 45191,
+      "sha256": "4eb8f76854a3ffcc2bdebb0e394ec2d9b06bd8ff4d9fabf0be6d6e52c0dbd39f"
     },
     {
-      "path": "ot/genesis/ch08.html",
-      "bytes": 39795,
-      "sha256": "49d25c4cf8e9750ad645097c20b1b9270b078539c06a0f270bd22ee24da5cf78"
+      "path": "nt/acts/ch08.html",
+      "bytes": 33628,
+      "sha256": "d41e83aa8e283eadbf37c74397a25f2a00458c05c8a8c00620bde91411d31c99"
     },
     {
-      "path": "ot/genesis/ch09.html",
-      "bytes": 41712,
-      "sha256": "340845f5f654ba360fc3da728ba6ca159bb541e160bb098e1ce946d05681151f"
+      "path": "nt/acts/ch09.html",
+      "bytes": 32841,
+      "sha256": "f51307bacc88a23e4a90b4a3d4db198b28572da36945c56dee3e9ad2140c6b8e"
     },
     {
-      "path": "ot/genesis/ch10.html",
-      "bytes": 32525,
-      "sha256": "df94cd291011bd8e1a9c5f2a4a942fab4662f39ce1c4a2dfd7f4c28e9d109af0"
+      "path": "nt/acts/ch10.html",
+      "bytes": 33222,
+      "sha256": "0e80cdb0cdaeffd9ed493dac00e7d0025c3056092be95a70c20dc356bf6ecea4"
     },
     {
-      "path": "ot/genesis/ch11.html",
-      "bytes": 30588,
-      "sha256": "0a4850c1a684201c8ffd7acb67ba841bef3b1921fb5b3cf4d6fd88fb771f6bb4"
+      "path": "nt/acts/index.html",
+      "bytes": 20873,
+      "sha256": "c170fbbb8e92e4364daca70036dfe04f30bef9d67bbfedac47a991f3e3b7012c"
     },
     {
-      "path": "ot/genesis/ch12.html",
-      "bytes": 30711,
-      "sha256": "10d65546feb3c614ee7f7d43bfcb3ce7a708e6e7000ad6e75f53ddb687111f1d"
-    },
-    {
-      "path": "ot/genesis/ch13.html",
-      "bytes": 24686,
-      "sha256": "f23d1206953f41569ddcd35fef8c0f5f979f76e5c21c0c13baec46632e04b023"
-    },
-    {
-      "path": "ot/genesis/ch14.html",
-      "bytes": 28722,
-      "sha256": "d47e414cd62a660dc02bfdda5b0c6a28be3c800f67f1b6cba7b75d72135cb142"
-    },
-    {
-      "path": "ot/genesis/ch15.html",
-      "bytes": 29471,
-      "sha256": "e9e27bc45f15f349ee0e84ced821fc9365879c14b72b300ab456a505a1b2e648"
-    },
-    {
-      "path": "ot/genesis/ch16.html",
-      "bytes": 28097,
-      "sha256": "6cfe6ceb32d011f996fa90cd64f8ded3c4d8065db1d055443ae9bd3466e0538c"
-    },
-    {
-      "path": "ot/genesis/ch17.html",
-      "bytes": 27758,
-      "sha256": "0b597992ed3dce12d1bfa8fdbc74c5c3cb69f6ceb5dae9c8da997763eaa18a18"
-    },
-    {
-      "path": "ot/genesis/ch18.html",
-      "bytes": 29758,
-      "sha256": "26fd3ed623ec031cd0eb68864fb3917448b54aa77f73f29b1a579c7add42ff14"
-    },
-    {
-      "path": "ot/genesis/ch19.html",
-      "bytes": 29273,
-      "sha256": "c7fc013e5c9d61b8d2449bc78eb89edbf414e519c7593cd46bae023c793a355a"
-    },
-    {
-      "path": "ot/genesis/ch20.html",
-      "bytes": 26689,
-      "sha256": "01f1ecfb8f0d074ac7c394216217e699e423e22f195a1988ae519ae06b541585"
-    },
-    {
-      "path": "ot/genesis/genesis-shelf.js",
-      "bytes": 1032,
-      "sha256": "58d29f6f32b8d55e1a369dbb17222b096b7e9979bb3ae89a122c1af2e6ef78f3"
-    },
-    {
-      "path": "ot/genesis/genesis-suite.css",
-      "bytes": 10970,
-      "sha256": "e3cea5a6e3d189beba8616c9be066589d83be6cf965f8bf11f73378ae117d1c3"
-    },
-    {
-      "path": "ot/genesis/genesis-suite.js",
-      "bytes": 1144,
-      "sha256": "2c31a87bb42bbf6c88bb306a1e8478389fb21c8f7a5b27a7e028cebd7604e90c"
-    },
-    {
-      "path": "ot/genesis/index.html",
-      "bytes": 47050,
-      "sha256": "9dca372a9b4b032651919b2e56292ccc2ce9879a8ff677f613e360f9c87917ea"
-    },
-    {
-      "path": "ot/genesis/overview.html",
-      "bytes": 65018,
-      "sha256": "ad72befa467434c53fd504c101c7622fbd2d9f6cfcc5b45b00c4a9aff909b13a"
+      "path": "nt/acts/overview.html",
+      "bytes": 55502,
+      "sha256": "07cd6f9fca08e692c08f88ee6c0b0e281d39efacd129a389a412daef265cdba1"
     },
     {
       "path": "package-info/VALIDATION.md",
-      "bytes": 127,
-      "sha256": "f934a5f6bd8c6dadda1a9bcb698e64294b188f5421b4fcf38da8c57914cb6198"
+      "bytes": 496,
+      "sha256": "72c1a4bba516574a95eaef84bc97e8dd73ce4a8a3a08a76219e1bd6458ee0179"
     }
-  ]
+  ],
+  "validation_errors": []
 }

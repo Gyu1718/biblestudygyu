@@ -8,6 +8,7 @@ on:
       - "nt/**/*.html"
       - "theology/**/*.html"
       - "bible/**"
+      - "content/encyclopedia/**"
       - "assets/app.js"
       - "assets/theme.css"
       - "assets/app.css"
@@ -21,10 +22,14 @@ on:
       - "assets/css/study-navigation-policy.css"
       - "assets/data/bible/kor/**"
       - "assets/data/bible/original/na28/**"
+      - "assets/data/encyclopedia/index.json"
       - "tools/apply_romans_patch.py"
       - "tools/romans-patches/**"
       - "tools/apply_study_tools.py"
       - "tools/apply_bible_reader.py"
+      - "tools/build_encyclopedia_index.py"
+      - "tools/repair_site_integrity.py"
+      - "tools/requirements-encyclopedia.txt"
       - "tools/extract_na28_epub.py"
       - ".github/workflows/bible-reader.yml"
   workflow_dispatch:
@@ -41,6 +46,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install encyclopedia build dependencies
+        run: python -m pip install -r tools/requirements-encyclopedia.txt
+
+      - name: Repair static-site integrity
+        run: python tools/repair_site_integrity.py --write
 
       - name: Apply Romans A-E supplement
         run: python3 tools/apply_romans_patch.py --repo . --write
@@ -122,6 +139,9 @@ jobs:
           print(f"NA28 27권 {chapters}장 {verses:,}개 장절 표지 검증 완료")
           PY
 
+      - name: Validate site integrity
+        run: python tools/repair_site_integrity.py
+
       - name: Validate Romans A-E supplement
         run: python3 tools/apply_romans_patch.py --repo . --check
 
@@ -131,7 +151,7 @@ jobs:
       - name: Validate shared Bible reader
         run: python3 tools/apply_bible_reader.py --check
 
-      - name: Commit generated HTML changes
+      - name: Commit generated site changes
         shell: bash
         run: |
           if [ -z "$(git status --porcelain)" ]; then
@@ -143,12 +163,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for directory in ot nt theology; do
             if [ -d "$directory" ]; then
-              git add "$directory"
+              git add -A "$directory"
             fi
           done
+          git add -A assets/data/encyclopedia/index.json
           if git diff --cached --quiet; then
-            echo "No generated HTML changes"
+            echo "No generated site changes"
             exit 0
           fi
-          git commit -m "Apply shared tools and Romans supplement"
+          git commit -m "Apply shared tools and site integrity repairs"
           git push origin main

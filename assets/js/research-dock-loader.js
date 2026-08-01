@@ -38,6 +38,10 @@
     addScript("assets/js/romans-supplement.js?v=20260726.1", "data-romans-supplement-js");
   }
 
+  if (/\/ot\/genesis\//i.test(location.pathname)) {
+    addScript("assets/js/genesis-chapter-links.js?v=20260801.1", "data-genesis-chapter-links-js");
+  }
+
   if (/\/ot\/nehemiah\//i.test(location.pathname) || document.querySelector("[data-encyclopedia-scan],.encyclopedia-scan,.dict-scan,[data-entity]")) {
     addScript("assets/js/encyclopedia-loader.js?v=20260730.1", "data-encyclopedia-loader-js");
   }

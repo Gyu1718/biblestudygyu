@@ -15,10 +15,11 @@
   }
   if (/\/nt\/acts\//i.test(location.pathname) || (document.body && document.body.getAttribute("data-book")==="acts")) {
     if (document.body && document.body.getAttribute("data-kind")==="study") {
-      addStyle("assets/css/acts-study-normalize.css?v=20260801.5", "data-acts-study-normalize-css");
-      addScript("assets/js/acts-layout-normalizer.js?v=20260801.5", "data-acts-layout-normalizer-js");
+      addStyle("assets/css/acts-study-normalize.css?v=20260801.6", "data-acts-study-normalize-css");
+      addStyle("assets/css/acts-chapter-nav-fix.css?v=20260801.6", "data-acts-chapter-nav-fix-css");
+      addScript("assets/js/acts-layout-normalizer.js?v=20260801.6", "data-acts-layout-normalizer-js");
     }
-    addScript("assets/js/acts-chapter-links.js?v=20260801.5", "data-acts-chapter-links-js");
+    addScript("assets/js/acts-chapter-links.js?v=20260801.6", "data-acts-chapter-links-js");
   }
   if (/\/nt\/romans\//i.test(location.pathname)) addScript("assets/js/romans-supplement.js?v=20260726.1", "data-romans-supplement-js");
   if (/\/ot\/nehemiah\//i.test(location.pathname) || document.querySelector("[data-encyclopedia-scan],.encyclopedia-scan,.dict-scan,[data-entity]")) addScript("assets/js/encyclopedia-loader.js?v=20260730.1", "data-encyclopedia-loader-js");

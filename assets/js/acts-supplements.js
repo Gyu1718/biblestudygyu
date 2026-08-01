@@ -17,6 +17,10 @@ function inline(s){
   s=s.replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>")
      .replace(/`([^`]+)`/g,"<code>$1</code>")
      .replace(/\*([^*]+)\*/g,"<em>$1</em>");
+  s=s.replace(/<strong>\[B\]<\/strong>/g,'<span class="src-chip b" title="Bruce (NICNT)">B</span>')
+     .replace(/<strong>\[P\]<\/strong>/g,'<span class="src-chip p" title="Peterson (PNTC)">P</span>')
+     .replace(/<strong>\[S\]<\/strong>/g,'<span class="src-chip s" title="Schnabel (ZECNT)">S</span>')
+     .replace(/<strong>\[재\]<\/strong>/g,'<span class="src-chip r" title="재인용·2차 자료">재</span>');
   return s.replace(/\u0000(\d+)\u0000/g,function(_,i){return stash[+i]||""});
 }
 function renderMarkdown(md){

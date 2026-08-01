@@ -1,0 +1,31 @@
+/* Acts chapter navigation color normalization.
+   Loaded after legacy and normalized templates so chapters 1–28 share one palette. */
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a,
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a:link,
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a:visited {
+  background:rgba(255,255,255,.025)!important;
+  border-color:rgba(255,255,255,.16)!important;
+  color:#c3d2e0!important;
+  box-shadow:none!important;
+}
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a:hover,
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a:focus-visible {
+  background:rgba(255,255,255,.09)!important;
+  border-color:#a8823c!important;
+  color:#fff!important;
+  outline:none!important;
+}
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a[aria-current="page"],
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a[aria-current="page"]:link,
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a[aria-current="page"]:visited,
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > a.is-current {
+  background:#a8823c!important;
+  border-color:#a8823c!important;
+  color:#16354f!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)!important;
+}
+body[data-book="acts"][data-kind="study"] nav.toc .chapter-jump > span {
+  background:transparent!important;
+  border-color:rgba(255,255,255,.08)!important;
+  color:#607389!important;
+}

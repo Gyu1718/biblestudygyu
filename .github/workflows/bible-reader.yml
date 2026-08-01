@@ -1,4 +1,5 @@
 name: Validate and apply shared study tools
+# A same-repository pull request can invoke this workflow for repair diagnostics.
 
 on:
   push:

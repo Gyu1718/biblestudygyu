@@ -32,6 +32,11 @@ on:
       - "tools/requirements-encyclopedia.txt"
       - "tools/extract_na28_epub.py"
       - ".github/workflows/bible-reader.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/repair_site_integrity.py"
+      - ".github/workflows/bible-reader.yml"
   workflow_dispatch:
 
 permissions:

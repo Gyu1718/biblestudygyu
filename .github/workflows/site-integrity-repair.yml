@@ -1,0 +1,59 @@
+name: Repair site integrity batch 1
+
+on:
+  push:
+    branches: [agent/site-integrity-repair]
+    paths:
+      - "tools/repair_site_integrity.py"
+      - ".github/workflows/site-integrity-repair.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repair branch with full history
+        uses: actions/checkout@v4
+        with:
+          ref: agent/site-integrity-repair
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install encyclopedia build dependencies
+        run: python -m pip install -r tools/requirements-encyclopedia.txt
+
+      - name: Restore Genesis pages and rebuild encyclopedia index
+        run: python tools/repair_site_integrity.py --write
+
+      - name: Apply shared study tools
+        run: python tools/apply_study_tools.py --write
+
+      - name: Apply shared Bible reader
+        run: python tools/apply_bible_reader.py --write
+
+      - name: Validate repaired site assets
+        run: |
+          python tools/repair_site_integrity.py
+          python tools/apply_study_tools.py --check
+          python tools/apply_bible_reader.py --check
+
+      - name: Commit generated repairs
+        shell: bash
+        run: |
+          git add -A -- ot/genesis assets/data/encyclopedia/index.json
+          if git diff --cached --quiet; then
+            echo "No generated repairs"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Restore Genesis 21-25 and rebuild encyclopedia index"
+          git push origin agent/site-integrity-repair

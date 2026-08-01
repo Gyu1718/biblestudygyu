@@ -2,7 +2,7 @@
 var body=document.body;if(!body||!body.hasAttribute("data-acts-topic-source"))return;
 var source=body.getAttribute("data-acts-topic-source"),mount=document.getElementById("topicContent"),toc=document.getElementById("topicToc"),jump=document.getElementById("topicChapters");
 function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function inline(s){var stash=[];s=String(s||"").replace(/<[^>]+>/g,function(x){stash.push(x);return"\u0000"+(stash.length-1)+"\u0000"});s=esc(s).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>").replace(/`([^`]+)`/g,"<code>$1</code>").replace(/\*([^*]+)\*/g,"<em>$1</em>");return s.replace(/\u0000(\d+)\u0000/g,function(_,i){return stash[+i]||""})}
+function inline(s){var stash=[];s=String(s||"").replace(/<[^>]+>/g,function(x){stash.push(x);return"\u0000"+(stash.length-1)+"\u0000"});s=esc(s).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>").replace(/`([^`]+)`/g,"<code>$1</code>").replace(/\*([^*]+)\*/g,"<em>$1</em>");s=s.replace(/<strong>\[B\]<\/strong>/g,'<span class="src-chip b" title="Bruce (NICNT)">B</span>').replace(/<strong>\[P\]<\/strong>/g,'<span class="src-chip p" title="Peterson (PNTC)">P</span>').replace(/<strong>\[S\]<\/strong>/g,'<span class="src-chip s" title="Schnabel (ZECNT)">S</span>').replace(/<strong>\[재\]<\/strong>/g,'<span class="src-chip r" title="재인용·2차 자료">재</span>');return s.replace(/\u0000(\d+)\u0000/g,function(_,i){return stash[+i]||""})}
 function slug(s){return String(s||"").normalize("NFKC").toLowerCase().replace(/[^\w가-힣α-ωά-ώ\s-]/g,"").trim().replace(/\s+/g,"-")||"section"}
 function render(md){
  var lines=String(md||"").replace(/\r/g,"").split("\n"),out=[],heads=[],used={},i=0,para=[];

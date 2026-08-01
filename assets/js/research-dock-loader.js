@@ -55,8 +55,8 @@
       addStyle("assets/css/acts-chapter-nav-fix.css?v=20260801.6", "data-acts-chapter-nav-fix-css");
       addScript("assets/js/acts-layout-normalizer.js?v=20260801.6", "data-acts-layout-normalizer-js");
       if (parseInt(body.getAttribute("data-chapter")||"0",10)>0) {
-        addStyle("assets/css/acts-supplements.css?v=20260801.7", "data-acts-supplements-css");
-        addScript("assets/js/acts-supplements.js?v=20260801.7", "data-acts-supplements-js");
+        addStyle("assets/css/acts-supplements.css?v=20260802.1", "data-acts-supplements-css");
+        addScript("assets/js/acts-supplements.js?v=20260802.1", "data-acts-supplements-js");
       }
     }
     addScript("assets/js/acts-chapter-links.js?v=20260801.6", "data-acts-chapter-links-js");

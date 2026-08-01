@@ -1,28 +1,25 @@
 {
-  "generated_at": "2026-08-01T23:58:40.688869+00:00",
+  "generated_at": "2026-08-01T23:59:04.655520+00:00",
   "chapters": {
     "ot/genesis/ch21.html": {
-      "status": "restored",
-      "source": "97c497c97bf38a8a9fe59b96670d051e2fc0c5a3",
-      "source_type": "inline gzip payload"
+      "status": "already_plain",
+      "source": "current"
     },
     "ot/genesis/ch22.html": {
-      "status": "restored",
-      "source": "6ae600a0401e84318bf8e80b373140114af80520",
-      "source_type": "inline gzip payload"
+      "status": "already_plain",
+      "source": "current"
     },
     "ot/genesis/ch23.html": {
       "status": "unresolved",
-      "error": "No decodable historical version for ot/genesis/ch23.html.\nc119a6a3a3f8: Error -3 while decompressing data: invalid distance too far back\n4072fa2bf8ef: missing payload fragment: ot/genesis/ch23.04.b64\n2a78a967b43d: missing payload fragment: ot/genesis/ch23.03.b64\n860787df2ba0: missing payload fragment: ot/genesis/ch23.02.b64\na18cac202580: missing payload fragment: ot/genesis/ch23.01.b64"
+      "error": "No decodable historical version for ot/genesis/ch23.html.\n47441e102718: Error -3 while decompressing data: invalid distance too far back\nc119a6a3a3f8: Error -3 while decompressing data: invalid distance too far back\n4072fa2bf8ef: missing payload fragment: ot/genesis/ch23.04.b64\n2a78a967b43d: missing payload fragment: ot/genesis/ch23.03.b64\n860787df2ba0: missing payload fragment: ot/genesis/ch23.02.b64\na18cac202580: missing payload fragment: ot/genesis/ch23.01.b64"
     },
     "ot/genesis/ch24.html": {
       "status": "unresolved",
-      "error": "No decodable historical version for ot/genesis/ch24.html.\nbe68538ec23f: base64 length is not divisible by 4: 37642\n47b7bd5d248e: missing payload fragment: ot/genesis/ch24.04.b64\n5b4ef8cfd442: missing payload fragment: ot/genesis/ch24.04.b64\n23a374e98891: missing payload fragment: ot/genesis/ch24.03.b64\n9d9c85587b08: missing payload fragment: ot/genesis/ch24.02.b64\na0a5daa1a56e: missing payload fragment: ot/genesis/ch24.01.b64"
+      "error": "No decodable historical version for ot/genesis/ch24.html.\n47441e102718: base64 length is not divisible by 4: 37642\nbe68538ec23f: base64 length is not divisible by 4: 37642\n47b7bd5d248e: missing payload fragment: ot/genesis/ch24.04.b64\n5b4ef8cfd442: missing payload fragment: ot/genesis/ch24.04.b64\n23a374e98891: missing payload fragment: ot/genesis/ch24.03.b64\n9d9c85587b08: missing payload fragment: ot/genesis/ch24.02.b64\na0a5daa1a56e: missing payload fragment: ot/genesis/ch24.01.b64"
     },
     "ot/genesis/ch25.html": {
-      "status": "restored",
-      "source": "710845d5f743f0d7b59514251179fe1ca9951722",
-      "source_type": "2 gzip payload fragments"
+      "status": "already_plain",
+      "source": "current"
     }
   },
   "encyclopedia": {

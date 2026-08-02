@@ -24,11 +24,11 @@ def replace_once(text: str, old: str, new: str, label: str) -> str:
 def patch_index(text: str) -> str:
     if MARKER in text:
         return text
-    topbar = '<div class="topbar"><a class="mark" href="./"><span class="hb">ד</span>성서 연구 서고</a><span id="bookCount">책 0권 · 문서 0편</span></div>'
-    replacement = '<div class="topbar"><a class="mark" href="./"><span class="hb">ד</span>성서 연구 서고</a><span class="topbar-actions"><a class="home-search-link" href="search/index.html">전체 검색</a><span id="bookCount">책 0권 · 문서 0편</span></span></div>'
+    topbar = '<div class="topbar"><a class="mark" href="index.html"><span class="hb">דָּרַשׁ</span>성서 연구 서고</a><nav id="topnav"></nav></div>'
+    replacement = '<div class="topbar"><a class="mark" href="index.html"><span class="hb">דָּרַשׁ</span>성서 연구 서고</a><div class="topbar-actions"><a class="home-search-link" href="search/index.html">전체 검색</a><nav id="topnav"></nav></div></div>'
     text = replace_once(text, topbar, replacement, "homepage search link")
     style_anchor = '.topbar .mark .hb{font-family:var(--heb);color:var(--ochre);margin-right:.4rem}\n'
-    style = style_anchor + '.topbar-actions{display:flex;align-items:center;gap:.85rem}.home-search-link{color:var(--lapis);font-weight:700;text-decoration:none}.home-search-link:hover{text-decoration:underline;text-underline-offset:3px} /* ' + MARKER + ' */\n'
+    style = style_anchor + '.topbar-actions{display:flex;align-items:center;gap:1rem}.home-search-link{color:var(--lapis);font-weight:700;text-decoration:none}.home-search-link:hover{text-decoration:underline;text-underline-offset:3px} /* ' + MARKER + ' */\n'
     return replace_once(text, style_anchor, style, "homepage search link styles")
 
 

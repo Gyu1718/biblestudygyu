@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-08-02T00:07:35.720131+00:00",
+  "chapters": {
+    "23": {
+      "status": "already_plain"
+    },
+    "24": {
+      "files": [
+        "ch24.01.b64",
+        "ch24.02.b64",
+        "ch24.03.b64",
+        "ch24.04.b64",
+        "ch24.05.b64"
+      ],
+      "lengths": [
+        9000,
+        9000,
+        9000,
+        6194,
+        4448
+      ],
+      "padding_positions": [
+        [],
+        [],
+        [],
+        [
+          6193
+        ],
+        [
+          4446,
+          4447
+        ]
+      ],
+      "heads": [
+        "H4sIAP1SbWoC/8y9",
+        "4ilutFvQSUEPRlW/",
+        "zDTNa3M/IW7QenbL",
+        "jkvlCO8kUo0vSWNn",
+        "X9grWY+YMnsO4DJR"
+      ],
+      "tails": [
+        "TGhZn8YyEQM2KqKz",
+        "qRFcfNtLLlYDL3Ao",
+        "YqxnsGVfGQ7UG7sD",
+        "83+H0+AMSvrbAAA=",
+        "fgMnf6mOW3oBAA=="
+      ],
+      "normalized_length": 37640,
+      "normalized_mod4": 0,
+      "removed_padding": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "status": "unresolved"
+    }
+  }
+}

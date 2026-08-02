@@ -19,17 +19,47 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - name: Load the maintenance tool from main
+      - name: Set up Node for pinned MorphHB package
+        if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Load current maintenance tools from main
         shell: bash
         run: |
           git fetch origin main
           git show origin/main:tools/maintain_site_foundations.py > /tmp/maintain_site_foundations.py
+          if [ "${{ github.event.pull_request.head.ref }}" = "fix/site-foundations-404-sitemap" ]; then
+            git show origin/main:tools/apply_oshb_local_data.py > tools/apply_oshb_local_data.py
+            git show origin/main:tools/apply_gzip_fallback.py > tools/apply_gzip_fallback.py
+            git show origin/main:tools/build_oshb_chunks.py > tools/build_oshb_chunks.py
+          fi
 
       - name: Apply the current cleanup migration
         if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
         shell: bash
         run: |
           python /tmp/maintain_site_foundations.py
+
+          if [ ! -f assets/data/bible/original/oshb/manifest.json ]; then
+            rm -rf /tmp/morphhb /tmp/morphhb-*.tgz
+            mkdir -p /tmp/morphhb
+            package_name="$(npm pack morphhb@2.0.2 --pack-destination /tmp --silent)"
+            tar -xzf "/tmp/${package_name}" -C /tmp/morphhb
+            test -f /tmp/morphhb/package/wlc/Gen.xml
+            test "$(find /tmp/morphhb/package/wlc -maxdepth 1 -name '*.xml' | wc -l)" -eq 39
+            python tools/build_oshb_chunks.py --write --source-dir /tmp/morphhb/package/wlc
+          fi
+
+          python tools/apply_oshb_local_data.py --write
+          python tools/apply_gzip_fallback.py --write
+          python tools/build_oshb_chunks.py --check
+          python tools/apply_oshb_local_data.py --check
+          python tools/apply_gzip_fallback.py --check
+          node --check assets/js/bible-reader.js
+          node --check assets/js/original-reader.js
+
           python tools/apply_site_search.py --write
           python tools/build_search_index.py --write
           python tools/apply_site_search.py --check
@@ -37,6 +67,7 @@ jobs:
           rm -f .github/workflows/repair-remaining-site.yml
           rm -f .github/site-maintenance-trigger
           rm -f .github/site-accessibility-trigger
+          rm -f .github/site-reader-trigger
 
       - name: Commit migration results
         if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
@@ -49,7 +80,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Complete site accessibility and deployment cleanup"
+          git commit -m "Restore local Bible data and browser fallbacks"
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
       - name: Validate ordinary pull requests

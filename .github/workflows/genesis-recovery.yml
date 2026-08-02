@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/recover_genesis_chunk_boundaries.py"
       - "tools/recover_genesis_payloads.py"
       - ".github/workflows/genesis-recovery.yml"
   workflow_dispatch:
@@ -30,7 +31,10 @@ jobs:
       - name: Install index build dependencies
         run: python -m pip install -r tools/requirements-encyclopedia.txt
 
-      - name: Recover damaged payloads
+      - name: Recover fragment-boundary defects
+        run: python tools/recover_genesis_chunk_boundaries.py
+
+      - name: Recover remaining payload defects
         run: python tools/recover_genesis_payloads.py --write
 
       - name: Rebuild independent site assets
@@ -45,6 +49,7 @@ jobs:
             ot/genesis \
             assets/data/encyclopedia/index.json \
             tools/site-integrity-report.json \
+            tools/genesis-boundary-recovery-report.json \
             tools/genesis-payload-recovery-report.json
           if git diff --cached --quiet; then
             echo "No recoverable payload changes"

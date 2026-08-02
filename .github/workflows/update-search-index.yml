@@ -52,8 +52,8 @@ jobs:
 
       - name: Validate synchronized search assets
         run: |
-          python tools/build_search_index.py --check
           python tools/apply_site_search.py --check
+          python tools/build_search_index.py --check
           node --check assets/js/site-search.js
           node --check assets/js/research-dock.js
 
@@ -74,10 +74,10 @@ jobs:
 
       - name: Rebuild search index
         run: |
-          python tools/build_search_index.py --write
           python tools/apply_site_search.py --write
-          python tools/build_search_index.py --check
+          python tools/build_search_index.py --write
           python tools/apply_site_search.py --check
+          python tools/build_search_index.py --check
           node --check assets/js/site-search.js
           node --check assets/js/research-dock.js
 

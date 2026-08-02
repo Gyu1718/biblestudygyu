@@ -1,4 +1,5 @@
 name: Extract Genesis 24 recoverable prefix
+# Trigger extraction of the longest valid UTF-8 HTML prefix before deflate failure.
 
 on:
   pull_request:

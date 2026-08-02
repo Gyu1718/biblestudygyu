@@ -35,6 +35,7 @@ jobs:
           python tools/apply_site_search.py --check
           python tools/build_search_index.py --check
           rm -f .github/workflows/repair-remaining-site.yml
+          rm -f .github/site-maintenance-trigger
 
       - name: Commit migration results
         if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'

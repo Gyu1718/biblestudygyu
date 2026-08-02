@@ -34,6 +34,7 @@ jobs:
             git show origin/main:tools/apply_oshb_local_data.py > tools/apply_oshb_local_data.py
             git show origin/main:tools/apply_gzip_fallback.py > tools/apply_gzip_fallback.py
             git show origin/main:tools/build_oshb_chunks.py > tools/build_oshb_chunks.py
+            git show origin/main:tools/remap_oshb_joel.py > tools/remap_oshb_joel.py
           fi
 
       - name: Apply the current cleanup migration
@@ -43,12 +44,14 @@ jobs:
           python /tmp/maintain_site_foundations.py
 
           if [ ! -f assets/data/bible/original/oshb/manifest.json ]; then
-            python tools/build_oshb_chunks.py --write --workers 4
+            python tools/build_oshb_chunks.py --write --workers 4 || test -f assets/data/bible/original/oshb/manifest.json
+            python tools/remap_oshb_joel.py --write
           fi
 
           python tools/apply_oshb_local_data.py --write
           python tools/apply_gzip_fallback.py --write
           python tools/build_oshb_chunks.py --check
+          python tools/remap_oshb_joel.py --check
           python tools/apply_oshb_local_data.py --check
           python tools/apply_gzip_fallback.py --check
           node --check assets/js/bible-reader.js

@@ -16,8 +16,8 @@
 
   var script = document.currentScript;
   var CSS_URL = script && script.src
-    ? new URL("../css/commentator-chips.css?v=20260724.5", script.src).href
-    : "assets/css/commentator-chips.css?v=20260724.5";
+    ? new URL("../css/commentator-chips.css?v=20260802.1", script.src).href
+    : "assets/css/commentator-chips.css?v=20260802.1";
 
   var CHIP_SELECTOR = "span.c, span.commentator-chip, span[data-commentator-chip]";
   var LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

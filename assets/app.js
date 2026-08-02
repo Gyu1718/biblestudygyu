@@ -242,8 +242,8 @@
   if (typeof document === "undefined" || document.querySelector("script[data-rd-loader]")) return;
   var current = document.currentScript;
   var src = current && current.src
-    ? new URL("js/research-dock-loader.js?v=20260801.5", current.src).href
-    : "assets/js/research-dock-loader.js?v=20260801.5";
+    ? new URL("js/research-dock-loader.js?v=20260802.1", current.src).href
+    : "assets/js/research-dock-loader.js?v=20260802.1";
   var node = document.createElement("script");
   node.src = src;
   node.dataset.rdLoader = "";

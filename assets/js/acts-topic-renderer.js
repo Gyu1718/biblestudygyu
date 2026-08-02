@@ -19,7 +19,7 @@ function render(md){
  flush();return{html:out.join(""),heads:heads};
 }
 if(jump){for(var n=1;n<=28;n++){var a=document.createElement("a");a.href="ch"+String(n).padStart(2,"0")+".html";a.textContent=n;a.setAttribute("aria-label","사도행전 "+n+"장");jump.appendChild(a)}}
-fetch(source+"?v=20260801.7").then(function(r){if(!r.ok)throw new Error(r.status);return r.text()}).then(function(text){
+fetch(source+"?v=20260802.1").then(function(r){if(!r.ok)throw new Error(r.status);return r.text()}).then(function(text){
  var rendered=render(text),tmp=document.createElement("div");tmp.innerHTML=rendered.html;
  var title=tmp.querySelector("h1");if(title){document.title=title.textContent+" — 사도행전 연구 서가";var hero=document.getElementById("topicTitle");if(hero)hero.textContent=title.textContent;title.remove()}
  var quote=tmp.querySelector("blockquote");if(quote){var sub=document.getElementById("topicSub");if(sub)sub.textContent=quote.textContent.trim()}

@@ -34,6 +34,6 @@
     if (main && !main.hasAttribute("data-encyclopedia-scan")) main.setAttribute("data-encyclopedia-scan", "");
   }
 
-  addStyle("assets/css/encyclopedia.css?v=20260730.1", "data-encyclopedia-css");
-  loadScript("assets/js/encyclopedia-runtime.js?v=20260730.1", "data-encyclopedia-runtime-js").catch(function () {});
+  addStyle("assets/css/encyclopedia.css?v=20260802.1", "data-encyclopedia-css");
+  loadScript("assets/js/encyclopedia-runtime.js?v=20260802.1", "data-encyclopedia-runtime-js").catch(function () {});
 })();

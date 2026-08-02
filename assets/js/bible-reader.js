@@ -723,8 +723,8 @@
   window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ = true;
   var current = document.currentScript;
   var src = current && current.src
-    ? new URL("commentator-chips.js?v=20260724.5", current.src).href
-    : "assets/js/commentator-chips.js?v=20260724.5";
+    ? new URL("commentator-chips.js?v=20260802.1", current.src).href
+    : "assets/js/commentator-chips.js?v=20260802.1";
   var loader = document.createElement("script");
   loader.src = src;
   loader.defer = true;

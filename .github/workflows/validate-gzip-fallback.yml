@@ -1,0 +1,61 @@
+name: Validate gzip fallback
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/vendor/fflate.min.js"
+      - "assets/vendor/fflate.LICENSE.txt"
+      - "assets/js/bible-reader.js"
+      - "assets/js/original-reader.js"
+      - "tools/apply_gzip_fallback.py"
+      - ".github/workflows/validate-gzip-fallback.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "assets/vendor/fflate.min.js"
+      - "assets/vendor/fflate.LICENSE.txt"
+      - "assets/js/bible-reader.js"
+      - "assets/js/original-reader.js"
+      - "tools/apply_gzip_fallback.py"
+      - ".github/workflows/validate-gzip-fallback.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate fallback integration
+        run: |
+          python tools/apply_gzip_fallback.py --check
+          node --check assets/js/bible-reader.js
+          node --check assets/js/original-reader.js
+          node - <<'JS'
+          const fs = require('fs');
+          const vm = require('vm');
+          const zlib = require('zlib');
+          const context = { Uint8Array, TextEncoder, TextDecoder };
+          context.self = context;
+          context.window = context;
+          context.globalThis = context;
+          vm.runInNewContext(fs.readFileSync('assets/vendor/fflate.min.js', 'utf8'), context);
+          const source = Buffer.from('scriptorium gzip fallback');
+          const output = context.fflate.gunzipSync(new Uint8Array(zlib.gzipSync(source)));
+          if (new TextDecoder().decode(output) !== source.toString()) throw new Error('fallback validation failed');
+          JS

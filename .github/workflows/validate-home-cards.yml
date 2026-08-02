@@ -1,0 +1,40 @@
+name: Validate homepage cards
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "catalog.js"
+      - "index.html"
+      - "assets/css/home-compact.css"
+      - "tools/apply_home_progress.py"
+      - ".github/workflows/validate-home-cards.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "catalog.js"
+      - "index.html"
+      - "assets/css/home-compact.css"
+      - "tools/apply_home_progress.py"
+      - ".github/workflows/validate-home-cards.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate homepage progress UI
+        run: |
+          python tools/apply_home_progress.py --check
+          node --check catalog.js

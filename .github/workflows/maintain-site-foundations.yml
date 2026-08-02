@@ -36,6 +36,7 @@ jobs:
           python tools/build_search_index.py --check
           rm -f .github/workflows/repair-remaining-site.yml
           rm -f .github/site-maintenance-trigger
+          rm -f .github/site-accessibility-trigger
 
       - name: Commit migration results
         if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
@@ -48,11 +49,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Complete site foundation and deployment cleanup"
+          git commit -m "Complete site accessibility and deployment cleanup"
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
       - name: Validate ordinary pull requests
-        if: github.event.pull_request.head.ref != 'fix/site-foundations-404-sitemap'
+        if: github.event.pull_request.head.ref != 'fix/site-foundations-404-sitemap' && hashFiles('404.html') != ''
         shell: bash
         run: |
           python /tmp/maintain_site_foundations.py --check

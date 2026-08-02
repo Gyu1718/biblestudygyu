@@ -1,4 +1,5 @@
 name: Recover damaged Genesis payloads
+# Trigger validation of non-final base64 padding removal.
 
 on:
   pull_request:

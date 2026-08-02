@@ -1,0 +1,59 @@
+name: Maintain site foundations
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  validate-or-repair:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Load the maintenance tool from main
+        shell: bash
+        run: |
+          git fetch origin main
+          git show origin/main:tools/maintain_site_foundations.py > /tmp/maintain_site_foundations.py
+
+      - name: Apply the current cleanup migration
+        if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
+        shell: bash
+        run: |
+          python /tmp/maintain_site_foundations.py
+          python tools/apply_site_search.py
+          python tools/build_search_index.py
+          python tools/apply_site_search.py --check
+          python tools/build_search_index.py --check
+          rm -f .github/workflows/repair-remaining-site.yml
+
+      - name: Commit migration results
+        if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No migration changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Complete site foundation and deployment cleanup"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
+
+      - name: Validate ordinary pull requests
+        if: github.event.pull_request.head.ref != 'fix/site-foundations-404-sitemap'
+        shell: bash
+        run: |
+          python /tmp/maintain_site_foundations.py --check
+          python tools/apply_site_search.py --check
+          python tools/build_search_index.py --check

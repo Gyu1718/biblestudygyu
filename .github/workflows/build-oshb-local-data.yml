@@ -29,8 +29,22 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node for pinned MorphHB package
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download MorphHB 2.0.2 once
+        shell: bash
+        run: |
+          mkdir -p /tmp/morphhb
+          package_name="$(npm pack morphhb@2.0.2 --pack-destination /tmp --silent)"
+          tar -xzf "/tmp/${package_name}" -C /tmp/morphhb
+          test -f /tmp/morphhb/package/wlc/Gen.xml
+          test "$(find /tmp/morphhb/package/wlc -maxdepth 1 -name '*.xml' | wc -l)" -eq 39
+
       - name: Build local MorphHB chunks
-        run: python tools/build_oshb_chunks.py --write
+        run: python tools/build_oshb_chunks.py --write --source-dir /tmp/morphhb/package/wlc
 
       - name: Switch reader to local chunks
         run: python tools/apply_oshb_local_data.py --write

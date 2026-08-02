@@ -1,4 +1,5 @@
 name: Recover damaged Genesis payloads
+# Trigger boundary-level overlap and fragment reconstruction diagnostics.
 
 on:
   pull_request:

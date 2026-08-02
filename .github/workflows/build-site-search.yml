@@ -1,0 +1,66 @@
+name: Build site-wide search
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/build_search_index.py"
+      - "tools/apply_site_search.py"
+      - "search/index.html"
+      - "assets/js/site-search.js"
+      - "assets/css/site-search.css"
+      - ".github/workflows/build-site-search.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/site-wide-search
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build search index
+        run: python tools/build_search_index.py --write
+
+      - name: Apply search navigation
+        run: python tools/apply_site_search.py --write
+
+      - name: Validate search implementation
+        run: |
+          python tools/build_search_index.py --check
+          python tools/apply_site_search.py --check
+          node --check assets/js/site-search.js
+          node --check assets/js/research-dock.js
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload=json.loads(Path('assets/data/search-index.json').read_text(encoding='utf-8'))
+          assert len(payload['documents']) >= 100
+          assert Path('search/index.html').exists()
+          print(f"search documents: {len(payload['documents'])}")
+          PY
+
+      - name: Commit generated search assets
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- assets/data/search-index.json index.html assets/js/research-dock.js assets/css/site-search.css
+          if git diff --cached --quiet; then
+            echo "No generated search changes"
+            exit 0
+          fi
+          git commit -m "Build site-wide search index"
+          git push origin agent/site-wide-search

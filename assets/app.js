@@ -66,6 +66,15 @@
   /* ---------- (2) 관주 렌더링 ---------- */
   var BOOK = document.body ? document.body.getAttribute("data-book") : null;
   var CHAP = document.body ? document.body.getAttribute("data-chapter") : null;
+  var XREF_BOOK_KEY = { // SCRIPTORIUM_XREFS_V1
+    genesis:"gen", gen:"gen", nehemiah:"neh", neh:"neh", esther:"est", est:"est",
+    psalms:"psa", psalm:"psa", psa:"psa", hosea:"hos", hos:"hos", joel:"jol", jol:"jol",
+    haggai:"hag", hag:"hag", acts:"act", act:"act", romans:"rom", rom:"rom"
+  };
+  function xrefBookKey() {
+    var key = String(BOOK || "").toLowerCase();
+    return XREF_BOOK_KEY[key] || key;
+  }
 
   // 페이지 위치에 따라 data 폴더까지의 상대 경로를 추정.
   // <body data-root="../../"> 로 명시하면 그 값을 우선한다.
@@ -85,7 +94,7 @@
     var base = document.body.getAttribute("data-root");
     return base === null ? "" : base;
   }
-  function xrefUrl()  { return dataRoot() + "data/xrefs/" + BOOK + ".json"; }
+  function xrefUrl()  { return dataRoot() + "data/xrefs/" + xrefBookKey() + ".json"; }
   function linksUrl() { return dataRoot() + "data/links/" + BOOK + ".json"; }
 
   var STUDY_LABEL = { study: "심층", parsing: "파싱", interlinear: "인터라이너" };

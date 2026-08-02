@@ -1,7 +1,92 @@
 {
- "neh": {
-  "ko": "느",
-  "chapters": 13,
-  "refs": 3046
- }
+  "act": {
+    "ko": "행",
+    "name": "사도행전",
+    "bibleCode": "ACT",
+    "osis": "Acts",
+    "chapters": 28,
+    "expectedChapters": 28,
+    "verses": 972,
+    "refs": 13319
+  },
+  "est": {
+    "ko": "에",
+    "name": "에스더",
+    "bibleCode": "EST",
+    "osis": "Esth",
+    "chapters": 10,
+    "expectedChapters": 10,
+    "verses": 151,
+    "refs": 1162
+  },
+  "gen": {
+    "ko": "창",
+    "name": "창세기",
+    "bibleCode": "GEN",
+    "osis": "Gen",
+    "chapters": 50,
+    "expectedChapters": 50,
+    "verses": 1382,
+    "refs": 13327
+  },
+  "hag": {
+    "ko": "학",
+    "name": "학개",
+    "bibleCode": "HAG",
+    "osis": "Hag",
+    "chapters": 2,
+    "expectedChapters": 2,
+    "verses": 37,
+    "refs": 476
+  },
+  "hos": {
+    "ko": "호",
+    "name": "호세아",
+    "bibleCode": "HOS",
+    "osis": "Hos",
+    "chapters": 14,
+    "expectedChapters": 14,
+    "verses": 196,
+    "refs": 3363
+  },
+  "jol": {
+    "ko": "욜",
+    "name": "요엘",
+    "bibleCode": "JOL",
+    "osis": "Joel",
+    "chapters": 3,
+    "expectedChapters": 3,
+    "verses": 73,
+    "refs": 1041
+  },
+  "neh": {
+    "ko": "느",
+    "name": "느헤미야",
+    "bibleCode": "NEH",
+    "osis": "Neh",
+    "chapters": 13,
+    "expectedChapters": 13,
+    "verses": 365,
+    "refs": 3046
+  },
+  "psa": {
+    "ko": "시",
+    "name": "시편",
+    "bibleCode": "PSA",
+    "osis": "Ps",
+    "chapters": 150,
+    "expectedChapters": 150,
+    "verses": 2450,
+    "refs": 30913
+  },
+  "rom": {
+    "ko": "롬",
+    "name": "로마서",
+    "bibleCode": "ROM",
+    "osis": "Rom",
+    "chapters": 16,
+    "expectedChapters": 16,
+    "verses": 431,
+    "refs": 7750
+  }
 }

@@ -7,6 +7,8 @@
   var KOR_MANIFEST_URL = new URL("manifest.json", KOR_DATA_ROOT).href;
   var NA28_DATA_ROOT = new URL("assets/data/bible/original/na28/", siteRoot).href;
   var NA28_MANIFEST_URL = new URL("manifest.json", NA28_DATA_ROOT).href;
+  var XREF_DATA_ROOT = new URL("data/xrefs/", siteRoot).href;
+  var XREF_SUPPORTED = { GEN:1, NEH:1, EST:1, PSA:1, HOS:1, JOL:1, HAG:1, ACT:1, ROM:1 }; // SCRIPTORIUM_XREFS_V1
 
   var BOOKS = [
     ["GEN","창세기","Gen","Gen.xml"],["EXO","출애굽기","Exod","Exod.xml"],["LEV","레위기","Lev","Lev.xml"],["NUM","민수기","Num","Num.xml"],["DEU","신명기","Deut","Deut.xml"],
@@ -42,6 +44,7 @@
   var na28ChunkCache = new Map();
   var koreanCache = new Map();
   var originalCache = new Map();
+  var xrefCache = new Map();
 
   var bookSelect = document.getElementById("or-book");
   var chapterSelect = document.getElementById("or-chapter");
@@ -67,6 +70,21 @@
       if (!response.ok) throw new Error(errorMessage);
       return response.json();
     });
+  }
+
+  function loadXrefs(code) {
+    if (!XREF_SUPPORTED[code]) return Promise.resolve({});
+    if (xrefCache.has(code)) return xrefCache.get(code);
+    var url = new URL(code.toLowerCase() + ".json", XREF_DATA_ROOT).href;
+    var promise = fetch(url, { credentials: "same-origin" }).then(function (response) {
+      if (response.status === 404) return {};
+      if (!response.ok) throw new Error("관주 데이터를 불러오지 못했습니다.");
+      return response.json();
+    }).catch(function () {
+      return {};
+    });
+    xrefCache.set(code, promise);
+    return promise;
   }
 
   function loadKoreanManifest() {
@@ -198,14 +216,27 @@
     chapterSelect.value = String(Math.min(current, count));
   }
 
+  function xrefMarkup(refs, chapter, verseNumber) {
+    if (!refs || !refs.length) return "";
+    var items = refs.map(function (item) {
+      var vote = typeof item.v === "number" ? '<span class="or-xref-vote">+' + item.v + '</span>' : "";
+      return '<li><span class="or-xref-ref">' + escapeHtml(item.r) + '</span>' + vote + '</li>';
+    }).join("");
+    return '<details class="or-xrefs" data-xref-count="' + refs.length + '">' +
+      '<summary><span>관주</span><span class="or-xref-count">' + refs.length + '</span></summary>' +
+      '<div class="or-xref-body"><p class="or-xref-label">' + chapter + ':' + verseNumber + '과 연결되는 본문</p>' +
+      '<ul class="or-xref-list">' + items + '</ul></div></details>';
+  }
+
   function render(code, chapter, selected, end) {
     var book = bookMap[code];
     setStatus(book.name + " " + chapter + "장을 불러오는 중입니다.");
     versesBox.innerHTML = '<div class="or-empty">본문을 불러오는 중입니다.</div>';
 
-    Promise.all([loadKorean(code), loadOriginal(code)]).then(function (values) {
+    Promise.all([loadKorean(code), loadOriginal(code), loadXrefs(code)]).then(function (values) {
       var korean = values[0];
       var original = values[1];
+      var xrefs = values[2] || {};
       var koreanChapter = korean.chapters[String(chapter)] || {};
       var originalChapter = original[String(chapter)] || original[chapter] || {};
       var verseNumbers = Array.from(new Set(
@@ -221,11 +252,12 @@
         ? "NA28에는 해당 절 번호가 없습니다."
         : "원문 장절 구분을 확인해야 합니다.";
 
+      var chapterXrefs = xrefs[String(chapter)] || {};
       versesBox.innerHTML = verseNumbers.map(function (verseNumber) {
         var active = selected && verseNumber >= selected && verseNumber <= (end || selected);
         var originalText = originalChapter[String(verseNumber)] || originalChapter[verseNumber];
         var koreanText = koreanChapter[String(verseNumber)];
-        return '<article class="or-verse-row' + (active ? ' is-selected' : '') + '" id="verse-' + verseNumber + '">' +
+        return '<article class="or-verse-row' + (active ? ' is-selected' : '') + '" id="verse-' + verseNumber + '" data-v="' + verseNumber + '">' +
           '<div class="or-cell or-original ' + (book.testament === "OT" ? 'is-hebrew' : '') + '">' +
             '<span class="or-num">' + verseNumber + '</span>' +
             (originalText ? escapeHtml(originalText) : '<span class="or-missing">' + missingOriginal + '</span>') +
@@ -234,6 +266,7 @@
             '<span class="or-num">' + verseNumber + '</span>' +
             (koreanText ? escapeHtml(koreanText) : '<span class="or-missing">개역개정 본문 없음</span>') +
           '</div>' +
+          xrefMarkup(chapterXrefs[String(verseNumber)] || [], chapter, verseNumber) +
         '</article>';
       }).join("");
 

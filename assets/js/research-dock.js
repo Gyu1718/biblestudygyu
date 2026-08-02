@@ -53,6 +53,8 @@
     "2JN":1,"3JN":1,JUD:1,REV:22
   };
 
+  var XREF_BOOKS = { GEN:1, NEH:1, EST:1, PSA:1, HOS:1, JOL:1, HAG:1, ACT:1, ROM:1 }; // SCRIPTORIUM_XREFS_V1
+
   var ICON = {
     menu:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>',
     close:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
@@ -305,6 +307,14 @@
     }
 
     if (ctx.type !== "original") actions.push({ id:"bible", label:"원어성경", icon:"bible", href:originalUrl(ctx) });
+    if (ctx.type !== "original" && ctx.book && ctx.chapter && XREF_BOOKS[ctx.book]) {
+      actions.push({
+        id:"xrefs",
+        label:"절별 관주",
+        icon:"toc",
+        href:href("bible/original.html?book=" + encodeURIComponent(ctx.book) + "&chapter=" + ctx.chapter + "&view=xrefs")
+      });
+    }
     if (ctx.type !== "lexicon-index" && ctx.type !== "lexicon-entry") actions.push({ id:"lexicon", label:"원어사전", icon:"lexicon", href:href("lexicon/index.html") });
 
     actions.push({ id:"settings", label:"화면 설정", icon:"settings", onClick:openSettings, wide:true });

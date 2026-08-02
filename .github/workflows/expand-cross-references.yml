@@ -1,4 +1,5 @@
 name: Expand cross-reference coverage
+# Re-run after production workflow validation was added.
 
 on:
   pull_request:

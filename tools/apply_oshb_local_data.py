@@ -3,12 +3,63 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 READER = ROOT / "assets" / "js" / "original-reader.js"
 PAGE = ROOT / "bible" / "original.html"
 MARKER = "SCRIPTORIUM_LOCAL_OSHB_V1"
+
+
+def function_span(text: str, name: str) -> tuple[int, int]:
+    match = re.search(rf"(?m)^\s*function\s+{re.escape(name)}\s*\([^)]*\)\s*\{{", text)
+    if not match:
+        raise RuntimeError(f"function {name} not found")
+    brace = text.find("{", match.start())
+    depth = 0
+    quote: str | None = None
+    escaped = False
+    line_comment = False
+    block_comment = False
+    index = brace
+    while index < len(text):
+        char = text[index]
+        next_char = text[index + 1] if index + 1 < len(text) else ""
+        if line_comment:
+            if char == "\n":
+                line_comment = False
+        elif block_comment:
+            if char == "*" and next_char == "/":
+                block_comment = False
+                index += 1
+        elif quote:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                quote = None
+        else:
+            if char == "/" and next_char == "/":
+                line_comment = True
+                index += 1
+            elif char == "/" and next_char == "*":
+                block_comment = True
+                index += 1
+            elif char in ('"', "'", "`"):
+                quote = char
+            elif char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+                if depth == 0:
+                    end = index + 1
+                    while end < len(text) and text[end] in "\r\n":
+                        end += 1
+                    return match.start(), end
+        index += 1
+    raise RuntimeError(f"unterminated function {name}")
 
 
 def replace_once(text: str, old: str, new: str, label: str) -> str:
@@ -26,79 +77,54 @@ def patch_reader(text: str) -> str:
 
     text = replace_once(
         text,
-        '  var WLC_ROOT = "https://cdn.jsdelivr.net/npm/morphhb@2.0.2/wlc/";\n',
+        '  var NA28_MANIFEST_URL = new URL("manifest.json", NA28_DATA_ROOT).href;\n',
+        '  var NA28_MANIFEST_URL = new URL("manifest.json", NA28_DATA_ROOT).href;\n'
         '  var OSHB_DATA_ROOT = new URL("assets/data/bible/original/oshb/", siteRoot).href; // ' + MARKER + '\n'
         '  var OSHB_MANIFEST_URL = new URL("manifest.json", OSHB_DATA_ROOT).href;\n',
         "OSHB data root",
     )
     text = replace_once(
         text,
-        '  var na28ManifestPromise = null;\n  var na28ChunkCache = new Map();\n',
-        '  var na28ManifestPromise = null;\n  var na28ChunkCache = new Map();\n'
-        '  var oshbManifestPromise = null;\n  var oshbChunkCache = new Map();\n',
+        '  var na28ChunkCache = new Map();\n',
+        '  var na28ChunkCache = new Map();\n'
+        '  var oshbManifestPromise = null;\n'
+        '  var oshbChunkCache = new Map();\n',
         "OSHB caches",
     )
 
-    load_na28_manifest = '''  function loadNa28Manifest() {
-    if (!na28ManifestPromise) {
-      na28ManifestPromise = loadJson(NA28_MANIFEST_URL, "NA28 목록을 불러오지 못했습니다.");
-    }
-    return na28ManifestPromise;
-  }
-'''
-    load_manifests = load_na28_manifest + '''
+    start, end = function_span(text, "loadNa28Manifest")
+    load_oshb_manifest = '''
   function loadOshbManifest() {
     if (!oshbManifestPromise) {
       oshbManifestPromise = loadJson(OSHB_MANIFEST_URL, "WLC/OSHB 목록을 불러오지 못했습니다.");
     }
     return oshbManifestPromise;
   }
-'''
-    text = replace_once(text, load_na28_manifest, load_manifests, "OSHB manifest loader")
 
-    old_xml = '''  function loadWlcOshb(source) {
-    return fetch(WLC_ROOT + source + ".xml", { credentials: "omit" }).then(function (response) {
-      if (!response.ok) throw new Error("WLC/OSHB 원문을 불러오지 못했습니다.");
-      return response.text();
-    }).then(function (xmlText) {
-      var xml = new DOMParser().parseFromString(xmlText, "application/xml");
-      if (xml.querySelector("parsererror")) throw new Error("WLC/OSHB XML을 해석하지 못했습니다.");
-      var chapters = {};
-      xml.querySelectorAll("verse[osisID]").forEach(function (verse) {
-        var parts = verse.getAttribute("osisID").split(".");
-        var chapter = String(Number(parts[1]));
-        var number = String(Number(parts[2]));
-        chapters[chapter] = chapters[chapter] || {};
-        chapters[chapter][number] = compactText(verse.textContent);
-      });
-      return chapters;
-    });
-  }
 '''
-    new_local = '''  function loadOshb(code) {
+    text = text[:end] + load_oshb_manifest + text[end:]
+
+    start, end = function_span(text, "loadWlcOshb")
+    load_oshb = '''  function loadOshb(code) {
     return loadOshbManifest().then(function (manifest) {
-      var bookInfo = manifest.books[code];
-      if (!bookInfo) throw new Error("WLC/OSHB 책 정보를 찾지 못했습니다.");
-      var chunkId = bookInfo.chunk;
-      if (!oshbChunkCache.has(chunkId)) {
-        var chunkInfo = manifest.chunks[chunkId];
-        if (!chunkInfo) throw new Error("WLC/OSHB 압축 묶음 정보를 찾지 못했습니다.");
-        var chunkUrl = new URL(chunkInfo.path, OSHB_DATA_ROOT).href;
-        oshbChunkCache.set(chunkId, loadGzipJson(chunkUrl));
-      }
-      return oshbChunkCache.get(chunkId).then(function (chunk) {
-        var book = chunk.books && chunk.books[code];
-        if (!book || !book.chapters) throw new Error("WLC/OSHB 책 데이터를 찾지 못했습니다.");
-        return book.chapters;
-      });
+      var info = manifest.books[code];
+      if (!info) throw new Error("WLC/OSHB 성경책 정보를 찾지 못했습니다.");
+      var chunkInfo = manifest.chunks[info.chunk];
+      if (!chunkInfo) throw new Error("WLC/OSHB 압축 묶음 정보를 찾지 못했습니다.");
+      return loadChunk(oshbChunkCache, OSHB_DATA_ROOT, chunkInfo, "WLC/OSHB 본문을 불러오지 못했습니다.");
+    }).then(function (chunk) {
+      var data = (chunk.books || chunk)[code];
+      if (!data || !data.chapters) throw new Error("WLC/OSHB 본문이 없습니다.");
+      return data.chapters;
     });
   }
+
 '''
-    text = replace_once(text, old_xml, new_local, "runtime XML loader")
+    text = text[:start] + load_oshb + text[end:]
     text = replace_once(
         text,
-        '    if (book.testament === "OT") promise = loadWlcOshb(book.source);\n',
-        '    if (book.testament === "OT") promise = loadOshb(code);\n',
+        '    var promise = book.testament === "OT" ? loadWlcOshb(book) : loadNa28(code);\n',
+        '    var promise = book.testament === "OT" ? loadOshb(code) : loadNa28(code);\n',
         "OT original loader",
     )
     return text
@@ -107,8 +133,8 @@ def patch_reader(text: str) -> str:
 def patch_page(text: str) -> str:
     if MARKER in text:
         return text
-    old = '<footer class="or-footer">구약은 WLC/OSHB, 신약은 사용자 제공 NA28 변환 데이터를 사용합니다. 관주는 OpenBible.info Cross References(CC BY)를 한국어 약칭으로 변환한 참고 연결이며, 각 절 아래에서 펼쳐 볼 수 있습니다. <!-- SCRIPTORIUM_XREFS_V1 --></footer>'
-    new = '<footer class="or-footer">구약은 MorphHB 2.0.2의 WLC/OSHB를 책별 로컬 gzip JSON으로 변환해 사용하고, 신약은 사용자 제공 NA28 변환 데이터를 사용합니다. 관주는 OpenBible.info Cross References(CC BY)를 한국어 약칭으로 변환한 참고 연결이며, 각 절 아래에서 펼쳐 볼 수 있습니다. <!-- SCRIPTORIUM_XREFS_V1 · ' + MARKER + ' --></footer>'
+    old = "구약은 WLC/OSHB, 신약은 사용자 제공 NA28 변환 데이터를 사용합니다."
+    new = "구약은 MorphHB 2.0.2의 WLC/OSHB를 책별 로컬 gzip JSON으로 변환해 사용하고, 신약은 사용자 제공 NA28 변환 데이터를 사용합니다. <!-- " + MARKER + " -->"
     return replace_once(text, old, new, "reader source footer")
 
 
@@ -123,23 +149,20 @@ def validate(files: dict[Path, str]) -> list[str]:
     errors: list[str] = []
     reader = files[READER]
     page = files[PAGE]
-    required = (
+    for needle in (
         "OSHB_MANIFEST_URL",
         "loadOshbManifest",
         "loadOshb(code)",
         "oshbChunkCache",
-        'new URL(chunkInfo.path, OSHB_DATA_ROOT)',
-    )
-    for needle in required:
+        "OSHB_DATA_ROOT",
+    ):
         if needle not in reader:
             errors.append(f"original-reader.js missing {needle}")
-    forbidden = (
+    for needle in (
         "cdn.jsdelivr.net/npm/morphhb",
         "loadWlcOshb",
         "new DOMParser",
-        'response.text()',
-    )
-    for needle in forbidden:
+    ):
         if needle in reader:
             errors.append(f"original-reader.js still contains runtime dependency: {needle}")
     if MARKER not in reader or MARKER not in page:

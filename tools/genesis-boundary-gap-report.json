@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-08-02T00:09:42.556819+00:00",
+  "chapters": {
+    "23": {
+      "status": "already_plain"
+    },
+    "24": {
+      "files": [
+        "ch24.01.b64",
+        "ch24.02.b64",
+        "ch24.03.b64",
+        "ch24.04.b64",
+        "ch24.05.b64"
+      ],
+      "lengths": [
+        9000,
+        9000,
+        9000,
+        6194,
+        4448
+      ],
+      "tails": [
+        "TGhZn8YyEQM2KqKz",
+        "qRFcfNtLLlYDL3Ao",
+        "YqxnsGVfGQ7UG7sD",
+        "83+H0+AMSvrbAAA=",
+        "fgMnf6mOW3oBAA=="
+      ],
+      "padded_nonfinal_fragments": [
+        4
+      ],
+      "fragment": 4,
+      "removed_padding": 1,
+      "boundary_position": 33193,
+      "missing_characters": 3,
+      "candidate_count": 262144,
+      "status": "unresolved",
+      "error": "all boundary candidates exhausted"
+    }
+  }
+}

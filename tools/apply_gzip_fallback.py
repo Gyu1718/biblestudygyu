@@ -2,7 +2,7 @@
 """Add a local fflate fallback to every gzip JSON reader.
 
 Native DecompressionStream remains the fast path. Older browsers load the
-vendored fflate UMD bundle only when the first gzip file is requested.
+vendored fflate UMD bundle only when a gzip file is requested.
 """
 from __future__ import annotations
 
@@ -71,11 +71,9 @@ REPLACEMENT = r'''  var gzipFallbackUrl = (function () { // SCRIPTORIUM_GZIP_FAL
     }
   }
 
-  function loadGzipJson(url) {
-    return fetch(url, { credentials: "same-origin" }).then(function (response) {
-      if (!response.ok) throw new Error("압축 성경 데이터를 불러오지 못했습니다.");
-      return response.arrayBuffer();
-    }).then(gunzipText).then(function (text) {
+  function decompressJson(response, errorMessage) {
+    if (!response.ok) throw new Error(errorMessage || "압축 성경 데이터를 불러오지 못했습니다.");
+    return response.arrayBuffer().then(gunzipText).then(function (text) {
       try {
         return JSON.parse(text);
       } catch (error) {
@@ -129,9 +127,7 @@ def function_span(text: str, name: str) -> tuple[int, int]:
                 depth -= 1
                 if depth == 0:
                     end = index + 1
-                    if end < len(text) and text[end] == "\r":
-                        end += 1
-                    if end < len(text) and text[end] == "\n":
+                    while end < len(text) and text[end] in "\r\n":
                         end += 1
                     return match.start(), end
         index += 1
@@ -141,11 +137,8 @@ def function_span(text: str, name: str) -> tuple[int, int]:
 def patch(text: str, path: Path) -> str:
     if MARKER in text:
         return text
-    start, end = function_span(text, "loadGzipJson")
-    patched = text[:start] + REPLACEMENT + text[end:]
-    if "최신 브라우저" in patched:
-        patched = patched.replace("최신 브라우저가 필요합니다.", "로컬 압축 폴백을 사용할 수 없습니다.")
-    return patched
+    start, end = function_span(text, "decompressJson")
+    return text[:start] + REPLACEMENT + text[end:]
 
 
 def patched_files() -> dict[Path, str]:
@@ -169,10 +162,10 @@ def validate(files: dict[Path, str]) -> list[str]:
         ):
             if required not in text:
                 errors.append(f"{relative}: missing {required}")
-        if "최신 브라우저가 필요합니다" in text:
+        if "최신 브라우저" in text:
             errors.append(f"{relative}: obsolete browser rejection remains")
-        if text.count("function loadGzipJson") != 1:
-            errors.append(f"{relative}: expected exactly one loadGzipJson")
+        if text.count("function decompressJson") != 1:
+            errors.append(f"{relative}: expected exactly one decompressJson")
     return errors
 
 

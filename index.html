@@ -73,7 +73,18 @@ footer{margin-top:4.4rem;border-top:3px double var(--line);padding:1.5rem 0 2.8r
   var origClass = function (script) { return script === "heb" ? " heb" : ""; };
   var SPINE_H = [96, 84, 90, 80, 88, 83];
   var miniShelf = function (volumes) {var count = Math.min(Math.max(volumes || 4, 2), 6);var html = '<span class="mini-shelf" aria-hidden="true">';for (var i = 0; i < count; i++) {html += '<i' + (i === 0 ? ' class="g"' : '') + ' style="height:' + SPINE_H[i] + 'px"></i>';}return html + "</span>";};
-  var cardHTML = function (st) {return '<a class="set-card" href="' + esc(st.path) + '">' + miniShelf(st.volumes) + "<span>" + '<span class="orig-line' + origClass(st.script) + '">' + esc(st.original) + "</span>" + "<h3>" + esc(st.title) + "</h3>" + '<div class="meta">' + esc(st.meta) + "</div>" + '<div class="desc">' + esc(st.desc) + "</div>" + '<span class="cta">서재 열기 →</span>' + "</span></a>";};
+  var progressHTML = function (progress) { // SCRIPTORIUM_HOME_PROGRESS_V1
+    if (!progress || !Number.isFinite(progress.done) || !Number.isFinite(progress.total) || progress.total <= 0) return "";
+    var done = Math.max(0, Math.min(progress.done, progress.total));
+    var percent = Math.round((done / progress.total) * 100);
+    var state = done >= progress.total ? "완성" : "진행";
+    var label = progress.label || "진행률";
+    return '<div class="card-progress" role="progressbar" aria-label="' + esc(label + " " + done + "/" + progress.total + " " + state) + '" aria-valuemin="0" aria-valuemax="' + progress.total + '" aria-valuenow="' + done + '">' +
+      '<span class="card-progress-head"><span>' + esc(label) + '</span><strong>' + done + '/' + progress.total + ' <em>' + state + '</em></strong></span>' +
+      '<span class="card-progress-track" aria-hidden="true"><i style="width:' + percent + '%"></i></span>' +
+    '</div>';
+  };
+  var cardHTML = function (st) {return '<a class="set-card" href="' + esc(st.path) + '">' + miniShelf(st.volumes) + "<span>" + '<span class="orig-line' + origClass(st.script) + '">' + esc(st.original) + "</span>" + "<h3>" + esc(st.title) + "</h3>" + '<div class="meta">' + esc(st.meta) + "</div>" + progressHTML(st.progress) + '<div class="desc">' + esc(st.desc) + "</div>" + '<span class="cta">서재 열기 →</span>' + "</span></a>";};
   var emptyHTML = function () {return '<div class="next-slot">' + '<span class="ghost" aria-hidden="true"><i></i><i></i><i></i></span>' + "<p><b>준비 중.</b> 연구가 완성되면 이 서가에 꽂힌다.</p></div>";};
   var shelves = "";var topnav = "";
   cat.sections.forEach(function (sec) {shelves += '<section class="shelf-sec" id="' + esc(sec.id) + '">' + '<div class="sec-head">' + '<div class="eyebrow">STUDY SETS</div>' + "<h2>" + esc(sec.label) + "</h2>" + '<span class="orig' + origClass(sec.script) + '">' + esc(sec.original) + "</span>" + "</div>";if (sec.studies.length) {sec.studies.forEach(function (st) { shelves += cardHTML(st); });if (sec.id === "ot" || sec.id === "nt") shelves += emptyHTML();} else {shelves += emptyHTML();}shelves += "</section>";topnav += '<a href="#' + esc(sec.id) + '">' + esc(sec.label) + "</a>";});

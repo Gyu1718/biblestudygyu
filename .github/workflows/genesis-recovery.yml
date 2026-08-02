@@ -1,4 +1,5 @@
 name: Recover damaged Genesis payloads
+# Trigger exhaustive three-character reconstruction at the padded fragment boundary.
 
 on:
   pull_request:

@@ -9,7 +9,7 @@ import shutil
 from pathlib import Path
 from urllib.parse import quote
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path.cwd().resolve()
 SITE_BASE = "https://gyu1718.github.io/biblestudygyu/"
 CACHE_VERSION = "20260802.1"
 FORBIDDEN_ROOTS = (

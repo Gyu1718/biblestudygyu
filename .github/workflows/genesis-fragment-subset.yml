@@ -1,4 +1,5 @@
 name: Recover Genesis fragment subset
+# Trigger order-preserving subset validation for the two competing tail fragments.
 
 on:
   pull_request:

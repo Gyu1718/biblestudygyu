@@ -1,1 +1,1 @@
-Regenerate local OSHB chunks directly and restore gzip fallback integration.
+Regenerate local OSHB chunks with Joel versification normalization and restore gzip fallback integration.

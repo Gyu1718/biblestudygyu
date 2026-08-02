@@ -1,3 +1,7 @@
+/* SCRIPTORIUM_SITE_SEARCH_V1 */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skip-link{position:fixed;left:1rem;top:-5rem;z-index:10000;border-radius:6px;background:var(--lapis-deep);color:#fff;padding:.65rem .9rem;font:700 .75rem var(--sans);text-decoration:none;transition:top .15s}.skip-link:focus{top:1rem}
+.search-hint kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;background:var(--card);padding:.05rem .28rem;color:var(--ink-soft);font:600 .62rem var(--sans)}
 .site-search-page{min-height:100vh;background:var(--paper);color:var(--ink)}
 .search-wrap{width:min(70rem,calc(100% - 2rem));margin:0 auto;padding:1rem 0 5rem}
 .search-topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0 1.15rem;font-family:var(--sans)}

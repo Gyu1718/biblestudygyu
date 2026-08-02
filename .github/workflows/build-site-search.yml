@@ -31,16 +31,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build search index
-        run: python tools/build_search_index.py --write
-
       - name: Apply search navigation
         run: python tools/apply_site_search.py --write
 
+      - name: Build search index after navigation changes
+        run: python tools/build_search_index.py --write
+
       - name: Validate search implementation
         run: |
-          python tools/build_search_index.py --check
           python tools/apply_site_search.py --check
+          python tools/build_search_index.py --check
           node --check assets/js/site-search.js
           node --check assets/js/research-dock.js
           python - <<'PY'

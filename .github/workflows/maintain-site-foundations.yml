@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - name: Set up Node for pinned MorphHB package
+      - name: Set up Node for reader syntax checks
         if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
         uses: actions/setup-node@v4
         with:
@@ -43,13 +43,7 @@ jobs:
           python /tmp/maintain_site_foundations.py
 
           if [ ! -f assets/data/bible/original/oshb/manifest.json ]; then
-            rm -rf /tmp/morphhb /tmp/morphhb-*.tgz
-            mkdir -p /tmp/morphhb
-            package_name="$(npm pack morphhb@2.0.2 --pack-destination /tmp --silent)"
-            tar -xzf "/tmp/${package_name}" -C /tmp/morphhb
-            test -f /tmp/morphhb/package/wlc/Gen.xml
-            test "$(find /tmp/morphhb/package/wlc -maxdepth 1 -name '*.xml' | wc -l)" -eq 39
-            python tools/build_oshb_chunks.py --write --source-dir /tmp/morphhb/package/wlc
+            python tools/build_oshb_chunks.py --write --workers 4
           fi
 
           python tools/apply_oshb_local_data.py --write

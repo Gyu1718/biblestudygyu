@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Maintain static-site crawlability, deployment hygiene, and cache consistency."""
+"""Maintain crawlability, deployment hygiene, cache consistency, and accessibility."""
 
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ FORBIDDEN_ROOTS = (
     "templates",
 )
 EXCLUDED_PARTS = {".git", ".github", "tools", *FORBIDDEN_ROOTS}
-LIVE_ROOTS = {"bible", "content", "lexicon", "nt", "ot", "search"}
+LIVE_ROOTS = {"bible", "content", "encyclopedia", "lexicon", "nt", "ot", "search"}
 
 OLD_NOSCRIPT = '<main id="shelves"><noscript><section class="shelf-sec"><div class="sec-head"><h2>구약 연구</h2></div><p><a href="ot/nehemiah/index.html">느헤미야 심층 연구 — 전 14권</a></p></section></noscript></main>'
 NEW_NOSCRIPT = '''<main id="shelves"><noscript>
@@ -29,6 +29,41 @@ NEW_NOSCRIPT = '''<main id="shelves"><noscript>
 <section class="shelf-sec"><div class="sec-head"><h2>구약 연구</h2></div><p><a href="ot/genesis/index.html">창세기</a> · <a href="ot/nehemiah/index.html">느헤미야</a> · <a href="ot/esther/index.html">에스더</a> · <a href="ot/psalms/index.html">시편</a> · <a href="ot/hosea/index.html">호세아</a> · <a href="ot/joel/index.html">요엘</a> · <a href="ot/haggai/index.html">학개</a></p></section>
 <section class="shelf-sec"><div class="sec-head"><h2>신약 연구</h2></div><p><a href="nt/acts/index.html">사도행전</a> · <a href="nt/romans/index.html">로마서</a></p></section>
 </noscript></main>'''
+
+SKIP_LINK_CSS_MARKER = "SCRIPTORIUM_SKIP_LINK_V1"
+SKIP_LINK_CSS = '''\n/* SCRIPTORIUM_SKIP_LINK_V1: keyboard users can bypass repeated navigation. */
+.skip-link{
+  position:fixed; left:1rem; top:-5rem; z-index:10000;
+  border-radius:6px; background:var(--lapis-deep); color:#fff;
+  padding:.65rem .9rem; font-family:var(--sans); font-size:.75rem;
+  font-weight:700; text-decoration:none; box-shadow:var(--shadow-md);
+  transition:top .15s ease;
+}
+.skip-link:focus,.skip-link:focus-visible{top:1rem;outline:3px solid var(--ochre);outline-offset:2px}
+@media print{.skip-link{display:none}}
+'''
+
+HEBREW_TAG_RE = re.compile(
+    r'<[A-Za-z][^<>]*\blang\s*=\s*(["\'])he\1[^<>]*>', re.IGNORECASE
+)
+BODY_RE = re.compile(r'<body\b[^>]*>', re.IGNORECASE)
+TARGET_PATTERNS = (
+    re.compile(r'<main\b[^>]*>', re.IGNORECASE),
+    re.compile(r'<article\b[^>]*>', re.IGNORECASE),
+    re.compile(r'<div\b[^>]*\bid\s*=\s*(["\'])content\1[^>]*>', re.IGNORECASE),
+    re.compile(r'<h1\b[^>]*>', re.IGNORECASE),
+)
+
+
+def public_html_files() -> list[Path]:
+    files: list[Path] = []
+    for path in sorted(ROOT.rglob("*.html")):
+        rel = path.relative_to(ROOT)
+        if rel.parts[0].startswith(".") or any(part in EXCLUDED_PARTS for part in rel.parts):
+            continue
+        if len(rel.parts) == 1 or rel.parts[0] in LIVE_ROOTS:
+            files.append(path)
+    return files
 
 
 def update_text(path: Path, transform, *, check: bool, problems: list[str]) -> None:
@@ -85,6 +120,69 @@ def repair_acts_link(*, check: bool, problems: list[str]) -> None:
     )
 
 
+def add_hebrew_direction(source: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        tag = match.group(0)
+        if re.search(r"\bdir\s*=", tag, re.IGNORECASE):
+            return tag
+        return tag[:-1] + ' dir="rtl">'
+
+    return HEBREW_TAG_RE.sub(replace, source)
+
+
+def add_attribute(tag: str, name: str, value: str) -> str:
+    if re.search(rf"\b{re.escape(name)}\s*=", tag, re.IGNORECASE):
+        return tag
+    return tag[:-1] + f' {name}="{value}">'
+
+
+def add_skip_link(source: str) -> str:
+    if re.search(r'class\s*=\s*(["\'])[^"\']*\bskip-link\b', source, re.IGNORECASE):
+        return source
+
+    body_match = BODY_RE.search(source)
+    if not body_match:
+        return source
+
+    target_match = None
+    for pattern in TARGET_PATTERNS:
+        target_match = pattern.search(source, body_match.end())
+        if target_match:
+            break
+    if not target_match:
+        return source
+
+    target_tag = target_match.group(0)
+    id_match = re.search(r'\bid\s*=\s*(["\'])([^"\']+)\1', target_tag, re.IGNORECASE)
+    target_id = id_match.group(2) if id_match else "main-content"
+    updated_target = add_attribute(target_tag, "id", target_id)
+    updated_target = add_attribute(updated_target, "tabindex", "-1")
+
+    source = source[:target_match.start()] + updated_target + source[target_match.end():]
+    body_match = BODY_RE.search(source)
+    if not body_match:
+        return source
+    link = f'<a class="skip-link" href="#{target_id}">본문으로 건너뛰기</a>'
+    return source[:body_match.end()] + link + source[body_match.end():]
+
+
+def maintain_accessibility(*, check: bool, problems: list[str]) -> None:
+    app_css = ROOT / "assets/app.css"
+
+    def css_transform(source: str) -> str:
+        if SKIP_LINK_CSS_MARKER in source:
+            return source
+        return source.rstrip() + "\n" + SKIP_LINK_CSS
+
+    update_text(app_css, css_transform, check=check, problems=problems)
+
+    for path in public_html_files():
+        def transform(source: str) -> str:
+            return add_skip_link(add_hebrew_direction(source))
+
+        update_text(path, transform, check=check, problems=problems)
+
+
 def normalize_cache_versions(*, check: bool, problems: list[str]) -> None:
     pattern = re.compile(r"\?v=\d{8}(?:\.\d+)?")
     for path in ROOT.rglob("*"):
@@ -102,12 +200,8 @@ def normalize_cache_versions(*, check: bool, problems: list[str]) -> None:
 
 def sitemap_content() -> str:
     urls: set[str] = set()
-    for path in sorted(ROOT.rglob("*.html")):
+    for path in public_html_files():
         rel = path.relative_to(ROOT)
-        if rel.parts[0].startswith(".") or any(part in EXCLUDED_PARTS for part in rel.parts):
-            continue
-        if len(rel.parts) > 1 and rel.parts[0] not in LIVE_ROOTS:
-            continue
         source = path.read_text(encoding="utf-8", errors="ignore")
         if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex', source, re.I):
             continue
@@ -151,6 +245,7 @@ def main() -> int:
     maintain_noscript(check=args.check, problems=problems)
     remove_deployment_debris(check=args.check, problems=problems)
     repair_acts_link(check=args.check, problems=problems)
+    maintain_accessibility(check=args.check, problems=problems)
     normalize_cache_versions(check=args.check, problems=problems)
     maintain_sitemap(check=args.check, problems=problems)
 

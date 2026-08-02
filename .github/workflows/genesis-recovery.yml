@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/recover_genesis_internal_padding.py"
       - "tools/recover_genesis_chunk_boundaries.py"
       - "tools/recover_genesis_payloads.py"
       - ".github/workflows/genesis-recovery.yml"
@@ -31,6 +32,9 @@ jobs:
       - name: Install index build dependencies
         run: python -m pip install -r tools/requirements-encyclopedia.txt
 
+      - name: Recover invalid internal base64 padding
+        run: python tools/recover_genesis_internal_padding.py
+
       - name: Recover fragment-boundary defects
         run: python tools/recover_genesis_chunk_boundaries.py
 
@@ -49,6 +53,7 @@ jobs:
             ot/genesis \
             assets/data/encyclopedia/index.json \
             tools/site-integrity-report.json \
+            tools/genesis-internal-padding-report.json \
             tools/genesis-boundary-recovery-report.json \
             tools/genesis-payload-recovery-report.json
           if git diff --cached --quiet; then

@@ -1,0 +1,43 @@
+name: Validate local OSHB data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/data/bible/original/oshb/**"
+      - "assets/js/original-reader.js"
+      - "bible/original.html"
+      - "tools/build_oshb_chunks.py"
+      - "tools/apply_oshb_local_data.py"
+      - ".github/workflows/validate-oshb-local-data.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "assets/data/bible/original/oshb/**"
+      - "assets/js/original-reader.js"
+      - "bible/original.html"
+      - "tools/build_oshb_chunks.py"
+      - "tools/apply_oshb_local_data.py"
+      - ".github/workflows/validate-oshb-local-data.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate local chunks and reader
+        run: |
+          python tools/build_oshb_chunks.py --check
+          python tools/apply_oshb_local_data.py --check
+          node --check assets/js/original-reader.js

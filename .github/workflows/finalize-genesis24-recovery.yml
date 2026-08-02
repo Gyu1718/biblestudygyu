@@ -1,4 +1,5 @@
 name: Finalize Genesis 24 recovery edition
+# Trigger preservation of original sections 0–7 and the identified supplement for sections 8–16.
 
 on:
   pull_request:

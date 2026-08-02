@@ -1,3 +1,4 @@
+# 성서 연구 서고의 공개 문서와 생성된 sitemap을 검색엔진에 안내합니다.
 User-agent: *
 Allow: /
 

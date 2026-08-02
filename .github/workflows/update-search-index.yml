@@ -1,0 +1,95 @@
+name: Update site search index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "ot/**/*.html"
+      - "nt/**/*.html"
+      - "bible/**/*.html"
+      - "lexicon/**/*.html"
+      - "theology/**/*.html"
+      - "search/**/*.html"
+      - "tools/build_search_index.py"
+      - "tools/apply_site_search.py"
+      - "assets/js/site-search.js"
+      - "assets/css/site-search.css"
+      - ".github/workflows/update-search-index.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "ot/**/*.html"
+      - "nt/**/*.html"
+      - "bible/**/*.html"
+      - "lexicon/**/*.html"
+      - "theology/**/*.html"
+      - "search/**/*.html"
+      - "assets/data/search-index.json"
+      - "tools/build_search_index.py"
+      - "tools/apply_site_search.py"
+      - "assets/js/site-search.js"
+      - "assets/css/site-search.css"
+      - ".github/workflows/update-search-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate synchronized search assets
+        run: |
+          python tools/build_search_index.py --check
+          python tools/apply_site_search.py --check
+          node --check assets/js/site-search.js
+          node --check assets/js/research-dock.js
+
+  update-main:
+    if: github.event_name != 'pull_request' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild search index
+        run: |
+          python tools/build_search_index.py --write
+          python tools/apply_site_search.py --write
+          python tools/build_search_index.py --check
+          python tools/apply_site_search.py --check
+          node --check assets/js/site-search.js
+          node --check assets/js/research-dock.js
+
+      - name: Commit refreshed search assets
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- assets/data/search-index.json index.html assets/js/research-dock.js assets/css/site-search.css
+          if git diff --cached --quiet; then
+            echo "Search index already current"
+            exit 0
+          fi
+          git commit -m "Refresh site search index"
+          git push origin main

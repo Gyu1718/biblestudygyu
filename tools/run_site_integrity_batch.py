@@ -3,6 +3,7 @@
 
 A corrupt chapter must not prevent healthy chapters or the encyclopedia index
 from being repaired and committed. Strict validation remains a separate step.
+This batch also refreshes the report after a manual recovery edition is finalized.
 """
 from __future__ import annotations
 

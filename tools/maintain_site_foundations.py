@@ -83,7 +83,12 @@ def maintain_noscript(*, check: bool, problems: list[str]) -> None:
     def transform(source: str) -> str:
         if OLD_NOSCRIPT in source:
             return source.replace(OLD_NOSCRIPT, NEW_NOSCRIPT, 1)
-        if NEW_NOSCRIPT in source:
+        if (
+            "<noscript>" in source
+            and "성경과 원어 도구" in source
+            and 'href="ot/genesis/index.html"' in source
+            and 'href="nt/romans/index.html"' in source
+        ):
             return source
         raise RuntimeError("Could not identify the homepage noscript block")
 

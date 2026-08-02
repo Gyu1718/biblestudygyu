@@ -104,3 +104,14 @@
   .xref-list{ gap:.3rem; }
   .xref-item{ font-size:.78rem; }
 }
+
+/* SCRIPTORIUM_SKIP_LINK_V1: keyboard users can bypass repeated navigation. */
+.skip-link{
+  position:fixed; left:1rem; top:-5rem; z-index:10000;
+  border-radius:6px; background:var(--lapis-deep); color:#fff;
+  padding:.65rem .9rem; font-family:var(--sans); font-size:.75rem;
+  font-weight:700; text-decoration:none; box-shadow:var(--shadow-md);
+  transition:top .15s ease;
+}
+.skip-link:focus,.skip-link:focus-visible{top:1rem;outline:3px solid var(--ochre);outline-offset:2px}
+@media print{.skip-link{display:none}}

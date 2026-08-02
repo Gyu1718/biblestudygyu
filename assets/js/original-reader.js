@@ -7,6 +7,8 @@
   var KOR_MANIFEST_URL = new URL("manifest.json", KOR_DATA_ROOT).href;
   var NA28_DATA_ROOT = new URL("assets/data/bible/original/na28/", siteRoot).href;
   var NA28_MANIFEST_URL = new URL("manifest.json", NA28_DATA_ROOT).href;
+  var OSHB_DATA_ROOT = new URL("assets/data/bible/original/oshb/", siteRoot).href; // SCRIPTORIUM_LOCAL_OSHB_V1
+  var OSHB_MANIFEST_URL = new URL("manifest.json", OSHB_DATA_ROOT).href;
   var XREF_DATA_ROOT = new URL("data/xrefs/", siteRoot).href;
   var XREF_SUPPORTED = { GEN:1, NEH:1, EST:1, PSA:1, HOS:1, JOL:1, HAG:1, ACT:1, ROM:1 }; // SCRIPTORIUM_XREFS_V1
 
@@ -42,6 +44,8 @@
   var na28ManifestPromise = null;
   var koreanChunkCache = new Map();
   var na28ChunkCache = new Map();
+  var oshbManifestPromise = null;
+  var oshbChunkCache = new Map();
   var koreanCache = new Map();
   var originalCache = new Map();
   var xrefCache = new Map();
@@ -104,14 +108,75 @@
     return na28ManifestPromise;
   }
 
-  function decompressJson(response, errorMessage) {
-    if (!response.ok) throw new Error(errorMessage);
-    if (typeof DecompressionStream !== "function") {
-      throw new Error("압축 성경 데이터를 읽으려면 최신 Chrome·Edge·Safari가 필요합니다.");
+
+  function loadOshbManifest() {
+    if (!oshbManifestPromise) {
+      oshbManifestPromise = loadJson(OSHB_MANIFEST_URL, "WLC/OSHB 목록을 불러오지 못했습니다.");
     }
-    return new Response(response.body.pipeThrough(new DecompressionStream("gzip"))).json();
+    return oshbManifestPromise;
+  }
+  var gzipFallbackUrl = (function () { // SCRIPTORIUM_GZIP_FALLBACK_V1
+    var current = document.currentScript && document.currentScript.src;
+    return current ? new URL("../vendor/fflate.min.js", current).href : "assets/vendor/fflate.min.js";
+  })();
+
+  function loadFflateFallback() {
+    if (window.fflate && typeof window.fflate.gunzipSync === "function") {
+      return Promise.resolve(window.fflate);
+    }
+    if (window.__SCRIPTORIUM_FFLATE_PROMISE__) return window.__SCRIPTORIUM_FFLATE_PROMISE__;
+    window.__SCRIPTORIUM_FFLATE_PROMISE__ = new Promise(function (resolve, reject) {
+      var existing = document.querySelector('script[data-scriptorium-fflate]');
+      var script = existing || document.createElement("script");
+      function ready() {
+        if (window.fflate && typeof window.fflate.gunzipSync === "function") resolve(window.fflate);
+        else reject(new Error("로컬 gzip 폴백을 초기화하지 못했습니다."));
+      }
+      script.addEventListener("load", ready, { once: true });
+      script.addEventListener("error", function () {
+        reject(new Error("로컬 gzip 폴백을 불러오지 못했습니다."));
+      }, { once: true });
+      if (!existing) {
+        script.src = gzipFallbackUrl;
+        script.defer = true;
+        script.dataset.scriptoriumFflate = "";
+        document.head.appendChild(script);
+      } else if (window.fflate) {
+        ready();
+      }
+    }).catch(function (error) {
+      window.__SCRIPTORIUM_FFLATE_PROMISE__ = null;
+      throw error;
+    });
+    return window.__SCRIPTORIUM_FFLATE_PROMISE__;
   }
 
+  function gunzipText(buffer) {
+    function fallback() {
+      return loadFflateFallback().then(function (fflate) {
+        var output = fflate.gunzipSync(new Uint8Array(buffer));
+        return new TextDecoder("utf-8").decode(output);
+      });
+    }
+    if (!("DecompressionStream" in window)) return fallback();
+    try {
+      var stream = new Blob([buffer]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Response(stream).text().catch(fallback);
+    } catch (error) {
+      return fallback();
+    }
+  }
+
+  function decompressJson(response, errorMessage) {
+    if (!response.ok) throw new Error(errorMessage || "압축 성경 데이터를 불러오지 못했습니다.");
+    return response.arrayBuffer().then(gunzipText).then(function (text) {
+      try {
+        return JSON.parse(text);
+      } catch (error) {
+        throw new Error("압축 성경 데이터를 해석하지 못했습니다.");
+      }
+    });
+  }
   function loadChunk(cache, root, info, errorMessage) {
     var key = info.path;
     if (cache.has(key)) return cache.get(key);
@@ -135,25 +200,17 @@
     koreanCache.set(code, promise);
     return promise;
   }
-
-  function loadWlcOshb(book) {
-    var url = "https://cdn.jsdelivr.net/npm/morphhb@2.0.2/wlc/" + book.file;
-    return fetch(url).then(function (response) {
-      if (!response.ok) throw new Error("WLC/OSHB 히브리어 본문을 불러오지 못했습니다.");
-      return response.text();
-    }).then(function (xmlText) {
-      var doc = new DOMParser().parseFromString(xmlText, "application/xml");
-      if (doc.querySelector("parsererror")) throw new Error("히브리어 원문을 해석하지 못했습니다.");
-      var data = {};
-      doc.querySelectorAll("verse[osisID]").forEach(function (verse) {
-        var id = verse.getAttribute("osisID").split(".");
-        var chapter = Number(id[id.length - 2]);
-        var verseNumber = Number(id[id.length - 1]);
-        var text = verse.textContent.replace(/\s+/g, " ").trim();
-        if (!data[chapter]) data[chapter] = {};
-        data[chapter][verseNumber] = text;
-      });
-      return data;
+  function loadOshb(code) {
+    return loadOshbManifest().then(function (manifest) {
+      var info = manifest.books[code];
+      if (!info) throw new Error("WLC/OSHB 성경책 정보를 찾지 못했습니다.");
+      var chunkInfo = manifest.chunks[info.chunk];
+      if (!chunkInfo) throw new Error("WLC/OSHB 압축 묶음 정보를 찾지 못했습니다.");
+      return loadChunk(oshbChunkCache, OSHB_DATA_ROOT, chunkInfo, "WLC/OSHB 본문을 불러오지 못했습니다.");
+    }).then(function (chunk) {
+      var data = (chunk.books || chunk)[code];
+      if (!data || !data.chapters) throw new Error("WLC/OSHB 본문이 없습니다.");
+      return data.chapters;
     });
   }
 
@@ -172,7 +229,7 @@
   function loadOriginal(code) {
     if (originalCache.has(code)) return originalCache.get(code);
     var book = bookMap[code];
-    var promise = book.testament === "OT" ? loadWlcOshb(book) : loadNa28(code);
+    var promise = book.testament === "OT" ? loadOshb(code) : loadNa28(code);
     originalCache.set(code, promise);
     return promise;
   }

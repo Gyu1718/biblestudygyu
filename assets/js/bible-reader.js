@@ -355,14 +355,68 @@
     }
     return manifestPromise;
   }
+  var gzipFallbackUrl = (function () { // SCRIPTORIUM_GZIP_FALLBACK_V1
+    var current = document.currentScript && document.currentScript.src;
+    return current ? new URL("../vendor/fflate.min.js", current).href : "assets/vendor/fflate.min.js";
+  })();
 
-  function decompressJson(response) {
-    if (!response.ok) throw new Error("성경 데이터를 불러오지 못했습니다");
-    if (typeof DecompressionStream !== "function") throw new Error("이 브라우저는 압축 성경 데이터 읽기를 지원하지 않습니다. 최신 Chrome·Edge·Safari를 사용해 주세요.");
-    var stream = response.body.pipeThrough(new DecompressionStream("gzip"));
-    return new Response(stream).json();
+  function loadFflateFallback() {
+    if (window.fflate && typeof window.fflate.gunzipSync === "function") {
+      return Promise.resolve(window.fflate);
+    }
+    if (window.__SCRIPTORIUM_FFLATE_PROMISE__) return window.__SCRIPTORIUM_FFLATE_PROMISE__;
+    window.__SCRIPTORIUM_FFLATE_PROMISE__ = new Promise(function (resolve, reject) {
+      var existing = document.querySelector('script[data-scriptorium-fflate]');
+      var script = existing || document.createElement("script");
+      function ready() {
+        if (window.fflate && typeof window.fflate.gunzipSync === "function") resolve(window.fflate);
+        else reject(new Error("로컬 gzip 폴백을 초기화하지 못했습니다."));
+      }
+      script.addEventListener("load", ready, { once: true });
+      script.addEventListener("error", function () {
+        reject(new Error("로컬 gzip 폴백을 불러오지 못했습니다."));
+      }, { once: true });
+      if (!existing) {
+        script.src = gzipFallbackUrl;
+        script.defer = true;
+        script.dataset.scriptoriumFflate = "";
+        document.head.appendChild(script);
+      } else if (window.fflate) {
+        ready();
+      }
+    }).catch(function (error) {
+      window.__SCRIPTORIUM_FFLATE_PROMISE__ = null;
+      throw error;
+    });
+    return window.__SCRIPTORIUM_FFLATE_PROMISE__;
   }
 
+  function gunzipText(buffer) {
+    function fallback() {
+      return loadFflateFallback().then(function (fflate) {
+        var output = fflate.gunzipSync(new Uint8Array(buffer));
+        return new TextDecoder("utf-8").decode(output);
+      });
+    }
+    if (!("DecompressionStream" in window)) return fallback();
+    try {
+      var stream = new Blob([buffer]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Response(stream).text().catch(fallback);
+    } catch (error) {
+      return fallback();
+    }
+  }
+
+  function decompressJson(response, errorMessage) {
+    if (!response.ok) throw new Error(errorMessage || "압축 성경 데이터를 불러오지 못했습니다.");
+    return response.arrayBuffer().then(gunzipText).then(function (text) {
+      try {
+        return JSON.parse(text);
+      } catch (error) {
+        throw new Error("압축 성경 데이터를 해석하지 못했습니다.");
+      }
+    });
+  }
   function loadChunk(chunkName, manifest) {
     if (chunkCache.has(chunkName)) return chunkCache.get(chunkName);
     var info = manifest.chunks[chunkName];
@@ -723,8 +777,8 @@
   window.__SCRIPTORIUM_COMMENTATOR_CHIPS_LOADING__ = true;
   var current = document.currentScript;
   var src = current && current.src
-    ? new URL("commentator-chips.js?v=20260724.5", current.src).href
-    : "assets/js/commentator-chips.js?v=20260724.5";
+    ? new URL("commentator-chips.js?v=20260802.1", current.src).href
+    : "assets/js/commentator-chips.js?v=20260802.1";
   var loader = document.createElement("script");
   loader.src = src;
   loader.defer = true;

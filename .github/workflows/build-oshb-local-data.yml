@@ -1,0 +1,81 @@
+name: Build local OSHB data
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/build_oshb_chunks.py"
+      - "tools/apply_oshb_local_data.py"
+      - "assets/data/bible/original/oshb/README.md"
+      - ".github/workflows/build-oshb-local-data.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/localize-oshb-data
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node for pinned MorphHB package
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download MorphHB 2.0.2 once
+        shell: bash
+        run: |
+          mkdir -p /tmp/morphhb
+          package_name="$(npm pack morphhb@2.0.2 --pack-destination /tmp --silent)"
+          tar -xzf "/tmp/${package_name}" -C /tmp/morphhb
+          test -f /tmp/morphhb/package/wlc/Gen.xml
+          test "$(find /tmp/morphhb/package/wlc -maxdepth 1 -name '*.xml' | wc -l)" -eq 39
+
+      - name: Build local MorphHB chunks
+        run: python tools/build_oshb_chunks.py --write --source-dir /tmp/morphhb/package/wlc
+
+      - name: Switch reader to local chunks
+        run: python tools/apply_oshb_local_data.py --write
+
+      - name: Validate data and loader
+        run: |
+          python tools/build_oshb_chunks.py --check
+          python tools/apply_oshb_local_data.py --check
+          node --check assets/js/original-reader.js
+          python - <<'PY'
+          from pathlib import Path
+          reader=Path('assets/js/original-reader.js').read_text(encoding='utf-8')
+          assert 'cdn.jsdelivr.net/npm/morphhb' not in reader
+          assert 'DOMParser' not in reader
+          chunks=list(Path('assets/data/bible/original/oshb/chunks').glob('*.json.gz'))
+          assert len(chunks)==39, len(chunks)
+          print(f'local OSHB chunks: {len(chunks)}')
+          PY
+
+      - name: Commit generated local data
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- \
+            assets/data/bible/original/oshb \
+            assets/js/original-reader.js \
+            bible/original.html
+          if git diff --cached --quiet; then
+            echo "No generated OSHB changes"
+            exit 0
+          fi
+          git commit -m "Store WLC OSHB as local book chunks"
+          git push origin agent/localize-oshb-data

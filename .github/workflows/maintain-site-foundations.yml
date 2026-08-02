@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - name: Set up Node for reader syntax checks
+      - name: Set up Node for reader dependencies and syntax checks
         if: github.event.pull_request.head.ref == 'fix/site-foundations-404-sitemap'
         uses: actions/setup-node@v4
         with:
@@ -48,6 +48,20 @@ jobs:
             python tools/remap_oshb_joel.py --write
           fi
 
+          if [ ! -f assets/vendor/fflate.min.js ] || [ ! -f assets/vendor/fflate.LICENSE.txt ]; then
+            rm -rf /tmp/fflate-package /tmp/fflate-*.tgz
+            mkdir -p /tmp/fflate-package assets/vendor
+            package_name="$(npm pack fflate@0.8.2 --pack-destination /tmp --silent)"
+            tar -xzf "/tmp/${package_name}" -C /tmp/fflate-package
+            test -f /tmp/fflate-package/package/umd/index.js
+            test -f /tmp/fflate-package/package/LICENSE
+            {
+              printf '%s\n' '/*! fflate 0.8.2 | MIT License | https://github.com/101arrowz/fflate */'
+              cat /tmp/fflate-package/package/umd/index.js
+            } > assets/vendor/fflate.min.js
+            cp /tmp/fflate-package/package/LICENSE assets/vendor/fflate.LICENSE.txt
+          fi
+
           python tools/apply_oshb_local_data.py --write
           python tools/apply_gzip_fallback.py --write
           python tools/build_oshb_chunks.py --check
@@ -56,6 +70,19 @@ jobs:
           python tools/apply_gzip_fallback.py --check
           node --check assets/js/bible-reader.js
           node --check assets/js/original-reader.js
+          node - <<'JS'
+          const fs = require('fs');
+          const vm = require('vm');
+          const zlib = require('zlib');
+          const context = { Uint8Array, TextEncoder, TextDecoder };
+          context.self = context;
+          context.window = context;
+          context.globalThis = context;
+          vm.runInNewContext(fs.readFileSync('assets/vendor/fflate.min.js', 'utf8'), context);
+          const source = Buffer.from('scriptorium gzip fallback');
+          const output = context.fflate.gunzipSync(new Uint8Array(zlib.gzipSync(source)));
+          if (new TextDecoder().decode(output) !== source.toString()) throw new Error('fallback validation failed');
+          JS
 
           python tools/apply_site_search.py --write
           python tools/build_search_index.py --write

@@ -45,8 +45,15 @@
     btn.setAttribute("aria-label", "화면 모드: " + TOGGLE_LABEL[mode] + " (눌러서 전환)");
   }
 
+  function dockThemeControlExpected() { // SCRIPTORIUM_HOME_THEME_V1
+    return Boolean(
+      window.__SCRIPTORIUM_DOCK_LOADER__ ||
+      document.querySelector('script[data-rd-loader],script[src*="research-dock-loader.js"]')
+    );
+  }
+
   function mountThemeToggle() {
-    if (document.getElementById("theme-toggle")) return;
+    if (dockThemeControlExpected() || document.getElementById("theme-toggle")) return;
     var btn = document.createElement("button");
     btn.id = "theme-toggle";
     btn.type = "button";

@@ -1,0 +1,52 @@
+name: Optimize font loading
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/optimize_font_loading.py"
+      - ".github/workflows/optimize-font-loading.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/optimize-font-loading
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Optimize live HTML font requests
+        run: python tools/optimize_font_loading.py --write
+
+      - name: Validate optimized font requests
+        run: python tools/optimize_font_loading.py --check
+
+      - name: Commit optimized HTML
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html'
+          for directory in ot nt bible lexicon theology; do
+            if [ -d "$directory" ]; then
+              git add -A -- "$directory"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "No font-loading changes"
+            exit 0
+          fi
+          git commit -m "Optimize Google Fonts loading"
+          git push origin agent/optimize-font-loading

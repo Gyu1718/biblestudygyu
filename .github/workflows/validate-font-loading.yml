@@ -1,0 +1,44 @@
+name: Validate font loading
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "ot/**/*.html"
+      - "nt/**/*.html"
+      - "bible/**/*.html"
+      - "lexicon/**/*.html"
+      - "theology/**/*.html"
+      - "tools/optimize_font_loading.py"
+      - ".github/workflows/validate-font-loading.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "ot/**/*.html"
+      - "nt/**/*.html"
+      - "bible/**/*.html"
+      - "lexicon/**/*.html"
+      - "theology/**/*.html"
+      - "tools/optimize_font_loading.py"
+      - ".github/workflows/validate-font-loading.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Google Fonts requests
+        run: python tools/optimize_font_loading.py --check

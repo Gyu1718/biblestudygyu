@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T00:11:36.432792+00:00",
+  "generated_at": "2026-08-02T00:24:05.786949+00:00",
   "chapters": {
     "ot/genesis/ch21.html": {
       "status": "already_plain",
@@ -14,8 +14,8 @@
       "source": "current"
     },
     "ot/genesis/ch24.html": {
-      "status": "unresolved",
-      "error": "No decodable historical version for ot/genesis/ch24.html.\n47441e102718: base64 length is not divisible by 4: 37642\nbe68538ec23f: base64 length is not divisible by 4: 37642\n47b7bd5d248e: missing payload fragment: ot/genesis/ch24.04.b64\n5b4ef8cfd442: missing payload fragment: ot/genesis/ch24.04.b64\n23a374e98891: missing payload fragment: ot/genesis/ch24.03.b64\n9d9c85587b08: missing payload fragment: ot/genesis/ch24.02.b64\na0a5daa1a56e: missing payload fragment: ot/genesis/ch24.01.b64"
+      "status": "already_plain",
+      "source": "current"
     },
     "ot/genesis/ch25.html": {
       "status": "already_plain",

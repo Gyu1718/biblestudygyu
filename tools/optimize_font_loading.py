@@ -12,7 +12,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LIVE_DIRS = ("ot", "nt", "bible", "lexicon", "theology")
+LIVE_DIRS = ("ot", "nt", "bible", "lexicon", "theology", "search")
 GSTATIC = '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
 SERIF_RE = re.compile(r"Noto\+Serif\+KR:wght@([0-9;]+)")
 GOOGLE_PRECONNECT_RE = re.compile(

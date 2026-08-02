@@ -122,6 +122,7 @@
     else if (/^bible\/original\.html?$/i.test(rel)) type = "original";
     else if (/^lexicon\/index\.html?$/i.test(rel)) type = "lexicon-index";
     else if (/^lexicon\/entry\.html?$/i.test(rel)) type = "lexicon-entry";
+    else if (/^search\/index\.html?$/i.test(rel)) type = "site-search"; // SCRIPTORIUM_SITE_SEARCH_V1
     else if ((seg[0] === "ot" || seg[0] === "nt") && file === "index.html") type = "study-home";
     else if (seg[0] === "ot" || seg[0] === "nt") type = chapter ? "chapter-study" : "study-page";
     return { rel:rel, seg:seg, file:file, slug:slug, book:book, chapter:chapter, type:type };
@@ -306,6 +307,7 @@
       actions.push({ id:"search", label:"사전 검색", icon:"search", href:href("lexicon/index.html") });
     }
 
+    if (ctx.type !== "site-search") actions.push({ id:"site-search", label:"전체 검색", icon:"search", href:href("search/index.html") });
     if (ctx.type !== "original") actions.push({ id:"bible", label:"원어성경", icon:"bible", href:originalUrl(ctx) });
     if (ctx.type !== "original" && ctx.book && ctx.chapter && XREF_BOOKS[ctx.book]) {
       actions.push({

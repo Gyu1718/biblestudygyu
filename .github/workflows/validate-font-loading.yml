@@ -10,6 +10,7 @@ on:
       - "bible/**/*.html"
       - "lexicon/**/*.html"
       - "theology/**/*.html"
+      - "search/**/*.html"
       - "tools/optimize_font_loading.py"
       - ".github/workflows/validate-font-loading.yml"
   pull_request:
@@ -21,6 +22,7 @@ on:
       - "bible/**/*.html"
       - "lexicon/**/*.html"
       - "theology/**/*.html"
+      - "search/**/*.html"
       - "tools/optimize_font_loading.py"
       - ".github/workflows/validate-font-loading.yml"
   workflow_dispatch:

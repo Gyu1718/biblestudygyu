@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem("scriptorium-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
+<title>전체 검색 — 성서 연구 서고</title>
+<meta name="description" content="성서 연구 서고의 성경 본문, 원어, 주석, 관주, 조직신학 자료를 한 번에 검색합니다.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ccircle cx='27' cy='27' r='13' fill='none' stroke='%23a8823c' stroke-width='5'/%3E%3Cpath d='M37 37l13 13' stroke='%23a8823c' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/theme.css?v=20260802.1">
+<link rel="stylesheet" href="../assets/app.css?v=20260802.1">
+<link rel="stylesheet" href="../assets/css/site-search.css?v=20260802.1">
+</head>
+<body class="site-search-page" data-page="site-search">
+<a class="skip-link" href="#siteSearchInput">검색 입력으로 건너뛰기</a>
+<div class="search-wrap">
+  <header class="search-topbar">
+    <a class="search-brand" href="../index.html"><span>ד</span>성서 연구 서고</a>
+    <nav class="search-toplinks" aria-label="주요 메뉴">
+      <a href="../bible/original.html">성경읽기</a>
+      <a href="../lexicon/index.html">원어사전</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-hero" aria-labelledby="searchTitle">
+      <p class="search-kicker">Search the Archive</p>
+      <h1 id="searchTitle">전체 검색</h1>
+      <p class="search-intro">책 이름, 본문 구절, 히브리어·헬라어, 주석가, 신학 주제를 입력해 연구 문서를 한 번에 찾아보세요.</p>
+    </section>
+
+    <form class="search-form" id="siteSearchForm" role="search">
+      <label class="sr-only" for="siteSearchInput">성서 연구 서고 전체 검색</label>
+      <input id="siteSearchInput" name="q" type="search" inputmode="search" autocomplete="off" placeholder="예: 창세기 22장, 헤세드, 바울, 언약, 칭의">
+      <button type="submit">검색</button>
+    </form>
+    <p class="search-hint"><kbd>/</kbd> 키로 검색창 이동 · <kbd>Esc</kbd>로 지우기</p>
+
+    <div class="search-controls">
+      <div class="search-filters" id="siteSearchFilters" aria-label="문서 범주"></div>
+      <div class="search-status" id="siteSearchStatus" aria-live="polite">검색 색인 불러오는 중</div>
+    </div>
+
+    <section class="search-results" id="siteSearchResults" aria-label="검색 결과">
+      <div class="search-loading">검색 색인을 불러오고 있습니다.</div>
+    </section>
+  </main>
+
+  <footer class="search-footer">색인은 제목·소제목·본문 앞부분을 사용합니다. 검색 결과는 연구 문서의 맥락을 확인하기 위한 탐색 도구입니다.</footer>
+</div>
+<script src="../assets/js/site-search.js?v=20260802.1" defer></script>
+<script src="../assets/js/research-dock-loader.js?v=20260802.1" defer></script>
+</body>
+</html>

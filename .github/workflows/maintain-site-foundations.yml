@@ -30,8 +30,8 @@ jobs:
         shell: bash
         run: |
           python /tmp/maintain_site_foundations.py
-          python tools/apply_site_search.py
-          python tools/build_search_index.py
+          python tools/apply_site_search.py --write
+          python tools/build_search_index.py --write
           python tools/apply_site_search.py --check
           python tools/build_search_index.py --check
           rm -f .github/workflows/repair-remaining-site.yml

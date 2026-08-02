@@ -1,36 +1,8 @@
 {
-  "generated_at": "2026-08-02T00:01:57.102540+00:00",
+  "generated_at": "2026-08-02T00:05:24.373767+00:00",
   "chapters": {
     "23": {
-      "files": [
-        "ch23.01.b64",
-        "ch23.02.b64",
-        "ch23.03.b64",
-        "ch23.04.b64"
-      ],
-      "fragment_lengths": [
-        9608,
-        9000,
-        9000,
-        1916
-      ],
-      "fragment_mod4": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "combined_length": 29524,
-      "combined_mod4": 0,
-      "boundaries": [
-        9608,
-        18608,
-        27608
-      ],
-      "deflate_error_byte": 7212,
-      "output_prefix_bytes": 19845,
-      "status": "unresolved",
-      "error": "deterministic recovery candidates exhausted"
+      "status": "already_plain"
     },
     "24": {
       "files": [

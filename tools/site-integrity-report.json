@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T00:02:08.314063+00:00",
+  "generated_at": "2026-08-02T00:05:34.170664+00:00",
   "chapters": {
     "ot/genesis/ch21.html": {
       "status": "already_plain",
@@ -10,8 +10,8 @@
       "source": "current"
     },
     "ot/genesis/ch23.html": {
-      "status": "unresolved",
-      "error": "No decodable historical version for ot/genesis/ch23.html.\n47441e102718: Error -3 while decompressing data: invalid distance too far back\nc119a6a3a3f8: Error -3 while decompressing data: invalid distance too far back\n4072fa2bf8ef: missing payload fragment: ot/genesis/ch23.04.b64\n2a78a967b43d: missing payload fragment: ot/genesis/ch23.03.b64\n860787df2ba0: missing payload fragment: ot/genesis/ch23.02.b64\na18cac202580: missing payload fragment: ot/genesis/ch23.01.b64"
+      "status": "already_plain",
+      "source": "current"
     },
     "ot/genesis/ch24.html": {
       "status": "unresolved",

@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-08-02T00:05:20.177188+00:00",
+  "chapters": {
+    "23": {
+      "files": [
+        "ch23.01.b64",
+        "ch23.02.b64",
+        "ch23.03.b64",
+        "ch23.04.b64"
+      ],
+      "lengths": [
+        9608,
+        9000,
+        9000,
+        1916
+      ],
+      "exact_overlaps": [
+        608,
+        0,
+        0
+      ],
+      "status": "recovered",
+      "method": "remove_exact_fragment_overlap",
+      "overlaps": [
+        608,
+        0,
+        0
+      ]
+    },
+    "24": {
+      "files": [
+        "ch24.01.b64",
+        "ch24.02.b64",
+        "ch24.03.b64",
+        "ch24.04.b64",
+        "ch24.05.b64"
+      ],
+      "lengths": [
+        9000,
+        9000,
+        9000,
+        6194,
+        4448
+      ],
+      "exact_overlaps": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "status": "unresolved"
+    }
+  }
+}

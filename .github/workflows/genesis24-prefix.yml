@@ -1,0 +1,44 @@
+name: Extract Genesis 24 recoverable prefix
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/extract_genesis24_recoverable_prefix.py"
+      - ".github/workflows/genesis24-prefix.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Extract recoverable HTML prefix
+        run: python tools/extract_genesis24_recoverable_prefix.py
+
+      - name: Commit extraction report
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- tools/genesis24-recoverable-prefix.html tools/genesis24-prefix-report.json
+          if git diff --cached --quiet; then
+            echo "No extraction changes"
+            exit 0
+          fi
+          git commit -m "Extract Genesis 24 recoverable HTML prefix"
+          git push origin main

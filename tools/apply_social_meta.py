@@ -26,6 +26,19 @@ PAGES = (
     "nt/romans/index.html",
 )
 
+FALLBACK_DESCRIPTIONS = {
+    "index.html": "본문, 원어, 주석, 관주를 연결해 성경과 신학 연구 자료를 책별 서가로 제공하는 아카이브.",
+    "ot/genesis/index.html": "창세기 성경읽기, 종합 개관, 장별 심층연구와 원어 연구를 연결한 연구 서가.",
+    "ot/nehemiah/index.html": "느헤미야 열세 장의 성경읽기, 종합 개관, 심층 주해와 원어 연구를 연결한 연구 서가.",
+    "ot/esther/index.html": "에스더의 페르시아 궁정 배경, 문학 구조, 수용사와 열 장의 심층 주해를 모은 연구 서가.",
+    "ot/psalms/index.html": "시편 150편을 다섯 권의 정경 구조로 읽는 전체 개관, 자료집과 권별 상세 연구.",
+    "ot/hosea/index.html": "호세아의 혼인 서사, 심판과 회복, 열네 장의 절별 주해와 신학을 종합한 연구 노트.",
+    "ot/joel/index.html": "요엘의 메뚜기 재앙, 여호와의 날, 회개, 영의 부어짐과 열방 심판을 다룬 연구 서가.",
+    "ot/haggai/index.html": "학개의 네 신탁을 성경읽기, 종합 개관, 두 장의 심층연구와 원어 연구로 연결한 서가.",
+    "nt/acts/index.html": "사도행전 스물여덟 장의 성경읽기, 종합 개관과 장별 심층 주해를 연결한 연구 서가.",
+    "nt/romans/index.html": "로마서 열여섯 장의 성경읽기, 종합 개관, 장별 심층연구와 보완 자료를 연결한 연구 서가.",
+}
+
 TITLE_RE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
 META_RE = re.compile(r"<meta\b[^>]*>", re.IGNORECASE)
 ATTR_RE = re.compile(r"([:\w-]+)\s*=\s*([\"'])(.*?)\2", re.DOTALL)
@@ -36,20 +49,24 @@ def attrs(tag: str) -> dict[str, str]:
     return {name.lower(): html.unescape(value.strip()) for name, _, value in ATTR_RE.findall(tag)}
 
 
-def page_title(text: str, path: Path) -> str:
+def title_tag(text: str, path: Path) -> tuple[str, str]:
     match = TITLE_RE.search(text)
     if not match:
         raise RuntimeError(f"{path.relative_to(ROOT)} has no title")
-    return html.unescape(re.sub(r"\s+", " ", match.group(1))).strip()
+    title = html.unescape(re.sub(r"\s+", " ", match.group(1))).strip()
+    return match.group(0), title
 
 
-def description_tag(text: str, path: Path) -> tuple[str, str]:
+def description_tag(text: str, relative: str) -> tuple[str | None, str]:
     for match in META_RE.finditer(text):
         tag = match.group(0)
         data = attrs(tag)
         if data.get("name", "").lower() == "description" and data.get("content"):
             return tag, data["content"]
-    raise RuntimeError(f"{path.relative_to(ROOT)} has no meta description")
+    fallback = FALLBACK_DESCRIPTIONS.get(relative)
+    if not fallback:
+        raise RuntimeError(f"{relative} has no meta description or fallback")
+    return None, fallback
 
 
 def absolute_url(relative: str) -> str:
@@ -84,15 +101,24 @@ def social_block(title: str, description: str, url: str) -> str:
 
 def patch_page(path: Path, relative: str) -> str:
     text = path.read_text(encoding="utf-8")
-    title = page_title(text, path)
-    description_html, description = description_tag(text, path)
+    title_html, title = title_tag(text, path)
+    description_html, description = description_tag(text, relative)
     block = social_block(title, description, absolute_url(relative))
+
     if START in text:
         patched, count = BLOCK_RE.subn(block, text, count=1)
         if count != 1:
             raise RuntimeError(f"{relative}: malformed social metadata block")
         return patched
-    return text.replace(description_html, description_html + "\n" + block, 1)
+
+    if description_html:
+        anchor = description_html
+        insertion = description_html + "\n" + block
+    else:
+        q_description = html.escape(description, quote=True)
+        anchor = title_html
+        insertion = title_html + f'\n<meta name="description" content="{q_description}">\n' + block
+    return text.replace(anchor, insertion, 1)
 
 
 def validate(files: dict[Path, str]) -> list[str]:
@@ -103,6 +129,7 @@ def validate(files: dict[Path, str]) -> list[str]:
         expected_url = absolute_url(relative)
         checks = (
             (text.count(START) == 1 and text.count(END) == 1, "metadata block count"),
+            ('name="description"' in text or "name='description'" in text, "meta description"),
             ('property="og:title"' in text, "og:title"),
             ('property="og:description"' in text, "og:description"),
             (f'property="og:url" content="{expected_url}"' in text, "og:url"),

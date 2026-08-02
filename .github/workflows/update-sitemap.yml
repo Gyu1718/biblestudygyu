@@ -1,0 +1,95 @@
+name: Update sitemap and crawler fallback
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "ot/**/*.html"
+      - "nt/**/*.html"
+      - "bible/**/*.html"
+      - "lexicon/**/*.html"
+      - "theology/**/*.html"
+      - "search/**/*.html"
+      - "robots.txt"
+      - "tools/build_sitemap.py"
+      - "tools/apply_crawler_fallback.py"
+      - ".github/workflows/update-sitemap.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "ot/**/*.html"
+      - "nt/**/*.html"
+      - "bible/**/*.html"
+      - "lexicon/**/*.html"
+      - "theology/**/*.html"
+      - "search/**/*.html"
+      - "sitemap.xml"
+      - "robots.txt"
+      - "tools/build_sitemap.py"
+      - "tools/apply_crawler_fallback.py"
+      - ".github/workflows/update-sitemap.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate SEO files
+        run: |
+          python tools/apply_crawler_fallback.py --check
+          python tools/build_sitemap.py --check
+          python - <<'PY'
+          from pathlib import Path
+          assert Path('404.html').exists()
+          assert Path('robots.txt').exists()
+          assert 'sitemap.xml' in Path('robots.txt').read_text(encoding='utf-8')
+          PY
+
+  update-main:
+    if: github.event_name != 'pull_request' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh crawler fallback and sitemap
+        run: |
+          python tools/apply_crawler_fallback.py --write
+          python tools/build_sitemap.py --write
+          python tools/apply_crawler_fallback.py --check
+          python tools/build_sitemap.py --check
+
+      - name: Commit refreshed SEO files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- index.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "SEO files already current"
+            exit 0
+          fi
+          git commit -m "Refresh crawler fallback and sitemap"
+          git push origin main

@@ -101,12 +101,10 @@ def recover(chapter: int) -> dict[str, object]:
     )
 
     positions: list[int] = []
-    for radius in (64, 256, 1024):
-        start = max(0, estimated_position - radius)
-        end = min(len(fragment), estimated_position + radius + 1)
-        for position in range(start, end):
-            if position not in positions:
-                positions.append(position)
+    radius = 64
+    start = max(0, estimated_position - radius)
+    end = min(len(fragment), estimated_position + radius + 1)
+    positions.extend(range(start, end))
 
     # Include exact chunk boundaries and the position immediately before padding.
     for position in (0, baseline_position, len(fragment)):

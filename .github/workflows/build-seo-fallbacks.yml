@@ -1,0 +1,66 @@
+name: Build SEO fallbacks
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "404.html"
+      - "robots.txt"
+      - "tools/build_sitemap.py"
+      - "tools/apply_crawler_fallback.py"
+      - ".github/workflows/build-seo-fallbacks.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/seo-fallback-files
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply static homepage fallback
+        run: python tools/apply_crawler_fallback.py --write
+
+      - name: Build sitemap
+        run: python tools/build_sitemap.py --write
+
+      - name: Validate SEO fallbacks
+        run: |
+          python tools/apply_crawler_fallback.py --check
+          python tools/build_sitemap.py --check
+          python tools/optimize_font_loading.py --check
+          python - <<'PY'
+          from pathlib import Path
+          error_page=Path('404.html').read_text(encoding='utf-8')
+          robots=Path('robots.txt').read_text(encoding='utf-8')
+          assert '<meta name="robots" content="noindex,follow">' in error_page
+          assert '/biblestudygyu/search/' in error_page
+          assert 'Sitemap: https://gyu1718.github.io/biblestudygyu/sitemap.xml' in robots
+          assert Path('sitemap.xml').stat().st_size > 5000
+          print('404, robots, and sitemap validated')
+          PY
+
+      - name: Commit generated fallback files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- index.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No generated SEO changes"
+            exit 0
+          fi
+          git commit -m "Add crawler fallbacks and sitemap"
+          git push origin agent/seo-fallback-files

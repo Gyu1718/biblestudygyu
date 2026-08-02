@@ -1,0 +1,49 @@
+name: Generate homepage progress badges
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/apply_home_progress.py"
+      - ".github/workflows/home-progress.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/home-progress-badges
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply progress badges
+        run: python tools/apply_home_progress.py --write
+
+      - name: Validate progress badges
+        run: |
+          python tools/apply_home_progress.py --check
+          node --check catalog.js
+
+      - name: Commit generated progress UI
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- catalog.js index.html assets/css/home-compact.css
+          if git diff --cached --quiet; then
+            echo "No progress UI changes"
+            exit 0
+          fi
+          git commit -m "Add homepage progress badges"
+          git push origin agent/home-progress-badges

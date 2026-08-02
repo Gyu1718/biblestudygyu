@@ -1,1 +1,1 @@
-Regenerate local OSHB chunks and restore gzip fallback integration.
+Regenerate local OSHB chunks directly and restore gzip fallback integration.

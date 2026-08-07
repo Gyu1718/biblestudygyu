@@ -35,6 +35,7 @@ on:
       - "tools/run_site_integrity_batch.py"
       - "tools/requirements-encyclopedia.txt"
       - "tools/extract_na28_epub.py"
+      - "tools/genesis-publish.tar.xz.b64"
       - ".github/workflows/bible-reader.yml"
   pull_request:
     branches: [main]
@@ -70,6 +71,59 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Apply staged Genesis shelf bundle
+        shell: bash
+        run: |
+          if [ ! -f tools/genesis-publish.tar.xz.b64 ]; then
+            echo "No staged Genesis bundle"
+            exit 0
+          fi
+          python3 - <<'PY'
+          import base64
+          import io
+          import tarfile
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          bundle = Path('tools/genesis-publish.tar.xz.b64')
+          payload = base64.b64decode(bundle.read_text(encoding='ascii'), validate=True)
+          with tarfile.open(fileobj=io.BytesIO(payload), mode='r:xz') as archive:
+              members = archive.getmembers()
+              if not members:
+                  raise SystemExit('empty Genesis bundle')
+              for member in members:
+                  if not member.isfile() or not member.name.startswith('ot/genesis/'):
+                      raise SystemExit(f'unexpected bundle member: {member.name}')
+                  destination = (root / member.name).resolve()
+                  if root not in destination.parents:
+                      raise SystemExit(f'unsafe bundle member: {member.name}')
+              archive.extractall(root, members=members)
+          print(f'extracted {len(members)} Genesis files')
+          PY
+
+      - name: Validate staged Genesis shelf
+        shell: bash
+        run: |
+          if [ ! -f tools/genesis-publish.tar.xz.b64 ]; then
+            exit 0
+          fi
+          test -f ot/genesis/ch26.html
+          test -f ot/genesis/ch50.html
+          grep -q 'genesis-suite.js' ot/genesis/ch50.html
+          grep -q '1–50장 전권 완성' ot/genesis/index.html
+          python3 - <<'PY'
+          from pathlib import Path
+          for chapter in range(1, 51):
+              page = Path(f'ot/genesis/ch{chapter:02}.html')
+              if not page.exists():
+                  raise SystemExit(f'missing {page}')
+              text = page.read_text(encoding='utf-8')
+              for required in ('../../assets/theme.css','../../assets/app.css','./genesis-suite.css','../../assets/css/bible-reader.css','../../assets/app.js','../../assets/js/bible-reader.js','../../assets/js/commentator-chips.js','./genesis-suite.js'):
+                  if required not in text:
+                      raise SystemExit(f'{page}: missing {required}')
+          print('Genesis 1-50 shared assets verified')
+          PY
 
       - name: Install encyclopedia build dependencies
         run: python -m pip install -r tools/requirements-encyclopedia.txt

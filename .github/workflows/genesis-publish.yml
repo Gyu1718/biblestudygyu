@@ -75,3 +75,5 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Publish Genesis 1-50 study shelf"
           git push origin main
+
+# One-shot publisher trigger refresh.

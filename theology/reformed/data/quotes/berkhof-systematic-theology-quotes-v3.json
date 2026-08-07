@@ -1,0 +1,18 @@
+{
+  "id": "berkhof-systematic-theology-quotes-v3",
+  "title": "루이스 벌코프 『조직신학』 한국어 인용 v3 — 기독론",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『벌코프 조직신학』 한국어 EPUB에서 기독론 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "부.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"berkhof-systematic-theology","section":"IV.1","chapter":"그리스도의 이름과 본성","subtopic":"기독론과 인간론","textKo":"기독론은 인간론과 아주 밀접하다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.1 — 그리스도의 이름과 본성 / 기독론과 인간론","topic":"기독론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.1","chapter":"그리스도의 이름과 본성","subtopic":"그리스도라는 명칭","textKo":"예수가 메시야의 사적인 명칭이라면, 그리스도는 공적 명칭에 해당된다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.1 — 그리스도의 이름과 본성 / 그리스도라는 명칭","topic":"그리스도의 이름","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.2","chapter":"그리스도의 인격과 두 본성","subtopic":"성육신의 신비","textKo":"교회는 언제나 성육신을 설명 불가능한 하나의 신비로 인정했다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.2 — 그리스도의 인격과 두 본성 / 성육신의 신비","topic":"두 본성 한 위격","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.2","chapter":"그리스도의 인격과 두 본성","subtopic":"신인 그리스도","textKo":"그는 신인인 것이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.2 — 그리스도의 인격과 두 본성 / 신인 그리스도","topic":"그리스도의 위격","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.3","chapter":"그리스도의 비하와 승귀","subtopic":"두 신분","textKo":"단지 두 신분을 논하는 것이 바람직하다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.3 — 그리스도의 비하와 승귀 / 두 신분","topic":"비하와 승귀","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.4","chapter":"그리스도의 삼중직","subtopic":"세 직분","textKo":"그리스도의 사역은 관례적으로 선지자직, 제사장직, 왕직의 세 직분으로 나뉜다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.4 — 그리스도의 삼중직 / 세 직분","topic":"삼중직","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.5","chapter":"속죄의 필요성과 본질","subtopic":"객관적 속죄","textKo":"속죄는 객관적이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.5 — 속죄의 필요성과 본질 / 객관적 속죄","topic":"속죄","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"IV.6","chapter":"그리스도의 중보 사역","subtopic":"제사장적 중보","textKo":"그리스도는 지상의 대제사장이었을 뿐 아니라 동시에, 특히 천상의 대제사장이시다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"IV.6 — 그리스도의 중보 사역 / 제사장적 중보","topic":"중보 사역","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":8,"coverage":["IV.1","IV.2","IV.3","IV.4","IV.5","IV.6"]}
+}

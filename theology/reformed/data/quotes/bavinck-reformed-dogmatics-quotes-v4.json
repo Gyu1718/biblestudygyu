@@ -1,0 +1,18 @@
+{
+  "id": "bavinck-reformed-dogmatics-quotes-v4",
+  "title": "헤르만 바빙크 『개혁교의학 개요』 한국어 인용 v4 — 성령, 교회, 새 창조",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『개혁교의학 개요』 한국어 EPUB에서 성령·소명·칭의·성화·교회·영생·새 창조 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "권.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"bavinck-reformed-dogmatics","section":"IV.1","chapter":"성령과 구원의 적용","subtopic":"성령을 주심","textKo":"그리스도께서 높아지신 이후 아버지의 우편에서 행하신 첫 번째 일은 성령을 보내시는 일이었다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.1 — 성령과 구원의 적용 / 성령을 주심","topic":"성령론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.2","chapter":"소명과 중생","subtopic":"말씀과 성령","textKo":"그리스도께서는 그가 교회 안에 부어 주신 성령을 사용하시며, 뿐만 아니라 교회를 가르치고 교훈하시기 위하여 그가 주신 말씀도 사용하신다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.2 — 소명과 중생 / 말씀과 성령","topic":"소명과 중생","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.4","chapter":"칭의","subtopic":"우리 밖의 의","textKo":"우리에게 필요한 그 의가 전부 우리 바깥에서 그리스도 안에서 온다는 사실에 있다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.4 — 칭의 / 우리 밖의 의","topic":"칭의","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.5","chapter":"성화와 견인","subtopic":"칭의와 성화의 구별","textKo":"칭의를 통해서는 사람의 의식이 변화되며, 성화를 통해서는 사람의 존재가 변화된다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.5 — 성화와 견인 / 칭의와 성화의 구별","topic":"성화","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.6","chapter":"교회의 본질","subtopic":"교회의 어머니 됨","textKo":"교회를 가리켜 그 사람의 어머니라 부르는 것도 충분히 일리 있다 할 것이다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.6 — 교회의 본질 / 교회의 어머니 됨","topic":"교회론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.8","chapter":"말씀과 성례","subtopic":"교회와 하나님의 말씀","textKo":"교회는 이 하나님의 말씀을 보존하고, 그것을 해명하고, 그것을 선포하고, 그것을 적용하고, 그것을 번역하고, 그것을 외부에 널리 퍼뜨리고, 그것을 권장하고, 그것을 수호하도록 부르심을 받고 있다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.8 — 말씀과 성례 / 교회와 하나님의 말씀","topic":"말씀과 성례","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.10","chapter":"죽음과 중간상태","subtopic":"그리스도 안의 영생","textKo":"그리스도 안에서 하나님을 알게 되면, 그와 더불어 영생과 흔들림 없는 기쁨과 하늘의 복락을 누리게 된다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.10 — 죽음과 중간상태 / 그리스도 안의 영생","topic":"영생","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"bavinck-reformed-dogmatics","section":"IV.12","chapter":"최후 심판과 새 창조","subtopic":"새 창조와 하나님 나라","textKo":"세상 전체도 그 위대한 중생의 날을 향하여 나아가고 있는 것이다.","source":"헤르만 바빙크, 『개혁교의학 개요』 한국어판","ref":"IV.12 — 최후 심판과 새 창조 / 새 창조와 하나님 나라","topic":"새 창조","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":8,"coverage":["IV.1","IV.2","IV.4","IV.5","IV.6","IV.8","IV.10","IV.12"]}
+}

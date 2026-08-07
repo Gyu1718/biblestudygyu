@@ -1,0 +1,70 @@
+{
+  "id": "calvin-institutes-quote-targets-v1",
+  "title": "칼빈 『기독교 강요』 인용 보강 후보 위치 v1",
+  "language": "Korean",
+  "purpose": "직접 인용문이 아직 없는 장에 대해 공개용 색인에서 사용할 인용 후보 위치를 먼저 지정한다. 실제 quote text는 합법 소장본 확인 후 별도 quotes-v5 이상에 입력한다.",
+  "policy": {
+    "fullText": false,
+    "quoteTextIncluded": false,
+    "use": "quoteTargets only",
+    "note": "이 파일은 원문을 싣지 않고 장·절 후보와 주제 설명만 제공한다."
+  },
+  "book": "calvin-institutes",
+  "targets": [
+    { "section": "I.2", "topic": "경건", "target": "I.2.1-2", "reason": "하나님 지식의 목적이 경건과 예배임을 보여 주는 대표 위치" },
+    { "section": "I.8", "topic": "성경의 신빙성", "target": "I.8", "reason": "성경 권위 논증의 보조 증거를 정리하는 장" },
+    { "section": "I.11", "topic": "우상숭배", "target": "I.11.1-16", "reason": "하나님을 형상화하는 문제와 예배의 순수성을 보여 주는 위치" },
+    { "section": "I.12", "topic": "합당한 예배", "target": "I.12", "reason": "하나님께만 드릴 영광과 예배의 구별을 다루는 위치" },
+    { "section": "I.14", "topic": "창조와 천사", "target": "I.14", "reason": "창조 세계와 천사론을 통해 피조물 질서를 설명하는 위치" },
+    { "section": "I.15", "topic": "하나님의 형상", "target": "I.15", "reason": "인간 창조, 영혼, 하나님의 형상을 설명하는 핵심 장" },
+    { "section": "I.17", "topic": "섭리의 적용", "target": "I.17", "reason": "섭리 교리가 신자의 인내와 신뢰로 연결되는 목회적 위치" },
+    { "section": "I.18", "topic": "섭리와 악", "target": "I.18", "reason": "하나님의 주권과 악인의 책임을 구별해야 하는 난제 위치" },
+
+    { "section": "II.1", "topic": "타락과 원죄", "target": "II.1", "reason": "아담의 타락과 인류의 부패를 다루는 죄론 출발점" },
+    { "section": "II.3", "topic": "전적 부패", "target": "II.3", "reason": "부패한 본성에서 하나님 앞의 의가 나올 수 없음을 설명하는 위치" },
+    { "section": "II.4", "topic": "하나님의 주권과 인간 마음", "target": "II.4", "reason": "인간 마음 안에서 역사하시는 하나님의 주권을 다루는 위치" },
+    { "section": "II.5", "topic": "자유의지 논쟁", "target": "II.5", "reason": "자유의지 변호에 대한 반박과 은혜의 필요를 정리하는 위치" },
+    { "section": "II.8", "topic": "십계명", "target": "II.8", "reason": "도덕법의 영적 의미와 두 돌판 구조를 다루는 위치" },
+    { "section": "II.9", "topic": "복음", "target": "II.9", "reason": "복음 안에서 그리스도가 더 분명히 계시됨을 다루는 위치" },
+    { "section": "II.10", "topic": "구약과 신약의 유사성", "target": "II.10", "reason": "두 언약의 본질적 통일성을 보여 주는 위치" },
+    { "section": "II.11", "topic": "구약과 신약의 차이", "target": "II.11", "reason": "동일한 은혜 안의 경륜적 차이를 설명하는 위치" },
+    { "section": "II.13", "topic": "그리스도의 참 인성", "target": "II.13", "reason": "그리스도가 참 인간 본성을 취하셨다는 기독론 핵심 위치" },
+
+    { "section": "III.2", "topic": "믿음의 정의", "target": "III.2.7", "reason": "칼빈의 믿음 정의를 대표하는 핵심 위치" },
+    { "section": "III.4", "topic": "고해와 보속 비판", "target": "III.4", "reason": "스콜라 회개론 비판의 중심 장" },
+    { "section": "III.5", "topic": "면죄부와 연옥", "target": "III.5", "reason": "보속 체계가 그리스도의 충분한 속죄를 흐리는 문제를 다루는 위치" },
+    { "section": "III.6", "topic": "그리스도인의 삶", "target": "III.6", "reason": "성화와 경건한 삶의 원리를 여는 위치" },
+    { "section": "III.9", "topic": "영생 묵상", "target": "III.9", "reason": "현세의 삶을 영생의 소망 안에서 상대화하는 위치" },
+    { "section": "III.10", "topic": "소명과 절제", "target": "III.10", "reason": "피조물의 선한 사용과 소명 안의 삶을 다루는 위치" },
+    { "section": "III.13", "topic": "값없는 칭의", "target": "III.13", "reason": "칭의가 하나님의 영광과 양심의 평안을 지키는 방식을 다루는 위치" },
+    { "section": "III.14", "topic": "칭의와 선행", "target": "III.14", "reason": "중생 이후 선행도 그리스도 안에서만 받아들여짐을 설명하는 위치" },
+    { "section": "III.15", "topic": "공로 비판", "target": "III.15", "reason": "행위 공로 자랑의 위험을 다루는 위치" },
+    { "section": "III.16", "topic": "칭의 비판 반박", "target": "III.16", "reason": "값없는 칭의가 선행을 무너뜨린다는 비난에 답하는 위치" },
+    { "section": "III.17", "topic": "율법과 복음의 약속", "target": "III.17", "reason": "율법의 약속과 복음의 약속을 그리스도 안에서 정리하는 위치" },
+    { "section": "III.18", "topic": "상급과 은혜", "target": "III.18", "reason": "상급 언어를 공로가 아니라 은혜 안에서 해석하는 위치" },
+    { "section": "III.22", "topic": "선택의 성경적 증거", "target": "III.22", "reason": "선택이 예견된 공로가 아니라 하나님의 값없는 작정임을 보이는 위치" },
+    { "section": "III.23", "topic": "유기와 비방 반박", "target": "III.23", "reason": "예정론에 대한 대표적 비방을 반박하는 위치" },
+
+    { "section": "IV.2", "topic": "참 교회와 거짓 교회", "target": "IV.2", "reason": "말씀과 성례의 표지로 교회를 분별하는 위치" },
+    { "section": "IV.4", "topic": "고대 교회 정치", "target": "IV.4", "reason": "고대 교회 질서와 후대 변질을 비교하는 위치" },
+    { "section": "IV.5", "topic": "교황제 비판", "target": "IV.5", "reason": "교황제가 목회 질서를 권력 구조로 바꾸었다는 비판 위치" },
+    { "section": "IV.6", "topic": "로마 관구 수위권", "target": "IV.6", "reason": "로마 수위권 주장의 역사적·신학적 검토 위치" },
+    { "section": "IV.7", "topic": "교회 자유", "target": "IV.7", "reason": "교황권 성장과 교회 자유 억압을 다루는 위치" },
+    { "section": "IV.8", "topic": "교리 제정 권세", "target": "IV.8", "reason": "교회 권위가 말씀 아래 제한됨을 보여 주는 위치" },
+    { "section": "IV.9", "topic": "공의회 권위", "target": "IV.9", "reason": "공의회의 유익과 오류 가능성을 함께 다루는 위치" },
+    { "section": "IV.10", "topic": "교회법과 양심", "target": "IV.10", "reason": "인간 법이 양심을 절대 구속할 수 없다는 논지 위치" },
+    { "section": "IV.11", "topic": "교회의 재판권", "target": "IV.11", "reason": "교회 치리와 권력 남용의 구별을 다루는 위치" },
+    { "section": "IV.13", "topic": "서원", "target": "IV.13", "reason": "서원과 수도원적 실천을 비판적으로 검토하는 위치" },
+    { "section": "IV.18", "topic": "미사 비판", "target": "IV.18", "reason": "그리스도의 단번 제사와 미사 이해의 충돌을 다루는 위치" },
+    { "section": "IV.19", "topic": "다섯 의식 비판", "target": "IV.19", "reason": "성례가 아닌 의식들을 성례화한 문제를 비판하는 위치" }
+  ],
+  "stats": {
+    "totalTargets": 43,
+    "byBook": {
+      "I": 8,
+      "II": 9,
+      "III": 14,
+      "IV": 12
+    }
+  }
+}

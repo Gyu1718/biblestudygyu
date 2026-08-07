@@ -1,0 +1,22 @@
+{
+  "id": "berkhof-systematic-theology-quotes-v1",
+  "title": "루이스 벌코프 『조직신학』 한국어 인용 v1 — 서론·신론",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『벌코프 조직신학』 한국어 EPUB에서 서론·신론 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "부.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"berkhof-systematic-theology","section":"I.1","chapter":"종교와 신학","subtopic":"종교와 신학의 관계","textKo":"종교와 분리된 신학 같은 것은 없다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"I.1 — 종교와 신학 / 종교와 신학의 관계","topic":"종교와 신학","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"I.2","chapter":"교의학의 원리","subtopic":"교의의 권위","textKo":"교의의 공통점은 모두가 어떤 권위를 옷입고 있다는 것이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"I.2 — 교의학의 원리 / 교의의 권위","topic":"교의학","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"I.3","chapter":"계시와 성경","subtopic":"계시와 영감","textKo":"계시와 영감은 서로 가장 가까운 관계에 있다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"I.3 — 계시와 성경 / 계시와 영감","topic":"계시론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"I.4","chapter":"조직신학의 방법과 과제","subtopic":"교의학의 대상","textKo":"교의학은 교회의 교리를 전체적으로 연구하며, 신앙의 각 항목을 그 전체와의 관련 속에서 검토한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"I.4 — 조직신학의 방법과 과제 / 교의학의 대상","topic":"조직신학 방법론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.1","chapter":"하나님의 존재와 하나님 지식","subtopic":"신론의 위치","textKo":"교의학 혹은 조직신학에 관한 연구는 대개 신론에서 시작한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.1 — 하나님의 존재와 하나님 지식 / 신론의 위치","topic":"신론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.1","chapter":"하나님의 존재와 하나님 지식","subtopic":"하나님 인식의 가능성","textKo":"기독교 교회는 하나님께서 이해될 수 없는 분이라는 사실과 함께, 다른 한편으로는 그가 알려질 수 있으며 그에 관한 지식이 구원에 필수불가결한 조건이라는 사실을 고백한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.1 — 하나님의 존재와 하나님 지식 / 하나님 인식의 가능성","topic":"하나님 지식","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.2","chapter":"하나님의 이름과 속성","subtopic":"하나님의 이름","textKo":"가장 일반적인 의미에서의 하나님의 이름은 그분의 자기 계시다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.2 — 하나님의 이름과 속성 / 하나님의 이름","topic":"하나님의 이름","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.2","chapter":"하나님의 이름과 속성","subtopic":"하나님의 완전성","textKo":"하나님의 덕은 그의 존재에 덧붙여진 것이 아니라, 그의 존재가 그의 덕의 충만이며, 또한 그 덕에서 존재 자체를 계시한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.2 — 하나님의 이름과 속성 / 하나님의 완전성","topic":"하나님의 속성","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.3","chapter":"삼위일체","subtopic":"삼위일체의 난제","textKo":"삼위일체론은 항상 난제였다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.3 — 삼위일체 / 삼위일체의 난제","topic":"삼위일체","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.4","chapter":"하나님의 작정","subtopic":"하나님의 주권","textKo":"개혁주의 신학은 하나님께서 영원 전부터 무엇이 일어날지를 주권적으로 결정하셨다는 의미에서 하나님의 주권을 강조한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.4 — 하나님의 작정 / 하나님의 주권","topic":"하나님의 작정","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.5","chapter":"창조","subtopic":"창조의 신학적 위치","textKo":"창조는 모든 신적인 계시의 시초이자 기초이며, 따라서 또한 모든 윤리적이고 종교적인 삶의 기초이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.5 — 창조 / 창조의 신학적 위치","topic":"창조론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"II.6","chapter":"섭리","subtopic":"섭리의 성경성","textKo":"섭리라는 용어가 성경에서 발견되지는 않으나, 그럼에도 불구하고 섭리론은 분명히 성경적이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"II.6 — 섭리 / 섭리의 성경성","topic":"섭리","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":12,"coverage":["I.1","I.2","I.3","I.4","II.1","II.2","II.3","II.4","II.5","II.6"]}
+}

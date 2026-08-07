@@ -1,0 +1,20 @@
+{
+  "id": "berkhof-systematic-theology-quotes-v5",
+  "title": "루이스 벌코프 『조직신학』 한국어 인용 v5 — 교회론",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『벌코프 조직신학』 한국어 EPUB에서 교회론·은혜의 방편·말씀·성례 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "부.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"berkhof-systematic-theology","section":"VI.1","chapter":"교회의 본질과 속성","subtopic":"성도의 무리","textKo":"초대 교회는 교회를 성도의 무리라고 불렀다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.1 — 교회의 본질과 속성 / 성도의 무리","topic":"교회의 본질","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.1","chapter":"교회의 본질과 속성","subtopic":"가시적 교회","textKo":"유형 교회는 동일한 신앙을 고백하며 동일한 규례를 지킬 뿐만 아니라 가시적인 은혜의 방편을 사용한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.1 — 교회의 본질과 속성 / 가시적 교회","topic":"유형 교회","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.2","chapter":"교회의 정치와 권세","subtopic":"개혁파 교회 정치","textKo":"개혁 교회는 그 교회의 근본 원리들이 직접 성경에서 인출된 것이라고 주장한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.2 — 교회의 정치와 권세 / 개혁파 교회 정치","topic":"교회 정치","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.2","chapter":"교회의 정치와 권세","subtopic":"교회의 권세","textKo":"예수 그리스도는 교회를 설립하셨을 뿐만 아니라 교회에 필요한 권세 혹은 권위를 부여하셨다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.2 — 교회의 정치와 권세 / 교회의 권세","topic":"교회의 권세","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.3","chapter":"은혜의 방편","subtopic":"말씀과 성례","textKo":"교회는 말씀과 성례와 견줄 수 있는 방편이 아니다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.3 — 은혜의 방편 / 말씀과 성례","topic":"은혜의 방편","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.4","chapter":"말씀의 사역","subtopic":"은혜의 방편으로서 말씀","textKo":"그들은 말씀을 은혜의 방편이라고 부르기를 주저하지 않는다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.4 — 말씀의 사역 / 은혜의 방편으로서 말씀","topic":"말씀의 사역","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.4","chapter":"말씀의 사역","subtopic":"영감받은 말씀","textKo":"영감받은 말씀은 우리의 모든 신학적 지식의 근원 곧 인식의 기초를 구성한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.4 — 말씀의 사역 / 영감받은 말씀","topic":"성경과 말씀","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.5","chapter":"성례 일반","subtopic":"말씀과 성례의 관계","textKo":"말씀은 청각에 호소하고, 성례는 시각에 호소한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.5 — 성례 일반 / 말씀과 성례의 관계","topic":"성례론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.6","chapter":"세례와 성찬","subtopic":"세례의 의미","textKo":"요한의 세례가 새롭고 좀 더 영적인 의미가 있었던 것만은 분명한 사실이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.6 — 세례와 성찬 / 세례의 의미","topic":"세례","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VI.6","chapter":"세례와 성찬","subtopic":"성찬의 제정","textKo":"예수님은 유월절 식사와 관련하여 성찬을 제정하셨다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VI.6 — 세례와 성찬 / 성찬의 제정","topic":"성찬","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":10,"coverage":["VI.1","VI.2","VI.3","VI.4","VI.5","VI.6"]}
+}

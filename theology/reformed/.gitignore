@@ -1,0 +1,29 @@
+# Private source files - do not publish copyrighted full texts
+/private/
+/source/
+/originals/
+/raw/
+
+*.pdf
+*.epub
+*.mobi
+*.azw3
+*.txt
+*.docx
+*.hwp
+*.hwpx
+
+# OCR / conversion outputs
+/ocr-output/
+/converted/
+/tmp/
+*.bak
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/

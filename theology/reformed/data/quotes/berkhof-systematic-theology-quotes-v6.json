@@ -1,0 +1,20 @@
+{
+  "id": "berkhof-systematic-theology-quotes-v6",
+  "title": "루이스 벌코프 『조직신학』 한국어 인용 v6 — 종말론",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『벌코프 조직신학』 한국어 EPUB에서 개인적 종말론·일반적 종말론 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "부.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"berkhof-systematic-theology","section":"VII.1","chapter":"개인적 종말론","subtopic":"종말론의 보편성","textKo":"우리가 종말론적인 개념을 접할 수 있는 것은 역시 종교다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.1 — 개인적 종말론 / 종말론의 보편성","topic":"종말론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.1","chapter":"개인적 종말론","subtopic":"죽음의 성격","textKo":"죽음은 존재의 중지가 아니라 생명과 자연의 관계의 단절이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.1 — 개인적 종말론 / 죽음의 성격","topic":"죽음","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.2","chapter":"죽음과 중간상태","subtopic":"영혼의 존속","textKo":"영혼은 몸과 분리된 이후에도 계속하여 존속한다는 것이 예수 그리스도 교회의 굳은 신념이었다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.2 — 죽음과 중간상태 / 영혼의 존속","topic":"중간상태","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.2","chapter":"죽음과 중간상태","subtopic":"죽음 이후의 신자","textKo":"개혁 교회의 일반적인 주장은 신자들의 영혼은 죽음 ‘직후’ 하늘의 영광으로 들어간다는 것이었다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.2 — 죽음과 중간상태 / 죽음 이후의 신자","topic":"신자의 중간상태","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.3","chapter":"재림","subtopic":"재림의 성경적 확실성","textKo":"주님 자신과 사도들은 그리스도의 초림 후 재림이 있을 것을 매우 분명히 가르쳤다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.3 — 재림 / 재림의 성경적 확실성","topic":"재림","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.3","chapter":"재림","subtopic":"재림의 성격","textKo":"그리스도의 강림은 가시적이고, 인격적이며, 영광스러운 것이 될 것이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.3 — 재림 / 재림의 성격","topic":"그리스도의 재림","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.4","chapter":"부활과 최후 심판","subtopic":"육신의 부활","textKo":"성경은 몸의 부활을 분명히 가르치고 있다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.4 — 부활과 최후 심판 / 육신의 부활","topic":"부활","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.4","chapter":"부활과 최후 심판","subtopic":"마지막 심판","textKo":"그리스도의 재림에 동반되는 또 하나의 중요한 사건은 전체적인 성격을 지닌 마지막 심판이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.4 — 부활과 최후 심판 / 마지막 심판","topic":"최후 심판","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.5","chapter":"최종 상태","subtopic":"최후의 상태","textKo":"그들의 최후의 상태는 영속적 불행이거나 영원한 복이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.5 — 최종 상태 / 최후의 상태","topic":"최종 상태","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"VII.5","chapter":"최종 상태","subtopic":"새 창조","textKo":"신자들의 영원한 상태가 오기 전에 현재의 세상이 사라지고 새로운 창조가 있게 될 것이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"VII.5 — 최종 상태 / 새 창조","topic":"새 하늘과 새 땅","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":10,"coverage":["VII.1","VII.2","VII.3","VII.4","VII.5"]}
+}

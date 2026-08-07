@@ -1,0 +1,21 @@
+{
+  "id": "calvin-institutes-quotes-v3",
+  "title": "칼빈 『기독교 강요』 한국어 인용 v3 — 제3권 핵심 장",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『기독교 강요』 한국어 변환본에서 제3권 핵심 장의 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "권.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"calvin-institutes","section":"III.1","chapter":"성령의 은밀한 역사와 그리스도와의 연합","subtopic":"그리스도와의 연합","textKo":"그리스도께서 우리의 것이 되시고 또한 우리 속에 거하셔야만 비로소 그가 아버지께로부터 받으신 축복들을 우리와 함께 나누실 수 있게 되는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.1 — 성령의 은밀한 역사와 그리스도와의 연합 / 그리스도와의 연합","topic":"그리스도와의 연합","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.3","chapter":"중생과 회개","subtopic":"회개와 믿음의 관계","textKo":"회개가 끊임없이 믿음의 뒤를 따를 뿐 아니라 믿음에서 난다는 점이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.3 — 중생과 회개 / 회개와 믿음의 관계","topic":"회개","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.7","chapter":"자기 부인","subtopic":"우리는 우리의 것이 아니다","textKo":"우리는 우리 것이 아니다. 그러니 우리의 생각이나 우리의 뜻이 우리의 계획과 행동을 주장하게 해서는 안 되는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.7 — 자기 부인 / 우리는 우리의 것이 아니다","topic":"자기 부인","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.8","chapter":"십자가를 짐","subtopic":"그리스도의 고난에 참여함","textKo":"우리의 머리이신 그리스도께서 그런 악조건에 복종하셨는데, 어째서 우리는 그런 상태를 모면하려 한단 말인가?","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.8 — 십자가를 짐 / 그리스도의 고난에 참여함","topic":"십자가","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.11","chapter":"믿음으로 말미암는 칭의","subtopic":"믿음으로 그리스도를 소유함","textKo":"믿음으로 그를 소유하게 되면 두 가지 은혜를 받게 된다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.11 — 믿음으로 말미암는 칭의 / 믿음으로 그리스도를 소유함","topic":"칭의","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.12","chapter":"하나님의 심판대 앞에서의 칭의","subtopic":"하늘 법정의 의","textKo":"우리의 논의가 인간의 법정이 아니라 하늘의 법정에 속한 의에 관한 것이라는 것을 먼저 생각해야 한다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.12 — 하나님의 심판대 앞에서의 칭의 / 하늘 법정의 의","topic":"칭의","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.19","chapter":"그리스도인의 자유","subtopic":"자유와 양심","textKo":"이 자유의 문제는 의롭다 하심의 가르침에 뒤따라붙는 것이므로, 의롭다 하심의 힘을 올바로 깨닫는 데에 적지 않은 도움이 되는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.19 — 그리스도인의 자유 / 자유와 양심","topic":"그리스도인의 자유","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.20","chapter":"기도","subtopic":"믿음의 주요 활동","textKo":"하나님을 향하여 기도함이 없는 믿음은 진정한 믿음일 수가 없다는 사실을 보여 준다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.20 — 기도 / 믿음의 주요 활동","topic":"기도","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.21","chapter":"영원한 선택","subtopic":"하나님의 값없는 긍휼","textKo":"영원한 선택을 알게 되기 전에는 우리의 구원이 하나님의 값없는 긍휼의 우물에서 흘러나온다는 사실을 분명하게 납득할 수 없을 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.21 — 영원한 선택 / 하나님의 값없는 긍휼","topic":"예정론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.24","chapter":"부르심과 선택의 확증","subtopic":"부르심과 선택","textKo":"하나님의 부르심을 가리켜서 그의 인증이라 부르는 것이 합당할 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.24 — 부르심과 선택의 확증 / 부르심과 선택","topic":"선택과 부르심","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"III.25","chapter":"최후의 부활","subtopic":"부활의 소망","textKo":"우리는 마음을 하늘에까지 높이 들어 올려야 한다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"III.25 — 최후의 부활 / 부활의 소망","topic":"부활","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":11,"coverage":["III.1","III.3","III.7","III.8","III.11","III.12","III.19","III.20","III.21","III.24","III.25"]}
+}

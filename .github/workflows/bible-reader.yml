@@ -272,3 +272,5 @@ jobs:
       - name: Validate shared Bible reader
         continue-on-error: true
         run: python3 tools/apply_bible_reader.py --check
+
+# ref-trigger for staged Genesis publication

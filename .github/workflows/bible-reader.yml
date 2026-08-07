@@ -51,6 +51,8 @@ on:
       - "assets/app.js"
       - "bible/original.html"
       - ".github/workflows/bible-reader.yml"
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:
@@ -272,5 +274,3 @@ jobs:
       - name: Validate shared Bible reader
         continue-on-error: true
         run: python3 tools/apply_bible_reader.py --check
-
-# ref-trigger for staged Genesis publication

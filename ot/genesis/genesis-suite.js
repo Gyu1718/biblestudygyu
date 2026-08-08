@@ -1,5 +1,5 @@
 (function(){"use strict";
-if(!document.querySelector('link[data-genesis-visual]')){
+if(document.body&&document.body.getAttribute("data-kind")==="study"&&!document.querySelector('link[data-genesis-visual]')){
   var visual=document.createElement('link');
   visual.rel='stylesheet';
   visual.href='./genesis-visual.css';

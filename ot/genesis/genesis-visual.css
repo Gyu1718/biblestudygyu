@@ -135,6 +135,20 @@ li{margin:.5rem 0}
 .krv .vn,.krv .v{font-size:.64rem}
 .krv a{margin:.08rem 0 .35rem .75rem;font-size:.62rem}
 
+/* 3차: 연구 요소의 시각 언어 */
+.hw{
+  display:inline-block;padding:.02em .2em .04em;margin:0 .02em;
+  color:var(--lapis-deep);background:color-mix(in srgb,var(--lapis) 5%,transparent);
+  border-bottom:1px solid color-mix(in srgb,var(--lapis) 28%,var(--line));
+  border-radius:3px;font-size:1.08em;line-height:1.38;vertical-align:-.03em
+}
+h3 .heb{display:inline-block;padding:.02em .18em .04em;border-radius:4px;background:color-mix(in srgb,var(--ochre) 8%,transparent)}
+.part-head .heb,.hero-band .heb-title{background:none;border:0;padding:0}
+.c+.c{margin-left:.16rem}
+.vs p>.c:first-child,section.part>p>.c:first-child,.pair p>.c:first-child{margin-right:.28rem}
+.legend .c{min-width:1.72em;height:1.72em;padding:0 .34em}
+section.part p>b{font-weight:700;color:color-mix(in srgb,var(--ink) 82%,var(--lapis))}
+
 /* 표와 비교 카드 */
 table{border-collapse:separate;border-spacing:0;overflow:hidden;font-size:.85rem;margin:1.48rem 0;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow-sm)}
 caption{font-size:.71rem;font-weight:600;padding:.15rem 0 .58rem;color:var(--ink-soft)}
@@ -148,12 +162,36 @@ td.head{background:var(--band)!important}
 .pair>div{border-radius:10px;padding:1rem 1.08rem;box-shadow:var(--shadow-sm)}
 .pair h4{font-size:.68rem}
 
+/* 구조표와 상호참조표는 일반 표보다 정보 탐색성을 높인다. */
+.xref td.r{
+  width:7rem;white-space:nowrap;font-family:var(--sans);font-weight:800;
+  color:var(--lapis);background:color-mix(in srgb,var(--lapis) 5%,var(--card))
+}
+.xref td:nth-child(2){font-weight:600;color:var(--lapis-deep)}
+.xref tbody tr:hover td{background:color-mix(in srgb,var(--ochre) 5%,var(--card))}
+.xref tbody tr:hover td.r{background:color-mix(in srgb,var(--ochre) 9%,var(--card))}
+.toledot td.n{
+  width:5rem;text-align:center;font-weight:800;color:var(--ochre);
+  background:color-mix(in srgb,var(--ochre) 7%,var(--card))
+}
+.toledot td.head{color:var(--lapis-deep)}
+.pair>div{position:relative;border-top:3px solid color-mix(in srgb,var(--lapis) 62%,var(--line))}
+.pair>div:nth-child(even){border-top-color:color-mix(in srgb,var(--ochre) 72%,var(--line))}
+
+/* 안내/질문 박스는 역할별로 다른 표식을 유지한다. */
+.note{border-left-color:var(--lapis)}
+.qs{border-left:4px solid color-mix(in srgb,var(--lapis) 60%,var(--ochre))}
+.qs .tt{color:var(--lapis-deep)}
+.caveat .tt{color:var(--ochre)}
+.note .tt,.qs .tt,.caveat .tt{text-transform:uppercase}
+
 /* 마지막 두 연구 단락: 신학 종합 / 설교 메시지를 본문 주해와 구별 */
 main>section.part:nth-last-of-type(2),main>section.part:last-of-type{position:relative;padding:0 1.2rem 1.25rem;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--card) 96%,var(--band));box-shadow:var(--shadow-sm)}
 main>section.part:nth-last-of-type(2){border-top:4px solid var(--lapis)}
 main>section.part:last-of-type{border-top:4px solid var(--ochre);background:linear-gradient(135deg,color-mix(in srgb,var(--ochre) 5%,var(--card)),var(--card) 42%)}
 main>section.part:nth-last-of-type(2)>.part-head,main>section.part:last-of-type>.part-head{margin-left:-1.2rem;margin-right:-1.2rem;margin-top:0;border-top:0;border-radius:10px 10px 0 0;padding-left:1.2rem;padding-right:1.2rem;background:linear-gradient(100deg,var(--band),transparent 82%)}
 main>section.part:last-of-type h3::before{background:var(--lapis)}
+main>section.part:nth-last-of-type(2)>h3,main>section.part:last-of-type>h3{margin-top:2rem}
 
 /* 문서 이동 */
 .back{font-size:.68rem;margin-top:1.8rem}
@@ -206,6 +244,7 @@ footer{margin-top:4.7rem;font-size:.72rem}
   .note,.caveat,.qs,.vs{padding:.9rem}
   .vs p+p{padding-top:.58rem}
   .krv{padding:.76rem .82rem}
+  .hw{padding-left:.12em;padding-right:.12em}
   .pair{grid-template-columns:1fr}
   table{display:block;overflow-x:auto;max-width:100%;border-radius:8px;scrollbar-width:thin}
   th,td{min-width:7.5rem;padding:.58rem .64rem}
@@ -214,6 +253,7 @@ footer{margin-top:4.7rem;font-size:.72rem}
   table td:first-child{background:var(--card)}
   table tr:nth-child(even) td:first-child{background:color-mix(in srgb,var(--band) 54%,var(--card))}
   table td.head:first-child{background:var(--band)!important}
+  .xref td.r{min-width:6.2rem}
   main>section.part:nth-last-of-type(2),main>section.part:last-of-type{padding-left:.9rem;padding-right:.9rem;border-radius:12px}
   main>section.part:nth-last-of-type(2)>.part-head,main>section.part:last-of-type>.part-head{margin-left:-.9rem;margin-right:-.9rem;padding-left:.9rem;padding-right:.9rem}
   .chapter-pager{grid-template-columns:1fr 1fr;margin-top:3.2rem}
@@ -231,4 +271,5 @@ footer{margin-top:4.7rem;font-size:.72rem}
   .hero-band{box-shadow:none}
   .note,.caveat,.qs,.vs,.krv,.pair>div,table,main>section.part:nth-last-of-type(2),main>section.part:last-of-type{box-shadow:none}
   main>section.part:nth-last-of-type(2),main>section.part:last-of-type{border-left:0;border-right:0}
+  .hw{background:none;border-bottom:0;padding:0}
 }

@@ -1,5 +1,5 @@
 /* 성서 연구 서고 — 카탈로그 */
-window.SITE_CATALOG = {site:{name:"성서 연구 서고",updated:"2026-08-08"},sections:[
+window.SITE_CATALOG = {site:{name:"성서 연구 서고",updated:"2026-08-09"},sections:[
 {id:"bible",label:"성경읽기",original:"Biblia · Γραφή",script:"lat",studies:[{id:"reader",path:"bible/original.html",title:"성경읽기",original:"원어 · 개역개정",script:"lat",meta:"성경 66권 — 장·절 선택 · 구약 WLC/OSHB · 신약 NA28 · 개역개정 병렬 대조",desc:"성경책과 장절을 선택해 원문과 개역개정을 절 단위로 나란히 읽는다. 원어 단어에 마우스를 올리거나 터치하면 한글 스트롱 사전 풀이를 확인할 수 있다.",volumes:2}]},
 {id:"lexicon",label:"원어 사전",original:"Λεξικόν · מִלּוֹן",script:"lat",studies:[{id:"strongs-lexicon",path:"lexicon/index.html",title:"히브리어·헬라어 스트롱 사전",original:"Ἑλληνικά · עִבְרִית",script:"lat",meta:"히브리어·아람어 H1–H8674 · 헬라어 실제 Strong 항목 5,523개 · 한글 원문 보존 · 번호·표제어·발음·뜻 검색 · 원어성경 호버 연결",desc:"사용자가 제공한 한글 스트롱 사전 자료를 구조화했다. 상세 페이지에서는 사전 원문을 확인하고, 성경읽기 화면에서는 원어 단어 위에서 간략 풀이를 바로 볼 수 있다.",volumes:6}]},
 {id:"ot",label:"구약 연구",original:"תַּנַ\"ךְ",script:"heb",studies:[
@@ -11,6 +11,7 @@ window.SITE_CATALOG = {site:{name:"성서 연구 서고",updated:"2026-08-08"},s
 {id:"joel",path:"ot/joel/index.html",title:"요엘 연구 서가",original:"יוֹאֵל",script:"heb",meta:"표준형 서가 — 성경읽기 · 종합 개관 1편 · 장별 심층연구 3편 · 원어 연구 준비 중",desc:"메뚜기 재앙에서 여호와의 날, 회개, 영의 부어짐, 열방 심판까지 세 장을 절 단위로 주해했다.",volumes:4},
 {id:"haggai",path:"ot/haggai/index.html",title:"학개 연구 서가",original:"חַגַּי",script:"heb",meta:"표준형 서가 — 성경읽기 · 종합 개관 1편 · 장별 심층연구 2편 · 원어 연구 1:1–4 표본",desc:"넉 달 동안 선포된 네 신탁을 성경읽기, 종합 개관, 두 장의 심층연구와 원어 연구 표본으로 연결한다.",volumes:4}]},
 {id:"nt",label:"신약 연구",original:"Καινὴ Διαθήκη",script:"grk",studies:[
+{id:"mark",path:"nt/mark/index.html",title:"마가복음 연구 서가",original:"ΚΑΤΑ ΜΑΡΚΟΝ",script:"grk",meta:"표준형 서가 — 성경읽기 16장 · 종합 개관 1편 · 장별 심층연구 준비 중 · 원어 연구 준비 중",progress:{label:"장별 심층연구",done:0,total:16},desc:"광야의 외침에서 빈 무덤의 침묵까지 마가복음 열여섯 장을 연결한다. France·Stein·Edwards·Witherington·Rhoads 다섯 주석에 Watts의 새 출애굽, Bauckham의 목격자 논증, Hengel의 헬레니즘 배경을 더해 종합 개관을 먼저 세웠다.",volumes:17},
 {id:"acts",path:"nt/acts/index.html",title:"사도행전 연구 서가",original:"ΠΡΑΞΕΙΣ ΑΠΟΣΤΟΛΩΝ",script:"grk",meta:"표준형 서가 — 성경읽기 28장 · 종합 개관 1편 · 원어 연구 준비 중",progress:{label:"장별 심층연구",done:28,total:28},desc:"오순절 성령 강림에서 로마의 셋집까지 스물여덟 장 전체를 연결한다. Bruce·Peterson·Schnabel을 대조해 선교 확장, 체포와 변론, 항해와 로마의 담대한 하나님 나라 선포를 절 범위 단위로 주해했다.",volumes:29},
 {id:"romans",path:"nt/romans/index.html",title:"로마서 연구 서가",original:"ΠΡΟΣ ΡΩΜΑΙΟΥΣ",script:"grk",meta:"표준형 서가 — 성경읽기 · 종합 개관 · 장별 심층연구 1–16장 · A–E 보완 · 원어 연구 미구현",desc:"열여섯 장 전체의 심층연구와 보완 자료를 연결한다.",volumes:17}]},
 {id:"theology",label:"신학 연구",original:"Θεολογία",script:"grk",studies:[{id:"reformed",path:"https://gyu1718.github.io/Reformed_Theology_Research_Archive/",title:"개혁신학 연구 아카이브",original:"Reformata Semper Reformanda",script:"lat",meta:"개혁파 정통 ⇄ 바르트 신정통 대조 — 4대 조직신학 · 신조 모음 · 인물 · 신학사 · 주제 대조",desc:"개혁파 정통과 칼 바르트의 신정통주의를 나란히 읽는 교육 아카이브.",volumes:4}]}]};

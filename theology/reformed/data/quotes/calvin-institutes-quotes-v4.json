@@ -1,0 +1,18 @@
+{
+  "id": "calvin-institutes-quotes-v4",
+  "title": "칼빈 『기독교 강요』 한국어 인용 v4 — 제4권 핵심 장",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『기독교 강요』 한국어 변환본에서 제4권 핵심 장의 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "권.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"calvin-institutes","section":"IV.1","chapter":"참된 교회와 신자의 어머니","subtopic":"교회의 필요성","textKo":"하나님께서는 자신의 백성을 교회의 품 안에 모으시기를 기뻐하셨다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.1 — 참된 교회와 신자의 어머니 / 교회의 필요성","topic":"교회론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.3","chapter":"교사의 직분과 사역자 선출","subtopic":"말씀 사역","textKo":"주께서는 사람의 사역을 사용하셔서 자신의 교회를 다스리신다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.3 — 교사의 직분과 사역자 선출 / 말씀 사역","topic":"교회 직분","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.12","chapter":"권징과 출교","subtopic":"교회의 권징","textKo":"권징은 교회 안에서 그리스도의 질서를 보존하는 데 필요한 고삐와도 같다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.12 — 권징과 출교 / 교회의 권징","topic":"권징","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.14","chapter":"성례 일반론","subtopic":"성례의 표징과 약속","textKo":"성례는 우리를 향한 하나님의 은혜를 외적 표징으로 확증하는 것이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.14 — 성례 일반론 / 성례의 표징과 약속","topic":"성례론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.15","chapter":"세례","subtopic":"세례와 그리스도와의 연합","textKo":"세례는 우리가 그리스도께 접붙임을 받아 하나님의 자녀로 여겨진다는 표이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.15 — 세례 / 세례와 그리스도와의 연합","topic":"세례","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.16","chapter":"유아 세례","subtopic":"언약과 유아 세례","textKo":"주께서 한 번 세우신 언약은 오늘날에도 여전히 효력을 가진다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.16 — 유아 세례 / 언약과 유아 세례","topic":"유아 세례","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.17","chapter":"성찬","subtopic":"그리스도와의 영적 교통","textKo":"성찬에서 그리스도는 참으로 우리에게 주어지시며, 우리는 믿음으로 그를 받는다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.17 — 성찬 / 그리스도와의 영적 교통","topic":"성찬","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"calvin-institutes","section":"IV.20","chapter":"국가 통치","subtopic":"시민 정부와 하나님의 질서","textKo":"시민 정부는 인간 사회의 외적 질서를 보존하도록 하나님께서 정하신 제도이다.","source":"존 칼빈, 『기독교 강요』, 원광연 옮김, 크리스천다이제스트","ref":"IV.20 — 국가 통치 / 시민 정부와 하나님의 질서","topic":"국가론","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":8,"coverage":["IV.1","IV.3","IV.12","IV.14","IV.15","IV.16","IV.17","IV.20"]}
+}

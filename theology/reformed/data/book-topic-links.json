@@ -1,0 +1,102 @@
+[
+  {
+    "bookId": "calvin-institutes",
+    "bookTitle": "기독교 강요",
+    "topicIds": [
+      "theological-method",
+      "scripture",
+      "doctrine-of-god",
+      "trinity",
+      "christology",
+      "soteriology",
+      "justification",
+      "sanctification",
+      "predestination",
+      "ecclesiology"
+    ],
+    "historyIds": [
+      "reformation-to-reformed",
+      "reformed-and-presbyterian",
+      "synod-of-dort",
+      "westminster-assembly",
+      "reformed-orthodoxy"
+    ],
+    "note": "칼빈의 『기독교 강요』는 개혁파 교리 체계의 기본 골격을 형성하므로 성경론, 신론, 기독론, 구원론, 예정론, 교회론을 우선 연결한다."
+  },
+  {
+    "bookId": "barth-church-dogmatics",
+    "bookTitle": "교회교의학",
+    "topicIds": [
+      "theological-method",
+      "revelation",
+      "scripture",
+      "trinity",
+      "doctrine-of-god",
+      "predestination",
+      "creation-covenant",
+      "christology",
+      "atonement-reconciliation",
+      "ecclesiology"
+    ],
+    "historyIds": [
+      "modern-liberal-theology-background",
+      "dialectical-theology",
+      "barth-and-neo-orthodoxy",
+      "natural-theology-debate",
+      "barth-election-doctrine",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "바르트의 『교회교의학』은 계시론, 말씀론, 삼위일체론, 그리스도 중심 예정론, 화해론을 중심으로 개혁파 정통과 비교되어야 한다."
+  },
+  {
+    "bookId": "bavinck-reformed-dogmatics",
+    "bookTitle": "개혁교의학",
+    "topicIds": [
+      "revelation",
+      "scripture",
+      "doctrine-of-god",
+      "trinity",
+      "creation-covenant",
+      "humanity",
+      "sin",
+      "christology",
+      "soteriology",
+      "ecclesiology",
+      "eschatology"
+    ],
+    "historyIds": [
+      "reformation-to-reformed",
+      "westminster-assembly",
+      "reformed-orthodoxy",
+      "modern-liberal-theology-background",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "바빙크는 개혁파 정통의 유기적 종합을 보여 주므로 고전 개혁파 교리와 근대 신학의 접점을 함께 연결한다."
+  },
+  {
+    "bookId": "berkhof-systematic-theology",
+    "bookTitle": "조직신학",
+    "topicIds": [
+      "theological-method",
+      "scripture",
+      "doctrine-of-god",
+      "trinity",
+      "creation-covenant",
+      "providence-and-evil",
+      "humanity",
+      "sin",
+      "christology",
+      "atonement-reconciliation",
+      "soteriology",
+      "ecclesiology",
+      "eschatology"
+    ],
+    "historyIds": [
+      "reformed-orthodoxy",
+      "synod-of-dort",
+      "westminster-assembly",
+      "reformed-orthodoxy-and-neo-orthodoxy"
+    ],
+    "note": "벌코프는 개혁파 교의학을 교과서형으로 정리하므로 각 교리 좌표와 정통주의 역사 항목을 우선 연결한다."
+  }
+]

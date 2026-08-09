@@ -1,0 +1,20 @@
+{
+  "id": "berkhof-systematic-theology-quotes-v4",
+  "title": "루이스 벌코프 『조직신학』 한국어 인용 v4 — 구원론",
+  "language": "Korean",
+  "sourceBasis": "사용자가 업로드한 『벌코프 조직신학』 한국어 EPUB에서 구원론 관련 짧은 완결문을 선별",
+  "policy": {"fullText": false, "pageNotation": "omitted", "referenceFormat": "부.장 — 장 제목 / 소주제", "translationScope": "각 항목은 한국어판에서 짧은 완결문 단위로 선별한 인용입니다."},
+  "quotes": [
+    {"book":"berkhof-systematic-theology","section":"V.1","chapter":"구원의 적용과 성령","subtopic":"구원론의 범위","textKo":"구원론은 구원의 복들을 죄인에게 전달하는 것을 다룬다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.1 — 구원의 적용과 성령 / 구원론의 범위","topic":"구원론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.1","chapter":"구원의 적용과 성령","subtopic":"성령의 사역","textKo":"성령은 자신의 고유한 인격을 가지고 있을 뿐만 아니라 고유한 사역 방식을 가지고 있다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.1 — 구원의 적용과 성령 / 성령의 사역","topic":"성령론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.2","chapter":"소명과 중생","subtopic":"중생의 본질","textKo":"중생은 하나님의 창조 사역이므로, 이 사역에서 인간은 완전히 수동적이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.2 — 소명과 중생 / 중생의 본질","topic":"중생","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.2","chapter":"소명과 중생","subtopic":"새 피조물","textKo":"하나님의 창조 사역은 새로운 생명을 생성한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.2 — 소명과 중생 / 새 피조물","topic":"소명과 중생","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.3","chapter":"회심과 믿음","subtopic":"회심의 성격","textKo":"회심은 개인의 인생에서 현저한 위기가 될 수 있지만, 점진적인 과정으로 임할 수도 있다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.3 — 회심과 믿음 / 회심의 성격","topic":"회심","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.3","chapter":"회심과 믿음","subtopic":"믿음의 위치","textKo":"신앙은 구원론에 있어서 중요한 항목이므로 별도로 다루어져야 한다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.3 — 회심과 믿음 / 믿음의 위치","topic":"믿음","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.4","chapter":"칭의","subtopic":"법정적 성격","textKo":"이 단어들의 의미는 법정적이며 법적이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.4 — 칭의 / 법정적 성격","topic":"칭의","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.4","chapter":"칭의","subtopic":"의롭다고 선언함","textKo":"이 동사는 일반적으로 어떤 사람을 의롭다고 선언하다는 의미다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.4 — 칭의 / 의롭다고 선언함","topic":"칭의론","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.5","chapter":"성화","subtopic":"거룩함의 개념","textKo":"거룩함은 관계적 개념이다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.5 — 성화 / 거룩함의 개념","topic":"성화","placement":"quote-block","priority":"high","pageOmitted":true},
+    {"book":"berkhof-systematic-theology","section":"V.6","chapter":"성도의 견인","subtopic":"견인의 교리","textKo":"종교개혁자들은 이 교리의 정당한 위치를 회복시켰다.","source":"루이스 벌코프, 『조직신학』 한국어판","ref":"V.6 — 성도의 견인 / 견인의 교리","topic":"성도의 견인","placement":"quote-block","priority":"high","pageOmitted":true}
+  ],
+  "stats": {"total":10,"coverage":["V.1","V.2","V.3","V.4","V.5","V.6"]}
+}

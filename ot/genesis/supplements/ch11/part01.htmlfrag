@@ -1,0 +1,26 @@
+<div class="note supplement-meta"><span class="tt">SOURCE NOTE</span><p><strong>대상</strong> <code>ot/genesis/ch11.html</code> · 현재 6,248자(K·W 위주) · 자료 총량 약 254,000자(소화율 2.5%)
+<strong>약호</strong> K Kidner(TOTC) · W Wenham(WBC) · H Hamilton(NICOT) · L Longman(SGBC) · B Brueggemann(Interpretation) · D Keil–Delitzsch(BCOT)
+<strong>자료 분량</strong> W 75,995(바벨 46,617 + 셈 계보 25,522 + 개관 3,856) · D 48,265 · L 약 44,000(10:1–11:26 구획의 11장 몫 + 11:27–32) · B 42,674 · H 34,713 · K 5,469
+<strong>제목 정정</strong> 서가(index)는 &quot;바벨과 데라&quot;, 문서(title·h1)는 &quot;바벨&quot; — 반영 시 문서 쪽을 <strong>&quot;바벨과 데라&quot;</strong>로 맞출 것.</p>
+<p><strong>제안 ORDER</strong></p>
+<pre><code>STRUCTURE, 11:1–9, 11:10–32, STRUCTURE II, READING,
+HEBREW, HEBREW, BACKGROUND, BACKGROUND, DEBATES,
+CROSS-REFERENCES, CROSS-REFERENCES, CANON, CANON,
+SYNTHESIS, SYNTHESIS, PREACHING, PREACHING
+</code></pre>
+<p><strong>변환 주의</strong> — 12장 보완문과 동일(굵은 글씨 = 번역 인용 <code>&lt;b&gt;</code>, <code>&lt;span class=&quot;c&quot; title=&quot;Kidner&quot;&gt;K&lt;/span&gt;</code> 등 = 주석 약호, <code>〔쟁점〕</code> = caveat 상자, 히브리어 = <code>hw</code> 스팬, 작은따옴표·유니코드 말줄임표 배제).</p>
+<hr />
+</div>
+<section class="part" id="s0">
+  <div class="part-head"><div class="eyebrow">STRUCTURE II</div><h2>자료가 읽는 짜임</h2><div class="gloss">계보의 팔걸이와 다섯 장면</div></div>
+  <p><span class="c" title="Hamilton">H</span> Hamilton은 창세기 앞부분의 편집 버릇 하나를 짚는다. <strong>서사 덩어리를 계보 인용으로 앞뒤에서 감싸는 구조다.</strong> 노아의 아들들 계보(5:32)와 그 반복(6:9–10)이 하나님의 아들들 이야기(6:1–8)를 감싸고, 같은 계보의 두 언급(6:9–10; 9:18–19)이 홍수 이야기를 감싼다. 그리고 셋째가 여기다 — <strong>셈의 계보(10:21–31)와 셈의 계보(11:10–32)가 바벨탑 이야기(11:1–9)를 감싼다.</strong> 10장과 11장의 순서가 연대와 어긋나는 데에는 이 문학적 설계도 한몫을 한다.</p>
+<p><span class="c" title="Wenham">W</span> 이야기 자체는 도입(1절), 다섯 장면, 결론(9절)으로 짜인다. 장면 1 인류의 이동(2절) — 장면 2 성읍과 탑을 세우려는 사람의 계획(3–4절) — 장면 3 여호와의 시찰(5절) — 장면 4 사람을 좌절시키려는 하나님의 계획(6–7절) — 장면 5 흩어짐과 중단(8절). <strong>장면 2와 장면 4가 정확히 마주 선다 — 둘 다 &quot;자&quot;(하바)로 열리는 청유이며, 장면 1에서 멈춘 인류의 이동이 장면 5에서 재개된다.</strong> 그리고 5절, 하나님의 시찰이 전환점이다.</p>
+<p><span class="c" title="Wenham">W</span> 놀라운 것은 이 이야기가 <strong>평행 패널과 팔리스트로프(확장 교차 배열)를 동시에</strong> 쓴다는 점이다. 패널로 보면 1절의 &quot;온 땅·하나의 언어&quot;가 6절의 &quot;한 족속·하나의 언어&quot;와, 4절의 &quot;성읍을 건설하여·이름을 내고·흩어짐을 면하자&quot;가 8–9절의 &quot;성읍 건설을 그쳤더라·그 이름을 바벨이라·여호와께서 거기서 흩으셨더라&quot;와 짝을 이룬다. 교차 배열로 보면 A 온 땅의 언어(1) — B 거기(2) — C 서로(3) — D 벽돌을 만들자(3) — E 우리를 위하여 건설하자(4) — F 성읍과 탑(4) — <strong>G 여호와께서 내려오셨더라(5)</strong> — F′ 그 성읍과 탑(5) — E′ 사람들이 건설한(5) — D′ 혼잡하게 하자(7) — C′ 서로의 언어(7) — B′ 거기서(8) — A′ 온 땅의 언어(9)로 접힌다. 두 설계가 겹치는 드문 사례이며, 창세기 안의 또 다른 예가 17장이다.</p>
+<p><span class="c" title="Wenham">W</span> 5절은 평행 패널 어디에도 속하지 않은 채 팔리스트로프의 축으로만 선다. Wenham은 그 위치를 8:1과 견준다. <strong>&quot;하나님이 노아를 기억하사&quot;가 홍수 이야기의 한가운데서 물의 역전을 알리듯, &quot;여호와께서 내려오셨더라&quot;가 이 이야기의 한가운데서 공사의 역전을 알린다. 그곳에서 하나님은 사람을 구원하러 개입하셨고, 이곳에서는 사람의 획책을 좌절시키러 개입하신다.</strong> <span class="c" title="Longman">L</span> Longman이 옮기는 Fokkelman의 정리로, 언어의 하나 됨(A)과 터의 하나 됨(B)과 긴밀한 소통(C)이 계획(D)과 건축(E·F)을 낳고, 전환점 X(&quot;여호와께서 내려오셨더라&quot;) 뒤로 그 전부가 거꾸로 풀려 간다.</p>
+<p><span class="c" title="Hamilton">H</span> Kikawada의 삼분 독법도 같은 곳을 가리킨다. 1–4절(간접 화법 문단 + 직접 화법 문단)과 6–9절(직접 화법 문단 + 간접 화법 문단)이라는 두 큰 덩어리 사이에, 5절 한 절이 <strong>얇은 쐐기</strong>처럼 박혀 있다.</p>
+<p><span class="c" title="Hamilton">H</span> 장의 첫머리와 끝머리도 짝이다. <strong>2절과 31절이 같은 동사, 같은 형태로 끝난다 — 바예셰부, &quot;거기 거류하였더라.&quot;</strong> 동쪽에서 옮겨 와 시날에 눌러앉은 사람들과, 우르를 떠나 하란에 눌러앉은 데라 일가. 옮겨 가 정착한 두 무리를 나란히 세워 놓고, 한쪽에는 진노가, 다른 쪽에는 — 그 집에서 나올 한 사람을 통해 — 복이 예비된다.</p>
+<p><span class="c" title="Wenham">W</span> 11:10–26의 셈 계보는 창세기 전체의 교대 리듬 안에 놓인다. <strong>간결한 계보와 긴 가족사가 번갈아 온다 — 셈의 족보(11:10–26) 뒤에 아브라함 이야기(데라의 족보, 11:27–25:11), 이스마엘의 족보(25:12–18) 뒤에 야곱과 에서 이야기(이삭의 족보), 에서의 족보(36장) 뒤에 요셉 이야기(야곱의 족보).</strong> 그리고 이 계보는 5장과 형식이 거의 같아 원역사와 족장사를 잇는 다리가 된다 — 아담에서 노아로(5장), 노아의 아들에게서 아브람으로(11장). 아담·노아·아브라함, 세 사람이 각각 새 시대의 머리다.</p>
+<p><span class="c" title="Wenham">W</span> 배경에는 수메르 왕명록의 무늬가 어른거린다. <strong>홍수에 앞서 천문학적 세월을 다스린 왕들 — 홍수 — 그 뒤로 짧아졌으되 여전히 긴 치세의 왕들.</strong> 창세기 5장 — 홍수 — 11:10–26의 배열과 같은 결이다. 그러면서 창세기의 인물은 왕이 아닌 평민이고 수치도 훨씬 작으니, 공통의 전승 기억을 시사할 뿐 그 위에 무엇을 세울 수는 없다고 Wenham은 선을 긋는다.</p>
+<hr />
+
+  <div class="back"><a href="#top">↑ 문서 처음으로</a>

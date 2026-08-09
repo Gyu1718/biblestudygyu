@@ -6,6 +6,20 @@ if(document.body&&document.body.getAttribute("data-kind")==="study"&&!document.q
   visual.setAttribute('data-genesis-visual','');
   document.head.appendChild(visual);
 }
+if(document.body&&document.body.getAttribute("data-kind")==="study"&&!document.body.hasAttribute("data-supplement")){
+  var chapter=document.body.getAttribute("data-chapter");
+  var supplement={"11":"supplement-ch11.html","12":"supplement-ch12.html"}[chapter];
+  if(supplement&&!document.querySelector("[data-genesis-supplement-link]")){
+    var nav=document.querySelector("nav.toc .site-nav");
+    if(nav){
+      var link=document.createElement("a");
+      link.href=supplement;
+      link.textContent="2차 보완 연구";
+      link.setAttribute("data-genesis-supplement-link","");
+      nav.appendChild(link);
+    }
+  }
+}
 if(!document.body||document.querySelector(".reading-progress"))return;
 var b=document.createElement("div");b.className="reading-progress";b.setAttribute("aria-hidden","true");b.innerHTML="<span></span>";document.body.prepend(b);
 var f=b.firstElementChild,u=function(){var d=document.documentElement,m=Math.max(1,d.scrollHeight-d.clientHeight);f.style.width=Math.min(100,Math.max(0,d.scrollTop/m*100))+"%"};

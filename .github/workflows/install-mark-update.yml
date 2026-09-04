@@ -23,10 +23,10 @@ jobs:
         shell: bash
         run: |
           sha256sum -c .mark-update/SHA256SUMS
-          cat .mark-update/chunk_* > /tmp/mark-update.tar.gz.b64
-          base64 -d /tmp/mark-update.tar.gz.b64 > /tmp/mark-update.tar.gz
-          echo "a1349bd98a91138ad8de417864bc6a0b2981e82e977529159e5816c1569dde8b  /tmp/mark-update.tar.gz" | sha256sum -c -
-          tar -xzf /tmp/mark-update.tar.gz -C .
+          cat .mark-update/chunk_* > /tmp/mark-update.tar.xz.b64
+          base64 -d /tmp/mark-update.tar.xz.b64 > /tmp/mark-update.tar.xz
+          echo "ea9d0ece1c91e89b77a2b431a112f8fcb57cf18f7ed9ad443ff70d6da67de958  /tmp/mark-update.tar.xz" | sha256sum -c -
+          tar -xJf /tmp/mark-update.tar.xz -C .
 
       - name: Validate installed Mark shelf
         shell: bash
@@ -44,7 +44,7 @@ jobs:
                   if f'data-book="mark"' not in text or f'data-chapter="{n}"' not in text:
                       raise SystemExit(f'{p}: metadata mismatch')
               ids = re.findall(r'\bid="([^"]+)"', text)
-              if len(ids) != len(set(ids))):
+              if len(ids) != len(set(ids)):
                   raise SystemExit(f'{p}: duplicate id')
               for frag in re.findall(r'href="#([^"]+)"', text):
                   if frag and frag not in ids:

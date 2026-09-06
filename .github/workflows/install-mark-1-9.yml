@@ -22,7 +22,7 @@ jobs:
       - name: Reassemble Mark package
         shell: bash
         run: |
-          cat .mark-update10/part_* > /tmp/mark-update-final.tar.xz.b64
+          cat .mark-update10/part_0[0-9] .mark-update10/tail_* > /tmp/mark-update-final.tar.xz.b64
           base64 -d /tmp/mark-update-final.tar.xz.b64 > /tmp/mark-update-final.tar.xz
           echo "1325a82518b9d0ee5b46ed71192db650d11681f8c864acd4fd360200ea06ad0c  /tmp/mark-update-final.tar.xz" | sha256sum -c -
           tar -xJf /tmp/mark-update-final.tar.xz -C .

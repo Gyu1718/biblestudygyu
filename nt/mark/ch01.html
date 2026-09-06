@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="마가복음 1장의 단락 구조, 절 범위 주해, 합성 인용과 찢어진 하늘, 가버나움의 하루와 권위, 핵심 원어와 문법, 상호 참조를 여덟 자료로 종합한 심층 연구." name="description"/>
+<title>마가복음 1장 심층 연구 — 광야의 소리</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='34' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --f:#3c5a83; --s:#37665a; --e:#8a4658; --w:#655a8c; --r:#7a5a38;
+  --wa:#1d6a73; --ba:#6e5a2e; --g:#7a3f2e; --sec:#857f70;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.1rem;font-size:.71rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .site-nav span.off{color:#6f8296;cursor:default}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.2rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;color:#9db6cc;margin:1rem 0 .5rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(8,1fr);gap:.28rem;margin:0 0 1.1rem}
+nav.toc .chapter-jump a,nav.toc .chapter-jump span{display:block;text-align:center;padding:.3rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.72rem;font-weight:700;text-decoration:none}
+nav.toc .chapter-jump a{color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump span{color:#5f7086;border-color:rgba(255,255,255,.08);cursor:default}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.32rem .5rem .32rem .55rem;border-left:2px solid transparent;margin-top:.2rem;line-height:1.5}
+nav.toc a.lv1:hover,nav.toc a.lv1:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:1.5rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.05rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.95rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.82}
+.hero .meta{font-family:var(--sans);font-size:.77rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.6rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.4rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.97rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.krv{background:#f1efe8;border-left:3px solid var(--ochre);padding:.55rem .85rem;margin:.85rem 0;font-size:.93rem;line-height:1.75}
+.krv b{font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;color:var(--ochre);margin-right:.45rem}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.f{background:var(--f)}.c.s{background:var(--s)}.c.e{background:var(--e)}.c.w{background:var(--w)}.c.r{background:var(--r)}
+.c.wa{background:var(--wa)}.c.ba{background:var(--ba)}.c.g{background:var(--g)}.c.sec{background:var(--sec)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.05rem;font-family:var(--sans);font-size:.77rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.15rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.15rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.4rem 0;padding-left:1.05rem;border-left:3px solid var(--line);scroll-margin-top:1rem}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.85rem;color:var(--lapis);display:block;margin-bottom:.3rem}
+.vs p{margin:.5rem 0;font-size:.96rem}
+.tbl-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.back{font-family:var(--sans);font-size:.73rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+.chapter-footer-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:center;margin-top:4rem;padding-top:1.3rem;border-top:3px double var(--line);font-family:var(--sans);font-size:.82rem}
+.chapter-footer-nav a,.chapter-footer-nav span.next-off{color:var(--lapis);text-decoration:none;padding:.65rem .75rem;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+.chapter-footer-nav span.next-off{color:var(--ink-soft);text-align:right;cursor:default}
+.chapter-footer-nav .shelf{text-align:center}
+@media(max-width:560px){.chapter-footer-nav{grid-template-columns:1fr}.chapter-footer-nav a,.chapter-footer-nav span.next-off{text-align:center}}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table,.krv{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/>
+<link data-site-theme="" href="../../assets/theme.css" rel="stylesheet"/>
+<link data-site-app-css="" href="../../assets/app.css" rel="stylesheet"/>
+</head>
+<body data-book="mark" data-chapter="1" data-kind="study" data-root="../../"><a class="skip-link" href="#top">본문으로 건너뛰기</a>
+<div class="frame">
+<nav aria-label="마가복음 1장 심층 연구 목차" class="toc">
+<div class="site-nav">
+<a href="./index.html">← 마가복음 서가</a>
+<a href="../../index.html">서고 홈</a>
+<a href="../../bible/original.html?book=MRK&amp;chapter=1">성경읽기</a>
+<a href="./overview.html">종합 개관</a>
+<span aria-disabled="true" class="off" role="note">원어 연구 준비 중</span>
+</div>
+<div class="brand">마가복음 1장 심층 연구</div>
+<div class="brand-sub">광야의 소리</div>
+<div class="toc-h">장 이동</div>
+<div class="chapter-jump"><a aria-current="page" aria-label="마가복음 1장 현재 페이지" href="./ch01.html">1</a><a aria-label="마가복음 2장으로 이동" href="./ch02.html">2</a><a aria-label="마가복음 3장으로 이동" href="./ch03.html">3</a><a aria-label="마가복음 4장으로 이동" href="./ch04.html">4</a><a aria-label="마가복음 5장으로 이동" href="./ch05.html">5</a><a aria-label="마가복음 6장으로 이동" href="./ch06.html">6</a><a aria-label="마가복음 7장으로 이동" href="./ch07.html">7</a><a aria-label="마가복음 8장으로 이동" href="./ch08.html">8</a><a aria-label="마가복음 9장으로 이동" href="./ch09.html">9</a><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span></div>
+<div class="toc-h">현재 문서 목차</div>
+<a class="lv1" href="#s0">0. 단락의 짜임</a>
+<a class="lv1" href="#s1">1. 표제와 합성 인용 (1:1–3)</a>
+<a class="lv1" href="#s2">2. 광야의 세례자 (1:4–8)</a>
+<a class="lv1" href="#s3">3. 찢어진 하늘 (1:9–11)</a>
+<a class="lv1" href="#s4">4. 광야의 시험 (1:12–13)</a>
+<a class="lv1" href="#s5">5. 복음의 요약 (1:14–15)</a>
+<a class="lv1" href="#s6">6. 네 어부의 부름 (1:16–20)</a>
+<a class="lv1" href="#s7">7. 회당의 권위 (1:21–28)</a>
+<a class="lv1" href="#s8">8. 시몬의 집과 저녁 (1:29–34)</a>
+<a class="lv1" href="#s9">9. 새벽과 순회 (1:35–39)</a>
+<a class="lv1" href="#s10">10. 나병환자 (1:40–45)</a>
+<a class="lv1" href="#s11">11. 핵심 원어와 문법</a>
+<a class="lv1" href="#s12">12. 주석가별 독법과 쟁점</a>
+<a class="lv1" href="#s13">13. 역사·문화 배경</a>
+<a class="lv1" href="#s14">14. 상호 참조 총람</a>
+<a class="lv1" href="#s15">15. 신학 종합</a>
+</nav>
+<main id="top">
+<header class="hero">
+<div class="gk-title">Ἀρχὴ τοῦ εὐαγγελίου</div>
+<h1>마가복음 1장 · 광야의 소리</h1>
+<p class="sub">동사 없는 표제 한 줄이 책 전체의 문패로 걸리고, 이사야의 이름 아래 세 본문이 엮인 합성 인용이 그 문패의 주석이 된다. 광야에서 외치는 세례자, 요단에서 찢어지는 하늘, 사십 일의 시험, 갈릴리에서 선포되는 때의 참, 그물을 버려 두는 네 어부, 그리고 가버나움의 하루가 권위라는 한 낱말 아래 모인다.</p>
+<p class="meta">1:1–3 표제 · 1:4–8 세례자 · 1:9–13 세례와 시험 · 1:14–20 선포와 부름 · 1:21–45 가버나움과 갈릴리 · France·Stein·Edwards·Witherington·Gundry 다섯 주석에 Rhoads·Watts·Bauckham 종합 · 개역개정 4판 전수 대조 · NA28 병기</p>
+</header>
+<div class="legend">
+<span><b>주석 칩</b></span>
+<span><span class="c f">F</span> France NIGTC 2002</span>
+<span><span class="c s">S</span> Stein BECNT 2008</span>
+<span><span class="c e">E</span> Edwards PNTC 2002</span>
+<span><span class="c w">W</span> Witherington 2001</span>
+<span><span class="c g">G</span> Gundry 1993</span>
+<span><span class="c r">R</span> Rhoads 외 서사비평</span>
+<span><span class="c wa">Wa</span> Watts 새 출애굽</span>
+<span><span class="c ba">Ba</span> Bauckham 목격자</span>
+<span><span class="c sec">재</span> 재인용(2차)</span>
+</div>
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+<div class="part-head">
+<div class="gk">δομή</div>
+<div class="eyebrow">STRUCTURE</div>
+<h2>0. 단락의 짜임</h2>
+<div class="gloss">문패와 첫 하루.</div>
+</div>
+<p>1장은 두 겹이다. 앞의 열세 절이 독자에게만 열리는 하늘의 시점을 세우고, 뒤의 서른두 절이 갈릴리 땅으로 내려와 사역의 표본 하루를 보여 준다. <span class="c f">F</span> France는 1:2–13을 프롤로그로 잡고 그 근거를 어휘에서 찾는다. <span class="gw">πνεῦμα</span>(성령)가 이 열두 절 안에 세 번(1:8, 10, 12) 나오는데 1:13 이후 복음서 전체에서 세 번(3:29; 12:36; 13:11)뿐이고, <span class="gw">ἔρημος</span>(광야)는 프롤로그에 집중해 나온 뒤 마가복음 나머지에서 자취를 감춘다. 두 낱말의 분포가 이 대목의 층위가 다르다는 표지다.</p>
+<p><span class="c w">W</span> Witherington은 경계를 1:15까지 넓힌다. 1:1과 1:15가 모두 <span class="gw">εὐαγγέλιον</span>을 말해 인클루지오를 이루고, 15절이 프롤로그에서 사역 본문으로 넘어가는 이음매라는 독법이다. <span class="c f">F</span> France가 소개하는 Keck의 논증도 같은 방향으로, <span class="gw">εὐαγγέλιον</span>이 1:1과 1:14–15에 놓여 서론의 틀을 만든다고 본다. <span class="c s">S</span> Stein은 1:1–13을 프롤로그로 삼고 1:14–3:6을 첫 큰 단락으로 잡는데, 이 단락이 요약(1:14–15) → 제자 관련 단락(1:16–20)이라는 마가의 반복 패턴으로 열린다는 관찰을 근거로 든다. 같은 패턴이 3:7–12+3:13–19, 6:6b+6:7–13에서 되풀이된다.</p>
+<div class="tbl-wrap">
+<table>
+<caption>표 1. 1장의 흐름</caption>
+<thead><tr><th>단락</th><th>본문</th><th>장면</th><th>핵심어</th></tr></thead>
+<tbody>
+<tr><td class="head">표제</td><td>1:1–3</td><td>동사 없는 문패와 이사야 이름 아래의 합성 인용</td><td>복음의 시작</td></tr>
+<tr><td class="head">세례자</td><td>1:4–8</td><td>광야의 선포, 낙타털 옷, 능력 많으신 이의 예고</td><td>회개의 세례</td></tr>
+<tr><td class="head">세례</td><td>1:9–11</td><td>갈라지는 하늘, 내려오는 영, 하늘의 음성</td><td>내 사랑하는 아들</td></tr>
+<tr><td class="head">시험</td><td>1:12–13</td><td>영이 몰아냄, 사십 일, 사탄과 들짐승과 천사</td><td>광야</td></tr>
+<tr><td class="head">선포</td><td>1:14–15</td><td>요한이 잡힌 후, 갈릴리에서의 첫 선포</td><td>때가 찼고</td></tr>
+<tr><td class="head">부름</td><td>1:16–20</td><td>두 쌍의 형제, 그물과 아버지를 버려 둠</td><td>나를 따라오라</td></tr>
+<tr><td class="head">회당</td><td>1:21–28</td><td>안식일의 가르침과 더러운 귀신 축출</td><td>권위</td></tr>
+<tr><td class="head">집</td><td>1:29–34</td><td>시몬의 장모, 해 질 때의 온 동네</td><td>손을 잡아 일으키심</td></tr>
+<tr><td class="head">새벽</td><td>1:35–39</td><td>한적한 곳의 기도, 다른 마을로</td><td>이를 위하여 왔노라</td></tr>
+<tr><td class="head">나병</td><td>1:40–45</td><td>꿇어 엎드림, 손을 내밀어 대심, 퍼져 나간 소문</td><td>깨끗함</td></tr>
+</tbody>
+</table>
+</div>
+<p><span class="c f">F</span> 1:21–39은 하루의 틀 안에 묶인다. 29절·32절·35절의 시간 표지가 안식일 회당 모임에서 해 질 무렵으로, 다시 이튿날 새벽으로 서사를 이어 붙인다. 이 하루 안에 갈릴리 사역의 요소가 모두 들어 있다 — 가르침(21–22, 27), 축귀(23–26, 32, 34, 39), 치유(30–31, 32–34), 선포(38–39). 전체를 감싸는 어휘가 총칭이라는 점도 눈에 띈다. 온 갈릴리(28), 모든 병자(32), 온 동네(33), 많은 사람(34), 모든 사람(37), 온 갈릴리(39)로 이어지며, 한 날의 장면을 사역 전체의 표본으로 확대한다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+<div class="part-head">
+<div class="gk">Ἀρχή</div>
+<div class="eyebrow">1:1–3</div>
+<h2>1. 표제와 합성 인용</h2>
+<div class="gloss">아르케 투 유앙겔리우 — 복음의 시작</div>
+</div>
+<div class="krv" id="v1"><b>1:1–3</b> 하나님의 아들 예수 그리스도의 복음의 시작이라 / 선지자 이사야의 글에 보라 내가 내 사자를 네 앞에 보내노니 그가 네 길을 준비하리라 / 광야에 외치는 자의 소리가 있어 이르되 너희는 주의 길을 준비하라 그의 오실 길을 곧게 하라 기록된 것과 같이</div>
+<h3>동사 없는 문패</h3>
+<p><span class="c e">E</span> Edwards는 고대 문헌의 두 관례를 대비한다. 목적을 밝히는 정식 헌사로 여는 방식(누가복음·사도행전)과 첫 주제를 곧장 내거는 방식이며, 마가는 후자다. 첫 낱말 <span class="gw">ἀρχή</span>(아르케)는 창세기·호세아·요한복음의 첫 낱말과 같고, 시간의 첫머리라는 뜻과 기원·원리라는 뜻을 함께 담는다. Edwards는 후자로 읽는다. 마가가 <span class="gw">ἀρχή</span> 아래 넣으려는 것이 서두가 아니라 책 전체이기 때문이다.</p>
+<p><span class="c w">W</span> Witherington은 같은 낱말을 고대 전기의 관례에서 본다. 청중에게 이 작품이 누구에 관한 것이며 어떤 성격인지를 첫머리에서 알리는 것이 전기의 요건이었다. 그가 인용하는 주전 9년 프리에네 비문은 옥타비아누스를 두고 신의 탄생일이 세상을 위한 <span class="gw">εὐαγγέλια</span>의 시작이었다고 선포한다. <span class="c e">E</span> Edwards도 같은 비문을 들며 그리스-로마 세계에서 이 낱말이 언제나 복수로 쓰인 반면 신약에서는 오직 단수로만 나온다는 차이를 짚는다 — 다른 소식들 가운데 하나가 아니라 그 곁에 다른 것이 없는 소식이라는 뜻이다.</p>
+<p>본문 문제가 첫 절에 걸려 있다. <span class="gw">υἱοῦ θεοῦ</span>(하나님의 아들)가 시내 사본 원필 등에서 빠져 NA28이 꺾쇠로 묶었다. <span class="c w">W</span> Witherington은 원문일 개연성이 높다고 보고, 시작 + 복음 + 신의 등장이라는 세 요소의 결합이 제국 비문의 어법과 곧장 겹친다는 데서 근거를 찾는다. <span class="c e">E</span> Edwards는 이 절을 프롤로그이자 주제문으로 읽으며, 2절의 요한 연결이 보여 주듯 뒤따르는 본문에서 떼어 내지 않는 한에서 표제로 삼을 수 있다고 한다.</p>
+<h3>이사야의 이름 아래 엮인 세 본문</h3>
+<div class="vs" id="v2">
+<span class="ref">1:2–3 — 사자와 소리</span>
+<p><span class="c e">E</span> 인용은 이사야의 글이라는 이름표를 달고 나오지만 실제로는 세 본문을 엮은 직물이다. 2절 앞부분은 출 23:20과 말 3:1의 앞 절반을 따르고, 3절이 사 40:3을 거의 그대로 재현한다. Edwards는 이사야가 규정적 요소로 판단되었기에 전체가 그 이름에 귀속되었다고 본다. 초기 교회에서 이사야의 권위가 출애굽기와 말라기를 넘어섰다는 사정도 함께 든다.</p>
+<p><span class="c w">W</span> Witherington은 이 조합이 마가 이전의 것일 가능성을 든다. 초기 유대교에 이 본문들을 오실 엘리야 인물과 연결하는 전승의 자취가 있으며, 증언집(testimonium) 같은 본문 모음에서 왔을 수 있다는 견해다. 세 조각이 함께 겨누는 것은 전령과 주와 광야다.</p>
+<p><span class="c wa">Wa</span> Watts는 여기서 한 걸음 더 간다. 1:1과 1:2–3은 <span class="gw">καθὼς γέγραπται</span>가 새 문장을 시작하지 않고 앞뒤를 잇는 정형구라는 이유로 한 문장으로 읽어야 한다. Guelich를 따르는 이 논증에서, 표제는 "복음의 시작 … 이사야의 글에 기록된 것과 같이"까지가 한 덩어리이며, 인용은 표제의 해설(epexegetical)이 된다. 마가가 자기 목소리로 놓은 유일한 편집 인용이라는 사실이 그 무게를 더한다. 고대의 두루마리 문화에서 첫 문장과 첫 단락이 현대 책의 표제지와 목차 구실을 했다는 관례가 이 판단의 배경이다.</p>
+</div>
+<div class="note"><div class="tt">주의 길, 그의 길</div><span class="c e">E</span> 인용문에서 "주의 길"과 여러 대명사는 본래 하나님을 가리킨다. 마가는 그것을 예수에게 적용한다. Edwards는 그래서 세례자가 메시아의 전령을 넘어 하나님 자신의 전령이 된다고 읽는다. 출 23:20, 23의 사자가 인간 안내자나 모세가 아니라 야웨의 사자라는 점, 말라기의 준비자가 엘리야로 지목된다는 점이 이 독법의 근거다. 그리고 2–3절에 "길"이 세 번 나온다 — 8:22–10:52의 "길에서" 단락이 이 낱말을 이어받는다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+<div class="part-head">
+<div class="gk">ἐν τῇ ἐρήμῳ</div>
+<div class="eyebrow">1:4–8</div>
+<h2>2. 광야의 세례자</h2>
+<div class="gloss">엔 테 에레모 — 광야에서</div>
+</div>
+<div class="krv" id="v4"><b>1:4–6</b> 세례 요한이 광야에 이르러 죄 사함을 받게 하는 회개의 세례를 전파하니 / 온 유대 지방과 예루살렘 사람이 다 나아가 자기 죄를 자복하고 요단 강에서 그에게 세례를 받더라 / 요한은 낙타털 옷을 입고 허리에 가죽 띠를 띠고 메뚜기와 석청을 먹더라</div>
+<h3>광야라는 장소</h3>
+<p><span class="c f">F</span> France는 <span class="gw">ἔρημος</span>가 단순한 배경이 아니라 신학적으로 옳은 자리였다고 논한다. 쿰란 공동체가 사 40:3을 근거로 예루살렘 제사장직의 배교에서 갈라져 광야로 나간 것이 그 증거다(1QS 8:14). 광야는 야웨가 이스라엘을 만나 백성으로 삼은 곳이고(렘 2:2–3), 선지자들이 회복의 소망을 걸어 둔 곳이며(호 2:14–15), 사 40:3–5에 이어지는 새 출애굽 환상의 무대다. France는 로마 점령기의 정황도 함께 든다. 요세푸스가 전하는 드다와 이집트인 선지자가 무리를 이끌고 간 곳이 그 광야였고, 그것은 전략적 이유만이 아니라 하나님 백성의 새 시작을 기대할 자리라는 확신 때문이었다.</p>
+<p><span class="c e">E</span> Edwards도 같은 지형을 읽되 세례의 성격에 무게를 둔다. 요한의 세례는 쿰란의 반복적 정결례나 개종자 세례와 구별된다. 정결례가 자기 씻음이었던 데 반해 요한의 세례는 제삼자가 베풀었고, 개종자 세례가 신앙 공동체 입문 의례였던 데 반해 요한의 세례는 도덕적·영적 갱신을 뜻했다. Edwards는 그 배경을 시내 언약에서 찾는다 — 온 백성이 제사장 나라로 부름받고 옷을 빨아 성별한 뒤 언약에 들어간 그 사건(출 19:6, 10)의 재현이라는 독법이다.</p>
+<p><span class="c w">W</span> Witherington은 사회적 함의를 짚는다. 요한은 성전에서 제사를 드리지 않고 죄 사함을 제시했고, 예루살렘의 위계 체계와 무관하게 용서를 말했다. 예루살렘 사람들이 그를 보러 나온 까닭이 여기 있을 수 있다는 물음이다. 그가 인용하는 요세푸스(『유대 고대사』 18.116–18)는 요한이 유대인에게 의롭게 살고 서로에게 정의를, 하나님께 경건을 행하며 세례에 참여하라고 권했다고 전한다.</p>
+<h3>엘리야의 옷</h3>
+<div class="vs" id="v6">
+<span class="ref">1:6 — 낙타털 옷과 가죽 띠</span>
+<p><span class="c e">E</span> <span class="c w">W</span> 두 주석이 함께 왕하 1:8을 가리킨다. 털옷과 가죽 띠는 엘리야의 표지이며, 히브리어 본문이 그리는 거친 염소털 옷이 마가에서 낙타털 옷이 된다. 메뚜기는 레 11:22의 정결한 음식에 든다. <span class="c e">E</span> Edwards는 6:18에서 요한이 헤롯 안디바를 두려움 없이 책망하는 장면이 엘리야와 아합의 대결(왕상 18:18)을 되울린다고 덧붙인다. 옷과 자리와 선포 세 겹에서 요한은 엘리야와 겹쳐진다.</p>
+</div>
+<div class="krv" id="v7"><b>1:7–8</b> 그가 전파하여 이르되 나보다 능력 많으신 이가 내 뒤에 오시나니 나는 굽혀 그의 신발끈을 풀기도 감당하지 못하겠노라 / 나는 너희에게 물로 세례를 베풀었거니와 그는 너희에게 성령으로 세례를 베푸시리라</div>
+<p><span class="c e">E</span> 신발끈을 푸는 일과 발을 씻기는 일은 종의 몫이었고, 1세기 유대교에서는 이방인 종의 몫이었다. 요한이 그 일조차 감당하지 못하겠다고 말할 때 격차는 신분의 언어로 표현된다. <span class="c w">W</span> Witherington은 "능력 많으신 이"라는 표현이 비교와 사회적 위치를 동시에 가리키며 요한이 두 축 모두에서 자신을 아래에 둔다고 읽는다.</p>
+<p><span class="c e">E</span> 8절의 선언이 놀라운 이유는 구약에서 영을 주시는 일이 오직 하나님께 속하기 때문이다. 요한의 말은 그 수여를 예수에게 옮긴다. <span class="c f">F</span> France가 프롤로그의 <span class="gw">πνεῦμα</span> 밀도를 지적하며 끌어내는 결론도 같다. 예수는 영으로 힘 입고 인도받는 분인 동시에 영을 나누어 주는 분이며, 후자는 사 32:15; 44:3; 겔 36:26–27; 욜 3:1–5에서 야웨께만 돌려지던 역할이다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+<div class="part-head">
+<div class="gk">σχιζομένους</div>
+<div class="eyebrow">1:9–11</div>
+<h2>3. 찢어진 하늘</h2>
+<div class="gloss">스키조메누스 — 갈라지는</div>
+</div>
+<div class="krv" id="v9"><b>1:9–11</b> 그 때에 예수께서 갈릴리 나사렛으로부터 와서 요단 강에서 요한에게 세례를 받으시고 / 곧 물에서 올라오실새 하늘이 갈라짐과 성령이 비둘기 같이 자기에게 내려오심을 보시더니 / 하늘로부터 소리가 나기를 너는 내 사랑하는 아들이라 내가 너를 기뻐하노라 하시니라</div>
+<p><span class="c e">E</span> Edwards는 이 장면이 그리스어로 쉰세 낱말이라는 점을 먼저 적고, 크기와 무게의 불균형을 짚는다. 행 1:21–22이 유다의 자리를 채울 자격을 예수의 세례에서부터 함께한 사람으로 규정한 것은 초기 교회가 이 사건을 예수 생애의 결정적 사실로 여겼음을 보여 준다. 9절에서 능동에서 수동으로 옮겨 가는 태의 전환("요한에게 세례를 받으시고")이 4–8절의 주어였던 요한을 중개자 자리로 물리고 예수를 주어로 세운다.</p>
+<h3>찢어짐 — 두 번의 σχίζω</h3>
+<p><span class="c e">E</span> 마가는 하늘이 "열렸다"가 아니라 "찢어졌다"(<span class="gw">σχιζομένους</span>)고 적는다. 마태 3:16과 누가 3:21이 <span class="gw">ἀνοίγω</span>로 부드럽게 바꾼 자리다. Edwards는 이 낱말이 사 64:1의 히브리어 <span class="gw">קרע</span>(카라, 찢다)에 대응하며, 홍해가 갈라짐(출 14:21), 반석이 쪼개짐(사 48:21), 여호와의 날에 감람산이 갈라짐(슥 14:4) 같은 하나님의 격변적 권능 표현에 쓰인다고 정리한다. 그리고 마가복음에서 이 동사는 단 한 번 더 나온다 — 백부장이 하나님의 아들을 고백할 때 성소 휘장이 위로부터 아래까지 찢어지는 15:38이다. 세례의 찢어짐과 십자가의 찢어짐이 하나님의 아들 고백을 양쪽에서 감싼다.</p>
+<p><span class="c w">W</span> Witherington도 사 64:1의 반향을 지적한다. 선지자가 하늘을 가르고 강림하시기를 구한 그 기도가 여기서 응답되며, 예수가 가는 곳마다 하나님의 임재와 권능이 그 안에 머문다는 뜻이 된다. 그는 이 장면의 사적 성격도 강조한다. 하늘의 음성은 예수에게만 말하고, 영이 내려오는 것을 본 이도 예수뿐이다(마 3:16–17과 대조). <span class="c f">F</span> France의 정리도 같다. 세례 이후 일어난 일을 예수 외에 누가 보거나 들었다는 표지가 없으며, 무리가 본 것은 요한의 부름에 응답한 무명의 시골 사람 하나였다. 프롤로그를 읽은 독자만이 그가 누구인지 안다.</p>
+<div class="note"><div class="tt">비둘기 같이</div><span class="c w">W</span> Witherington은 "비둘기 같이"가 영이 취한 형태가 아니라 내려오는 <em>방식</em>을 가리킨다고 읽는다 — 비둘기가 부드럽게 내려앉듯이. <span class="c e">E</span> Edwards는 마가가 누가와 달리 "형체로"(눅 3:22)라고 적지 않고 직유로 남겨 둔 점을 짚으며, 그럼에도 보고 들었다는 서술이 이 사건의 경험적 객관성을 증언한다고 본다.</div>
+<h3>하늘의 음성</h3>
+<div class="vs" id="v11">
+<span class="ref">1:11 — 너는 내 사랑하는 아들이라</span>
+<p><span class="c w">W</span> Witherington은 이 선언을 시 2:7과 사 42:1의 합성으로 읽는다. 언어는 언약적이며, <span class="gw">ἀγαπητός</span>는 "사랑하는"이 기본 뜻이되 때로 "유일한"을 함의한다. <span class="c e">E</span> Edwards는 세 겹의 구약 배경을 든다 — 사 49:3(그리고 42:1)의 종, 시 2:7의 왕위 즉위, 창 22:2, 12, 16의 사랑하는 아들 이삭이다. 부성의 사랑과 자녀의 순종, 왕권과 고난받는 섬김이 한 문장에 겹친다.</p>
+<p><span class="c e">E</span> 양자론 문제도 여기서 다루어진다. Edwards는 세례에서 예수가 비로소 아들이 된다는 독법이 불가능하지는 않으나 설득력이 약하다고 판단한다. 1:1이 이미 아들 됨을 선포했고, "너는 내 사랑하는 아들이라"는 어법이 관계를 성립시키기보다 전제하기 때문이다. 세례는 아들 됨의 확인이며 종 됨의 개시다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+<div class="part-head">
+<div class="gk">ἐκβάλλει</div>
+<div class="eyebrow">1:12–13</div>
+<h2>4. 광야의 시험</h2>
+<div class="gloss">에크발레이 — 몰아내신다</div>
+</div>
+<div class="krv" id="v12"><b>1:12–13</b> 성령이 곧 예수를 광야로 몰아내신지라 / 광야에서 사십 일을 계시면서 사탄에게 시험을 받으시며 들짐승과 함께 계시니 천사들이 수종들더라</div>
+<p><span class="c e">E</span> 마가의 문체 지문이 이 두 절에 모여 있다. <span class="gw">εὐθύς</span>(곧), 현재 시제 <span class="gw">ἐκβάλλει</span>, 그리고 뼈만 남긴 간결함이다. Edwards는 세례의 영광에 머무를 틈이 없다는 서술 효과를 짚고, 동사 <span class="gw">ἐκβάλλω</span>가 "몰아내다·내던지다"라는 강한 어감을 지녀 레 16:21에서 이스라엘의 죄를 지고 광야로 내보내지는 염소의 심상을 되울린다고 읽는다. 세례가 하나님이 예수에게 하신 일이었다면, 시험은 그 필연적 짝이다. 그래야 예수가 자기 뜻을 지닌 자유로운 행위자로서 하나님의 뜻을 자기 뜻으로 삼는 선택이 성립한다.</p>
+<p>사십이라는 수가 세 전례를 부른다. 이스라엘의 사십 년(신 8:2), 시내 산의 모세 사십 일(출 34:28), 호렙으로 향한 엘리야의 사십 일(왕상 19:8)이다. <span class="c e">E</span> Edwards는 각 경우에 광야가 시험장이자 신실함의 증명이며 구원의 약속이었다고 정리한다. <span class="c w">W</span> Witherington은 예수와 이스라엘의 차이를 짚는다 — 예수는 그 시험을 통과했고, 그래서 광야를 떠나 약속의 땅에서 사역할 수 있게 된다.</p>
+<h3>들짐승 — 세 갈래 독법</h3>
+<div class="vs" id="v13">
+<span class="ref">1:13 — 들짐승과 함께 계시니</span>
+<p>성경에 정확한 병행이 없는 이 구절을 두고 자료들이 갈린다.</p>
+<p><strong>① 새 창조</strong> — 아담의 짐승 명명(창 2:19), 새 언약(호 2:18–19), 적대적 피조물이 평화의 나라로 바뀌는 환상(사 11:6–9; 욥 5:22–23)을 배경으로 읽는 독법이다. <span class="c e">E</span> Edwards는 이 독법을 소개하되 만족스럽지 않다고 판단한다. 인용된 구약 본문 어느 것도 13절의 어법이나 사상에 충분히 가깝지 않고, 짐승 언급이 사탄 바로 뒤에 놓여 동맹 관계를 시사하며, 낙원이라면 천사의 수종이 뜬금없어진다는 이유다.</p>
+<p><strong>② 광야의 위험</strong> — <span class="c w">W</span> Witherington도 에덴 모티프에 회의적이다. 광야는 이스라엘의 시험 장소이자(시 95:7–11) 귀신들의 자리였고(사 34:14), <i>잇사갈의 유언</i> 7:7과 <i>납달리의 유언</i> 8:4에서 들짐승이 사탄과 연결된다. 그가 보기에 예수의 역경은 신체적이면서 영적이다.</p>
+<p><strong>③ 로마 독자를 향한 신호</strong> — <span class="c e">E</span> Edwards는 여기서 첫 독자 쪽으로 방향을 튼다. 타키투스(『연대기』 15.44)는 네로가 그리스도인들에게 짐승 가죽을 씌워 개에게 찢기게 했다고 적었다. 60년대 로마에서 맹수에게 찢긴 그리스도인들을 생각하면, 그리스도 또한 들짐승에게 던져졌고 천사가 그를 수종들었듯 그들에게도 그러하리라는 상기가 된다. Edwards는 이 독법이 옳다면 이 구절이 마가의 저작 정황을 네로 치하 로마로 좁히는 증거의 한 조각이 된다고 본다.</p>
+<p><span class="c e">E</span> 마지막 관찰 하나. "수종들더라"의 미완료 시제는 천사들이 시험이 끝난 뒤(마 4:11)가 아니라 사십 일 내내 수종들었음을 가리킨다.</p>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+<div class="part-head">
+<div class="gk">πεπλήρωται ὁ καιρός</div>
+<div class="eyebrow">1:14–15</div>
+<h2>5. 복음의 요약</h2>
+<div class="gloss">페플레로타이 호 카이로스 — 때가 찼다</div>
+</div>
+<div class="krv" id="v14"><b>1:14–15</b> 요한이 잡힌 후 예수께서 갈릴리에 오셔서 하나님의 복음을 전파하여 / 이르시되 때가 찼고 하나님의 나라가 가까이 왔으니 회개하고 복음을 믿으라 하시더라</div>
+<h3>넘겨짐</h3>
+<p><span class="c e">E</span> 개역개정의 "잡힌"에 해당하는 그리스어는 투옥을 특정하지 않고 넘겨짐을 뜻하는 <span class="gw">παραδίδωμι</span>다. Edwards는 이 낱말이 마가에서 특별한 궤적을 그린다고 짚는다. 인자의 넘겨짐(9:31; 10:33과 14–15장의 여덟 번)에 쓰이고, 믿는 자들의 넘겨짐(13:9, 11, 12)에 쓰인다. 요한의 넘겨짐 직후에 복음의 선포가 시작되는 배치는 복음이 안락이 아니라 역경 속에서 알려진다는 마가의 제시를 요약한다. 세례자는 메시지에서만이 아니라 운명에서도 예수의 선구자이며, 6:7–30의 샌드위치 구조가 그 운명을 제자들에게까지 이어 붙인다.</p>
+<h3>가까이 왔으니 — ἤγγικεν 논쟁</h3>
+<p><span class="c w">W</span> Witherington은 <span class="gw">ἤγγικεν</span>의 번역을 둘러싼 오랜 논쟁을 정리한다. C. H. Dodd는 "이미 왔다"로 읽으려 했으나, 이 동사는 통상 시간이나 공간에서 다가옴을 뜻하며, 칠십인역에서 하나님이나 그의 심판의 임박이 주어일 때 규칙적으로 쓰인다(신 4:7; 사 41:21; 51:5; 56:1; 렘 23:23). Witherington은 롬 13:12, 약 5:8, 벧전 4:7의 용례를 들어 "가까이 왔다"가 뜻을 가장 잘 담는다고 판단하고, 그러면서도 이것이 먼 미래를 가리키지 않는다고 덧붙인다. 하나님의 통치가 가까운 까닭은 그것을 선포하는 이가 듣는 이들에게 가까이 있기 때문이라는 정리다.</p>
+<p><span class="c w">W</span> <span class="gw">βασιλεία</span>가 영역인지 통치인지에 대해서도 그는 아람어 <span class="gw">malkuta</span>의 폭을 들어 문맥이 결정한다고 본다. 현재를 가리킬 때는 하나님의 구원 활동이라는 뜻이 앞서고, 미래를 가리킬 때는(9:47; 10:15b; 14:25의 들어감·받음·마심) 장소의 함의가 더해진다.</p>
+<p><span class="c w">W</span> Witherington은 이 두 절을 1:1–3:6 전체를 앞질러 요약하는 진술로 읽는다. 요약이 담은 세 요구도 그가 정리한다 — 통치의 다가옴은 선포되어야 하고, 그 앞에서 돌이켜야 하며, 새로운 방식으로 미래를 향해 믿어야 한다. 그리고 이 요약 바로 뒤에 개인들의 부름이 이어진다는 배치가 응답의 개별성을 드러낸다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+<div class="part-head">
+<div class="gk">δεῦτε ὀπίσω μου</div>
+<div class="eyebrow">1:16–20</div>
+<h2>6. 네 어부의 부름</h2>
+<div class="gloss">듀테 오피소 무 — 내 뒤로 오라</div>
+</div>
+<div class="krv" id="v16"><b>1:16–18</b> 갈릴리 해변으로 지나가시다가 시몬과 그 형제 안드레가 바다에 그물 던지는 것을 보시니 그들은 어부라 / 예수께서 이르시되 나를 따라오라 내가 너희로 사람을 낚는 어부가 되게 하리라 하시니 / 곧 그물을 버려 두고 따르니라</div>
+<p><span class="c f">F</span> France는 14–15절의 웅장한 선포와 16절 장면의 낙차를 먼저 짚는다. 우주적 사건을 예고한 직후에 나오는 것은 바닷가를 거니는 예수와 몇몇 품팔이 노동자다. 하나님의 통치가 관례적 중요성의 척도를 따르지 않는다는 것을 마가는 이야기의 형태로 먼저 보여 준다. 겨자씨 비유(4:30–32)가 말로 옮길 내용을 서사가 첫날부터 실연하는 셈이다.</p>
+<h3>랍비가 아니라 선지자</h3>
+<p><span class="c f">F</span> 이 관계를 랍비와 제자(<span class="gw">talmîdîm</span>)의 틀로 옮기는 것은 오해라고 France는 논한다. 그가 따르는 헹엘의 논증에 따르면 예수의 부름은 엘리야가 엘리사를 부른 사건(왕상 19:19–21)이 연 카리스마적 지도자 모델에 들어맞는다. 랍비는 제자를 부르지 않았고 학생이 스승을 택했다. 가족의 유대까지 끊을 것을 기대하는 이 명령형 소환은 당대 사회가 알던 무엇과도 다르며, 그를 랍비보다 선지자 쪽에 세운다.</p>
+<p><span class="c w">W</span> Witherington도 같은 판단에 이른다. 다른 유대 교사들은 따를 자를 찾아 나서지 않았다. 그는 Marcus의 정리를 빌려 이 부름의 방향을 짚는다 — 형제들이 예수에게서 어떤 특별함을 알아본 것이 아니라 예수가 그들을 알아본 것, 그의 임재 아래 그들이 무엇이 될지를 본 예언적 시선이 관건이다("내가 너희로 … 되게 하리라").</p>
+<h3>사람을 낚는 어부</h3>
+<p><span class="c f">F</span> <span class="gw">ἁλιεῖς ἀνθρώπων</span>의 배경으로 흔히 렘 16:16이 거론된다. 그러나 그 문맥은 심판이며, 잡히는 것은 벌을 받기 위함이다(암 4:2; 합 1:14–17도 같다). France는 좋은 소식의 문맥에서 그 뜻일 수 없다고 판단한다. 물고기에게는 잡히는 일이 복이 아니라는 아이러니를 인정하면서도, 은유의 지향은 심판에서 건져 내는 쪽이며 어부의 관점에서 성립하는 비유라고 정리한다.</p>
+<div class="krv" id="v19"><b>1:19–20</b> 조금 더 가시다가 세베대의 아들 야고보와 그 형제 요한을 보시니 그들도 배에 있어 그물을 깁는데 / 곧 부르시니 그 아버지 세베대를 품꾼들과 함께 배에 버려 두고 예수를 따라가니라</div>
+<p><span class="c f">F</span> France는 여기서 두 가지를 짚는다. 첫째, 아버지 세베대가 두 번 언급되는 이유다. 이 야고보를 3:18의 동명이인과 구별할 필요가 있었고, 두 형제가 제자 명단(3:17)과 별도 등장(10:35)에서 모두 "세베대의 아들들"로 불린다는 사실은 그 호칭이 기억에 남아 있었음을 가리킨다. 둘째, 품꾼(<span class="gw">μισθωτοί</span>)의 언급이다. 다른 복음서가 지나친 이런 세부는 마가의 특징이며, 제자들이 사회의 최하층에서 나왔다는 통념을 경계하게 한다 — 그중 둘은 일꾼을 고용할 수 있는 집안 출신이었다.</p>
+<div class="note"><div class="tt">버려 둠의 실제 범위</div><span class="c f">F</span> 그물을 버려 두고 아버지를 배에 남겨 두는 일이 따름의 값을 상징한다. 다만 France는 그 포기의 실제 범위에 한계가 있었음을 함께 적는다. 요 21:3은 시몬이 필요할 때 배와 어구를 쓸 수 있었음을 시사하고, 마가의 서사에서 배가 자주 등장한다는 사실도 같은 방향이며, 29절에서 시몬과 안드레의 집은 여전히 가족의 거처이자 가버나움의 근거지로 남아 있다. 10:28의 포괄적 선언과 1:30–31의 장면이 함께 놓일 자리다. 그럼에도 생업의 결정적 전환은 일어났다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 7 ═══════ -->
+<section class="part" id="s7">
+<div class="part-head">
+<div class="gk">διδαχὴ καινὴ κατʼ ἐξουσίαν</div>
+<div class="eyebrow">1:21–28</div>
+<h2>7. 회당의 권위</h2>
+<div class="gloss">디다케 카이네 캇 엑수시안 — 권위 있는 새 교훈</div>
+</div>
+<div class="krv" id="v21"><b>1:21–22</b> 그들이 가버나움에 들어가니라 예수께서 곧 안식일에 회당에 들어가 가르치시매 / 뭇 사람이 그의 교훈에 놀라니 이는 그가 가르치시는 것이 권위 있는 자와 같고 서기관들과 같지 아니함일러라</div>
+<h3>복수에서 단수로</h3>
+<p><span class="c ba">Ba</span> 21절의 첫 동사가 복수다("그들이 … 들어가니라"). Bauckham은 C. H. 터너가 1925년에 관찰한 마가 특유의 문형을 여기서 시작점으로 삼는다 — 주어를 밝히지 않은 복수 동사로 예수 일행의 이동을 적고 곧바로 단수로 예수에게 초점을 좁히는 형태로, 마가에 스물한 번 나온다(5:1–2; 8:22; 11:12; 14:32 등). 마태는 병행 구절에서 아홉 번만 복수를 유지하고 누가는 두 번뿐이며, 여섯 차례씩 단수로 바꾼다. 마가 사본의 이문(異文)에서도 스물한 곳 중 열한 곳에 단수 독법이 등장한다. Bauckham은 이 문형을 서사학의 내적 초점화(internal focalization)로 규정한다 — 독자가 예수와 함께 도착한 제자들의 자리에서 장면을 보게 하는 장치이며, 3인칭 복수를 1인칭 복수로 되돌리면 문장이 더 자연스러워진다는 시험을 통과한다.</p>
+<p><span class="c ba">Ba</span> 그리고 이 문형의 첫 사용이 1:21이고 마지막 사용이 14:32(겟세마네)라는 사실에 그는 무게를 둔다. 처음과 마지막으로 예수가 제자 무리와 함께 어디론가 가는 두 지점이며, 이 포괄구조가 베드로의 이름으로 짜인 더 넓은 포괄구조와 양 끝에서 맞물린다. 베드로에 대한 첫 언급(1:16) 직후에 이 장치가 처음 나오고(1:21), 두 번째 사용(1:29–30)이 베드로 언급과 겹친다.</p>
+<h3>권위</h3>
+<p><span class="c f">F</span> France는 22절의 <span class="gw">ἐκπλήσσομαι</span>가 마가에서 반복되는 반응 어휘군(1:27의 <span class="gw">θαμβέομαι</span>, 2:12의 <span class="gw">ἐξίστημι</span> 등)에 속하며, 독자에게 예수의 <span class="gw">ἐξουσία</span>가 예사롭지 않음을 계속 상기시키는 장치라고 본다. 무엇이 그런 반응을 일으켰는지 여기서는 밝혀지지 않는다. 다만 서기관과 다르다는 진술은 안식일(2:23–3:6), 정결법(7:1–23), 이혼(10:2–12)에서 드러날 급진적 견해가 이미 표출되고 있음을 시사한다. France는 마가가 <span class="gw">διδάσκω</span>·<span class="gw">διδαχή</span>·<span class="gw">διδάσκαλος</span>를 다른 복음서보다 자주 쓰면서도 <span class="gw">κηρύσσω</span>(전파하다)와는 다르게 배분한다는 점을 짚는다. 전파는 요한도 제자들도 심지어 치유를 목격한 사람들도 하지만, 가르침은 권위 있는 메시아의 몫이다.</p>
+<div class="krv" id="v23"><b>1:23–24</b> 마침 그들의 회당에 더러운 귀신 들린 사람이 있어 소리 질러 이르되 / 나사렛 예수여 우리가 당신과 무슨 상관이 있나이까 우리를 멸하러 왔나이까 나는 당신이 누구인 줄 아노니 하나님의 거룩한 자니이다</div>
+<p><span class="c f">F</span> "우리가 당신과 무슨 상관이 있나이까"는 구약의 절연 정형구다(삼하 16:10; 19:22). 공격자를 향해 쓰일 때는 "물러가 나를 내버려 두라"의 힘을 지닌다(삿 11:12; 왕상 17:18). 귀신은 예수가 한마디 하기도 전에 그의 사명이 자기들을 멸하는 것이라고 단정한다 — 즉각 서로 반대편에 있음을 안다. France는 "하나님의 거룩한 자"라는 칭호가 유대 문헌에서 정착된 칭호가 아니었음을 지적하며, 여기서는 더러운 영과 거룩한 이의 대비를 이루고 1:8의 성령과 예수를 잇는 기능을 한다고 읽는다. 3:11과 5:7에서 귀신들이 쓸 "하나님의 아들"을 예비하는 자리다.</p>
+<p><span class="c wa">Wa</span> Watts는 이 사건이 마가의 첫 기적이라는 배치 자체에 신학적 무게를 둔다. 요한복음의 첫 표적(가나)이 신학적으로 읽히듯, 마가가 축귀를 첫 이적으로 놓은 것도 독자에게 사역의 핵심을 알리려는 배치라는 물음이다. 그는 H. C. Kee의 논증을 이어받아 <span class="gw">ἐπιτιμάω</span>가 구약(시 104:7; 18:16; 106:9)과 후대 유대 종파 문헌(1QM 14:9f)의 배경에서 하나님이 강력한 말씀으로 적대 세력을 굴복시키는 종말론적·새 창조적 대결을 가리킨다고 본다. 예수가 4:35 이하에서 바다를 꾸짖을 때 <span class="gw">ἐπιτιμάω</span>와 <span class="gw">φιμόω</span>를 함께 쓴다는 사실이 그 연결선이다. 그 시각에서 "우리를 멸하러 왔나이까"는 사탄의 지배가 무너지고 있음을 귀신이 알아차린 외침이 된다.</p>
+<div class="krv" id="v25"><b>1:25–27</b> 예수께서 꾸짖어 이르시되 잠잠하고 그 사람에게서 나오라 하시니 / 더러운 귀신이 그 사람에게 경련을 일으키고 큰 소리를 지르며 나오는지라 / 다 놀라 서로 물어 이르되 이는 어찜이냐 권위 있는 새 교훈이로다 더러운 귀신들에게 명한즉 순종하는도다 하더라</div>
+<p><span class="c f">F</span> France가 강조하는 것은 기법의 부재다. 복음서의 축귀에는 주문도 의례도 도구도 없고 오직 권위 있는 명령 한마디가 있을 뿐이며, 그것으로 일이 끝난다. 그는 <span class="gw">ἐπιτιμάω</span>가 축귀 문헌 바깥에서 오히려 흔치 않다는 Kee의 관찰을 인용하며 그 배경을 히브리어 <span class="gw">גער</span>(가아르)에서 찾는다 — 원수를 향한 하나님의 제압하는 말씀으로, 항의에 그치지 않고 실제로 그들을 통제 아래 둔다. <span class="gw">φιμόω</span>는 "재갈 물리다"의 은유이며, 여기서는 "입 다물라"의 생생한 구어에 가깝다.</p>
+<div class="note"><div class="tt">축귀 서사의 희소성</div><span class="c f">F</span> France는 자기 제자 E. F. Kirschner의 고대 문헌 조사를 인용해 한 가지 통념을 반박한다. 축귀에 대한 언급과 기법은 널리 퍼져 있었으나 실제 <em>서사</em>는 매우 드물다. 솔로몬은 전설적 인물이고 아폴로니우스는 준전설적이며 엘르아살은 한 번 언급될 뿐이고, 하니나는 귀신을 다루기로 유명하면서도 축귀 장면이 없다. 다수의 축귀 이야기가 상세히 붙어 전하는 유일한 인물이 나사렛 예수다. 마가의 첫 독자가 축귀 장면 앞에서 "종교적 인물이라면 응당 그렇지"라고 반응했으리라 가정할 근거가 없다는 뜻이다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 8 ═══════ -->
+<section class="part" id="s8">
+<div class="part-head">
+<div class="gk">κρατήσας τῆς χειρός</div>
+<div class="eyebrow">1:29–34</div>
+<h2>8. 시몬의 집과 저녁</h2>
+<div class="gloss">크라테사스 테스 케이로스 — 손을 잡으시고</div>
+</div>
+<div class="krv" id="v29"><b>1:29–31</b> 회당에서 나와 곧 야고보와 요한과 함께 시몬과 안드레의 집에 들어가시니 / 시몬의 장모가 열병으로 누워 있는지라 사람들이 곧 그 여자에 대하여 예수께 여짜온대 / 나아가사 그 손을 잡아 일으키시니 열병이 떠나고 여자가 그들에게 수종드니라</div>
+<h3>어색한 한 문장</h3>
+<p><span class="c ba">Ba</span> 29절은 마가의 그리스어에서 어색한 자리로 꼽힌다. Bauckham이 전하는 터너의 논증에 따르면, 여기서 "그들"에 들 수 있는 사람은 예수와 시몬·안드레·야고보·요한뿐이며(1:21과 비교) 그 이상일 수 없다. 터너는 이 문장을 1인칭으로 되돌려 읽었다 — "우리는 회당에서 나와 야고보와 요한과 함께 우리 집으로 들어갔다. 내 장모가 열병으로 누워 있었고, 사람들이 그에 대해 그에게 말한다." 3인칭 복수가 베드로의 1인칭 복수를 옮긴 것이라는 가설 아래에서 어색한 구절이 매끄러워진다는 관찰이다. Bauckham은 이것을 자신의 목격자 논증에서 마가의 내적 증거로 활용한다.</p>
+<p><span class="c f">F</span> France는 치유의 방식이 앞 장면과 대비된다는 점을 짚는다. 회당에서는 말씀만 있었고 여기서는 말씀이 기록되지 않은 채 접촉이 있다. 마가의 신체 치유 기사에는 예수가 만지거나(1:41; 5:41; 6:5; 7:32–33; 8:23–25) 만짐을 받는(3:10; 5:27; 6:56) 장면이 자주 나오는 반면, 문제가 신체적이지 않은 축귀에는 접촉이 언급되지 않는다. "수종드니라"의 <span class="gw">διακονέω</span>는 회복의 완전성을 드러낸다 — 회복기가 필요하지 않았고, 그 여자는 곧바로 집안의 몫을 감당했다.</p>
+<div class="krv" id="v32"><b>1:32–34</b> 저물어 해 질 때에 모든 병자와 귀신 들린 자를 예수께 데려오니 / 온 동네가 그 문 앞에 모였더라 / 예수께서 각종 병이 든 많은 사람을 고치시며 많은 귀신을 내쫓으시되 귀신이 자기를 알므로 그 말하는 것을 허락하지 아니하시니라</div>
+<p><span class="c s">S</span> Stein은 32절의 이중 시간 표기("저물어" + "해 질 때에")를 마가의 문체 지문으로 다룬다. 같은 이중 표기가 1:35; 2:20; 4:35; 10:30; 13:24; 14:12, 43; 15:42; 16:2에 나온다. 여기서는 그 기능이 명확하다 — 해가 지면서 21절의 안식일이 끝나고, 그래서 가버나움의 "하루"는 38절이 아니라 32절에서 닫힌다.</p>
+<p><span class="c s">S</span> 그가 짚는 또 하나는 배열의 교차다. 축귀(1:21–28) — 치유(1:29–31) — 치유(1:32) — 축귀(1:32)로 A–B–B′–A′를 이룬다. 그리고 마가가 32절과 34절에서 병과 귀신 들림을 구별해 서로 다른 동사를 쓴다는 사실은 1세기 사람들이 모든 질병을 영적인 것으로 여겼다는 통념을 반박하는 자료가 된다. 미완료 시제 "데려오니"는 사역의 지속성을 드러내며, 32절의 "모든"과 34절의 "많은"이 교차 사용된다는 점도 그가 짚는다 — 마태 8:16이 순서를 뒤집고 누가 4:40이 "각 사람"으로 옮긴 것이 그 호환성의 증거이며, 사 53:12의 어법처럼 "많은"은 배타적이기보다 포괄적으로 읽힌다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 9 ═══════ -->
+<section class="part" id="s9">
+<div class="part-head">
+<div class="gk">εἰς τοῦτο ἐξῆλθον</div>
+<div class="eyebrow">1:35–39</div>
+<h2>9. 새벽과 순회</h2>
+<div class="gloss">에이스 투토 엑셀톤 — 이를 위하여 나왔노라</div>
+</div>
+<div class="krv" id="v35"><b>1:35–39</b> 새벽 아직도 밝기 전에 예수께서 일어나 나가 한적한 곳으로 가사 거기서 기도하시더니 / 시몬과 및 그와 함께 있는 자들이 예수의 뒤를 따라가 / 만나서 이르되 모든 사람이 주를 찾나이다 / 이르시되 우리가 다른 가까운 마을들로 가자 거기서도 전도하리니 내가 이를 위하여 왔노라 하시고 / 이에 온 갈릴리에 다니시며 그들의 여러 회당에서 전도하시고 또 귀신들을 내쫓으시더라</div>
+<p><span class="c s">S</span> Stein은 이 단락이 구전 시기에 독립 단위로 유통되었다고 보기 어렵다고 판단한다. "예수 생애의 한 번"이라는 도입으로 1:21–28이나 2:1–12은 반복될 수 있지만, "예수께서 가버나움을 떠나 기도하셨고 시몬 일행이 찾아와 모두가 그를 찾는다고 말했고 그가 이웃 마을로 가셨다"를 그렇게 전하기는 어렵다는 이유다. 그는 39절을 마가의 요약으로 보며, 39절을 1:35–38에 붙일지 1:40–45에 붙일지의 문제도 다룬다 — 마가가 새 단락을 <span class="gw">καί</span> + 역사적 현재로 시작하는 습관(1:21; 3:13; 6:7; 8:22; 10:46; 11:15 등)이 있고 40절이 그 형태이므로, 39절은 앞 단락에 붙는다는 판단이다.</p>
+<p><span class="c f">F</span> France는 이 단락의 구도를 짚는다. 예수는 홀로 있지 않고 무리의 지도자로 등장하며(21절과 29절의 복수 동사), 마지막 장면에서는 제자들이 그를 뒤쫓는다. 그럼에도 행위의 주체는 예수 한 사람이다. 38절에서 "가자"는 복수이지만 "전도하리니"는 단수이며, 일정의 결정권이 온전히 그에게 있다. France는 이 결정권 자체가 21절과 27절에서 사람들이 알아본 <span class="gw">ἐξουσία</span>의 또 다른 얼굴이라고 읽는다 — 이적만이 아니라 무리의 요구를 물리고 사명의 방향을 정하는 데서도 드러나는 권위다.</p>
+<div class="note"><div class="tt">모든 사람이 주를 찾나이다</div>가버나움의 성공이 곧 압력이 된다. 제자들이 전하는 말은 청탁이면서 요구이고, 예수의 대답은 그 요구를 사명의 언어로 되돌린다. "내가 이를 위하여 왔노라"가 1:14–15의 선포와 이어지며, 한 동네의 치유자로 머무는 길과 갈릴리 전체를 향한 선포의 길이 여기서 갈린다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 10 ═══════ -->
+<section class="part" id="s10">
+<div class="part-head">
+<div class="gk">θέλω, καθαρίσθητι</div>
+<div class="eyebrow">1:40–45</div>
+<h2>10. 나병환자</h2>
+<div class="gloss">텔로, 카타리스테티 — 내가 원하노니, 깨끗함을 받으라</div>
+</div>
+<div class="krv" id="v40"><b>1:40–42</b> 한 나병환자가 예수께 와서 꿇어 엎드려 간구하여 이르되 원하시면 저를 깨끗하게 하실 수 있나이다 / 예수께서 불쌍히 여기사 손을 내밀어 그에게 대시며 이르시되 내가 원하노니 깨끗함을 받으라 하시니 / 곧 나병이 그 사람에게서 떠나가고 깨끗하여진지라</div>
+<h3>불쌍히 여기사 — 41절의 본문 문제</h3>
+<p><span class="c f">F</span> France는 41절에서 다수 사본의 <span class="gw">σπλαγχνισθείς</span>(불쌍히 여기사) 대신 <span class="gw">ὀργισθείς</span>(노하사)를 지지한다. 논거는 어려운 독법 우선의 원리다. <span class="gw">ὀργισθείς</span>는 D와 소수 고라틴역에만 나오지만 너무 뜻밖이어서 안전한 쪽으로의 수정은 자연스러운 반면, 그 반대 방향의 도입은 설명하기 어렵다. Metzger가 3:5과 10:14의 분노 언급이 삭제되지 않았다는 점을 들어 반론한 데 대해, France는 그 두 곳에는 분노의 명백한 이유가 있었으나 여기에는 없다는 차이를 지적한다. 마태와 누가가 두 분사 중 어느 것도 쓰지 않았다는 사실 역시 그들이 전승에서 더 편한 쪽이 아니라 어려운 쪽을 만났음을 시사한다고 본다.</p>
+<p><span class="c f">F</span> 그렇다면 무엇에 대한 분노인가. France는 여러 제안을 차례로 물리친다. 설교 사역이 방해받은 데 대한 짜증은 그의 성품과 어긋나고 선포와 치유는 늘 함께 갔다. 접근이 율법에 어긋났다는 설명은 예수 자신이 똑같이 "율법에 어긋나는" 접촉으로 응답한 사실과 충돌한다. 메시아 비밀이 앞당겨 드러나는 데 대한 불만이라면 즉각적인 응낙을 설명하기 어렵다. 그가 가장 개연적이라 보는 것은 병이 몸과 사회 양쪽에서 일으킨 고통이 예수를 긍휼만이 아니라 세상에 그런 악이 있다는 사실에 대한 분노로 이끌었으리라는 독법이다. 사회적 금기의 무감함도 그 대상일 수 있다. 분노가 그 사람을 겨눈 것이 아니라는 사실은 곧바로 이어지는 긍휼의 응답이 보여 준다.</p>
+<div class="caveat"><div class="tt">본문·번역 주의</div>개역개정 4판은 "불쌍히 여기사"로 옮겼고, 이는 다수 사본의 <span class="gw">σπλαγχνισθείς</span>를 따른 것이다. 본 항목은 France가 NIGTC에서 제시한 소수 독법 지지 논증을 소개하는 것이며, 개역개정 본문을 교정하려는 것이 아니다. 인용·설교 시에는 번역 본문(불쌍히 여기사)을 기준으로 하고, 이문 논의는 각주 성격으로 다루는 편이 안전하다. NA28 비평장치와 실제 도구로 재확인할 것.</div>
+<div class="krv" id="v43"><b>1:43–45</b> 곧 보내시며 엄히 경고하사 / 이르시되 삼가 아무에게 아무 말도 하지 말고 가서 네 몸을 제사장에게 보이고 네가 깨끗하게 되었으니 모세가 명한 것을 드려 그들에게 입증하라 하셨더라 / 그러나 그 사람이 나가서 이 일을 많이 전파하여 널리 퍼지게 하니 그러므로 예수께서 다시는 드러나게 동네에 들어가지 못하시고 오직 바깥 한적한 곳에 계셨으나 사방에서 사람들이 그에게로 나아오더라</div>
+<p><span class="c f">F</span> 43절의 어휘도 예사롭지 않다. <span class="gw">ἐμβριμάομαι</span>는 고전 그리스어에서 억눌린 짐승의 분노를 가리키는 데 쓰였고, 요 11:33, 38에서 예수의 강한 감정을 나타낸다. 14:5에서는 여격을 동반해 상대를 향한 적대의 표출이 분명하다. 여기서도 여격이 따르지만 치유받은 사람이 왜 그 대상이 되어야 하는지는 분명하지 않아, 보통 "엄히 명하사"로 옮긴다. France는 한 가지 가능성을 제시한다 — 여기서도 마 9:30에서도 이 동사 뒤에 침묵 명령이 오고 그 명령은 곧 어겨진다. 아직 오지 않은 그 반응을 아시는 데서 오는 불쾌일 수 있다는 읽기다. 이어지는 <span class="gw">ἐξέβαλεν</span>과 함께 놓이면 부드러운 처사로 보기 어렵다.</p>
+<p><span class="c f">F</span> 축귀 요소를 여기서 읽으려는 제안에 대해서는 France가 선을 긋는다. <span class="gw">ἐμβριμάομαι</span>는 축귀 기사에 나오지 않고, <span class="gw">ἐκβάλλω</span>는 사람에게도 쓰이며(1:12; 5:40; 11:15), 여기서 그 목적어는 귀신이 아니라 그 사람이다. 나병이 귀신 들림으로 여겨졌다는 증거도 없다.</p>
+<p>45절이 장을 닫는 방식이 아이러니다. 침묵 명령이 어겨지자 소문이 퍼지고, 그 결과 예수는 동네에 드러나게 들어가지 못한 채 "바깥 한적한 곳"에 머문다 — 35절에서 스스로 찾아갔던 그 한적한 곳이 이제 밀려난 자리가 된다. 그럼에도 사방에서 사람들이 나아온다. 갈릴리 전체로 향하려던 38절의 결심과 한적한 곳으로 밀려나는 45절의 상황이 한 장 안에서 부딪친다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 11 ═══════ -->
+<section class="part" id="s11">
+<div class="part-head">
+<div class="gk">λέξεις</div>
+<div class="eyebrow">LEXIS</div>
+<h2>11. 핵심 원어와 문법</h2>
+<div class="gloss">렉세이스 — 낱말과 어법</div>
+</div>
+<div class="tbl-wrap">
+<table>
+<caption>표 2. 1장의 핵심 낱말</caption>
+<thead><tr><th>원어</th><th>음역·뜻</th><th>절</th><th>관찰</th></tr></thead>
+<tbody>
+<tr><td class="head"><span class="gw">ἀρχή</span></td><td>아르케 — 시작·기원</td><td>1:1</td><td><span class="c e">E</span> 시간의 첫머리와 기원·원리 두 뜻을 담으며, 여기서는 후자. 창세기·호세아·요한복음의 첫 낱말과 같다. 서두가 아니라 책 전체가 이 낱말 아래 놓인다.</td></tr>
+<tr><td class="head"><span class="gw">εὐαγγέλιον</span></td><td>유앙겔리온 — 복음</td><td>1:1, 14, 15</td><td><span class="c e">E</span> 그리스-로마 용례에서는 늘 복수, 신약에서는 오직 단수. <span class="c w">W</span> 프리에네 비문(주전 9년)이 황제의 탄생을 세상을 위한 유앙겔리아의 시작으로 선포한다.</td></tr>
+<tr><td class="head"><span class="gw">καθὼς γέγραπται</span></td><td>카토스 게그랍타이 — 기록된 것과 같이</td><td>1:2</td><td><span class="c wa">Wa</span> 새 문장을 시작하지 않고 앞뒤를 잇는 정형구(막 7:6; 눅 2:23; 행 7:42; 고전 1:31 등). 이를 근거로 1:1과 1:2–3을 한 문장으로 읽는다.</td></tr>
+<tr><td class="head"><span class="gw">ἔρημος</span></td><td>에레모스 — 광야</td><td>1:3, 4, 12, 13</td><td><span class="c f">F</span> 프롤로그에 집중되고 이후 복음서에서 사라진다. 소망과 새 시작의 자리이자 사 40:3의 신학적으로 옳은 장소.</td></tr>
+<tr><td class="head"><span class="gw">πνεῦμα</span></td><td>프뉴마 — 영</td><td>1:8, 10, 12</td><td><span class="c f">F</span> 프롤로그에 세 번, 1:13 이후 전체에 세 번(3:29; 12:36; 13:11)뿐. 분포 자체가 이 대목의 층위를 표시한다.</td></tr>
+<tr><td class="head"><span class="gw">σχίζω</span></td><td>스키조 — 찢다</td><td>1:10</td><td><span class="c e">E</span> 사 64:1의 히브리어 카라에 대응. 마태·누가는 "열리다"로 완화. 마가에서 단 한 번 더 나오는 곳이 15:38의 성소 휘장이다.</td></tr>
+<tr><td class="head"><span class="gw">ἀγαπητός</span></td><td>아가페토스 — 사랑하는</td><td>1:11</td><td><span class="c w">W</span> 기본 뜻은 "사랑하는"이며 때로 "유일한"을 함의. <span class="c e">E</span> 창 22:2, 12, 16의 이삭이 가장 가까운 원형.</td></tr>
+<tr><td class="head"><span class="gw">ἐκβάλλω</span></td><td>에크발로 — 내던지다·몰아내다</td><td>1:12, 34, 39, 43</td><td><span class="c e">E</span> 12절에서 영이 예수를 광야로 몰아낸다. <span class="c f">F</span> 사람에게도 귀신에게도 쓰이며(5:40; 11:15) 43절의 목적어는 그 사람이다.</td></tr>
+<tr><td class="head"><span class="gw">παραδίδωμι</span></td><td>파라디도미 — 넘겨주다</td><td>1:14</td><td><span class="c e">E</span> 투옥을 특정하지 않는다. 인자의 넘겨짐(9:31; 10:33)과 믿는 자들의 넘겨짐(13:9, 11, 12)으로 이어지는 마가의 실.</td></tr>
+<tr><td class="head"><span class="gw">ἤγγικεν</span></td><td>엥기켄 — 가까이 왔다</td><td>1:15</td><td><span class="c w">W</span> Dodd의 "이미 왔다"에 반대. 칠십인역에서 하나님이나 심판의 임박이 주어일 때 규칙적으로 쓰인다(신 4:7; 사 51:5; 렘 23:23).</td></tr>
+<tr><td class="head"><span class="gw">δεῦτε ὀπίσω μου</span></td><td>듀테 오피소 무 — 내 뒤로 오라</td><td>1:17</td><td><span class="c f">F</span> <span class="gw">δεῦτε</span>는 본래 "이리로"라는 부사이며 동사 없이 명령의 힘을 지닌다. <span class="gw">ὀπίσω</span>는 스승에 대한 제자의 위치를 가리키는 표준 어법.</td></tr>
+<tr><td class="head"><span class="gw">ἐξουσία</span></td><td>엑수시아 — 권위</td><td>1:22, 27</td><td><span class="c f">F</span> 1장을 관통하는 낱말. 가르침과 축귀가 이 하나의 권위의 두 얼굴이며 2:10에서 죄 사함으로 이어진다.</td></tr>
+<tr><td class="head"><span class="gw">ἐκπλήσσομαι</span></td><td>에크플레소마이 — 놀라다</td><td>1:22</td><td><span class="c f">F</span> 마가의 반응 어휘군(1:27 <span class="gw">θαμβέομαι</span>, 2:12 <span class="gw">ἐξίστημι</span>, 5:42, 6:51 등). 예사롭지 않음의 인식을 표시한다.</td></tr>
+<tr><td class="head"><span class="gw">τί ἡμῖν καὶ σοί</span></td><td>티 헤민 카이 소이 — 우리와 당신이 무슨</td><td>1:24</td><td><span class="c f">F</span> 구약의 절연 정형구(삼하 16:10; 19:22). 공격자를 향할 때 "물러가라"의 힘을 지닌다(삿 11:12; 왕상 17:18).</td></tr>
+<tr><td class="head"><span class="gw">ἐπιτιμάω</span></td><td>에피티마오 — 꾸짖다</td><td>1:25</td><td><span class="c f">F</span> <span class="c wa">Wa</span> 축귀 전문 용어가 아니며 배경은 히브리어 가아르 — 원수를 제압하는 하나님의 말씀. 4:39에서 바다에 같은 동사가 쓰인다.</td></tr>
+<tr><td class="head"><span class="gw">φιμόω</span></td><td>피모오 — 재갈 물리다</td><td>1:25</td><td><span class="c f">F</span> 본래 "입에 재갈을 물리다". 여기서는 "잠잠하라"의 생생한 구어. 4:39에서 바다에 다시 쓰인다.</td></tr>
+<tr><td class="head"><span class="gw">διακονέω</span></td><td>디아코네오 — 수종들다</td><td>1:13, 31</td><td><span class="c f">F</span> 31절에서는 집안의 접대를 뜻하며 회복의 완전성을 드러낸다. 13절의 천사들과 같은 동사이며 10:45의 섬김으로 이어진다.</td></tr>
+<tr><td class="head"><span class="gw">ὀργισθείς</span></td><td>오르기스테이스 — 노하사</td><td>1:41 이문</td><td><span class="c f">F</span> D와 소수 고라틴역의 소수 독법. 어려운 독법 우선 원리로 지지하나, 개역개정은 다수 독법 <span class="gw">σπλαγχνισθείς</span>를 따라 "불쌍히 여기사"로 옮겼다.</td></tr>
+<tr><td class="head"><span class="gw">ἐμβριμάομαι</span></td><td>엠브리마오마이 — 엄히 경고하다</td><td>1:43</td><td><span class="c f">F</span> 고전 용례에서 억눌린 짐승의 분노. 요 11:33, 38; 막 14:5. 여기서는 침묵 명령 앞에 놓이며 부드러운 처사로 보기 어렵다.</td></tr>
+</tbody>
+</table>
+</div>
+<h4>문체 관찰</h4>
+<ul>
+<li><strong>εὐθύς(곧)</strong> — <span class="c w">W</span> 1장에서 밀도가 가장 높다(10, 12, 18, 20, 21, 23, 28, 29, 30, 42, 43절). 문자적 시간 표시라기보다 서사의 속도를 만드는 수사 장치이며, 마가 전체에 40여 회 나온다. <span class="c f">F</span> 18절과 20절의 용례가 서로 다른 자리(제자의 응답 / 예수의 부름)에 놓인다는 사실이 그 점을 뒷받침한다.</li>
+<li><strong>이중 시간 표기</strong> — <span class="c s">S</span> "저물어 해 질 때에"(32절), "새벽 아직도 밝기 전에"(35절). 같은 문형이 2:20; 4:35; 13:24; 14:12, 43; 15:42; 16:2에 나온다.</li>
+<li><strong>복수-단수 전환</strong> — <span class="c ba">Ba</span> 21절과 29절이 마가에 스물한 번 나오는 이 문형의 처음 두 사례이며, 마지막 사례는 14:32이다.</li>
+<li><strong>우언적 구문</strong> — <span class="c f">F</span> 22절의 <span class="gw">ἦν διδάσκων</span>은 21절의 단순 미완료 <span class="gw">ἐδίδασκεν</span>과 뜻이 다르지 않은 문체적 변형이며, 셈어적 그리스어에 자연스러운 마가의 습관이다.</li>
+<li><strong>총칭 어휘의 밀집</strong> — <span class="c f">F</span> 28절 온 갈릴리, 32절 모든 병자, 33절 온 동네, 34절 많은 사람, 37절 모든 사람, 39절 온 갈릴리. 한 하루를 사역 전체의 표본으로 확대한다.</li>
+</ul>
+<div class="caveat"><div class="tt">원어 재확인</div>본 항목의 그리스어 형태·강세·이문 표기는 NA28을 기준으로 정리했으나, 정밀 인용이나 논문 작업 시에는 NA28 본문과 비평장치, 형태분석 도구(Accordance, Logos, STEP Bible 등)로 반드시 재확인할 것. 히브리어 대응 낱말(카라, 가아르 등)도 마찬가지다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 12 ═══════ -->
+<section class="part" id="s12">
+<div class="part-head">
+<div class="gk">ἑρμηνεῖαι</div>
+<div class="eyebrow">READINGS</div>
+<h2>12. 주석가별 독법과 쟁점</h2>
+<div class="gloss">헤르메네이아이 — 여러 독법</div>
+</div>
+<div class="tbl-wrap">
+<table>
+<caption>표 3. 1장의 다섯 쟁점과 자료별 입장</caption>
+<thead><tr><th>쟁점</th><th>입장 갈래</th><th>자료</th></tr></thead>
+<tbody>
+<tr><td class="head">프롤로그의 범위</td><td>1:2–13 / 1:1–15</td><td><span class="c f">F</span> 1:2–13 — 프뉴마·에레모스의 분포가 근거. <span class="c s">S</span> 1:1–13. <span class="c w">W</span> 1:1–15 — 1:1과 1:15의 유앙겔리온 인클루지오. <span class="c f">F</span>가 소개하는 Keck·Michaels의 교차구조 제안에는 France가 회의적이다.</td></tr>
+<tr><td class="head">1:1의 "하나님의 아들"</td><td>원문 / 후대 첨가</td><td><span class="c w">W</span> 원문일 개연성이 높다고 판단(제국 비문 어법과의 정합). NA28은 꺾쇠 표기. <span class="c e">E</span>는 원문성을 전제하고 양자론 반박에 활용한다.</td></tr>
+<tr><td class="head">1:2–3의 인용 귀속</td><td>이사야 규정설 / 증언집설 / 표제 통합설</td><td><span class="c e">E</span> 이사야가 규정적 요소이므로 전체가 그 이름에 귀속. <span class="c w">W</span> 마가 이전의 조합, 증언집 가능성. <span class="c wa">Wa</span> 1:1–3을 한 문장으로 읽고 인용을 표제의 해설로 규정.</td></tr>
+<tr><td class="head">1:13의 들짐승</td><td>새 창조 / 광야의 위험 / 로마 독자 신호</td><td><span class="c e">E</span> 새 창조 독법에 네 가지 반론을 들고, 네로의 맹수형에 대한 상기로 읽는다. <span class="c w">W</span> 에덴 모티프에 회의적이며 광야의 위험과 귀신의 자리로 읽는다.</td></tr>
+<tr><td class="head">1:41의 분사</td><td>σπλαγχνισθείς / ὀργισθείς</td><td><span class="c f">F</span> 어려운 독법 우선으로 ὀργισθείς 지지, Metzger의 반론(3:5; 10:14)에 재반박. 개역개정 4판은 다수 독법을 따라 "불쌍히 여기사".</td></tr>
+</tbody>
+</table>
+</div>
+<h3>자료별 강조점</h3>
+<p><span class="c f">F</span> <strong>France</strong>는 그리스어 본문에 밀착한다. 어휘 분포(프뉴마·에레모스)로 단락을 나누고, 이문을 하나씩 저울질하며, 축귀 서사의 희소성 같은 배경 자료로 통념을 흔든다. 구조에서는 세 막의 드라마를 견지하되 교차구조 제안에는 거리를 둔다 — 좋은 이야기꾼은 구조 분석을 유도하기보다 흐름을 만든다는 판단이다.</p>
+<p><span class="c s">S</span> <strong>Stein</strong>은 마가의 편집 작업을 추적한다. 이음매(1:21–22, 29, 35, 40)와 마무리(1:28, 34, 39, 45)를 마가의 손으로 보고, 이중 시간 표기와 과장법을 문체 지문으로 다루며, 32–34절의 요약이 21–31절을 요약한다는 관찰에서 이 자료가 마가에 의해 수집·조직되었다고 판단한다. 그러면서도 요약의 역사성을 부정할 필요가 없다는 단서를 단다 — 시몬의 장모 치유 전승의 출처가 베드로 자신일 수 있다는 가능성까지 열어 둔다.</p>
+<p><span class="c e">E</span> <strong>Edwards</strong>는 신학 주해와 목회적 적용에 무게를 둔다. σχίζω의 두 용례로 1:10과 15:38을 잇고, 요한의 세례를 시내 언약의 재현으로 읽으며, 들짐승에서 네로 치하 로마의 독자를 본다. 그의 반복되는 논지는 마가가 구약에 돌리던 서술을 예수에게 옮긴다는 것이다 — 길을 예비받는 주, 영을 주시는 이, 사랑하는 아들.</p>
+<p><span class="c w">W</span> <strong>Witherington</strong>은 사회수사학과 고대 전기의 틀을 댄다. 프리에네 비문과 <span class="gw">ἀρχή</span>의 전기적 기능, 요한의 세례가 지닌 성전 체제 우회의 함의, <span class="gw">ἤγγικεν</span> 논쟁의 정리가 그 예다. 그가 거듭 상기시키는 것은 독자와 등장인물의 정보 격차다 — 독자는 1:1에서 이미 알지만 이야기 속 인물들은 길 위에서 배워야 하며, 그래서 제자들에게 지나치게 가혹할 이유가 없다.</p>
+<p><span class="c ba">Ba</span> <strong>Bauckham</strong>은 1:21과 1:29의 복수 동사에서 목격자 증언의 흔적을 읽는다. 터너의 1925년 관찰을 서사학의 내적 초점화 개념으로 재정식화하고, 이 문형의 포괄구조(1:21–14:32)가 베드로 이름의 포괄구조(1:16–16:7)와 양 끝에서 맞물린다는 배치를 논거로 삼는다.</p>
+<p><span class="c wa">Wa</span> <strong>Watts</strong>는 1:2–3의 합성 인용을 책 전체의 해석 렌즈로 세우고, 1:21–28을 첫 이적으로 배치한 것 자체를 프로그램적 신호로 읽는다. <span class="c r">R</span> <strong>Rhoads 외</strong>는 이 장을 이야기 세계의 개막으로 다룬다 — 전지적 화자가 독자에게만 정보를 건네고(1:1), 광야·회당·집·바다라는 배경이 각각 신학의 무대가 되며, 하나님의 통치가 중심이 아니라 변방에서, 위가 아니라 아래에서 시작한다는 대비가 로마 제국의 작동 방식과 맞세워진다.</p>
+<div class="note"><div class="tt">자료 상태</div><span class="c g">G</span> Gundry의 주석은 이번 작업에 OCR 텍스트로 확보되어 서지·구조 대조에는 썼으나, 장별 세부 주해의 인용은 OCR 손상(그리스어 표기 깨짐)이 심해 본 장에서는 칩을 최소한으로 사용했다. 후속 장에서 해당 대목의 판독이 확보되는 대로 보강한다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 13 ═══════ -->
+<section class="part" id="s13">
+<div class="part-head">
+<div class="gk">τὰ ἱστορικά</div>
+<div class="eyebrow">BACKGROUND</div>
+<h2>13. 역사·문화 배경</h2>
+<div class="gloss">타 히스토리카 — 역사적 사항들</div>
+</div>
+<h3>가버나움</h3>
+<p><span class="c f">F</span> 사본에서 오래된 형태는 <span class="gw">Καφαρναούμ</span>이며 히브리어 <span class="gw">כְּפַר נַחוּם</span>(케파르 나훔)을 옮긴 것이다. 로마군 파견대(마 8:5–13)와 세관(2:14)과 왕의 신하(요 4:46)가 있던 호숫가의 주요 취락으로, 당시 인구는 최대 1만 명에 이르렀을 수 있고, 회당은 지금 보이는 4세기 건물의 선행 건물이었다. France는 21절의 "곧 안식일에 회당에 들어가 가르치시매"가 무명의 사람이 회중에 자신을 밀어 넣은 장면으로 읽힐 수 있으나, 회당에서 가르칠 권한은 지도자들이 관리했으므로(행 13:15) 예수가 초청받거나 허락받았다는 사실 자체가 그가 이미 그 지역에서 알려지고 존중받고 있었음을 시사한다고 본다.</p>
+<p><span class="c f">F</span> 예수가 나사렛 대신 가버나움을 근거지로 삼은 이유도 그가 짚는다. 나사렛은 산지의 작은 마을로 선포의 범위가 제한적이었던 반면, 호수의 서·북안은 번성한 어업과 빌립의 분봉왕국으로 이어지는 교역로를 낀 그 지역 생활의 중심이었다. 한편 그 지방을 정치적으로 지배하던 두 헬레니즘 도시 세포리스(나사렛에서 6km 남짓)와 티베리아스를 예수가 방문했다는 기록이 없다는 사실도 France는 함께 적는다. 그가 응답을 구하고 찾은 곳은 호숫가의 보다 전통적인 유대인 주민 사이였다.</p>
+<h3>바다라는 이름</h3>
+<p><span class="c f">F</span> 마가·마태·요한은 이 작은 담수호를 <span class="gw">θάλασσα</span>(바다)로 부른다. 구약의 <span class="gw">יָם כִּנֶּרֶת</span>(얌 킨네레트, 민 34:11)를 칠십인역이 <span class="gw">θάλασσα</span>로 옮긴 지역 관용을 따른 것이다. 누가와 요세푸스는 더 정확하게 <span class="gw">λίμνη</span>(호수)로 부른다. 이 어휘 선택이 4:35–41과 6:45–52에서 바다를 제압하는 장면의 구약적 울림(욥 9:8; 시 107:23–30)을 준비한다.</p>
+<h3>세례의 지형</h3>
+<p><span class="c e">E</span> 요한이 세례를 준 정확한 지점을 마가는 밝히지 않는다. Edwards는 갈릴리 호수 남쪽 구간을 시사하는 여러 정황을 든다. 5절의 "온 유대 지방과 예루살렘 사람이 다"는 과장법이되, 예루살렘의 명시적 언급은 요한의 사역이 성전 지배층의 시선까지 끌었음을 가리킨다. 요한의 영향력은 오래 남아서, 주후 55년경 바울이 멀리 에베소에서 요한의 제자들을 만나고(행 19:1–7), 1세기 말 요세푸스는 예수보다 요한에게 더 많은 지면을 할애한다(『유대 고대사』 18.116–19).</p>
+<h3>축귀와 정결</h3>
+<p><span class="c f">F</span> 마가는 <span class="gw">πνεῦμα ἀκάθαρτον</span>(더러운 영)과 <span class="gw">δαιμόνιον</span>(귀신)을 같은 빈도로, 분명히 동의어로 쓴다(6:7과 6:13, 7:25와 7:26을 비교). "더러운 영"은 랍비 문헌에서 같은 뜻으로 자주 쓰이는 <span class="gw">רוּחַ טֻמְאָה</span>(루아흐 툼아)에 대응한다(슥 13:2 참조). 그는 사람과 영의 관계를 표현할 때 사람이 영 "안에" 있다고 하거나(1:23; 5:2) 영을 "가졌다"고 하며(7:25; 9:17), 벗어남은 언제나 영이 "나온다"거나 "쫓겨난다"로 표현된다. France는 이 어법 전체가 정신 질환이 아니라 귀신 들림과 축귀의 언어이며, 마가가 축귀와 치유에 서로 다른 용어를 일관되게 쓴다는 점(1:32, 34)이 이를 뒷받침한다고 정리한다.</p>
+<div class="tbl-wrap">
+<table>
+<caption>표 4. 1장의 배경 항목 요약</caption>
+<thead><tr><th>항목</th><th>내용</th><th>자료</th></tr></thead>
+<tbody>
+<tr><td class="head">프리에네 비문</td><td>주전 9년, 아우구스투스의 탄생일을 세상을 위한 유앙겔리아의 시작으로 선포</td><td><span class="c w">W</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">쿰란과 사 40:3</td><td>1QS 8:14 — 불의한 자들의 거처에서 갈라져 광야로 나가 그의 길을 예비함</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">요세푸스의 요한</td><td>『유대 고대사』 18.116–18 — 의롭게 살고 정의와 경건을 행하며 세례에 참여하라는 권면</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">광야의 운동들</td><td>드다(『유대 고대사』 20.97–98), 이집트인 선지자(『유대 전쟁사』 2.261–63; 행 21:38)</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">엘리야의 복장</td><td>왕하 1:8 — 털옷과 가죽 띠. 마가에서 낙타털 옷으로</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">하늘이 열림 전승</td><td><i>레위의 유언</i> 18:6–8, <i>유다의 유언</i> 24:1–3 — 하늘의 열림·아버지의 음성·영의 임함</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">들짐승과 사탄</td><td><i>잇사갈의 유언</i> 7:7, <i>납달리의 유언</i> 8:4</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">네로의 박해</td><td>타키투스 『연대기』 15.44 — 짐승 가죽을 씌워 개에게 찢기게 함</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">고대의 축귀</td><td>엘르아살(『유대 고대사』 8.46–48), 티아나의 아폴로니우스(필로스트라토스 <i>VA</i> 4.20), 루키아노스 <i>Philopseudes</i> 16 — 언급은 많되 서사는 드물다</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">메뚜기의 정결</td><td>레 11:22 — 식용 가능한 곤충. <i>미쉬나 훌린</i> 3:7</td><td><span class="c e">E</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 14 ═══════ -->
+<section class="part" id="s14">
+<div class="part-head">
+<div class="gk">παραπομπαί</div>
+<div class="eyebrow">CROSS-REFERENCES</div>
+<h2>14. 상호 참조 총람</h2>
+<div class="gloss">파라폼파이 — 상호 참조</div>
+</div>
+<p>주석 근거가 붙은 학술 관주다. 절별 대중 관주(OpenBible.info)는 성경읽기 화면에서 따로 확인한다.</p>
+<div class="tbl-wrap">
+<table>
+<caption>표 5. 1장의 학술 관주</caption>
+<thead><tr><th>절</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+<tbody>
+<tr><td class="head">1:1</td><td>창 1:1; 호 1:1; 요 1:1</td><td>"시작"으로 여는 책의 첫 낱말</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:1</td><td>사 52:7; 61:1–3</td><td>평화와 해방의 좋은 소식이 종말의 구원 행위로 옮겨짐</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:2</td><td>출 23:20; 말 3:1</td><td>앞서 보내지는 사자 — 야웨의 사자이자 엘리야</td><td><span class="c e">E</span> <span class="c w">W</span> <span class="c wa">Wa</span></td></tr>
+<tr><td class="head">1:3</td><td>사 40:3; 1QS 8:14</td><td>광야에서 주의 길을 예비함 — 쿰란의 자기 이해와 같은 본문</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">1:4</td><td>출 19:6, 10</td><td>온 백성의 성별과 언약 진입 — 요한의 세례가 재현하는 시내 사건</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:4</td><td>렘 2:2–3; 호 2:14–15</td><td>광야가 하나님과 백성의 첫 관계이자 회복의 자리</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:6</td><td>왕하 1:8; 슥 13:4</td><td>엘리야의 털옷과 가죽 띠, 선지자의 복장</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">1:6</td><td>레 11:22</td><td>메뚜기의 식용 허용</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:7</td><td>막 3:27</td><td>"능력 많으신 이"가 강한 자를 결박하는 이로 이어짐</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:8</td><td>사 32:15; 44:3; 겔 36:26–27; 욜 3:1–5</td><td>영의 종말론적 부어짐 — 구약에서 야웨의 몫이던 일</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">1:10</td><td>사 64:1</td><td>하늘을 가르고 강림하시기를 구한 기도</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">1:10</td><td>막 15:38</td><td>σχίζω의 두 용례 — 세례의 하늘과 십자가의 휘장</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:10</td><td>출 14:21; 사 48:21; 슥 14:4</td><td>격변적 권능 행위에 쓰이는 "찢음"의 어휘</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:11</td><td>시 2:7; 사 42:1; 49:3</td><td>왕위 즉위와 종의 부르심의 합성</td><td><span class="c w">W</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">1:11</td><td>창 22:2, 12, 16; 출 4:22–23</td><td>사랑하는 아들 이삭, 아들로 불린 이스라엘</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:12</td><td>레 16:21</td><td>죄를 지고 광야로 내보내지는 염소의 심상</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:13</td><td>신 8:2; 출 34:28; 왕상 19:8</td><td>사십의 세 전례 — 이스라엘·모세·엘리야</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:13</td><td>사 34:14; 시 95:7–11</td><td>귀신의 자리이자 시험의 자리인 광야</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">1:14</td><td>막 9:31; 10:33; 13:9, 11, 12</td><td>παραδίδωμι의 궤적 — 요한, 인자, 믿는 자들</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:14</td><td>막 6:7–30</td><td>파송과 요한의 죽음을 겹친 샌드위치 — 보냄받은 자의 운명</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">1:15</td><td>신 4:7; 사 51:5; 56:1; 렘 23:23</td><td>칠십인역에서 하나님·심판의 임박에 쓰이는 ἐγγίζω</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">1:17</td><td>왕상 19:19–21</td><td>엘리야의 엘리사 부름 — 카리스마적 지도자 모델</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:17</td><td>렘 16:16; 암 4:2; 합 1:14–17</td><td>구약의 어부 은유가 심판 문맥이라는 대비</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:22</td><td>막 2:23–3:6; 7:1–23; 10:2–12</td><td>서기관과 갈리는 급진적 견해가 뒤에서 드러남</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:24</td><td>삼하 16:10; 삿 11:12; 왕상 17:18</td><td>절연 정형구 "우리와 당신이 무슨"</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:24</td><td>막 3:11; 5:7</td><td>귀신의 초자연적 인식 — 하나님의 아들 칭호로 이어짐</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:25</td><td>시 104:7; 18:16; 106:9; 1QM 14:9f</td><td>ἐπιτιμάω의 배경 — 적대 세력을 제압하는 하나님의 말씀</td><td><span class="c wa">Wa</span> <span class="c f">F</span></td></tr>
+<tr><td class="head">1:25</td><td>막 4:39</td><td>같은 두 동사(꾸짖다·잠잠하라)가 바다에 쓰임</td><td><span class="c wa">Wa</span> <span class="c f">F</span></td></tr>
+<tr><td class="head">1:29</td><td>막 5:22–24, 35–43</td><td>베드로·야고보·요한의 동석, 집, 손을 잡음, 음식 — 겹치는 요소들</td><td><span class="c s">S</span></td></tr>
+<tr><td class="head">1:31</td><td>막 10:45</td><td>διακονέω — 수종듦이 섬기러 온 인자로 이어짐</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">1:34</td><td>사 53:12</td><td>포괄적으로 읽히는 "많은"</td><td><span class="c s">S</span></td></tr>
+<tr><td class="head">1:44</td><td>레 13–14장</td><td>제사장의 확인과 모세가 명한 예물</td><td><span class="c f">F</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 15 ═══════ -->
+<section class="part" id="s15">
+<div class="part-head">
+<div class="gk">σύνθεσις</div>
+<div class="eyebrow">SYNTHESIS</div>
+<h2>15. 신학 종합</h2>
+<div class="gloss">쉰테시스 — 종합</div>
+</div>
+<p>1장은 문패와 첫 하루다. 여덟 자료의 종합은 네 매듭으로 모인다.</p>
+<h3>독자만 아는 것</h3>
+<p><span class="c f">F</span> <span class="c w">W</span> 프롤로그는 무대 뒤를 보여 준다. 하늘이 찢어지고 음성이 나며 사탄과의 대치가 벌어지지만, 그 자리에 있던 사람들이 본 것은 요한의 부름에 응답한 무명의 갈릴리 사람 하나였다. 정보의 격차가 이때 만들어지고, 이 격차가 복음서 전체의 아이러니를 지탱한다. 독자는 1:1에서 이미 알고, 인물들은 길 위에서 배우며, 인간의 입으로 하나님의 아들이 고백되는 자리는 15:39까지 미뤄진다. <span class="c w">W</span> Witherington이 제자들에게 가혹할 이유가 없다고 말하는 근거가 여기 있다.</p>
+<h3>야웨의 서술이 옮겨지다</h3>
+<p><span class="c e">E</span> 2–3절의 인용에서 길을 예비받는 이는 본래 야웨이며, 마가는 그것을 예수에게 적용한다. 8절에서 영을 주시는 일도 구약에서는 하나님께만 속했다. <span class="c f">F</span> 프롤로그의 프뉴마 밀도가 그 두 얼굴을 함께 보여 준다 — 영으로 힘 입고 인도받는 분이면서 영을 나누어 주는 분이다. 24절에서 귀신이 알아본 것도 같은 사태다. 하나님의 거룩한 자가 자기들을 멸하러 왔다는 인식이며, <span class="c wa">Wa</span> Watts의 독법에서는 사탄의 지배가 무너지는 종말론적 대결의 개시다.</p>
+<h3>권위라는 한 낱말</h3>
+<p>가버나움의 하루 전체가 <span class="gw">ἐξουσία</span> 아래 놓인다. <span class="c f">F</span> 27절의 감탄 "권위 있는 새 교훈이로다"에서 가르침과 축귀는 분리되지 않는다. 하나의 권위가 두 형태로 나타나며, 2:10에서는 죄 사함으로, 2:28에서는 안식일의 주권으로 이어진다. 그 권위는 기법 없이 말 한마디로 작동하고(25절), 무리의 요구를 물리고 방향을 정하는 데서도 드러난다(38절). 그리고 같은 권위가 부름의 자리에서는 설명 없는 명령으로 나타나 즉각적인 순종을 받는다(17–18절) — <span class="c f">F</span> France가 그 낙차를 두고 던지는 관찰이다.</p>
+<h3>변방에서 시작되는 통치</h3>
+<p><span class="c f">F</span> 14–15절의 선포 뒤에 오는 것은 바닷가의 어부들이다. 세포리스도 티베리아스도 아니고 예루살렘도 아닌 호숫가의 마을들에서, 그물을 던지던 사람들에게서 시작한다. <span class="c r">R</span> 『이야기 마가』가 로마 제국과 맞세우는 대비가 이 지점을 겨눈다 — 제국은 중심에서 바깥으로 일하고 하나님의 통치는 변방에서, 광야에서 시작하며, 제국은 위에서 아래로 내려오고 하나님의 통치는 아래에서 올라온다. 겨자씨 비유가 말로 옮길 것을 1장은 이미 이야기의 형태로 실연한다.</p>
+<div class="note"><div class="tt">2장으로</div>1:22과 1:27에서 사람들이 알아본 권위가 2:1–12에서 죄 사함의 권세로 명시되고, 그 순간 서기관들과의 갈등이 표면으로 올라온다. 1:40–45에서 나병환자를 만지신 손이 2장에서는 세리와 죄인의 식탁으로 향한다. 1장이 권위를 보여 주었다면 2장은 그 권위가 무엇과 충돌하는지를 보여 준다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<footer>
+    마가복음 1장 심층 연구 · 성서 연구 서고<br/>
+    주 자료 — France, <i>The Gospel of Mark</i>(NIGTC, 2002) · Stein, <i>Mark</i>(BECNT, 2008) · Edwards, <i>The Gospel according to Mark</i>(PNTC, 2002) · Witherington, <i>The Gospel of Mark</i>(2001) · Gundry, <i>Mark</i>(1993) — 보강 자료 — Rhoads·Dewey·Michie, <i>Mark as Story</i> · Watts, <i>Isaiah's New Exodus in Mark</i> · Bauckham, <i>Jesus and the Eyewitnesses</i>. 성경 본문은 개역개정 4판(사이트 데이터 전수 대조), 그리스어는 NA28. Turner·Kee·Keck·Marxsen·Guelich·Metzger·Marcus 등은 위 자료의 인용 범위에서 재인용으로 다루었다. 면수는 표기하지 않았으며, 정밀 인용 시 실물 대조를 거칠 것.
+  </footer>
+<nav aria-label="장별 연구 이동" class="chapter-footer-nav"><a href="overview.html">← 종합 개관</a><a class="shelf" href="index.html">마가복음 서가</a><a href="ch02.html">2장 죄 사함의 권세 →</a></nav>
+</main>
+</div>
+<script src="../../assets/app.js"></script>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

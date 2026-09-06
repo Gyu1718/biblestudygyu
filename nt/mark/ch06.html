@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="마가복음 6장의 나사렛 배척, 열둘의 파송과 세례 요한의 죽음이라는 샌드위치, 오천 명을 먹이심, 바다 위로 걸으심과 굳어진 마음, 핵심 원어와 문법, 상호 참조를 여덟 자료로 종합한 심층 연구." name="description"/>
+<title>마가복음 6장 심층 연구 — 광야의 식탁</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2316354f'/%3E%3Ctext x='32' y='46' font-size='34' text-anchor='middle' fill='%23a8823c' font-family='serif'%3E%CE%9C%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#202a35; --ink-soft:#4a5563; --paper:#f7f6f1; --panel:#ffffff;
+  --lapis:#1f4e78; --lapis-deep:#16354f; --ochre:#a8823c; --line:#d9d5c9;
+  --f:#3c5a83; --s:#37665a; --e:#8a4658; --w:#655a8c; --r:#7a5a38;
+  --wa:#1d6a73; --ba:#6e5a2e; --g:#7a3f2e; --sec:#857f70;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --grk:"Noto Serif","GFS Didot",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.88;font-size:16.5px;word-break:keep-all}
+.frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--lapis-deep);color:#e8eef4;padding:2rem 1.3rem 3rem;font-family:var(--sans);font-size:.8rem}
+nav.toc .site-nav{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.1rem;font-size:.71rem}
+nav.toc .site-nav a{color:#9db6cc;text-decoration:none;padding:0}
+nav.toc .site-nav a:hover{color:#fff}
+nav.toc .site-nav span.off{color:#6f8296;cursor:default}
+nav.toc .brand{font-family:var(--serif);font-weight:900;font-size:1.02rem;line-height:1.45;color:#fff;margin-bottom:.3rem}
+nav.toc .brand-sub{color:#9db6cc;font-size:.7rem;letter-spacing:.14em;margin-bottom:1.2rem}
+nav.toc .toc-h{font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;color:#9db6cc;margin:1rem 0 .5rem}
+nav.toc .chapter-jump{display:grid;grid-template-columns:repeat(8,1fr);gap:.28rem;margin:0 0 1.1rem}
+nav.toc .chapter-jump a,nav.toc .chapter-jump span{display:block;text-align:center;padding:.3rem 0;border:1px solid rgba(255,255,255,.16);border-radius:5px;font-family:var(--sans);font-size:.72rem;font-weight:700;text-decoration:none}
+nav.toc .chapter-jump a{color:#c3d2e0}
+nav.toc .chapter-jump a:hover{background:rgba(255,255,255,.08);border-color:var(--ochre);color:#fff}
+nav.toc .chapter-jump a[aria-current="page"]{background:var(--ochre);border-color:var(--ochre);color:#16354f}
+nav.toc .chapter-jump span{color:#5f7086;border-color:rgba(255,255,255,.08);cursor:default}
+nav.toc a.lv1{display:block;color:#dbe6f0;text-decoration:none;font-weight:700;padding:.32rem .5rem .32rem .55rem;border-left:2px solid transparent;margin-top:.2rem;line-height:1.5}
+nav.toc a.lv1:hover,nav.toc a.lv1:focus-visible{color:#fff;border-left-color:var(--ochre);background:rgba(255,255,255,.05);outline:none}
+main{max-width:49rem;padding:3rem 3.2rem 6rem;margin:0 auto;width:100%}
+@media(max-width:980px){
+  .frame{display:block}
+  nav.toc{position:static;height:auto;padding:1.4rem 1.2rem}
+  main{padding:2rem 1.15rem 4rem}
+}
+header.hero{border-bottom:3px double var(--line);padding-bottom:2rem;margin-bottom:1.5rem}
+.hero .gk-title{font-family:var(--grk);font-size:2.05rem;color:var(--ochre);line-height:1.3}
+.hero h1{font-size:1.95rem;font-weight:900;line-height:1.35;margin:.4rem 0 .55rem}
+.hero .sub{color:var(--ink-soft);font-size:.98rem;line-height:1.82}
+.hero .meta{font-family:var(--sans);font-size:.77rem;color:var(--ink-soft);margin-top:1rem;letter-spacing:.02em}
+section.part{margin-top:3.6rem}
+.part-head{border-top:3px solid var(--lapis);padding-top:1.2rem;margin-bottom:1.4rem}
+.part-head .gk{font-family:var(--grk);font-size:1.5rem;color:var(--ochre);line-height:1;float:right;margin-left:1rem}
+.part-head .eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;color:var(--lapis);font-weight:700}
+.part-head h2{font-size:1.42rem;font-weight:900;line-height:1.4;margin:.22rem 0 .15rem}
+.part-head .gloss{font-size:.85rem;color:var(--ink-soft)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .7rem;color:var(--lapis-deep);scroll-margin-top:1rem}
+h3 .gk{font-family:var(--grk);color:var(--ochre);font-weight:700}
+h4{font-size:.97rem;font-weight:700;margin:1.4rem 0 .45rem;color:var(--lapis)}
+p{margin:.85rem 0}
+strong{font-weight:700}
+em{font-style:normal;font-weight:500;color:var(--lapis-deep)}
+.gw{font-family:var(--grk);font-size:1.02em}
+.krv{background:#f1efe8;border-left:3px solid var(--ochre);padding:.55rem .85rem;margin:.85rem 0;font-size:.93rem;line-height:1.75}
+.krv b{font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;color:var(--ochre);margin-right:.45rem}
+.c{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.62rem;line-height:1;padding:.22em .45em;border-radius:3px;color:#fff;vertical-align:.16em;letter-spacing:.03em}
+.c.f{background:var(--f)}.c.s{background:var(--s)}.c.e{background:var(--e)}.c.w{background:var(--w)}.c.r{background:var(--r)}
+.c.wa{background:var(--wa)}.c.ba{background:var(--ba)}.c.g{background:var(--g)}.c.sec{background:var(--sec)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.05rem;font-family:var(--sans);font-size:.77rem;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.05rem;margin:1.1rem 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--lapis);border-radius:6px;padding:.95rem 1.15rem;margin:1.15rem 0;font-size:.92rem}
+.note .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--lapis);margin-bottom:.3rem}
+.caveat{background:#faf3e6;border:1px solid #e3d5b3;border-left:4px solid var(--ochre);border-radius:6px;padding:.9rem 1.1rem;margin:1.15rem 0;font-size:.9rem}
+.caveat .tt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ochre);margin-bottom:.25rem}
+.vs{margin:1.4rem 0;padding-left:1.05rem;border-left:3px solid var(--line);scroll-margin-top:1rem}
+.vs .ref{font-family:var(--sans);font-weight:700;font-size:.85rem;color:var(--lapis);display:block;margin-bottom:.3rem}
+.vs p{margin:.5rem 0;font-size:.96rem}
+.tbl-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel)}
+caption{font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);text-align:left;padding:.3rem 0 .5rem}
+th{font-family:var(--sans);font-size:.73rem;letter-spacing:.03em;text-align:left;background:var(--lapis-deep);color:#eef3f8;padding:.55rem .7rem;font-weight:700;vertical-align:top}
+td{border:1px solid var(--line);padding:.55rem .7rem;vertical-align:top;line-height:1.65}
+tr:nth-child(even) td{background:#fbfaf6}
+td.head{font-weight:700;white-space:nowrap;background:#f1efe8!important}
+ul,ol{padding-left:1.35rem;margin:.7rem 0}
+li{margin:.4rem 0}
+.back{font-family:var(--sans);font-size:.73rem;margin-top:1.5rem}
+.back a{color:var(--lapis);text-decoration:none}
+footer{margin-top:4.5rem;border-top:3px double var(--line);padding-top:1.3rem;font-family:var(--sans);font-size:.75rem;color:var(--ink-soft);line-height:1.8}
+.chapter-footer-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:center;margin-top:4rem;padding-top:1.3rem;border-top:3px double var(--line);font-family:var(--sans);font-size:.82rem}
+.chapter-footer-nav a,.chapter-footer-nav span.next-off{color:var(--lapis);text-decoration:none;padding:.65rem .75rem;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+.chapter-footer-nav span.next-off{color:var(--ink-soft);text-align:right;cursor:default}
+.chapter-footer-nav .shelf{text-align:center}
+@media(max-width:560px){.chapter-footer-nav{grid-template-columns:1fr}.chapter-footer-nav a,.chapter-footer-nav span.next-off{text-align:center}}
+@media print{
+  nav.toc{display:none}.frame{display:block}
+  body{background:#fff;font-size:11pt}
+  main{max-width:100%;padding:0}
+  .note,.caveat,.vs,table,.krv{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link data-bible-reader-css="" href="../../assets/css/bible-reader.css" rel="stylesheet"/>
+<link data-site-theme="" href="../../assets/theme.css" rel="stylesheet"/>
+<link data-site-app-css="" href="../../assets/app.css" rel="stylesheet"/>
+</head>
+<body data-book="mark" data-chapter="6" data-kind="study" data-root="../../"><a class="skip-link" href="#top">본문으로 건너뛰기</a>
+<div class="frame">
+<nav aria-label="마가복음 6장 심층 연구 목차" class="toc">
+<div class="site-nav">
+<a href="./index.html">← 마가복음 서가</a>
+<a href="../../index.html">서고 홈</a>
+<a href="../../bible/original.html?book=MRK&amp;chapter=6">성경읽기</a>
+<a href="./overview.html">종합 개관</a>
+<span aria-disabled="true" class="off" role="note">원어 연구 준비 중</span>
+</div>
+<div class="brand">마가복음 6장 심층 연구</div>
+<div class="brand-sub">광야의 식탁</div>
+<div class="toc-h">장 이동</div>
+<div class="chapter-jump"><a aria-label="마가복음 1장으로 이동" href="./ch01.html">1</a><a aria-label="마가복음 2장으로 이동" href="./ch02.html">2</a><a aria-label="마가복음 3장으로 이동" href="./ch03.html">3</a><a aria-label="마가복음 4장으로 이동" href="./ch04.html">4</a><a aria-label="마가복음 5장으로 이동" href="./ch05.html">5</a><a aria-current="page" aria-label="마가복음 6장 현재 페이지" href="./ch06.html">6</a><a aria-label="마가복음 7장으로 이동" href="./ch07.html">7</a><a aria-label="마가복음 8장으로 이동" href="./ch08.html">8</a><a aria-label="마가복음 9장으로 이동" href="./ch09.html">9</a><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span></div>
+<div class="toc-h">현재 문서 목차</div>
+<a class="lv1" href="#s0">0. 단락의 짜임</a>
+<a class="lv1" href="#s1">1. 고향의 배척 (6:1–6a)</a>
+<a class="lv1" href="#s2">2. 둘씩 둘씩 (6:6b–13)</a>
+<a class="lv1" href="#s3">3. 헤롯이 듣고 (6:14–16)</a>
+<a class="lv1" href="#s4">4. 생일 잔치 (6:17–29)</a>
+<a class="lv1" href="#s5">5. 목자 없는 양 (6:30–34)</a>
+<a class="lv1" href="#s6">6. 떡 다섯 개 (6:35–44)</a>
+<a class="lv1" href="#s7">7. 지나가려고 하시매 (6:45–52)</a>
+<a class="lv1" href="#s8">8. 게네사렛 (6:53–56)</a>
+<a class="lv1" href="#s9">9. 핵심 원어와 문법</a>
+<a class="lv1" href="#s10">10. 주석가별 독법과 쟁점</a>
+<a class="lv1" href="#s11">11. 역사·문화 배경</a>
+<a class="lv1" href="#s12">12. 상호 참조 총람</a>
+<a class="lv1" href="#s13">13. 신학 종합</a>
+</nav>
+<main id="top">
+<header class="hero">
+<div class="gk-title">ὡς πρόβατα μὴ ἔχοντα ποιμένα</div>
+<h1>마가복음 6장 · 광야의 식탁</h1>
+<p class="sub">죽은 아이를 살리신 이가 고향에서는 아무 권능도 행하실 수 없었다. 그 좌절 직후에 열둘이 파송되고, 그 파송과 귀환 사이에 세례 요한의 목이 소반에 얹혀 나온다. 헤롯의 생일 잔치와 푸른 잔디 위의 식탁이 나란히 놓이고, 밤 사경에 바다 위를 걸어오신 이가 "내니 두려워하지 말라" 하시지만 제자들의 마음은 둔하여져 있다.</p>
+<p class="meta">6:1–6a 나사렛 · 6:6b–13, 30 파송과 귀환 · 6:14–29 요한의 죽음 · 6:30–44 오천 명 · 6:45–52 바다 위 · 6:53–56 게네사렛 · France·Stein·Edwards·Witherington 주석에 Bauckham·Rhoads 종합 · 개역개정 4판 전수 대조 · NA28 병기</p>
+</header>
+<div class="legend">
+<span><b>주석 칩</b></span>
+<span><span class="c f">F</span> France NIGTC 2002</span>
+<span><span class="c s">S</span> Stein BECNT 2008</span>
+<span><span class="c e">E</span> Edwards PNTC 2002</span>
+<span><span class="c w">W</span> Witherington 2001</span>
+<span><span class="c r">R</span> Rhoads 외 서사비평</span>
+<span><span class="c ba">Ba</span> Bauckham 목격자</span>
+<span><span class="c sec">재</span> 재인용(2차)</span>
+</div>
+<!-- ═══════ 0 ═══════ -->
+<section class="part" id="s0">
+<div class="part-head">
+<div class="gk">δομή</div>
+<div class="eyebrow">STRUCTURE</div>
+<h2>0. 단락의 짜임</h2>
+<div class="gloss">두 잔치, 하나의 샌드위치.</div>
+</div>
+<p><span class="c f">F</span> France는 6:1–6a가 균형을 바로잡는 기능을 한다고 본다. 4장의 설명적 강화 이후 서사가 개선 행진처럼 흘러왔다 — 바람과 물, 귀신 들림, 질병, 심지어 죽음까지 차례로 그의 권위에 굴복했다. 2–3장의 갈라진 반응을 잊고 독자는 예수의 "성공"에 무언가 자동적인 것이 있다고 느끼기 시작할 위험이 있다. 이 단락이 그 균형을 되돌리며, 그의 권위의 효과를 당연시할 수 없음을 상기시킨다. France의 물음이 이 장의 출발점이다 — 믿음이 앞선 구출 이적들의 열쇠였다면(4:40; 5:34, 36), 그것이 없는 곳에서는 무엇을 기대해야 하는가.</p>
+<p><span class="c s">S</span> Stein도 같은 구조적 관찰을 한다. 마가는 3:7–6:6이라는 큰 단락을 이 배척 기사로 닫으며, 1:14–3:6이 3:1–6으로 닫힌 것과 같은 방식이다. 이 대목에서 그는 배척의 주제를 재개한다 — 바리새인과 헤롯당(3:6), 가족(3:21, 31–35), 서기관(3:22), 이방 도시 거라사(5:17)에 이어 이제 고향 사람들과 친척과 집안이다.</p>
+<div class="tbl-wrap">
+<table>
+<caption>표 1. 6장의 흐름</caption>
+<thead><tr><th>단락</th><th>본문</th><th>장면</th><th>기능</th></tr></thead>
+<tbody>
+<tr><td class="head">나사렛</td><td>6:1–6a</td><td>회당의 놀람과 배척, 권능을 행하실 수 없음</td><td>앞 단락(3:7–6:6)의 닫힘 — 믿음 없음의 결과</td></tr>
+<tr><td class="head">파송</td><td>6:6b–13</td><td>둘씩 둘씩, 지팡이 외에는, 발의 먼지</td><td>샌드위치의 겉면 A — 사역의 확장</td></tr>
+<tr><td class="head">헤롯의 판단</td><td>6:14–16</td><td>세 가지 소문과 헤롯의 결론</td><td>회고담의 도입</td></tr>
+<tr><td class="head">요한의 죽음</td><td>6:17–29</td><td>생일 잔치, 춤, 맹세, 소반 위의 머리</td><td>샌드위치의 속 B — 파송받은 자의 운명</td></tr>
+<tr><td class="head">귀환</td><td>6:30–34</td><td>사도들의 보고, 한적한 곳, 목자 없는 양</td><td>겉면 A′ — 샌드위치의 닫힘</td></tr>
+<tr><td class="head">오천 명</td><td>6:35–44</td><td>떡 다섯과 물고기 둘, 백 명씩 오십 명씩, 열두 바구니</td><td>헤롯의 잔치와 대비되는 광야의 식탁</td></tr>
+<tr><td class="head">바다 위</td><td>6:45–52</td><td>밤 사경, 지나가려 하심, 내니 두려워하지 말라</td><td>신현(神現)과 굳어진 마음</td></tr>
+<tr><td class="head">게네사렛</td><td>6:53–56</td><td>침상째 메고 나옴, 옷 가에 손을 댐</td><td>요약 — 나사렛과의 대비</td></tr>
+</tbody>
+</table>
+</div>
+<h3>세 번째 샌드위치</h3>
+<p><span class="c e">E</span> Edwards는 6:6b–30을 또 하나의 마가적 샌드위치로 읽는다. 세례 요한의 순교(6:14–29)가 열둘의 파송(6:6b–13)과 귀환(6:30) 사이에 놓인다. 요한은 1:14에서 마지막으로 언급되었고 그때 마가는 그의 체포와 함께 예수의 공적 사역 개시를 알렸으나 아직 헤롯 안디바의 손에 넘어간 그의 운명을 보고하지 않았다. Edwards의 정리대로, 마가가 세례자의 처형을 열둘의 첫 선교 여행의 파송과 귀환이라는 문맥에 끼워 넣었다는 사실은 독자로 하여금 요한의 죽음이 예수와 함께하는 제자도와 선교에 무엇을 뜻하는지 생각하도록 강요한다. 그가 이 단락에 붙인 제목이 "제자도의 값"이다.</p>
+<p><span class="c w">W</span> Witherington은 Myers의 정리를 인용해 그 연결을 명시한다 — 회개와 새 질서를 선포하는 이들의 정치적 운명은 언제나 같으며, 그렇기에 요한의 이야기가 사도들의 선교 서사 안에 삽입되었다는 것이다. 그들이 이 사명을 물려받는 한 그 운명도 물려받는다. Witherington이 덧붙이는 정리 — 하나님이 다스리러 오신다고 선포하며 나가는 이들은 살아 돌아올 가능성만큼이나 배척당하거나 죽어 돌아올 가능성이 있다.</p>
+<h3>두 잔치의 병치</h3>
+<p><span class="c f">F</span> France는 안디바의 타락한 호화 연회가 마가의 서사에서 다음에 올 전혀 다른 잔치의 건전한 소박함과 생생히 대조된다고 짚는다(6:39–43). 음식은 기본적이지만, 그 정황과 서사 안의 구약 사건 회상이 이 소박한 식사를 분봉왕의 성대한 생일 잔치보다 궁극적으로 더 의미 있는 것으로 표시한다. 볼 눈이 있는 이에게 이것은 메시아 잔치의 맛보기이며 하나님 나라의 공동체적 삶으로의 입문이다.</p>
+<p><span class="c e">E</span> Edwards도 같은 대비를 세운다. 이 잔치는 요새나 궁전이 아니라 갈릴리의 열린 하늘과 구릉에서 열리고 초대가 중요한 사람들에게 제한되지 않는다. 무리들과의 입지를 다지는 것이 주된 목적이었던 헤롯의 잔치와 달리, 예수의 잔치는 그의 입지를 높이려는 것이 아니라 그들의 필요를 채우려는 것이다. <span class="c w">W</span> Witherington의 정리가 그 요점을 요약한다 — 한 잔치는 예수의 죽음을 예고하고 다른 잔치는 하나님의 통치 안 종말론적 잔치의 도래를 예고한다. 자기를 왕으로 여기되 방탕하고 부도덕했던 헤롯과 달리, 여기서 예수는 모세가 광야에서 그러했듯 양 떼를 먹이고 그 필요를 채우는 이스라엘의 참 목자 왕으로 제시된다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 1 ═══════ -->
+<section class="part" id="s1">
+<div class="part-head">
+<div class="gk">οὐκ ἐδύνατο</div>
+<div class="eyebrow">6:1–6a</div>
+<h2>1. 고향의 배척</h2>
+<div class="gloss">우크 에뒤나토 — 하실 수 없어</div>
+</div>
+<div class="krv" id="v1"><b>6:1–3</b> 예수께서 거기를 떠나사 고향으로 가시니 제자들도 따르니라 / 안식일이 되어 회당에서 가르치시니 많은 사람이 듣고 놀라 이르되 이 사람이 어디서 이런 것을 얻었느냐 이 사람이 받은 지혜와 그 손으로 이루어지는 이런 권능이 어찌됨이냐 / 이 사람이 마리아의 아들 목수가 아니냐 야고보와 요셉과 유다와 시몬의 형제가 아니냐 그 누이들이 우리와 함께 여기 있지 아니하냐 하고 예수를 배척한지라</div>
+<p><span class="c f">F</span> France는 1:14의 갈릴리 귀환 이후 예수의 가르침과 활동이 호수 둘레에 집중되었고 가버나움이 정규 근거지였음을 상기시킨다. 그러나 그의 본래 집은 산지의 나사렛이었고(1:9) 그는 이미 "나사렛 예수"로 알려져 있었다(1:24). 가버나움에서 40킬로미터쯤 떨어진 나사렛 방문은 늦은 감이 있었고, 이 단락이 그것을 기록한다 — 다만 마가는 그 유명한 아들을 배척한 마을의 이름을 대지 않는다.</p>
+<p><span class="c f">F</span> 그가 짚는 첫 인상은 호의다. 회당에서 가르치라는 초대는 적어도 예수가 이제 의미 있는 인물임을 인정한다는 것을 드러낸다. 마가는 누가와 달리 그가 무엇을 가르쳤는지 전혀 말하지 않는다 — 그의 관심은 오직 사람들의 반응에 있다. 가버나움 회당에서처럼(1:22, 27) 회중은 예수의 말과 행위 양쪽에 놀란다. 그들을 감동시키는 "지혜"는 그때 주어진 가르침에서 감지되었을 것이나 "권능"은 그들이 전해 들었을 것이다.</p>
+<div class="note"><div class="tt">놀람은 긍정인가 부정인가</div>이 대목의 반응을 어떻게 읽을지가 갈린다. <span class="c f">F</span> France는 반복되는 "이 사람이"가 2:7처럼 경멸적 태도를 시사한다고 본다 — 그는 특별한 누군가가 아니라 "이 친구"다. <span class="c s">S</span> Stein은 반대로 읽는다. 마가에서 이 "놀람" 어휘는 10:26을 제외하면 언제나 예수를 향한 긍정적 반응을 서술하며, "많은 사람"과 "무리"는 마가에서 거의 언제나 예수에게 우호적으로 그려진다. 첫 세 물음은 긍정적이며 예수의 인격과 사역에 관한 것이고, 3:22의 부정적 결론(바알세불에게서)과 달리 여기서 상정된 결론은 "하나님께로부터"라는 것이다. 그가 짚는 문법적 근거 하나 — 2절의 "받은"에 해당하는 분사가 신적 수동태이며, "하나님이 그에게 주신 지혜가 무엇이냐"로 읽힌다. Stein은 "이 사람이"를 경멸로 읽으려는 시도가 4:41의 긍정적 용례에 걸려 넘어진다고 지적한다. 그렇다면 전환점은 2절이 아니라 3절이며, 직업과 가족이 거론되는 지점에서 놀람이 배척으로 돌아선다.</div>
+<h3>목수, 마리아의 아들</h3>
+<p><span class="c f">F</span> France는 "목수"에 해당하는 낱말이 주로 목재를 다루는 이에게 쓰이되 석공·조각가·대장장이 같은 다른 장인에게도 적용될 수 있다고 정리한다. 작은 마을에서 목수는 다재다능해야 했고 농기구와 다른 도구는 물론 건물의 건축과 수리도 다룰 수 있어야 했다. 그런 사람으로서 그는 마을 경제의 의미 있는 인물이었으며 아마 인근 지역의 숙련 작업도 맡았을 것이다. France의 결론 — 이 문맥에서 그 용어에 경멸적인 것은 없다. 요점은 오히려 그 <em>익숙함</em>에 있다. 목수는 (요단의 요한을 찾아간 그 운명적 방문 전까지는) 정상성을 안심시켜 주는 상징이었지 지혜와 권능을 기대할 만한 부류의 사람이 아니었다.</p>
+<p><span class="c w">W</span> Witherington은 본문 문제를 다룬다. 일부 중요한 사본이 "목수의 아들, 마리아의 아들"로 읽지만 더 널리 지지받는 독법은 "목수, 마리아의 아들"이다. 다른 독법들을 가장 잘 설명하는 독법이 원문일 개연성이 높다는 원리에 따라 예수를 목수라 부르는 후자가 선호된다. 게다가 이 복음서의 일차 청중이 이방인이었다면 "목수의 아들"로의 변경이 더 개연적인데, 유대 세계와 달리 그리스-로마 사람들, 특히 상류층은 그런 육체노동을 천하게 보았기 때문이다. 켈수스가 그리스도교 반박에서 이 종교가 목수에 의해 세워졌다고 비웃은 것이 그 예다.</p>
+<p><span class="c f">F</span> "마리아의 아들"이라는 지칭은 신약 어디에도 나오지 않으며(예수는 눅 4:22; 요 1:45; 6:42에서 요셉의 아들로 서술된다), 어머니의 이름을 쓰는 이 이례를 마가가 예수가 실제로 목수의 아들이 아님을 알았다는 은밀한 표시로 읽는 견해가 있다. 그러나 France는 더 단순한 설명을 택한다 — 마가는 요셉을 결코 언급하지 않으며, 3:31–35에서 아버지가 부재한다는 사실은 예수의 사역 무렵 요셉이 죽었으리라는 전통적 견해를 시사한다. 가족 구성원이 명시적으로 열거되는 이 절에서조차 요셉의 이름이 없다는 사실이 이 견해를 뒷받침한다. 그렇다면 예수는 맏아들로서 자연스럽게 가업을 이어받아 목수가 되었을 것이다.</p>
+<p><span class="c w">W</span> Witherington은 다른 가능성에 무게를 둔다. "마리아의 아들"이라는 어구 자체가 <em>비방</em>으로 의도되었을 수 있다는 것이다(삿 11:1–2 참조). 요셉이 죽었음을 가리킬 뿐일 수도 있으나, 죽은 아버지의 이름으로 자식을 계속 지칭하는 것이 통상적 유대 관행이었으므로, 여기서는 비방을 다루고 있을 개연성이 높다는 판단이다. 그가 짚는 고대적 사고방식도 이 대목을 설명한다 — 단순히 익숙함이 경멸을 낳는 문제가 아니라, 지리적·혈통적 기원이 사람의 정체와 능력을 언제나 결정한다는 고대의 사고에서 나온다. 그들은 예수를 기대를 넘어서는 정도가 아니라 <em>주제넘게 뻗치는</em> 사람으로 본다.</p>
+<div class="krv" id="v4"><b>6:4–6</b> 예수께서 그들에게 이르시되 선지자가 자기 고향과 자기 친척과 자기 집 외에서는 존경을 받지 못함이 없느니라 하시며 / 거기서는 아무 권능도 행하실 수 없어 다만 소수의 병자에게 안수하여 고치실 뿐이었고 / 그들이 믿지 않음을 이상히 여기셨더라 이에 모든 촌에 두루 다니시며 가르치시더라</div>
+<p><span class="c f">F</span> France는 4절의 격언이 그리스 세계에서 특히 철학자들에게 적용되던 속담이라고 짚고, 마가에서 그것이 더 충만하고 강조적인 형태로 주어진다는 점을 강조한다. 대부분의 판본처럼 "고향"에서만이 아니라, 마태처럼 자기 "집"에서만이 아니라, 자기 "친척" 사이에서의 배척까지 열거하는데, 이 추가는 3:20–21, 31–35의 불행한 경험을 반영한다.</p>
+<p><span class="c f">F</span> 5절의 두 절이 나란히 놓인 데 즐거운 아이러니가 있다고 그는 적는다. 대부분의 사람에게 몇몇 병자에게 안수하여 고치는 일은 결코 "아무 권능도 아님"이 되지 않을 것이다. 마태의 "많은 권능을 행하지 아니하시니라"는 그 역설을 피하지만 마가 어법의 생생함도 잃는다. 두 복음서 기자 모두 예수의 "최소한의" 이적 활동을 나사렛 사람들의 믿지 않음에 돌리지만, 마가의 "하실 수 없어"가 더 대담하며 예수의 권위조차 무제한이 아님을 시사한다. France의 정리 — 마가는 치유와 이적의 문맥에서 믿음의 중요성을 자주 부각하므로(2:5; 4:40; 5:34, 36; 9:23–24; 10:52; 11:22–24) 믿지 않음에 반대의 효과가 돌려지는 것이 놀랍지는 않으나, 예수를 이적을 행할 수 없는 이로 서술하는 것은 기독론적으로 두드러진다.</p>
+<p><span class="c f">F</span> 6절의 "이상히 여기셨더라"도 그가 짚는다. 마가에서 예수에 대해 이 동사가 쓰이는 곳은 여기뿐이며(더 통상적으로는 무리와 결부된다) 마가가 그린 예수의 "인간적" 성격을 더욱 부각한다. 그리고 인근의 다른 촌들에서의 가르침이 곧바로 언급되는 것은 그가 나사렛에 오래 머물지 않고 오히려 11절에서 곧 천명할 원리를 따랐음을 시사한다.</p>
+<p><span class="c w">W</span> Witherington은 이 대목이 크레이아의 고전적 예 — 기억할 만한 말씀(6:4)으로 절정에 이르는 역사적 인물에 관한 짧은 서사 — 라고 규정하되, 그 말씀에서 생성된 이상적 장면은 아니라고 본다. 그 말씀이 우리가 여기서 실제로 보는 예수의 친척에 관한 서사를 시사하지 않기 때문이다. 그가 인용하는 Cranfield의 관찰이 역사성 논증이 된다 — 이 이야기는 초기 교회가 지어냈다고 상상하기 특히 어려운 요소들을 담는다. 5절의 진술, 교회에서 저명해진 사람들에게 불명예가 되는 4절의 친척 언급, 그리고 아마 예수를 "마리아의 아들"로 지칭하는 것이다.</p>
+<p><span class="c s">S</span> Stein은 이 배척의 신적 측면도 짚는다. 하나님 편에서 보면 이 모두가 그의 예정된 목적과 뜻에 부합한다. 예수가 예루살렘에서 죽어야 할 신적 필연성이 있으며(8:31; 9:31; 10:33–34, 45), 7:1–13과 8:11–13의 커지는 반대가 마가의 독자를 놀라게 해서는 안 된다. 이스라엘의 복음 거부는 초기 교회의 문제였고(롬 9–11), 이 기사는 그 실패의 상징이다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 2 ═══════ -->
+<section class="part" id="s2">
+<div class="part-head">
+<div class="gk">δύο δύο</div>
+<div class="eyebrow">6:6b–13</div>
+<h2>2. 둘씩 둘씩</h2>
+<div class="gloss">뒤오 뒤오 — 둘씩 둘씩</div>
+</div>
+<div class="krv" id="v7"><b>6:7–9</b> 열두 제자를 부르사 둘씩 둘씩 보내시며 더러운 귀신을 제어하는 권능을 주시고 / 명하시되 여행을 위하여 지팡이 외에는 양식이나 배낭이나 전대의 돈이나 아무 것도 가지지 말며 / 신만 신고 두 벌 옷도 입지 말라 하시고</div>
+<p><span class="c f">F</span> France는 이 기사의 간결함이 뜻밖이라고 짚는다. 지금까지 마가복음에서 제자들과 그 기능에 상당한 관심이 있었던 데 비하면 그렇고, 마 10장이나 누가의 두 파송 기사와 비교하면 더욱 그렇다. 이것은 사실 마가의 서사에서 열둘이 예수를 떠나 활동하는 것이 보이는 유일한 자리다. 다만 3:14의 "보내사"라는 강조에 비추어, 한 번의 유일한 사건을 기록하기보다 반복되는 선교의 전형으로 읽어야 할 수도 있다고 그는 덧붙인다.</p>
+<p><span class="c f">F</span> 7–11절의 사명 위임에서 열둘에게 돌려진 유일한 구체적 기능이 "더러운 귀신을 제어하는 권능"이라는 점도 주목할 만하다. 초점은 선교의 내용보다 <em>방식</em>에 있다. 뒤이은 12–13절의 서사 기사에 가서야 그들의 선교가 (3:14가 기대하게 한 대로) 전파도 포함했음이 드러나며, 거기서도 전파는 축귀·치유와 함께 세 활동 가운데 하나일 뿐이다. 30절이 그것이 단순한 가르침 선교 이상이었음을 확인해 준다.</p>
+<h3>둘씩</h3>
+<p><span class="c f">F</span> 짝지어 보내는 관행은 11:1과 14:13의 특별 "심부름"에서 되풀이될 것이다. 상호 지지와 동반을 제공하는 합리적 방침이며 사도 교회에서 이어졌다(행 8:14; 11:30; 13:1–2; 15:39–40). 그가 인용하는 예레미아스는 랍비 문헌에서 짝지은 제자들에게 주어진 유사한 위임의 여러 예를 모았고, 명시적 구약 선례는 없으나 법적 증언을 세우는 데 적어도 두 증인을 요구한 구약 규정(신 17:6)이 서로의 메시지를 지지할 두 사자의 필요를 시사했으리라고 제안한다. <span class="c w">W</span> Witherington도 같은 근거를 들고 Hooker를 인용해, 11절이 그 짝이 듣기를 거부하는 이들이 심판 아래 있음을 공식적으로 증언하도록 요청받으리라는 것을 가리킨다고 짚는다.</p>
+<p><span class="c e">E</span> Edwards는 파송 자체의 이례성을 강조한다. 유대 랍비들이 여기서 예수가 하시듯 스승의 이름으로 그러나 스승의 몸 없이 제자들을 내보냈다는 증거는 거의 없다. 따라서 예수는 토라가 아니라 자기에게로 제자를 부르신다는 점에서만이 아니라 자기 이름과 자기 권위로 그들을 <em>보내신다</em>는 점에서도 유일무이하다는 것이다.</p>
+<p><span class="c e">E</span> 그가 짚는 목회적 관찰도 있다. 열둘의 파송은 성급해 보이고 우리를 놀라게 할 수 있다. 지금까지 제자들의 기록이 안심시켜 주지 않기 때문이다 — 그들은 예수의 사명을 방해했고(1:36–39) 짜증을 냈으며(4:38; 5:31) 심지어 반대했다(3:21). 예수에 대한 그들의 인식은 오해로 특징지어져 왔고 앞으로도 그럴 것이다(8:14–21). Edwards의 정리 — 이 특정한 개인들을, 그것도 예수 이해의 이 단계에서 보내신다는 사실은 마가 교회의 시달리는 신자들에게, 나아가 모든 시대의 신자들에게, 하나님 말씀의 성취가 선교사의 완전함이나 공로가 아니라 예수의 권위 있는 부르심과 준비시키심에 달렸음을 증언한다.</p>
+<h3>출애굽의 복장</h3>
+<p><span class="c e">E</span> Edwards는 오늘날 초기 예수 운동을 방랑하는 급진적 견유학파 철학자·설교자의 모델로 그리는 것이 유행이라고 소개한 뒤 이를 반박한다. 첫째, 예수 당시 갈릴리에 견유학파가 있었다는 증거가 없다. 둘째, 복장·관행·이상을 자세히 살피면 견유주의와 예수의 대응은 잘해야 피상적이다. 견유파 철학자의 표준 복장은 겉옷·배낭·지팡이였고 신은 신지 않았다. 반면 열둘에게 요구된 것은 지팡이·띠·신·한 벌 옷이며 여행 배낭은 없다. 그가 짚는 결정적 대응이 여기 있다 — 열둘에게 요구된 네 가지는 하나님이 애굽 탈출 때 이스라엘에게 지니라 하신 것과 <em>동일하다</em>. 겉옷, 띠, 신, 손에 잡은 지팡이다(출 12:11). 이 네 가지 복장은 출애굽의 서두름과 기대를 상기시키며, 열둘의 선교가 애굽으로부터의 탈출만큼 근본적이고 계시적인 무엇을 알린다는 것, 그리고 제자들이 이스라엘 사람들이 그러했듯 새 모험에서 하나님을 섬기기 위해 짐에서 자유로워야 한다는 것을 시사한다.</p>
+<p><span class="c e">E</span> 그가 이어 짚는 목적의 차이도 중요하다. 견유주의는 본질적으로 문명에 대한 공격이었고 무엇보다 모든 형태의 권위로부터의 해방과 오직 자기 양심의 "왕권"에만 복종하기를 추구했다. 견유파에게 유랑과 무집착은 그 자체가 목적이었다. 열둘의 선교는 문명에 대한 십자군도 아니고 권위에서 자유롭지도 않다. 최소한의 짐은 그 자체가 미덕이 아니라 더 큰 섬김과 하나님께 대한 의존의 수단이며, 그 목적은 항의가 아니라 하나님의 다가오는 통치의 선포다.</p>
+<p><span class="c f">F</span> France는 지팡이를 둘러싼 공관복음의 불일치를 정직하게 다룬다. 마가는 지팡이를 일반 금지에서 제외하는데 아마 지팡이 없는 여행이 생각할 수 없었기 때문일 것이나(출 12:11 참조), 마태와 누가는 둘 다 지팡이를 금지 품목에 넣는다. 이 불일치는 너무 직접적이고 단순해서 복음서의 세부 조화 논의에서 즐겨 쓰이는 시험 사례가 되었다. 조화의 유망해 보이는 한 길은 동사의 차이를 짚는 것이다 — 마가는 지팡이를 <em>가지는</em> 것을 허용하는 반면 마태는 <em>얻는</em> 것을 금한다. 그러나 누가는 <em>가지는</em> 것을 금하고, 게다가 마태의 동사는 지팡이만이 아니라 금지 품목 전체를 포괄한다. France의 결론 — 여러 이유를 추측할 수 있으나 지팡이에 관한 불일치는 미해결로 남는다. 다만 이 장비 하나의 유무는 지나친 물질적 준비를 피하라는 이 절들의 강조에 거의 차이를 만들지 않는다고 그는 덧붙인다.</p>
+<p><span class="c f">F</span> 신발에 대해서도 그는 비슷한 문제를 다룬다. 마가는 허용하고 마태와 누가는 금하는데, 마태·누가가 쓴 명사가 다르므로 다른 종류의 신발이 시야에 있다고 논할 수 있으나, 마가가 그 명사만이 아니라 관련 분사도 쓴다는 사실과 두 명사의 용법에 뚜렷한 구별이 정당화되지 않는다는 사실이 그 편리한 제안을 약화한다. 갈릴리 남자들이 흔히 신었다고 알려진 신발은 샌들 외에 없으므로 두 명사는 사실상 동의어다. 옷에 관해서는 세 복음서 기자가 일치한다 — 금지된 것은 두 벌이며, 하나는 입되 추위에 대한 추가 보호는 필요 없다.</p>
+<p><span class="c f">F</span> 그의 종합이 이 대목의 신학적 요점이다. 지팡이와 신을 갖추고 한 벌 옷만 입되 여행 짐이나 여비는 없는 순회 종교 교사는 엘리야와 세례 요한에서 중세의 탁발 수사와 오늘날 여러 수도회로 이어지는 알아볼 만한 계보에 들어맞는다. 예수가 그들을 이렇게 보내신 의도는 금욕 자체를 장려하려는 것이라기보다(그들은 어쨌든 환대를 기대하고 받아들여야 한다) 하나님 나라에 대한 충성이 물질적 안전에 대한 선행 애착의 여지를 남기지 않음을 강조하려는 것이다.</p>
+<div class="krv" id="v10"><b>6:10–13</b> 또 이르시되 어디서든지 누구의 집에 들어가거든 그 곳을 떠나기까지 거기 유하라 / 어느 곳에서든지 너희를 영접하지 아니하고 너희 말을 듣지도 아니하거든 거기서 나갈 때에 발 아래 먼지를 떨어버려 그들에게 증거를 삼으라 하시니 / 제자들이 나가서 회개하라 전파하고 / 많은 귀신을 쫓아내며 많은 병자에게 기름을 발라 고치더라</div>
+<p><span class="c e">E</span> Edwards는 10절의 지침을 감사하는 손님이 되라는 명령으로 읽는다. 자기들을 보내신 예수를 신뢰하는 데는 그들의 필요를 채우도록 그가 지정하신 이들을 신뢰하는 것도 포함된다. 집을 옮겨 다니는 것은 주인들의 명예를 손상하고 그들 사이에 시기를 만든다.</p>
+<p><span class="c f">F</span> 11절에서 놀라운 것은 그들과 그들의 메시지가 환영받지 못할 어떤 <em>곳들</em>이 있으리라는 분명한 예상이라고 France는 짚는다. 나사렛에서조차 예수와 제자들은 처음에 환영받았고 회당에서 가르치라는 초대까지 받았다. 그러나 거기 뒤따른 믿지 않음이 다른 곳에서도 되풀이될 개연성이 있으며, 그럴 경우 제자들은 예수가 나사렛에서 하신 일을 할 준비가 되어 있어야 한다 — 옮겨 가서 환영받을 곳에 사역을 집중하는 것이다.</p>
+<p><span class="c f">F</span> 발의 먼지를 떠는 몸짓에 대해서는 랍비들이 이방 지역을 떠날 때 그 부정을 지니고 가지 않으려 발의 먼지를 털었다고 정리한다. "증거를 삼으라"는 어구는 마음의 변화로 이끌려는 의도를 시사할 수도 있으나 일반적으로 "~에게 불리한 증거"라는 부정적 함의를 지닌다.</p>
+<p><span class="c e">E</span> Edwards는 이 명령의 날카로움을 더 밀고 간다. 팔레스타인 밖을 여행한 유대인은 거룩한 땅을 더럽히지 않도록 돌아올 때 먼지를 털어야 했으므로, 이 명령은 <em>유대인</em> 마을을 <em>이방</em>으로 선언하는 것과 마찬가지다. 이방식 표현으로 이스라엘을 지칭하는 예수의 어법은 이스라엘 땅을 탈신성화하는 효과를 지니며, 민족·나라·인종에 근거한 구원의 전제를 제거한다. 약속의 땅에서조차 약속된 이를 배척하는 이들이 있을 것이다. 다만 12절이 가리키듯 이 경고의 목적은 정죄가 아니라 회개를 이끌어 내는 데 있다고 그는 덧붙인다.</p>
+<p><span class="c e">E</span> 13절의 기름 바름은 신약에서 여기와 약 5:14에만 나온다. 올리브기름은 고대의 생필품으로 음식·도유·제사·등불 연료·의약으로 쓰였고, 랍비 자료가 질병 치유와 축귀 양쪽에서 그 약효를 자주 언급한다. Edwards의 정리 — 이 대목에서 기름 부음은 치유의 수단 이상이며 좋은 소식의 침투를 알리는 표징이자 "즐거움의 기름"(시 45:7)으로 바르는 것이다.</p>
+<div class="note"><div class="tt">준비되지 않은 이들이 보내진다</div><span class="c e">E</span> Edwards의 정리가 이 단락의 목회적 중심이다. 주저하고 겁 많은 제자들을 선교에 보내는 일은 겉보기에 완전히 잘못되었다. 그러나 이해하지 못하고 준비되지 않은 제자들이야말로 추수하는 주께 보내심을 받는 모든 시대와 장소의 신자들의 전형이다. 아무리 많은 주해와 신학과 상담을 공부해도 사람은 결코 "사역에 준비되지" 않는다. 참된 사역의 부르심은 언제나 우리가 충분히 준비되지 않은 그것으로 우리를 부른다. 그리고 그런 자각 속에서만 그리스도인은 예수 그리스도의 임재와 약속을 경험하며 인간의 역량이 아니라 부르시는 이와 선포 자체의 자증하는 능력에 의존하기를 배운다. <span class="c w">W</span> Witherington도 같은 방향을 짚는다 — 6:6b–13은 제자들이 예수의 위임에 순종해 실제로 긍정적인 일들을 했음을 분명히 한다. 그들은 사역이 무엇에 관한 것인지 이해하는 것보다 사역을 하는 데 더 나은 듯 보인다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 3 ═══════ -->
+<section class="part" id="s3">
+<div class="part-head">
+<div class="gk">Ἰωάννης ὁ βαπτίζων</div>
+<div class="eyebrow">6:14–16</div>
+<h2>3. 헤롯이 듣고</h2>
+<div class="gloss">이오안네스 호 밥티존 — 세례 요한</div>
+</div>
+<div class="krv" id="v14"><b>6:14–16</b> 이에 예수의 이름이 드러난지라 헤롯 왕이 듣고 이르되 이는 세례 요한이 죽은 자 가운데서 살아났도다 그러므로 이런 능력이 그 속에서 일어나느니라 하고 / 어떤 이는 그가 엘리야라 하고 또 어떤 이는 그가 선지자니 옛 선지자 중의 하나와 같다 하되 / 헤롯은 듣고 이르되 내가 목 벤 요한 그가 살아났다 하더라</div>
+<p><span class="c f">F</span> France는 이것이 마가의 이야기에서 헤롯 안디바가 몸소 등장하는 처음이자 유일한 대목이라고 짚는다. 그의 "당파" 헤롯당은 3:6에 나왔고 예수가 8:15에서 그를 지나가듯 언급할 것이다. 요한과 예수의 사역 기간 내내 갈릴리와 베레아의 통치자로서 그는 민중 봉기를 조장할 잠재력을 지닌 새 종교 운동에 대해 우려할 이유가 있었다. 요세푸스가 전하는 요한 처형 기사는 명시적으로 요한이 선동의 지도자가 될 가능성이라는 관점에서 서술된다. 그런 사람에게는 성공적인 "부흥" 설교자 하나가 다른 하나와 매우 흡사해 보였으리라는 것이 놀랍지 않다.</p>
+<p><span class="c f">F</span> 이 짧은 단락이 마가가 파악한 제자 무리 밖의 대중적 반응에 대한 흥미로운 통찰도 제공한다고 그는 본다. 열거된 선택지가 모두 "선지자" 범주에 들어 4절에서 예수가 쓴 그 용어를 인정하며, 두드러진 권위와 이적의 성향을 지닌 종교 교사를 평가할 때 탐색할 자연스러운 범주였던 듯하다. 같은 범위의 의견이 8:28에서 예수 자신이 자기의 대중적 이미지를 물을 때 다시 열거된다.</p>
+<p><span class="c f">F</span> "왕"이라는 지칭은 기술적으로 정확하지 않다고 그는 짚는다. 아우구스투스가 안디바에게 아버지가 누린 이 칭호를 명시적으로 거부해 그는 주후 39년 폐위될 때까지 분봉왕으로 남았다. 그러나 그런 헌정적 세부는 갈릴리에서 별 의미가 없었을 것이며, 거기서 안디바는 사실상 "왕"으로 행동했고 그렇게 인정받았다. <span class="c w">W</span> Witherington은 여기에 아이러니가 있다고 본다 — 왕으로 불리기를 로마와 모두에게 요청한 바로 그 일이 결국 39년에 그를 유배로 몰아갔기 때문이다.</p>
+<p><span class="c f">F</span> "죽은 자 가운데서 살아났도다"라는 관념도 그가 다룬다. 요한의 죽음 이전에 이미 알려지고 활동한 사람 안에서 요한이 어떻게 "부활"했다고 여겨질 수 있는지 이해하기 쉽지 않다. France의 정리 — 예수를 "부활한 요한"이라 부르는 것은 부활에 대한 정리된 "교리"의 표명(하물며 환생 관념)이라기보다, 엘리사에게 엘리야의 "영"이 옮겨진 심상으로 더 잘 전달되는 종류의 연속성 감각을 다소 서툴지만 생생하게 표현하는 방식으로 보는 편이 낫다.</p>
+<p><span class="c e">E</span> Edwards는 15절의 높은 평가에서 신학적 요점을 끌어낸다. 헤롯은 예수를 살아 돌아온 세례자로, 혹은 주의 날의 선구자이며 대중적 유대교에서 궁핍한 자의 도움이던 엘리야로, 혹은 오래 침묵한 큰 선지자 중 하나로 생각한다. 예수가 대중의 마음에서 메시아로 여겨지지는 않으나 분명히 이스라엘의 가장 위대한 인물들에 든다. 그는 무엇보다 선지자이며 선지자의 운명을 겪게 될 것이다. Edwards의 정리 — <em>예수에 대해 높은 견해를 갖는 것은 믿음과 같지 않다.</em> 예수를 엘리야나 선지자 중 하나로 여기는 것은, 오늘날 그를 이제껏 살았던 가장 위대한 인물이나 인류의 가장 훌륭한 도덕적 본보기로 여기는 것과 마찬가지다.</p>
+<p><span class="c f">F</span> 16절에서 안디바가 첫 견해를 지지하되 특별한 뉘앙스와 함께 그렇게 한다는 점을 그는 짚는다. 어순과 "내가"의 두드러진 포함으로 강조되듯, 요한의 처형에 책임이 있는 것이 자기 자신이었으므로 요한의 "재등장"은 그에게 개인적 위협이며 그의 죄책감 어린 양심을 찾아와 괴롭힌다. 이 관찰이 마가에게 요한의 죽음 이야기를 할 실마리를 제공한다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 4 ═══════ -->
+<section class="part" id="s4">
+<div class="part-head">
+<div class="gk">ἐπὶ πίνακι</div>
+<div class="eyebrow">6:17–29</div>
+<h2>4. 생일 잔치</h2>
+<div class="gloss">에피 피나키 — 소반에 얹어</div>
+</div>
+<div class="krv" id="v17"><b>6:17–20</b> 전에 헤롯이 자기가 동생 빌립의 아내 헤로디아에게 장가 든 고로 이 여자를 위하여 사람을 보내어 요한을 잡아 옥에 가두었으니 / 이는 요한이 헤롯에게 말하되 동생의 아내를 취한 것이 옳지 않다 하였음이라 / 헤로디아가 요한을 원수로 여겨 죽이고자 하였으되 하지 못한 것은 / 헤롯이 요한을 의롭고 거룩한 사람으로 알고 두려워하여 보호하며 또 그의 말을 들을 때에 크게 번민을 하면서도 달갑게 들음이러라</div>
+<p><span class="c f">F</span> France는 이 단락을 "여담"이라 부르는데, 마가복음에서 예수나 그 제자들과 겉으로 아무 연결이 없는 유일한 대목으로 두드러지기 때문이다. 그러면서 그 배치의 의도를 짚는다 — 제자들의 선교 기사 안에 이 이야기를 "샌드위치"로 넣고 예수의 정체 논의 뒤에 놓은 것은, 요한의 운명을 "또 다른 요한"이 예상해야 할 바의 맛보기로서 예수 이야기에 묶어 놓으려는 것이다. 마가에서 헤롯과 헤롯당에 대한 네 언급(3:6; 6:14–29; 8:15; 12:13)이 모두 하나님의 일에 대한 적대와 위협을 함축한다는 점도 그가 든다.</p>
+<p><span class="c f">F</span> 이야기꾼으로서 마가의 솜씨도 그가 짚는다. 마태가 136낱말로 해내는 것을 마가는 249낱말로 이야기하는데, 추가 요소를 더하지 않으면서 안디바의 우유부단, 잔치, 춤에 더 넉넉히 머물러 동방 궁정의 추악한 불의의 분위기를 더 기억에 남게 만든다. 안디바에 대한 헤로디아의 장악은 독자에게 아합과 이세벨을 떠올리게 하며(왕상 21장), 못마땅해하는 선지자로서 요한의 역할은 그 이야기에서 엘리야의 역할을 반영한다.</p>
+<h3>불법한 혼인</h3>
+<p><span class="c f">F</span> France는 이 혼인의 문제가 첫 아내를 내보낸 데 있지 않다고 정리한다. 유대 율법 아래 그는 그럴 자격이 있었다(다만 그것이 페트라와의 전쟁을 촉발했다). 문제는 이 둘째 아내가 "네 동생의 아내"였고 따라서 레위기의 혼인 규정으로 금지되었다는 데 있다(레 18:16; 20:21). 형제의 죽음 뒤에도 (계대혼의 특정 경우를 제외하면) 이는 용납될 수 없었을 텐데, 첫 남편이 아직 살아 있다는 사실이 그 위반을 가중했다. 유대 율법은 여자가 남편과 이혼하는 것을 허용하지 않았으나 헤로디아는 로마 시민권을 이용해 로마법 아래 첫 남편과 이혼한 듯하다 — France가 짚듯 이 점은 10:12의 예수의 선언에 이를 때 관련이 있게 된다.</p>
+<p><span class="c f">F</span> 19–20절이 나머지 이야기가 전개할 대조를 세운다. 단호히 적대적인 헤로디아와, 결국 자기 판단에 반해 선고를 내리도록 속아 넘어갈 흔들리는 안디바다. 그가 짚는 병행이 인상적이다 — 15:1–15에서 제사장들의 확고한 적대에 대한 빌라도의 무력한 저항과의 평행이 두드러지며, 요한과 예수의 운명을 함께 묶으려는 마가의 의도의 또 하나의 표지다. 빌라도가 15:14에서 예수에 대해 함축적으로 되울릴 것이 요한을 "의롭고 거룩한" 이로 본 안디바의 견해다.</p>
+<p><span class="c f">F</span> 20절의 두 동사도 그가 짚는다. "보호하며"는 구금이 아니라 헤로디아로부터의 보호를 가리키며, "달갑게 들음"은 안디바가 적어도 설득에 열려 있었음을 함축한다. 그러나 그는 혼란스럽고 결정하지 못한 채 남았다 — France가 채택하는 이문이 "크게 번민을 하면서도"이며, 누가가 예수에 대해서도 그가 그러했다고 전하는 그 상태다.</p>
+<div class="krv" id="v21"><b>6:21–23</b> 마침 기회가 좋은 날이 왔으니 곧 헤롯이 자기 생일에 대신들과 천부장들과 갈릴리의 귀인들로 더불어 잔치할새 / 헤로디아의 딸이 친히 들어와 춤을 추어 헤롯과 그와 함께 앉은 자들을 기쁘게 한지라 왕이 그 소녀에게 이르되 무엇이든지 네가 원하는 것을 내게 구하라 내가 주리라 하고 / 또 맹세하기를 무엇이든지 네가 내게 구하면 내 나라의 절반까지라도 주리라 하거늘</div>
+<p><span class="c w">W</span> Witherington은 Myers의 정치적 독법을 소개한다. 요한의 참수 이야기를 갈릴리의 부패한 정부에 대한 마가의 정치 풍자로 읽을 수 있으며, 헤롯의 누룩이 실제로 무엇인지를 드러낸다는 것이다. 생일 잔치의 초대 명단이 그 궁정과 군사·상업 부문으로 뻗은 권력의 그물을 드러낸다 — 대신들과 천부장들과 갈릴리의 귀인들이다. 그리고 풍자는 이 모든 권력자 한가운데서 세례자의 운명이 춤추는 소녀와 그에게 한 어리석은 맹세로 결정된다는 데서 온다. Witherington이 덧붙이는 것은 그 풍자의 바탕이 마가의 묵시적 관점이라는 점이다 — 아합 아래의 이스라엘처럼 그 지상의 왕들과 나라들은 너무 부패해 무너지거나 대체되기에 합당할 뿐이며, 마가의 신학에서 그것을 대체할 것은 요한과 예수 같은 선지자들이 목숨을 잃어 가며 알리는 하나님의 통치다.</p>
+<div class="caveat"><div class="tt">22절의 본문 문제</div><span class="c f">F</span> 22절에는 "그의 딸 헤로디아"로 읽는 이문이 있어 17절과 명백히 충돌한다 — 거기서 헤로디아는 안디바의 (최근) 아내이지 딸이 아니다. 이 독법이 시내·바티칸·D 사본 등에 잘 증언되어 있으나, France는 마가가 이것을 의도했을 수 없다고 판단하고 "헤로디아의 딸"로 읽는 다수 독법을 선호한다. 그가 제시하는 설명은 부주의한 필사자가 끼어든 대명사에 당황해 기계적으로 고쳐 문맥의 서사를 훼손한 이른 시기의 오류라는 것이다.<br><br>춤춘 이의 정체도 그가 다룬다. 마태와 마가 대다수 사본을 따르면 그는 헤로디아가 전 남편에게서 낳은 딸이며, 복음서가 이름을 주지 않으나 전승은 그를 살로메로 지목해 왔다. 살로메는 주후 34년 빌립이 죽기 전 그와 혼인할 만큼 나이가 들었으므로 요한의 죽음 당시 십 대였을 수 있고, 여기 쓰인 "소녀"라는 낱말은 (야이로의 열두 살 딸에게 쓰인 그 낱말이다) 혼인 적령기까지의 소녀에게 적절하다. 그리고 마가의 이야기가 그 소녀를 어머니의 지시 아래 행동하는 이로 그려 간다는 사실(24, 28절)이 다수 독법을 뒷받침한다.</div>
+<div class="krv" id="v24"><b>6:24–29</b> 그가 나가서 그 어머니에게 말하되 내가 무엇을 구하리이까 그 어머니가 이르되 세례 요한의 머리를 구하라 하니 / 그가 곧 왕에게 급히 들어가 구하여 이르되 세례 요한의 머리를 소반에 얹어 곧 내게 주기를 원하옵나이다 하니 / 왕이 심히 근심하나 자기가 맹세한 것과 그 앉은 자들로 인하여 그를 거절할 수 없는지라 / 왕이 곧 시위병 하나를 보내어 요한의 머리를 가져오라 명하니 그 사람이 나가 옥에서 요한을 목 베어 / 그 머리를 소반에 얹어다가 소녀에게 주니 소녀가 이것을 그 어머니에게 주니라 / 요한의 제자들이 듣고 와서 시체를 가져다가 장사하니라</div>
+<p><span class="c e">E</span> Edwards는 이 대목을 마가의 첫 수난 기사로 읽는다. 마가복음에서 예수에 관하지 않은 대목은 둘뿐인데 둘 다 요한에 관한 것이고 둘 다 예수를 예고한다. 첫째(1:2–8)에서 요한은 예수의 메시지와 사역의 선구자이고, 여기(6:14–29)서는 예수의 <em>죽음</em>의 선구자다. 그가 열거하는 평행이 촘촘하다 — 요한과 예수 모두 그들을 두려워하되 흔들리다 끝내 사회적 압력에 굴복하는 정치적 폭군에게 처형된다. 요한의 경우 안디바가 헤로디아에게 굴복하고 예수의 경우 빌라도가 군중에게 굴복한다. 둘 다 정치적 음모와 부패의 희생자로 "털 깎는 자 앞에 잠잠한 양같이"(사 53:7) 침묵 가운데 죽으며, 가장 분명하게는 둘 다 의롭고 무죄한 희생자로 죽는다.</p>
+<p><span class="c w">W</span> Witherington은 Wolff가 정리한 순서상의 평행을 인용한다 — ① 체포(6:17 / 14:46), ② 죽일 모의(6:19 / 14:1), ③ 두려움(6:20 / 11:18, 32; 12:12; 14:2), ④ 압력 아래 처형되는 무죄한 사람(6:26 / 15:10, 14–15), ⑤ 장사(6:29 / 15:45–46)다. 그리고 마카베오2서 6:18–31과 마카베오4서 5:1–6:30의 다른 순교 이야기들과의 평행도 그가 짚는다.</p>
+<p><span class="c s">S</span> Stein도 같은 방향으로 정리하되 기독론적 기능을 강조한다. 이 이야기는 제자들의 선교를 위한 시간적 막간을 제공하지만 기독론적 기능도 지니는데, 제자들 선교의 성공을 부각하기 때문이다(6:14). 결과적으로 예수의 위대하심을 부각한다 — 그들의 선교가 그의 전파와 치유 사역의 연장이었으므로, 그들의 성공이 클수록 보내신 이가 더 위대해야 한다. Stein이 짚는 대비도 있다 — 헤롯과 빌라도 둘 다 희생자의 무죄를 인정하고, 둘 다 자기 영혼과 맞바꾸어 세상의 호의와 갈채를 얻기를 택하며(8:36), 둘 다에게서 세상의 염려가 요한과 예수에게 들은 말씀을 막았다.</p>
+<p><span class="c e">E</span> Edwards는 요한의 순교가 예수의 십자가형 이상을 예표한다고 본다. 그것은 또한 탐욕과 퇴폐와 권력과 부의 세상에서 예수를 따르는 일의 결과를 예시한다. 마가가 세례자의 잔혹하고 감동적인 순교 기사를 열둘의 파송과 귀환 사이에 끼워 넣은 것은 독자들에게 제자도의 값을 각인시키기 위함이라는 것이 그의 정리다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 5 ═══════ -->
+<section class="part" id="s5">
+<div class="part-head">
+<div class="gk">ἐσπλαγχνίσθη</div>
+<div class="eyebrow">6:30–34</div>
+<h2>5. 목자 없는 양</h2>
+<div class="gloss">에스플랑크니스테 — 불쌍히 여기사</div>
+</div>
+<div class="krv" id="v30"><b>6:30–32</b> 사도들이 예수께 모여 자기들이 행한 것과 가르친 것을 낱낱이 고하니 / 이르시되 너희는 따로 한적한 곳에 가서 잠깐 쉬어라 하시니 이는 오고 가는 사람이 많아 음식 먹을 겨를도 없음이라 / 이에 배를 타고 따로 한적한 곳에 갈새</div>
+<p><span class="c f">F</span> France는 30절에서 열둘이 마가에서 유일하게 "사도들"로 서술된다고 짚는다. 이 명사는 여기와 3:14의 동사 "보내다"를 되울리며 "보내심을 받은 자들"이라는 더 어원적 의미로 쓰인다. 마가에는 이 낱말이 직분이나 고정된 무리의 일원을 지칭한다고 시사할 것이 없으며, 그 용법은 이 서사에서 오직 여기서만 수행된 선교사로서의 기능을 나타낸다.</p>
+<p><span class="c e">E</span> Edwards는 31–32절에서 제자도의 첫 요건을 다시 읽는다. 제자의 삶은 예수를 <em>위한</em> 선교만이 아니라 예수와 <em>함께하는</em> 선교이며(3:14), 그들의 봉사가 그와의 사귐을 밀어내거나 가릴 수 없다. 그가 짚는 문법적 표지 하나 — 31–32절에서 "따로"와 "한적한 곳"이라는 두 그리스어 어구가 반복되어 그 우선순위를 표시한다. Edwards의 정리 — 제자들이 예수께 모인다는 것은 분주함 한가운데서 그들이 오직 그에게 책임을 진다는 뜻이며, 그들에 대한 요구가 클수록 그와 홀로 있을 필요도 커진다.</p>
+<div class="krv" id="v33"><b>6:33–34</b> 그들이 가는 것을 보고 많은 사람이 그들인 줄 안지라 모든 고을로부터 도보로 그 곳에 달려와 그들보다 먼저 갔더라 / 예수께서 나오사 큰 무리를 보시고 그 목자 없는 양 같음으로 인하여 불쌍히 여기사 이에 여러 가지로 가르치시더라</div>
+<p><span class="c e">E</span> Edwards는 아이러니를 짚는다. 앞서 제자들이 예수의 홀로 있음을 방해했고(1:35–39) 이제 무리가 그들의 홀로 있음을 방해한다. 무리는 예수와 열둘이 배로 떠나는 것을 보고 육로로 서둘러 그들을 가로막는다. 그가 채택하는 독법 "먼저"가 옳다면 무리 편의 놀라운 의도성을 감안해야 한다 — 예수의 움직임을 예상하고 그의 도착을 기다린 것이다.</p>
+<h3>목자 없는 양</h3>
+<p><span class="c e">E</span> Edwards는 34절의 "불쌍히 여기사"에 해당하는 그리스어가 신약에서 오직 예수에 대해서만 쓰인다고 짚고, 여기서 그 긍휼이 "여러 가지로 가르치심"으로 표현된다는 점을 강조한다. 그리고 "목자 없는 양"이라는 심상을 정확히 규정한다 — 이 심상이 약하고 무력한 양을 돕는 예수의 그림을 불러내지만, 유대 전통에서 그 일차적 함의는 목양적이지 않다. 은유로서 양의 목자는 이스라엘에서 모세 같은 지도자(사 63:11)를, 더 자주는 전쟁을 위해 이스라엘의 군대를 소집할 여호수아 같은 군사적 영웅을 가리키는 흔한 표현이었다(민 27:17; 왕상 22:17; 렘 10:21; 겔 34:5; 37:24; 슥 13:7). Edwards의 정리 — 이것은 군사적 지도력과 승리를 포함하는 <em>패권</em>의 은유다. 그 긍휼 가운데 예수는 방향도 목적도 지도자도 없는 온 백성을 보신다.</p>
+<p><span class="c f">F</span> France는 같은 구약 심상을 인용하되 다른 함의를 읽는다. 왕상 22:17에서 이 표현이 지도자 없는 군대를 가리킨다는 점을 인정하면서도, 이 무리가 봉기를 목적으로 모였다는 독법 전체에 제동을 건다. 마가의 서사에 열거된 어떤 요소도 군사적 해석을 요구하지 않는다는 것이다 — 목자 없는 양에 대한 예수의 응답은 긍휼과 가르침이지 군사 조직이 아니고, 앉은 무리를 "떼"로 서술하는 것은 군사 열병으로 이해하기에 기묘하게 어울리지 않는다. France의 정리 — 이야기 전체가 군사 기동보다 즉석 소풍처럼 읽히며, 마가의 관심은 급식 이적의 의미이지 그 사람들이 예수를 뒤쫓으며 마음에 품었을 목적이 아니다.</p>
+<p><span class="c s">S</span> Stein은 여기에 기독론적 심상이 하나 더해진다고 본다. 이스라엘의 "목자"로서의 예수 묘사이며, 하나님이 자기 백성에게 보내실 오는 "목자"의 약속(겔 34:23)이 이제 성취되었다는 것이다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 6 ═══════ -->
+<section class="part" id="s6">
+<div class="part-head">
+<div class="gk">πέντε ἄρτους</div>
+<div class="eyebrow">6:35–44</div>
+<h2>6. 떡 다섯 개</h2>
+<div class="gloss">펜테 아르투스 — 떡 다섯 개</div>
+</div>
+<div class="krv" id="v35"><b>6:35–38</b> 때가 저물어가매 제자들이 예수께 나아와 여짜오되 이 곳은 빈 들이요 날도 저물어가니 / 무리를 보내어 두루 촌과 마을로 가서 무엇을 사 먹게 하옵소서 / 대답하여 이르시되 너희가 먹을 것을 주라 하시니 여짜오되 우리가 가서 이백 데나리온의 떡을 사다 먹이리이까 / 이르시되 너희에게 떡 몇 개나 있는지 가서 보라 하시니 알아보고 이르되 떡 다섯 개와 물고기 두 마리가 있더이다 하거늘</div>
+<p><span class="c e">E</span> Edwards는 제자들의 제안이 지극히 합리적이라고 인정한다. 무리를 해산해 인근 마을로 흩어져 식량을 사게 하는 것이며, 시간과 인원을 고려하면 이 제안에도 한계가 있었으나 그들에게는 아무것도 하지 않고 필요가 위기로 커지도록 두는 것보다 나아 보인다. 그런데 예수는 위기를 완화하기는커녕 <em>심화</em>하신다 — "너희가 먹을 것을 주라." 그들의 생각에 그것은 불합리하다 못해 불가능한 명령이다. 그러나 주의 모든 명령이 그러하듯 결국 그들은 정확히 그가 말씀하신 대로 하게 되며, 다만 지금은 그것이 어떻게 가능할지 상상할 수 없을 뿐이다.</p>
+<p><span class="c e">E</span> 38절의 전환도 그가 짚는다. "너희에게 떡 몇 개나 있는지 가서 보라." 제자들은 <em>없는</em> 것을 불평하고 예수는 그들이 <em>가진</em> 것에 초점을 맞추신다. 문제는 그들 너머의 무엇이 아니라 그들 가운데 있는 무엇으로 해결될 것이다. Edwards의 정리 — 예수는 제자들이 불가능만 보는 곳에서 가능성을 보시는데, 하나님은 가장 작은 선물이라도 그에게 내어드리면 불리실 수 있기 때문이다. 그가 짚는 구약 병행 하나 — 제자들은 문제의 크기에 압도되며, 광야에서 이스라엘을 먹여야 하는 필요 앞에서 모세가 그러했던 것과 같다(민 11:13, 22).</p>
+<p><span class="c w">W</span> Witherington은 이백 데나리온이 하루 한 데나리온을 벌던 일용 노동자의 한 해 임금의 삼분의 이에 해당한다고 셈하고, 보통의 떡 한 덩이가 두께 2.5센티미터에 지름 20센티미터쯤이었으리라고 적는다. 제자들의 응답은 긴 하루의 끝에 나온 퉁명스럽고 날카로운 대꾸, 어쩌면 본능적인 대꾸로 보아야 한다는 것이 그의 판단이다. 그러면서 그가 짚는 요점 — 예수는 제자들이 그에게 돌아온 뒤에도 계속 그의 사역의 연장이 되기를, 계속 그의 대리인으로 근무하기를 원하신다. 이제 그들은 예수가 그러하시듯 사람들에게 설교하거나 치유하는 데 그치지 않고 목자가 되기를 요청받는다 — 현장 실습이라 부를 만하다는 것이다.</p>
+<div class="krv" id="v39"><b>6:39–41</b> 제자들에게 명하사 그 모든 사람으로 떼를 지어 푸른 잔디 위에 앉게 하시니 / 떼로 백 명씩 또는 오십 명씩 앉은지라 / 예수께서 떡 다섯 개와 물고기 두 마리를 가지사 하늘을 우러러 축사하시고 떡을 떼어 제자들에게 주어 사람들에게 나누어 주게 하시고 또 물고기 두 마리도 모든 사람에게 나누시매</div>
+<p><span class="c e">E</span> <span class="c w">W</span> 두 주석이 백 명씩 오십 명씩의 배열에 주목한다. Edwards는 그런 크기의 무리가 시중들기에 관리 가능하게 만들었으나 실용적 기능 이상을 지녔을 수 있다고 본다. 모세가 이스라엘을 각 지도자 아래 천·오백·백·십 명의 무리로 배열했고(출 18:25; 민 31:14) 쿰란 공동체에서도 유사한 편성이 실행되었다. 이 배열은 확실히 광야에서 이스라엘을 위한 하나님의 이적적 공급을 상기시키며, 마지막 날 하나님 백성의 종말론적 모임을 암시할 수도 있다. Witherington은 "떼"에 해당하는 낱말이 식사를 위해 기대라는 명령과 결합될 때 대체로 이방인인 청중에게 손님들 사이의 특별한 유대를 포함하는 만찬을 시사했으리라고 덧붙이고, 쿰란 문헌(1QSa 2.11–22)에서 같은 구약 본문이 메시아 잔치의 청사진으로 여겨졌다는 점을 짚는다.</p>
+<p><span class="c w">W</span> "푸른 잔디"에 대한 그의 관찰도 흥미롭다. 한적한 곳이되 사막은 아니며, 그 무성한 푸른 잔디는 전해 가을의 곡식이 바닥날 무렵인 봄철을 가리키기도 한다.</p>
+<h3>성찬의 예고인가</h3>
+<p><span class="c f">F</span> France는 41절의 네 동사(가지사·축사하시고·떼어·주어)가 최후의 만찬에서 성찬 행위를 서술하는 데 전통적으로 쓰인 동사들이며 14:22에서 같은 순서로 다시 나타난다는 데 폭넓은 동의가 있다고 정리한다. 14:25이 가리키듯 그 성찬 식사가 하나님 나라 메시아 잔치의 맛보기라면, 광야에서 이 사람들에게 제공된 것은 메시아적 성취를 가리키는 표지이며 그리스도인 독자에게는 필연적으로 최후의 만찬의 예고가 된다. 요한은 인자의 살과 피를 먹고 마심에 관한 강화를 이어 붙여 그 요점을 더 분명히 하지만, 마가는 독자가 그 연결을 알아차리도록 남겨 둔다는 것이 그의 정리다. <span class="c e">E</span> Edwards도 초기 교회가 오천 명 급식과 최후의 만찬 사이의 평행을 보았다는 데 놀랄 것이 없다고 본다.</p>
+<p><span class="c w">W</span> Witherington은 여기에 반대한다. 이 이야기 내내 초점은 떡에 있고 물고기는 사후에 언급되는 부수적 요소다. 이것은 떡과 <em>물고기</em>의 이야기이지 떡과 포도주의 이야기가 아니며, 따라서 마가가 이것을 성찬 식사로 그리려는 의도를 지녔는지 의심스럽다는 것이다. 그가 짚는 어휘 근거 하나 — 마가는 "축사하시고"에 해당하는 낱말을 쓰며 성찬 본문의 감사 동사는 이 이야기에 나오지 않는다. Witherington의 결론 — 이 이야기는 신약의 평행이 아니라 구약의 평행에 비추어 보아야 한다.</p>
+<p><span class="c f">F</span> 구약 반향에 대해서는 France도 상세히 다룬다. 광야에서 이적적으로 공급된 떡이라는 모티프에서 모세와 만나의 반향을 배운 독자가 놓치기 어렵다. 그러나 더 직접적으로 분명한 것은 왕하 4:42–44의 엘리사 이적과의 유사성이며, 구약 이야기를 아는 이들은 손님이 백 명에서 오천 명으로 늘어난 반면 떡은 스무 개에서 다섯 개로 줄었다는 사실을 흥미롭게 여겼을 것이다. 이 경우 마가가 그 이야기를 염두에 두었다는 데 의심의 여지가 거의 없는데, 굶주린 무리와 식량 부족이라는 상황이 유사할 뿐 아니라 서사가 같은 모티프에 초점을 맞추기 때문이다 — 종/제자들에게 무리를 먹이라는 명령, 그에 대한 그들의 놀란 물음, 배부름, 그리고 끝에 남은 음식이다.</p>
+<div class="krv" id="v42"><b>6:42–44</b> 다 배불리 먹고 / 남은 떡 조각과 물고기를 열두 바구니에 차게 거두었으며 / 떡을 먹은 남자는 오천 명이었더라</div>
+<p><span class="c e">E</span> Edwards는 42절의 "다"에 무게를 둔다. 토라와 구전 전통이 유대인의 삶을 식탁에서만큼 규제한 곳이 없었으며, 정결법의 효과는 합당하게 준비된 합당한 음식만을 합당하게 정결한 이들이 먹도록 보장하는 것이었다. 그런데 광야의 잔치에서는 정결법의 의례적 위계가 열린 초대와 모든 사람의 포용에 밀려난다. "그들이 <em>다</em> 먹고 배불렀다." 그리고 예수의 떡은 그것이 그의 긍휼의 표현이기에 <em>배부르게</em> 하며, 제자마다 남은 것 한 바구니씩 있을 만큼의 분량으로 주어진다.</p>
+<p><span class="c e">E</span> 44절의 "남자"도 그가 짚는다. 여기서 이 낱말은 성별 특정적이다. 더 통상적인 낱말과 달리 이 그리스어는 여자와 아이를 포함하지 않으며 오천 명의 <em>남성</em>을 뜻한다. 마태의 어법("여자와 어린이 외에 오천 명이나 되었더라")이 그 사실을 강조한다.</p>
+<div class="note"><div class="tt">나눔의 기적으로 읽는 독법</div><span class="c e">E</span> Edwards는 오천 명 급식을 참된 이적이 아니라 무리 편의 나눔의 승리로 설명하는 독법을 검토한다 — 예수의 이타적 정신이 무리에게서 관대함을 이끌어 내어 모두의 필요에 족했다는 것이다. 그 교훈 자체는 좋고 성경 다른 곳에서 가르쳐지지만(행 2:44–45; 4:34–35), 이 이야기의 목적도 아니고 이 사건을 설명하기에 충분하지도 않다는 것이 그의 판단이다. 그가 드는 이유는 서사 내적이다 — 무리 가운데 충분한 식량이 있었다면 상황을 염려하던 제자들이 분명 알았을 것이고, 아니면 이미 꺼내졌을 것이다. 도움은 없거나 멀리 있고 시간은 늦어 간다. 필요를 채우는 이는 제자들이나 무리가 아니라 예수다.<br><br><span class="c f">F</span> France는 더 근본적으로 접근한다. 이 이야기와 뒤이은 이야기 양쪽에서 주석가가 "실제로 무슨 일이 일어났는가"를 설명하리라 기대되곤 하지만, 그것은 무익한 물음이며 제시되는 답들은 증거보다 추측으로 특징지어진다는 것이다. 마가는 "자연법칙"이 어떻게 유예되었는지 설명하는 데 아무 관심이 없다. 그와 그의 이해를 공유하려는 독자에게 그것은 단순히 이적이었다.</div>
+<p><span class="c s">S</span> Stein은 이 이적의 규모 자체가 예수의 위대하심을 드러낸다고 정리한다. 엘리야(왕상 17:8–16)와 엘리사(왕하 4:42–44)의 다른 급식 이적들이 이에 비하면 무색하며, 오직 하나님이 광야에서 이스라엘 자손에게 만나를 공급하신 일만이 이를 능가한다. 그리고 그가 짚는 셋째 강조점 — 이 이적은 하나님 나라가 실로 도래했음을(1:15) 드러내며 그 첫 열매가 나타나고 있음을 보여 준다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 7 ═══════ -->
+<section class="part" id="s7">
+<div class="part-head">
+<div class="gk">ἐγώ εἰμι</div>
+<div class="eyebrow">6:45–52</div>
+<h2>7. 지나가려고 하시매</h2>
+<div class="gloss">에고 에이미 — 내니</div>
+</div>
+<div class="krv" id="v45"><b>6:45–47</b> 예수께서 즉시 제자들을 재촉하사 자기가 무리를 보내는 동안에 배 타고 앞서 건너편 벳새다로 가게 하시고 / 무리를 작별하신 후에 기도하러 산으로 가시니라 / 저물매 배는 바다 가운데 있고 예수께서는 홀로 뭍에 계시다가</div>
+<p><span class="c e">E</span> Edwards는 45절의 긴박함을 짚는다. "즉시 재촉하사"에 해당하는 그리스어가 이례적으로 강해서 제자들이 "지체 없이 떠나도록 강제되었다"는 뜻이며, 이 동사는 제자들이 떠나기를 꺼렸음을 시사한다. 그가 제시하는 이유는 오천 명 급식의 단서들에서 나온다 — 제자들은 무리의 메시아적 열기에 면역이 아니며, 예수는 무리를 평화롭게 해산시켜 혁명적 물결을 막기 위해 그들을 신속히 현장에서 빼내야 했다는 것이다(요 6:14–15).</p>
+<p><span class="c e">E</span> 46절의 기도도 그가 단서로 읽는다. 마가는 예수의 사역에서 오직 세 지점에서만 그가 기도하시는 것을 적는다(1:35; 6:46; 14:35–39). 각 기도가 밤에 한적한 곳에서 이루어지고, 각각에서 제자들이 그에게서 떨어져 있으며 그의 사명을 이해하지 못하고, 각각에서 예수가 형성적 결정이나 위기를 마주한다. Edwards의 정리 — 오천 명 급식 뒤에 예수는 기도로 자신의 신적 아들 됨을 로마에 맞선 자유 투사가 아니라 종으로 표현하려는 부르심을 재확인하신다.</p>
+<p><span class="c f">F</span> France는 조금 더 신중하다. 요한의 명시적 진술에 비추어 강한 동사가 이 시나리오에 들어맞으리라고 인정하면서도, 마가의 서사가 이 절들에서 그런 회피 행동을 감지할 구체적 근거를 주지 않았으므로 어쩌면 그의 특징적으로 생생한 표현법 이상을 보아서는 안 될지 모른다고 적는다. 마가에서 예수는 무리를 해산시킬 수 있고 그의 산행은 단순한 도피가 아니라 기도를 위한 것으로 진술되므로, 무리의 분위기가 아무리 불안정했더라도 그는 상황을 통제하고 계신다는 것이다.</p>
+<div class="krv" id="v48"><b>6:48–50</b> 바람이 거스르므로 제자들이 힘겹게 노 젓는 것을 보시고 밤 사경쯤에 바다 위로 걸어서 그들에게 오사 지나가려고 하시매 / 제자들이 그가 바다 위로 걸어 오심을 보고 유령인가 하여 소리 지르니 / 그들이 다 예수를 보고 놀람이라 이에 예수께서 곧 그들에게 말씀하여 이르시되 안심하라 내니 두려워하지 말라 하시고</div>
+<p><span class="c f">F</span> France는 시간 계산을 짚는다. 오천 명 급식이 늦은 오후에 시작되었고 그 뒤 무리의 편성·급식·정리·해산에 상당한 시간이 흘렀으므로 "저물매"는 통상적 번역보다 훨씬 깊은 밤을 나타내야 하며, 48절의 사경(새벽 3시에서 6시경) 언급이 이를 확인한다. 아무리 바람이 강해도 노 젓는 배가 갈릴리 호수 북부를 건너는 데 열 시간 이상 걸리지는 않았을 것이다. 제자들의 상황은 4:37–38과 달리 위험이 아니라 <em>진척하지 못함</em>으로, 극도의 신체적 노력과 불편으로 제시된다 — "힘겹게"에 해당하는 낱말은 "고문당하는"의 뜻이며, 강한 바람을 거슬러 무거운 배를 젓는 경험이 있는 이들에게 사실적으로 들릴 것이다.</p>
+<h3>바다 위로 걸어서</h3>
+<p><span class="c e">E</span> Edwards는 번역의 여지가 없음을 강조한다. "바다 위로 걸어서"를 다르게 옮길 가능성은 없으며, 여기 쓰인 그리스어 전치사는 물 "위에", "위로", "표면에"를 뜻한다 — 47절의 "뭍에"와 같은 구문이다. 그런 시도가 이루어지면 이야기의 요점이 상실되는데, 구약에서 <em>오직 하나님만이 물 위를 걸으실 수 있기 때문이다</em>. 물 위를 걸어 제자들에게 가심으로써 예수는 오직 하나님만이 걸으실 수 있는 곳을 걸으신다. 죄 사함(2:10)과 자연에 대한 권능(4:39)에서와 마찬가지로 호수 위를 걸으심은 예수를 하나님과 명백히 동일시한다.</p>
+<p><span class="c s">S</span> Stein도 같은 문법적 논증을 편다. "위에"를 "곁에"로 해석하려는 시도는 같은 전치사가 같은 격과 함께 6:47에 쓰였고 거기서 "뭍에"를 뜻해야 한다는 넘을 수 없는 문제에 부딪힌다. 사건이 물가가 아니라 바다 가운데서 일어난다는 사실(6:47)이 이를 절대적으로 분명하게 만든다. Stein의 정리 — "무슨 일이 실제로 일어났는가"에 대해서는 추측할 수 있으나 복음서 기자들의 뜻은 분명하다. 그들은 독자에게 예수가 바다 위를 걸으셨다고 말하고 있다.</p>
+<h3>지나가려고 하시매</h3>
+<p><span class="c e">E</span> Edwards는 48절 후반을 이 이야기의 열쇠로 읽는다. "지나가려고 하시매"는 당혹스럽게도 예수가 제자들을 지나쳐 걸어가려 하셨음을 시사한다. 그러나 구약에서 이 평범한 어구는 특별한 힘을 지녀 하나님의 드문 자기 계시를 알린다. 시내 산에서 초월하신 주께서 모세를 "지나가시며"(출 33:22; 33:19; 34:6) 자기 이름과 긍휼을 계시하셨고, 호렙 산에서도 주께서 "지나가심"으로 엘리야에게 임재를 나타내셨다(왕상 19:11). 그런데 이 관념의 가장 중요한 선례는 욥기 9:8, 11이다 — 하나님만이 홀로 하늘을 펴시며 <em>바다 물결을 밟으시고</em>, 내 앞을 <em>지나시나</em> 내가 보지 못한다. Edwards가 짚는 결정적 자료가 여기 있다. 이 인용은 48절과 언어적·주제적 유사성을 함께 지니는데, "바다 물결을 밟으시며"가 마가와 같은 어법을 담고 "지나가다"에 해당하는 결정적 낱말이 같기 때문이다(출 33:19; 34:6에도 같은 낱말이 나온다).</p>
+<p><span class="c e">E</span> 그가 욥기 9장의 문맥에서 끌어내는 결론이 이 대목의 신학적 중심이다. 욥기 9:1 이하는 하나님과 인간 사이의 경외로운 간격을 이야기한다. 하나님은 인류가 할 수 없고 결코 생각할 수도 없는 일을 하실 수 있으며, 산을 옮기시고 땅을 흔드시며 해를 가리시고 하늘을 광채로 두르시며 "바다 물결을 밟으신다." 이 하나님은 인간의 범주로 파악될 수 없고 그의 행위에 대한 어떤 "자연적" 설명도 어리석고 무의미하다. Edwards의 정리 — 이 관점에서 읽으면 예수의 물 위 걸으심을 "자연적" 현상으로 설명하려는 시도의 무익함이 드러난다. 다만 예수가 제자들을 "지나가실" 때 그는 구약의 하나님 계시와 다른 무엇을 하신다 — 욥기의 신비롭고 수수께끼 같은 하나님을 이전 세대에게 그럴 수 없었던 방식으로 보이고 만질 수 있게 만들려 하신다.</p>
+<p><span class="c f">F</span> France는 같은 어구를 다르게 푼다. 마가가 예수의 오심이 제자들의 곤경을 보신 데서 비롯했고 그 걸으심이 "그들에게" 향한 것이었다고 명시하므로 이 절은 놀랍다는 것이다. 그가 택하는 해법은 서사적이다 — 이 절은 예수의 마음에 있던 것의 진술이라기보다 그의 접근이 <em>제자들의 관점에서 어떻게 보였는지</em>의 진술로 보는 편이 낫다. 물 위의 이 신비로운 인물이 처음에는 배를 지나쳐 가고 있는 것처럼, 그리하여 그들이 온 힘으로도 이루지 못한 진척을 이루고 있는 것처럼 보였다는 것이다. <span class="c w">W</span> Witherington은 두 가능성을 함께 놓되 모세 사가의 반향 쪽에 무게를 싣고, 물 위를 걷는 것이 구약에서 하나님만 하실 수 있는 일이므로(욥 9:8; 시 77:19) 이 장면을 예수의 신적 성격을 드러내는 신현으로 보아야 한다고 정리한다.</p>
+<h3>내니 — ἐγώ εἰμι</h3>
+<p><span class="c e">E</span> Edwards는 "내니"의 그리스어가 모세를 향한 하나님의 자기 계시와 동일하다고 짚는다. 따라서 예수는 하나님의 자리에서 걸으실 뿐 아니라 그의 이름도 취하신다. <span class="c w">W</span> Witherington은 더 신중하게 접근한다. 여기서 이 표현이 "나다" 또는 "나야" 이상을 뜻하지 않을 가능성이 확실히 있으며, 제자들이 유령을 본다고 여겼으므로 정체의 문제가 제기된 것은 사실이다. 그러나 Lane이 짚었듯 시 115:9 이하; 118:5 이하; 사 41:4 이하; 43:1 이하; 51:9 이하가 시사하는 대로, 그런 말이 담대하라거나 두려워 말라는 권면과 결합될 때 신적 자기 계시의 정형을 이루는 듯 보인다. 게다가 모세 패러다임을 기억하면 출 3:14에서 하나님이 모세에게 자신을 계시하시는 어법이 있고, 물 위 걸으심 자체가 이 말의 더 신현적인 해석을 가리킨다. Witherington의 종합 — 이야기 속 제자들은 이 말을 예수가 자신을 밝히는 방식으로 단순히 받아들여 다시금 영적 둔감함을 보이지만, 마가의 청중은 이 말을 더 무거운 뜻으로 받아들이도록 의도되었을 것이다.</p>
+<p><span class="c e">E</span> "유령"이라는 낱말도 그가 다룬다. 신약에서 여기와 마태 병행에만 나오며 고전 그리스어에서 영이나 환영의 나타남을 뜻한다. 신약에서의 희소성은 초자연 세계가 첫 제자들에게 흔한 일도 위안도 아니었음을 상기시키는 냉정한 표지이며, 이 환영이 그들 편의 미신의 산물이라는 전제에 반한다. Edwards가 덧붙이는 관찰 — 호수는 제자들이 생계를 벌던 곳이었고, 다시 말해 그들에게 미지의 이례가 아니라 우리의 일터만큼 익숙하고 평범한 곳이었다.</p>
+<div class="krv" id="v51"><b>6:51–52</b> 배에 올라 그들에게 가시니 바람이 그치는지라 제자들이 마음에 심히 놀라니 / 이는 그들이 그 떡 떼시던 일을 깨닫지 못하고 도리어 그 마음이 둔하여졌음이러라</div>
+<p><span class="c s">S</span> Stein은 51절의 구조를 짚는다. 4:35–41에서는 예수가 바람과 바다에 명령하시는 반면 여기서는 그의 단순한 임재가 바람을 그치게 한다. 마가가 예수께 그 책임을 직접 돌리지는 않으나 배에 들어오실 때 그치는 것으로 서술함으로써, 그리고 제자들의 반응으로써 분명히 함축한다. 그가 짚는 어휘 문제도 중요하다 — 51절의 "놀라니"는 마가의 다른 곳에서(2:12; 5:42) 긍정적으로 쓰이며 그 자체로는 부정적일 필요가 없다. 그러나 52절에 뒤따르는 설명적 표현이 이 놀람을 부정적으로 해석해야 함을 드러낸다. 그것은 경외에 찬 존경보다 몰이해와 마음의 완악함에서 나온 것이다.</p>
+<p><span class="c f">F</span> France는 52절이 놀랄 만큼 부정적인 결론이라고 짚는다. 4:41에서 제자들도 본 것에 압도되었고 거기서도 "이 사람이 누구인가"라는 물음이 예수의 유일무이함의 인상을 높이는 역할을 했다. 여기서도 그들은 마땅히 놀라지만, 이제 그 지극히 자연스러운 두려움과 경외가 마가에게는 그들의 몰이해의, 더 나쁘게는 "둔하여진 마음"의 표시로 받아들여진다. 이 어구는 이사야 6:10을 되울려 더 불길한 울림을 지닌다는 것이 그의 관찰이다.</p>
+<p><span class="c f">F</span> 그가 이 절의 무게를 재는 방식이 인상적이다. 두 용어 모두 복음서 나머지에서 주제가 전개되며 되풀이될 것이다. 4:12에서 (이사야 6:9–10 인용에서) "외인"의 표지였던 "깨닫지 못함"의 고발이 8:17, 21에서 제자들을 향해 두 번 되풀이될 것이며, 앞의 절에서 그것이 다시 둔하여진 마음이라는 고발과 결부될 것이다. 그리고 이 후자의 어구는 앞서 예수의 사역을 반대한 이들의 상태에 쓰였다(3:5). 이제 제자들이 같은 상태에 빠지고 있다. France의 정리 — 비범한 것이 자기들 가운데 있음에 적응하는 평범한 사람들의 자연스러운 더딤으로 보이는 것에 대해 쓰기에는 놀랍도록 강한 언어이며, 특히 바로 이 용어들과 이 구약 모델을 이미 외인과 예수의 대적자를 서술하는 데 쓴 복음서에서 그렇다. 마가는 이렇게 복음서 나머지에서 제자들에 대한 변화하는, 그리고 덜 호의적인 인식을 준비한다.</p>
+<p><span class="c w">W</span> Witherington도 같은 아이러니를 짚는다. 이것은 4:10–12에서 이사야 6:9–10 인용으로 외인을 다룬 방식을 되돌아보게 하되, 출애굽 자료에서 그 용어가 쓰인 방식도 상기시킨다. 그가 인용하는 Painter의 정리는 더 날카롭다 — 제자들은 떡의 이적적 공급과 물 위 걸으심 사이의 연결을 짓지 못했으며(시 78:13–25), 그 연결이 그들이 후대의 모세 인물이면서 동시에 모세의 하나님의 속성을 나타내실 수 있는 이의 임재 안에 있음을 분명히 했어야 했다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 8 ═══════ -->
+<section class="part" id="s8">
+<div class="part-head">
+<div class="gk">κρασπέδου</div>
+<div class="eyebrow">6:53–56</div>
+<h2>8. 게네사렛</h2>
+<div class="gloss">크라스페두 — 옷 가에</div>
+</div>
+<div class="krv" id="v53"><b>6:53–56</b> 건너가 게네사렛 땅에 이르러 대고 / 배에서 내리니 사람들이 곧 예수신 줄을 알고 / 그 온 지방으로 달려 돌아 다니며 예수께서 어디 계시다는 말을 듣는 대로 병든 자를 침상째로 메고 나아오니 / 아무 데나 예수께서 들어가시는 지방이나 도시나 마을에서 병자를 시장에 두고 예수께 그의 옷 가에라도 손을 대게 하시기를 간구하니 손을 대는 자는 다 성함을 얻으니라</div>
+<p><span class="c f">F</span> France는 6:31에서 시작된 호수 둘레의 이적 연속이 이제 서편의 익숙한 지역으로 돌아오며 마무리된다고 정리한다. 이 짧은 요약에서 가르침이 언급되지 않는다는 점이 그가 짚는 첫 관찰이다. 이 단락 내내 그려지는 것은 이적 행하는 예수이며 무리가 그를 찾아낸 것도 그 자격에서였다. 더 놀라운 것은 축귀 언급이 전혀 없다는 점이나, 마가가 이미 그 측면에 큰 강조를 두었으므로 매번 되풀이할 필요가 없었을 것이다.</p>
+<p><span class="c f">F</span> 그가 짚는 대조가 이 단락의 기능을 밝힌다. 게네사렛은 예수의 치유 활동에 관한 다른 요약들이 위치한 호수 북서안의 같은 지역이며(1:32–34; 3:7–12), 여기서 그는 산지의 나사렛(6:1–6)과 달리 이미 치유자로 잘 알려져 있다. 56절의 결과는 이 인구 밀집 호숫가 지역의 정착지들을 도는 꽤 볼 만한 행진처럼 들리며, 이 지역의 겉보기 완전한 의료적 "성공률"이 나사렛의 상황(6:5)과 생생히 대조된다. France가 덧붙이는 신중함 — 요약의 자연스럽게 포괄적인 언어를 문자 그대로 100퍼센트의 결과로 밀어붙이는 것은 현명하지 않을 것이다. 다만 이 지역에서는 나사렛과 달리 예수에 대한 "믿음"이 통상적인 듯 보인다는 것이 그의 정리다.</p>
+<p><span class="c f">F</span> 문법적 관찰 하나도 그가 짚는다. 이 요약 전체에서 예수는 주목의 초점이되 동사의 주어가 아니다. 예수가 환자를 찾아 나가시지 않고 주도권을 잡는 것은 사람들이다.</p>
+<p><span class="c s">S</span> Stein은 마가가 이 요약에서 예수의 치유 능력을 어떻게 강조하는지 정리한다. "온" 지방이 나아오고(6:55), 치유가 예수가 가시는 "어디서나" 일어나며(6:55, 56a), 그것이 마을이든 도시든 들이든 시장이든 상관없다(6:56b). 그의 위대한 치유 능력이 옷의 가장자리에까지 미치고(6:56c) 그 술에라도 손을 댄 "모든" 사람이 나았다(6:56d). 이 치유 사역의 지속적 성격은 6:55–56 내내 미완료 시제를 씀으로써 더욱 강조된다. Stein이 인용하는 정리 — 마가는 이 요약으로 자기가 서술한 몇몇 짧은 치유 사례보다 더 넓고 영향력 있는 사역의 인상을 주려 한다. 그리고 그가 덧붙이는 관찰 — 마가는 예수의 이적 행하는 능력을 조금도 부끄러워하지 않는다.</p>
+<p><span class="c f">F</span> "옷 가"에 대해서는 두 독법이 가능하다고 그는 본다. 유대 남자가 율법에 따라 착용해야 했던 술(민 15:38–39; 신 22:12)을 명시적으로 언급한 것이 마태와 누가의 형태로 혈루증 여인 이야기를 아는 이들에게 그 사건을 상기시키려는 것일 수 있다. 그러나 마가는 그 사건에서 이 낱말을 언급하지 않았다. 만짐을 통한 치유의 소망은 그 여인의 경험에 자극받았을 수 있으나, 이 낱말은 아마 예수의 옷에서 가장 손닿기 쉬운 부분으로서 언급되었을 뿐이라는 것이 그의 판단이다. <span class="c w">W</span> Witherington은 이 낱말이 술을 뜻한다면 예수가 때때로 유대 율법의 세부를 지키셨음을 시사할 수 있으나, 소매 끝에서 지나는 이들이 쉽게 닿을 수 있는 옷의 가장자리나 단을 뜻할 뿐일 수도 있다고 정리한다. 그리고 그가 짚는 요점 — 주술에 물든 믿음이라 해도 여기서 우리는 예수를 향한 믿음의 한 형태를 보며, 더 중요하게는 그 믿음이 아무리 부족하더라도 예수가 그에 응답하신다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 9 ═══════ -->
+<section class="part" id="s9">
+<div class="part-head">
+<div class="gk">λέξεις</div>
+<div class="eyebrow">LEXIS</div>
+<h2>9. 핵심 원어와 문법</h2>
+<div class="gloss">렉세이스 — 낱말과 어법</div>
+</div>
+<div class="tbl-wrap">
+<table>
+<caption>표 2. 6장의 핵심 낱말</caption>
+<thead><tr><th>원어</th><th>음역·뜻</th><th>절</th><th>관찰</th></tr></thead>
+<tbody>
+<tr><td class="head"><span class="gw">πατρίς</span></td><td>파트리스 — 고향</td><td>6:1, 4</td><td><span class="c w">W</span> 직역하면 "아버지의 땅"이며 가족이 살던 특정 지역, 곧 나사렛과 그 인근을 가리킨다. <span class="c f">F</span> 마가는 그 마을의 이름을 대지 않는다.</td></tr>
+<tr><td class="head"><span class="gw">ἐξεπλήσσοντο</span></td><td>엑세플레손토 — 놀라</td><td>6:2</td><td><span class="c s">S</span> 마가에서 10:26을 제외하면 언제나 예수를 향한 긍정적 반응을 서술한다(1:22; 7:37; 11:18). <span class="c w">W</span> 직역하면 "얻어맞았다"에 가깝다.</td></tr>
+<tr><td class="head"><span class="gw">δοθεῖσα</span></td><td>도테이사 — 받은</td><td>6:2</td><td><span class="c s">S</span> 신적 수동태로, "하나님이 그에게 주신 지혜가 무엇이냐"로 읽힌다(4:11 참조). 마가의 유일한 "지혜" 용례다.</td></tr>
+<tr><td class="head"><span class="gw">ὁ τέκτων</span></td><td>호 텍톤 — 목수</td><td>6:3</td><td><span class="c f">F</span> 주로 목재를 다루는 이에게 쓰이되 석공·조각가·대장장이에게도 적용될 수 있다. 이 문맥에서 경멸적인 것은 없고 요점은 익숙함이다. <span class="c w">W</span> 켈수스가 이 종교가 목수에 의해 세워졌다고 비웃었다.</td></tr>
+<tr><td class="head"><span class="gw">ὁ υἱὸς τῆς Μαρίας</span></td><td>호 휘오스 테스 마리아스 — 마리아의 아들</td><td>6:3</td><td><span class="c f">F</span> 신약 어디에도 없는 지칭. 요셉의 죽음으로 설명하는 전통적 견해를 택한다. <span class="c w">W</span> 비방으로 의도되었을 가능성에 무게를 둔다(삿 11:1–2).</td></tr>
+<tr><td class="head"><span class="gw">ἐσκανδαλίζοντο</span></td><td>에스칸달리존토 — 배척한지라</td><td>6:3</td><td><span class="c f">F</span> 4:17에서 환난에 넘어지는 데 쓰인 같은 어군. 여기서는 예수의 사명을 진지하게 받아들이기를 거부함을 가리킨다.</td></tr>
+<tr><td class="head"><span class="gw">οὐκ ἐδύνατο</span></td><td>우크 에뒤나토 — 하실 수 없어</td><td>6:5</td><td><span class="c f">F</span> 마태의 "많은 권능을 행하지 아니하시니라"보다 대담하며 예수의 권위조차 무제한이 아님을 시사한다. 기독론적으로 두드러진 표현이다.</td></tr>
+<tr><td class="head"><span class="gw">ἐθαύμαζεν</span></td><td>에타우마젠 — 이상히 여기셨더라</td><td>6:6</td><td><span class="c f">F</span> 마가에서 예수에 대해 이 동사가 쓰이는 유일한 자리이며(통상 무리와 결부된다) 그가 그린 예수의 "인간적" 성격을 부각한다.</td></tr>
+<tr><td class="head"><span class="gw">δύο δύο</span></td><td>뒤오 뒤오 — 둘씩 둘씩</td><td>6:7</td><td><span class="c f">F</span> 11:1; 14:13에서 되풀이될 방침. <span class="c w">W</span> 신 17:6; 19:15의 두 증인 요구가 그 근거로 거론된다.</td></tr>
+<tr><td class="head"><span class="gw">ῥάβδος</span></td><td>랍도스 — 지팡이</td><td>6:8</td><td><span class="c f">F</span> 마가는 허용하고 마태·누가는 금한다. 조화 논의의 시험 사례이며 France는 미해결로 남긴다. <span class="c e">E</span> 출 12:11의 유월절 복장 네 가지 가운데 하나.</td></tr>
+<tr><td class="head"><span class="gw">πήρα</span></td><td>페라 — 배낭</td><td>6:8</td><td><span class="c e">E</span> 견유파 철학자의 알아볼 만한 여행 배낭이며, 열둘의 목록에서 <em>빠진</em> 품목이라는 점이 견유주의 가설에 반한다.</td></tr>
+<tr><td class="head"><span class="gw">σανδάλια</span></td><td>산달리아 — 신</td><td>6:9</td><td><span class="c f">F</span> 마태·누가가 쓴 명사와 다르나 두 낱말 사이의 뚜렷한 구별은 정당화되지 않는다. 갈릴리 남자가 신은 신발은 샌들 외에 알려진 것이 없다.</td></tr>
+<tr><td class="head"><span class="gw">ἐκτινάξατε τὸν χοῦν</span></td><td>에크티낙사테 톤 쿤 — 먼지를 떨어버려</td><td>6:11</td><td><span class="c f">F</span> 결별의 몸짓(행 13:51; 18:6). 랍비들은 이방 지역을 떠날 때 그 부정을 지니지 않으려 발의 먼지를 털었다. <span class="c e">E</span> 유대인 마을을 이방으로 선언하는 것과 마찬가지다.</td></tr>
+<tr><td class="head"><span class="gw">εἰς μαρτύριον αὐτοῖς</span></td><td>에이스 마르튀리온 아우토이스 — 증거를 삼으라</td><td>6:11</td><td><span class="c f">F</span> 일반적으로 "~에게 불리한 증거"라는 부정적 함의를 지닌다(1:44 참조). 이 표시를 받은 공동체는 심판에 처하게 된다.</td></tr>
+<tr><td class="head"><span class="gw">ἤλειφον ἐλαίῳ</span></td><td>엘레이폰 엘라이오 — 기름을 발라</td><td>6:13</td><td><span class="c e">E</span> 신약에서 여기와 약 5:14에만. 랍비 자료가 올리브기름의 약효를 자주 언급하며, 여기서는 치유의 수단 이상으로 좋은 소식의 표징이다.</td></tr>
+<tr><td class="head"><span class="gw">βασιλεύς</span></td><td>바실류스 — 왕</td><td>6:14, 22, 25–27</td><td><span class="c f">F</span> 기술적으로 부정확하다 — 안디바는 분봉왕이었다. 마가는 일관되게 이 칭호를 쓴다. <span class="c w">W</span> 왕 칭호를 청한 일이 결국 그를 유배로 몰아갔다는 아이러니.</td></tr>
+<tr><td class="head"><span class="gw">συνετήρει</span></td><td>쉬네테레이 — 보호하며</td><td>6:20</td><td><span class="c f">F</span> 구금이 아니라 헤로디아로부터의 보호를 가리킨다(후자도 사실이기는 하다).</td></tr>
+<tr><td class="head"><span class="gw">ἠπόρει</span></td><td>에포레이 — 번민을 하면서도</td><td>6:20</td><td><span class="c f">F</span> 시내·바티칸 사본의 독법. 다수 사본은 더 익숙한 다른 동사로 바꾸었다. 누가가 예수에 대한 안디바의 반응에 같은 어군을 쓴다(눅 9:7).</td></tr>
+<tr><td class="head"><span class="gw">κοράσιον</span></td><td>코라시온 — 소녀</td><td>6:22, 28</td><td><span class="c f">F</span> 5:41–42에서 열두 살 야이로의 딸에게 쓰인 낱말로, 혼인 적령기까지의 소녀에게 적절하다.</td></tr>
+<tr><td class="head"><span class="gw">ἐπὶ πίνακι</span></td><td>에피 피나키 — 소반에 얹어</td><td>6:25, 28</td><td><span class="c w">W</span> 궁정의 사치스러운 잔치 상황을 배경으로 그 요구의 잔혹함을 부각한다.</td></tr>
+<tr><td class="head"><span class="gw">σπεκουλάτωρ</span></td><td>스페쿨라토르 — 시위병</td><td>6:27</td><td>라틴어 차용어로 처형을 집행하는 근위병을 가리킨다. 마가의 라틴어 어휘 경향의 한 예다.</td></tr>
+<tr><td class="head"><span class="gw">οἱ ἀπόστολοι</span></td><td>호이 아포스톨로이 — 사도들</td><td>6:30</td><td><span class="c f">F</span> 마가에서 유일한 용례이며 3:14와 6:7의 동사를 되울려 "보내심을 받은 자들"이라는 어원적 뜻으로 쓰인다. 직분을 지칭하지 않는다.</td></tr>
+<tr><td class="head"><span class="gw">κατʼ ἰδίαν / ἔρημος τόπος</span></td><td>캇 이디안 / 에레모스 토포스 — 따로 / 한적한 곳</td><td>6:31, 32, 35</td><td><span class="c e">E</span> 31–32절에서 두 어구가 반복되어 예수와의 사귐의 우선순위를 표시한다. <span class="c w">W</span> 마가만 세 번 이 표현을 써서 출 16장의 광야 급식을 상기시킨다.</td></tr>
+<tr><td class="head"><span class="gw">ἐσπλαγχνίσθη</span></td><td>에스플랑크니스테 — 불쌍히 여기사</td><td>6:34</td><td><span class="c e">E</span> 신약에서 오직 예수에 대해서만 쓰이며, 여기서 그 긍휼이 "여러 가지로 가르치심"으로 표현된다.</td></tr>
+<tr><td class="head"><span class="gw">ὡς πρόβατα μὴ ἔχοντα ποιμένα</span></td><td>호스 프로바타 메 에콘타 포이메나 — 목자 없는 양 같음</td><td>6:34</td><td><span class="c e">E</span> 목양적 함의보다 패권의 은유 — 민 27:17; 왕상 22:17에서 지도자 없는 군대. <span class="c f">F</span> 그러나 예수의 응답은 긍휼과 가르침이지 군사 조직이 아니다. <span class="c s">S</span> 겔 34:23의 오는 목자 약속의 성취.</td></tr>
+<tr><td class="head"><span class="gw">συμπόσια / πρασιαί</span></td><td>쉼포시아 / 프라시아이 — 떼</td><td>6:39, 40</td><td><span class="c f">F</span> 군사 열병으로 이해하기에 기묘하게 어울리지 않는 낱말들. <span class="c w">W</span> 이방 청중에게 손님들 사이의 특별한 유대를 포함하는 만찬을 시사했을 것이다.</td></tr>
+<tr><td class="head"><span class="gw">εὐλόγησεν</span></td><td>율로게센 — 축사하시고</td><td>6:41</td><td><span class="c f">F</span> "가지사·축사하시고·떼어·주어"의 네 동사가 14:22에서 같은 순서로 다시 나온다. <span class="c w">W</span> 다만 성찬 본문의 감사 동사는 이 이야기에 나오지 않는다.</td></tr>
+<tr><td class="head"><span class="gw">ἄνδρες</span></td><td>안드레스 — 남자</td><td>6:44</td><td><span class="c e">E</span> 성별 특정적 낱말로 여자와 아이를 포함하지 않는다. 마태가 "여자와 어린이 외에"로 그 사실을 강조한다.</td></tr>
+<tr><td class="head"><span class="gw">ἠνάγκασεν</span></td><td>에낭카센 — 재촉하사</td><td>6:45</td><td><span class="c e">E</span> 이례적으로 강해 "지체 없이 떠나도록 강제되었다"는 뜻이며 제자들이 꺼렸음을 시사한다. <span class="c f">F</span> 마가의 특징적으로 생생한 표현법일 수도 있다.</td></tr>
+<tr><td class="head"><span class="gw">βασανιζομένους</span></td><td>바사니조메누스 — 힘겹게</td><td>6:48</td><td><span class="c f">F</span> "고문당하는"의 뜻. <span class="c e">E</span> 귀신 들림의 고통에도 쓰이나 여기서는 바람과 물결의 힘을 생생히 그린다.</td></tr>
+<tr><td class="head"><span class="gw">τετάρτην φυλακήν</span></td><td>테타르텐 퓔라켄 — 사경</td><td>6:48</td><td><span class="c e">E</span> <span class="c s">S</span> 밤을 넷으로 나누는 로마식 계산(유대식은 셋)이며 새벽 3–6시. 로마 독자를 위한 배려로 읽힌다.</td></tr>
+<tr><td class="head"><span class="gw">παρελθεῖν</span></td><td>파렐테인 — 지나가려고</td><td>6:48</td><td><span class="c e">E</span> 출 33:19, 22; 34:6과 왕상 19:11에서 하나님의 자기 계시를 알리는 낱말이며 욥 9:11의 결정적 낱말과 같다. <span class="c f">F</span> 제자들의 관점에서 어떻게 보였는지의 진술로 읽는다.</td></tr>
+<tr><td class="head"><span class="gw">περιπατῶν ἐπὶ τῆς θαλάσσης</span></td><td>페리파톤 에피 테스 탈라세스 — 바다 위로 걸어서</td><td>6:48, 49</td><td><span class="c e">E</span> <span class="c s">S</span> 47절의 "뭍에"와 같은 구문이므로 "위에"로 읽어야 한다. 욥 9:8의 "바다 물결을 밟으시며"와 같은 어법.</td></tr>
+<tr><td class="head"><span class="gw">φάντασμα</span></td><td>판타스마 — 유령</td><td>6:49</td><td><span class="c e">E</span> 신약에서 여기와 마태 병행에만. 그 희소성이 초자연 세계가 첫 제자들에게 흔한 일이 아니었음을 상기시킨다.</td></tr>
+<tr><td class="head"><span class="gw">ἐγώ εἰμι</span></td><td>에고 에이미 — 내니</td><td>6:50</td><td><span class="c e">E</span> 출 3:14의 하나님 자기 계시와 동일한 표현. <span class="c w">W</span> 단순한 신원 확인일 수도 있으나 사 41:4; 43:1 등의 신적 자기 계시 정형과 물 위 걸으심이 더 무거운 뜻을 가리킨다.</td></tr>
+<tr><td class="head"><span class="gw">πεπωρωμένη</span></td><td>페포로메네 — 둔하여졌음</td><td>6:52</td><td><span class="c f">F</span> 3:5에서 예수를 반대한 이들의 상태에 쓰인 낱말이 이제 제자들에게 쓰인다. 사 6:10의 반향으로 불길한 울림을 지니며 8:17에서 되풀이된다.</td></tr>
+<tr><td class="head"><span class="gw">κρασπέδου</span></td><td>크라스페두 — 옷 가에</td><td>6:56</td><td><span class="c f">F</span> 율법이 요구한 술(민 15:38–39; 신 22:12)일 수도, 가장 손닿기 쉬운 옷자락일 수도 있다. <span class="c w">W</span> 두 가능성을 함께 놓는다.</td></tr>
+</tbody>
+</table>
+</div>
+<h4>문체 관찰</h4>
+<ul>
+<li><strong>세 번째 샌드위치</strong> — <span class="c e">E</span> <span class="c w">W</span> 6:6b–30이 파송(A) – 요한의 죽음(B) – 귀환(A′)으로 짜인다. 3:20–35, 5:21–43에 이은 마가의 세 번째 주요 사례이며, 여기서는 시간적 막간의 기능도 함께 한다.</li>
+<li><strong>두 잔치의 병치</strong> — <span class="c f">F</span> <span class="c e">E</span> <span class="c w">W</span> 헤롯의 생일 잔치(6:21–29)와 광야의 식탁(6:39–43)이 나란히 놓여 서로를 해석한다.</li>
+<li><strong>미완료의 지속</strong> — <span class="c s">S</span> 6:55–56 내내 미완료 시제를 써서 치유 사역의 지속적 성격을 강조한다.</li>
+<li><strong>확대의 어휘</strong> — <span class="c s">S</span> "온" 지방, "어디서나", "모든" 사람이라는 총칭 어휘가 요약의 인상을 넓힌다. <span class="c w">W</span> 3:7과 6:53–56의 유사한 확장적 표현들이 같은 수사적 요점을 지닌다.</li>
+<li><strong>구문의 거칢</strong> — <span class="c f">F</span> 6:8–9에서 지시 목록이 이어지며 구문이 점점 거칠어진다. 3인칭 간접 명령에 이어 두 등위절이 오고, 분사가 주동사 역할을 하며, 가정법 동사가 2인칭으로 넘어간다. 문어적이지 않으나 구어체 보고로는 충분히 이해할 만하다.</li>
+</ul>
+<div class="caveat"><div class="tt">원어 재확인</div>본 항목의 그리스어 형태·강세·이문 표기는 NA28을 기준으로 정리했으나, 정밀 인용이나 논문 작업 시에는 NA28 본문과 비평장치, 형태분석 도구(Accordance, Logos, STEP Bible 등)로 반드시 재확인할 것. 6:3의 "목수/목수의 아들"과 둘째 형제 이름 표기, 6:14의 동사 단수·복수, 6:20의 동사 이문, 6:22의 "그의 딸/헤로디아의 딸", 6:33의 동사, 6:45의 "벳새다로", 6:51의 놀람 표현이 특히 확인이 필요한 지점이다.</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 10 ═══════ -->
+<section class="part" id="s10">
+<div class="part-head">
+<div class="gk">ἑρμηνεῖαι</div>
+<div class="eyebrow">READINGS</div>
+<h2>10. 주석가별 독법과 쟁점</h2>
+<div class="gloss">헤르메네이아이 — 여러 독법</div>
+</div>
+<div class="tbl-wrap">
+<table>
+<caption>표 3. 6장의 다섯 쟁점과 자료별 입장</caption>
+<thead><tr><th>쟁점</th><th>입장 갈래</th><th>자료</th></tr></thead>
+<tbody>
+<tr><td class="head">6:2의 놀람</td><td>긍정 / 경멸</td><td><span class="c s">S</span> 마가의 용례와 "많은 사람"의 우호적 성격을 근거로 긍정으로 읽고 전환점을 3절로 본다. <span class="c f">F</span> 반복되는 "이 사람이"를 2:7처럼 경멸적으로 읽는다. <span class="c w">W</span> 기원이 정체를 결정한다는 고대적 사고에서 나온 의심으로 본다.</td></tr>
+<tr><td class="head">파송 복장</td><td>견유학파 모델 / 출애굽 복장</td><td><span class="c e">E</span> 갈릴리에 견유학파 증거가 없고 품목이 출 12:11과 정확히 일치한다는 근거로 견유 가설을 반박. <span class="c f">F</span> 엘리야–세례 요한–탁발 수사로 이어지는 계보에 놓되 금욕 자체가 목적이 아니라고 정리. <span class="c w">W</span> Theissen의 두 계층 이론에 대한 Myers의 비판을 소개한다.</td></tr>
+<tr><td class="head">지팡이·신발의 불일치</td><td>조화 가능 / 미해결</td><td><span class="c f">F</span> 동사 차이와 명사 차이에 근거한 조화 시도를 검토한 뒤 모두 약화된다고 판단하고 미해결로 남긴다. 다만 강조에는 거의 차이가 없다고 덧붙인다.</td></tr>
+<tr><td class="head">오천 명 무리의 성격</td><td>봉기 시도 / 대중적 열광</td><td><span class="c f">F</span> 역사적 개연성은 인정하되 마가의 서사가 군사적 해석을 요구하지 않는다고 판단. <span class="c e">E</span> 6:45의 강한 동사와 예수의 기도를 메시아적 물결의 단서로 읽는다.</td></tr>
+<tr><td class="head">급식은 성찬의 예고인가</td><td>성찬 예고 / 구약 병행</td><td><span class="c f">F</span> 6:41과 14:22의 네 동사 일치에 폭넓은 동의가 있다고 정리. <span class="c e">E</span> 초기 교회가 그 평행을 보았다는 데 동의. <span class="c w">W</span> 떡과 물고기이지 떡과 포도주가 아니며 감사 동사도 없다는 근거로 반대하고 구약 병행에 비추어 읽어야 한다고 본다.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>자료별 강조점</h3>
+<p><span class="c f">F</span> <strong>France</strong>는 본문과 지리의 난제를 회피하지 않는다. 지팡이와 신발의 공관복음 불일치를 조화 시도까지 검토한 뒤 미해결로 남기고, 6:45의 벳새다와 6:53의 게네사렛 사이의 지리적 문제를 여러 해법과 함께 정직하게 제시한다. 6:48의 "지나가려고 하시매"를 제자들의 시점에서 어떻게 보였는지의 진술로 푸는 것이 그의 서사적 감각이며, 6:52의 강한 언어가 앞으로 제자들에 대한 덜 호의적인 인식을 준비한다는 관찰이 이 장에서 그의 가장 중요한 구조적 기여다.</p>
+<p><span class="c s">S</span> <strong>Stein</strong>은 이 장을 마가의 단락 구획과 기독론 안에 배치한다. 6:1–6a를 3:7–6:6의 닫힘으로 읽어 1:14–3:6이 3:1–6으로 닫힌 것과 짝지우고, 배척의 인간적 측면과 신적 측면을 함께 짚는다. 6:2의 놀람을 긍정으로 읽는 그의 어휘 논증은 France와 정면으로 갈리는 지점이며, 6:51의 놀람이 그 자체로는 부정적이지 않되 52절의 설명이 부정적 해석을 요구한다는 정리도 그의 방식이다.</p>
+<p><span class="c e">E</span> <strong>Edwards</strong>는 샌드위치 구조와 구약 배경으로 이 장을 관통한다. 6:6b–30을 "제자도의 값"으로 읽고, 파송 복장을 출 12:11의 유월절 복장과 일치시키는 논증을 세우며, 6:48의 "지나가려고"를 욥기 9:8, 11의 언어적·주제적 평행으로 밝혀 이 장의 신학적 정점을 만든다. 그가 이 장에서 세우는 목회적 정식들 — "예수에 대해 높은 견해를 갖는 것은 믿음과 같지 않다", "참된 사역의 부르심은 언제나 우리가 충분히 준비되지 않은 그것으로 부른다" — 도 그의 특징이다.</p>
+<p><span class="c w">W</span> <strong>Witherington</strong>은 수사학과 사회정치적 독법을 댄다. 6:1–6a를 크레이아로 규정하고 Cranfield를 인용해 역사성을 논증하며, 요한의 참수를 Myers를 따라 갈릴리 권력 구조에 대한 정치 풍자로 읽되 그 바탕이 마가의 묵시적 관점임을 덧붙인다. 급식을 성찬 예고로 읽는 데 대한 그의 반대는 이 장에서 가장 뚜렷한 소수 의견이다.</p>
+<p><span class="c ba">Ba</span> <strong>Bauckham</strong>은 6:3의 형제들 이름이 마태 13:55와 함께 예수의 형제들이 명명되는 유일한 자리이며, 그중 야고보와 유다가 초기 그리스도교 운동에서 저명해졌다는 사실이 이름 보존의 배경이 된다고 본다. <span class="c r">R</span> <strong>Rhoads 외</strong>의 서사비평 틀에서 6:52는 전환점이다 — 지금까지 특별한 계시의 특권적 수혜자로 그려지던 제자들이 이제 대적자들과 같은 어휘로 서술되기 시작하며, 이 갈등선이 8:14–21을 거쳐 가이사랴 빌립보 이후 서사의 중심 특징이 된다.</p>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 11 ═══════ -->
+<section class="part" id="s11">
+<div class="part-head">
+<div class="gk">τὰ ἱστορικά</div>
+<div class="eyebrow">BACKGROUND</div>
+<h2>11. 역사·문화 배경</h2>
+<div class="gloss">타 히스토리카 — 역사적 사항들</div>
+</div>
+<h3>헤롯 가문</h3>
+<p><span class="c e">E</span> Edwards는 헤롯 가문의 계보가 올리브 나무 줄기만큼 뒤틀려 있다고 적는다. 신약에 "헤롯"이라는 이름을 지닌 통치자가 넷이나 되며, 이 이야기의 헤롯 안디바는 그 둘째로 아버지 헤롯 대왕이 죽은 주전 4년부터 주후 39년까지 다스렸다. 공식 칭호는 갈릴리와 베레아의 <em>분봉왕</em>이었으나(마 14:1; 눅 9:7; 요세푸스 『유대 고대사』 18.109) 대중적으로는 "왕"이라는 칭호를 누렸다. 헤롯 대왕에게는 열 아내가 있었고 안디바는 넷째 아내 말타케의 아들이다. 헤로디아는 아버지 헤롯에게 살해된 안디바의 이복형제 아리스토불루스의 딸로, 헤롯 대왕의 둘째 아내 마리암네 1세를 통한 손녀이며 따라서 헤롯 안디바의 조카였다.</p>
+<p><span class="c e">E</span> 안디바가 헤롯 대왕보다 덜 악명 높은 것은 덜 잔혹해서가 아니라 덜 유능해서였다고 그는 평한다. 초기 교회가 예수의 십자가형을 회상할 때 안디바의 이름을 빌라도보다 <em>먼저</em> 언급한 데는 이유가 없지 않다(행 4:27). 그는 아버지처럼 교활하고 무자비했으며 사치, 특히 웅장한 건축을 사랑해 갈릴리에 티베리아스와 세포리스 두 도시를 세웠다. 예수가 그를 "저 여우"라 부르신 것이 그 간교함과 악의를 웅변한다(눅 13:32). 그는 이복형제 헤롯 빌립의 아내 헤로디아를 설득해 남편과 이혼하고 자기와 혼인하게 함으로써 탐욕을 드러냈고, 그러기 위해 나바테아 왕 아레다의 딸인 자기 아내를 버려야 했다. 그 보복으로 아레다는 주후 36년 안디바에게 참패를 안겼고, 삼 년 뒤 안디바와 헤로디아는 칼리굴라에 의해 갈리아로 추방되었다.</p>
+<p><span class="c w">W</span> Witherington은 안디바가 좋은 유대인으로 보아서는 안 된다고 덧붙인다. 형제의 아내와의 금지된 혼인 외에도 그는 수도 티베리아스를 이교 묘지 위에 세웠는데, 준수하는 유대인이라면 결코 승인하지 않았을 일이며 좋은 유대인은 그 부정함 때문에 그 도시에 들어가지도 않았을 것이다.</p>
+<p><span class="c f">F</span> France는 요세푸스와의 관계에서 생기는 복잡한 문제들을 정리한다. 요세푸스(『유대 고대사』 18.109–13)는 이 혼인을 안디바와 페트라 왕 아레다 사이의 전쟁 원인으로 서술하며, 사람들이 안디바의 패전을 요한 처형에 대한 신적 보응으로 돌렸다고 전한다. 헤로디아는 안디바의 이복형제의 아내였는데 요세푸스는 그를 단순히 "헤롯"으로, 마가는 "빌립"으로 부른다. 그러나 요세푸스는 분봉왕 빌립이 헤로디아의 딸 살로메와 혼인했다고 말한다. 헤롯 가문의 관계와 이름 양쪽에 상당한 모호함이 있으며("헤롯"이 특정 구성원의 개인 이름으로도 전체의 가문명으로도 쓰인 듯하다), 헤로디아의 첫 남편이던 헤롯도 사위와 마찬가지로 빌립이라는 개인 이름을 지녔을 가능성이 있다는 것이 그의 정리다.</p>
+<h3>마카이루스</h3>
+<p><span class="c f">F</span> 감옥의 위치를 마가는 언급하지 않으나 요세푸스는 베레아의 안디바 요새 궁전 마카이루스에 있었다고 전한다(『유대 고대사』 18.119) — 갈릴리 사역 현장에서 멀다. 이 이야기는 그것이 안디바의 생일 잔치가 열린 같은 장소였다고 상정한다. France가 짚는 문제 하나 — 초대된 이들이 <em>갈릴리</em>의 중요한 지도자들이었다는 언급이 문제를 낳는데, 마카이루스는 안디바 분봉령의 다른 구역인 베레아에 멀리 있었기 때문이다. 갈릴리 지도자들이 그 행사를 위해 베레아까지 여행했을 수도 있으나, 어쩌면 마가가 요한의 투옥 장소를 몰랐거나 요세푸스가 잘못된 정보를 얻었을 개연성이 더 높다는 것이 그의 판단이다.</p>
+<h3>벳새다와 게네사렛</h3>
+<p><span class="c f">F</span> 6:45의 지리 문제를 그는 상세히 다룬다. 누가는 이 사건을 벳새다에 위치시키는데, 벳새다 율리아스는 호수 북동편 요단 유입구 건너편으로 가버나움과 안디바의 영역에서 떨어져 있었다. 이 위치는 마가의 서사에 잘 맞을 것이고 게네사렛으로의 배편 귀환(53절)도 자연스러운 후속이 될 것이다. 문제는 45절에서 마가만이 예수가 급식 이적 직후 제자들을 배로 벳새다를 향해 보내시고 그 여정을 "건너편"으로 서술하는데, 그것이 가버나움 남서쪽 몇 킬로미터의 게네사렛에서 끝나는 듯 보인다는 점이다.</p>
+<p><span class="c f">F</span> 요단 유입구 서편에 벳새다라는 둘째 정착지를 상정하는 해법이 제안되어 왔으나, France는 그 증거가 위 복음서 본문들로부터의 추론 외에 없다고 지적한다. 게다가 마가와 누가가 각각 다른 벳새다를 언급하면서 같은 이름의 다른 마을이 있다는 표시를 전혀 하지 않는다는 것도 이상하며, 이 견해에서는 6:45의 제자들의 건너감이 한 벳새다에서 다른 벳새다로 가는 것이 될 터이다. 그가 더 나은 해법으로 보는 것은 누가의 위치 설정을 배제하고 마가가 북서안의 한 장소(전통적 위치인 타브가 같은)를 염두에 두었다고 상정하는 것이다.</p>
+<h3>갈릴리의 배와 바람</h3>
+<p><span class="c e">E</span> Edwards는 좋지 않은 조건에서도 갈릴리 바다를 보통 여섯에서 여덟 시간이면 건널 수 있었으나 제자들이 북동쪽에서 불어오는 강풍 앞에 무력했다고 정리한다. 그 강풍의 서술은 아랍어로 "샤르키아"라 불리는 잘 알려진 동풍과 맞아떨어지는데, 이 바람은 대개 이른 저녁에 시작되어 어부들에게 우려의 원인이 된다.</p>
+<div class="tbl-wrap">
+<table>
+<caption>표 4. 6장의 배경 항목 요약</caption>
+<thead><tr><th>항목</th><th>내용</th><th>자료</th></tr></thead>
+<tbody>
+<tr><td class="head">목수라는 직업</td><td>작은 마을에서 농기구와 건물 건축·수리를 다루는 다재다능한 장인. 마을 경제의 의미 있는 인물</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">켈수스의 조롱</td><td>오리게네스 『켈수스 반박』 6.34, 36 — 이 종교가 목수에 의해 세워졌다는 비웃음</td><td><span class="c w">W</span> <span class="c f">F</span></td></tr>
+<tr><td class="head">예수의 형제들</td><td>야고보는 예루살렘 교회의 지도자로 주후 62년 대제사장의 명으로 처형(요세푸스 『유대 고대사』 20.200). 유다의 손자들이 1세기 말까지 교회에 알려짐(에우세비오스 『교회사』 3.19–20)</td><td><span class="c f">F</span> <span class="c ba">Ba</span></td></tr>
+<tr><td class="head">"형제"의 세 견해</td><td>히에로니무스(사촌)·에피파니우스(요셉의 전처 소생)·헬비디우스(마리아와 요셉의 친자). 후자를 지지하는 논거들</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">둘씩 보냄</td><td>전 4:9–12의 실용적 근거, 신 17:6; 19:15의 두 증인 요구. 사도 교회의 관행(행 8:14; 13:1–2)</td><td><span class="c f">F</span> <span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">출애굽 복장</td><td>출 12:11 — 겉옷·띠·신·손에 잡은 지팡이. 견유파 복장(겉옷·배낭·지팡이, 맨발)과의 차이</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">무소니우스 루푸스</td><td>주후 30–100년의 견유파 교사. 한 벌 옷과 맨발을 권하는 금욕 이상</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">발의 먼지</td><td>랍비들이 이방 지역을 떠날 때 그 부정을 지니지 않으려 털던 관행. 행 13:51; 18:6</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">기름의 약효</td><td>랍비 자료가 질병 치유와 축귀 양쪽에서 올리브기름의 약효를 자주 언급. 시 45:7의 "즐거움의 기름"</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">헤롯 안디바</td><td>주전 4년–주후 39년 갈릴리·베레아 분봉왕. 티베리아스와 세포리스 건설. 주후 36년 아레다에게 패전, 39년 갈리아 추방</td><td><span class="c e">E</span> <span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">요세푸스의 요한</td><td>『유대 고대사』 18.116–19 — 선동 지도자가 될 가능성 때문에 처형. 사람들이 안디바의 패전을 그에 대한 보응으로 여김</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">금지된 혼인</td><td>레 18:16; 20:21 — 형제의 아내. 헤로디아가 로마 시민권으로 로마법 아래 이혼한 듯하다(10:12와 관련)</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">마카이루스</td><td>요세푸스 『유대 고대사』 18.119 — 베레아의 요새 궁전. 갈릴리 귀인 초대와의 지리적 긴장</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">안디바의 잔치</td><td>요세푸스 『유대 고대사』 18.102 — 사치스러운 연회를 베푸는 자로서의 평판</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">순교 이야기</td><td>마카베오2서 6:18–31; 마카베오4서 5:1–6:30과의 평행</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">백 명씩 오십 명씩</td><td>출 18:25; 민 31:14의 모세의 편성. 쿰란 1QS 2:21–22; CD 13:1; 1QSa 2.11–22의 메시아 잔치 청사진</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">유대의 식탁 기도</td><td>"세상의 왕이신 우리 하나님 여호와여 찬송하리이다 땅에서 떡이 나게 하시는 이여"</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">엘리사와 엘리야</td><td>왕하 4:42–44(백 명에게 떡 스무 개), 왕상 17:8–16(사르밧 과부)</td><td><span class="c f">F</span> <span class="c s">S</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">데나리온</td><td>일용 노동자의 하루 임금(마 20:2). 이백 데나리온은 한 해 임금의 삼분의 이</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">로마식 사경</td><td>밤을 넷으로 나누는 로마식(유대식은 셋). 요세푸스 『유대 고대사』 5.6.5; 18.9.6</td><td><span class="c e">E</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">샤르키아</td><td>갈릴리 어부들이 아는 이른 저녁의 동풍. 아랍어로 "상어"</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">벳새다</td><td>"어부의 집"을 뜻하며 벳새다 율리아스는 빌립의 분봉령 안 호수 북동편에 있었다</td><td><span class="c e">E</span> <span class="c f">F</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 12 ═══════ -->
+<section class="part" id="s12">
+<div class="part-head">
+<div class="gk">παραπομπαί</div>
+<div class="eyebrow">CROSS-REFERENCES</div>
+<h2>12. 상호 참조 총람</h2>
+<div class="gloss">파라폼파이 — 상호 참조</div>
+</div>
+<p>주석 근거가 붙은 학술 관주다. 절별 대중 관주(OpenBible.info)는 성경읽기 화면에서 따로 확인한다.</p>
+<div class="tbl-wrap">
+<table>
+<caption>표 5. 6장의 학술 관주</caption>
+<thead><tr><th>절</th><th>참조</th><th>연결점</th><th>근거</th></tr></thead>
+<tbody>
+<tr><td class="head">6:1</td><td>막 1:9, 24; 3:21, 31</td><td>나사렛 출신이라는 신원과 가족의 앞선 시도</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:2</td><td>막 1:22, 27</td><td>가버나움 회당에서와 같은 놀람 — 말과 행위 양쪽에</td><td><span class="c f">F</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:2</td><td>사 11:2; 막 4:11</td><td>다윗의 싹에게 주어지는 지혜, 신적 수동태의 "주어짐"</td><td><span class="c s">S</span></td></tr>
+<tr><td class="head">6:3</td><td>마 13:55; 눅 4:22; 요 6:42</td><td>"목수의 아들"과 "요셉의 아들" — 병행 본문의 차이</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:3</td><td>행 1:14; 고전 9:5; 갈 1:19</td><td>예수의 형제들이 결국 교회에 가담함</td><td><span class="c f">F</span> <span class="c ba">Ba</span></td></tr>
+<tr><td class="head">6:3</td><td>삿 11:1–2</td><td>어머니 이름으로 부르는 것이 비방일 가능성</td><td><span class="c w">W</span></td></tr>
+<tr><td class="head">6:4</td><td>막 3:20–21, 31–35</td><td>"자기 친척"이라는 추가가 앞의 경험을 반영한다</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:4</td><td>요 4:44; 도마복음 31</td><td>같은 격언의 다른 판본들</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:5</td><td>막 2:5; 4:40; 5:34, 36; 9:23–24; 10:52</td><td>믿음과 이적의 관계 — 그 부재의 효과</td><td><span class="c f">F</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:6</td><td>막 3:6; 3:22; 5:17</td><td>배척의 목록 — 바리새인·서기관·이방 도시에 이어 고향</td><td><span class="c s">S</span></td></tr>
+<tr><td class="head">6:7</td><td>막 3:14–15</td><td>파송과 권능이 이제 실제로 주어진다</td><td><span class="c f">F</span> <span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:7</td><td>신 17:6; 19:15; 전 4:9–12</td><td>둘씩 보냄의 근거 — 두 증인과 실용성</td><td><span class="c f">F</span> <span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:8–9</td><td>출 12:11</td><td>겉옷·띠·신·지팡이 — 유월절 복장과의 일치</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">6:11</td><td>행 13:51; 18:6</td><td>발의 먼지를 떠는 몸짓의 실제 사용</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:11</td><td>막 1:44</td><td>"증거를 삼으라"의 부정적 함의</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:13</td><td>약 5:14; 시 45:7</td><td>기름 바름과 "즐거움의 기름"</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">6:14</td><td>막 8:28</td><td>같은 세 가지 대중적 견해가 다시 열거된다</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">6:15</td><td>말 3:23–24; 막 1:6; 9:11–13</td><td>엘리야의 종말론적 귀환과 요한의 엘리야적 성격</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:17</td><td>막 1:14</td><td>"잡힌 후"라는 수수께끼 같은 표현이 여기서 실체를 얻는다</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:18</td><td>레 18:16; 20:21</td><td>형제의 아내와의 혼인 금지</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:19–20</td><td>왕상 21장</td><td>아합과 이세벨 — 헤롯과 헤로디아의 원형</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:20</td><td>막 15:1–15</td><td>빌라도의 무력한 저항과의 평행. 15:14의 "무슨 악한 일을 하였느냐"</td><td><span class="c f">F</span> <span class="c e">E</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:22</td><td>막 5:41–42</td><td>"소녀"에 해당하는 같은 낱말 — 혼인 적령기까지</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:26</td><td>막 15:10, 14–15</td><td>압력 아래 무죄한 사람을 처형하는 통치자</td><td><span class="c w">W</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">6:29</td><td>막 15:45–46</td><td>제자들이 시체를 가져다 장사함 — 같은 순서</td><td><span class="c w">W</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">6:30</td><td>막 3:14; 6:7</td><td>"사도들"이 파송 동사를 되울린다</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:31</td><td>막 3:20; 4:34; 9:2; 13:3</td><td>음식 먹을 겨를도 없음, 그리고 따로 데려가시는 습관</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">6:34</td><td>민 27:17; 왕상 22:17; 겔 34:5, 23</td><td>목자 없는 양 — 지도자 없는 백성과 오는 목자의 약속</td><td><span class="c e">E</span> <span class="c f">F</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:35–44</td><td>출 16장</td><td>광야의 만나 — 마가만 세 번 "한적한 곳"을 언급한다</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:37</td><td>민 11:13, 22</td><td>광야에서 백성을 먹여야 하는 필요 앞의 모세</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">6:39–40</td><td>출 18:25; 민 31:14; 1QSa 2.11–22</td><td>모세의 편성과 쿰란의 메시아 잔치 청사진</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:41</td><td>막 14:22</td><td>네 동사가 같은 순서로 최후의 만찬에 다시 나온다</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">6:41–44</td><td>왕하 4:42–44; 왕상 17:8–16</td><td>엘리사·엘리야의 급식 이적 — 명령·놀란 물음·배부름·남은 것</td><td><span class="c f">F</span> <span class="c s">S</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:45</td><td>요 6:14–15</td><td>무리가 그를 왕 삼으려 했다는 명시적 진술</td><td><span class="c f">F</span> <span class="c e">E</span></td></tr>
+<tr><td class="head">6:46</td><td>막 1:35; 14:35–39</td><td>마가에서 예수가 기도하시는 세 지점</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">6:48</td><td>욥 9:8, 11</td><td>바다 물결을 밟으시며 지나가심 — 언어적·주제적 평행</td><td><span class="c e">E</span> <span class="c w">W</span> <span class="c f">F</span></td></tr>
+<tr><td class="head">6:48</td><td>출 33:19, 22; 34:6; 왕상 19:11</td><td>"지나가심"이 하나님의 자기 계시를 알리는 어법</td><td><span class="c e">E</span></td></tr>
+<tr><td class="head">6:48</td><td>시 77:19; 사 43:16</td><td>바다 위를 걸으심이 하나님의 속성</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:50</td><td>출 3:14; 사 41:4; 43:1; 51:9</td><td>"내니"의 신적 자기 계시 정형</td><td><span class="c e">E</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:51</td><td>막 4:39, 41</td><td>바람이 그침과 제자들의 놀람 — 앞 이야기와의 평행</td><td><span class="c f">F</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:52</td><td>막 3:5; 4:12; 8:17–21</td><td>"둔하여진 마음"이 대적자에게서 제자들에게로 옮겨진다</td><td><span class="c f">F</span> <span class="c w">W</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:52</td><td>사 6:10; 요 12:40</td><td>완악한 마음의 구약 배경</td><td><span class="c f">F</span></td></tr>
+<tr><td class="head">6:53–56</td><td>막 1:32–34; 3:7–12</td><td>같은 북서안 지역의 다른 치유 요약들</td><td><span class="c f">F</span> <span class="c s">S</span></td></tr>
+<tr><td class="head">6:56</td><td>막 5:27–28; 3:10</td><td>옷을 만져 낫는다는 기대의 앞선 사례</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+<tr><td class="head">6:56</td><td>민 15:38–39; 신 22:12</td><td>율법이 요구한 겉옷의 술</td><td><span class="c f">F</span> <span class="c w">W</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<!-- ═══════ 13 ═══════ -->
+<section class="part" id="s13">
+<div class="part-head">
+<div class="gk">σύνθεσις</div>
+<div class="eyebrow">SYNTHESIS</div>
+<h2>13. 신학 종합</h2>
+<div class="gloss">쉰테시스 — 종합</div>
+</div>
+<p>6장은 두 잔치와 하나의 샌드위치로 짜인다. 종합은 네 매듭으로 모인다.</p>
+<h3>믿음 없음은 권능을 제한한다</h3>
+<p><span class="c f">F</span> 5장이 자연·귀신·질병·죽음을 차례로 굴복시켰다면 6:1–6a는 그 행진을 멈춰 세운다. "거기서는 아무 권능도 행하실 수 없어"라는 마가의 대담한 표현이 예수의 권위조차 무제한이 아님을 시사하며, 기독론적으로 두드러진다. France가 던지는 물음이 이 장의 문을 연다 — 믿음이 앞선 구출 이적들의 열쇠였다면 그것이 없는 곳에서는 무엇을 기대해야 하는가. 그리고 그 답이 장 끝에서 대조로 주어진다. 게네사렛에서는 "손을 대는 자는 다 성함을 얻으니라"(6:56)이며, <span class="c f">F</span> France의 정리대로 이 지역에서는 나사렛과 달리 믿음이 통상적인 듯 보인다.</p>
+<p><span class="c e">E</span> 그리고 6:14–15가 그 믿음이 무엇이 아닌지를 밝힌다. 헤롯과 사람들은 예수를 요한이나 엘리야나 선지자 중 하나로 여겨 이스라엘의 가장 위대한 인물들에 넣지만, Edwards의 정리대로 <em>예수에 대해 높은 견해를 갖는 것은 믿음과 같지 않다.</em></p>
+<h3>보내심에는 값이 따른다</h3>
+<p><span class="c e">E</span> 6:6b–30의 샌드위치가 이 장의 구조적 중심이다. 열둘의 파송과 귀환 사이에 요한의 목이 소반에 얹혀 나오며, 그 배치가 독자로 하여금 요한의 죽음이 예수와 함께하는 제자도와 선교에 무엇을 뜻하는지 생각하도록 강요한다. <span class="c w">W</span> Witherington의 정리대로 이 사명을 물려받는 이들은 그 운명도 물려받는다 — 하나님이 다스리러 오신다고 선포하며 나가는 이들은 살아 돌아올 가능성만큼이나 죽어 돌아올 가능성이 있다. <span class="c e">E</span> Edwards가 요한과 예수 사이에 세우는 평행이 그 예고를 구체화한다. 둘 다 두려워하면서도 흔들리다 사회적 압력에 굴복하는 정치적 폭군에게 처형되고, 둘 다 의롭고 무죄한 희생자로 죽는다.</p>
+<p><span class="c e">E</span> 파송 복장이 그 사명의 성격을 규정한다. 겉옷·띠·신·지팡이는 견유파의 유랑 복장이 아니라 출 12:11의 유월절 복장이며, 열둘의 선교가 애굽 탈출만큼 근본적인 무엇을 알린다는 것과 그들이 짐에서 자유로워야 한다는 것을 함께 시사한다. 그리고 그 최소한의 짐은 그 자체가 미덕이 아니라 보내신 이에 대한 의존의 표지다.</p>
+<h3>두 식탁</h3>
+<p>헤롯의 생일 잔치와 푸른 잔디 위의 식탁이 나란히 놓인다. <span class="c f">F</span> France의 정리대로 안디바의 타락한 호화 연회가 다음에 올 전혀 다른 잔치의 건전한 소박함과 생생히 대조되며, 볼 눈이 있는 이에게 이 소박한 식사가 메시아 잔치의 맛보기이자 하나님 나라의 공동체적 삶으로의 입문이 된다. <span class="c w">W</span> Witherington의 대비가 그 요점을 요약한다 — 한 잔치는 예수의 죽음을 예고하고 다른 잔치는 종말론적 잔치의 도래를 예고하며, 자기를 왕으로 여기되 방탕했던 헤롯과 달리 예수는 양 떼를 먹이는 이스라엘의 참 목자 왕으로 제시된다. <span class="c e">E</span> Edwards가 42절의 "다"에서 읽는 함의도 여기 놓인다 — 정결법의 의례적 위계가 열린 초대와 모든 사람의 포용에 밀려난다.</p>
+<h3>가장 가까운 이들의 마음이 둔하여진다</h3>
+<p><span class="c f">F</span> 6:52가 이 복음서의 전환점이다. 지금까지 제자들은 무리와 대비되는 특별한 계시의 특권적 수혜자로 그려졌으나(4:11–12, 34), 이제 4:12에서 "외인"의 표지였던 "깨닫지 못함"과 3:5에서 예수의 대적자들에게 쓰인 "둔하여진 마음"이 그들에게 적용된다. France의 정리대로 이것은 비범한 것에 적응하는 평범한 사람들의 자연스러운 더딤에 쓰기에는 놀랍도록 강한 언어이며, 마가는 이렇게 복음서 나머지에서 제자들에 대한 덜 호의적인 인식을 준비한다.</p>
+<p>그런데 그 굳어짐이 무엇을 놓친 데서 오는지를 마가가 명시한다 — "그 떡 떼시던 일을 깨닫지 못하고"다. <span class="c w">W</span> Witherington이 인용하는 정리대로, 제자들은 떡의 이적적 공급과 물 위 걸으심 사이의 연결을 짓지 못했으며 그 연결이 그들이 후대의 모세 인물이면서 동시에 모세의 하나님의 속성을 나타내실 수 있는 이의 임재 안에 있음을 분명히 했어야 했다. <span class="c e">E</span> Edwards가 욥기 9:8, 11에서 밝히는 것이 바로 그 임재다 — 바다 물결을 밟으시며 지나가시되 보이지 않으시던 그 하나님이, 이제 이전 세대에게 그럴 수 없었던 방식으로 보이고 만질 수 있게 되어 "지나가신다". 4:41의 "그가 누구이기에"에 대한 답이 여기 있는데, 정작 배 안의 사람들은 소리를 지른다.</p>
+<div class="note"><div class="tt">7장으로</div>6:53–56의 요약이 게네사렛에서 예수의 옷 가에 손을 대는 무리를 그리고, 7:1이 곧바로 예루살렘에서 온 바리새인과 서기관들의 정결 시비로 넘어간다. <span class="c w">W</span> Witherington은 마가가 정결·부정 논의를 7:24–30에서 예수가 이방 여인을 도우신 일의 서론이자 사실상 설명으로 쓴다고 정리한다. 5장에서 부정을 건너간 접촉이 6장에서 옷 가를 만지는 무리로 이어졌다면, 7장은 그 접촉이 무엇을 전제하는지를 명시적으로 다룬다 — 부정은 신체적 조건이 아니라 마음의 문제라는 것이다(7:15, 21).</div>
+<div class="back"><a href="#top">↑ 처음으로</a></div>
+</section>
+<footer>
+    마가복음 6장 심층 연구 · 성서 연구 서고<br/>
+    주 자료 — France, <i>The Gospel of Mark</i>(NIGTC, 2002) · Stein, <i>Mark</i>(BECNT, 2008) · Edwards, <i>The Gospel according to Mark</i>(PNTC, 2002) · Witherington, <i>The Gospel of Mark</i>(2001) — 보강 자료 — Bauckham, <i>Jesus and the Eyewitnesses</i> · Rhoads·Dewey·Michie, <i>Mark as Story</i>. 성경 본문은 개역개정 4판(사이트 데이터 전수 대조), 그리스어는 NA28. Cranfield·Hooker·Guelich·Marcus·Lane·Schweizer·Painter·Myers·Theissen·Jeremias·Hoehner·Wolff 등과 고전·교부 인용(요세푸스·켈수스·오리게네스·히에로니무스·에피파니우스·무소니우스 루푸스)은 위 자료의 인용 범위에서 재인용으로 다루었다. 면수는 표기하지 않았으며, 정밀 인용 시 실물 대조를 거칠 것.
+  </footer>
+<nav aria-label="장별 연구 이동" class="chapter-footer-nav"><a href="ch05.html">← 5장 두 딸의 구원</a><a class="shelf" href="index.html">마가복음 서가</a><a href="ch07.html">7장 고르반 논쟁 →</a></nav>
+</main>
+</div>
+<script src="../../assets/app.js"></script>
+  <script src="../../assets/js/bible-reader.js" defer data-bible-reader-js></script>
+</body>
+</html>

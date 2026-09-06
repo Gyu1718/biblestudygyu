@@ -19,6 +19,43 @@ jobs:
         with:
           ref: main
 
+      - name: Verify staged chunks
+        shell: bash
+        run: |
+          cat > /tmp/chunks.sha256 <<'EOF'
+b1d082180944dba5fd1c6a0e086f91c322fd358fe4e467efb9baad4bbf3e95c1  .mark-update10/part_00
+da120b89539c2a2b9cfb56984b1dffc0c6f342cafccd632f9700c70df8496a0d  .mark-update10/part_01
+d031441c7f991901e640cc837fe2eb9629e7cebef9a7d217fb23ab6d7a9eca58  .mark-update10/part_02
+4ec34fa80f1ea6dd05b68c4bf4ce208ebe764461d58858089e79f783077bf275  .mark-update10/part_03
+ec97ba8b80ab617774851259686ee4acac6df4788bbbbf920a82a5c2b094a387  .mark-update10/part_04
+0547b4d933e545fd09d20bec7c23386a649289ab02f964673706e1d70df874bf  .mark-update10/part_05
+637c76f221ad13da74908eb5b60f32bfc5aefe2fc0f35eacfb6629f591d4b039  .mark-update10/part_06
+09ffc77138cff88676b7f116535b7bfdde8f56be67bd413ab6979b499860f21c  .mark-update10/part_07
+38b0f456b0545ce5649d3e440930cf5166933e634aa20622e69d59adb4aaafca  .mark-update10/part_08
+e544859aff1b72d410288c9802ed01477ffd0ae458001f5e435c1398e0649edb  .mark-update10/part_09
+c1e1100da54add71ecb6079b8de046f789d28719fd4c1e504fb6d9bffe02f483  .mark-update10/tail_00
+06248c326a53c4d603b246b31d21079d1c42afc5bd803980311baac53578df0a  .mark-update10/tail_01
+783248ceee66921e353901d41e1e37e65d0c3351c8bd6a82db27c45a508a3e67  .mark-update10/tail_02
+6907f8f802cda5410477a67a900b818ebba5fa75f0dad31883b40160c65bb488  .mark-update10/tail_03
+597e0c2ef937d7e6bb62e9f2b4b4c26e0417dfc315ee1e0e2ad9e940d088df22  .mark-update10/tail_04
+b73e0adc0d92c3019cb12c93401459a89c85b17c4acfd38662a0be903425707a  .mark-update10/tail_05
+16ad2a74b8d0779e4402bad44ef184ca2abf593051eef6a3ed73869d9ab03e99  .mark-update10/tail_06
+928e839753926acc49324242442758fce2a193012f8f15e145d72c6060ff954a  .mark-update10/tail_07
+ec4953e9459655076e1bba0b81f11c21195b4b97ba84c9816a900ddc62366b9c  .mark-update10/tail_08
+d569dcc790a16c2548558701100ca0034522553244783273ef5c3ad9f66e7b11  .mark-update10/tail_09
+f8e68792577c321b6fe815ef475ca36dd07a16674b4cf37c97935554f8770eeb  .mark-update10/tail_10
+4b2a5461604feb99345d8884807bd4b0c025c25a5c97ea82789b3ee48e1447b1  .mark-update10/tail_11
+5d25b02b3db995d322e36d66996cde65a430ee0c6bfc0167ad0fd8be93928ab1  .mark-update10/tail_12
+f153a9b73c84ac1023b7c090c4884277f41ceaa1e54be6f23ca61fdede859409  .mark-update10/tail_13
+98ecaad2024088dc4d9f027b8d039b9c18d7799cbe4d31867f492729ec9cf2ba  .mark-update10/tail_14
+615d1790f44c338f11f08392c27980162ca7038286a18d9760473fe976c278df  .mark-update10/tail_15
+c730a5ac233ae0e1fb27cc0228eb2dff27a8ab5dd777fa1c9cf2ee4d60b4aedf  .mark-update10/tail_16
+18a03f9dc33bd03bfd7bc875493e5a9ca87fd6280d944faf66610b08c8bcaa7b  .mark-update10/tail_17
+7d5c610df135d15ae55aa61ca5d4cc0f442ddcbb6f0ff774bebfe46b129bd380  .mark-update10/tail_18
+c0f01b4d10d9dbdcd0bb517ebc54f9a501f48d48dac8bb9823a2b3038f7b317f  .mark-update10/tail_19
+EOF
+          sha256sum -c /tmp/chunks.sha256
+
       - name: Reassemble Mark package
         shell: bash
         run: |
@@ -30,7 +67,7 @@ jobs:
       - name: Validate Mark 1-9 integration
         shell: bash
         run: |
-          python3 - <<'PY'
+          python3 - <<'PY2'
           from pathlib import Path
           import re
           mark = Path('nt/mark')
@@ -65,7 +102,7 @@ jobs:
           if 'id:"mark"' not in catalog or 'done:9,total:16' not in catalog:
               raise SystemExit('catalog: Mark progress is not 9/16')
           print('Mark 1-9 validation passed')
-          PY
+          PY2
 
       - name: Commit installed files and cleanup staging
         shell: bash

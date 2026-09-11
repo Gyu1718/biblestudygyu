@@ -1,0 +1,176 @@
+name: Complete Mark Gospel study shelf
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".mark-final/READY"
+
+permissions:
+  contents: write
+
+jobs:
+  install-mark:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Verify and extract payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "458a351d0db0061012f0684aa3ed1c4b93d24b810b24ac1837ed8b77f461036c  .mark-final/part_00" | sha256sum -c -
+          echo "c4685141a3a306d02d0e045892adf6522aefb8c1f082e58fcd4b7f00a185cd72  .mark-final/part_01" | sha256sum -c -
+          echo "6e8dc29aa00bae2855ed29b1048a3c733d1ad74eaa1ff019b21c0d65364691b7  .mark-final/part_02" | sha256sum -c -
+          echo "1ab447be185d3ad592aaa82841292bec33daaf1c764022b62519d003c9ada79a  .mark-final/part_03" | sha256sum -c -
+          echo "9c7b3e4d1a862e6a4bed37cdc1a1f1090e02cb1994150a4584268233977f2cf9  .mark-final/part_04" | sha256sum -c -
+          echo "721f087c7089bbac18223b857ffbe350561d0ed997d5a2a895574b8b83a37f45  .mark-final/part_05" | sha256sum -c -
+          echo "1bfe7933defcf658995ed5807325184d8421842f129a79d83ce12495d3a72639  .mark-final/part_06" | sha256sum -c -
+          echo "bc18c7f4e12955261c4212ad1e8dd95f06141d094794b8155d37f93a09635ff6  .mark-final/part_07" | sha256sum -c -
+          echo "b49fb75e11e4b180e5e0afdcf26a9d13425c62cf74e00ab9ee69544e6da77df0  .mark-final/part_08" | sha256sum -c -
+          echo "0a176d97af289a548e7ec56885727679252120c1aaf9975560cab39214711818  .mark-final/part_09" | sha256sum -c -
+          echo "55ce6e2c84e807c74e3231d7df2f00a11b612136df2dbd476536d800ac838b5e  .mark-final/part_10" | sha256sum -c -
+          echo "9974fe3350292bd60201818ff8edd254ad46a18230702b9f9bae348e66088a22  .mark-final/part_11" | sha256sum -c -
+          echo "8a11338e5a0993984209d7343322571d2cb3b0905bc317d40d4651970261d623  .mark-final/part_12" | sha256sum -c -
+          echo "4264aeee1d312454a1eff3cdf374018f96e04fce178d2a135931618739216fac  .mark-final/part_13" | sha256sum -c -
+          cat .mark-final/part_* > /tmp/mark-final.tar.xz.b64
+          base64 -d /tmp/mark-final.tar.xz.b64 > /tmp/mark-final.tar.xz
+          echo "4b400e4573ffa936ff3ee238774c5a1b2ce1e1f6ffc79ef7d5c956d1cd204d79  /tmp/mark-final.tar.xz" | sha256sum -c -
+          mkdir -p /tmp/mark-final-unpack
+          tar -xJf /tmp/mark-final.tar.xz -C /tmp/mark-final-unpack
+          cp /tmp/mark-final-unpack/nt/mark/ch13.html nt/mark/ch13.html
+          cp /tmp/mark-final-unpack/nt/mark/ch14.html nt/mark/ch14.html
+          cp /tmp/mark-final-unpack/nt/mark/ch15.html nt/mark/ch15.html
+          cp /tmp/mark-final-unpack/nt/mark/ch16.html nt/mark/ch16.html
+          cp /tmp/mark-final-unpack/validate_mark.py validate_mark.py
+          cp /tmp/mark-final-unpack/MARK-PACKAGE.md MARK-PACKAGE.md
+
+      - name: Activate chapters 13 through 16 and finish status copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          active = ''.join(
+              f'<a aria-label="마가복음 {n}장으로 이동" href="./ch{n:02}.html">{n}</a>'
+              for n in range(13, 17)
+          )
+          pending = ''.join(f'<span>{n}</span>' for n in range(13, 17))
+          for i in range(1, 13):
+              p = Path(f'nt/mark/ch{i:02}.html')
+              text = p.read_text(encoding='utf-8')
+              if pending not in text:
+                  raise SystemExit(f'{p}: pending 13-16 navigation sequence not found')
+              text = text.replace(pending, active, 1)
+              p.write_text(text, encoding='utf-8')
+
+          p12 = Path('nt/mark/ch12.html')
+          text = p12.read_text(encoding='utf-8')
+          old_next = '<span class="next-off" aria-disabled="true" role="note">13장 준비 중</span>'
+          if old_next not in text:
+              raise SystemExit('ch12: pending chapter 13 footer link not found')
+          text = text.replace(old_next, '<a href="ch13.html">13장 깨어 있으라 →</a>', 1)
+          p12.write_text(text, encoding='utf-8')
+
+          idxp = Path('nt/mark/index.html')
+          idx = idxp.read_text(encoding='utf-8')
+          replacements = [
+              ('아홉 권 서가 자료 대조와 1–12장 심층연구를 연결하는 책별 서가.', '아홉 권 서가 자료 대조와 1–16장 심층연구를 연결하는 책별 서가.'),
+              ('1–12장 심층연구가 완성되었고, 13–16장은 아홉 권의 서가 자료를 대조하며 순차 제작한다.', '1–16장 심층연구가 완성되었다. 아홉 권의 서가 자료를 대조해 전 장의 단락 구조·주해·원어·쟁점·상호 참조를 연결한다.'),
+              ('1–12장 완성, 13장부터 순차 제작한다.', '1–16장 전편 완성.'),
+              ('활성 책등은 완성된 문서이며, 13–16장의 심층연구는 순차 제작 중이다.', '모든 장의 심층연구가 완성되었다.'),
+              ('1–12장은 성경읽기와 심층연구가 함께 열리며, 13–16장은 순차로 활성화한다.', '모든 장은 성경읽기와 심층연구가 함께 열린다.'),
+              ('13장부터 순차 제작하며 완성되는 대로 책등과 장별 링크를 활성화한다.', '열여섯 장 전체의 책등과 장별 심층연구 링크를 활성화했다.'),
+          ]
+          for old, new in replacements:
+              if old in idx:
+                  idx = idx.replace(old, new)
+          idx = idx.replace('12/16편', '16/16편')
+          idx = idx.replace('1–12장 심층연구', '1–16장 심층연구')
+
+          for n in range(13, 17):
+              pat = re.compile(
+                  rf'<span class="book-spine pending" aria-disabled="true" data-status="pending"><span class="num">{n:02}</span><span class="title">([^<]+)</span><span class="band"></span></span>'
+              )
+              idx, count = pat.subn(
+                  lambda m, n=n: f'<a class="book-spine" href="ch{n:02}.html" data-status="complete"><span class="num">{n:02}</span><span class="title">{m.group(1)}</span><span class="band"></span></a>',
+                  idx, count=1
+              )
+              if count != 1:
+                  raise SystemExit(f'index: pending spine {n} not found')
+
+              rowpat = re.compile(r'(<article class="book-chapter-row"><span class="no">0?' + str(n) + r'</span>.*?</article>)', re.S)
+              m = rowpat.search(idx)
+              if not m:
+                  raise SystemExit(f'index: chapter row {n} not found')
+              row = m.group(1)
+              pending_action = '<span class="disabled">심층연구 준비 중</span>'
+              if pending_action not in row:
+                  raise SystemExit(f'index: chapter row {n} pending deep-study action not found')
+              row2 = row.replace(pending_action, f'<a href="ch{n:02}.html">심층연구</a>', 1)
+              idx = idx[:m.start(1)] + row2 + idx[m.end(1):]
+
+          # Remove stale completion-language left in the supplied package design.
+          idx = idx.replace('1–16장 심층연구가 완성되었고, 나머지 장은 아홉 권의 서가 자료를 대조하며 순차 제작한다.', '1–16장 심층연구가 완성되었다. 아홉 권의 서가 자료를 대조해 전 장의 연구를 연결한다.')
+          idx = idx.replace('모든 장은 성경읽기와 심층연구가 함께 열리며, 나머지 장은 순차로 활성화한다.', '모든 장은 성경읽기와 심층연구가 함께 열린다.')
+          idx = idx.replace('완성되는 대로 책등과 장별 링크를 활성화한다.', '열여섯 장 전체의 책등과 장별 링크를 활성화했다.')
+          idxp.write_text(idx, encoding='utf-8')
+
+          ovp = Path('nt/mark/overview.html')
+          ov = ovp.read_text(encoding='utf-8')
+          ov = ov.replace('장별 심층연구 1장 완성', '장별 심층연구 1–16장 완성')
+          ov = ov.replace('장별 심층연구는 자료 파일 대조와 함께 1장부터 순차 제작하며, 완성되는 대로 서가의 책등을 활성화한다.', '장별 심층연구 1–16장을 모두 완성했으며, 각 장은 성경읽기와 심층연구로 바로 연결된다.')
+          ovp.write_text(ov, encoding='utf-8')
+
+          cp = Path('catalog.js')
+          cat = cp.read_text(encoding='utf-8')
+          old = re.compile(r'\{id:"mark",path:"nt/mark/index\.html",title:"마가복음 연구 서가".*?volumes:17\},')
+          new = '{id:"mark",path:"nt/mark/index.html",title:"마가복음 연구 서가",original:"ΚΑΤΑ ΜΑΡΚΟΝ",script:"grk",meta:"완성형 서가 — 성경읽기 16장 · 종합 개관 1편 · 장별 심층연구 16편 · 원어 연구 준비 중",progress:{label:"장별 심층연구",done:16,total:16},desc:"광야의 외침에서 빈 무덤의 침묵까지, 가장 이른 복음서 열여섯 장을 연결한다. France·Stein·Edwards·Witherington·Gundry 다섯 주석에 Rhoads의 서사비평, Watts의 새 출애굽, Bauckham의 목격자 논증을 대조해 종합 개관과 1–16장 전편 심층연구를 세웠다.",volumes:17},'
+          cat, count = old.subn(new, cat, count=1)
+          if count != 1:
+              raise SystemExit('catalog: Mark entry not found')
+          cp.write_text(cat, encoding='utf-8')
+          PY
+
+      - name: Validate final Mark integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          python validate_mark.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          mark = Path('nt/mark')
+          for i in range(1, 17):
+              p = mark / f'ch{i:02}.html'
+              if not p.exists(): raise SystemExit(f'missing {p}')
+          idx = (mark/'index.html').read_text(encoding='utf-8')
+          for i in range(1,17):
+              if f'href="ch{i:02}.html"' not in idx:
+                  raise SystemExit(f'index link missing ch{i:02}')
+          stale = ['12/16편','13–16장은','1장 완성','나머지 장은 순차']
+          combined = idx + (mark/'overview.html').read_text(encoding='utf-8')
+          for s in stale:
+              if s in combined: raise SystemExit(f'stale status copy: {s}')
+          cat = Path('catalog.js').read_text(encoding='utf-8')
+          for token in ['id:"mark"','done:16,total:16','장별 심층연구 16편']:
+              if token not in cat: raise SystemExit(f'catalog missing: {token}')
+          PY
+
+      - name: Commit final Mark shelf and clean installer
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .mark-final
+          rm -f .github/workflows/install-mark-final.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nt/mark catalog.js validate_mark.py MARK-PACKAGE.md .github/workflows/install-mark-final.yml .mark-final || true
+          git commit -m "Complete Mark Gospel study shelf through chapter 16"
+          git push origin main

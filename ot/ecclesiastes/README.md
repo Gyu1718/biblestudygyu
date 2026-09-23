@@ -42,6 +42,7 @@ python3 tools/apply_bible_reader.py --check
 |---|---|
 | `added_commentaries.py` | 롱맨(L)·바르톨로뮤(Ba)·프로반(P) 주석 대조 문단 |
 | `lexicon_spec.py` → `lexicon_data.py` | 장별 ‘핵심 원어와 문법’. 설명은 `lexicon_spec.py`에 쓰고, 히브리어 표기·사전형·빈도는 `python3 tools/build_ecclesiastes_lexicon.py`가 STEPBible TAHOT에서 채운다(`lexicon_data.py`는 직접 고치지 않는다) |
+| `verse_exegesis.py` | 1–12장 모든 절을 빠짐없이 덮는 절별 심층 주해(222절, 120개 항목). 폭스(JPS)의 절별 주석과 그가 소개하는 유대 전통 해석을 뼈대로 시아우·롱맨·바르톨로뮤·프로반·HOW의 해당 절 논의를 더했다. 빌드 검사가 장마다 모든 절이 정확히 한 번씩 덮였는지 확인한다 |
 | `chapter_supplements.py` | 장별 역사·문화적 배경, 정경적 연결, 설교·교육을 위한 메시지 |
 | `overview_supplements.py` | 종합 연구의 명칭과 정경적 위치, 저자·연대·언어, 본문과 전승, 상호 참조, 정경적·복음적 읽기, 해석사, 쟁점 대조표, 확장 연구용 문헌 |
 

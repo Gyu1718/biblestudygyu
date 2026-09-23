@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """사이트 무결성 검사 — 링크·데이터·앵커·카탈로그를 점검한다.
 사용법:  python3 tools/validate.py"""
-import os, re, json, glob, sys
+import os, re, json, glob, sys, html as html_lib
+from urllib.parse import urlsplit, unquote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -16,9 +17,16 @@ for fn in html_files:
     base = os.path.dirname(fn)
     html = open(fn, encoding="utf-8").read()
     for href in re.findall(r'href="([^"]+)"', html):
-        if href.startswith(("#","http","data:","mailto:","//")): continue
         if "{" in href or "esc(" in href: continue  # JS 템플릿
-        target = os.path.normpath(os.path.join(base, href.split("#")[0]))
+        url = urlsplit(html_lib.unescape(href))
+        if url.scheme or url.netloc or not url.path: continue
+        path = unquote(url.path)
+        if path.startswith("/biblestudygyu/"):
+            target = path.removeprefix("/biblestudygyu/") or "."
+        elif path.startswith("/"):
+            target = path.lstrip("/")
+        else:
+            target = os.path.normpath(os.path.join(base, path))
         if not os.path.exists(target):
             errs.append(f"깨진 링크: {fn} → {href}")
 

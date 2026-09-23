@@ -122,7 +122,7 @@ def validate(files: dict[Path, str]) -> list[str]:
     css = files[CSS]
 
     for needle in (
-        'progress:{label:"장별 심층연구",done:25,total:50}',
+        'progress:{label:"장별 심층연구",done:50,total:50}',
         'progress:{label:"장별 심층연구",done:28,total:28}',
     ):
         if needle not in catalog:
@@ -158,7 +158,7 @@ def main() -> None:
         if stale:
             raise SystemExit("homepage progress UI is stale: " + ", ".join(stale))
 
-    print("홈 진행률 검증 완료: 창세기 25/50, 사도행전 28/28")
+    print("홈 진행률 검증 완료: 창세기 50/50, 사도행전 28/28")
 
 
 if __name__ == "__main__":

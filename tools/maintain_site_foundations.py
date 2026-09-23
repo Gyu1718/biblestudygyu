@@ -26,8 +26,8 @@ LIVE_ROOTS = {"bible", "content", "encyclopedia", "lexicon", "nt", "ot", "search
 OLD_NOSCRIPT = '<main id="shelves"><noscript><section class="shelf-sec"><div class="sec-head"><h2>구약 연구</h2></div><p><a href="ot/nehemiah/index.html">느헤미야 심층 연구 — 전 14권</a></p></section></noscript></main>'
 NEW_NOSCRIPT = '''<main id="shelves"><noscript>
 <section class="shelf-sec"><div class="sec-head"><h2>성경과 원어 도구</h2></div><p><a href="bible/original.html">성경읽기</a> · <a href="lexicon/index.html">히브리어·헬라어 스트롱 사전</a> · <a href="search/index.html">사이트 전체 검색</a></p></section>
-<section class="shelf-sec"><div class="sec-head"><h2>구약 연구</h2></div><p><a href="ot/genesis/index.html">창세기</a> · <a href="ot/nehemiah/index.html">느헤미야</a> · <a href="ot/esther/index.html">에스더</a> · <a href="ot/psalms/index.html">시편</a> · <a href="ot/hosea/index.html">호세아</a> · <a href="ot/joel/index.html">요엘</a> · <a href="ot/haggai/index.html">학개</a></p></section>
-<section class="shelf-sec"><div class="sec-head"><h2>신약 연구</h2></div><p><a href="nt/acts/index.html">사도행전</a> · <a href="nt/romans/index.html">로마서</a></p></section>
+<section class="shelf-sec"><div class="sec-head"><h2>구약 연구</h2></div><p><a href="ot/genesis/index.html">창세기</a> · <a href="ot/nehemiah/index.html">느헤미야</a> · <a href="ot/esther/index.html">에스더</a> · <a href="ot/ecclesiastes/index.html">전도서</a> · <a href="ot/psalms/index.html">시편</a> · <a href="ot/hosea/index.html">호세아</a> · <a href="ot/joel/index.html">요엘</a> · <a href="ot/haggai/index.html">학개</a></p></section>
+<section class="shelf-sec"><div class="sec-head"><h2>신약 연구</h2></div><p><a href="nt/mark/index.html">마가복음</a> · <a href="nt/acts/index.html">사도행전</a> · <a href="nt/romans/index.html">로마서</a></p></section>
 </noscript></main>'''
 
 SKIP_LINK_CSS_MARKER = "SCRIPTORIUM_SKIP_LINK_V1"

@@ -116,7 +116,7 @@ def book_label(relative: Path) -> str:
         return ""
     names = {
         "genesis": "창세기", "nehemiah": "느헤미야", "esther": "에스더",
-        "psalms": "시편", "hosea": "호세아", "joel": "요엘", "haggai": "학개",
+        "psalms": "시편", "hosea": "호세아", "joel": "요엘", "haggai": "학개", "ecclesiastes": "전도서",
         "acts": "사도행전", "romans": "로마서",
     }
     return names.get(parts[1], "")

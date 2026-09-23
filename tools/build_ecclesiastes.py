@@ -25,6 +25,27 @@ from added_commentaries import NEW_SOURCES, OVERVIEW_ADDITIONS, QUESTION_ADDITIO
 from lexicon_data import LEXICON  # noqa: E402
 from chapter_supplements import CHAPTER_SUPPLEMENTS  # noqa: E402
 import overview_supplements as OS  # noqa: E402
+from verse_exegesis import EXEGESIS  # noqa: E402
+
+
+def verse_span(reference: str) -> tuple[int, int, int]:
+    match = re.fullmatch(r'(\d+):(\d+)(?:[–-](\d+))?', reference)
+    if not match:
+        raise ValueError(f'절 범위 형식 오류: {reference}')
+    chapter, start = int(match[1]), int(match[2])
+    return chapter, start, int(match[3] or start)
+
+
+def exegesis_block(number: int, unit_range: str) -> str:
+    _, first, last = verse_span(unit_range)
+    items = [item for item in EXEGESIS.get(number, []) if first <= verse_span(item[0])[1] <= last]
+    if not items:
+        return ''
+    parts = ['<div class="vx-wrap"><h3>절별 주해</h3>']
+    for reference, title, paragraphs in items:
+        parts.append(f'<div class="vx"><h4>{escape(reference)} · {escape(title)}</h4>' + ''.join(map(para, paragraphs)) + '</div>')
+    parts.append('</div>')
+    return ''.join(parts)
 
 
 def merge_added_commentaries() -> None:
@@ -255,6 +276,7 @@ def used_codes(number: int, info: tuple, notes: list[tuple]) -> set[str]:
             | set(' '.join(row['codes'] for row in LEXICON[number]).split())
             | set(' '.join(p[0] for key in ('background', 'canon') for p in CHAPTER_SUPPLEMENTS[number][key]).split())
             | set(' '.join(p[0] for p in CHAPTER_SUPPLEMENTS[number]['teaching']['notes']).split())
+            | set(' '.join(p[0] for _, _, paragraphs in EXEGESIS.get(number, []) for p in paragraphs).split())
             | {'H'})
 
 
@@ -275,6 +297,7 @@ def render_chapter(number: int) -> str:
     for i, (range_, heading, paragraphs) in enumerate(units, 1):
         out += [f'<section class="part" id="u{i}"><h2>{i}. {escape(heading)}</h2><span class="range">전도서 {escape(range_)} · <a href="../../bible/original.html?book=ECC&amp;chapter={number}">본문 읽기 ↗</a></span>']
         out += list(map(para, paragraphs))
+        out.append(exegesis_block(number, range_))
         out.append('</section>')
     out += ['<section class="part" id="analysis"><h2>주석의 논증과 신학적 함의</h2>']
     for heading, paragraphs in DEEP_DIVE[number]:
@@ -324,6 +347,18 @@ def check_research() -> None:
         for codes, _ in groups:
             if set(codes.split()) - set(SOURCES):
                 raise ValueError(f'{number}장에 출처가 없는 주석 칩이 있습니다: {codes}')
+        if number in EXEGESIS:
+            seen: list[int] = []
+            for reference, _, paragraphs in EXEGESIS[number]:
+                chapter, first, last = verse_span(reference)
+                if chapter != number or not paragraphs:
+                    raise ValueError(f'{number}장 절별 주해 범위 오류: {reference}')
+                seen += list(range(first, last + 1))
+                for codes, _ in paragraphs:
+                    if set(codes.split()) - set(SOURCES):
+                        raise ValueError(f'{number}장 절별 주해에 출처가 없는 칩이 있습니다: {codes}')
+            if sorted(seen) != sorted(expected) or len(seen) != len(expected):
+                raise ValueError(f'{number}장 절별 주해가 {len(expected)}절을 빠짐없이 한 번씩 덮지 못합니다')
         supplement = CHAPTER_SUPPLEMENTS.get(number)
         if not supplement or not supplement['background'] or not supplement['canon'] or len(supplement['teaching']['outline']) < 3:
             raise ValueError(f'{number}장 보완층(배경·정경·설교)이 비어 있습니다')

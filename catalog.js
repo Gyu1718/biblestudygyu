@@ -1,5 +1,5 @@
 /* 성서 연구 서고 — 카탈로그 */
-window.SITE_CATALOG = {site:{name:"성서 연구 서고",updated:"2026-09-06"},sections:[
+window.SITE_CATALOG = {site:{name:"성서 연구 서고",updated:"2026-09-23"},sections:[
 {id:"bible",label:"성경읽기",original:"Biblia · Γραφή",script:"lat",studies:[{id:"reader",path:"bible/original.html",title:"성경읽기",original:"원어 · 개역개정",script:"lat",meta:"성경 66권 — 장·절 선택 · 구약 WLC/OSHB · 신약 NA28 · 개역개정 병렬 대조",desc:"성경책과 장절을 선택해 원문과 개역개정을 절 단위로 나란히 읽는다. 원어 단어에 마우스를 올리거나 터치하면 한글 스트롱 사전 풀이를 확인할 수 있다.",volumes:2}]},
 {id:"lexicon",label:"원어 사전",original:"Λεξικόν · מִלּוֹן",script:"lat",studies:[{id:"strongs-lexicon",path:"lexicon/index.html",title:"히브리어·헬라어 스트롱 사전",original:"Ἑλληνικά · עִבְרִית",script:"lat",meta:"히브리어·아람어 H1–H8674 · 헬라어 실제 Strong 항목 5,523개 · 한글 원문 보존 · 번호·표제어·발음·뜻 검색 · 원어성경 호버 연결",desc:"사용자가 제공한 한글 스트롱 사전 자료를 구조화했다. 상세 페이지에서는 사전 원문을 확인하고, 성경읽기 화면에서는 원어 단어 위에서 간략 풀이를 바로 볼 수 있다.",volumes:6}]},
 {id:"ot",label:"구약 연구",original:"תַּנַ\"ךְ",script:"heb",studies:[

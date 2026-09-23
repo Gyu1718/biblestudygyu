@@ -33,3 +33,16 @@ python3 tools/build_ecclesiastes.py --check
 python3 tools/apply_study_tools.py --check
 python3 tools/apply_bible_reader.py --check
 ```
+
+## 보완층 (2026-09-23)
+
+`BOOK_STUDY_MANUAL.md`의 권장 항목에 맞춰 다음 층을 더했다. 모두 빌드할 때 기존 원고와 합쳐진다.
+
+| 파일 | 내용 |
+|---|---|
+| `added_commentaries.py` | 롱맨(L)·바르톨로뮤(Ba)·프로반(P) 주석 대조 문단 |
+| `lexicon_spec.py` → `lexicon_data.py` | 장별 ‘핵심 원어와 문법’. 설명은 `lexicon_spec.py`에 쓰고, 히브리어 표기·사전형·빈도는 `python3 tools/build_ecclesiastes_lexicon.py`가 STEPBible TAHOT에서 채운다(`lexicon_data.py`는 직접 고치지 않는다) |
+| `chapter_supplements.py` | 장별 역사·문화적 배경, 정경적 연결, 설교·교육을 위한 메시지 |
+| `overview_supplements.py` | 종합 연구의 명칭과 정경적 위치, 저자·연대·언어, 본문과 전승, 상호 참조, 정경적·복음적 읽기, 해석사, 쟁점 대조표, 확장 연구용 문헌 |
+
+전도서 인용은 저장소의 개역개정 런타임 데이터(`assets/data/bible/kor/chunks/ot-wisdom.json.gz`)와 대조했다. 설교 개요와 나눔 질문은 주석의 논의를 바탕으로 구성한 교육용 제안이며, 칩이 붙은 문단만 주석의 논지를 요약한다.

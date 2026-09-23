@@ -22,6 +22,9 @@ from verse_notes import VERSE_NOTES  # noqa: E402
 from deep_dive import DEEP_DIVE, H_PERSPECTIVES  # noqa: E402
 from cross_references import CROSS_REFERENCES  # noqa: E402
 from added_commentaries import NEW_SOURCES, OVERVIEW_ADDITIONS, QUESTION_ADDITIONS, UNIT_ADDITIONS  # noqa: E402
+from lexicon_data import LEXICON  # noqa: E402
+from chapter_supplements import CHAPTER_SUPPLEMENTS  # noqa: E402
+import overview_supplements as OS  # noqa: E402
 
 
 def merge_added_commentaries() -> None:
@@ -119,6 +122,64 @@ def overview_sections() -> str:
                    for i, (heading, paragraphs) in enumerate(OVERVIEW, 1))
 
 
+def numbered_section(ident: str, number: int, heading: str, body: str) -> str:
+    return f'<section class="part" id="{ident}"><h2>{number}. {escape(heading)}</h2>{body}</section>'
+
+
+def issue_table() -> str:
+    codes = [code for code in SOURCES]
+    head_cells = ''.join(f'<th>{chips(code)}</th>' for code in codes)
+    rows = []
+    for issue, cells in OS.ISSUE_TABLE:
+        tds = ''.join(f'<td>{cells.get(code, "—")}</td>' for code in codes)
+        rows.append(f'<tr><th scope="row">{escape(issue)}</th>{tds}</tr>')
+    return ('<p>주석별 입장을 짧게 대조합니다. 빈칸(—)은 이 서가에서 해당 쟁점의 입장을 확인하지 않았다는 뜻입니다.</p>'
+            f'<div class="table-scroll"><table class="issue-table"><thead><tr><th>쟁점</th>{head_cells}</tr></thead><tbody>'
+            + ''.join(rows) + '</tbody></table></div>')
+
+
+def further_reading() -> str:
+    parts = ['<p class="source-note">아래 문헌은 이 서가에서 직접 대조하지 않은 확장 연구용 목록입니다. 이 연구가 실제로 사용한 자료는 바로 아래의 칩 목록에 있습니다.</p>']
+    for group, items in OS.FURTHER_READING:
+        parts.append(f'<h3>{escape(group)}</h3><ul class="biblio">' + ''.join(f'<li>{item}</li>' for item in items) + '</ul>')
+    return ''.join(parts)
+
+
+def gospel_body() -> str:
+    parts = [para(OS.GOSPEL_INTRO)]
+    for i, (heading, paragraphs) in enumerate(OS.GOSPEL, 1):
+        parts.append(f'<h3>{i}. {escape(heading)}</h3>' + ''.join(map(para, paragraphs)))
+    return ''.join(parts)
+
+
+def lexicon_section(number: int) -> str:
+    rows = []
+    for row in LEXICON[number]:
+        gloss = row['label'].split(', ', 1)[1] if ', ' in row['label'] else row['label']
+        freq = ', '.join(f'{strong} {n}회' for strong, n in zip(row['strongs'], row['freq']))
+        rows.append(
+            f'<tr><td><a href="./parsing/ch{number:02d}.html#v{row["verse"]}">{number}:{row["verse"]}</a></td>'
+            f'<td><span class="lex-he" lang="he" dir="rtl">{escape(row["hebrew"])}</span>'
+            f'<span class="lex-tr">{escape(row["translit"])}</span>'
+            f'<span class="lex-lemma">사전형 <span lang="he" dir="rtl">{escape(row["lemma"])}</span> · 전도서 빈도 {escape(freq)}</span></td>'
+            f'<td><strong>{gloss}</strong><br>{row["note"]} {chips(row["codes"])}</td></tr>')
+    return ('<section class="part" id="lexicon"><h2>핵심 원어와 문법</h2>'
+            f'<p>히브리어 표기와 사전형, 빈도는 STEPBible TAHOT(CC BY 4.0)에서 가져왔습니다. 절 번호를 누르면 <a href="./parsing/ch{number:02d}.html">원어 연구 {number}장</a>의 해당 절로 이동합니다.</p>'
+            '<div class="table-scroll"><table class="lex-table"><thead><tr><th>절</th><th>원어</th><th>뜻과 문법</th></tr></thead><tbody>'
+            + ''.join(rows) + '</tbody></table></div></section>')
+
+
+def teaching_section(number: int) -> str:
+    t = CHAPTER_SUPPLEMENTS[number]['teaching']
+    outline = ''.join(f'<li>{escape(point)}</li>' for point in t['outline'])
+    questions = ''.join(f'<li>{escape(q)}</li>' for q in t['questions'])
+    notes = ''.join(map(para, t['notes']))
+    return ('<section class="part" id="teaching"><h2>설교·교육을 위한 메시지</h2>'
+            '<p class="source-note">설교 개요와 나눔 질문은 주석의 논의를 바탕으로 이 서가가 구성한 교육용 제안입니다. 칩이 붙은 문단만 주석의 논지를 요약한 것입니다.</p>'
+            f'<div class="callout"><h3>설교 개요 · {escape(t["title"])}</h3><ol class="outline">{outline}</ol></div>'
+            f'<h3>나눔 질문</h3><ul class="questions">{questions}</ul>{notes}</section>')
+
+
 def foot(prev: str | None = None, nxt: str | None = None) -> str:
     back = '<nav class="page-nav" aria-label="연구 페이지 이동">'
     back += f'<a href="{prev}">← 이전</a>' if prev else '<span></span>'
@@ -160,10 +221,26 @@ def render_index() -> str:
 
 def render_overview() -> str:
     used = set(SOURCES)
-    anchors = [(f'o{i}', h) for i, (h, _) in enumerate(OVERVIEW, 1)] + [('map', '장별 연구 지도'), ('sources', '주석 출처')]
+    plan = [
+        ('names', OS.NAMES[0], ''.join(map(para, OS.NAMES[1]))),
+        ('o1', OVERVIEW[0][0], ''.join(map(para, OVERVIEW[0][1]))),
+        ('author', OS.AUTHOR[0], ''.join(map(para, OS.AUTHOR[1]))),
+        ('o2', OVERVIEW[1][0], ''.join(map(para, OVERVIEW[1][1]))),
+        ('text', OS.TEXT[0], ''.join(map(para, OS.TEXT[1]))),
+        ('o3', OVERVIEW[2][0], ''.join(map(para, OVERVIEW[2][1]))),
+        ('map', '장별 연구 지도', chapter_cards()),
+    ] + [(f'o{i}', OVERVIEW[i - 1][0], ''.join(map(para, OVERVIEW[i - 1][1]))) for i in range(4, len(OVERVIEW) + 1)] + [
+        ('xrefs', OS.XREFS[0], ''.join(map(para, OS.XREFS[1]))),
+        ('gospel', '정경적·복음적 읽기', gospel_body()),
+        ('history', OS.HISTORY[0], ''.join(map(para, OS.HISTORY[1]))),
+        ('issue-table', '쟁점 대조표', issue_table()),
+        ('further', '확장 연구용 문헌', further_reading()),
+    ]
+    anchors = [(ident, heading) for ident, heading, _ in plan] + [('sources', '주석 출처')]
     out = [head('전도서 종합 연구', '전도서의 저자·시대·구조와 헤벨, 시간, 하나님의 주권, 정의, 기쁨, 죽음, 후기의 신학적 대화를 여덟 주석 자료로 연구.', 'overview'), nav('전도서 · 종합 연구', anchors)]
-    out += ['<header class="hero"><span class="heb" lang="he" dir="rtl">הֲבֵל הֲבָלִים</span><h1>전도서 · 종합 연구</h1><p class="lead">책을 감싸는 화자의 목소리, 사회 경제의 질문, 경쟁하는 구조 제안, 헤벨과 몫, 하나님의 때와 정의의 지연, 마지막 후기의 경외를 함께 살핍니다.</p></header>', legend(used), overview_sections()]
-    out += ['<section class="part" id="map"><h2>장별 연구 지도</h2>', chapter_cards(), '</section>', sources(used), foot(prev='index.html', nxt='ch01.html')]
+    out += ['<header class="hero"><span class="heb" lang="he" dir="rtl">הֲבֵל הֲבָלִים</span><h1>전도서 · 종합 연구</h1><p class="lead">책을 감싸는 화자의 목소리, 사회 경제의 질문, 경쟁하는 구조 제안, 헤벨과 몫, 하나님의 때와 정의의 지연, 마지막 후기의 경외를 함께 살핍니다.</p></header>', legend(used)]
+    out += [numbered_section(ident, i, heading, body) for i, (ident, heading, body) in enumerate(plan, 1)]
+    out += [sources(used), foot(prev='index.html', nxt='ch01.html')]
     return "\n".join(out)
 
 
@@ -175,6 +252,9 @@ def used_codes(number: int, info: tuple, notes: list[tuple]) -> set[str]:
             | set(' '.join(note[1] for note in notes).split())
             | set(' '.join(p[0] for _, paragraphs in DEEP_DIVE[number] for p in paragraphs).split())
             | set(' '.join(row[4] for row in CROSS_REFERENCES[number]).split())
+            | set(' '.join(row['codes'] for row in LEXICON[number]).split())
+            | set(' '.join(p[0] for key in ('background', 'canon') for p in CHAPTER_SUPPLEMENTS[number][key]).split())
+            | set(' '.join(p[0] for p in CHAPTER_SUPPLEMENTS[number]['teaching']['notes']).split())
             | {'H'})
 
 
@@ -184,7 +264,7 @@ def render_chapter(number: int) -> str:
     used = used_codes(number, CHAPTERS[number], notes)
     short = {'H': 'HOW', 'L': 'Longman'}
     source_names = '·'.join(short.get(code, SOURCES[code][0].split()[-1]) for code in SOURCES if code in used)
-    anchors = [('structure', '단락의 짜임')] + [(f'u{i}', f'{range_} · {heading}') for i, (range_, heading, _) in enumerate(units, 1)] + [('analysis', '주석 심화 논의'), ('verse-notes', '절 범위별 관찰'), ('cross-refs', '상호 참조'), ('issues', '주요 해석 논쟁'), ('message', '신학적 메시지'), ('sources', '주석 출처')]
+    anchors = [('structure', '단락의 짜임')] + [(f'u{i}', f'{range_} · {heading}') for i, (range_, heading, _) in enumerate(units, 1)] + [('analysis', '주석 심화 논의'), ('verse-notes', '절 범위별 관찰'), ('lexicon', '핵심 원어와 문법'), ('background', '역사·문화적 배경'), ('cross-refs', '상호 참조'), ('canon', '정경적 연결'), ('issues', '주요 해석 논쟁'), ('message', '신학적 메시지'), ('teaching', '설교·교육 메시지'), ('sources', '주석 출처')]
     out = [head(f'전도서 {number}장 심층 연구 · {title}', f'전도서 {number}장 {desc} {source_names} 자료별 주석 칩과 절 범위별 주해.', 'study', number), nav(f'전도서 {number}장 심층 연구', anchors, number)]
     out += [f'<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">CHAPTER {number:02d} · 구약 지혜문학</div><h1>전도서 {number}장 · {escape(title)}</h1><p class="lead">{escape(desc)}</p><p class="meta"><a href="../../bible/original.html?book=ECC&amp;chapter={number}">원문·개역개정 성경읽기 ↗</a> · <a href="./parsing/ch{number:02d}.html">원어 연구 {number}장 →</a> · {len(units)}개 단락 · {len(notes)}개 절 범위 관찰 · 주석 {len(used)}종</p></header>', legend(used)]
     out += ['<section class="part" id="structure"><h2>0. 단락의 짜임</h2><div class="table-scroll"><table><thead><tr><th>본문</th><th>연구 초점</th><th>주석 대조</th></tr></thead><tbody>']
@@ -205,13 +285,17 @@ def render_chapter(number: int) -> str:
     out.append('</section>')
     out += ['<section class="part" id="verse-notes"><h2>절 범위별 주해 관찰</h2><p>같은 장의 단락을 더 작은 절 범위로 확인합니다. 칩은 각 주석의 해당 절 논의를 가리킵니다.</p><ul class="units">']
     out += [f'<li><strong>{escape(ref)}</strong> · {text} {chips(codes)}</li>' for ref, codes, text in notes]
-    out += ['</ul></section><section class="part" id="cross-refs"><h2>주석에서 대조한 본문</h2><div class="table-scroll"><table><thead><tr><th>본문</th><th>연결되는 논의</th><th>자료</th></tr></thead><tbody>']
+    supplement = CHAPTER_SUPPLEMENTS[number]
+    out += ['</ul></section>', lexicon_section(number),
+            '<section class="part" id="background"><h2>역사·문화적 배경</h2>'] + list(map(para, supplement['background'])) + ['</section>']
+    out += ['<section class="part" id="cross-refs"><h2>주석에서 대조한 본문</h2><div class="table-scroll"><table><thead><tr><th>본문</th><th>연결되는 논의</th><th>자료</th></tr></thead><tbody>']
     for code, ch, ref, meaning, source in CROSS_REFERENCES[number]:
         out.append(f'<tr><td><a href="../../bible/original.html?book={code}&amp;chapter={ch}">{escape(ref)}</a></td><td>{escape(meaning)}</td><td>{chips(source)}</td></tr>')
-    out += ['</tbody></table></div></section><section class="part" id="issues"><h2>핵심 난제와 주석가들의 논의</h2>']
+    out += ['</tbody></table></div></section><section class="part" id="canon"><h2>정경적 연결</h2>'] + list(map(para, supplement['canon'])) + ['</section>']
+    out += ['<section class="part" id="issues"><h2>핵심 난제와 주석가들의 논의</h2>']
     for heading, paragraphs in questions:
         out += [f'<div class="callout"><h3>{escape(heading)}</h3>'] + list(map(para, paragraphs)) + ['</div>']
-    out += ['</section><section class="part" id="message"><h2>신학적 메시지와 다음 장의 질문</h2>'] + list(map(para, summary)) + ['</section>', sources(used, number)]
+    out += ['</section><section class="part" id="message"><h2>신학적 메시지와 다음 장의 질문</h2>'] + list(map(para, summary)) + ['</section>', teaching_section(number), sources(used, number)]
     prev = f'ch{number-1:02d}.html' if number > 1 else 'overview.html'
     nxt = f'ch{number+1:02d}.html' if number < 12 else None
     out.append(foot(prev, nxt))
@@ -240,6 +324,17 @@ def check_research() -> None:
         for codes, _ in groups:
             if set(codes.split()) - set(SOURCES):
                 raise ValueError(f'{number}장에 출처가 없는 주석 칩이 있습니다: {codes}')
+        supplement = CHAPTER_SUPPLEMENTS.get(number)
+        if not supplement or not supplement['background'] or not supplement['canon'] or len(supplement['teaching']['outline']) < 3:
+            raise ValueError(f'{number}장 보완층(배경·정경·설교)이 비어 있습니다')
+        extra = supplement['background'] + supplement['canon'] + supplement['teaching']['notes']
+        extra += [(row['codes'], row['note']) for row in LEXICON.get(number, [])]
+        for codes, _ in extra:
+            if set(codes.split()) - set(SOURCES):
+                raise ValueError(f'{number}장 보완층에 출처가 없는 칩이 있습니다: {codes}')
+        for row in LEXICON.get(number, []):
+            if str(row['verse']) not in bible[str(number)]:
+                raise ValueError(f'{number}장 원어 항목의 절 번호가 본문 범위를 벗어납니다: {row["verse"]}')
         for book, chapter, _, _, codes in CROSS_REFERENCES[number]:
             if book not in manifest or not 1 <= chapter <= manifest[book]['chapters'] or set(codes.split()) - set(SOURCES):
                 raise ValueError(f'{number}장 상호 참조가 성경 리더 또는 출처를 벗어납니다: {book} {chapter}')

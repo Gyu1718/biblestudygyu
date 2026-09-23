@@ -21,6 +21,25 @@ from overview_data import INDEX_SUMMARY, OVERVIEW  # noqa: E402
 from verse_notes import VERSE_NOTES  # noqa: E402
 from deep_dive import DEEP_DIVE, H_PERSPECTIVES  # noqa: E402
 from cross_references import CROSS_REFERENCES  # noqa: E402
+from added_commentaries import NEW_SOURCES, OVERVIEW_ADDITIONS, QUESTION_ADDITIONS, UNIT_ADDITIONS  # noqa: E402
+
+
+def merge_added_commentaries() -> None:
+    """Attach the Longman/Bartholomew/Provan layer to the existing study data."""
+    SOURCES.update(NEW_SOURCES)
+    for number, additions in UNIT_ADDITIONS.items():
+        units = {range_: paragraphs for range_, _, paragraphs in CHAPTERS[number][2]}
+        for range_, paragraphs in additions.items():
+            if range_ not in units:
+                raise ValueError(f'{number}장에 없는 단락 범위입니다: {range_}')
+            units[range_].extend(paragraphs)
+    for number, paragraphs in QUESTION_ADDITIONS.items():
+        CHAPTERS[number][3][0][1].extend(paragraphs)
+    for index, paragraphs in OVERVIEW_ADDITIONS.items():
+        OVERVIEW[index][1].extend(paragraphs)
+
+
+merge_added_commentaries()
 
 
 def chips(codes: str) -> str:
@@ -38,7 +57,7 @@ def para(item: tuple[str, str]) -> str:
 
 def sources(used: set[str], chapter: int | None = None) -> str:
     parts = ['<section class="part" id="sources"><h2>사용한 &lt;도서&gt; 자료와 칩</h2>',
-             '<p class="source-note">각 문단과 절 범위 옆의 칩은 아래 자료의 해당 전도서 단락을 가리킵니다. 번역문을 길게 옮기지 않고 주석의 논지와 이견을 한국어로 요약했습니다. 한국어 PDF의 OCR은 낱말 손상이 있어 직접 인용에 사용하지 않았습니다. 원어 표기와 성경 전문은 별도 성경읽기에서 확인하세요.</p>',
+             '<p class="source-note">각 문단과 절 범위 옆의 칩은 아래 자료의 해당 전도서 단락을 가리킵니다. 번역문을 길게 옮기지 않고 주석의 논지와 이견을 한국어로 요약했습니다. 한국어 PDF의 OCR은 낱말 손상이 있어 직접 인용에 사용하지 않았습니다. L·Ba·P 칩은 롱맨·바르톨로뮤·프로반 주석의 EPUB 판독본에서 해당 단락 주해와 신학적 함의·적용 부분을 확인해 요약한 층입니다. 원어 표기와 성경 전문은 별도 성경읽기에서 확인하세요.</p>',
              '<ol class="sources">']
     for code, (author, title, edition, kind) in SOURCES.items():
         if code not in used:
@@ -124,8 +143,8 @@ def chapter_cards() -> str:
 def render_index() -> str:
     used = set(SOURCES)
     anchors = [('reading', '성경읽기와 연구 경로'), ('shelf', '열두 장의 서가'), ('summary', '책의 개관과 신학')] + [(f'o{i}', h) for i, (h, _) in enumerate(OVERVIEW, 1)] + [('sources', '주석 출처')]
-    out = [head('전도서 연구 서가', '전도서의 구조·헤벨·시간·즐거움·정의·죽음과 열두 장 심층연구를 다섯 자료로 대조한 종합 연구 서가.', 'study-home'), nav('전도서 · 책의 개관과 서가', anchors)]
-    out += ['<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">ECCLESIASTES · 12 CHAPTERS</div><h1>전도서 · 책의 개관과 정리</h1><p class="lead">수고의 남는 이익을 묻고, 억압과 죽음을 직시하며, 알 수 없는 내일 앞에서 나누고 일하고 주어진 기쁨을 누리라는 지혜. 다섯 자료의 공통점과 해석 차이를 출처별 칩으로 추적합니다.</p><p class="meta">종합 연구 · 12장 심층 주해 · Seow / Fox / Murphy / Brown / HOW · 성경읽기 ECC 연결</p></header>', legend(used)]
+    out = [head('전도서 연구 서가', '전도서의 구조·헤벨·시간·즐거움·정의·죽음과 열두 장 심층연구를 여덟 주석 자료로 대조한 종합 연구 서가.', 'study-home'), nav('전도서 · 책의 개관과 서가', anchors)]
+    out += ['<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">ECCLESIASTES · 12 CHAPTERS</div><h1>전도서 · 책의 개관과 정리</h1><p class="lead">수고의 남는 이익을 묻고, 억압과 죽음을 직시하며, 알 수 없는 내일 앞에서 나누고 일하고 주어진 기쁨을 누리라는 지혜. 여덟 주석의 공통점과 해석 차이를 출처별 칩으로 추적합니다.</p><p class="meta">종합 연구 · 12장 심층 주해 · Seow / Fox / Murphy / Brown / HOW / Longman / Bartholomew / Provan · 성경읽기 ECC 연결</p></header>', legend(used)]
     parsing_links = ' '.join(f'<a href="parsing/ch{i:02d}.html">{i}장</a>' for i in CHAPTERS)
     reader_links = ' '.join(f'<a href="../../bible/original.html?book=ECC&amp;chapter={i}">{i}장</a>' for i in CHAPTERS)
     out += ['<section class="part" id="reading"><h2>성경읽기와 연구 경로</h2><p>원문·개역개정 성경읽기에서 본문을 확인하고, 아래의 종합 개관과 장별 연구를 이어 읽습니다. 원어 연구는 STEPBible TAHOT 데이터로 생성한 열두 장의 인터라이너입니다. 5장은 한국어·영어 장절(5:1–20)을 따르며, 히브리어 성경에서는 4:17과 5:1–19에 해당합니다.</p>',
@@ -142,7 +161,7 @@ def render_index() -> str:
 def render_overview() -> str:
     used = set(SOURCES)
     anchors = [(f'o{i}', h) for i, (h, _) in enumerate(OVERVIEW, 1)] + [('map', '장별 연구 지도'), ('sources', '주석 출처')]
-    out = [head('전도서 종합 연구', '전도서의 저자·시대·구조와 헤벨, 시간, 하나님의 주권, 정의, 기쁨, 죽음, 후기의 신학적 대화를 다섯 자료로 연구.', 'overview'), nav('전도서 · 종합 연구', anchors)]
+    out = [head('전도서 종합 연구', '전도서의 저자·시대·구조와 헤벨, 시간, 하나님의 주권, 정의, 기쁨, 죽음, 후기의 신학적 대화를 여덟 주석 자료로 연구.', 'overview'), nav('전도서 · 종합 연구', anchors)]
     out += ['<header class="hero"><span class="heb" lang="he" dir="rtl">הֲבֵל הֲבָלִים</span><h1>전도서 · 종합 연구</h1><p class="lead">책을 감싸는 화자의 목소리, 사회 경제의 질문, 경쟁하는 구조 제안, 헤벨과 몫, 하나님의 때와 정의의 지연, 마지막 후기의 경외를 함께 살핍니다.</p></header>', legend(used), overview_sections()]
     out += ['<section class="part" id="map"><h2>장별 연구 지도</h2>', chapter_cards(), '</section>', sources(used), foot(prev='index.html', nxt='ch01.html')]
     return "\n".join(out)
@@ -163,7 +182,8 @@ def render_chapter(number: int) -> str:
     title, desc, units, questions, summary = CHAPTERS[number]
     notes = VERSE_NOTES[number]
     used = used_codes(number, CHAPTERS[number], notes)
-    source_names = '·'.join(SOURCES[code][0].split()[-1] if code != 'H' else 'HOW' for code in SOURCES if code in used)
+    short = {'H': 'HOW', 'L': 'Longman'}
+    source_names = '·'.join(short.get(code, SOURCES[code][0].split()[-1]) for code in SOURCES if code in used)
     anchors = [('structure', '단락의 짜임')] + [(f'u{i}', f'{range_} · {heading}') for i, (range_, heading, _) in enumerate(units, 1)] + [('analysis', '주석 심화 논의'), ('verse-notes', '절 범위별 관찰'), ('cross-refs', '상호 참조'), ('issues', '주요 해석 논쟁'), ('message', '신학적 메시지'), ('sources', '주석 출처')]
     out = [head(f'전도서 {number}장 심층 연구 · {title}', f'전도서 {number}장 {desc} {source_names} 자료별 주석 칩과 절 범위별 주해.', 'study', number), nav(f'전도서 {number}장 심층 연구', anchors, number)]
     out += [f'<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">CHAPTER {number:02d} · 구약 지혜문학</div><h1>전도서 {number}장 · {escape(title)}</h1><p class="lead">{escape(desc)}</p><p class="meta"><a href="../../bible/original.html?book=ECC&amp;chapter={number}">원문·개역개정 성경읽기 ↗</a> · <a href="./parsing/ch{number:02d}.html">원어 연구 {number}장 →</a> · {len(units)}개 단락 · {len(notes)}개 절 범위 관찰 · 주석 {len(used)}종</p></header>', legend(used)]

@@ -1,6 +1,6 @@
 # 전도서 연구 서가
 
-`index.html`은 열두 장의 서가와 책 전체의 개관·구조·신학을 함께 싣습니다. `overview.html`은 종합 연구를 별도 문서로 읽기 위한 경로입니다. `ch01.html`–`ch12.html`은 단락별 심층 주해, 절 범위 관찰, 주석 이견, 신학 메시지로 구성됩니다. 성경 본문은 공통 리더의 ECC로 연결하며, 존재하지 않는 원어 연구 파일에는 링크하지 않습니다.
+`index.html`은 열두 장의 서가와 책 전체의 개관·구조·신학을 함께 싣습니다. `overview.html`은 종합 연구를 별도 문서로 읽기 위한 경로입니다. `ch01.html`–`ch12.html`은 단락별 심층 주해, 절 범위 관찰, 주석 이견, 신학 메시지로 구성됩니다. 성경 본문은 공통 리더의 ECC로 연결합니다. `parsing/ch01.html`–`parsing/ch12.html`은 STEPBible TAHOT/TEHMC(CC BY 4.0)에서 `tools/interlinear/` 파이프라인으로 생성한 원어 연구이며, 222절 전체를 담습니다. 5장은 한국어·영어 장절 5:1–20을 따르고 히브리어 성경의 4:17, 5:1–19에 해당합니다.
 
 ## 자료와 연구 원칙
 
@@ -23,6 +23,8 @@
 연구 원고는 `research_data.py`, `deep_dive.py`, `verse_notes.py`, `cross_references.py`, `overview_data.py`에 저장됩니다. HTML은 다음 명령으로 만듭니다.
 
 ```bash
+python3 tools/interlinear/build_interlinear.py --book Ecc --slug ecclesiastes --all-chapters --verify-morphology
+# 장마다 render_interlinear.py로 parsing/chNN.html 생성
 python3 tools/build_ecclesiastes.py --write
 python3 tools/build_ecclesiastes.py --check
 python3 tools/apply_study_tools.py --check

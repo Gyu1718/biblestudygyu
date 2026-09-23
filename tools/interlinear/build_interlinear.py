@@ -8,7 +8,7 @@ from typing import Iterable
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
 from morph_ko import load_table
-REF=re.compile(r"^([1-3]?[A-Za-z]+)\.(\d+)\.(\d+)#(\d+)(?:=(\S+))?")
+REF=re.compile(r"^([1-3]?[A-Za-z]+)\.(\d+)\.(\d+)(?:\(\d+\.\d+\))?#(\d+)(?:=(\S+))?")
 def discover_one(root,pattern):
  m=sorted(root.rglob(pattern))
  if not m: raise FileNotFoundError(f"{root} 아래에서 {pattern}을 찾지 못했습니다.")

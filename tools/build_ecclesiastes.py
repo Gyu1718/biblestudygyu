@@ -76,7 +76,7 @@ def nav(title: str, anchors: list[tuple[str, str]], current: int | None = None) 
     links = [('<a href="../../bible/original.html?book=ECC&amp;chapter=1">성경읽기</a>'),
              ('<a href="./overview.html">종합 개관</a>'),
              ('<a href="./index.html">전도서 서가</a>'),
-             ('<span aria-disabled="true">원어 연구 준비 중</span>'),
+             (f'<a href="./parsing/ch{current or 1:02d}.html">원어 연구</a>'),
              ('<a href="../../index.html">서고 홈</a>')]
     jumps = "".join(f'<a href="ch{i:02d}.html" aria-label="전도서 {i}장 심층연구"'
                     + (' aria-current="page"' if i == current else '') + f'>{i}</a>' for i in CHAPTERS)
@@ -126,9 +126,10 @@ def render_index() -> str:
     anchors = [('reading', '성경읽기와 연구 경로'), ('shelf', '열두 장의 서가'), ('summary', '책의 개관과 신학')] + [(f'o{i}', h) for i, (h, _) in enumerate(OVERVIEW, 1)] + [('sources', '주석 출처')]
     out = [head('전도서 연구 서가', '전도서의 구조·헤벨·시간·즐거움·정의·죽음과 열두 장 심층연구를 다섯 자료로 대조한 종합 연구 서가.', 'study-home'), nav('전도서 · 책의 개관과 서가', anchors)]
     out += ['<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">ECCLESIASTES · 12 CHAPTERS</div><h1>전도서 · 책의 개관과 정리</h1><p class="lead">수고의 남는 이익을 묻고, 억압과 죽음을 직시하며, 알 수 없는 내일 앞에서 나누고 일하고 주어진 기쁨을 누리라는 지혜. 다섯 자료의 공통점과 해석 차이를 출처별 칩으로 추적합니다.</p><p class="meta">종합 연구 · 12장 심층 주해 · Seow / Fox / Murphy / Brown / HOW · 성경읽기 ECC 연결</p></header>', legend(used)]
+    parsing_links = ' '.join(f'<a href="parsing/ch{i:02d}.html">{i}장</a>' for i in CHAPTERS)
     reader_links = ' '.join(f'<a href="../../bible/original.html?book=ECC&amp;chapter={i}">{i}장</a>' for i in CHAPTERS)
-    out += ['<section class="part" id="reading"><h2>성경읽기와 연구 경로</h2><p>원문·개역개정 성경읽기에서 본문을 확인하고, 아래의 종합 개관과 장별 연구를 이어 읽습니다. 원어 연구는 파일이 마련되면 연결합니다.</p>',
-            f'<div class="reader-grid">{reader_links}</div><p><a href="overview.html">종합 개관으로 가기 →</a></p></section>',
+    out += ['<section class="part" id="reading"><h2>성경읽기와 연구 경로</h2><p>원문·개역개정 성경읽기에서 본문을 확인하고, 아래의 종합 개관과 장별 연구를 이어 읽습니다. 원어 연구는 STEPBible TAHOT 데이터로 생성한 열두 장의 인터라이너입니다. 5장은 한국어·영어 장절(5:1–20)을 따르며, 히브리어 성경에서는 4:17과 5:1–19에 해당합니다.</p>',
+            f'<h3>성경읽기</h3><div class="reader-grid">{reader_links}</div><h3>원어 연구</h3><div class="reader-grid">{parsing_links}</div><p><a href="overview.html">종합 개관으로 가기 →</a></p></section>',
             '<section class="part" id="shelf"><h2>열두 장의 서가</h2>', shelf(), chapter_cards(), '</section>']
     out += ['<section class="part" id="summary"><h2>핵심 흐름과 신학적 질문</h2>']
     for h, t, codes in INDEX_SUMMARY:
@@ -165,7 +166,7 @@ def render_chapter(number: int) -> str:
     source_names = '·'.join(SOURCES[code][0].split()[-1] if code != 'H' else 'HOW' for code in SOURCES if code in used)
     anchors = [('structure', '단락의 짜임')] + [(f'u{i}', f'{range_} · {heading}') for i, (range_, heading, _) in enumerate(units, 1)] + [('analysis', '주석 심화 논의'), ('verse-notes', '절 범위별 관찰'), ('cross-refs', '상호 참조'), ('issues', '주요 해석 논쟁'), ('message', '신학적 메시지'), ('sources', '주석 출처')]
     out = [head(f'전도서 {number}장 심층 연구 · {title}', f'전도서 {number}장 {desc} {source_names} 자료별 주석 칩과 절 범위별 주해.', 'study', number), nav(f'전도서 {number}장 심층 연구', anchors, number)]
-    out += [f'<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">CHAPTER {number:02d} · 구약 지혜문학</div><h1>전도서 {number}장 · {escape(title)}</h1><p class="lead">{escape(desc)}</p><p class="meta"><a href="../../bible/original.html?book=ECC&amp;chapter={number}">원문·개역개정 성경읽기 ↗</a> · {len(units)}개 단락 · {len(notes)}개 절 범위 관찰 · 주석 {len(used)}종</p></header>', legend(used)]
+    out += [f'<header class="hero"><span class="heb" lang="he" dir="rtl">קֹהֶלֶת</span><div class="eyebrow">CHAPTER {number:02d} · 구약 지혜문학</div><h1>전도서 {number}장 · {escape(title)}</h1><p class="lead">{escape(desc)}</p><p class="meta"><a href="../../bible/original.html?book=ECC&amp;chapter={number}">원문·개역개정 성경읽기 ↗</a> · <a href="./parsing/ch{number:02d}.html">원어 연구 {number}장 →</a> · {len(units)}개 단락 · {len(notes)}개 절 범위 관찰 · 주석 {len(used)}종</p></header>', legend(used)]
     out += ['<section class="part" id="structure"><h2>0. 단락의 짜임</h2><div class="table-scroll"><table><thead><tr><th>본문</th><th>연구 초점</th><th>주석 대조</th></tr></thead><tbody>']
     for i, (range_, heading, paragraphs) in enumerate(units, 1):
         codes = set(' '.join(x[0] for x in paragraphs).split())

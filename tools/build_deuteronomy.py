@@ -27,6 +27,14 @@ try:
 except ImportError:  # 종합 개관이 아직 없을 때
     OVERVIEW, INDEX_LEAD = [], ''
 try:
+    from overview_data import OUTLINE, NT_USES, ISSUES, FURTHER_READING  # noqa: E402
+except ImportError:
+    OUTLINE, NT_USES, ISSUES, FURTHER_READING = [], [], [], []
+try:
+    from verse_exegesis import EXEGESIS  # noqa: E402
+except ImportError:
+    EXEGESIS = {}
+try:
     from lexicon_data import LEXICON  # noqa: E402  (tools/build_deuteronomy_lexicon.py가 생성)
 except ImportError:
     LEXICON = {}
@@ -115,9 +123,23 @@ def foot(prev: str | None, nxt: str | None) -> str:
 def used_codes(ch: dict, number: int | None = None) -> set[str]:
     items = [p for _, _, ps in ch['units'] for p in ps] + list(ch['message'])
     codes = set(' '.join(c for c, _ in items).split())
+    if number in EXEGESIS:
+        codes |= set(' '.join(c for _, _, ps in EXEGESIS[number] for c, _ in ps).split())
     if number in LEXICON:
         codes |= set(' '.join(row['codes'] for row in LEXICON[number]).split())
     return codes
+
+
+def exegesis_block(number: int, unit_range: str) -> str:
+    _, first, last = span(unit_range)
+    items = [item for item in EXEGESIS.get(number, []) if first <= span(item[0])[1] <= last]
+    if not items:
+        return ''
+    parts = ['<div class="vx-wrap"><h3>절별 주해</h3>']
+    for reference, title, paragraphs in items:
+        parts.append(f'<div class="vx"><h4>{escape(reference)} · {escape(title)}</h4>' + ''.join(map(para, paragraphs)) + '</div>')
+    parts.append('</div>')
+    return ''.join(parts)
 
 
 def lexicon_section(number: int) -> str:
@@ -157,7 +179,7 @@ def render_chapter(n: int) -> str:
     rows = ''.join(f'<li><a href="#u{i}"><strong>{escape(r)}</strong> {escape(h)}</a></li>' for i, (r, h, _) in enumerate(ch['units'], 1))
     out.append(f'<section class="part" id="structure"><h2>단락의 짜임</h2><ol class="units">{rows}</ol></section>')
     for i, (r, h, ps) in enumerate(ch['units'], 1):
-        out.append(f'<section class="part" id="u{i}"><h2>{escape(r)} · {escape(h)}</h2>' + ''.join(map(para, ps)) + '</section>')
+        out.append(f'<section class="part" id="u{i}"><h2>{escape(r)} · {escape(h)}</h2>' + ''.join(map(para, ps)) + exegesis_block(n, r) + '</section>')
     out.append(lexicon_section(n))
     out.append('<section class="part" id="message"><h2>신학적 메시지</h2>' + ''.join(map(para, ch['message'])) + '</section>')
     xr = ''.join(f'<tr><td>{escape(a)}</td><td>{b}</td></tr>' for a, b in ch['xrefs'])
@@ -169,8 +191,10 @@ def render_chapter(n: int) -> str:
 
 
 def render_overview() -> str:
-    used = set(' '.join(c for _, ps in OVERVIEW for c, _ in ps).split())
-    anchors = [(f'o{i}', h) for i, (h, _) in enumerate(OVERVIEW, 1)] + [('sources', '주석 출처')]
+    used = set(' '.join(c for _, ps in OVERVIEW for c, _ in ps).split()) | ({'C', 'T'} if ISSUES else set())
+    anchors = ([('outline', '구조 개요')] if OUTLINE else []) + [(f'o{i}', h) for i, (h, _) in enumerate(OVERVIEW, 1)] \
+        + ([('nt', '신약이 읽은 신명기')] if NT_USES else []) + ([('issues', '두 주석의 입장 비교')] if ISSUES else []) \
+        + ([('reading-more', '더 읽을 문헌')] if FURTHER_READING else []) + [('sources', '주석 출처')]
     title = '신명기 종합 개관'
     desc = '신명기의 명칭, 조약 형식과 구조, 저작과 연대 논쟁, 본문, 신학, 해석사의 쟁점을 크레이기와 톰슨의 주석으로 대조한다.'
     first = min(CHAPTERS) if CHAPTERS else None
@@ -178,8 +202,28 @@ def render_overview() -> str:
     out.append(f'<header class="hero"><span class="heb" lang="he" dir="rtl">{HEB}</span><div class="eyebrow">DEUTERONOMY · OVERVIEW</div>'
                f'<h1>{title}</h1><p class="lead">{escape(desc)}</p></header>')
     out.append(legend(used))
+    if OUTLINE:
+        rows = ''.join(f'<tr><td>{escape(r)}</td><td>{escape(t)}</td><td>{escape(f)}</td></tr>' for r, t, f in OUTLINE)
+        out.append('<section class="part" id="outline"><h2>구조 개요</h2><p>크레이기의 분석을 따라 신명기의 짜임을 고대 근동 조약 형식과 대응시켰습니다.</p>'
+                   '<div class="table-scroll"><table><thead><tr><th>본문</th><th>단락</th><th>조약 형식과의 대응</th></tr></thead>'
+                   f'<tbody>{rows}</tbody></table></div></section>')
     for i, (h, ps) in enumerate(OVERVIEW, 1):
         out.append(f'<section class="part" id="o{i}"><h2>{i}. {escape(h)}</h2>' + ''.join(map(para, ps)) + '</section>')
+    if NT_USES:
+        rows = ''.join(f'<tr><td>{escape(d)}</td><td>{escape(n)}</td><td>{escape(t)}</td></tr>' for d, n, t in NT_USES)
+        out.append('<section class="part" id="nt"><h2>신약이 읽은 신명기</h2><p>신명기는 신약에서 가장 자주 인용되는 구약 책 가운데 하나입니다. 주요 인용과 해석을 정리했습니다.</p>'
+                   '<div class="table-scroll"><table><thead><tr><th>신명기</th><th>신약</th><th>연결</th></tr></thead>'
+                   f'<tbody>{rows}</tbody></table></div></section>')
+    if ISSUES:
+        rows = ''.join(f'<tr><th scope="row">{escape(i)}</th><td>{escape(c)}</td><td>{escape(t)}</td></tr>' for i, c, t in ISSUES)
+        out.append('<section class="part" id="issues"><h2>두 주석의 입장 비교</h2><p>주요 쟁점에 대한 크레이기와 톰슨의 입장을 짧게 대조합니다.</p>'
+                   f'<div class="table-scroll"><table class="issue-table"><thead><tr><th>쟁점</th><th>{chips("C")} 크레이기</th><th>{chips("T")} 톰슨</th></tr></thead>'
+                   f'<tbody>{rows}</tbody></table></div></section>')
+    if FURTHER_READING:
+        parts = ['<section class="part" id="reading-more"><h2>더 읽을 문헌</h2><p class="source-note">아래 문헌은 이 서가에서 직접 대조하지 않은 확장 연구용 목록입니다. 이 연구가 실제로 사용한 자료는 아래의 주석 출처에 있습니다.</p>']
+        for group, items in FURTHER_READING:
+            parts.append(f'<h3>{escape(group)}</h3><ul class="biblio">' + ''.join(f'<li>{item}</li>' for item in items) + '</ul>')
+        out.append(''.join(parts) + '</section>')
     out.append(sources(used))
     out.append(foot('index.html', f'ch{first:02d}.html' if first else None))
     return ''.join(out)
@@ -229,6 +273,19 @@ def check() -> None:
                 raise ValueError(f'{n}장 알 수 없는 칩: {code}')
         if not ch['message'] or not ch['xrefs']:
             raise ValueError(f'{n}장 신학적 메시지 또는 상호 참조가 비어 있습니다')
+    for n, items in EXEGESIS.items():
+        verses = len(bible[str(n)])
+        units = [span(r) for r, _, _ in CHAPTERS[n]['units']]
+        seen = []
+        for ref, title, ps in items:
+            c, a, z = span(ref)
+            if c != n or not ps or not title:
+                raise ValueError(f'{n}장 절별 주해 형식 오류: {ref}')
+            if not any(ua <= a and z <= uz for _, ua, uz in units):
+                raise ValueError(f'{n}장 절별 주해 {ref}가 단락 경계를 넘습니다')
+            seen += list(range(a, z + 1))
+        if seen != list(range(1, verses + 1)):
+            raise ValueError(f'{n}장 절별 주해가 1–{verses}절을 순서대로 빠짐없이 덮지 않습니다')
     for i in ALL:
         if not (BOOK / 'parsing' / f'ch{i:02d}.html').exists():
             raise ValueError(f'원어 연구 {i}장 누락')

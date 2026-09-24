@@ -26,6 +26,10 @@ try:
     from overview_data import OVERVIEW, INDEX_LEAD  # noqa: E402
 except ImportError:  # 종합 개관이 아직 없을 때
     OVERVIEW, INDEX_LEAD = [], ''
+try:
+    from lexicon_data import LEXICON  # noqa: E402  (tools/build_deuteronomy_lexicon.py가 생성)
+except ImportError:
+    LEXICON = {}
 
 ALL = range(1, 35)
 HEB = 'דְּבָרִים'
@@ -108,15 +112,38 @@ def foot(prev: str | None, nxt: str | None) -> str:
                   '주석 원문은 이 저장소에 배포하지 않습니다.</footer></main></div>') + close()
 
 
-def used_codes(ch: dict) -> set[str]:
+def used_codes(ch: dict, number: int | None = None) -> set[str]:
     items = [p for _, _, ps in ch['units'] for p in ps] + list(ch['message'])
-    return set(' '.join(c for c, _ in items).split())
+    codes = set(' '.join(c for c, _ in items).split())
+    if number in LEXICON:
+        codes |= set(' '.join(row['codes'] for row in LEXICON[number]).split())
+    return codes
+
+
+def lexicon_section(number: int) -> str:
+    rows = []
+    for row in LEXICON.get(number, []):
+        gloss = row['label'].split(', ', 1)[1] if ', ' in row['label'] else row['label']
+        freq = ', '.join(f'{strong} {n}회' for strong, n in zip(row['strongs'], row['freq']))
+        rows.append(
+            f'<tr><td><a href="./parsing/ch{number:02d}.html#v{row["verse"]}">{number}:{row["verse"]}</a></td>'
+            f'<td><span class="lex-he" lang="he" dir="rtl">{escape(row["hebrew"])}</span>'
+            f'<span class="lex-tr">{escape(row["translit"])}</span>'
+            f'<span class="lex-lemma">사전형 <span lang="he" dir="rtl">{escape(row["lemma"])}</span> · 신명기 빈도 {escape(freq)}</span></td>'
+            f'<td><strong>{gloss}</strong><br>{row["note"]} {chips(row["codes"])}</td></tr>')
+    if not rows:
+        return ''
+    return ('<section class="part" id="lexicon"><h2>핵심 원어</h2>'
+            f'<p>히브리어 표기와 사전형, 빈도는 STEPBible TAHOT(CC BY 4.0)에서 가져왔습니다. 절 번호를 누르면 <a href="./parsing/ch{number:02d}.html">원어 연구 {number}장</a>의 해당 절로 이동합니다.</p>'
+            '<div class="table-scroll"><table class="lex-table"><thead><tr><th>절</th><th>원어</th><th>뜻과 쓰임</th></tr></thead><tbody>'
+            + ''.join(rows) + '</tbody></table></div></section>')
 
 
 def render_chapter(n: int) -> str:
     ch = CHAPTERS[n]
-    used = used_codes(ch)
+    used = used_codes(ch, n)
     anchors = [('structure', '단락의 짜임')] + [(f'u{i}', f'{r} {h}') for i, (r, h, _) in enumerate(ch['units'], 1)] \
+        + ([('lexicon', '핵심 원어')] if LEXICON.get(n) else []) \
         + [('message', '신학적 메시지'), ('xrefs', '상호 참조'), ('sources', '주석 출처')]
     title = f'신명기 {n}장 · {ch["title"]}'
     prev = f'ch{n - 1:02d}.html' if n - 1 in CHAPTERS else ('overview.html' if OVERVIEW else None)
@@ -131,6 +158,7 @@ def render_chapter(n: int) -> str:
     out.append(f'<section class="part" id="structure"><h2>단락의 짜임</h2><ol class="units">{rows}</ol></section>')
     for i, (r, h, ps) in enumerate(ch['units'], 1):
         out.append(f'<section class="part" id="u{i}"><h2>{escape(r)} · {escape(h)}</h2>' + ''.join(map(para, ps)) + '</section>')
+    out.append(lexicon_section(n))
     out.append('<section class="part" id="message"><h2>신학적 메시지</h2>' + ''.join(map(para, ch['message'])) + '</section>')
     xr = ''.join(f'<tr><td>{escape(a)}</td><td>{b}</td></tr>' for a, b in ch['xrefs'])
     out.append('<section class="part" id="xrefs"><h2>상호 참조</h2><div class="table-scroll"><table><thead><tr><th>본문</th><th>연결</th></tr></thead>'
@@ -196,7 +224,7 @@ def check() -> None:
             seen += list(range(a, b + 1))
         if seen != list(range(1, verses + 1)):
             raise ValueError(f'{n}장 단락이 1–{verses}절을 순서대로 빠짐없이 덮지 않습니다')
-        for code in used_codes(ch):
+        for code in used_codes(ch, n):
             if code not in SOURCES:
                 raise ValueError(f'{n}장 알 수 없는 칩: {code}')
         if not ch['message'] or not ch['xrefs']:

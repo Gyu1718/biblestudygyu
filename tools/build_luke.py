@@ -40,6 +40,7 @@ except ImportError:
     LEXICON = {}
 
 ALL = range(1, 25)
+REQUIRE_RICH = range(1, 25)  # 모든 장에 비교·난제·메시지를 요구
 TITLE_GK = 'ΚΑΤΑ ΛΟΥΚΑΝ'
 
 
@@ -121,7 +122,11 @@ def foot(prev: str | None, nxt: str | None) -> str:
 
 def used_codes(ch: dict, number: int | None = None) -> set[str]:
     items = [p for _, _, ps in ch['units'] for p in ps] + list(ch['message'])
+    items += [p for _, ps in ch.get('debates', []) for p in ps]
     codes = set(' '.join(c for c, _ in items).split())
+    codes |= {code for _, views in ch.get('compare', []) for code, _ in views}
+    if ch.get('main'):
+        codes.add('Ga')
     if number in EXEGESIS:
         codes |= set(' '.join(c for _, _, ps in EXEGESIS[number] for c, _ in ps).split())
     if number in LEXICON:
@@ -163,7 +168,10 @@ def lexicon_section(number: int) -> str:
 def render_chapter(n: int) -> str:
     ch = CHAPTERS[n]
     used = used_codes(ch, n)
-    anchors = [('structure', '단락의 짜임')] + [(f'u{i}', f'{r} {h}') for i, (r, h, _) in enumerate(ch['units'], 1)] \
+    anchors = [('structure', '단락의 짜임')] + ([('main', '갈런드의 중심 사상')] if ch.get('main') else []) \
+        + [(f'u{i}', f'{r} {h}') for i, (r, h, _) in enumerate(ch['units'], 1)] \
+        + ([('compare', '주석 간 해석 비교')] if ch.get('compare') else []) \
+        + ([('debates', '신학적 난제와 논쟁점')] if ch.get('debates') else []) \
         + ([('lexicon', '핵심 원어')] if LEXICON.get(n) else []) \
         + [('message', '신학적 메시지'), ('xrefs', '상호 참조'), ('sources', '주석 출처')]
     title = f'누가복음 {n}장 · {ch["title"]}'
@@ -177,8 +185,25 @@ def render_chapter(n: int) -> str:
     out.append(legend(used))
     rows = ''.join(f'<li><a href="#u{i}"><strong>{escape(r)}</strong> {escape(h)}</a></li>' for i, (r, h, _) in enumerate(ch['units'], 1))
     out.append(f'<section class="part" id="structure"><h2>단락의 짜임</h2><ol class="units">{rows}</ol></section>')
+    if ch.get('main'):
+        mrows = ''.join(f'<tr><td>{escape(r)}</td><td>{t}</td></tr>' for r, t in ch['main'])
+        out.append('<section class="part" id="main"><h2>갈런드의 중심 사상</h2>'
+                   f'<p class="source-note">{chips("Ga")} 이 서가는 갈런드(ZECNT)의 단락 구분과 중심 사상을 해석의 축으로 삼습니다. 아래는 갈런드가 각 단락에 제시하는 중심 사상을 요약한 것입니다.</p>'
+                   f'<div class="table-scroll"><table><thead><tr><th>본문</th><th>중심 사상</th></tr></thead><tbody>{mrows}</tbody></table></div></section>')
     for i, (r, h, ps) in enumerate(ch['units'], 1):
         out.append(f'<section class="part" id="u{i}"><h2>{escape(r)} · {escape(h)}</h2>' + ''.join(map(para, ps)) + exegesis_block(n, r) + '</section>')
+    if ch.get('compare'):
+        parts = ['<section class="part" id="compare"><h2>주석 간 해석 비교</h2>'
+                 '<p class="source-note">같은 본문을 두고 주석들이 서로 다르게 읽는 지점을 쟁점별로 나란히 놓았습니다.</p>']
+        for topic, views in ch['compare']:
+            vrows = ''.join(f'<tr><th scope="row">{chips(code)} {escape(SOURCES[code][0].split()[-1])}</th><td>{view}</td></tr>' for code, view in views)
+            parts.append(f'<h3>{escape(topic)}</h3><div class="table-scroll"><table class="compare-table"><tbody>{vrows}</tbody></table></div>')
+        out.append(''.join(parts) + '</section>')
+    if ch.get('debates'):
+        parts = ['<section class="part" id="debates"><h2>신학적 난제와 논쟁점</h2>']
+        for title_d, ps in ch['debates']:
+            parts.append(f'<h3>{escape(title_d)}</h3>' + ''.join(map(para, ps)))
+        out.append(''.join(parts) + '</section>')
     out.append(lexicon_section(n))
     out.append('<section class="part" id="message"><h2>신학적 메시지</h2>' + ''.join(map(para, ch['message'])) + '</section>')
     xr = ''.join(f'<tr><td>{escape(a)}</td><td>{b}</td></tr>' for a, b in ch['xrefs'])
@@ -272,6 +297,11 @@ def check() -> None:
                 raise ValueError(f'{n}장 알 수 없는 칩: {code}')
         if not ch['message'] or not ch['xrefs']:
             raise ValueError(f'{n}장 신학적 메시지 또는 상호 참조가 비어 있습니다')
+        if n in REQUIRE_RICH and not (ch.get('main') and len(ch.get('compare', [])) >= 2 and ch.get('debates') and len(ch['message']) >= 2):
+            raise ValueError(f'{n}장에 중심 사상·주석 비교(2개 이상)·신학적 난제·신학적 메시지(2문단 이상)가 모두 필요합니다')
+        for topic, views in ch.get('compare', []):
+            if len(views) < 2:
+                raise ValueError(f'{n}장 주석 비교 ‘{topic}’에는 두 주석 이상의 견해가 필요합니다')
     for n, items in EXEGESIS.items():
         verses = len(bible[str(n)])
         units = [span(r) for r, _, _ in CHAPTERS[n]['units']]
